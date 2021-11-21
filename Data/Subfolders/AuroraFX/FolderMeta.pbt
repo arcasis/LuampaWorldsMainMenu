@@ -1,0 +1,63 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "b60b06ba017b4bc8a250b7445f63226c"
+  OwnerAccountId: "8de472bb83d34e87a64617f6ef6505a3"
+  OwnerName: "iExpulsion"
+  Version: "1.1.0"
+}
+AssetIdsOriginalToNew {
+  key: 746996652070906985
+  value: 9559193404423892741
+}
+AssetIdsOriginalToNew {
+  key: 2869235001823822001
+  value: 8170008770977406173
+}
+AssetIdsOriginalToNew {
+  key: 3360477957917751056
+  value: 14515761757268482904
+}
+AssetIdsOriginalToNew {
+  key: 7601526811161873950
+  value: 3294300546671719364
+}
+AssetIdsOriginalToNew {
+  key: 8183836245238138198
+  value: 6334127112402987715
+}
+AssetIdsOriginalToNew {
+  key: 8512475703156528463
+  value: 11914195059686209197
+}
+AssetIdsOriginalToNew {
+  key: 9198846385696031935
+  value: 1414121679460908404
+}
+AssetIdsOriginalToNew {
+  key: 11984546936845856587
+  value: 11824739736851289960
+}
+AssetIdsOriginalToNew {
+  key: 12266187583386264128
+  value: 10021836249696796176
+}
+AssetIdsOriginalToNew {
+  key: 13175791939985844280
+  value: 3069998714888007010
+}
+AssetIdsOriginalToNew {
+  key: 13833718837537347359
+  value: 10084951619088833919
+}
+AssetIdsOriginalToNew {
+  key: 17454114726799548108
+  value: 9538310488590235944
+}
+AssetIdsOriginalToNew {
+  key: 17944768114759465949
+  value: 2671262212715163412
+}
+AssetIdsOriginalToNew {
+  key: 18076710363024685516
+  value: 17803391065349085975
+}

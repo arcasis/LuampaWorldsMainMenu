@@ -1,0 +1,63 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "373a231f3017495985b259dd3f0b3b12"
+  OwnerAccountId: "4d1968773baa4cdc940c75118e8a7c3b"
+  OwnerName: "DocBdesign"
+  Version: "1.1.0"
+}
+AssetIdsOriginalToNew {
+  key: 2331688389429807128
+  value: 14473551695930166382
+}
+AssetIdsOriginalToNew {
+  key: 4707933269519709415
+  value: 7590080322084485626
+}
+AssetIdsOriginalToNew {
+  key: 5532220504684792441
+  value: 9291083878627275421
+}
+AssetIdsOriginalToNew {
+  key: 6106776140088689973
+  value: 16434283893929550351
+}
+AssetIdsOriginalToNew {
+  key: 6262807460318988904
+  value: 10830211016409903699
+}
+AssetIdsOriginalToNew {
+  key: 7110567272793614285
+  value: 14111066077014697058
+}
+AssetIdsOriginalToNew {
+  key: 7395191545332204048
+  value: 2168147571121278515
+}
+AssetIdsOriginalToNew {
+  key: 7528204836197681307
+  value: 17715405138498269986
+}
+AssetIdsOriginalToNew {
+  key: 11294010590595331672
+  value: 16240122007417236044
+}
+AssetIdsOriginalToNew {
+  key: 11877920253160372907
+  value: 2636879244502616386
+}
+AssetIdsOriginalToNew {
+  key: 12496897969844384585
+  value: 11068837979620488131
+}
+AssetIdsOriginalToNew {
+  key: 13962544434986765876
+  value: 4095133243528205911
+}
+AssetIdsOriginalToNew {
+  key: 15436573434590234010
+  value: 1963138777590794307
+}
+AssetIdsOriginalToNew {
+  key: 16959950852336482921
+  value: 14497942772082635116
+}
