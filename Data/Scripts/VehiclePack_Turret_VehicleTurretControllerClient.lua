@@ -61,7 +61,7 @@ function FireTurret()
   local f2 =  World.SpawnAsset(FLASH_TEMPLATE, {position = MUZZLE_2:GetWorldPosition(), rotation = viewRot})
 end
 
-function NetworkedPropertyChanged(owner, propName) 
+function CustomPropertyChanged(owner, propName) 
   if propName == 'IsFiring' then
     isFiring = owner:GetCustomProperty(propName)
   end
@@ -92,6 +92,6 @@ end
 Events.Connect("VehiclePack_BattleTruck_VehicleTurretEnter", OnTurretEnter)
 Events.Connect("VehiclePack_BattleTruck_VehicleTurretExit", OnTurretExit)
 
-TURRET_ROOT_SERVER.networkedPropertyChangedEvent:Connect(NetworkedPropertyChanged)
+TURRET_ROOT_SERVER.customPropertyChangedEvent:Connect(CustomPropertyChanged)
 
 TURRET_ROOT:Follow(TURRET_ROOT_SERVER)

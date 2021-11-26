@@ -51,12 +51,12 @@ function Explode()
   t.parent = nil
 end
 
-function NetworkedPropertyChanged(owner, propName) 
+function CustomPropertyChanged(owner, propName) 
   if propName == 'Health' then
     Damaged()
   end
 end
 
 
-CONTROLLER.networkedPropertyChangedEvent:Connect(NetworkedPropertyChanged)
+CONTROLLER.customPropertyChangedEvent:Connect(CustomPropertyChanged)
 script.destroyEvent:Connect(Explode)
