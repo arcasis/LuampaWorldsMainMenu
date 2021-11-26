@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 18322860713923765200
-  Name: "BG Highlighted 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_022"
-  }
-}
-Assets {
   Id: 18013239046532172765
   Name: "Pipe - 90-Degree Short Thick"
   PlatformAssetType: 1
@@ -77,15 +68,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_veh_urb_car_kit_console_center_001_ref"
-  }
-}
-Assets {
-  Id: 17269740971833997173
-  Name: "Icon Skull"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Skull"
   }
 }
 Assets {
@@ -368,15 +350,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11996370362624858284
-  Name: "Abstract Frame 10"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Core_UI_AbstractPackFrame_004"
-  }
-}
-Assets {
   Id: 11952300830917149373
   Name: "Metal Complex Tech Panel Wall 03"
   PlatformAssetType: 2
@@ -428,15 +401,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_scf_rubber_panels_001_uv"
-  }
-}
-Assets {
-  Id: 10737368364154921283
-  Name: "UI Basic Shape Triangle"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Basic_Shape_Triangle"
   }
 }
 Assets {
@@ -572,15 +536,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_painted_new_001_uv"
-  }
-}
-Assets {
-  Id: 8619371972198943276
-  Name: "Center Arrow 008"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_008"
   }
 }
 Assets {
@@ -746,39 +701,12 @@ Assets {
   }
 }
 Assets {
-  Id: 6363320609941978136
-  Name: "Play"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "PlayRegular_ref"
-  }
-}
-Assets {
-  Id: 6334699134008261182
-  Name: "BG Highlighted 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_020"
-  }
-}
-Assets {
   Id: 6209556876010214815
   Name: "Urban Vehicle Car - Brake 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_veh_urb_car_acc_brake_001_ref"
-  }
-}
-Assets {
-  Id: 6174803333271868359
-  Name: "Center Arrow 004 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_004Wedge"
   }
 }
 Assets {
@@ -806,15 +734,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_scf_chair_002_leg_ref"
-  }
-}
-Assets {
-  Id: 5619580598160374927
-  Name: "Abstract Background 04"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Core_UI_AbstractPack_Background_005"
   }
 }
 Assets {
@@ -1043,15 +962,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1841443240640943412
-  Name: "Alert Triangle"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_029"
-  }
-}
-Assets {
   Id: 1713962048372340825
   Name: "Vehicle Rally Car Engine Loop 01 SFX"
   PlatformAssetType: 7
@@ -1112,15 +1022,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_fan_ground_bones_001_uv"
-  }
-}
-Assets {
-  Id: 800399860672169055
-  Name: "Frame Tri 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameTri_001"
   }
 }
 Assets {
