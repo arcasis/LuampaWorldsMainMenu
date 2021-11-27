@@ -179,12 +179,12 @@ Objects {
 }
 Objects {
   Id: 13109927566236709296
-  Name: "GaragePanels"
+  Name: "Garage"
   Transform {
     Location {
-      X: -43.2226562
+      X: -43.2231445
       Y: 4518.17822
-      Z: 864.414307
+      Z: 864.414368
     }
     Rotation {
     }
@@ -197,12 +197,11 @@ Objects {
   ParentId: 2016190126149047528
   ChildIds: 14557584287892330648
   ChildIds: 15480859360796277606
+  ChildIds: 12056401378719592435
   ChildIds: 15066303778412877762
-  ChildIds: 6052054074528610255
-  ChildIds: 13098023100106901073
-  ChildIds: 4096490544441912466
-  ChildIds: 1471981434287172913
-  ChildIds: 903551739567298351
+  ChildIds: 15030497330898415658
+  ChildIds: 11546324870692024769
+  ChildIds: 14055984312682248517
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -226,13 +225,87 @@ Objects {
   }
 }
 Objects {
+  Id: 14055984312682248517
+  Name: "Battle Gear"
+  Transform {
+    Location {
+      X: 447.338501
+      Y: 464.378021
+      Z: -8.0704689e-05
+    }
+    Rotation {
+      Roll: -6.67010625e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13109927566236709296
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11546324870692024769
+  Name: "Battle Customization"
+  Transform {
+    Location {
+      X: 447.33847
+      Y: 464.378235
+      Z: -5.87474278e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13109927566236709296
+  ChildIds: 6052054074528610255
+  ChildIds: 13098023100106901073
+  ChildIds: 4096490544441912466
+  ChildIds: 1471981434287172913
+  ChildIds: 903551739567298351
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
   Id: 903551739567298351
   Name: "ArmorPanels"
   Transform {
     Location {
-      X: 0.000478846836
-      Y: 0.000497812231
-      Z: -5.87474278e-05
+      X: -447.338043
+      Y: -464.377563
+      Z: 2.21729279e-05
     }
     Rotation {
       Yaw: 1.55300513e-18
@@ -244,7 +317,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13109927566236709296
+  ParentId: 11546324870692024769
   ChildIds: 2037224360533100496
   ChildIds: 6598495590798240635
   ChildIds: 7404347837344405377
@@ -3052,9 +3125,9 @@ Objects {
   Name: "TurretPanels"
   Transform {
     Location {
-      X: 0.000478846836
-      Y: 0.000497812231
-      Z: -5.87474278e-05
+      X: -447.338043
+      Y: -464.377563
+      Z: 2.21729279e-05
     }
     Rotation {
       Yaw: 1.55300513e-18
@@ -3066,7 +3139,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13109927566236709296
+  ParentId: 11546324870692024769
   ChildIds: 7230426258863694229
   ChildIds: 14556997077146076606
   ChildIds: 1358784941412434581
@@ -5874,9 +5947,9 @@ Objects {
   Name: "EnginePanels"
   Transform {
     Location {
-      X: 0.000478846836
-      Y: 0.000497812231
-      Z: -5.87474278e-05
+      X: -447.338043
+      Y: -464.377563
+      Z: 2.21729279e-05
     }
     Rotation {
       Yaw: 1.55300513e-18
@@ -5888,7 +5961,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13109927566236709296
+  ParentId: 11546324870692024769
   ChildIds: 14924974232197105190
   ChildIds: 1310204036557193621
   ChildIds: 9418741130092624322
@@ -8696,9 +8769,9 @@ Objects {
   Name: "ChassisPanels"
   Transform {
     Location {
-      X: 0.000478846836
-      Y: 0.000497812231
-      Z: -5.87474278e-05
+      X: -447.338043
+      Y: -464.377563
+      Z: 2.21729279e-05
     }
     Rotation {
     }
@@ -8708,7 +8781,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13109927566236709296
+  ParentId: 11546324870692024769
   ChildIds: 10526159049128372288
   ChildIds: 12085755380233790392
   ChildIds: 10957679984442231172
@@ -11513,7 +11586,7 @@ Objects {
 }
 Objects {
   Id: 6052054074528610255
-  Name: "BMUpgradeCategoriesStatic"
+  Name: "Battle Upgrades Main Panel"
   Transform {
     Location {
       X: 2236.69043
@@ -11531,7 +11604,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13109927566236709296
+  ParentId: 11546324870692024769
+  ChildIds: 6472792787891945814
   ChildIds: 11540680294386518867
   ChildIds: 1342089780531029982
   ChildIds: 4660947352775889988
@@ -12814,8 +12888,323 @@ Objects {
   }
 }
 Objects {
+  Id: 6472792787891945814
+  Name: "GarageBattleUpgradesMenuClient"
+  Transform {
+    Location {
+      X: 0.000988953514
+      Y: 0.000713607646
+      Z: 0.000309811352
+    }
+    Rotation {
+      Yaw: 3.41509417e-06
+      Roll: -4.13546559e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6052054074528610255
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GarageBattleMenuPanel"
+      ObjectReference {
+        SelfId: 15066303778412877762
+      }
+    }
+    Overrides {
+      Name: "cs:BattleUpgradesMainPanel"
+      ObjectReference {
+        SelfId: 6052054074528610255
+      }
+    }
+    Overrides {
+      Name: "cs:ChassisButton"
+      ObjectReference {
+        SelfId: 11540680294386518867
+      }
+    }
+    Overrides {
+      Name: "cs:EngineButton"
+      ObjectReference {
+        SelfId: 1342089780531029982
+      }
+    }
+    Overrides {
+      Name: "cs:TurretButton"
+      ObjectReference {
+        SelfId: 4660947352775889988
+      }
+    }
+    Overrides {
+      Name: "cs:ArmorButton"
+      ObjectReference {
+        SelfId: 10483386209941391236
+      }
+    }
+    Overrides {
+      Name: "cs:BackButton"
+      ObjectReference {
+        SelfId: 3866710285091383173
+      }
+    }
+    Overrides {
+      Name: "cs:BattleVehiclesGeo"
+      ObjectReference {
+        SelfId: 15030497330898415658
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8685682706117360303
+    }
+  }
+}
+Objects {
+  Id: 15030497330898415658
+  Name: "Battle Vehicles Geo"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13109927566236709296
+  ChildIds: 7247904487473114344
+  ChildIds: 13428652727213897869
+  ChildIds: 10079917125948968213
+  ChildIds: 8552273467043877315
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8552273467043877315
+  Name: "GEO - Thrashed Battle Truck"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15030497330898415658
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16530320166737757676
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6128.65234
+            Y: -5458.80029
+            Z: 85.6971
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.0989967585
+            Yaw: 21.5650311
+            Roll: 0.0169488359
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16464074713874394408
+    }
+  }
+}
+Objects {
+  Id: 10079917125948968213
+  Name: "GEO - Tanker"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15030497330898415658
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13608690301357325791
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6128.65234
+            Y: -5458.80029
+            Z: 85.6971
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.0989967585
+            Yaw: 21.5650311
+            Roll: 0.0169488359
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8395753202752431621
+    }
+  }
+}
+Objects {
+  Id: 13428652727213897869
+  Name: "GEO - SkavAvenger"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15030497330898415658
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 736369718320567278
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6128.65234
+            Y: -5458.80029
+            Z: 85.6971
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.0989967585
+            Yaw: 21.5650311
+            Roll: 0.0169488359
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3677500936474418915
+    }
+  }
+}
+Objects {
+  Id: 7247904487473114344
+  Name: "GEO - Rusty Beasty"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15030497330898415658
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4789963266544232393
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6128.65234
+            Y: -5458.80029
+            Z: 85.6971
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.0989967585
+            Yaw: 21.5650311
+            Roll: 0.0169488359
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8768697395945414097
+    }
+  }
+}
+Objects {
   Id: 15066303778412877762
-  Name: "GarageBattleMenuPanel"
+  Name: "Garage Battle Main Menu Panel"
   Transform {
     Location {
       X: 2261.08789
@@ -12835,6 +13224,7 @@ Objects {
   }
   ParentId: 13109927566236709296
   ChildIds: 2315395655495003833
+  ChildIds: 185758948532244353
   ChildIds: 17045342288694921585
   ChildIds: 2170454505735530082
   ChildIds: 15523273137211906804
@@ -14266,6 +14656,80 @@ Objects {
   }
 }
 Objects {
+  Id: 185758948532244353
+  Name: "GarageBattleSelectVehicleClient"
+  Transform {
+    Location {
+      X: -0.000291350152
+      Y: 0.00120972202
+      Z: 0.000157135815
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15066303778412877762
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GarageBattleMenuPanel"
+      ObjectReference {
+        SelfId: 15066303778412877762
+      }
+    }
+    Overrides {
+      Name: "cs:BattleVehicles"
+      ObjectReference {
+        SelfId: 15030497330898415658
+      }
+    }
+    Overrides {
+      Name: "cs:SelectVehicle"
+      ObjectReference {
+        SelfId: 6900370530432692085
+      }
+    }
+    Overrides {
+      Name: "cs:ArrowLeft"
+      ObjectReference {
+        SelfId: 5736037698114096039
+      }
+    }
+    Overrides {
+      Name: "cs:ArrowRight"
+      ObjectReference {
+        SelfId: 6101713014519030447
+      }
+    }
+    Overrides {
+      Name: "cs:BattleUpgradesMainPanel"
+      ObjectReference {
+        SelfId: 6052054074528610255
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1218343514765208933
+    }
+  }
+}
+Objects {
   Id: 2315395655495003833
   Name: "GarageBattleMenuClient"
   Transform {
@@ -14450,8 +14914,41 @@ Objects {
   }
 }
 Objects {
+  Id: 12056401378719592435
+  Name: "Kart Vehicles"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 1.55300513e-18
+      Roll: -1.33402125e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13109927566236709296
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
   Id: 15480859360796277606
-  Name: "GarageKartsMenuPanel"
+  Name: "Garage Karts Main Menu Panel"
   Transform {
     Location {
       X: 2261.0874
@@ -15914,7 +16411,7 @@ Objects {
 }
 Objects {
   Id: 14557584287892330648
-  Name: "GarageMainMenuPanel"
+  Name: "Garage Main Menu Panel"
   Transform {
     Location {
       X: -43.2226562
@@ -16739,7 +17236,7 @@ Objects {
 }
 Objects {
   Id: 3518919065487025658
-  Name: "Select Game Mode Panel"
+  Name: "Game Mode Panel"
   Transform {
     Location {
       X: 4494.9917
@@ -17551,7 +18048,7 @@ Objects {
 }
 Objects {
   Id: 12978439604578497302
-  Name: "MainMenuPanel"
+  Name: "Main Menu Panel"
   Transform {
     Location {
       X: -43.2226562
