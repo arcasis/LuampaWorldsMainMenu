@@ -1,6 +1,6 @@
 Assets {
-  Id: 4847989528282723981
-  Name: "GarageBattleMenuClient"
+  Id: 12074709538402311954
+  Name: "GarageBattleMenuClientOLD"
   PlatformAssetType: 3
   TextAsset {
   }

@@ -10,6 +10,9 @@ local OPTIONS_BUTTON = script:GetCustomProperty("OptionsButton"):WaitForObject()
 local GAME_MODE_PANEL = script:GetCustomProperty("GameModePanel"):WaitForObject()
 local GARAGE_PANEL = script:GetCustomProperty("GaragePanel"):WaitForObject()
 
+-- override camera
+local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForObject()
+
 
 
 function OnCoreWorldButtonClicked()
@@ -23,6 +26,7 @@ end
 
 function OnGarageButtonClicked()
     HideMainMenuPanel()
+    Game.GetLocalPlayer():SetOverrideCamera(GARAGE_MENU_CAMERA, 0)
     GARAGE_PANEL.visibility = Visibility.INHERIT
 end
 

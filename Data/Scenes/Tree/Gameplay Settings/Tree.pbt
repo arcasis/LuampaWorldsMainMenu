@@ -48,8 +48,6 @@ Objects {
     }
   }
   ParentId: 14713340454944924967
-  ChildIds: 3567959178173361743
-  ChildIds: 17661243849115904086
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -62,115 +60,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
-  }
-}
-Objects {
-  Id: 17661243849115904086
-  Name: "Third Person Camera"
-  Transform {
-    Location {
-      X: 5892.2041
-      Y: 6385.67188
-      Z: 1339.81372
-    }
-    Rotation {
-      Pitch: 1.52246952
-      Yaw: -136.716583
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 724324913679364851
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:alwaysvisible"
-  }
-  Camera {
-    UseAsDefault: true
-    InitialDistance: 400
-    MinDistance: 300
-    MaxDistance: 600
-    PositionOffset {
-      Y: 60
-    }
-    RotationOffset {
-      Yaw: -135
-    }
-    FieldOfView: 110
-    ViewWidth: 1200
-    RotationMode {
-      Value: "mc:erotationmode:lookangle"
-    }
-    MinPitch: -89
-    MaxPitch: 89
-    DoesPositionOffsetSpring: true
-  }
-}
-Objects {
-  Id: 3567959178173361743
-  Name: "Third Person Camera"
-  Transform {
-    Location {
-      X: 336.345123
-      Y: 8530.70215
-      Z: 1591.87036
-    }
-    Rotation {
-      Pitch: 1.52246952
-      Yaw: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 724324913679364851
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:alwaysvisible"
-  }
-  Camera {
-    InitialDistance: 400
-    MinDistance: 300
-    MaxDistance: 600
-    PositionOffset {
-      Y: 60
-    }
-    RotationOffset {
-      Yaw: -90
-    }
-    FieldOfView: 110
-    ViewWidth: 1200
-    RotationMode {
-      Value: "mc:erotationmode:lookangle"
-    }
-    MinPitch: -89
-    MaxPitch: 89
-    DoesPositionOffsetSpring: true
   }
 }
 Objects {
@@ -378,10 +267,10 @@ Objects {
           Y: 40
         }
         VoiceChatHorizontalAlignment {
-          Value: "mc:ecorehorizontalalign:right"
+          Value: "mc:ecorehorizontalalign:left"
         }
         VoiceChatVerticalAlignment {
-          Value: "mc:ecoreverticalalign:top"
+          Value: "mc:ecoreverticalalign:bottom"
         }
         VoiceChatEntryHorizontalFlow {
           Value: "mc:ecorehorizontalflow:righttoleft"

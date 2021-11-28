@@ -2,79 +2,86 @@
 local GARAGE_MAIN_MENU_PANEL = script:GetCustomProperty("GarageMainMenuPanel"):WaitForObject()
 local BATTLE_MENU_PANEL = script:GetCustomProperty("GarageBattleMenuPanel"):WaitForObject()
 
-local UPGRADES_BUTTON = script:GetCustomProperty("UpgradesButton"):WaitForObject()
-local UPGRADES_IMAGE = script:GetCustomProperty("UpgradesImage"):WaitForObject()
-local CUSTOMIZATION_BUTTON = script:GetCustomProperty("CustomizationButton"):WaitForObject()
-local CUSTOMIZATION_IMAGE = script:GetCustomProperty("CustomizationImage"):WaitForObject()
-local GEAR_BUTTON = script:GetCustomProperty("GearButton"):WaitForObject()
-local GEAR_IMAGE = script:GetCustomProperty("GearImage"):WaitForObject()
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
-local VEHICLE_TOGGLE_LEFT_BUTTON = script:GetCustomProperty("ToggleLeftButton"):WaitForObject()
-local VEHICLE_TOGGLE_RIGHT_BUTTON = script:GetCustomProperty("ToggleRightButton"):WaitForObject()
-local VEHICLE_SELECT_BUTTON = script:GetCustomProperty("SelectButton"):WaitForObject()
+local SELECT_VEHICLE_BUTTON = script:GetCustomProperty("SelectVehicleButton"):WaitForObject()
+local SELECT_VEHICLE_IMAGE = script:GetCustomProperty("SelectVehicleImage"):WaitForObject()
+local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForObject()
+local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
-local BUTTON_ON_COLOR = Color.New(CUSTOMIZATION_IMAGE:GetColor())
+local SELECT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
+
+local BUTTON_ON_COLOR = Color.New(SELECT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
+local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultGeoFolder"):WaitForObject()
 
-function OnUpgradeButtonClicked()
+local DEFAULT_GEO_TABLE = {}
+local index = 0
+local total = 0
 
-    UPGRADES_IMAGE:SetColor(BUTTON_ON_COLOR)
-    UPGRADES_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    CUSTOMIZATION_IMAGE:SetColor(BUTTON_OFF_COLOR)
-    CUSTOMIZATION_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    GEAR_IMAGE:SetColor(BUTTON_OFF_COLOR)
-    GEAR_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
+local menuOpen = false
+local upgradeButtonOn = false
 
-    VEHICLE_TOGGLE_LEFT_BUTTON.visibility = Visibility.INHERIT
-    VEHICLE_TOGGLE_RIGHT_BUTTON.visibility = Visibility.INHERIT
-    VEHICLE_SELECT_BUTTON.visibility = Visibility.INHERIT
+
+function OnSelectVehicleButtonClicked()
+    -- toggle selecting vehicle or selecting upgrade
+    if upgradeButtonOn == false then
+        Events.Broadcast("MenuBattleVehicleSelected", index)
+        DisplaySelectingUpgrade()
+    else
+        DisplaySelectingVehicle()
+    end
 end
 
-function OnCustomizationButtonClicked()
-
-    UPGRADES_IMAGE:SetColor(BUTTON_OFF_COLOR)
-    UPGRADES_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    CUSTOMIZATION_IMAGE:SetColor(BUTTON_ON_COLOR)
-    CUSTOMIZATION_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    GEAR_IMAGE:SetColor(BUTTON_OFF_COLOR)
-    GEAR_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-
-    VEHICLE_TOGGLE_LEFT_BUTTON.visibility = Visibility.INHERIT
-    VEHICLE_TOGGLE_RIGHT_BUTTON.visibility = Visibility.INHERIT
-    VEHICLE_SELECT_BUTTON.visibility = Visibility.INHERIT
+function OnVehicleArrowLeftButtonClicked()
+    DEFAULT_GEO_TABLE[index].visibility = Visibility.FORCE_OFF
+    if index > 1 then
+        index = index - 1
+        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+    else
+        index = total
+        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+    end
 end
 
-function OnGearButtonClicked()
+function OnVehicleArrowRightButtonClicked()
+    DEFAULT_GEO_TABLE[index].visibility = Visibility.FORCE_OFF
+    if index == total then
+        index = 1
+        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+    else
+        index = index + 1
+        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+    end
+end
 
-    UPGRADES_IMAGE:SetColor(BUTTON_OFF_COLOR)
-    UPGRADES_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    CUSTOMIZATION_IMAGE:SetColor(BUTTON_OFF_COLOR)
-    CUSTOMIZATION_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    GEAR_IMAGE:SetColor(BUTTON_ON_COLOR)
-    GEAR_BUTTON:SetFontColor(BUTTON_ON_COLOR)
+function DisplaySelectingUpgrade()
+    upgradeButtonOn = true
+    SELECT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
+    VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
+    VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
+    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
+    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+end
 
-    VEHICLE_TOGGLE_LEFT_BUTTON.visibility = Visibility.FORCE_OFF
-    VEHICLE_TOGGLE_RIGHT_BUTTON.visibility = Visibility.FORCE_OFF
-    VEHICLE_SELECT_BUTTON.visibility = Visibility.FORCE_OFF
+function DisplaySelectingVehicle()
+    upgradeButtonOn = false
+    SELECT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
+    VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
+    VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
+    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
+    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+end
+
+function OnSelectUpgradeButtonClicked()
+    print("Select Upgrade button was clicked in Karts menu, no scripts yet")
 end
 
 function OnBackButtonClicked()
     BATTLE_MENU_PANEL.visibility = Visibility.FORCE_OFF
-
-    UPGRADES_IMAGE:SetColor(BUTTON_ON_COLOR)
-    UPGRADES_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    CUSTOMIZATION_IMAGE:SetColor(BUTTON_ON_COLOR)
-    CUSTOMIZATION_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    GEAR_IMAGE:SetColor(BUTTON_ON_COLOR)
-    GEAR_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-
-    VEHICLE_TOGGLE_LEFT_BUTTON.visibility = Visibility.FORCE_OFF
-    VEHICLE_TOGGLE_RIGHT_BUTTON.visibility = Visibility.FORCE_OFF
-    VEHICLE_SELECT_BUTTON.visibility = Visibility.FORCE_OFF
-
     GARAGE_MAIN_MENU_PANEL.visibility = Visibility.INHERIT
+    DisplaySelectingVehicle()
 end
 
 
@@ -87,10 +94,34 @@ function OnVehicleSelectButtonClicked()
     
 end
 
-UPGRADES_BUTTON.clickedEvent:Connect(OnUpgradeButtonClicked)
-CUSTOMIZATION_BUTTON.clickedEvent:Connect(OnCustomizationButtonClicked)
-GEAR_BUTTON.clickedEvent:Connect(OnGearButtonClicked)
+function Tick(deltaTime)
+    if BATTLE_MENU_PANEL.visibility == Visibility.INHERIT then
+
+        if menuOpen == false then
+            DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+        end
+        menuOpen = true
+    else
+
+        if menuOpen == true then
+            DEFAULT_GEO_TABLE[index].visibility = Visibility.FORCE_OFF
+            index = 1
+        end
+        menuOpen = false
+    end
+end
+
+-- process default kart geos
+local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
+for _,vehicle in ipairs(geoVehicles) do
+    index = index + 1
+    DEFAULT_GEO_TABLE[index] = vehicle
+end
+total = index
+index = 1
+
+SELECT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
+VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
+VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
+SELECT_UPGRADE_BUTTON.clickedEvent:Connect(OnSelectUpgradeButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)
---VEHICLE_TOGGLE_LEFT_BUTTON.clickedEvent:Connect(OnVehicleToggleLeftButtonClicked)
---VEHICLE_TOGGLE_RIGHT_BUTTON.clickedEvent:Connect(OnVehicleToggleRightButtonClicked)
-VEHICLE_SELECT_BUTTON.clickedEvent:Connect(OnVehicleSelectButtonClicked)

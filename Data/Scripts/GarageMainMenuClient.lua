@@ -9,6 +9,9 @@ local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 local KARTS_MENU_PANEL = script:GetCustomProperty("GarageKartsMenuPanel"):WaitForObject()
 local BATTLE_MENU_PANEL = script:GetCustomProperty("GarageBattleMenuPanel"):WaitForObject()
 
+-- default camera
+local MAIN_MENU_CAMERA = script:GetCustomProperty("MainMenuCamera"):WaitForObject()
+
 
 function OnKartsButtonClicked()
     GARAGE_PANEL.visibility = Visibility.FORCE_OFF
@@ -22,6 +25,7 @@ end
 
 function OnBackButtonClicked()
     GARAGE_PANEL.visibility = Visibility.FORCE_OFF
+    Game.GetLocalPlayer():ClearOverrideCamera(0)
     MAIN_MENU_PANEL.visibility = Visibility.INHERIT
 end
 
