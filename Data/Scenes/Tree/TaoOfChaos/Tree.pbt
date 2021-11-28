@@ -226,6 +226,7 @@ Objects {
   ChildIds: 14048675436157101377
   ChildIds: 8445281688302102432
   ChildIds: 713943643876442
+  ChildIds: 7068825633905796462
   ChildIds: 3247995148312029257
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -474,6 +475,236 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 7068825633905796462
+  Name: "Battle Geo - Locked"
+  Transform {
+    Location {
+      X: -0.00149288389
+      Y: 0.00145165343
+      Z: 3.74500451e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12158074331431296115
+  ChildIds: 15350938805397483342
+  ChildIds: 17218202075088171242
+  ChildIds: 17866259828953399732
+  ChildIds: 10014597452348989562
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 10014597452348989562
+  Name: "GEO - Thrashed Battle Truck LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7068825633905796462
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9830842801394050088
+    }
+  }
+}
+Objects {
+  Id: 17866259828953399732
+  Name: "GEO - Tanker LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7068825633905796462
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3622933792280256068
+    }
+  }
+}
+Objects {
+  Id: 17218202075088171242
+  Name: "GEO - SkavAvenger LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7068825633905796462
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3426904075239409324
+    }
+  }
+}
+Objects {
+  Id: 15350938805397483342
+  Name: "GEO - Rusty Beasty LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7068825633905796462
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9324373660678580101
+    }
   }
 }
 Objects {
@@ -1954,6 +2185,7 @@ Objects {
   ChildIds: 4924766196821982691
   ChildIds: 15480859360796277606
   ChildIds: 12056401378719592435
+  ChildIds: 4496507480726526384
   ChildIds: 9856664457127402301
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2202,6 +2434,238 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 4496507480726526384
+  Name: "Kart Geo - Locked"
+  Transform {
+    Location {
+      X: -0.00149288389
+      Y: 0.00145165343
+      Z: 3.74500451e-05
+    }
+    Rotation {
+      Yaw: 1.55300513e-18
+      Roll: -1.33402125e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16057713092089398908
+  ChildIds: 14652798051061883811
+  ChildIds: 12849329058220863875
+  ChildIds: 259721673815655684
+  ChildIds: 2627616747044290577
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 2627616747044290577
+  Name: "GEO - Thrashed Battle Truck LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4496507480726526384
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9830842801394050088
+    }
+  }
+}
+Objects {
+  Id: 259721673815655684
+  Name: "GEO - Tanker LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4496507480726526384
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3622933792280256068
+    }
+  }
+}
+Objects {
+  Id: 12849329058220863875
+  Name: "GEO - SkavAvenger LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4496507480726526384
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3426904075239409324
+    }
+  }
+}
+Objects {
+  Id: 14652798051061883811
+  Name: "GEO - Rusty Beasty LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4496507480726526384
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 3867.56689
+            Y: -5437.19434
+            Z: 507.318451
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: 21.5652
+            Roll: -1.19068309e-05
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9324373660678580101
+    }
   }
 }
 Objects {
@@ -2491,14 +2955,6 @@ Objects {
             Pitch: 0.0989967585
             Yaw: 21.5649967
             Roll: 0.0169488378
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
