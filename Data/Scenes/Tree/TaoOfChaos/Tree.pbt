@@ -1123,6 +1123,8 @@ Objects {
       }
       Color {
         R: 0.78
+        G: 0.78
+        B: 0.78
         A: 1
       }
       TeamSettings {
@@ -1193,6 +1195,8 @@ Objects {
       Label: "LOCKED"
       Color {
         R: 0.78
+        G: 0.78
+        B: 0.78
         A: 1
       }
       Size: 40
@@ -3261,6 +3265,8 @@ Objects {
       }
       Color {
         R: 0.78
+        G: 0.78
+        B: 0.78
         A: 1
       }
       TeamSettings {
@@ -3331,6 +3337,8 @@ Objects {
       Label: "LOCKED"
       Color {
         R: 0.78
+        G: 0.78
+        B: 0.78
         A: 1
       }
       Size: 40
