@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8310587797718236907
+  Name: "Lock"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Urban_Icon_060"
+  }
+}
+Assets {
   Id: 6363320609941978136
   Name: "Play"
   PlatformAssetType: 28

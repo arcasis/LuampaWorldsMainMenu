@@ -15,10 +15,15 @@ local BUTTON_ON_COLOR = Color.New(SELECT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
 local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultGeoFolder"):WaitForObject()
+local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedGeoFolder"):WaitForObject()
+
+local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 
 local DEFAULT_GEO_TABLE = {}
+local LOCKED_GEO_TABLE = {}
 local index = 0
 local total = 0
+local currentlyVisible = nil
 
 local menuOpen = false
 local upgradeButtonOn = false
@@ -35,24 +40,56 @@ function OnSelectVehicleButtonClicked()
 end
 
 function OnVehicleArrowLeftButtonClicked()
-    DEFAULT_GEO_TABLE[index].visibility = Visibility.FORCE_OFF
     if index > 1 then
         index = index - 1
-        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+        ProcessIndex()
     else
         index = total
-        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+        ProcessIndex()
     end
 end
 
 function OnVehicleArrowRightButtonClicked()
-    DEFAULT_GEO_TABLE[index].visibility = Visibility.FORCE_OFF
     if index == total then
         index = 1
-        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+        ProcessIndex()
     else
         index = index + 1
-        DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+        ProcessIndex()
+    end
+end
+
+function ProcessIndex()
+
+    currentlyVisible.visibility = Visibility.FORCE_OFF
+    
+    local unlocked = Game:GetLocalPlayer().clientUserData.unlockedBattleVehicles
+    local unlockedVehicle = nil
+    if unlocked then
+        print("there was vehicles table")
+        unlockedVehicle = unlocked[index]
+        if unlockedVehicle then
+            print("there was an unlockedVehicle, it should be visible")
+            DisplayUnlockedVehicle()
+        else
+            print("the vehicle was not unlocked, index is: ")
+            print(index)
+            DisplayLockedVehicle()
+        end
+    else
+        print("there was not an unlockedVehicles table")
+        DisplayLockedVehicle()
+
+        ----- TEMPORARY, FOR TESTING -----
+        local unlockedVehiclesTable = {}     -- need to set up storage pull into serverUserData like Battle 
+        unlockedVehiclesTable[1] = true
+        unlockedVehiclesTable[2] = false
+        unlockedVehiclesTable[3] = false
+        unlockedVehiclesTable[4] = false
+        unlockedVehiclesTable[5] = false
+        unlockedVehiclesTable[6] = false
+        Game.GetLocalPlayer().clientUserData.unlockedBattleVehicles = unlockedVehiclesTable
+        ----- END TEMPORARY TEST -----
     end
 end
 
@@ -70,6 +107,22 @@ function DisplaySelectingVehicle()
     SELECT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
     VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
+    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
+    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+end
+
+function DisplayLockedVehicle()
+    currentlyVisible = LOCKED_GEO_TABLE[index]
+    LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
+    LOCKED_IMAGE.visibility = Visibility.INHERIT
+    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
+    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+end
+
+function DisplayUnlockedVehicle()
+    currentlyVisible = DEFAULT_GEO_TABLE[index]
+    DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
     SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 end
@@ -104,8 +157,10 @@ function Tick(deltaTime)
     else
 
         if menuOpen == true then
-            DEFAULT_GEO_TABLE[index].visibility = Visibility.FORCE_OFF
+            currentlyVisible.visibility = Visibility.FORCE_OFF
             index = 1
+            DisplayUnlockedVehicle()
+            currentlyVisible.visibility = Visibility.FORCE_OFF
         end
         menuOpen = false
     end
@@ -117,8 +172,17 @@ for _,vehicle in ipairs(geoVehicles) do
     index = index + 1
     DEFAULT_GEO_TABLE[index] = vehicle
 end
+-- reset index to run locked geos
+index = 0
+-- process locked kart geos
+local geoLocked = LOCKED_GEO_FOLDER:GetChildren()
+for _,locked in ipairs(geoLocked) do
+    index = index + 1
+    LOCKED_GEO_TABLE[index] = locked
+end
 total = index
 index = 1
+currentlyVisible = DEFAULT_GEO_TABLE[index]
 
 SELECT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
