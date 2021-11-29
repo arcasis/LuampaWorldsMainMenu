@@ -18,6 +18,8 @@ local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultKartGeoFolder"):Wait
 local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedKartGeoFolder"):WaitForObject()
 
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
+local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
+local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
 
 local DEFAULT_GEO_TABLE = {}
 local LOCKED_GEO_TABLE = {}
@@ -66,18 +68,18 @@ function ProcessIndex()
     local karts = Game:GetLocalPlayer().clientUserData.unlockedKartVehicles
     local kart = nil
     if karts then
-        print("there was karts table")
+        --print("there was karts table")
         kart = karts[index]
         if kart then
-            print("there was a kart unlocked, it should be visible")
+            --print("there was a kart unlocked, it should be visible")
             DisplayUnlockedVehicle()
         else
-            print("the kart was not unlocked, index is: ")
-            print(index)
+            --print("the kart was not unlocked, index is: ")
+            --print(index)
             DisplayLockedVehicle()
         end
     else
-        print("there was not karts table")
+        --print("there was not karts table")
         DisplayLockedVehicle()
 
         ----- TEMPORARY, FOR TESTING -----
@@ -112,6 +114,8 @@ function DisplaySelectingVehicle()
 end
 
 function DisplayLockedVehicle()
+    GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     currentlyVisible = LOCKED_GEO_TABLE[index]
     LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     LOCKED_IMAGE.visibility = Visibility.INHERIT
@@ -120,6 +124,8 @@ function DisplayLockedVehicle()
 end
 
 function DisplayUnlockedVehicle()
+    GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
     currentlyVisible = DEFAULT_GEO_TABLE[index]
     DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF

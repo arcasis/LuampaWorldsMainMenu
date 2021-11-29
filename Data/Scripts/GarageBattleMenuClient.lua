@@ -18,6 +18,8 @@ local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultGeoFolder"):WaitForO
 local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedGeoFolder"):WaitForObject()
 
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
+local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
+local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
 
 local DEFAULT_GEO_TABLE = {}
 local LOCKED_GEO_TABLE = {}
@@ -66,14 +68,14 @@ function ProcessIndex()
     local unlocked = Game:GetLocalPlayer().clientUserData.unlockedBattleVehicles
     local unlockedVehicle = nil
     if unlocked then
-        print("there was vehicles table")
+        --print("there was vehicles table")
         unlockedVehicle = unlocked[index]
         if unlockedVehicle then
-            print("there was an unlockedVehicle, it should be visible")
+            --print("there was an unlockedVehicle, it should be visible")
             DisplayUnlockedVehicle()
         else
-            print("the vehicle was not unlocked, index is: ")
-            print(index)
+            --print("the vehicle was not unlocked, index is: ")
+            --print(index)
             DisplayLockedVehicle()
         end
     else
@@ -112,6 +114,8 @@ function DisplaySelectingVehicle()
 end
 
 function DisplayLockedVehicle()
+    GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     currentlyVisible = LOCKED_GEO_TABLE[index]
     LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     LOCKED_IMAGE.visibility = Visibility.INHERIT
@@ -120,6 +124,8 @@ function DisplayLockedVehicle()
 end
 
 function DisplayUnlockedVehicle()
+    GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
     currentlyVisible = DEFAULT_GEO_TABLE[index]
     DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF

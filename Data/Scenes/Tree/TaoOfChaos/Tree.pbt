@@ -2241,6 +2241,18 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:WallSpotlights"
+      ObjectReference {
+        SelfId: 17749405240085622520
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder"
+      ObjectReference {
+        SelfId: 2128988704596968986
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -2310,6 +2322,14 @@ Objects {
     }
     Overrides {
       Name: "cs:DefaultGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder:ml"
       Bool: false
     }
   }
@@ -4359,6 +4379,18 @@ Objects {
       Name: "cs:LockedImage"
       ObjectReference {
         SelfId: 16722195673712083149
+      }
+    }
+    Overrides {
+      Name: "cs:WallSpotlights"
+      ObjectReference {
+        SelfId: 17749405240085622520
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder"
+      ObjectReference {
+        SelfId: 2128988704596968986
       }
     }
   }
