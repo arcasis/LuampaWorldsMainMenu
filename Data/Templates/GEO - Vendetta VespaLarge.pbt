@@ -1,6 +1,6 @@
 Assets {
   Id: 11642181338662207462
-  Name: "GEO - Vendetta Vespa"
+  Name: "GEO - Vendetta VespaLarge"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

@@ -1,6 +1,6 @@
 Assets {
   Id: 1042466993702325011
-  Name: "GEO - Vendetta Vespa LOCKED"
+  Name: "GEO - Vendetta Vespa LOCKEDLarge"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

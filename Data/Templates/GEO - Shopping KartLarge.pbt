@@ -1,6 +1,6 @@
 Assets {
   Id: 6133784542686929612
-  Name: "GEO - Shopping Kart"
+  Name: "GEO - Shopping KartLarge"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
