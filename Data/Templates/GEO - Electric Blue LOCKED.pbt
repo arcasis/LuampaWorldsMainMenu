@@ -7,7 +7,7 @@ Assets {
       RootId: 1611418380828490329
       Objects {
         Id: 1611418380828490329
-        Name: "GEO - Electric Blue LOCKED"
+        Name: "GEO - Electric Blue LOCKEDLarge"
         Transform {
           Scale {
             X: 2.5

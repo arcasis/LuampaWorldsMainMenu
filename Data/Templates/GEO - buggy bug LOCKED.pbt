@@ -7,7 +7,7 @@ Assets {
       RootId: 5249457651869618039
       Objects {
         Id: 5249457651869618039
-        Name: "GEO - buggy bug LOCKED"
+        Name: "GEO - buggy bug LOCKEDLarge"
         Transform {
           Scale {
             X: 2.5

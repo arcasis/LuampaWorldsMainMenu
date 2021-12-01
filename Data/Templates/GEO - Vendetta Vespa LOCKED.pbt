@@ -7,7 +7,7 @@ Assets {
       RootId: 6745892828288036862
       Objects {
         Id: 6745892828288036862
-        Name: "GEO - Vendetta Vespa LOCKED"
+        Name: "GEO - Vendetta Vespa LOCKEDLarge"
         Transform {
           Scale {
             X: 2.5

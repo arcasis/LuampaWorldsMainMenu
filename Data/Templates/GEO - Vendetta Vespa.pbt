@@ -7,7 +7,7 @@ Assets {
       RootId: 3790898199827313873
       Objects {
         Id: 3790898199827313873
-        Name: "GEO - Vendetta Vespa"
+        Name: "GEO - Vendetta VespaLarge"
         Transform {
           Scale {
             X: 2.5

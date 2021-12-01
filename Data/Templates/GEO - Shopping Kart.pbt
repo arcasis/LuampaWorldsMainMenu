@@ -7,7 +7,7 @@ Assets {
       RootId: 14913928856661135900
       Objects {
         Id: 14913928856661135900
-        Name: "GEO - Shopping Kart"
+        Name: "GEO - Shopping KartLarge"
         Transform {
           Scale {
             X: 2.5

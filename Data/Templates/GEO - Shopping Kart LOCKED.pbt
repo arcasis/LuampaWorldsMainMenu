@@ -7,7 +7,7 @@ Assets {
       RootId: 6799506153835956340
       Objects {
         Id: 6799506153835956340
-        Name: "GEO - Shopping Kart LOCKED"
+        Name: "GEO - Shopping Kart LOCKEDLarge"
         Transform {
           Scale {
             X: 2.5
