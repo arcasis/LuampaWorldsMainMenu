@@ -1,28 +1,28 @@
 Assets {
-  Id: 8883611779929351183
-  Name: "GEO - buggy bugLarge"
+  Id: 14431269803579980274
+  Name: "GEO - buggy bug"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 3310691352632127506
       Objects {
         Id: 3310691352632127506
-        Name: "GEO - buggy bugLarge"
+        Name: "GEO - buggy bug"
         Transform {
           Scale {
-            X: 2.5
-            Y: 2.5
-            Z: 2.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 10803313733141197269
         ChildIds: 16448018835607565572
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"

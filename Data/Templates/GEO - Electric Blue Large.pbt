@@ -1,25 +1,25 @@
 Assets {
   Id: 10207102980281913416
-  Name: "GEO - Electric BlueLarge"
+  Name: "GEO - Electric Blue Large"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 139246566092430045
       Objects {
         Id: 139246566092430045
-        Name: "GEO - Electric BlueLarge"
+        Name: "GEO - Electric Blue Large"
         Transform {
           Scale {
-            X: 2.5
-            Y: 2.5
-            Z: 2.5
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 17086585145349289403
         ChildIds: 18287762030331318739
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"

@@ -1,25 +1,25 @@
 Assets {
   Id: 14058778756781102909
-  Name: "GEO - Electric Blue LOCKEDLarge"
+  Name: "GEO - Electric Blue LOCKED Large"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 1611418380828490329
       Objects {
         Id: 1611418380828490329
-        Name: "GEO - Electric Blue LOCKEDLarge"
+        Name: "GEO - Electric Blue LOCKED Large"
         Transform {
           Scale {
-            X: 2.5
-            Y: 2.5
-            Z: 2.5
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 6523790829945788204
         ChildIds: 5358642765705671492
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"

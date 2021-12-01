@@ -1,28 +1,28 @@
 Assets {
-  Id: 6133784542686929612
-  Name: "GEO - Shopping KartLarge"
+  Id: 5621835740325871458
+  Name: "GEO - Shopping Kart"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 14913928856661135900
       Objects {
         Id: 14913928856661135900
-        Name: "GEO - Shopping KartLarge"
+        Name: "GEO - Shopping Kart"
         Transform {
           Scale {
-            X: 2.5
-            Y: 2.5
-            Z: 2.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 4781671109827199097
         ChildIds: 5594449712267854520
         ChildIds: 8814628784695314819
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"

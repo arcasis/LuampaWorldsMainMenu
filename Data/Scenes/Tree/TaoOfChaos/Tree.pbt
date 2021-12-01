@@ -1004,6 +1004,12 @@ Objects {
             Z: 1
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     TemplateAsset {
@@ -2646,10 +2652,10 @@ Objects {
     }
   }
   ParentId: 16057713092089398908
-  ChildIds: 8945605227647450504
-  ChildIds: 14123604228296233043
-  ChildIds: 3069039809319348253
-  ChildIds: 1853052724264859050
+  ChildIds: 5951735747467451679
+  ChildIds: 8949016093305474135
+  ChildIds: 5222953284106314913
+  ChildIds: 8943120769862950087
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2667,8 +2673,8 @@ Objects {
   }
 }
 Objects {
-  Id: 1853052724264859050
-  Name: "GEO - Vendetta Vespa LOCKED"
+  Id: 8943120769862950087
+  Name: "GEO - Vendetta Vespa LOCKED Large"
   Transform {
     Scale {
       X: 1
@@ -2683,42 +2689,28 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Vendetta Vespa LOCKED"
+          String: "GEO - Vendetta Vespa LOCKED Large"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
+            X: 3867.56494
             Y: -5437.19336
-            Z: 507.318268
+            Z: 507.318024
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.0187683105
+            Yaw: 21.5649223
+            Roll: 0.0985877514
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 5.46415104e-05
-            Yaw: 21.5651817
-            Roll: 1.52300217e-08
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2729,8 +2721,8 @@ Objects {
   }
 }
 Objects {
-  Id: 3069039809319348253
-  Name: "GEO - Electric Blue LOCKED"
+  Id: 5222953284106314913
+  Name: "GEO - Electric Blue LOCKED Large"
   Transform {
     Scale {
       X: 1
@@ -2739,46 +2731,34 @@ Objects {
     }
   }
   ParentId: 4496507480726526384
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 1611418380828490329
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Electric Blue LOCKED"
+          String: "GEO - Electric Blue LOCKED Large"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
+            X: 3867.56494
             Y: -5437.19336
-            Z: 507.318268
+            Z: 507.318024
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
-            Yaw: 21.565
-            Roll: 1.52300217e-08
+            Pitch: -0.0187683105
+            Yaw: 21.5649223
+            Roll: 0.0985877514
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2789,8 +2769,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14123604228296233043
-  Name: "GEO - buggy bug LOCKED"
+  Id: 8949016093305474135
+  Name: "GEO - buggy bug LOCKED Large"
   Transform {
     Scale {
       X: 1
@@ -2805,42 +2785,28 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - buggy bug LOCKED"
+          String: "GEO - buggy bug LOCKED Large"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
+            X: 3867.56494
             Y: -5437.19336
-            Z: 507.318268
+            Z: 507.318024
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.0187683105
+            Yaw: 21.5649223
+            Roll: 0.0985877514
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 5.46415104e-05
-            Yaw: 21.5651817
-            Roll: 1.52300217e-08
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2851,8 +2817,8 @@ Objects {
   }
 }
 Objects {
-  Id: 8945605227647450504
-  Name: "GEO - Shopping Kart LOCKED"
+  Id: 5951735747467451679
+  Name: "GEO - Shopping Kart LOCKED Large"
   Transform {
     Scale {
       X: 1
@@ -2861,54 +2827,34 @@ Objects {
     }
   }
   ParentId: 4496507480726526384
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 6799506153835956340
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Shopping Kart LOCKED"
+          String: "GEO - Shopping Kart LOCKED Large"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
+            X: 3867.56494
             Y: -5437.19336
-            Z: 507.318268
+            Z: 507.318085
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
-            Yaw: 21.5651817
-            Roll: 1.52300217e-08
+            Pitch: -0.0187683105
+            Yaw: 21.5649223
+            Roll: 0.0985877514
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2937,10 +2883,10 @@ Objects {
     }
   }
   ParentId: 16057713092089398908
-  ChildIds: 16519525166633457136
-  ChildIds: 2593568867988534912
-  ChildIds: 10119493563882507274
-  ChildIds: 15185176577180416011
+  ChildIds: 12008113938708256810
+  ChildIds: 14677388191940347909
+  ChildIds: 11238951468642262273
+  ChildIds: 5301069505171639092
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2958,8 +2904,8 @@ Objects {
   }
 }
 Objects {
-  Id: 15185176577180416011
-  Name: "GEO - Vendetta Vespa"
+  Id: 5301069505171639092
+  Name: "GEO - Vendetta Vespa Large"
   Transform {
     Scale {
       X: 1
@@ -2974,14 +2920,14 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Vendetta Vespa"
+          String: "GEO - Vendetta Vespa Large"
         }
         Overrides {
           Name: "Position"
           Vector {
             X: 3867.56689
             Y: -5437.19336
-            Z: 507.318085
+            Z: 507.318207
           }
         }
         Overrides {
@@ -2990,20 +2936,6 @@ Objects {
             Pitch: 5.46415104e-05
             Yaw: 21.5651817
             Roll: 1.52300217e-08
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
         Overrides {
@@ -3020,8 +2952,8 @@ Objects {
   }
 }
 Objects {
-  Id: 10119493563882507274
-  Name: "GEO - Electric Blue"
+  Id: 11238951468642262273
+  Name: "GEO - Electric Blue Large"
   Transform {
     Scale {
       X: 1
@@ -3036,14 +2968,14 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Electric Blue"
+          String: "GEO - Electric Blue Large"
         }
         Overrides {
           Name: "Position"
           Vector {
             X: 3867.56689
             Y: -5437.19336
-            Z: 507.318085
+            Z: 507.318207
           }
         }
         Overrides {
@@ -3052,20 +2984,6 @@ Objects {
             Pitch: 5.46415104e-05
             Yaw: 21.5651817
             Roll: 1.52300217e-08
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
         Overrides {
@@ -3082,8 +3000,8 @@ Objects {
   }
 }
 Objects {
-  Id: 2593568867988534912
-  Name: "GEO - buggy bug"
+  Id: 14677388191940347909
+  Name: "GEO - buggy bug Large"
   Transform {
     Scale {
       X: 1
@@ -3098,14 +3016,14 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - buggy bug"
+          String: "GEO - buggy bug Large"
         }
         Overrides {
           Name: "Position"
           Vector {
             X: 3867.56689
             Y: -5437.19336
-            Z: 507.318085
+            Z: 507.318207
           }
         }
         Overrides {
@@ -3114,20 +3032,6 @@ Objects {
             Pitch: 5.46415104e-05
             Yaw: 21.5651817
             Roll: 1.52300217e-08
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
         Overrides {
@@ -3144,8 +3048,8 @@ Objects {
   }
 }
 Objects {
-  Id: 16519525166633457136
-  Name: "GEO - Shopping Kart"
+  Id: 12008113938708256810
+  Name: "GEO - Shopping Kart Large"
   Transform {
     Scale {
       X: 1
@@ -3160,14 +3064,14 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Shopping Kart"
+          String: "GEO - Shopping Kart Large"
         }
         Overrides {
           Name: "Position"
           Vector {
             X: 3867.56689
             Y: -5437.19336
-            Z: 507.318085
+            Z: 507.318207
           }
         }
         Overrides {
@@ -3176,20 +3080,6 @@ Objects {
             Pitch: 5.46415104e-05
             Yaw: 21.5651817
             Roll: 1.52300217e-08
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
         Overrides {
@@ -5258,14 +5148,14 @@ Objects {
   Name: "Garage Menu Camera"
   Transform {
     Location {
-      X: 6497.23779
-      Y: -5770.50781
-      Z: 312.210724
+      X: 6497.23828
+      Y: -5770.50586
+      Z: 312.211
     }
     Rotation {
-      Pitch: 1.7178266
-      Yaw: 134.384613
-      Roll: 0.184077978
+      Pitch: 1.718
+      Yaw: 134.385
+      Roll: 0.184
     }
     Scale {
       X: 1
