@@ -3,6 +3,8 @@ Assets {
   Name: "VehiclePack_Turret_VehicleTurretControllerClient"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }

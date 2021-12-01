@@ -3,6 +3,8 @@ Assets {
   Name: "Zone_Enabled_Script"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }

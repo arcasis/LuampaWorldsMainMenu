@@ -98,6 +98,8 @@ Assets {
             ReticleType {
               Value: "mc:ereticletype:none"
             }
+            AttackSfxAssetRef {
+            }
             MaxAmmo: 30
             AmmoType: "rounds"
             MultiShot: 1

@@ -3,6 +3,8 @@ Assets {
   Name: "VehiclePack_ReliableEvents"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }

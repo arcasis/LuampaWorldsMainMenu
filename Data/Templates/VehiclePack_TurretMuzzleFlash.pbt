@@ -144,7 +144,7 @@ Assets {
     }
     Assets {
       Id: 16322635077100878811
-      Name: "Generic Muzzleflash VFX"
+      Name: "Generic Muzzle Flash VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"

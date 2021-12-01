@@ -3,6 +3,8 @@ Assets {
   Name: "GameModeMenuClient"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }

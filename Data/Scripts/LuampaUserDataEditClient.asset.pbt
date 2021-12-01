@@ -3,6 +3,8 @@ Assets {
   Name: "LuampaUserDataEditClient"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }

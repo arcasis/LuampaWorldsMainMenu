@@ -3,6 +3,8 @@ Assets {
   Name: "One Shot SFX Audio Trigger"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }

@@ -3,6 +3,8 @@ Assets {
   Name: "Readme_AuroraFX"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
 }
