@@ -10,12 +10,12 @@ Assets {
         Name: "GEO - Electric Blue LOCKED"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.5
+            Y: 2.5
+            Z: 2.5
           }
         }
-        ParentId: 4496507480726526384
+        ParentId: 4781671109827199097
         ChildIds: 6523790829945788204
         ChildIds: 5358642765705671492
         Collidable_v2 {

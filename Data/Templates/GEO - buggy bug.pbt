@@ -10,12 +10,12 @@ Assets {
         Name: "GEO - buggy bug"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.5
+            Y: 2.5
+            Z: 2.5
           }
         }
-        ParentId: 1696798925401821095
+        ParentId: 4781671109827199097
         ChildIds: 10803313733141197269
         ChildIds: 16448018835607565572
         Collidable_v2 {

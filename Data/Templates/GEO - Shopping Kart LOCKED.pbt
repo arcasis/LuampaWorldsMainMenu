@@ -10,12 +10,12 @@ Assets {
         Name: "GEO - Shopping Kart LOCKED"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.5
+            Y: 2.5
+            Z: 2.5
           }
         }
-        ParentId: 12056401378719592435
+        ParentId: 4781671109827199097
         ChildIds: 5462156402371139049
         ChildIds: 1332661244272554227
         Collidable_v2 {

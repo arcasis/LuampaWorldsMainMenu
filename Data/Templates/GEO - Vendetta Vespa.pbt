@@ -10,12 +10,12 @@ Assets {
         Name: "GEO - Vendetta Vespa"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.5
+            Y: 2.5
+            Z: 2.5
           }
         }
-        ParentId: 1696798925401821095
+        ParentId: 4781671109827199097
         ChildIds: 707461249813769364
         ChildIds: 13267099666341962639
         Collidable_v2 {

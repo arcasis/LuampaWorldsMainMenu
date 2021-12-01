@@ -10,12 +10,12 @@ Assets {
         Name: "GEO - Electric Blue"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2.5
+            Y: 2.5
+            Z: 2.5
           }
         }
-        ParentId: 1696798925401821095
+        ParentId: 4781671109827199097
         ChildIds: 17086585145349289403
         ChildIds: 18287762030331318739
         Collidable_v2 {
