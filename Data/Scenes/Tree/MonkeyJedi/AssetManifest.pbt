@@ -1,4 +1,13 @@
 Assets {
+  Id: 18032733315106131619
+  Name: "Cylinder"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
   Id: 18013239046532172765
   Name: "Pipe - 90-Degree Short Thick"
   PlatformAssetType: 1
@@ -53,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16163665952175281032
+  Name: "Urban Pipe Coupling 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+  }
+}
+Assets {
   Id: 15923106616284873904
   Name: "\"Flags Of Honor\" Music Construction Kit (Sections) 01"
   PlatformAssetType: 10
@@ -71,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15177918941119336720
+  Name: "Metal Floor Panel 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_simple_floor_panel_002_uv"
+  }
+}
+Assets {
   Id: 14777049093504468820
   Name: "Cone - Truncated Wide"
   PlatformAssetType: 1
@@ -80,12 +107,30 @@ Assets {
   }
 }
 Assets {
+  Id: 14581739760861719602
+  Name: "Metal 9 Slice Frame 003"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_frames_9slice_003"
+  }
+}
+Assets {
   Id: 14565993562237882178
   Name: "Tire Worn"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_mil_tire_worn_01_ref"
+  }
+}
+Assets {
+  Id: 14387494754929522827
+  Name: "Emissive Glow Transparent"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_emissive_001"
   }
 }
 Assets {
@@ -122,6 +167,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_helix_003"
+  }
+}
+Assets {
+  Id: 13085174305471638229
+  Name: "Metal Painted Old 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_painted_old_001_uv"
   }
 }
 Assets {
@@ -170,12 +224,30 @@ Assets {
   }
 }
 Assets {
+  Id: 11242450435817934693
+  Name: "Cube - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_001"
+  }
+}
+Assets {
   Id: 10834081793086782683
   Name: "Rubber Dot Panels 01"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_scf_rubber_panels_001_uv"
+  }
+}
+Assets {
+  Id: 10645765740382465006
+  Name: "Gear - generic small solid"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gen_gear_small_001"
   }
 }
 Assets {
@@ -188,21 +260,21 @@ Assets {
   }
 }
 Assets {
+  Id: 10493976187644509689
+  Name: "Urban Vehicle Car - Tire 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+  }
+}
+Assets {
   Id: 10194704153428951590
   Name: "Cylinder"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_002"
-  }
-}
-Assets {
-  Id: 9691585235102710834
-  Name: "Metal Iron 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_iron_001"
   }
 }
 Assets {
@@ -260,6 +332,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8558831699494248963
+  Name: "Car Paint 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_car-paint_001"
+  }
+}
+Assets {
   Id: 8399266434287214900
   Name: "Rocket Trail VFX"
   PlatformAssetType: 8
@@ -275,6 +356,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+  }
+}
+Assets {
+  Id: 8202610524244690862
+  Name: "Tech Panel 05"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_sf_gen_tech-panel_005"
   }
 }
 Assets {
@@ -395,6 +485,24 @@ Assets {
   }
 }
 Assets {
+  Id: 5313430657937779536
+  Name: "Metal Floor Panel 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_simple_floor_panel_001_uv"
+  }
+}
+Assets {
+  Id: 5214190892202359817
+  Name: "Metal Greebles 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_greebles_002_uv_ref"
+  }
+}
+Assets {
   Id: 5117326109845707677
   Name: "Plane 4m - One Sided"
   PlatformAssetType: 1
@@ -485,12 +593,30 @@ Assets {
   }
 }
 Assets {
+  Id: 3286632740216585626
+  Name: "Metal Painted 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_painted_new_001_uv"
+  }
+}
+Assets {
   Id: 3225924156252914362
   Name: "Metal Iron Rusted 01"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_002"
+  }
+}
+Assets {
+  Id: 3101436347701850319
+  Name: "Metal 9 Slice Frame 005"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_frames_9slice_005"
   }
 }
 Assets {
@@ -530,12 +656,39 @@ Assets {
   }
 }
 Assets {
+  Id: 2039606655896571360
+  Name: "Urban Vehicle Car - Brake 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+  }
+}
+Assets {
   Id: 1971796409750169980
   Name: "Humanoid 2 Rig"
   PlatformAssetType: 25
   PrimaryAsset {
     AssetType: "SkeletonAssetRef"
     AssetId: "npc_guy_wireframe_001_ref"
+  }
+}
+Assets {
+  Id: 1942379238642207448
+  Name: "Metal Steel Triangle 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_steel_tri_002"
+  }
+}
+Assets {
+  Id: 1717468004184906650
+  Name: "Leather Tufted 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fabric_tufted_001_uv_ref"
   }
 }
 Assets {
@@ -557,6 +710,15 @@ Assets {
   }
 }
 Assets {
+  Id: 786720935694048439
+  Name: "Metal Grates 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_grates_002_uv"
+  }
+}
+Assets {
   Id: 655025712233521833
   Name: "Humanoid 2 Cyber Hacker Pants"
   PlatformAssetType: 26
@@ -572,6 +734,15 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_guy_lower_scifi_003_ref"
+  }
+}
+Assets {
+  Id: 539955070683914951
+  Name: "Prism - 8-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_octagon_hq_001"
   }
 }
 Assets {
