@@ -148,7 +148,7 @@ Objects {
     }
     AudioBP {
       AutoPlay: true
-      Volume: 0.1
+      Volume: 0.3
       Falloff: 3600
       Radius: 400
     }
