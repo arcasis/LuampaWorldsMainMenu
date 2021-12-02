@@ -80527,9 +80527,7 @@ Objects {
   ChildIds: 13002008819424548251
   ChildIds: 15556577748623786045
   ChildIds: 251305854131855126
-  ChildIds: 8360984809592217364
   ChildIds: 16443204486589013687
-  ChildIds: 16304787290852235119
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -80547,82 +80545,18 @@ Objects {
   }
 }
 Objects {
-  Id: 16304787290852235119
-  Name: "Spotlight"
-  Transform {
-    Location {
-      X: 621.631836
-      Y: 448.345825
-      Z: 260.257507
-    }
-    Rotation {
-      Pitch: -85.6803894
-      Yaw: 14.2924814
-      Roll: -161.350327
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5282137661668090551
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Light {
-    Intensity: 50
-    Color {
-      R: 1
-      G: 1
-      B: 1
-      A: 1
-    }
-    VolumetricIntensity: 5
-    TeamSettings {
-    }
-    Light {
-      Temperature: 6500
-      LocalLight {
-        AttenuationRadius: 1000
-        SpotLight {
-          SourceRadius: 20
-          SoftSourceRadius: 20
-          FallOffExponent: 8
-          InnerConeAngle: 30
-          OuterConeAngle: 40
-          Profile {
-            Value: "mc:espotlightprofile:basicspotlight"
-          }
-        }
-      }
-      MaxDrawDistance: 5000
-      MaxDistanceFadeRange: 1000
-    }
-  }
-}
-Objects {
   Id: 16443204486589013687
   Name: "Spotlight"
   Transform {
     Location {
-      X: 605.631836
+      X: 116.574219
       Y: -42.6541748
-      Z: 235.257507
+      Z: 48.0817871
     }
     Rotation {
-      Pitch: -85.680542
-      Yaw: 14.2931557
-      Roll: -161.350693
+      Pitch: -99.1620178
+      Yaw: -6.70996094
+      Roll: -140.472534
     }
     Scale {
       X: 1
@@ -80644,7 +80578,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Light {
-    Intensity: 50
+    Intensity: 100
     Color {
       R: 1
       G: 1
@@ -80657,77 +80591,14 @@ Objects {
     Light {
       Temperature: 6500
       LocalLight {
-        AttenuationRadius: 1000
+        AttenuationRadius: 911.023315
         SpotLight {
           SourceRadius: 20
           SoftSourceRadius: 20
-          FallOffExponent: 8
-          InnerConeAngle: 30
-          OuterConeAngle: 40
-          Profile {
-            Value: "mc:espotlightprofile:basicspotlight"
-          }
-        }
-      }
-      MaxDrawDistance: 5000
-      MaxDistanceFadeRange: 1000
-    }
-  }
-}
-Objects {
-  Id: 8360984809592217364
-  Name: "Spotlight"
-  Transform {
-    Location {
-      X: 614.631836
-      Y: -542.654175
-      Z: 247.257507
-    }
-    Rotation {
-      Pitch: -85.6809692
-      Yaw: 14.2928963
-      Roll: -161.350586
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5282137661668090551
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Light {
-    Intensity: 50
-    Color {
-      R: 1
-      G: 1
-      B: 1
-      A: 1
-    }
-    VolumetricIntensity: 5
-    TeamSettings {
-    }
-    Light {
-      Temperature: 6500
-      LocalLight {
-        AttenuationRadius: 1000
-        SpotLight {
-          SourceRadius: 20
-          SoftSourceRadius: 20
-          FallOffExponent: 8
-          InnerConeAngle: 30
-          OuterConeAngle: 40
+          SourceLength: 20
+          FallOffExponent: 7.86490774
+          InnerConeAngle: 54.6445351
+          OuterConeAngle: 72.0085526
           Profile {
             Value: "mc:espotlightprofile:basicspotlight"
           }
@@ -80745,7 +80616,7 @@ Objects {
     Location {
       X: -254.368164
       Y: -74.6541748
-      Z: 54.2575073
+      Z: 5.36114502
     }
     Rotation {
       Pitch: -85.8656311
@@ -80808,8 +80679,8 @@ Objects {
   Transform {
     Location {
       X: 413.631836
-      Y: -744.654175
-      Z: 26.2575073
+      Y: -608.852722
+      Z: 36.4019775
     }
     Rotation {
       Pitch: -36.9143677
