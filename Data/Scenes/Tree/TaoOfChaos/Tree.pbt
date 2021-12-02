@@ -6468,7 +6468,7 @@ Objects {
   Control {
     Width: 450
     Height: 650
-    UIX: -20
+    UIX: -100
     UIY: -86.6869507
     RenderTransformPivot {
       Anchor {
@@ -6769,7 +6769,7 @@ Objects {
   Control {
     Width: 450
     Height: 650
-    UIX: 20
+    UIX: 100
     UIY: -86.6869507
     RenderTransformPivot {
       Anchor {
