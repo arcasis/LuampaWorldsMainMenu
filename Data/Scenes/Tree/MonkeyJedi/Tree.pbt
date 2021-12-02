@@ -107,13 +107,9 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      AutoPlay: true
-      Volume: 1
+      Volume: 0.4
       Falloff: 3600
       Radius: 80000
-      EnableOcclusion: true
-      IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
     }
   }
 }
@@ -151,12 +147,10 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Volume: 1
+      AutoPlay: true
+      Volume: 0.1
       Falloff: 3600
       Radius: 400
-      EnableOcclusion: true
-      IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
     }
   }
 }
@@ -194,12 +188,9 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      Volume: 1
+      Volume: 0.4
       Falloff: 3600
       Radius: 400
-      EnableOcclusion: true
-      IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
     }
   }
 }
@@ -82189,10 +82180,10 @@ Objects {
   Name: "Vehicle Display Light ON"
   Transform {
     Location {
-      Z: 130
+      Z: 132
     }
     Rotation {
-      Yaw: -14.8148804
+      Yaw: -14.815
     }
     Scale {
       X: 8.17229

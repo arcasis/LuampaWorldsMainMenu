@@ -25,16 +25,8 @@ end
 
 function OnGarageButtonClicked()
     HideMainMenuPanel()
-    -- test
-    print(Game.GetLocalPlayer():GetLookWorldRotation())
 
-    Game.GetLocalPlayer():SetLookWorldRotation(GARAGE_MENU_CAMERA:GetWorldRotation())
-
-    Task.Wait(1)
-    
-    -- test
-    print(GARAGE_MENU_CAMERA:GetWorldRotation())
-    print(Game.GetLocalPlayer():GetLookWorldRotation())
+    --Game.GetLocalPlayer():SetLookWorldRotation(GARAGE_MENU_CAMERA:GetWorldRotation())
 
     Game.GetLocalPlayer():SetOverrideCamera(GARAGE_MENU_CAMERA, 0)
     GARAGE_PANEL.visibility = Visibility.INHERIT

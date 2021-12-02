@@ -249,8 +249,14 @@ Objects {
   Name: "Battle Geo - Upgrades"
   Transform {
     Location {
+      X: -2095.61963
+      Y: -6828.03711
+      Z: 511.505249
     }
     Rotation {
+      Pitch: -0.098815918
+      Yaw: -21.7039185
+      Roll: 0.0154883666
     }
     Scale {
       X: 1
@@ -482,11 +488,14 @@ Objects {
   Name: "Battle Geo - Locked"
   Transform {
     Location {
-      X: -0.00149288389
-      Y: 0.00145165343
-      Z: 3.74500451e-05
+      X: -2095.61914
+      Y: -6828.10645
+      Z: 526.36853
     }
     Rotation {
+      Pitch: -0.098815918
+      Yaw: -21.7039185
+      Roll: 0.0154883666
     }
     Scale {
       X: 1
@@ -537,23 +546,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19434
-            Z: 507.318451
+            X: 26.1541805
+            Y: 11.1180344
+            Z: -26.7256222
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
             Pitch: 5.46415104e-05
-            Yaw: 21.5652
-            Roll: -1.19068309e-05
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -585,23 +598,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19434
-            Z: 507.318451
+            X: -20.6262665
+            Y: -8.72545815
+            Z: 11.8508883
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
             Pitch: 5.46415104e-05
-            Yaw: 21.5652
-            Roll: -1.19068309e-05
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -633,23 +650,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19434
-            Z: 507.318451
+            X: 0.000551753677
+            Y: -0.0204230957
+            Z: 4.46464443
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
             Pitch: 5.46415104e-05
-            Yaw: 21.5652
-            Roll: -1.19068309e-05
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -681,23 +702,26 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19434
-            Z: 507.318451
+            X: 0.000147698258
+            Y: 6.20864375e-05
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
             Pitch: 5.46415104e-05
-            Yaw: 21.5652
-            Roll: -1.19068309e-05
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -712,13 +736,14 @@ Objects {
   Name: "Battle Geo - Default"
   Transform {
     Location {
-      X: -0.00149288389
-      Y: 0.00145165343
-      Z: 3.74500487e-05
+      X: -2095.61328
+      Y: -6828.12695
+      Z: 530.831787
     }
     Rotation {
-      Yaw: 2.17420718e-17
-      Roll: -1.33402125e-08
+      Pitch: -0.098815918
+      Yaw: -21.7039185
+      Roll: 0.0154883666
     }
     Scale {
       X: 1
@@ -785,17 +810,14 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56787
-            Y: -5437.19531
-            Z: 507.318237
+            X: -0.00308217853
+            Y: 0.163813472
+            Z: -35.6888046
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 0.0989967585
-            Yaw: 21.5649967
-            Roll: 0.0169488378
           }
         }
         Overrides {
@@ -804,6 +826,18 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -851,17 +885,14 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56787
-            Y: -5437.19531
-            Z: 507.318237
+            X: -23.3637333
+            Y: -9.82117653
+            Z: -0.0429481752
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 0.0989967585
-            Yaw: 21.5649967
-            Roll: 0.0169488378
           }
         }
         Overrides {
@@ -870,6 +901,18 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -917,17 +960,13 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56787
-            Y: -5437.19531
-            Z: 507.318237
+            X: 0.000147698258
+            Y: 6.20864375e-05
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 0.0989967585
-            Yaw: 21.5649967
-            Roll: 0.0169488378
           }
         }
         Overrides {
@@ -936,6 +975,18 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -983,17 +1034,13 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56787
-            Y: -5437.19531
-            Z: 507.318237
+            X: 0.000147698258
+            Y: 6.20864375e-05
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 0.0989967585
-            Yaw: 21.5649967
-            Roll: 0.0169488378
           }
         }
         Overrides {
@@ -1008,6 +1055,12 @@ Objects {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -1038,10 +1091,7 @@ Objects {
     }
   }
   ParentId: 12158074331431296115
-  ChildIds: 18001212761352047056
-  ChildIds: 389990483261266469
-  ChildIds: 14684816620838083131
-  ChildIds: 7732725985481900805
+  ChildIds: 7959611291421426607
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1055,7 +1105,70 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 1844
+    Width: 2070
+    Height: 1093
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentHeight: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7959611291421426607
+  Name: "Garage Battle Buttons Panel"
+  Transform {
+    Location {
+      X: -43.2218933
+      Y: 4518.17578
+      Z: 864.414307
+    }
+    Rotation {
+      Pitch: -0.273494422
+      Yaw: -177.809219
+      Roll: 0.268328607
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8445281688302102432
+  ChildIds: 18001212761352047056
+  ChildIds: 389990483261266469
+  ChildIds: 14684816620838083131
+  ChildIds: 7732725985481900805
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
     Height: 100
     UIY: 20
     RenderTransformPivot {
@@ -1063,7 +1176,7 @@ Objects {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    UseParentHeight: true
+    UseParentWidth: true
     Panel {
       Opacity: 1
     }
@@ -1100,7 +1213,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8445281688302102432
+  ParentId: 7959611291421426607
   ChildIds: 16345938679361850860
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1259,7 +1372,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8445281688302102432
+  ParentId: 7959611291421426607
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1275,8 +1388,7 @@ Objects {
   Control {
     Width: 50
     Height: 20
-    UIX: -320
-    UIY: 60
+    UIX: -290
     RotationAngle: -90
     RenderTransformPivot {
       Anchor {
@@ -1338,12 +1450,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -1369,7 +1481,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8445281688302102432
+  ParentId: 7959611291421426607
   ChildIds: 7482852631564289028
   ChildIds: 7049339579304542348
   ChildIds: 830251563864275692
@@ -1388,7 +1500,7 @@ Objects {
   Control {
     Width: 380
     Height: 80
-    UIY: 110
+    UIY: 100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1777,7 +1889,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8445281688302102432
+  ParentId: 7959611291421426607
   ChildIds: 9676787866780516591
   ChildIds: 307729007882034710
   ChildIds: 8715028910927077954
@@ -1796,7 +1908,7 @@ Objects {
   Control {
     Width: 380
     Height: 80
-    UIY: 20
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2405,8 +2517,14 @@ Objects {
   Name: "Kart Geo - Upgrades"
   Transform {
     Location {
+      X: -2095.61963
+      Y: -6828.03711
+      Z: 511.505249
     }
     Rotation {
+      Pitch: -0.098815918
+      Yaw: -21.7039185
+      Roll: 0.0154883666
     }
     Scale {
       X: 1
@@ -2638,12 +2756,14 @@ Objects {
   Name: "Kart Geo - Locked"
   Transform {
     Location {
-      X: 2.73576e-09
-      Z: 3.05172434e-05
+      X: -2095.61963
+      Y: -6828.03711
+      Z: 511.505249
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Pitch: -0.098815918
+      Yaw: -21.7039185
+      Roll: 0.0154883666
     }
     Scale {
       X: 1
@@ -2694,23 +2814,25 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56494
-            Y: -5437.19336
-            Z: 507.318024
+            X: 0.000147698258
+            Y: 6.20864375e-05
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: -0.0187683105
-            Yaw: 21.5649223
-            Roll: 0.0985877514
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2742,23 +2864,26 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56494
-            Y: -5437.19336
-            Z: 507.318024
+            X: 0.000551108271
+            Y: -0.0203903988
+            Z: 4.45751858
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: -0.0187683105
-            Yaw: 21.5649223
-            Roll: 0.0985877514
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2790,23 +2915,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56494
-            Y: -5437.19336
-            Z: 507.318024
+            X: 0.000416170806
+            Y: -0.0135491714
+            Z: 2.96650648
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: -0.0187683105
-            Yaw: 21.5649223
-            Roll: 0.0985877514
+            Pitch: -1.67938232
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2838,23 +2967,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56494
-            Y: -5437.19336
-            Z: 507.318085
+            X: -0.000421372242
+            Y: 0.0204643495
+            Z: -4.46171427
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: -0.0187683105
-            Yaw: 21.5649223
-            Roll: 0.0985877514
+            Pitch: -1.49890137
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2869,12 +3002,14 @@ Objects {
   Name: "Kart Geo - Default"
   Transform {
     Location {
-      X: 2.73576e-09
-      Z: 3.05172434e-05
+      X: -2095.61963
+      Y: -6828.03711
+      Z: 511.505249
     }
     Rotation {
-      Yaw: 2.17420718e-17
-      Roll: -1.33402125e-08
+      Pitch: -0.098815918
+      Yaw: -21.7039185
+      Roll: 0.0154883666
     }
     Scale {
       X: 1
@@ -2925,16 +3060,15 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19336
-            Z: 507.318207
+            X: -0.001079401
+            Y: 0.0547245145
+            Z: -11.9269371
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
             Pitch: 5.46415104e-05
-            Yaw: 21.5651817
             Roll: 1.52300217e-08
           }
         }
@@ -2942,6 +3076,12 @@ Objects {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -2973,16 +3113,15 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19336
-            Z: 507.318207
+            X: -0.0020210743
+            Y: 0.102466449
+            Z: -22.332056
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
             Pitch: 5.46415104e-05
-            Yaw: 21.5651817
             Roll: 1.52300217e-08
           }
         }
@@ -2990,6 +3129,12 @@ Objects {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -3021,23 +3166,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19336
-            Z: 507.318207
+            X: 6.87880659
+            Y: 2.89847708
+            Z: -1.47929776
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
-            Yaw: 21.5651817
-            Roll: 1.52300217e-08
+            Pitch: -3.35638428
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -3069,23 +3218,27 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 3867.56689
-            Y: -5437.19336
-            Z: 507.318207
+            X: 11.0062008
+            Y: 4.63339138
+            Z: -1.45520079
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
-            Yaw: 21.5651817
-            Roll: 1.52300217e-08
+            Pitch: -1.64419556
           }
         }
         Overrides {
           Name: "Visible"
           Enum {
             Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -3116,10 +3269,7 @@ Objects {
     }
   }
   ParentId: 16057713092089398908
-  ChildIds: 3964049384728287737
-  ChildIds: 8775616664870045363
-  ChildIds: 17334094853589001721
-  ChildIds: 16722195673712083149
+  ChildIds: 9258645056405633466
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3133,7 +3283,70 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 1844
+    Width: 2070
+    Height: 1093
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentHeight: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 9258645056405633466
+  Name: "Garage Karts Buttons Panel"
+  Transform {
+    Location {
+      X: -43.2218628
+      Y: 4518.17383
+      Z: 864.414429
+    }
+    Rotation {
+      Pitch: -0.273494422
+      Yaw: -177.809219
+      Roll: 0.268328577
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15480859360796277606
+  ChildIds: 3964049384728287737
+  ChildIds: 8775616664870045363
+  ChildIds: 17334094853589001721
+  ChildIds: 16722195673712083149
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
     Height: 100
     UIY: 20
     RenderTransformPivot {
@@ -3141,7 +3354,7 @@ Objects {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    UseParentHeight: true
+    UseParentWidth: true
     Panel {
       Opacity: 1
     }
@@ -3176,7 +3389,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   ChildIds: 17454639809863158516
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3335,7 +3548,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3351,8 +3564,7 @@ Objects {
   Control {
     Width: 50
     Height: 20
-    UIX: -320
-    UIY: 60
+    UIX: -290
     RotationAngle: -90
     RenderTransformPivot {
       Anchor {
@@ -3414,12 +3626,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -3445,7 +3657,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   ChildIds: 13636035313987749622
   ChildIds: 9735909977362922046
   ChildIds: 8015035929456199217
@@ -3464,7 +3676,7 @@ Objects {
   Control {
     Width: 380
     Height: 80
-    UIY: 110
+    UIY: 100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3853,7 +4065,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   ChildIds: 13086031412932905399
   ChildIds: 1389343980869533891
   ChildIds: 3621763114173484124
@@ -3872,7 +4084,7 @@ Objects {
   Control {
     Width: 380
     Height: 80
-    UIY: 20
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -4381,9 +4593,7 @@ Objects {
     }
   }
   ParentId: 13109927566236709296
-  ChildIds: 18346414951371231482
-  ChildIds: 17211227737415893070
-  ChildIds: 16879821429092978541
+  ChildIds: 5969656812612337175
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4398,13 +4608,75 @@ Objects {
   }
   Control {
     Width: 2058
-    Height: 100
+    Height: 1093
     UIY: 1
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5969656812612337175
+  Name: "Garage Menu Buttons Panel"
+  Transform {
+    Location {
+      X: 4522.17871
+      Y: -43.2070808
+      Z: -843.241943
+    }
+    Rotation {
+      Yaw: -6.83018879e-06
+      Roll: -2.66804339e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14557584287892330648
+  ChildIds: 18346414951371231482
+  ChildIds: 17211227737415893070
+  ChildIds: 16879821429092978541
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
     Panel {
       Opacity: 1
     }
@@ -4442,7 +4714,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14557584287892330648
+  ParentId: 5969656812612337175
   ChildIds: 12147108114974190093
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4703,7 +4975,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14557584287892330648
+  ParentId: 5969656812612337175
   ChildIds: 13316003060841109590
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4964,7 +5236,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14557584287892330648
+  ParentId: 5969656812612337175
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4980,8 +5252,7 @@ Objects {
   Control {
     Width: 50
     Height: 20
-    UIX: -450
-    UIY: 20
+    UIX: -470
     RotationAngle: -90
     RenderTransformPivot {
       Anchor {
@@ -5043,12 +5314,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topright"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -5148,14 +5419,11 @@ Objects {
   Name: "temp vehicle display delete"
   Transform {
     Location {
-      X: 5964.00635
-      Y: -5098.29639
-      Z: 74.6582413
+      X: 212.993652
+      Y: -6824.47559
+      Z: 64.2896729
     }
     Rotation {
-      Pitch: -0.259429932
-      Yaw: -103.719086
-      Roll: 0.068625167
     }
     Scale {
       X: 8.17229
@@ -5228,12 +5496,12 @@ Objects {
   Name: "Garage Menu Camera"
   Transform {
     Location {
-      X: 54.3234291
-      Y: 54.0749741
-      Z: 1598.36755
+      X: 1.46708465
+      Y: -76.6949
+      Z: 1887.69434
     }
     Rotation {
-      Yaw: -135.131348
+      Yaw: 90
     }
     Scale {
       X: 1
@@ -5261,15 +5529,14 @@ Objects {
     MinDistance: 300
     MaxDistance: 600
     PositionOffset {
-      Y: 60
+      Y: 15
     }
     RotationOffset {
-      Yaw: -135
     }
     FieldOfView: 110
     ViewWidth: 1200
     RotationMode {
-      Value: "mc:erotationmode:fixed"
+      Value: "mc:erotationmode:default"
     }
     MinPitch: -89
     MaxPitch: 89
@@ -5297,10 +5564,8 @@ Objects {
     }
   }
   ParentId: 2016190126149047528
+  ChildIds: 9652033299875566599
   ChildIds: 1033607361455530828
-  ChildIds: 8106024140583710711
-  ChildIds: 1263358833129880458
-  ChildIds: 6808220403846209416
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5339,6 +5604,139 @@ Objects {
   }
 }
 Objects {
+  Id: 1033607361455530828
+  Name: "GameModeMenuClient"
+  Transform {
+    Location {
+      X: 0.000474034168
+      Y: -0.000741627533
+      Z: 3.2738255e-05
+    }
+    Rotation {
+      Yaw: 2.80162127e-14
+      Roll: -1.09389739e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3518919065487025658
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:MainMenuPanel"
+      ObjectReference {
+        SelfId: 12978439604578497302
+      }
+    }
+    Overrides {
+      Name: "cs:SelectGameModePanel"
+      ObjectReference {
+        SelfId: 3518919065487025658
+      }
+    }
+    Overrides {
+      Name: "cs:KartsButton"
+      ObjectReference {
+        SelfId: 8106024140583710711
+      }
+    }
+    Overrides {
+      Name: "cs:BattleCarsButton"
+      ObjectReference {
+        SelfId: 1263358833129880458
+      }
+    }
+    Overrides {
+      Name: "cs:BackButton"
+      ObjectReference {
+        SelfId: 6808220403846209416
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3523495098236519780
+    }
+  }
+}
+Objects {
+  Id: 9652033299875566599
+  Name: "Game Mode Buttons Panel"
+  Transform {
+    Location {
+      X: 4455.35352
+      Y: -2303.46924
+      Z: -421.928955
+    }
+    Rotation {
+      Pitch: 0.00512947189
+      Yaw: 88.904007
+      Roll: 0.268311113
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3518919065487025658
+  ChildIds: 8106024140583710711
+  ChildIds: 1263358833129880458
+  ChildIds: 6808220403846209416
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 6808220403846209416
   Name: "ArrowSmallBack"
   Transform {
@@ -5358,7 +5756,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3518919065487025658
+  ParentId: 9652033299875566599
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5375,7 +5773,6 @@ Objects {
     Width: 50
     Height: 20
     UIX: -450
-    UIY: 20
     RotationAngle: -90
     RenderTransformPivot {
       Anchor {
@@ -5468,7 +5865,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3518919065487025658
+  ParentId: 9652033299875566599
   ChildIds: 6924393766864565033
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5486,6 +5883,7 @@ Objects {
     Width: 380
     Height: 80
     UIX: 5
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5728,7 +6126,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3518919065487025658
+  ParentId: 9652033299875566599
   ChildIds: 10702490084082752328
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5746,6 +6144,7 @@ Objects {
     Width: 380
     Height: 80
     UIX: -5
+    UIY: 10
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5965,76 +6364,6 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
-    }
-  }
-}
-Objects {
-  Id: 1033607361455530828
-  Name: "GameModeMenuClient"
-  Transform {
-    Location {
-      X: 0.000474034168
-      Y: -0.000741627533
-      Z: 3.2738255e-05
-    }
-    Rotation {
-      Yaw: 2.80162127e-14
-      Roll: -1.09389739e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3518919065487025658
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:MainMenuPanel"
-      ObjectReference {
-        SelfId: 12978439604578497302
-      }
-    }
-    Overrides {
-      Name: "cs:SelectGameModePanel"
-      ObjectReference {
-        SelfId: 3518919065487025658
-      }
-    }
-    Overrides {
-      Name: "cs:KartsButton"
-      ObjectReference {
-        SelfId: 8106024140583710711
-      }
-    }
-    Overrides {
-      Name: "cs:BattleCarsButton"
-      ObjectReference {
-        SelfId: 1263358833129880458
-      }
-    }
-    Overrides {
-      Name: "cs:BackButton"
-      ObjectReference {
-        SelfId: 6808220403846209416
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 3523495098236519780
     }
   }
 }
@@ -8255,9 +8584,8 @@ Objects {
       Z: 591.8703
     }
     Rotation {
-      Pitch: 1.52246952
-      Yaw: -89.9999619
-      Roll: -1.06759394e-07
+      Pitch: 1.522
+      Yaw: -89.9999695
     }
     Scale {
       X: 1
