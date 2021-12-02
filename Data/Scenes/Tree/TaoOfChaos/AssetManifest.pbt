@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13949441344821433690
+  Name: "Cylinder"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
   Id: 11996370362624858284
   Name: "Abstract Frame 10"
   PlatformAssetType: 9

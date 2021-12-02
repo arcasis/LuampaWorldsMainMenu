@@ -14,7 +14,6 @@ local GARAGE_PANEL = script:GetCustomProperty("GaragePanel"):WaitForObject()
 local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForObject()
 
 
-
 function OnCoreWorldButtonClicked()
     Game.GetLocalPlayer():TransferToGame("e39f3e/core-world")
 end
@@ -26,12 +25,19 @@ end
 
 function OnGarageButtonClicked()
     HideMainMenuPanel()
+    -- test
+    print(Game.GetLocalPlayer():GetLookWorldRotation())
+
+    Game.GetLocalPlayer():SetLookWorldRotation(GARAGE_MENU_CAMERA:GetWorldRotation())
+
+    Task.Wait(1)
+    
+    -- test
+    print(GARAGE_MENU_CAMERA:GetWorldRotation())
+    print(Game.GetLocalPlayer():GetLookWorldRotation())
+
     Game.GetLocalPlayer():SetOverrideCamera(GARAGE_MENU_CAMERA, 0)
     GARAGE_PANEL.visibility = Visibility.INHERIT
-end
-
-function OnOptionsButtonClicked()
-    HideMainMenuPanel()
 end
 
 
@@ -46,4 +52,3 @@ UI.SetCanCursorInteractWithUI(true)
 CORE_WORLD_BUTTON.clickedEvent:Connect(OnCoreWorldButtonClicked)
 GAME_MODE_BUTTON.clickedEvent:Connect(OnGameModeButtonClicked)
 GARAGE_BUTTON.clickedEvent:Connect(OnGarageButtonClicked)
-OPTIONS_BUTTON.clickedEvent:Connect(OnOptionsButtonClicked)
