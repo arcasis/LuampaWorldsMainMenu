@@ -872,6 +872,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8767741365602854240
+  Name: "Rubber Tiles 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_rubber_panels_002_uv"
+  }
+}
+Assets {
   Id: 8737190680805017753
   Name: "Cylinder - Rounded Bottom-Aligned"
   PlatformAssetType: 1

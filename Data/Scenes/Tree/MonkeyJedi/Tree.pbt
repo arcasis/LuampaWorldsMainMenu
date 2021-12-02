@@ -69482,8 +69482,8 @@ Objects {
   Name: "GarageArea"
   Transform {
     Location {
-      X: 5061.03857
-      Y: 6115.39795
+      X: 6679.90186
+      Y: 332.385132
       Z: -28.0088329
     }
     Rotation {
@@ -69527,11 +69527,10 @@ Objects {
     }
   }
   ParentId: 16065307972936683234
+  ChildIds: 17129873224972098340
   ChildIds: 9223354440096485133
   ChildIds: 17986386124106456614
   ChildIds: 9906699973644061237
-  ChildIds: 17129873224972098340
-  ChildIds: 7475442018076934787
   ChildIds: 17749405240085622520
   ChildIds: 5282137661668090551
   ChildIds: 15630991729437494536
@@ -69649,11 +69648,12 @@ Objects {
   Name: "Drill"
   Transform {
     Location {
-      X: -422.578125
-      Y: -362.205566
+      X: -427.003
+      Y: -158.29129
       Z: 162.797699
     }
     Rotation {
+      Yaw: -34
     }
     Scale {
       X: 1
@@ -70543,11 +70543,12 @@ Objects {
   Name: "Drill"
   Transform {
     Location {
-      X: -24.4047852
-      Y: 32.5996094
+      X: 154.273743
+      Y: -5.58455
       Z: 133.562866
     }
     Rotation {
+      Yaw: -33
     }
     Scale {
       X: 1
@@ -71437,13 +71438,13 @@ Objects {
   Name: "Hammer"
   Transform {
     Location {
-      X: -221.216309
-      Y: -148.704102
-      Z: 163.951324
+      X: -156.367035
+      Y: -82.5735855
+      Z: 66.6653137
     }
     Rotation {
-      Pitch: 1.89969409
-      Yaw: 38.1294136
+      Pitch: 1.89970088
+      Yaw: 12.1295242
       Roll: -91.0471191
     }
     Scale {
@@ -71774,14 +71775,14 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 56.3061523
-      Y: 121.085449
+      X: 474.813324
+      Y: 92.6415558
       Z: 156.980652
     }
     Rotation {
-      Pitch: 40.1030617
-      Yaw: 40.1597023
-      Roll: -94.370575
+      Pitch: 40.1028557
+      Yaw: 10.1595984
+      Roll: -94.3705444
     }
     Scale {
       X: 1
@@ -72204,14 +72205,14 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 56.3061523
-      Y: 121.085449
+      X: 474.813324
+      Y: 92.6415558
       Z: 111.659576
     }
     Rotation {
-      Pitch: 40.1030769
-      Yaw: 40.1597176
-      Roll: -94.370575
+      Pitch: 40.1029625
+      Yaw: 10.1596937
+      Roll: -94.3705444
     }
     Scale {
       X: 1
@@ -72634,14 +72635,14 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 56.3061523
-      Y: 121.085449
+      X: 474.813324
+      Y: 92.6415558
       Z: 67.4573669
     }
     Rotation {
-      Pitch: 40.1030922
-      Yaw: 40.1597404
-      Roll: -94.370575
+      Pitch: 40.1029625
+      Yaw: 10.1596937
+      Roll: -94.3705444
     }
     Scale {
       X: 1
@@ -73064,14 +73065,14 @@ Objects {
   Name: "Hammer"
   Transform {
     Location {
-      X: -30.5996094
-      Y: 35.8740234
+      X: 175.430328
+      Y: 8.28621864
       Z: 57.8895569
     }
     Rotation {
-      Pitch: 1.89969409
-      Yaw: 38.1294556
-      Roll: -91.0470886
+      Pitch: 1.89967358
+      Yaw: 18.1293774
+      Roll: -91.0470276
     }
     Scale {
       X: 1
@@ -73989,13 +73990,13 @@ Objects {
   Name: "Tire Worn"
   Transform {
     Location {
-      X: 220.0858
-      Y: 436.838715
+      X: 475.284241
+      Y: 357.120605
       Z: 25.2621346
     }
     Rotation {
-      Yaw: 110.585129
-      Roll: 0.433306545
+      Yaw: 72.5849304
+      Roll: 0.433305651
     }
     Scale {
       X: 0.463496447
@@ -74056,13 +74057,12 @@ Objects {
   Name: "Urban Vehicle Car - Rim 01"
   Transform {
     Location {
-      X: 220.068405
-      Y: 436.832672
+      X: 475.267059
+      Y: 357.127472
       Z: 27.6614265
     }
     Rotation {
-      Pitch: -6.83018879e-06
-      Yaw: -69.4137573
+      Yaw: -107.413727
       Roll: -90.4317
     }
     Scale {
@@ -74137,13 +74137,13 @@ Objects {
   Name: "Tire Worn"
   Transform {
     Location {
-      X: 155.104889
-      Y: 447.263245
+      X: 430.496826
+      Y: 405.342407
       Z: 24.8297863
     }
     Rotation {
-      Yaw: 110.585022
-      Roll: 0.433306187
+      Yaw: 72.584877
+      Roll: 0.433305651
     }
     Scale {
       X: 0.463496447
@@ -74204,13 +74204,12 @@ Objects {
   Name: "Urban Vehicle Car - Rim 01"
   Transform {
     Location {
-      X: 155.087708
-      Y: 447.257874
+      X: 430.479156
+      Y: 405.348236
       Z: 27.2290783
     }
     Rotation {
-      Pitch: -6.83018879e-06
-      Yaw: -69.4137573
+      Yaw: -107.413727
       Roll: -90.4317
     }
     Scale {
@@ -74285,13 +74284,12 @@ Objects {
   Name: "Urban Vehicle Car - Rim 01"
   Transform {
     Location {
-      X: 155.234573
-      Y: 447.312897
+      X: 430.629395
+      Y: 405.301117
       Z: 6.49960947
     }
     Rotation {
-      Pitch: -6.83018879e-06
-      Yaw: -69.4137573
+      Yaw: -107.413727
       Roll: -90.4317
     }
     Scale {
@@ -74366,13 +74364,13 @@ Objects {
   Name: "Tire Worn"
   Transform {
     Location {
-      X: 155.251846
-      Y: 447.318665
+      X: 430.646
+      Y: 405.294769
       Z: 4.10031748
     }
     Rotation {
-      Yaw: 110.585129
-      Roll: 0.433306545
+      Yaw: 72.5849304
+      Roll: 0.433305651
     }
     Scale {
       X: 0.463496447
@@ -74433,8 +74431,8 @@ Objects {
   Name: "Military Tank Modern Main Gun 01"
   Transform {
     Location {
-      X: -113.581566
-      Y: -50.2131767
+      X: -87.3138962
+      Y: 106.873489
       Z: 2.4921875
     }
     Rotation {
@@ -74499,8 +74497,8 @@ Objects {
   Name: "Military Tank Modern Main Gun 01"
   Transform {
     Location {
-      X: -122.470314
-      Y: -40.7632675
+      X: -92.2008591
+      Y: 123.786125
       Z: 2.4921875
     }
     Rotation {
@@ -74565,8 +74563,8 @@ Objects {
   Name: "Military Tank Modern Main Gun 01"
   Transform {
     Location {
-      X: -105.047508
-      Y: -57.0311394
+      X: -84.4151306
+      Y: 92.3311691
       Z: 2.49217534
     }
     Rotation {
@@ -74631,13 +74629,13 @@ Objects {
   Name: "Urban Vehicle Car - Rim 01"
   Transform {
     Location {
-      X: 136.982
-      Y: 296.042084
+      X: 146.373276
+      Y: 260.53476
       Z: 61.3086205
     }
     Rotation {
-      Yaw: -69.4137344
-      Roll: -90.9431229
+      Yaw: -69.4137268
+      Roll: -90.9431152
     }
     Scale {
       X: 0.440000027
@@ -74711,13 +74709,13 @@ Objects {
   Name: "Urban Vehicle Car - Rim 01"
   Transform {
     Location {
-      X: 161.925858
-      Y: 323.233429
+      X: 175.180527
+      Y: 273.119141
       Z: 61.3086205
     }
     Rotation {
-      Yaw: -69.4137344
-      Roll: -90.9431229
+      Yaw: -69.4137268
+      Roll: -90.9431152
     }
     Scale {
       X: 0.440000027
@@ -74791,12 +74789,12 @@ Objects {
   Name: "Animated Neon Sign- Wrench Frame"
   Transform {
     Location {
-      X: 376.355774
-      Y: -209.209259
+      X: 150.034912
+      Y: -316.51413
       Z: 130.519638
     }
     Rotation {
-      Yaw: 45.0013
+      Yaw: 14.0012484
     }
     Scale {
       X: 0.448934168
@@ -75349,9 +75347,9 @@ Objects {
   Name: "Front Right Wheel"
   Transform {
     Location {
-      X: 404.263092
-      Y: -160.960022
-      Z: 58.6266861
+      X: 343.638916
+      Y: -312.081421
+      Z: 61.9456444
     }
     Rotation {
       Roll: -87.3604736
@@ -75491,9 +75489,9 @@ Objects {
   Name: "Front Right Wheel"
   Transform {
     Location {
-      X: 383.983
-      Y: -155.551239
-      Z: 38.5803
+      X: 323.358704
+      Y: -306.672272
+      Z: 41.8992577
     }
     Rotation {
       Roll: -87.3604736
@@ -75633,8 +75631,8 @@ Objects {
   Name: "Urban Vehicle Car - Tire 01"
   Transform {
     Location {
-      X: 455.373169
-      Y: -102.233459
+      X: 420.355865
+      Y: -279.557312
       Z: 36.0862465
     }
     Rotation {
@@ -75681,9 +75679,9 @@ Objects {
   Name: "Front Right Wheel"
   Transform {
     Location {
-      X: 423.098114
-      Y: -155.551239
-      Z: 38.5803
+      X: 362.473907
+      Y: -306.672577
+      Z: 41.8992577
     }
     Rotation {
       Roll: -87.3604736
@@ -75839,6 +75837,12 @@ Objects {
   ChildIds: 15886544601710639531
   ChildIds: 8407495552462142767
   ChildIds: 2410169730889621268
+  ChildIds: 18226486143778563432
+  ChildIds: 4686544637043116131
+  ChildIds: 1670891050505684179
+  ChildIds: 8810818349022865216
+  ChildIds: 9727704241332476820
+  ChildIds: 13904670652403698864
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -75856,13 +75860,411 @@ Objects {
   }
 }
 Objects {
+  Id: 13904670652403698864
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: -48.4012146
+      Y: 134.957138
+      Z: 13.1143675
+    }
+    Rotation {
+      Yaw: 178
+      Roll: -90
+    }
+    Scale {
+      X: 0.361619502
+      Y: 0.361619502
+      Z: 0.0472961813
+    }
+  }
+  ParentId: 2650907718253495814
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 12691356770271524678
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0323180594
+        B: 0.61
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9727704241332476820
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: -46.7849426
+      Y: 181.256699
+      Z: 13.1143675
+    }
+    Rotation {
+      Yaw: 178
+      Roll: -90
+    }
+    Scale {
+      X: 0.361619502
+      Y: 0.361619502
+      Z: 0.0472961813
+    }
+  }
+  ParentId: 2650907718253495814
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 12691356770271524678
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0323180594
+        B: 0.61
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8810818349022865216
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: -47.5856056
+      Y: 158.329956
+      Z: 13.1143675
+    }
+    Rotation {
+      Yaw: 178
+      Roll: -90
+    }
+    Scale {
+      X: 0.331195712
+      Y: 0.331195921
+      Z: 0.567540646
+    }
+  }
+  ParentId: 2650907718253495814
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8202610524244690862
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 1670891050505684179
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: -72.9761353
+      Y: 201.277893
+      Z: 15.5143681
+    }
+    Rotation {
+      Yaw: 105
+      Roll: -90
+    }
+    Scale {
+      X: 0.361619502
+      Y: 0.361619502
+      Z: 0.0472961813
+    }
+  }
+  ParentId: 2650907718253495814
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 12691356770271524678
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0323180594
+        B: 0.61
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4686544637043116131
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: -28.2271786
+      Y: 213.269333
+      Z: 15.5143681
+    }
+    Rotation {
+      Yaw: 105
+      Roll: -90
+    }
+    Scale {
+      X: 0.361619502
+      Y: 0.361619502
+      Z: 0.0472961813
+    }
+  }
+  ParentId: 2650907718253495814
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 12691356770271524678
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0323180594
+        B: 0.61
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 18226486143778563432
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: -50.3860435
+      Y: 207.3311
+      Z: 15.5143681
+    }
+    Rotation {
+      Yaw: 105
+      Roll: -90
+    }
+    Scale {
+      X: 0.331195712
+      Y: 0.331195921
+      Z: 0.567540646
+    }
+  }
+  ParentId: 2650907718253495814
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8202610524244690862
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 2410169730889621268
   Name: "Cylinder"
   Transform {
     Location {
-      X: -36.9783211
-      Y: 174.869919
-      Z: 64.5953522
+      X: -83.5787506
+      Y: 162.544678
+      Z: 11.5143681
     }
     Rotation {
       Yaw: -179.999954
@@ -75929,9 +76331,9 @@ Objects {
   Name: "Cylinder"
   Transform {
     Location {
-      X: -36.9783211
-      Y: 128.541794
-      Z: 64.5953522
+      X: -83.5786896
+      Y: 116.216431
+      Z: 11.5143681
     }
     Rotation {
       Yaw: -179.999954
@@ -75998,9 +76400,9 @@ Objects {
   Name: "Cylinder"
   Transform {
     Location {
-      X: -36.9783211
-      Y: 151.928513
-      Z: 64.5953522
+      X: -83.5787277
+      Y: 139.603241
+      Z: 11.5143681
     }
     Rotation {
       Yaw: -179.999954
@@ -76074,6 +76476,7 @@ Objects {
   }
   ParentId: 2650907718253495814
   ChildIds: 9239043916828723237
+  ChildIds: 9930653832459164488
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -76091,14 +76494,607 @@ Objects {
   }
 }
 Objects {
+  Id: 9930653832459164488
+  Name: "fan"
+  Transform {
+    Location {
+      X: -17.7272949
+      Y: -34.3777695
+      Z: 0.121264651
+    }
+    Rotation {
+      Pitch: 0.155502915
+      Yaw: -27.0436401
+      Roll: -33
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4207230393520615131
+  ChildIds: 10416503261171841395
+  ChildIds: 17513684836270565245
+  ChildIds: 310869462572981520
+  ChildIds: 17169869513394757929
+  ChildIds: 16306347035125397024
+  ChildIds: 9972255299472030875
+  ChildIds: 2586408738525384478
+  ChildIds: 8623332369344445473
+  ChildIds: 16609976008963331273
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 16609976008963331273
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: 0.510742188
+      Y: -4.27734375
+      Z: 3.92238235
+    }
+    Rotation {
+      Pitch: -7.93991
+      Yaw: -9.35526562
+      Roll: 141.891785
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: -0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8623332369344445473
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: 0.418945312
+      Y: 4.0078125
+      Z: -3.85983276
+    }
+    Rotation {
+      Pitch: 7.94014931
+      Yaw: 9.35536
+      Roll: 141.891647
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: 0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2586408738525384478
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: -0.573242188
+      Y: 3.78515625
+      Z: 3.79203796
+    }
+    Rotation {
+      Pitch: 8.21605492
+      Yaw: -9.11314106
+      Roll: -136.431442
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: -0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9972255299472030875
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: -0.515380859
+      Y: -4.3203125
+      Z: -4.3096962
+    }
+    Rotation {
+      Pitch: -8.21624565
+      Yaw: 9.11356258
+      Roll: -136.43158
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: 0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16306347035125397024
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: 0.00122070312
+      Y: 5.81640625
+      Z: -0.121265411
+    }
+    Rotation {
+      Pitch: 12.2402992
+      Yaw: -0.396604568
+      Roll: -89.9999924
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: -0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17169869513394757929
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: 0.001953125
+      Y: -5.7734375
+      Z: -0.121265411
+    }
+    Rotation {
+      Pitch: -12.2407227
+      Yaw: 0.39679566
+      Roll: -90.0000153
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: 0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 310869462572981520
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      Z: -5.70508194
+    }
+    Rotation {
+      Yaw: 12.2460356
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: -0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17513684836270565245
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      Z: 5.56769562
+    }
+    Rotation {
+      Yaw: -12.2464523
+    }
+    Scale {
+      X: -0.00727876322
+      Y: -0.0502056479
+      Z: 0.103223555
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 3286632740216585626
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11242450435817934693
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10416503261171841395
+  Name: "Cylinder"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 0.127835318
+      Y: 0.127835304
+      Z: 0.0355949067
+    }
+  }
+  ParentId: 9930653832459164488
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5313430657937779536
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 9239043916828723237
   Name: "fan"
   Transform {
     Location {
-      Y: -0.0078125
-      Z: 0.121265411
+      X: -9.85886945e-05
+      Y: -0.00786055811
+      Z: 0.121264651
     }
     Rotation {
+      Yaw: -27
     }
     Scale {
       X: 1
@@ -76682,9 +77678,9 @@ Objects {
   Name: "Engine"
   Transform {
     Location {
-      X: 432.997437
-      Y: -98.3779297
-      Z: 62.3345337
+      X: 236.716797
+      Y: -240.627808
+      Z: 62.334549
     }
     Rotation {
       Yaw: 126.677437
@@ -79087,9 +80083,9 @@ Objects {
   Name: "Cylinder"
   Transform {
     Location {
-      X: -2380.29199
-      Y: 1031.79626
-      Z: 440.422577
+      X: -1861.90796
+      Y: 1524.93787
+      Z: 426.555084
     }
     Rotation {
       Yaw: -144.445511
@@ -79148,9 +80144,9 @@ Objects {
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
-      X: -2468.1
-      Y: 933.050903
-      Z: 332.859344
+      X: -1949.71143
+      Y: 1426.17578
+      Z: 318.991791
     }
     Rotation {
       Pitch: 63.645153
@@ -79205,9 +80201,9 @@ Objects {
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
-      X: -2258.03809
-      Y: 1083.1886
-      Z: 332.859344
+      X: -1739.65173
+      Y: 1576.32153
+      Z: 318.991791
     }
     Rotation {
       Pitch: 63.645153
@@ -79262,9 +80258,9 @@ Objects {
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
-      X: -2361.17334
-      Y: 783.450684
-      Z: 200.338165
+      X: -1842.78516
+      Y: 1276.57935
+      Z: 186.470642
     }
     Rotation {
       Yaw: 125.554359
@@ -79318,9 +80314,9 @@ Objects {
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
-      X: -2151.11133
-      Y: 933.590637
-      Z: 200.338165
+      X: -1632.72131
+      Y: 1426.70935
+      Z: 186.470642
     }
     Rotation {
       Yaw: 125.554359
@@ -79374,13 +80370,14 @@ Objects {
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
-      X: -2338.1311
-      Y: 972.815247
-      Z: 348.646515
+      X: -1819.74109
+      Y: 1465.94348
+      Z: 334.778778
     }
     Rotation {
-      Pitch: -117.181885
-      Yaw: 125.554413
+      Pitch: -62.8181152
+      Yaw: -54.4455566
+      Roll: 180
     }
     Scale {
       X: 2.72578835
@@ -79435,9 +80432,9 @@ Objects {
   Name: "Cube - Bottom-Aligned"
   Transform {
     Location {
-      X: -2259.20312
-      Y: 862.38324
-      Z: 200.338165
+      X: -1740.81616
+      Y: 1355.51538
+      Z: 186.470642
     }
     Rotation {
       Yaw: 125.554359
@@ -79563,9 +80560,9 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: 505.299316
-      Y: 291.87207
-      Z: 178.703125
+      X: 621.631836
+      Y: 448.345825
+      Z: 260.257507
     }
     Rotation {
       Pitch: -85.6803894
@@ -79627,12 +80624,12 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: 842.224121
-      Y: -312.018066
-      Z: 192.098877
+      X: 605.631836
+      Y: -42.6541748
+      Z: 235.257507
     }
     Rotation {
-      Pitch: -85.6805267
+      Pitch: -85.680542
       Yaw: 14.2931557
       Roll: -161.350693
     }
@@ -79691,12 +80688,12 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: 118.232422
-      Y: 938.191406
-      Z: 162.429688
+      X: 614.631836
+      Y: -542.654175
+      Z: 247.257507
     }
     Rotation {
-      Pitch: -85.6809769
+      Pitch: -85.6809692
       Yaw: 14.2928963
       Roll: -161.350586
     }
@@ -79755,11 +80752,12 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: 179.524902
-      Y: 75.4067383
+      X: -254.368164
+      Y: -74.6541748
+      Z: 54.2575073
     }
     Rotation {
-      Pitch: -85.8656235
+      Pitch: -85.8656311
       Yaw: 6.87567091
       Roll: 171.29184
     }
@@ -79818,14 +80816,13 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: -465.59375
-      Y: -1141.81934
-      Z: 71.0440674
+      X: 413.631836
+      Y: -744.654175
+      Z: 26.2575073
     }
     Rotation {
-      Pitch: -36.91436
-      Yaw: 85.5709076
-      Roll: -2.13567773e-06
+      Pitch: -36.9143677
+      Yaw: 128.570694
     }
     Scale {
       X: 1
@@ -79882,13 +80879,13 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: -1179.68652
-      Y: 148.366211
+      X: -912.368164
+      Y: 629.345825
       Z: 52.2960205
     }
     Rotation {
-      Pitch: -36.91436
-      Yaw: -17.1533298
+      Pitch: -36.9143677
+      Yaw: -36.1531372
     }
     Scale {
       X: 1
@@ -79984,13 +80981,13 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: 233.48877
-      Y: -754.995605
-      Z: 1.89154053
+      X: -162.64267
+      Y: -750.32312
+      Z: 11.9963989
     }
     Rotation {
-      Pitch: -81.9244843
-      Yaw: -37.1336327
+      Pitch: -81.9245
+      Yaw: -37.1336365
       Roll: -95.5801697
     }
     Scale {
@@ -80048,12 +81045,13 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: 738.189453
-      Y: -250.604
+      X: 508.854156
+      Y: -578.925903
+      Z: 18.9963989
     }
     Rotation {
-      Pitch: -80.9698105
-      Yaw: -15.4487686
+      Pitch: -80.9698181
+      Yaw: -15.448761
       Roll: -117.03064
     }
     Scale {
@@ -80111,14 +81109,14 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: -738.189941
-      Y: 250.604
+      X: -532.698303
+      Y: 617.525757
       Z: 2.46917725
     }
     Rotation {
-      Pitch: -81.9245148
-      Yaw: -37.1337166
-      Roll: -95.5801849
+      Pitch: -81.9245
+      Yaw: -37.133728
+      Roll: -95.5802
     }
     Scale {
       X: 1
@@ -80175,14 +81173,14 @@ Objects {
   Name: "Spotlight"
   Transform {
     Location {
-      X: -233.489258
-      Y: 754.995605
+      X: 136.042267
+      Y: 795.433228
       Z: 0.577636719
     }
     Rotation {
-      Pitch: -80.9699173
-      Yaw: -15.4487019
-      Roll: -117.03083
+      Pitch: -80.9699097
+      Yaw: -15.4487
+      Roll: -117.030823
     }
     Scale {
       X: 1
@@ -80235,25 +81233,255 @@ Objects {
   }
 }
 Objects {
-  Id: 7475442018076934787
-  Name: "RoofGarage"
+  Id: 9906699973644061237
+  Name: "Walls"
   Transform {
     Location {
-      X: 120
-      Y: -300
-      Z: 800
+      X: 194.28125
+      Y: -248.304688
+      Z: 235.000061
     }
     Rotation {
-      Pitch: 90
-      Roll: 60
+      Yaw: -29.7367554
     }
     Scale {
-      X: 1.6872443
-      Y: 15.0431509
-      Z: 15.6400557
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 5729826917264949750
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Walls"
+  }
+}
+Objects {
+  Id: 17986386124106456614
+  Name: "Urban Vehicle Car - Rim 01"
+  Transform {
+    Location {
+      X: 1032.09814
+      Y: 421.614868
+      Z: 106.552811
+    }
+    Rotation {
+      Yaw: -122.228485
+      Roll: -90.4317
+    }
+    Scale {
+      X: 1.1
+      Y: 1.30000007
+      Z: 1.1
+    }
+  }
+  ParentId: 5729826917264949750
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 3225924156252914362
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail2:id"
+      AssetReference {
+        Id: 7016245623101166198
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail2:smart"
+      Bool: true
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8697636423960157756
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.410000026
+        G: 0.410000026
+        B: 0.410000026
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8221182919805045275
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableAngularMotionBlur: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9223354440096485133
+  Name: "Tire Worn"
+  Transform {
+    Location {
+      X: 1032.13428
+      Y: 421.592224
+      Z: 100.554581
+    }
+    Rotation {
+      Yaw: 57.7702293
+      Roll: 0.433305651
+    }
+    Scale {
+      X: 1.15874112
+      Y: 1.15874112
+      Z: 1.15874112
+    }
+  }
+  ParentId: 5729826917264949750
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10834081793086782683
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1.06136596
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.492449522
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14096773816451731951
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableAngularMotionBlur: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17129873224972098340
+  Name: "Floor"
+  Transform {
+    Location {
+      X: 150
+      Y: -250
+      Z: 0.000122070312
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5729826917264949750
+  ChildIds: 15018292586484245754
+  ChildIds: 7378099197321297382
+  ChildIds: 4186625811894646090
+  ChildIds: 2128988704596968986
+  ChildIds: 17898591649033713197
+  ChildIds: 9368768747800133079
+  ChildIds: 2715005624735272794
+  ChildIds: 17906684103892171201
+  ChildIds: 13912539330038489576
+  ChildIds: 7475442018076934787
+  ChildIds: 166967063934585940
+  ChildIds: 2851416330067798476
+  ChildIds: 153829015572721293
+  ChildIds: 14662169208069634858
+  ChildIds: 5771442319940145835
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5771442319940145835
+  Name: "Cube"
+  Transform {
+    Location {
+      X: -709.953613
+      Y: -13.9531708
+      Z: 686.757202
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.240301982
+      Y: 14.7934933
+      Z: 1.53211367
+    }
+  }
+  ParentId: 17129873224972098340
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -80296,28 +81524,51 @@ Objects {
   }
 }
 Objects {
-  Id: 17129873224972098340
-  Name: "Floor"
+  Id: 14662169208069634858
+  Name: "Cube"
   Transform {
     Location {
-      X: 150
-      Y: -250
-      Z: 0.000122070312
+      X: -698.901855
+      Y: 730.615051
+      Z: 345.117737
     }
     Rotation {
     }
     Scale {
       X: 1
       Y: 1
-      Z: 1
+      Z: 7.29810286
     }
   }
-  ParentId: 5729826917264949750
-  ChildIds: 15018292586484245754
-  ChildIds: 7378099197321297382
-  ChildIds: 4186625811894646090
-  ChildIds: 2128988704596968986
-  ChildIds: 17898591649033713197
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8767741365602854240
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.406581789
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.43911764
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0556954555
+        B: 0.289999962
+        A: 1
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -80330,8 +81581,532 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Folder {
-    IsGroup: true
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 153829015572721293
+  Name: "Cube"
+  Transform {
+    Location {
+      X: -700.901855
+      Y: -733.385132
+      Z: 345.117737
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 7.29810286
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8767741365602854240
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.406581789
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.43911764
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0556954555
+        B: 0.289999962
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2851416330067798476
+  Name: "Cube"
+  Transform {
+    Location {
+      X: -17.3198242
+      Y: -732.97406
+      Z: 696.417358
+    }
+    Rotation {
+      Yaw: -90
+    }
+    Scale {
+      X: 0.240310729
+      Y: 13.9370565
+      Z: 1.7134552
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10444380682588435716
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 166967063934585940
+  Name: "Cube"
+  Transform {
+    Location {
+      X: -28.5737305
+      Y: 713.271362
+      Z: 696.417358
+    }
+    Rotation {
+      Yaw: -90
+    }
+    Scale {
+      X: 0.240310729
+      Y: 13.9370565
+      Z: 1.7134552
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10444380682588435716
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7475442018076934787
+  Name: "RoofGarage"
+  Transform {
+    Location {
+      X: 4.09814453
+      Y: -1.38513184
+      Z: 799.999878
+    }
+    Rotation {
+      Pitch: 90
+      Roll: 90
+    }
+    Scale {
+      X: 1.6872443
+      Y: 15.0431509
+      Z: 15.6400557
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10444380682588435716
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13912539330038489576
+  Name: "Cube"
+  Transform {
+    Location {
+      X: -3.90185547
+      Y: 765.118286
+      Z: 234.999939
+    }
+    Rotation {
+      Yaw: -90
+    }
+    Scale {
+      X: 0.240310878
+      Y: 13.2926178
+      Z: 5.80773973
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10444380682588435716
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17906684103892171201
+  Name: "Cube"
+  Transform {
+    Location {
+      X: -711.213379
+      Y: -4.3655014
+      Z: 234.999939
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.24030894
+      Y: 15.0757513
+      Z: 5.80773973
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10444380682588435716
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2715005624735272794
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 700.098145
+      Y: -730.385071
+      Z: 345.117737
+    }
+    Rotation {
+      Yaw: -89.5503
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 6.68527699
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8767741365602854240
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.406581789
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.43911764
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0556954555
+        B: 0.289999962
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9368768747800133079
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 2.09814453
+      Y: -760
+      Z: 234.999939
+    }
+    Rotation {
+      Yaw: -90
+    }
+    Scale {
+      X: 0.240310878
+      Y: 13.2926178
+      Z: 5.80773973
+    }
+  }
+  ParentId: 17129873224972098340
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10444380682588435716
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
   }
 }
 Objects {
@@ -80631,7 +82406,7 @@ Objects {
     }
     Rotation {
       Pitch: 90
-      Roll: 60.0000114
+      Roll: 90
     }
     Scale {
       X: 1.78445673
@@ -80672,188 +82447,6 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 9906699973644061237
-  Name: "Walls"
-  Transform {
-    Location {
-      X: 194.281143
-      Y: -248.304642
-      Z: 235.000061
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5729826917264949750
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Walls"
-  }
-}
-Objects {
-  Id: 17986386124106456614
-  Name: "Urban Vehicle Car - Rim 01"
-  Transform {
-    Location {
-      X: 466.322754
-      Y: 777.638672
-      Z: 106.552811
-    }
-    Rotation {
-      Yaw: -84.2286072
-      Roll: -90.4317
-    }
-    Scale {
-      X: 1.1
-      Y: 1.30000007
-      Z: 1.1
-    }
-  }
-  ParentId: 5729826917264949750
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 3225924156252914362
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail2:id"
-      AssetReference {
-        Id: 7016245623101166198
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail2:smart"
-      Bool: true
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 8697636423960157756
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.410000026
-        G: 0.410000026
-        B: 0.410000026
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 8221182919805045275
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableAngularMotionBlur: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 9223354440096485133
-  Name: "Tire Worn"
-  Transform {
-    Location {
-      X: 466.366211
-      Y: 777.643555
-      Z: 100.554581
-    }
-    Rotation {
-      Yaw: 95.7703247
-      Roll: 0.433306456
-    }
-    Scale {
-      X: 1.15874112
-      Y: 1.15874112
-      Z: 1.15874112
-    }
-  }
-  ParentId: 5729826917264949750
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10834081793086782683
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1.06136596
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 0.492449522
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 14096773816451731951
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableAngularMotionBlur: true
     StaticMesh {
       Physics {
         Mass: 100
