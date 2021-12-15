@@ -31,6 +31,9 @@ Assets {
         Folder {
           IsFilePartition: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 7618626800298815582
@@ -61,6 +64,9 @@ Assets {
         }
         NetworkContext {
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 10196356042171976155
@@ -89,6 +95,9 @@ Assets {
         }
         Folder {
           IsFilePartition: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -124,6 +133,9 @@ Assets {
         Folder {
           IsFilePartition: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 7354649213895216238
@@ -156,6 +168,9 @@ Assets {
           Volume: 0.3
           Falloff: -1
           Radius: -1
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -197,6 +212,9 @@ Assets {
             StopTime: 10
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 14944153895004613693
@@ -235,6 +253,9 @@ Assets {
             FadeOutTime: 0.5
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 16880043151582663001
@@ -271,6 +292,9 @@ Assets {
           FadeOutTime: 3
           StopTime: 10
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 7409449341025031763
@@ -304,6 +328,9 @@ Assets {
           Falloff: -1
           Radius: -1
           FadeOutTime: 0.5
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -359,6 +386,9 @@ Assets {
           TriggerShape_v2 {
             Value: "mc:etriggershape:box"
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -422,6 +452,9 @@ Assets {
             Id: 15050363341708629047
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 251990417440541765
@@ -475,6 +508,9 @@ Assets {
           ScriptAsset {
             Id: 10267228427350943430
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -533,6 +569,9 @@ Assets {
           ScriptAsset {
             Id: 10267228427350943430
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -600,6 +639,9 @@ Assets {
             Id: 15050363341708629047
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 9841291402078285509
@@ -666,6 +708,9 @@ Assets {
             Id: 15050363341708629047
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 17256394760797132405
@@ -695,6 +740,9 @@ Assets {
           ScriptAsset {
             Id: 11560397724032188235
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -753,6 +801,9 @@ Assets {
             BoundsScale: 1
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 2414718209745996607
@@ -781,6 +832,9 @@ Assets {
         }
         Folder {
           IsFilePartition: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -820,6 +874,9 @@ Assets {
           TriggerShape_v2 {
             Value: "mc:etriggershape:box"
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -871,6 +928,9 @@ Assets {
             Id: 17733745467164332415
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 18314274870083531204
@@ -907,6 +967,9 @@ Assets {
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
@@ -965,6 +1028,9 @@ Assets {
             }
             BoundsScale: 1
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
         }
       }
     }
@@ -1057,6 +1123,6 @@ Assets {
   Marketplace {
     Description: "Created by: JasonCdesign\r\n\r\nCreate Simple and Complex Background Audio for your games, by dragging and dropping Templates, Scripts, Audio Tracks and SFX. Honestly no coding required!\r\n\r\nCheck out the Forums to see how this Community Content is used!\r\n\r\nLINK TO FORUMS: https://forums.coregames.com/t/audio-audio-manager-tools/694\r\n\r\nOtherwise, explore the Example Template provided within the Community Content, if you\'re also code inclined feel free to explore the scripts.\r\n\r\nAny issues, feedback or future improvements/additions you\'d like to see please post in the forum."
   }
-  SerializationVersion: 101
+  SerializationVersion: 103
   DirectlyPublished: true
 }

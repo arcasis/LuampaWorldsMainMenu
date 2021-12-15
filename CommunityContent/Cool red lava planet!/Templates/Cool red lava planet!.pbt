@@ -31,6 +31,9 @@ Assets {
         Folder {
           IsGroup: true
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
       Objects {
         Id: 2174173908629966191
@@ -136,6 +139,9 @@ Assets {
             Id: 18441810659176357459
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     Assets {
@@ -155,6 +161,6 @@ Assets {
   Marketplace {
     Description: "i think its easy to understand, its a lava planet, thats all it is"
   }
-  SerializationVersion: 101
+  SerializationVersion: 103
   DirectlyPublished: true
 }

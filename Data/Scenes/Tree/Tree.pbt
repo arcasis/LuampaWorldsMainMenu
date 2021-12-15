@@ -29,6 +29,9 @@ Objects {
   }
   Folder {
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6585441192959826313
@@ -61,6 +64,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "MonkeyJedi"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1696798925401821095
@@ -92,5 +98,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "TaoOfChaos"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
