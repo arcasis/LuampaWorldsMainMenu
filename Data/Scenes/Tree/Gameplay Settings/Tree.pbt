@@ -51,6 +51,17 @@ Objects {
     }
   }
   ParentId: 6572843767714576044
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:LuampaWorldsStorageKey"
+      NetReference {
+        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
+        Type {
+          Value: "mc:enetreferencetype:sharedpersistence"
+        }
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
