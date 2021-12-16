@@ -1,43 +1,6 @@
 Name: "TaoOfChaos"
 RootId: 1696798925401821095
 Objects {
-  Id: 9086936746104183945
-  Name: "Gameplay Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1696798925401821095
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Gameplay Settings"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 9188275580542756088
   Name: "Luampa Worlds Main Menu"
   Transform {
@@ -194,7 +157,7 @@ Objects {
     }
   }
   ParentId: 2016190126149047528
-  ChildIds: 16548823848889102361
+  ChildIds: 17661243849115904086
   ChildIds: 16344698159990179387
   ChildIds: 14557584287892330648
   ChildIds: 16057713092089398908
@@ -5653,15 +5616,17 @@ Objects {
   }
 }
 Objects {
-  Id: 16548823848889102361
-  Name: "temp vehicle display delete"
+  Id: 17661243849115904086
+  Name: "Garage Menu Camera"
   Transform {
     Location {
-      X: 212.993652
-      Y: -6824.47559
-      Z: 64.2896729
+      X: 224.983887
+      Y: -7451.24805
+      Z: 324.453796
     }
     Rotation {
+      Yaw: 89.9999924
+      Roll: -6.33776631e-09
     }
     Scale {
       X: 8.17229
@@ -5670,87 +5635,6 @@ Objects {
     }
   }
   ParentId: 13109927566236709296
-  ChildIds: 17661243849115904086
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13229798138451002191
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.431000024
-        G: 0.431000024
-        B: 0.431000024
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1.34078336
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1.00458133
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 13949441344821433690
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 17661243849115904086
-  Name: "Garage Menu Camera"
-  Transform {
-    Location {
-      X: 1.46708465
-      Y: -76.6949
-      Z: 1887.69434
-    }
-    Rotation {
-      Yaw: 90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16548823848889102361
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -8987,6 +8871,43 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     DoesPositionOffsetSpring: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9086936746104183945
+  Name: "Gameplay Settings"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Gameplay Settings"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

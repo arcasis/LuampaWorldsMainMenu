@@ -1,9 +1,13 @@
 --[[DESCRIPTION: Downloads player storage for Luampa Main Menu. Uploads purchases and selections.]]
 
+--[[INSTRUCTIONS: When Main Menu is ready to be published, remove broadcast and run storage
+retrieval by uncommenting Game.playerJoinedEvent]]
+
 local LUAMPA_WORLDS_KEY = script:GetCustomProperty("LuampaWorldsKey")
 
 -- !! WIP !! Nothing sends this broadcast yet, needs written into vehicle purchases
 -- !! WIP !! Also need to write this up for Battle vehicles once we work out the system
+-- !! WIP !! Rewriting this: not going to use Race Framework's uber confusing system :/
 function OnVehiclePurchased(player, carId, cost)
 
     -- Update Resource
@@ -27,7 +31,7 @@ function OnVehiclePurchased(player, carId, cost)
     Storage.SetSharedPlayerData(LUAMPA_WORLDS_KEY, player, playerDataTable)
 end
 
-
+-- !! WIP !! Currently triggered by an Event that is not being sent until logistics worked out
 function OnPlayerJoined(player)
 
     -- Get player storage
@@ -84,5 +88,7 @@ end
 
 
 Events.ConnectForPlayer("VehiclePurchased", OnVehiclePurchased)
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)     -- see notes at top
+-- temp playerJoinedEvent substitute, allows TempConvertStorageServer to run first
+Events.Connect("StorageReady", OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
