@@ -1,6 +1,6 @@
 Assets {
   Id: 3622933792280256068
-  Name: "GEO - Tanker LOCKED"
+  Name: "GEO - OG Tanker LOCKED"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

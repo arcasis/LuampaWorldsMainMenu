@@ -191,8 +191,9 @@ Objects {
       Z: -421.621063
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Pitch: -0.238250732
+      Yaw: 66.9991379
+      Roll: 0.165774792
     }
     Scale {
       X: 1
@@ -246,6 +247,572 @@ Objects {
     }
   }
   ParentId: 12158074331431296115
+  ChildIds: 3259439264599774573
+  ChildIds: 13161655997277139669
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13161655997277139669
+  Name: "Locked Upgrades"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3247995148312029257
+  ChildIds: 12653006514988973450
+  ChildIds: 12727629431783898249
+  ChildIds: 3639295064404113239
+  ChildIds: 13841790934508846906
+  ChildIds: 409071968375369434
+  ChildIds: 3500052568564199464
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3500052568564199464
+  Name: "Battle 6"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -1.36603767e-05
+      Roll: -1.33401301e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13161655997277139669
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 409071968375369434
+  Name: "Battle 5"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -1.36603767e-05
+      Roll: -1.33401301e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13161655997277139669
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13841790934508846906
+  Name: "Battle 4"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -1.36603767e-05
+      Roll: -1.33401301e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13161655997277139669
+  ChildIds: 10790581770912944189
+  ChildIds: 9998362369634003145
+  ChildIds: 12431299225303572470
+  ChildIds: 2736920794586310139
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2736920794586310139
+  Name: "GEO - Tanker Upgrade 4 LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13841790934508846906
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7023585794259856708
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 4 LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.49512
+            Y: 3803.1416
+            Z: -42.5700455
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.4486956
+            Yaw: -66.9976807
+            Roll: -0.192973629
+          }
+        }
+        Overrides {
+          Name: "Collidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12458833309501375440
+    }
+  }
+}
+Objects {
+  Id: 12431299225303572470
+  Name: "GEO - Tanker Upgrade 3 LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13841790934508846906
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15249953636951304497
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 3 LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.49512
+            Y: 3803.1416
+            Z: -42.5700455
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.4486956
+            Yaw: -66.9976807
+            Roll: -0.192973629
+          }
+        }
+        Overrides {
+          Name: "Collidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9121337187474820200
+    }
+  }
+}
+Objects {
+  Id: 9998362369634003145
+  Name: "GEO - Tanker Upgrade 2 LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13841790934508846906
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12740612630768944571
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 2 LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.49512
+            Y: 3803.1416
+            Z: -42.5700455
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.4486956
+            Yaw: -66.9976807
+            Roll: -0.192973629
+          }
+        }
+        Overrides {
+          Name: "Collidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15111790577813192693
+    }
+  }
+}
+Objects {
+  Id: 10790581770912944189
+  Name: "GEO - Tanker Upgrade 1 LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13841790934508846906
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10995601988505450519
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 1 LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.49512
+            Y: 3803.1416
+            Z: -42.5700455
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.4486956
+            Yaw: -66.9976807
+            Roll: -0.192973629
+          }
+        }
+        Overrides {
+          Name: "Collidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15188075530947922401
+    }
+  }
+}
+Objects {
+  Id: 3639295064404113239
+  Name: "Battle 3"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -1.36603767e-05
+      Roll: -1.33401301e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13161655997277139669
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12727629431783898249
+  Name: "Battle 2"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -1.36603767e-05
+      Roll: -1.33401301e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13161655997277139669
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12653006514988973450
+  Name: "Battle 1"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -1.36603767e-05
+      Roll: -1.33401301e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13161655997277139669
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3259439264599774573
+  Name: "Unlocked Upgrades"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3247995148312029257
   ChildIds: 16771861573068120052
   ChildIds: 10663942942146099902
   ChildIds: 17792872373087929364
@@ -278,8 +845,6 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
     }
     Scale {
       X: 1
@@ -287,7 +852,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3247995148312029257
+  ParentId: 3259439264599774573
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -314,8 +879,6 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
     }
     Scale {
       X: 1
@@ -323,7 +886,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3247995148312029257
+  ParentId: 3259439264599774573
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -350,8 +913,6 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
     }
     Scale {
       X: 1
@@ -359,7 +920,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3247995148312029257
+  ParentId: 3259439264599774573
+  ChildIds: 204934489960697727
+  ChildIds: 3894852429702160227
+  ChildIds: 11594497053047040922
+  ChildIds: 17603863672779270066
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -380,14 +945,242 @@ Objects {
   }
 }
 Objects {
+  Id: 17603863672779270066
+  Name: "GEO - Tanker Upgrade 5"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2712961394424518706
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9097010963689884198
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 4"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.729
+            Y: 3802.91113
+            Z: -12.5459251
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.234801397
+            Yaw: -66.9982834
+            Roll: -0.323467821
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10552998931611978107
+    }
+  }
+}
+Objects {
+  Id: 11594497053047040922
+  Name: "GEO - Tanker Upgrade 4"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2712961394424518706
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10923104385434346122
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 3"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.80713
+            Y: 3802.83301
+            Z: -2.54653931
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.234801397
+            Yaw: -66.9982834
+            Roll: -0.323467821
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16247521590204185990
+    }
+  }
+}
+Objects {
+  Id: 3894852429702160227
+  Name: "GEO - Tanker Upgrade 3"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2712961394424518706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11265928966775639392
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 2"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.66699
+            Y: 3802.97363
+            Z: -20.5454369
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.234801397
+            Yaw: -66.9983063
+            Roll: -0.323467672
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1068888315881171198
+    }
+  }
+}
+Objects {
+  Id: 204934489960697727
+  Name: "GEO - Tanker Upgrade 2"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2712961394424518706
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15430835564655670936
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker Upgrade 1"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6906.49316
+            Y: 3803.14453
+            Z: -42.5684586
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.234801397
+            Yaw: -66.9983063
+            Roll: -0.323467731
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16525279958438683495
+    }
+  }
+}
+Objects {
   Id: 17792872373087929364
   Name: "Battle 3"
   Transform {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
     }
     Scale {
       X: 1
@@ -395,7 +1188,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3247995148312029257
+  ParentId: 3259439264599774573
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -422,8 +1215,6 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
     }
     Scale {
       X: 1
@@ -431,7 +1222,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3247995148312029257
+  ParentId: 3259439264599774573
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -465,7 +1256,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3247995148312029257
+  ParentId: 3259439264599774573
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -601,7 +1392,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Tanker LOCKED"
+          String: "GEO - OG Tanker LOCKED"
         }
         Overrides {
           Name: "Position"
@@ -771,7 +1562,7 @@ Objects {
   ParentId: 12158074331431296115
   ChildIds: 4694831175823395292
   ChildIds: 14100739461674818979
-  ChildIds: 13435554382852288771
+  ChildIds: 5224279453444329520
   ChildIds: 9130424090529513438
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -830,14 +1621,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -0.00308217853
-            Y: 0.163813472
-            Z: -35.6888046
+            X: -6918.54395
+            Y: 3767.07422
+            Z: -28.2459068
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
+            Pitch: -0.480285645
+            Yaw: -67.1965637
+            Roll: -0.41973877
           }
         }
         Overrides {
@@ -871,19 +1665,9 @@ Objects {
   }
 }
 Objects {
-  Id: 13435554382852288771
-  Name: "GEO - Tanker"
+  Id: 5224279453444329520
+  Name: "GEO - Tanker Upgrade 1"
   Transform {
-    Location {
-      X: 5574.56592
-      Y: 6023.11475
-      Z: 111.80999
-    }
-    Rotation {
-      Pitch: 0.00514996238
-      Yaw: 110.469254
-      Roll: 0.268376678
-    }
     Scale {
       X: 1
       Y: 1
@@ -892,14 +1676,14 @@ Objects {
   }
   ParentId: 713943643876442
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 13608690301357325791
+      key: 1277855637952534365
       value {
         Overrides {
           Name: "Name"
@@ -908,44 +1692,24 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -23.3637333
-            Y: -9.82117653
-            Z: -0.0429481752
+            X: -6918.54248
+            Y: 3767.07422
+            Z: -28.2459049
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
+            Pitch: -0.480278373
+            Yaw: -67.1965714
+            Roll: -0.419753075
           }
         }
       }
     }
     TemplateAsset {
-      Id: 8395753202752431621
+      Id: 15251258355048296586
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -986,13 +1750,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 0.000147698258
-            Y: 6.20864375e-05
+            X: -6918.54395
+            Y: 3767.07422
+            Z: -28.2459068
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
+            Pitch: -0.480285645
+            Yaw: -67.1965637
+            Roll: -0.41973877
           }
         }
         Overrides {
@@ -1063,13 +1831,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 0.000147698258
-            Y: 6.20864375e-05
+            X: -6918.54395
+            Y: 3767.07422
+            Z: -28.2459068
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
+            Pitch: -0.480285645
+            Yaw: -67.1965637
+            Roll: -0.41973877
           }
         }
         Overrides {
