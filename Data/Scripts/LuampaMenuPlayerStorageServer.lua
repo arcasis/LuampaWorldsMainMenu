@@ -8,7 +8,8 @@ local LUAMPA_WORLDS_KEY = script:GetCustomProperty("LuampaWorldsKey")
 -- !! WIP !! Nothing sends this broadcast yet, needs written into vehicle purchases
 -- !! WIP !! Also need to write this up for Battle vehicles once we work out the system
 -- !! WIP !! Rewriting this: not going to use Race Framework's uber confusing system :/
-function OnVehiclePurchased(player, carId, cost)
+-- !! WIP !! The OnVehiclePurchased function might go somewhere else, keeping this just for setup
+--[[function OnVehiclePurchased(player, carId, cost)
 
     -- Update Resource
     player:RemoveResource("LuampaCoins", cost)
@@ -29,30 +30,36 @@ function OnVehiclePurchased(player, carId, cost)
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
     Storage.SetSharedPlayerData(LUAMPA_WORLDS_KEY, player, playerDataTable)
-end
+end]]
 
--- !! WIP !! Currently triggered by an Event that is not being sent until logistics worked out
+-- !! WIP !! Currently triggered by an Event
 function OnPlayerJoined(player)
 
     -- Get player storage
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLDS_KEY, player)
 
-    -- Create cars tables if new player
-    if playerDataTable.cars then
-        player.serverUserData.cars = playerDataTable.cars
+    -- Get karts table, or create if new player
+    if playerDataTable.karts then
+        player.serverUserData.karts = playerDataTable.karts
     else
-        player.serverUserData.cars = {}
-        playerDataTable.cars = {}
+        local karts = {}
+        karts[1] = {0,0,0,0}
+        playerDataTable.karts = karts
     end
 
-    -- If player has a saved car, set it using Race Framework's existing system
-    if playerDataTable.selectedVehicleId then
-        player.serverUserData.selectedVehicleId = playerDataTable.selectedVehicleId
-        print(player.serverUserData.selectedVehicleId)
+    -- If player has a saved kart, set it
+    if playerDataTable.selectedKart then
+        player.serverUserData.selectedKart = playerDataTable.selectedKart
+        print("StorageServer says player has a saved kart, it is:")
+        print(player.serverUserData.selectedKart)
+    else
+        player.serverUserData.selectedKart = 1
+        playerDataTable.selectedKart = 1
     end
     
     -- Get coins or create player Resource if new player
     if not playerDataTable.coins then
+        player:SetResource("LuampaCoins", 0)
         playerDataTable.coins = 0
     else
         local resource = playerDataTable.coins
@@ -79,15 +86,21 @@ end
 function OnPlayerLeft(player)
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLDS_KEY, player)
 
+    -- reupload old system during testing
+    -- !! WIP !! If keeping old system up for conversion, write scripts to remove old system at conversion
     playerDataTable.cars = player.serverUserData.cars
     playerDataTable.selectedVehicleId = player.serverUserData.selectedVehicleId
+
+    playerDataTable.karts = player.serverUserData.karts
+    playerDataTable.selectedKart = player.serverUserData.selectedKart
+
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
     Storage.SetSharedPlayerData(LUAMPA_WORLDS_KEY, player, playerDataTable)
 end
 
 
-Events.ConnectForPlayer("VehiclePurchased", OnVehiclePurchased)
+--Events.ConnectForPlayer("VehiclePurchased", OnVehiclePurchased)
 --Game.playerJoinedEvent:Connect(OnPlayerJoined)     -- see notes at top
 -- temp playerJoinedEvent substitute, allows TempConvertStorageServer to run first
 Events.Connect("StorageReady", OnPlayerJoined)
