@@ -66,32 +66,15 @@ function ProcessIndex()
     currentlyVisible.visibility = Visibility.FORCE_OFF
     
     local karts = Game:GetLocalPlayer().clientUserData.karts
-    local kart = nil
-    if karts then
-        --print("there was karts table")
-        kart = karts[index]
-        if kart then
-            --print("there was a kart unlocked, it should be visible")
-            DisplayUnlockedVehicle()
-        else
-            --print("the kart was not unlocked, index is: ")
-            --print(index)
-            DisplayLockedVehicle()
-        end
-    --[[else
-        --print("there was not karts table")
+    
+    local kart = karts[index]
+    if kart then
+        print("there was a kart unlocked, it should be visible")
+        DisplayUnlockedVehicle()
+    else
+        print("the kart was not unlocked, index is: ")
+        print(index)
         DisplayLockedVehicle()
-
-        ----- TEMPORARY, FOR TESTING -----
-        local kartsTable = {}     -- need to set up storage pull into serverUserData like Battle 
-        kartsTable[1] = true
-        kartsTable[2] = false
-        kartsTable[3] = false
-        kartsTable[4] = false
-        kartsTable[5] = false
-        kartsTable[6] = false
-        Game.GetLocalPlayer().clientUserData.karts = kartsTable
-        ----- END TEMPORARY TEST -----]]
     end
 end
 

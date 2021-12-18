@@ -124,9 +124,9 @@ Objects {
   ParentId: 6572843767714576044
   UnregisteredParameters {
     Overrides {
-      Name: "cs:LuampaWorldsStorageKey"
+      Name: "cs:LuampaWorldKey"
       NetReference {
-        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
+        Key: "40f9c117a9bf4cd6846068522d48986c"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -171,9 +171,9 @@ Objects {
   ParentId: 6572843767714576044
   UnregisteredParameters {
     Overrides {
-      Name: "cs:LuampaWorldsKey"
+      Name: "cs:LuampaWorldKey"
       NetReference {
-        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
+        Key: "40f9c117a9bf4cd6846068522d48986c"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }

@@ -5,7 +5,7 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:LuampaWorldsStorageKey"
+        Name: "cs:LuampaWorldKey"
         NetReference {
           Type {
             Value: "mc:enetreferencetype:unknown"

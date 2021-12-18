@@ -1342,15 +1342,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 26.1541805
-            Y: 11.1180344
-            Z: -26.7256222
+            X: -6897.92676
+            Y: 3794.90527
+            Z: -58.9057388
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
+            Pitch: -1.87896729
+            Yaw: -66.9890442
+            Roll: -0.323638916
           }
         }
         Overrides {
@@ -1397,15 +1399,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -20.6262665
-            Y: -8.72545815
-            Z: 11.8508883
+            X: -6897.92676
+            Y: 3794.90527
+            Z: -58.9057388
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
+            Pitch: -1.87896729
+            Yaw: -66.9890442
+            Roll: -0.323638916
           }
         }
         Overrides {
@@ -1452,15 +1456,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 0.000551753677
-            Y: -0.0204230957
-            Z: 4.46464443
+            X: -6897.92676
+            Y: 3794.90527
+            Z: -58.9057388
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
+            Pitch: -1.87896729
+            Yaw: -66.9890442
+            Roll: -0.323638916
           }
         }
         Overrides {
@@ -1507,14 +1513,17 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 0.000147698258
-            Y: 6.20864375e-05
+            X: -6897.92676
+            Y: 3794.90527
+            Z: -58.9057388
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Pitch: 5.46415104e-05
+            Pitch: -1.87896729
+            Yaw: -66.9890442
+            Roll: -0.323638916
           }
         }
         Overrides {

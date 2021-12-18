@@ -3,7 +3,7 @@
 --[[INSTRUCTIONS: When Main Menu is ready to be published, remove broadcast and run storage
 retrieval by uncommenting Game.playerJoinedEvent]]
 
-local LUAMPA_WORLDS_KEY = script:GetCustomProperty("LuampaWorldsKey")
+local LUAMPA_WORLD_KEY = script:GetCustomProperty("LuampaWorldKey")
 
 -- !! WIP !! Nothing sends this broadcast yet, needs written into vehicle purchases
 -- !! WIP !! Also need to write this up for Battle vehicles once we work out the system
@@ -23,39 +23,58 @@ local LUAMPA_WORLDS_KEY = script:GetCustomProperty("LuampaWorldsKey")
     player:SetPrivateNetworkedData("cars", carsData)
 
     -- Update Luampa Worlds SharedPlayerData
-    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLDS_KEY, player)
+    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
     playerDataTable.cars = player.serverUserData.cars
     playerDataTable.selectedVehicleId = player.serverUserData.selectedVehicleId
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
-    Storage.SetSharedPlayerData(LUAMPA_WORLDS_KEY, player, playerDataTable)
+    Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 end]]
 
 -- !! WIP !! Currently triggered by an Event
 function OnPlayerJoined(player)
 
     -- Get player storage
-    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLDS_KEY, player)
+    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
+    ----------------------- RACE -----------------------
     -- Get karts table, or create if new player
-    if playerDataTable.karts then
-        player.serverUserData.karts = playerDataTable.karts
-    else
+    if not playerDataTable.karts then
         local karts = {}
         karts[1] = {0,0,0,0}
         playerDataTable.karts = karts
     end
+    player.serverUserData.karts = playerDataTable.karts
+    player:SetPrivateNetworkedData("karts", playerDataTable.karts)
 
-    -- If player has a saved kart, set it
-    if playerDataTable.selectedKart then
-        player.serverUserData.selectedKart = playerDataTable.selectedKart
-        print("StorageServer says player has a saved kart, it is:")
-        print(player.serverUserData.selectedKart)
-    else
+    -- Get saved kart, or set default
+    if not playerDataTable.selectedKart then
         player.serverUserData.selectedKart = 1
         playerDataTable.selectedKart = 1
     end
+    player.serverUserData.selectedKart = playerDataTable.selectedKart
+    player:SetPrivateNetworkedData("selectedKart", playerDataTable.selectedKart)
+    ---------------------- END RACE ----------------------
+
+    ----------------------- BATTLE -----------------------
+    -- Get trucks table, or create if new player
+    if not playerDataTable.trucks then
+        local trucks = {}
+        trucks[1] = {0,0,0,0}
+        playerDataTable.trucks = trucks
+    end
+    player.serverUserData.trucks = playerDataTable.trucks
+    player:SetPrivateNetworkedData("trucks", playerDataTable.trucks)
+
+    -- Get saved truck, or set default
+    if not playerDataTable.selectedTruck then
+        player.serverUserData.selectedTruck = 1
+        playerDataTable.selectedTruck = 1
+    end
+    player.serverUserData.selectedTruck = playerDataTable.selectedTruck
+    player:SetPrivateNetworkedData("selectedTruck", playerDataTable.selectedTruck)
+    --------------------- END BATTLE ---------------------
     
     -- Get coins or create player Resource if new player
     if not playerDataTable.coins then
@@ -67,7 +86,7 @@ function OnPlayerJoined(player)
     end
 
     -- Load data for new players back into their shared data
-    Storage.SetSharedPlayerData(LUAMPA_WORLDS_KEY, player, playerDataTable)
+    Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 
     -- Set up PrivateNetworkedData for client-side, which is listening for changed event
     for key, value in pairs(playerDataTable) do
@@ -84,7 +103,7 @@ end
 
 
 function OnPlayerLeft(player)
-    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLDS_KEY, player)
+    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
     -- reupload old system during testing
     -- !! WIP !! If keeping old system up for conversion, write scripts to remove old system at conversion
@@ -94,9 +113,12 @@ function OnPlayerLeft(player)
     playerDataTable.karts = player.serverUserData.karts
     playerDataTable.selectedKart = player.serverUserData.selectedKart
 
+    playerDataTable.trucks = player.serverUserData.trucks
+    playerDataTable.selectedTruck = player.serverUserData.selectedTruck
+
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
-    Storage.SetSharedPlayerData(LUAMPA_WORLDS_KEY, player, playerDataTable)
+    Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 end
 
 
