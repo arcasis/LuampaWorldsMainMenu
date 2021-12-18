@@ -126,7 +126,7 @@ Objects {
     Overrides {
       Name: "cs:LuampaWorldKey"
       NetReference {
-        Key: "40f9c117a9bf4cd6846068522d48986c"
+        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
@@ -173,7 +173,7 @@ Objects {
     Overrides {
       Name: "cs:LuampaWorldKey"
       NetReference {
-        Key: "40f9c117a9bf4cd6846068522d48986c"
+        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
         Type {
           Value: "mc:enetreferencetype:sharedpersistence"
         }
