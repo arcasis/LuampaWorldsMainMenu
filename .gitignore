@@ -10,9 +10,6 @@ UserSettings/
 # Comment out if you want to synchronize screenshots
 Screenshots/
 
-# PublishData is created when map is published, with it no one else can test their storage keys
-# Comment out if you want to synchronize map ownership
-PublishData/
 
 # Directory created when migrating from an old storage format
 # No need to synchronize
