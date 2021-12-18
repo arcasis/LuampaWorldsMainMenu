@@ -12,7 +12,7 @@ Screenshots/
 
 # Created when map is published, only creator's world key can be used
 # Comment out if you want to synchronize map ownership
-# PublishData/
+PublishData/
 
 # Directory created when migrating from an old storage format
 # No need to synchronize
