@@ -24,23 +24,31 @@ function OnPlayerJoined(player)
         -- convert unlocked karts
         for _,kart in pairs(karts) do
 
+            -- default shopping kart
             if kart == "D60C2C0F44362F9A" then  -- !! WIP !! need to double check this is what's being saved
-                kart = {0,0,0,0}
+                karts[1] = {0,0,0,0}
             end
+            -- yellow shopping kart
             if kart == "FB30266E96726D65" then
-                kart = {0,0,0,0}
+                if not karts[1] then
+                    karts[1] = {0,0,0,0}
+                end
             end
+            -- buggy bug
             if kart == "5D37BCDBF40C50C2" then
-                kart = {0,0,0,0}
+                karts[2] = {0,0,0,0}
             end
+            -- old times kart
             if kart == "ED2DE1404ABB24A1" then
-                kart = {0,0,0,0}
+                karts[3] = {0,0,0,0}
             end
+            -- vendetta vespa
             if kart == "B01F8538673E1BD2" then
-                kart = {0,0,0,0}
+                karts[4] = {0,0,0,0}
             end
+            -- electric blue
             if kart == "2D0527061EF1BC26" then
-                kart = {0,0,0,0}
+                karts[5] = {0,0,0,0}
             end
         end
 
