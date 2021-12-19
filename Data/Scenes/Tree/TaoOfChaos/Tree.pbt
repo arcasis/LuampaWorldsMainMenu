@@ -778,6 +778,7 @@ Objects {
   ChildIds: 713943643876442
   ChildIds: 7068825633905796462
   ChildIds: 3247995148312029257
+  ChildIds: 2359158844426509354
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -792,6 +793,60 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2359158844426509354
+  Name: "Vehicle Status Text"
+  Transform {
+    Location {
+      X: -7530.87305
+      Y: -1019.72461
+      Z: 468.919281
+    }
+    Rotation {
+      Pitch: -0.553527832
+      Yaw: -155.903885
+      Roll: 0.0540614165
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12158074331431296115
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Owned"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -2027,9 +2082,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -6897.84521
-            Y: 3795.00098
-            Z: -72.4051361
+            X: -6915.68848
+            Y: 3811.58887
+            Z: -28.4112377
           }
         }
         Overrides {
@@ -3786,6 +3841,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:VehicleStatusText"
+      ObjectReference {
+        SelfId: 2359158844426509354
+      }
+    }
+    Overrides {
       Name: "cs:WallSpotlights"
       ObjectReference {
         SelfId: 17749405240085622520
@@ -3922,6 +3983,7 @@ Objects {
   ChildIds: 12056401378719592435
   ChildIds: 4496507480726526384
   ChildIds: 9856664457127402301
+  ChildIds: 10738265668739068418
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3936,6 +3998,60 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10738265668739068418
+  Name: "Vehicle Status Text"
+  Transform {
+    Location {
+      X: -2004.45557
+      Y: -7328.21387
+      Z: 503.178894
+    }
+    Rotation {
+      Pitch: -0.268358111
+      Yaw: -88.9040222
+      Roll: 2.68141207e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16057713092089398908
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Owned"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -6058,6 +6174,12 @@ Objects {
       Name: "cs:LockedImage"
       ObjectReference {
         SelfId: 16722195673712083149
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText"
+      ObjectReference {
+        SelfId: 10738265668739068418
       }
     }
     Overrides {

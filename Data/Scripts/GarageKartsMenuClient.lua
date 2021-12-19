@@ -17,6 +17,8 @@ local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultKartGeoFolder"):WaitForObject()
 local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedKartGeoFolder"):WaitForObject()
 
+local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject() ---@type WorldText
+
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
@@ -104,6 +106,11 @@ function DisplayLockedVehicle()
     LOCKED_IMAGE.visibility = Visibility.INHERIT
     SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
     SELECT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+
+    VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_STATUS_TEXT.text = "Locked"
+    VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.RED))
+    VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedVehicle()
@@ -114,6 +121,17 @@ function DisplayUnlockedVehicle()
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
     SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+
+    VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
+    local selected = Game:GetLocalPlayer().clientUserData.selectedKart
+    if index == selected then
+        VEHICLE_STATUS_TEXT.text = "Selected"
+        VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
+    else
+        VEHICLE_STATUS_TEXT.text = "Owned"
+        VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+    end
+    VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
 end
 
 function OnSelectUpgradeButtonClicked()
@@ -121,8 +139,11 @@ function OnSelectUpgradeButtonClicked()
 end
 
 function OnBackButtonClicked()
+    VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
+
     KARTS_MENU_PANEL.visibility = Visibility.FORCE_OFF
     GARAGE_MAIN_MENU_PANEL.visibility = Visibility.INHERIT
+
     DisplaySelectingVehicle()
 end
 
@@ -140,7 +161,9 @@ function Tick(deltaTime)
     if KARTS_MENU_PANEL.visibility == Visibility.INHERIT then
 
         if menuOpen == false then
-            DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+            --DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
+            --VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
+            ProcessIndex()
         end
         menuOpen = true
     else
@@ -150,6 +173,7 @@ function Tick(deltaTime)
             index = 1
             DisplayUnlockedVehicle()
             currentlyVisible.visibility = Visibility.FORCE_OFF
+            VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
         end
         menuOpen = false
     end
