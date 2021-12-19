@@ -9672,8 +9672,8 @@ Objects {
     }
   }
   ParentId: 1696798925401821095
-  ChildIds: 2776348175731281553
   ChildIds: 5190193224908945312
+  ChildIds: 2776348175731281553
   ChildIds: 2433667427270308067
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9765,53 +9765,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5190193224908945312
-  Name: "TempConvertStorageServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6572843767714576044
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:LuampaWorldKey"
-      NetReference {
-        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 282910925235679021
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 2776348175731281553
   Name: "LuampaMenuPlayerStorageServer"
   Transform {
@@ -9852,6 +9805,53 @@ Objects {
   Script {
     ScriptAsset {
       Id: 10777850534356422625
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5190193224908945312
+  Name: "TempConvertStorageServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6572843767714576044
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:LuampaWorldKey"
+      NetReference {
+        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
+        Type {
+          Value: "mc:enetreferencetype:sharedpersistence"
+        }
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 282910925235679021
     }
   }
   NetworkRelevanceDistance {

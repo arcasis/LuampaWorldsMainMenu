@@ -107,8 +107,8 @@ function OnPlayerLeft(player)
 
     -- reupload old system during testing
     -- !! WIP !! If keeping old system up for conversion, write scripts to remove old system at conversion
-    playerDataTable.cars = player.serverUserData.cars
-    playerDataTable.selectedVehicleId = player.serverUserData.selectedVehicleId
+    
+    -- NOTE: We do not re-upload cars, will need to update Luampa Race Worlds to use karts
 
     playerDataTable.karts = player.serverUserData.karts
     playerDataTable.selectedKart = player.serverUserData.selectedKart

@@ -25,7 +25,7 @@ function OnPlayerJoined(player)
         for _,kart in pairs(karts) do
 
             -- default shopping kart
-            if kart == "D60C2C0F44362F9A" then  -- !! WIP !! need to double check this is what's being saved
+            if kart == "D60C2C0F44362F9A" then
                 karts[1] = {0,0,0,0}
             end
             -- yellow shopping kart
