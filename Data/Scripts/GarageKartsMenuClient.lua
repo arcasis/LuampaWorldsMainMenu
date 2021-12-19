@@ -69,11 +69,11 @@ function ProcessIndex()
     
     local kart = karts[index]
     if kart then
-        print("there was a kart unlocked, it should be visible")
+        --print("there was a kart unlocked, it should be visible")
         DisplayUnlockedVehicle()
     else
-        print("the kart was not unlocked, index is: ")
-        print(index)
+        --print("the kart was not unlocked, index is: ")
+        --print(index)
         DisplayLockedVehicle()
     end
 end

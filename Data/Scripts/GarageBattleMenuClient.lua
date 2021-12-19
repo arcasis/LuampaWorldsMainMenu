@@ -69,11 +69,11 @@ function ProcessIndex()
     
     local truck = trucks[index]
     if truck then
-        print("there was an truck, it should be visible")
+        --print("there was an truck, it should be visible")
         DisplayUnlockedVehicle()
     else
-        print("the vehicle was not unlocked, index is: ")
-        print(index)
+        --print("the vehicle was not unlocked, index is: ")
+        --print(index)
         DisplayLockedVehicle()
     end
 end

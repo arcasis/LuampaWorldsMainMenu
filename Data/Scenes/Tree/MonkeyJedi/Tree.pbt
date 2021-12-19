@@ -85951,6 +85951,7 @@ Objects {
   Name: "Vehicle Display Light OFF "
   Transform {
     Location {
+      X: 1
       Z: 130
     }
     Rotation {

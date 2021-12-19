@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13766874025060581873
+  Name: "Tech Symbol 1"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_046"
+  }
+}
+Assets {
   Id: 11996370362624858284
   Name: "Abstract Frame 10"
   PlatformAssetType: 9
@@ -32,6 +41,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Basic_Shape_Triangle"
+  }
+}
+Assets {
+  Id: 10558222318807124329
+  Name: "BG Highlighted 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_022"
   }
 }
 Assets {

@@ -6,7 +6,11 @@ when player joins, instead of when it receives the broadcast this script sends w
 
 --[[DESCRIPTION: Downloads player storage for Luampa Main Menu. Uploads purchases and selections.]]
 
-local LUAMPA_WORLD_KEY = script:GetCustomProperty("LuampaWorldKey")
+--[[NOTE: Currently merged with LuampaMenuPlayerStorageServer due to an error that kept popping
+up "please remove cycle from storage data". Now, instead of this running, then the other, they
+run THEN data is re-uploaded into shared player data.]]
+
+--[[local LUAMPA_WORLD_KEY = script:GetCustomProperty("LuampaWorldKey")
 
 
 function OnPlayerJoined(player)
@@ -99,4 +103,4 @@ end
 
 
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerJoinedEvent:Connect(OnPlayerJoined)]]
