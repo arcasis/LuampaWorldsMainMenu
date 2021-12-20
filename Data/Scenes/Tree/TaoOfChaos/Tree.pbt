@@ -2531,6 +2531,7 @@ Objects {
   }
   ParentId: 12158074331431296115
   ChildIds: 7959611291421426607
+  ChildIds: 9866075515843571691
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2564,6 +2565,188 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9866075515843571691
+  Name: "Select as Default"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8445281688302102432
+  ChildIds: 1166951763366303138
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    UIY: -50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Select as Default"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 15
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1166951763366303138
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 62.7978516
+      Y: 2259.48901
+      Z: 1286.13525
+    }
+    Rotation {
+      Pitch: -0.00532754743
+      Yaw: 93.2868
+      Roll: 0.278584
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9866075515843571691
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -2675,7 +2858,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 100
+    UIY: 150
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2917,7 +3100,7 @@ Objects {
 }
 Objects {
   Id: 389990483261266469
-  Name: "Select Upgrade"
+  Name: "Choose Upgrade"
   Transform {
     Location {
       X: -21.6118164
@@ -2961,7 +3144,7 @@ Objects {
       }
     }
     Button {
-      Label: "Select Upgrade"
+      Label: "Choose Upgrade"
       FontColor {
         R: 1
         G: 1
@@ -3337,7 +3520,7 @@ Objects {
 }
 Objects {
   Id: 18001212761352047056
-  Name: "Select Vehicle"
+  Name: "Edit Vehicle"
   Transform {
     Location {
       X: -21.6118317
@@ -3381,7 +3564,7 @@ Objects {
       }
     }
     Button {
-      Label: "Select Vehicle"
+      Label: "Edit Vehicle"
       FontColor {
         R: 1
         G: 1
@@ -3856,6 +4039,12 @@ Objects {
       Name: "cs:VehicleDisplayLightCylinder"
       ObjectReference {
         SelfId: 2128988704596968986
+      }
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton"
+      ObjectReference {
+        SelfId: 9866075515843571691
       }
     }
     Overrides {
@@ -4825,7 +5014,7 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:inheritfromparent"
           }
         }
         Overrides {
@@ -4866,6 +5055,7 @@ Objects {
   }
   ParentId: 16057713092089398908
   ChildIds: 9258645056405633466
+  ChildIds: 9007976052208323057
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4899,6 +5089,191 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9007976052208323057
+  Name: "Select as Default"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+      Yaw: 1.36603767e-05
+      Roll: 7.00364851e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15480859360796277606
+  ChildIds: 94549970345308118
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    UIY: -50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Select as Default"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 15
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 94549970345308118
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 62.7978516
+      Y: 2259.48901
+      Z: 1286.13525
+    }
+    Rotation {
+      Pitch: -0.00532754743
+      Yaw: 93.2868
+      Roll: 0.278584
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9007976052208323057
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -5008,7 +5383,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 100
+    UIY: 150
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5250,7 +5625,7 @@ Objects {
 }
 Objects {
   Id: 8775616664870045363
-  Name: "Select Upgrade"
+  Name: "Choose Upgrade"
   Transform {
     Location {
       X: -21.6118164
@@ -5294,7 +5669,7 @@ Objects {
       }
     }
     Button {
-      Label: "Select Upgrade"
+      Label: "Choose Upgrade"
       FontColor {
         R: 1
         G: 1
@@ -5670,7 +6045,7 @@ Objects {
 }
 Objects {
   Id: 3964049384728287737
-  Name: "Select Vehicle"
+  Name: "Edit Vehicle"
   Transform {
     Location {
       X: -21.6118317
@@ -5714,7 +6089,7 @@ Objects {
       }
     }
     Button {
-      Label: "Select Vehicle"
+      Label: "Edit Vehicle"
       FontColor {
         R: 1
         G: 1
@@ -6192,6 +6567,12 @@ Objects {
       Name: "cs:VehicleDisplayLightCylinder"
       ObjectReference {
         SelfId: 2128988704596968986
+      }
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton"
+      ObjectReference {
+        SelfId: 9007976052208323057
       }
     }
   }

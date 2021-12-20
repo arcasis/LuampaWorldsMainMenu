@@ -10,6 +10,7 @@ local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForO
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
 local SELECT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
+local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 
 local BUTTON_ON_COLOR = Color.New(SELECT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
@@ -22,9 +23,6 @@ local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitFo
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
-
-local LOCKED_COLOR = Color.New(Color.RED)
-local OWNED_COLOR = Color.New(Color.WHITE)
 
 local DEFAULT_GEO_TABLE = {}
 local LOCKED_GEO_TABLE = {}
@@ -73,7 +71,6 @@ function ProcessIndex()
     local trucks = Game:GetLocalPlayer().clientUserData.trucks
     local selected = Game:GetLocalPlayer().clientUserData.selectedTruck
 
-    
     local truck = trucks[index]
     if truck then
         --print("there was an truck, it should be visible")
@@ -116,6 +113,8 @@ function DisplayLockedVehicle()
     VEHICLE_STATUS_TEXT.text = "Locked"
     VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.RED))
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
+
+    SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
 end
 
 function DisplayUnlockedVehicle()
@@ -127,13 +126,14 @@ function DisplayUnlockedVehicle()
     SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
     SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 
-    
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     local selected = Game:GetLocalPlayer().clientUserData.selectedTruck
     if index == selected then
+        SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
         VEHICLE_STATUS_TEXT.text = "Selected"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
     else
+        SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
         VEHICLE_STATUS_TEXT.text = "Owned"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
     end
@@ -149,9 +149,15 @@ function OnBackButtonClicked()
 
     BATTLE_MENU_PANEL.visibility = Visibility.FORCE_OFF
     GARAGE_MAIN_MENU_PANEL.visibility = Visibility.INHERIT
+
     DisplaySelectingVehicle()
 end
 
+function OnSetAsDefaultButtonClicked()
+    Events.BroadcastToServer("SelectDefaultTruck", index)
+    Game:GetLocalPlayer().clientUserData.selectedTruck = index
+    ProcessIndex()
+end
 
 -- Move this stuff + Events and variables to script that handles it
 function OnVehicleToggleButtonClicked()
@@ -184,6 +190,7 @@ function Tick(deltaTime)
     end
 end
 
+-- Initialize
 -- process default kart geos
 local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
 for _,vehicle in ipairs(geoVehicles) do
@@ -206,4 +213,5 @@ SELECT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
 SELECT_UPGRADE_BUTTON.clickedEvent:Connect(OnSelectUpgradeButtonClicked)
+SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

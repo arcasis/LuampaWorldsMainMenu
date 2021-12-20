@@ -168,6 +168,15 @@ function OnPlayerJoined(player)
 end
 
 
+function OnDefaultTruckSelected(player, index)
+    player.serverUserData.selectedTruck = index
+end
+
+function OnDefaultKartSelected(player, index)
+    player.serverUserData.selectedKart = index
+end
+
+
 function OnPlayerLeft(player)
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
@@ -189,6 +198,8 @@ function OnPlayerLeft(player)
 end
 
 
+Events.ConnectForPlayer("SelectDefaultTruck", OnDefaultTruckSelected)
+Events.ConnectForPlayer("SelectDefaultKart", OnDefaultKartSelected)
 --Events.ConnectForPlayer("VehiclePurchased", OnVehiclePurchased)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)     -- see notes at top
 -- temp playerJoinedEvent substitute, allows TempConvertStorageServer to run first

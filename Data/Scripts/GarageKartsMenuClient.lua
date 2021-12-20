@@ -10,6 +10,7 @@ local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForO
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
 local SELECT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
+local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 
 local BUTTON_ON_COLOR = Color.New(SELECT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
@@ -68,6 +69,7 @@ function ProcessIndex()
     currentlyVisible.visibility = Visibility.FORCE_OFF
     
     local karts = Game:GetLocalPlayer().clientUserData.karts
+    local selected = Game:GetLocalPlayer().clientUserData.selectedKart
     
     local kart = karts[index]
     if kart then
@@ -111,6 +113,8 @@ function DisplayLockedVehicle()
     VEHICLE_STATUS_TEXT.text = "Locked"
     VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.RED))
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
+
+    SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
 end
 
 function DisplayUnlockedVehicle()
@@ -125,9 +129,11 @@ function DisplayUnlockedVehicle()
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     local selected = Game:GetLocalPlayer().clientUserData.selectedKart
     if index == selected then
+        SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
         VEHICLE_STATUS_TEXT.text = "Selected"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
     else
+        SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
         VEHICLE_STATUS_TEXT.text = "Owned"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
     end
@@ -147,6 +153,11 @@ function OnBackButtonClicked()
     DisplaySelectingVehicle()
 end
 
+function OnSetAsDefaultButtonClicked()
+    Events.BroadcastToServer("SelectDefaultKart", index)
+    Game:GetLocalPlayer().clientUserData.selectedKart = index
+    ProcessIndex()
+end
 
 -- Move this stuff + Events and variables to script that handles it
 function OnVehicleToggleButtonClicked()
@@ -202,4 +213,5 @@ SELECT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
 SELECT_UPGRADE_BUTTON.clickedEvent:Connect(OnSelectUpgradeButtonClicked)
+SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)
