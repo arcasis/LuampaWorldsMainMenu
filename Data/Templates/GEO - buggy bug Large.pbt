@@ -15,11 +15,53 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 12056401378719592435
+        ChildIds: 5892816562125300898
         ChildIds: 10803313733141197269
         ChildIds: 16448018835607565572
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5892816562125300898
+        Name: "Vehicle Name"
+        Transform {
+          Location {
+            X: 86.4265
+            Y: -169.184814
+            Z: 266.932892
+          }
+          Rotation {
+            Pitch: 1.056036
+            Yaw: -67.2216415
+            Roll: -3.19148111
+          }
+          Scale {
+            X: 0.625
+            Y: 1.0625
+            Z: 1.0625
+          }
+        }
+        ParentId: 3310691352632127506
+        ChildIds: 14877029492235902686
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -30,8 +72,71 @@ Assets {
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
-        Folder {
-          IsGroup: true
+        Text {
+          Text: "Buggy Bug"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14877029492235902686
+        Name: "Vehicle Price"
+        Transform {
+          Location {
+            Z: -20
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 0.705882192
+            Z: 0.70588243
+          }
+        }
+        ParentId: 5892816562125300898
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "? Luampa Coins"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"

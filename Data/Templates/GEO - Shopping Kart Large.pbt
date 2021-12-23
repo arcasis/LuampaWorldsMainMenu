@@ -15,11 +15,53 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 12056401378719592435
+        ChildIds: 10817741217393610502
         ChildIds: 5594449712267854520
         ChildIds: 8814628784695314819
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10817741217393610502
+        Name: "Vehicle Name"
+        Transform {
+          Location {
+            X: 91.7852783
+            Y: -170.269196
+            Z: 264.142242
+          }
+          Rotation {
+            Pitch: 0.392817825
+            Yaw: -67.2016373
+            Roll: -1.61281872
+          }
+          Scale {
+            X: 0.625
+            Y: 1.0625
+            Z: 1.0625
+          }
+        }
+        ParentId: 14913928856661135900
+        ChildIds: 6240516217348857097
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -30,8 +72,71 @@ Assets {
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
-        Folder {
-          IsGroup: true
+        Text {
+          Text: "Shopping Kart"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 6240516217348857097
+        Name: "Vehicle Price"
+        Transform {
+          Location {
+            Z: -20
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 0.705882192
+            Z: 0.70588243
+          }
+        }
+        ParentId: 10817741217393610502
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "? Luampa Coins"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"

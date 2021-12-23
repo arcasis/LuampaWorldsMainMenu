@@ -15,7 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3247995148312029257
+        ParentId: 713943643876442
+        ChildIds: 9856231444025695752
         ChildIds: 10251630068561460737
         ChildIds: 4525169878463677222
         ChildIds: 10101487610282583344
@@ -34,6 +35,110 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9856231444025695752
+        Name: "Vehicle Name"
+        Transform {
+          Location {
+            X: 140.698395
+            Y: -241.632721
+            Z: 383.890961
+          }
+          Rotation {
+            Pitch: -0.0594704524
+            Yaw: -66.9994888
+            Roll: -0.284114897
+          }
+          Scale {
+            X: 1
+            Y: 1.7
+            Z: 1.7
+          }
+        }
+        ParentId: 1277855637952534365
+        ChildIds: 3894132383837085574
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "Tanker"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3894132383837085574
+        Name: "Vehicle Price"
+        Transform {
+          Location {
+            Z: -20
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 0.705882192
+            Z: 0.70588243
+          }
+        }
+        ParentId: 9856231444025695752
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "? Luampa Coins"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"

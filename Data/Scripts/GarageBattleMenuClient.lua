@@ -11,6 +11,7 @@ local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitFo
 
 local SELECT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
+local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
 local BUTTON_ON_COLOR = Color.New(SELECT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
@@ -115,14 +116,17 @@ function DisplayLockedVehicle()
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
+    PURCHASE_BUTTON.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedVehicle()
+    PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
+    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
+
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
     currentlyVisible = DEFAULT_GEO_TABLE[index]
     DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
-    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
     SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 
@@ -156,6 +160,12 @@ end
 function OnSetAsDefaultButtonClicked()
     Events.BroadcastToServer("SelectDefaultTruck", index)
     Game:GetLocalPlayer().clientUserData.selectedTruck = index
+    ProcessIndex()
+end
+
+function OnPurchaseButtonClicked()
+    Events.BroadcastToServer("PurchaseTruck", index)
+    Task.Wait(.1)     -- allow purchase to go through
     ProcessIndex()
 end
 
@@ -214,4 +224,5 @@ VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
 SELECT_UPGRADE_BUTTON.clickedEvent:Connect(OnSelectUpgradeButtonClicked)
 SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
+PURCHASE_BUTTON.clickedEvent:Connect(OnPurchaseButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

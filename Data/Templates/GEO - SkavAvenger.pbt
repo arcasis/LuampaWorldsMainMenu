@@ -15,7 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15030497330898415658
+        ParentId: 713943643876442
+        ChildIds: 2412931308709675576
         ChildIds: 721842101579563814
         ChildIds: 4299911604158018717
         ChildIds: 6028664956212277320
@@ -27,13 +28,117 @@ Assets {
           Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 2412931308709675576
+        Name: "Vehicle Name"
+        Transform {
+          Location {
+            X: 140.699265
+            Y: -241.631378
+            Z: 383.890808
+          }
+          Rotation {
+            Pitch: -0.059484113
+            Yaw: -66.999527
+            Roll: -0.284127504
+          }
+          Scale {
+            X: 1
+            Y: 1.7
+            Z: 1.7
+          }
+        }
+        ParentId: 736369718320567278
+        ChildIds: 12094437325744987635
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "Skav Avenger"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12094437325744987635
+        Name: "Vehicle Price"
+        Transform {
+          Location {
+            Z: -20
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 0.705882192
+            Z: 0.70588243
+          }
+        }
+        ParentId: 2412931308709675576
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Text {
+          Text: "? Luampa Coins"
+          FontAsset {
+          }
+          Color {
+            R: 1
+            G: 1
+            B: 1
+            A: 1
+          }
+          HorizontalAlignment {
+            Value: "mc:ecoretexthorizontalalign:center"
+          }
+          VerticalAlignment {
+            Value: "mc:ecoretextverticalalign:center"
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"

@@ -2195,10 +2195,10 @@ Objects {
     }
   }
   ParentId: 12158074331431296115
-  ChildIds: 4694831175823395292
-  ChildIds: 14100739461674818979
-  ChildIds: 5224279453444329520
   ChildIds: 9130424090529513438
+  ChildIds: 4694831175823395292
+  ChildIds: 5224279453444329520
+  ChildIds: 14100739461674818979
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2219,148 +2219,9 @@ Objects {
   }
 }
 Objects {
-  Id: 9130424090529513438
-  Name: "GEO - Thrashed Battle Truck"
-  Transform {
-    Location {
-      X: 5574.56592
-      Y: 6023.11475
-      Z: 111.80999
-    }
-    Rotation {
-      Pitch: 0.00514996238
-      Yaw: 110.469254
-      Roll: 0.268376678
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 713943643876442
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 16530320166737757676
-      value {
-        Overrides {
-          Name: "Name"
-          String: "GEO - Thrashed Battle Truck"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -6918.54395
-            Y: 3767.07422
-            Z: -28.2459068
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -0.480285645
-            Yaw: -67.1965637
-            Roll: -0.41973877
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 16464074713874394408
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 5224279453444329520
-  Name: "GEO - Tanker Upgrade 1"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 713943643876442
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1277855637952534365
-      value {
-        Overrides {
-          Name: "Name"
-          String: "GEO - Tanker"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -6918.54248
-            Y: 3767.07422
-            Z: -28.2459049
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -0.480278373
-            Yaw: -67.1965714
-            Roll: -0.419753075
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15251258355048296586
-    }
-  }
-}
-Objects {
   Id: 14100739461674818979
   Name: "GEO - SkavAvenger"
   Transform {
-    Location {
-      X: 5574.56592
-      Y: 6023.11475
-      Z: 111.80999
-    }
-    Rotation {
-      Pitch: 0.00514996238
-      Yaw: 110.469254
-      Roll: 0.268376678
-    }
     Scale {
       X: 1
       Y: 1
@@ -2398,50 +2259,65 @@ Objects {
             Roll: -0.41973877
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 3677500936474418915
     }
   }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+}
+Objects {
+  Id: 5224279453444329520
+  Name: "GEO - Tanker"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 713943643876442
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1277855637952534365
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Tanker"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6918.54248
+            Y: 3767.07422
+            Z: -28.2459049
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.480278373
+            Yaw: -67.1965714
+            Roll: -0.419753075
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15251258355048296586
+    }
   }
 }
 Objects {
   Id: 4694831175823395292
   Name: "GEO - Rusty Beasty"
   Transform {
-    Location {
-      X: 5574.56592
-      Y: 6023.11475
-      Z: 111.80999
-    }
-    Rotation {
-      Pitch: 0.00514996238
-      Yaw: 110.469254
-      Roll: 0.268376678
-    }
     Scale {
       X: 1
       Y: 1
@@ -2479,34 +2355,59 @@ Objects {
             Roll: -0.41973877
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 8768697395945414097
     }
   }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+}
+Objects {
+  Id: 9130424090529513438
+  Name: "GEO - Thrashed Battle Truck"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 713943643876442
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16530320166737757676
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6918.54395
+            Y: 3767.07422
+            Z: -28.2459068
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -0.480285645
+            Yaw: -67.1965637
+            Roll: -0.41973877
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16464074713874394408
+    }
   }
 }
 Objects {
@@ -2532,6 +2433,7 @@ Objects {
   ParentId: 12158074331431296115
   ChildIds: 7959611291421426607
   ChildIds: 9866075515843571691
+  ChildIds: 12166770845788654612
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2574,8 +2476,193 @@ Objects {
   }
 }
 Objects {
+  Id: 12166770845788654612
+  Name: "Purchase Button"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+      Yaw: 1.2806604e-05
+      Roll: 8.00422e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8445281688302102432
+  ChildIds: 10824943999382616164
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    UIY: -50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Purchase"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 15
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10824943999382616164
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 62.7978516
+      Y: 2259.48901
+      Z: 1286.13525
+    }
+    Rotation {
+      Pitch: -0.00532754743
+      Yaw: 93.2868
+      Roll: 0.278584
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12166770845788654612
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 9866075515843571691
-  Name: "Select as Default"
+  Name: "Select as Default Button"
   Transform {
     Location {
     }
@@ -4048,6 +4135,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:PurchaseButton"
+      ObjectReference {
+        SelfId: 12166770845788654612
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -4790,6 +4883,7 @@ Objects {
   ParentId: 16057713092089398908
   ChildIds: 12008113938708256810
   ChildIds: 14677388191940347909
+  ChildIds: 6877964960996761990
   ChildIds: 11238951468642262273
   ChildIds: 5301069505171639092
   Collidable_v2 {
@@ -4822,6 +4916,12 @@ Objects {
     }
   }
   ParentId: 12056401378719592435
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 3790898199827313873
@@ -4845,26 +4945,11 @@ Objects {
             Roll: 1.52300217e-08
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 11642181338662207462
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4878,6 +4963,12 @@ Objects {
     }
   }
   ParentId: 12056401378719592435
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 139246566092430045
@@ -4901,22 +4992,149 @@ Objects {
             Roll: 1.52300217e-08
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 10207102980281913416
+    }
+  }
+}
+Objects {
+  Id: 6877964960996761990
+  Name: "GEO - Old Timey Kart Large"
+  Transform {
+    Location {
+      X: 11.0062008
+      Y: 4.63339138
+      Z: -1.45520079
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12056401378719592435
+  ChildIds: 10430654404200332554
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10430654404200332554
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 158.92244
+      Y: -272.430634
+      Z: 418.240021
+    }
+    Rotation {
+      Pitch: -0.244363666
+      Yaw: -67.199852
+      Roll: -0.0970961452
+    }
+    Scale {
+      X: 1
+      Y: 1.7
+      Z: 1.7
+    }
+  }
+  ParentId: 6877964960996761990
+  ChildIds: 18133388558421441355
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Old Timey Kart"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18133388558421441355
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 10430654404200332554
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -4934,6 +5152,12 @@ Objects {
     }
   }
   ParentId: 12056401378719592435
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 3310691352632127506
@@ -4956,26 +5180,11 @@ Objects {
             Pitch: -3.35638428
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 8883611779929351183
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -4989,6 +5198,12 @@ Objects {
     }
   }
   ParentId: 12056401378719592435
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 14913928856661135900
@@ -5011,26 +5226,11 @@ Objects {
             Pitch: -1.64419556
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:inheritfromparent"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 6133784542686929612
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5056,6 +5256,7 @@ Objects {
   ParentId: 16057713092089398908
   ChildIds: 9258645056405633466
   ChildIds: 9007976052208323057
+  ChildIds: 4699498921552161450
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5098,8 +5299,193 @@ Objects {
   }
 }
 Objects {
+  Id: 4699498921552161450
+  Name: "Purchase Button"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+      Yaw: 1.2806604e-05
+      Roll: 8.00422e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15480859360796277606
+  ChildIds: 743496987393925043
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    UIY: -50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Purchase"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 15
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 743496987393925043
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 62.7978516
+      Y: 2259.48901
+      Z: 1286.13525
+    }
+    Rotation {
+      Pitch: -0.00532754743
+      Yaw: 93.2868
+      Roll: 0.278584
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4699498921552161450
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 9007976052208323057
-  Name: "Select as Default"
+  Name: "Select as Default Button"
   Transform {
     Location {
     }
@@ -6573,6 +6959,12 @@ Objects {
       Name: "cs:SetAsDefaultButton"
       ObjectReference {
         SelfId: 9007976052208323057
+      }
+    }
+    Overrides {
+      Name: "cs:PurchaseButton"
+      ObjectReference {
+        SelfId: 4699498921552161450
       }
     }
   }
@@ -10754,6 +11146,56 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     DoesPositionOffsetSpring: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 1351234920270188164
+  Name: "World Text"
+  Transform {
+    Location {
+      X: 7292
+      Y: 183
+      Z: 166
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1.6
+      Z: 1.69999993
+    }
+  }
+  ParentId: 1696798925401821095
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Shopping Kart"
+    FontAsset {
+    }
+    Color {
+      G: 0.37169531
+      B: 0.422000021
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
