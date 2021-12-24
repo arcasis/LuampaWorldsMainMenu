@@ -41,6 +41,10 @@ end
 UI.SetCursorVisible(true)
 UI.SetCanCursorInteractWithUI(true)
 
+-- Initialize
+MAIN_MENU_PANEL.visibility = Visibility.INHERIT
+
+
 CORE_WORLD_BUTTON.clickedEvent:Connect(OnCoreWorldButtonClicked)
 GAME_MODE_BUTTON.clickedEvent:Connect(OnGameModeButtonClicked)
 GARAGE_BUTTON.clickedEvent:Connect(OnGarageButtonClicked)
