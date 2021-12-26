@@ -165,7 +165,7 @@ end
 
 function OnPurchaseButtonClicked()
     Events.BroadcastToServer("PurchaseTruck", index)
-    Task.Wait(.1)     -- allow purchase to go through
+    Task.Wait(.2)     -- allow purchase to go through
     ProcessIndex()
 end
 

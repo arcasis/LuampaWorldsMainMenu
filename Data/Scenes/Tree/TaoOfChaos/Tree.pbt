@@ -100,6 +100,7 @@ Objects {
   ChildIds: 10505102574848237220
   ChildIds: 713943643876442
   ChildIds: 7068825633905796462
+  ChildIds: 10893767463856759093
   ChildIds: 3247995148312029257
   ChildIds: 2359158844426509354
   Collidable_v2 {
@@ -383,10 +384,10 @@ Objects {
   }
   ParentId: 13841790934508846906
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -412,24 +413,6 @@ Objects {
             Roll: -0.192973629
           }
         }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
@@ -449,10 +432,10 @@ Objects {
   }
   ParentId: 13841790934508846906
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -478,24 +461,6 @@ Objects {
             Roll: -0.192973629
           }
         }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
@@ -515,10 +480,10 @@ Objects {
   }
   ParentId: 13841790934508846906
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -544,24 +509,6 @@ Objects {
             Roll: -0.192973629
           }
         }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
       }
     }
     TemplateAsset {
@@ -581,10 +528,10 @@ Objects {
   }
   ParentId: 13841790934508846906
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -608,24 +555,6 @@ Objects {
             Pitch: -0.4486956
             Yaw: -66.9976807
             Roll: -0.192973629
-          }
-        }
-        Overrides {
-          Name: "Collidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
           }
         }
       }
@@ -927,20 +856,6 @@ Objects {
             Roll: -0.323467821
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
@@ -983,20 +898,6 @@ Objects {
             Roll: -0.323467821
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
@@ -1006,7 +907,7 @@ Objects {
 }
 Objects {
   Id: 3894852429702160227
-  Name: "GEO - Tanker Upgrade 3"
+  Name: "GEO - Tanker Upgrade 2"
   Transform {
     Scale {
       X: 1
@@ -1016,10 +917,10 @@ Objects {
   }
   ParentId: 2712961394424518706
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -1045,20 +946,6 @@ Objects {
             Roll: -0.323467672
           }
         }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
@@ -1068,7 +955,7 @@ Objects {
 }
 Objects {
   Id: 204934489960697727
-  Name: "GEO - Tanker Upgrade 2"
+  Name: "GEO - Tanker Upgrade 1"
   Transform {
     Scale {
       X: 1
@@ -1077,6 +964,12 @@ Objects {
     }
   }
   ParentId: 2712961394424518706
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 15430835564655670936
@@ -1099,20 +992,6 @@ Objects {
             Pitch: -0.234801397
             Yaw: -66.9983063
             Roll: -0.323467731
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -1225,18 +1104,18 @@ Objects {
   }
 }
 Objects {
-  Id: 7068825633905796462
-  Name: "Battle Geo - Locked"
+  Id: 10893767463856759093
+  Name: "Battle Geo - Unlocked"
   Transform {
     Location {
-      X: 351.380859
-      Y: -3592.10742
+      X: 351.380615
+      Y: -3592.10547
       Z: 526.36853
     }
     Rotation {
-      Pitch: -0.0988123417
-      Yaw: -21.7039013
-      Roll: 0.0154883806
+      Pitch: -0.0988191739
+      Yaw: -21.7039165
+      Roll: 0.015488157
     }
     Scale {
       X: 1
@@ -1245,10 +1124,10 @@ Objects {
     }
   }
   ParentId: 8398366710339645358
-  ChildIds: 15350938805397483342
-  ChildIds: 17218202075088171242
-  ChildIds: 17866259828953399732
-  ChildIds: 10014597452348989562
+  ChildIds: 15283842364038728133
+  ChildIds: 5953956344413454040
+  ChildIds: 13535125647348887462
+  ChildIds: 9671733926696180154
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1269,8 +1148,244 @@ Objects {
   }
 }
 Objects {
-  Id: 10014597452348989562
-  Name: "GEO - Thrashed Battle Truck LOCKED"
+  Id: 9671733926696180154
+  Name: "GEO - SkavAvenger UNLOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10893767463856759093
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6915.6875
+            Y: 3811.58887
+            Z: -28.4103642
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.697635472
+            Yaw: -67.0027161
+            Roll: 0.985713422
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7549644669932872156
+    }
+  }
+}
+Objects {
+  Id: 13535125647348887462
+  Name: "GEO - OG Tanker UNLOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10893767463856759093
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - OG Tanker UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6935.06836
+            Y: 3830.4502
+            Z: -23.4127579
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.697635472
+            Yaw: -67.0027161
+            Roll: 0.985713422
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17438479039680390717
+    }
+  }
+}
+Objects {
+  Id: 5953956344413454040
+  Name: "GEO - Rusty Beasty UNLOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10893767463856759093
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6898.15723
+            Y: 3794.68262
+            Z: -32.4067917
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.697635472
+            Yaw: -67.0027161
+            Roll: 0.985713422
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3490354650252545231
+    }
+  }
+}
+Objects {
+  Id: 15283842364038728133
+  Name: "GEO - Thrashed Battle Truck UNLOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10893767463856759093
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6885.24951
+            Y: 3782.6377
+            Z: -67.4029694
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.697635472
+            Yaw: -67.0027161
+            Roll: 0.985713422
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15707896951489421267
+    }
+  }
+}
+Objects {
+  Id: 7068825633905796462
+  Name: "Battle Geo - Locked"
+  Transform {
+    Location {
+      X: 351.380859
+      Y: -3592.10742
+      Z: 526.36853
+    }
+    Rotation {
+      Pitch: -0.0988123417
+      Yaw: -21.7039013
+      Roll: 0.0154883806
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8398366710339645358
+  ChildIds: 10014597452348989562
+  ChildIds: 15350938805397483342
+  ChildIds: 17866259828953399732
+  ChildIds: 17218202075088171242
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 17218202075088171242
+  Name: "GEO - SkavAvenger LOCKED"
   Transform {
     Scale {
       X: 1
@@ -1281,18 +1396,18 @@ Objects {
   ParentId: 7068825633905796462
   TemplateInstance {
     ParameterOverrideMap {
-      key: 1172344966692303612
+      key: 16898877154567548061
       value {
         Overrides {
           Name: "Name"
-          String: "GEO - Thrashed Battle Truck LOCKED"
+          String: "GEO - SkavAvenger LOCKED"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -6885.25342
-            Y: 3782.63672
-            Z: -67.4038391
+            X: -6915.68848
+            Y: 3811.58887
+            Z: -28.4112377
           }
         }
         Overrides {
@@ -1318,7 +1433,7 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 9830842801394050088
+      Id: 3426904075239409324
     }
   }
   NetworkRelevanceDistance {
@@ -1383,63 +1498,6 @@ Objects {
   }
 }
 Objects {
-  Id: 17218202075088171242
-  Name: "GEO - SkavAvenger LOCKED"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7068825633905796462
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 16898877154567548061
-      value {
-        Overrides {
-          Name: "Name"
-          String: "GEO - SkavAvenger LOCKED"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -6915.68848
-            Y: 3811.58887
-            Z: -28.4112377
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -1.87896729
-            Yaw: -66.9890442
-            Roll: -0.323638916
-          }
-        }
-        Overrides {
-          Name: "Visible"
-          Enum {
-            Value: "mc:evisibilitysetting:forceoff"
-          }
-        }
-        Overrides {
-          Name: "CoreProxy.CameraCollidable"
-          Enum {
-            Value: "mc:ecollisionsetting:forceoff"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3426904075239409324
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 15350938805397483342
   Name: "GEO - Rusty Beasty LOCKED"
   Transform {
@@ -1490,6 +1548,63 @@ Objects {
     }
     TemplateAsset {
       Id: 9324373660678580101
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10014597452348989562
+  Name: "GEO - Thrashed Battle Truck LOCKED"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7068825633905796462
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck LOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -6885.25342
+            Y: 3782.63672
+            Z: -67.4038391
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.87896729
+            Yaw: -66.9890442
+            Roll: -0.323638916
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9830842801394050088
     }
   }
   NetworkRelevanceDistance {
@@ -3648,6 +3763,7 @@ Objects {
     }
   }
   ParentId: 12158074331431296115
+  ChildIds: 4587510823809761776
   UnregisteredParameters {
     Overrides {
       Name: "cs:Truck1"
@@ -3728,6 +3844,122 @@ Objects {
     Overrides {
       Name: "cs:Truck5:tooltip"
       String: "Price of this vehicle"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4587510823809761776
+  Name: "Truck Upgrades Prices Data"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6900111359064049426
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Truck1"
+      Int: 100
+    }
+    Overrides {
+      Name: "cs:Truck2"
+      Int: 200
+    }
+    Overrides {
+      Name: "cs:Truck3"
+      Int: 400
+    }
+    Overrides {
+      Name: "cs:Truck4"
+      Int: 800
+    }
+    Overrides {
+      Name: "cs:Truck5"
+      Int: 1600
+    }
+    Overrides {
+      Name: "cs:Truck1:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Truck1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck2:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Truck2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck3:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Truck3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck4:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Truck4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck4:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck5:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Truck5:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Truck5:ml"
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -6618,6 +6850,7 @@ Objects {
     }
   }
   ParentId: 16057713092089398908
+  ChildIds: 13481171590303052675
   UnregisteredParameters {
     Overrides {
       Name: "cs:Kart1"
@@ -6658,6 +6891,122 @@ Objects {
     Overrides {
       Name: "cs:Kart5:tooltip"
       String: "Price of this vehicle"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13481171590303052675
+  Name: "Kart Upgrade Prices Data"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3825881162607431306
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Kart1"
+      Int: 100
+    }
+    Overrides {
+      Name: "cs:Kart2"
+      Int: 200
+    }
+    Overrides {
+      Name: "cs:Kart3"
+      Int: 400
+    }
+    Overrides {
+      Name: "cs:Kart4"
+      Int: 800
+    }
+    Overrides {
+      Name: "cs:Kart5"
+      Int: 1600
+    }
+    Overrides {
+      Name: "cs:Kart1:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Kart1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart2:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Kart2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart3:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Kart3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart4:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Kart4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart4:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart5:tooltip"
+      String: "Price of this vehicle"
+    }
+    Overrides {
+      Name: "cs:Kart5:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Kart5:ml"
+      Bool: false
     }
   }
   Collidable_v2 {
