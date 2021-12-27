@@ -4,8 +4,8 @@ local BATTLE_MENU_PANEL = script:GetCustomProperty("GarageBattleMenuPanel"):Wait
 
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
-local SELECT_VEHICLE_BUTTON = script:GetCustomProperty("SelectVehicleButton"):WaitForObject()
-local SELECT_VEHICLE_IMAGE = script:GetCustomProperty("SelectVehicleImage"):WaitForObject()
+local EDIT_VEHICLE_BUTTON = script:GetCustomProperty("EditVehicleButton"):WaitForObject()
+local EDIT_VEHICLE_IMAGE = script:GetCustomProperty("EditVehicleImage"):WaitForObject()
 local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForObject()
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
@@ -13,7 +13,7 @@ local SELECT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):Wa
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
-local BUTTON_ON_COLOR = Color.New(SELECT_VEHICLE_IMAGE:GetColor())
+local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
 local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultGeoFolder"):WaitForObject()
@@ -88,8 +88,8 @@ function DisplaySelectingUpgrade()
     SELECT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
     VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
-    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
 end
 
 function DisplaySelectingVehicle()
@@ -97,8 +97,8 @@ function DisplaySelectingVehicle()
     SELECT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
     VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
-    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 end
 
 function DisplayLockedVehicle()
@@ -107,8 +107,8 @@ function DisplayLockedVehicle()
     currentlyVisible = LOCKED_GEO_TABLE[index]
     LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     LOCKED_IMAGE.visibility = Visibility.INHERIT
-    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
 
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     VEHICLE_STATUS_TEXT.text = "Locked"
@@ -127,8 +127,8 @@ function DisplayUnlockedVehicle()
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
     currentlyVisible = DEFAULT_GEO_TABLE[index]
     DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
-    SELECT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    SELECT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     local selected = Game:GetLocalPlayer().clientUserData.selectedTruck
@@ -163,20 +163,15 @@ function OnSetAsDefaultButtonClicked()
     ProcessIndex()
 end
 
+-- !! WIP !! Still needs what happens if purchase doesn't go through
+-- Should we process purchase here first, THEN broadcast if it goes through?
+-- What all would need changed to do this?
 function OnPurchaseButtonClicked()
     Events.BroadcastToServer("PurchaseTruck", index)
     Task.Wait(.2)     -- allow purchase to go through
     ProcessIndex()
 end
 
--- Move this stuff + Events and variables to script that handles it
-function OnVehicleToggleButtonClicked()
-    
-end
-
-function OnVehicleSelectButtonClicked()
-    
-end
 
 function Tick(deltaTime)
     if BATTLE_MENU_PANEL.visibility == Visibility.INHERIT then
@@ -219,7 +214,7 @@ total = index
 index = 1
 currentlyVisible = DEFAULT_GEO_TABLE[index]
 
-SELECT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
+EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
 SELECT_UPGRADE_BUTTON.clickedEvent:Connect(OnSelectUpgradeButtonClicked)

@@ -1182,6 +1182,12 @@ Objects {
             Roll: 0.985713422
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     TemplateAsset {
@@ -3256,10 +3262,10 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 60
-    Height: 30
-    UIX: 230
-    UIY: 40
+    Width: 120
+    Height: 60
+    UIX: 530
+    UIY: 540
     RotationAngle: 90
     RenderTransformPivot {
       Anchor {
@@ -3370,10 +3376,10 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 60
-    Height: 30
-    UIX: -230
-    UIY: 40
+    Width: 120
+    Height: 60
+    UIX: -530
+    UIY: 540
     RotationAngle: -90
     RenderTransformPivot {
       Anchor {
@@ -3560,13 +3566,13 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:SelectVehicleButton"
+      Name: "cs:EditVehicleButton"
       ObjectReference {
         SelfId: 18001212761352047056
       }
     }
     Overrides {
-      Name: "cs:SelectVehicleImage"
+      Name: "cs:EditVehicleImage"
       ObjectReference {
         SelfId: 9676787866780516591
       }
@@ -3660,19 +3666,19 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectVehicleButton:isrep"
+      Name: "cs:EditVehicleButton:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectVehicleButton:ml"
+      Name: "cs:EditVehicleButton:ml"
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectVehicleImage:isrep"
+      Name: "cs:EditVehicleImage:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectVehicleImage:ml"
+      Name: "cs:EditVehicleImage:ml"
       Bool: false
     }
     Overrides {
@@ -6423,10 +6429,10 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 60
-    Height: 30
-    UIX: 230
-    UIY: 40
+    Width: 120
+    Height: 60
+    UIX: 530
+    UIY: 540
     RotationAngle: 90
     RenderTransformPivot {
       Anchor {
@@ -6537,10 +6543,10 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 60
-    Height: 30
-    UIX: -230
-    UIY: 40
+    Width: 120
+    Height: 60
+    UIX: -530
+    UIY: 540
     RotationAngle: -90
     RenderTransformPivot {
       Anchor {
@@ -6730,13 +6736,13 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:SelectVehicleButton"
+      Name: "cs:EditVehicleButton"
       ObjectReference {
         SelfId: 3964049384728287737
       }
     }
     Overrides {
-      Name: "cs:SelectVehicleImage"
+      Name: "cs:EditVehicleImage"
       ObjectReference {
         SelfId: 13086031412932905399
       }
