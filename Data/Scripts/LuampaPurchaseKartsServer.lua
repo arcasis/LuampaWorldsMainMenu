@@ -2,15 +2,13 @@
 processes sale and copies .serverUserData to client if sale goes through.]]
 
 local KART_PRICES_DATA_FOLDER = script:GetCustomProperty("KartPricesData"):WaitForObject()
-local TRUCK_PRICES_DATA_FOLDER = script:GetCustomProperty("TruckPricesData"):WaitForObject()
+local KART_UPGRADE_PRICES_DATA = script:GetCustomProperty("KartUpgradePricesData"):WaitForObject()
 
 --local KART_PRICES_TABLE = KART_PRICES_DATA_FOLDER:GetCustomProperties()
---local TRUCK_PRICES_TABLE = TRUCK_PRICES_DATA_FOLDER:GetCustomProperties()
 
---[[NOTE: Currently can't get GetCustomProperites() to fetch prices in the correct order, so
-for testing I'm going to hard-code prices in]]
+--[[NOTE: Currently can't get GetCustomProperties() to fetch prices in the correct order, so
+for testing I'm hard-coding the prices into the table]]
 local KART_PRICES_TABLE = {}
-local TRUCK_PRICES_TABLE = {}
 
 KART_PRICES_TABLE[1] = 0
 KART_PRICES_TABLE[2] = 5000
@@ -18,31 +16,30 @@ KART_PRICES_TABLE[3] = 10000
 KART_PRICES_TABLE[4] = 20000
 KART_PRICES_TABLE[5] = 40000
 
-TRUCK_PRICES_TABLE[1] = 0
-TRUCK_PRICES_TABLE[2] = 5000
-TRUCK_PRICES_TABLE[3] = 10000
-TRUCK_PRICES_TABLE[4] = 20000
-TRUCK_PRICES_TABLE[5] = 40000
-
-print("TRUCK_PRICES_TABLE[2] is: ", TRUCK_PRICES_TABLE[2])
-
 --[[local kartTableIndex = 0
-for _,kartPrice in pairs(KART_PRICES_DATA_FOLDER:GetCustomProperties()) do
+for _,kartPrice in ipairs(KART_PRICES_DATA_FOLDER:GetCustomProperties()) do
     kartTableIndex = kartTableIndex + 1
     KART_PRICES_TABLE[kartTableIndex] = kartPrice
     print("kartPrice is: ", kartPrice)
     print("kartTableIndex is: ", kartTableIndex)
 end]]
 
+KART_UPGRADE_PRICES_TABLE = {}
+
+KART_UPGRADE_PRICES_TABLE[1] = 100
+KART_UPGRADE_PRICES_TABLE[2] = 200
+KART_UPGRADE_PRICES_TABLE[3] = 400
+KART_UPGRADE_PRICES_TABLE[4] = 800
+
 
 function PurchaseKart(player, kartIndex)
     local coins = player:GetResource("LuampaCoins")
+
     local price = KART_PRICES_TABLE[kartIndex]
-
-    print("coins is: ", coins)
-    print("price is: ", price)
-
     if coins >= price then
+
+        print("You have enough to purchase vehicle")
+
         coins = coins - price
         player:SetResource("LuampaCoins", coins)
 
@@ -51,38 +48,36 @@ function PurchaseKart(player, kartIndex)
         player.serverUserData.karts = kartsTable
         -- push to clientUserData
         player:SetPrivateNetworkedData("karts", kartsTable)
+
+    else
+        print("You do not have enough to purchase vehicle")
+
     end
 end
 
-
-function PurchaseTruck(player, truckIndex)
+function PurchaseKartUpgrade(player, kartIndex, kartUpgrade)
     local coins = player:GetResource("LuampaCoins")
 
-    print("truckIndex is: ", truckIndex)
-    print("Luampa coins is: ", coins)
-    print("price is TRUCK_PRICES_TABLE[truckIndex]: ", TRUCK_PRICES_TABLE[truckIndex])
-
-    local price = TRUCK_PRICES_TABLE[truckIndex]
+    local price = KART_UPGRADE_PRICES_TABLE[kartIndex]
     if coins >= price then
 
-        print("You have enough to purchase vehicle")
+        print("You have enough to purchase upgrade")
 
         coins = coins - price
         player:SetResource("LuampaCoins", coins)
 
-        local trucksTable = player.serverUserData.trucks
-        trucksTable[truckIndex] = {0,0,0,0}
-        player.serverUserData.trucks = trucksTable
+        local kartsTable = player.serverUserData.karts
+        kartsTable[kartIndex][kartUpgrade] = 1
+        player.serverUserData.karts = kartsTable
         -- push to clientUserData
-        player:SetPrivateNetworkedData("trucks", trucksTable)
-    
+        player:SetPrivateNetworkedData("karts", kartsTable)
+
     else
         print("You do not have enough to purchase vehicle")
-    
+
     end
 end
 
 
-
 Events.ConnectForPlayer("PurchaseKart", PurchaseKart)
-Events.ConnectForPlayer("PurchaseTruck", PurchaseTruck)
+Events.ConnectForPlayer("PurchaseKartUpgrade", PurchaseKartUpgrade)

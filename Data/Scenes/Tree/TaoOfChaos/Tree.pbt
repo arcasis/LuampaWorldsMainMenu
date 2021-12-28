@@ -56,7 +56,7 @@ Objects {
     }
   }
   ParentId: 9188275580542756088
-  ChildIds: 6900111359064049426
+  ChildIds: 2910209769126176749
   ChildIds: 8398366710339645358
   UnregisteredParameters {
   }
@@ -3752,15 +3752,12 @@ Objects {
   }
 }
 Objects {
-  Id: 6900111359064049426
-  Name: "Truck Prices Data"
+  Id: 2910209769126176749
+  Name: "ServerContext"
   Transform {
     Location {
     }
     Rotation {
-      Pitch: -0.0595046058
-      Yaw: -66.9993439
-      Roll: -0.284084857
     }
     Scale {
       X: 1
@@ -3769,6 +3766,45 @@ Objects {
     }
   }
   ParentId: 12158074331431296115
+  ChildIds: 16129434330388531456
+  ChildIds: 6900111359064049426
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+    Type: Server
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6900111359064049426
+  Name: "Truck Prices Data"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -0.0595046058
+      Yaw: -66.9993591
+      Roll: -0.284084827
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2910209769126176749
   ChildIds: 4587510823809761776
   UnregisteredParameters {
     Overrides {
@@ -3873,7 +3909,7 @@ Objects {
 }
 Objects {
   Id: 4587510823809761776
-  Name: "Truck Upgrades Prices Data"
+  Name: "Truck Upgrade Prices Data"
   Transform {
     Location {
     }
@@ -3988,6 +4024,67 @@ Objects {
   }
 }
 Objects {
+  Id: 16129434330388531456
+  Name: "LuampaPurchaseTrucksServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 1.36603776e-05
+      Yaw: 3.25050181e-13
+      Roll: 4.08210462e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2910209769126176749
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:TruckPricesData"
+      ObjectReference {
+        SelfId: 6900111359064049426
+      }
+    }
+    Overrides {
+      Name: "cs:TruckUpgradePricesData"
+      ObjectReference {
+        SelfId: 4587510823809761776
+      }
+    }
+    Overrides {
+      Name: "cs:TruckPricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:TruckPricesData:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 9110764724267245524
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 16057713092089398908
   Name: "Garage Karts Menu"
   Transform {
@@ -4008,7 +4105,7 @@ Objects {
     }
   }
   ParentId: 9188275580542756088
-  ChildIds: 3825881162607431306
+  ChildIds: 7018944591413314931
   ChildIds: 17212085827600267809
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6842,6 +6939,42 @@ Objects {
   }
 }
 Objects {
+  Id: 7018944591413314931
+  Name: "ServerContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16057713092089398908
+  ChildIds: 4103537604295010180
+  ChildIds: 3825881162607431306
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+    Type: Server
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 3825881162607431306
   Name: "Kart Prices Data"
   Transform {
@@ -6855,7 +6988,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16057713092089398908
+  ParentId: 7018944591413314931
   ChildIds: 13481171590303052675
   UnregisteredParameters {
     Overrides {
@@ -7029,6 +7162,62 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4103537604295010180
+  Name: "LuampaPurchaseKartsServer"
+  Transform {
+    Location {
+      X: -2261.08569
+      Y: 21.6052246
+      Z: 421.62088
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039764
+      Roll: 2.93487892e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7018944591413314931
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:KartPricesData"
+      ObjectReference {
+        SelfId: 3825881162607431306
+      }
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData"
+      ObjectReference {
+        SelfId: 13481171590303052675
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2928487854016579146
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -12069,7 +12258,6 @@ Objects {
     }
   }
   ParentId: 9188275580542756088
-  ChildIds: 4103537604295010180
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -12084,56 +12272,6 @@ Objects {
   }
   NetworkContext {
     Type: Server
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 4103537604295010180
-  Name: "LuampaPurchaseVehicleServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15835859370704989364
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:KartPricesData"
-      ObjectReference {
-        SelfId: 3825881162607431306
-      }
-    }
-    Overrides {
-      Name: "cs:TruckPricesData"
-      ObjectReference {
-        SelfId: 6900111359064049426
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 2928487854016579146
-    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

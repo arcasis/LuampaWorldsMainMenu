@@ -1,6 +1,6 @@
 Assets {
-  Id: 2928487854016579146
-  Name: "LuampaPurchaseVehicleServer"
+  Id: 9110764724267245524
+  Name: "LuampaPurchaseTrucksServer"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
