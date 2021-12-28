@@ -4,32 +4,22 @@ processes sale and copies .serverUserData to client if sale goes through.]]
 local TRUCK_PRICES_DATA_FOLDER = script:GetCustomProperty("TruckPricesData"):WaitForObject()
 local TRUCK_UPGRADE_PRICES_DATA = script:GetCustomProperty("TruckUpgradePricesData"):WaitForObject()
 
---local TRUCK_PRICES_TABLE = TRUCK_PRICES_DATA_FOLDER:GetCustomProperties()
-
---[[NOTE: Currently can't get GetCustomProperties() to fetch prices in the correct order, so
-for testing I'm hard-coding the prices into the table]]
+-- index vehicle prices off data folders
 local TRUCK_PRICES_TABLE = {}
+local customProperties = TRUCK_PRICES_DATA_FOLDER:GetCustomProperties()
+for key, value in pairs(customProperties) do
+    table.insert(TRUCK_PRICES_TABLE, value)
+end
+table.sort(TRUCK_PRICES_TABLE, function(a,b) return a < b end)
 
-TRUCK_PRICES_TABLE[1] = 0
-TRUCK_PRICES_TABLE[2] = 5000
-TRUCK_PRICES_TABLE[3] = 10000
-TRUCK_PRICES_TABLE[4] = 20000
-TRUCK_PRICES_TABLE[5] = 40000
-
---[[local kartTableIndex = 0
-for _,kartPrice in ipairs(KART_PRICES_DATA_FOLDER:GetCustomProperties()) do
-    kartTableIndex = kartTableIndex + 1
-    KART_PRICES_TABLE[kartTableIndex] = kartPrice
-    print("kartPrice is: ", kartPrice)
-    print("kartTableIndex is: ", kartTableIndex)
-end]]
-
+-- index upgrade prices
 local TRUCK_UPGRADE_PRICES_TABLE = {}
+local customProperties = TRUCK_UPGRADE_PRICES_DATA:GetCustomProperties()
+for key, value in pairs(customProperties) do
+    table.insert(TRUCK_UPGRADE_PRICES_TABLE, value)
+end
+table.sort(TRUCK_UPGRADE_PRICES_TABLE, function(a,b) return a < b end)
 
-TRUCK_UPGRADE_PRICES_TABLE[1] = 100
-TRUCK_UPGRADE_PRICES_TABLE[2] = 200
-TRUCK_UPGRADE_PRICES_TABLE[3] = 400
-TRUCK_UPGRADE_PRICES_TABLE[4] = 800
 
 
 function PurchaseTruck(player, truckIndex)

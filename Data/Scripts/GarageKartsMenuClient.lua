@@ -13,7 +13,8 @@ local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):Wait
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_VEHICLE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
-local KART_PRICES_DATA = script:GetCustomProperty("KartPricesData"):WaitForObject()
+local KART_PRICES_DATA_FOLDER = script:GetCustomProperty("KartPricesData"):WaitForObject()
+local KART_UPGRADE_PRICES_DATA = script:GetCustomProperty("KartUpgradePricesData"):WaitForObject()
 
 local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
@@ -41,20 +42,22 @@ local upgradeButtonOn = false
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
--- temp until I work out how to order custom properties by value
+
+-- index vehicle prices off data folders
 local KART_PRICES_TABLE = {}
-KART_PRICES_TABLE[1] = 0
-KART_PRICES_TABLE[2] = 5000
-KART_PRICES_TABLE[3] = 10000
-KART_PRICES_TABLE[4] = 20000
-KART_PRICES_TABLE[5] = 40000
+local customProperties = KART_PRICES_DATA_FOLDER:GetCustomProperties()
+for key, value in pairs(customProperties) do
+    table.insert(KART_PRICES_TABLE, value)
+end
+table.sort(KART_PRICES_TABLE, function(a,b) return a < b end)
 
+-- index upgrade prices
 local KART_UPGRADE_PRICES_TABLE = {}
-KART_UPGRADE_PRICES_TABLE[1] = 100
-KART_UPGRADE_PRICES_TABLE[2] = 200
-KART_UPGRADE_PRICES_TABLE[3] = 400
-KART_UPGRADE_PRICES_TABLE[4] = 800
-
+local customProperties = KART_UPGRADE_PRICES_DATA:GetCustomProperties()
+for key, value in pairs(customProperties) do
+    table.insert(KART_UPGRADE_PRICES_TABLE, value)
+end
+table.sort(KART_UPGRADE_PRICES_TABLE, function(a,b) return a < b end)
 
 
 function OnEditVehicleButtonClicked()

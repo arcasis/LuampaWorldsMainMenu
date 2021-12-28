@@ -3663,6 +3663,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:TruckUpgradePricesData"
+      ObjectReference {
+        SelfId: 4587510823809761776
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -7248,6 +7254,12 @@ Objects {
       Name: "cs:KartPricesData"
       ObjectReference {
         SelfId: 3825881162607431306
+      }
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData"
+      ObjectReference {
+        SelfId: 13481171590303052675
       }
     }
   }
