@@ -9,17 +9,20 @@ local EDIT_VEHICLE_IMAGE = script:GetCustomProperty("EditVehicleImage"):WaitForO
 local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForObject()
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
-local SELECT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
+local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
-local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
+local PURCHASE_VEHICLE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
+
+local KART_PRICES_DATA = script:GetCustomProperty("KartPricesData"):WaitForObject()
 
 local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
 local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultKartGeoFolder"):WaitForObject()
 local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedKartGeoFolder"):WaitForObject()
+local UNLOCKED_GEO_FOLDER = script:GetCustomProperty("UnlockedKartGeoFolder"):WaitForObject()
 
-local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject() ---@type WorldText
+local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
@@ -27,12 +30,31 @@ local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylin
 
 local DEFAULT_GEO_TABLE = {}
 local LOCKED_GEO_TABLE = {}
+local UNLOCKED_GEO_TABLE = {}
+
 local index = 0
 local total = 0
 local currentlyVisible = nil
 
 local menuOpen = false
 local upgradeButtonOn = false
+
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
+-- temp until I work out how to order custom properties by value
+local KART_PRICES_TABLE = {}
+KART_PRICES_TABLE[1] = 0
+KART_PRICES_TABLE[2] = 5000
+KART_PRICES_TABLE[3] = 10000
+KART_PRICES_TABLE[4] = 20000
+KART_PRICES_TABLE[5] = 40000
+
+local KART_UPGRADE_PRICES_TABLE = {}
+KART_UPGRADE_PRICES_TABLE[1] = 100
+KART_UPGRADE_PRICES_TABLE[2] = 200
+KART_UPGRADE_PRICES_TABLE[3] = 400
+KART_UPGRADE_PRICES_TABLE[4] = 800
+
 
 
 function OnEditVehicleButtonClicked()
@@ -85,7 +107,7 @@ end
 
 function DisplaySelectingUpgrade()
     upgradeButtonOn = true
-    SELECT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
+    EDIT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
     VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
@@ -94,7 +116,7 @@ end
 
 function DisplaySelectingVehicle()
     upgradeButtonOn = false
-    SELECT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
+    EDIT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
     VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
@@ -116,11 +138,11 @@ function DisplayLockedVehicle()
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
-    PURCHASE_BUTTON.visibility = Visibility.INHERIT
+    PURCHASE_VEHICLE_BUTTON.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedVehicle()
-    PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
+    PURCHASE_VEHICLE_BUTTON.visibility = Visibility.FORCE_OFF
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
 
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
@@ -144,7 +166,7 @@ function DisplayUnlockedVehicle()
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
 end
 
-function OnSelectUpgradeButtonClicked()
+function OnEditUpgradeButtonClicked()
     print("Select Upgrade button was clicked in Karts menu, no scripts yet")
 end
 
@@ -166,10 +188,23 @@ end
 -- !! WIP !! Still needs what happens if purchase doesn't go through
 -- Should we process purchase here first, THEN broadcast if it goes through?
 -- What all would need changed to do this?
-function OnPurchaseButtonClicked()
+function OnPurchaseVehicleButtonClicked()
     Events.BroadcastToServer("PurchaseKart", index)
-    Task.Wait(.2)     -- allow purchase to go through
-    ProcessIndex()
+
+    local currentCoins = LOCAL_PLAYER:GetResource("LuampaCoins")
+    if currentCoins >= KART_PRICES_TABLE[index] then
+
+        -- !! WIP !! Add visual confirmation here
+
+        print("GarageKartsMenuClient says you have enough to purchase vehicle")
+
+        Task.Wait(.2)     -- allow purchase to go through
+        ProcessIndex()
+    else
+        -- !! WIP !! Add visual confirmation here
+
+        print("GarageKartsMenuClient says you do not have enough to purchase vehicle")
+    end
 end
 
 
@@ -196,7 +231,7 @@ function Tick(deltaTime)
 end
 
 -- Initialize
--- process default kart geos
+-- process default kart geos, set index variable
 local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
 for _,vehicle in ipairs(geoVehicles) do
     index = index + 1
@@ -210,6 +245,15 @@ for _,locked in ipairs(geoLocked) do
     index = index + 1
     LOCKED_GEO_TABLE[index] = locked
 end
+-- reset index to run unlocked geos
+index = 0
+-- process unlocked kart geos
+local geoUnlocked = UNLOCKED_GEO_FOLDER:GetChildren()
+for _,unlocked in ipairs(geoUnlocked) do
+    index = index + 1
+    UNLOCKED_GEO_TABLE[index] = unlocked
+end
+
 total = index
 index = 1
 currentlyVisible = DEFAULT_GEO_TABLE[index]
@@ -217,7 +261,7 @@ currentlyVisible = DEFAULT_GEO_TABLE[index]
 EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
-SELECT_UPGRADE_BUTTON.clickedEvent:Connect(OnSelectUpgradeButtonClicked)
+EDIT_UPGRADE_BUTTON.clickedEvent:Connect(OnEditUpgradeButtonClicked)
 SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
-PURCHASE_BUTTON.clickedEvent:Connect(OnPurchaseButtonClicked)
+PURCHASE_VEHICLE_BUTTON.clickedEvent:Connect(OnPurchaseVehicleButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

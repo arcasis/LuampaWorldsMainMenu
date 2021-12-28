@@ -24,7 +24,7 @@ for _,kartPrice in ipairs(KART_PRICES_DATA_FOLDER:GetCustomProperties()) do
     print("kartTableIndex is: ", kartTableIndex)
 end]]
 
-TRUCK_UPGRADE_PRICES_TABLE = {}
+local TRUCK_UPGRADE_PRICES_TABLE = {}
 
 TRUCK_UPGRADE_PRICES_TABLE[1] = 100
 TRUCK_UPGRADE_PRICES_TABLE[2] = 200
