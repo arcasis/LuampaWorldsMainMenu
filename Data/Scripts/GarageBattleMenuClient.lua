@@ -13,9 +13,6 @@ local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):Wait
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_VEHICLE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
-local TRUCK_PRICES_DATA_FOLDER = script:GetCustomProperty("TruckPricesData"):WaitForObject()
-local TRUCK_UPGRADE_PRICES_DATA = script:GetCustomProperty("TruckUpgradePricesData"):WaitForObject()
-
 local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
@@ -43,24 +40,7 @@ local upgradeButtonOn = false
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
--- index vehicle prices off data folders
-local TRUCK_PRICES_TABLE = {}
-local customProperties = TRUCK_PRICES_DATA_FOLDER:GetCustomProperties()
-for key, value in pairs(customProperties) do
-    table.insert(TRUCK_PRICES_TABLE, value)
-end
-table.sort(TRUCK_PRICES_TABLE, function(a,b) return a < b end)
-
--- index upgrade prices
-local TRUCK_UPGRADE_PRICES_TABLE = {}
-local customProperties = TRUCK_UPGRADE_PRICES_DATA:GetCustomProperties()
-for key, value in pairs(customProperties) do
-    table.insert(TRUCK_UPGRADE_PRICES_TABLE, value)
-end
-table.sort(TRUCK_UPGRADE_PRICES_TABLE, function(a,b) return a < b end)
-
-
-function OnSelectVehicleButtonClicked()
+function OnEditVehicleButtonClicked()
     -- toggle selecting vehicle or selecting upgrade
     if upgradeButtonOn == false then
         Events.Broadcast("MenuBattleVehicleSelected", index)
@@ -188,26 +168,19 @@ function OnSetAsDefaultButtonClicked()
     ProcessIndex()
 end
 
--- !! WIP !! Still needs what happens if purchase doesn't go through
--- Should we process purchase here first, THEN broadcast if it goes through?
--- What all would need changed to do this?
+-- NOTE: upgrade doesn't have purchase button yet, will add one when that menu is built
+
 function OnPurchaseVehicleButtonClicked()
-    Events.BroadcastToServer("PurchaseTruck", index)
+    Events.Broadcast("PurchaseTruck", index)
+end
 
-    local currentCoins = LOCAL_PLAYER:GetResource("LuampaCoins")
-    if currentCoins >= TRUCK_PRICES_TABLE[index] then
+function OnTruckPurchased()
+    ProcessIndex()
+end
 
-        -- !! WIP !! Add visual confirmation here
-
-        print("GarageBattleMenuClient says you have enough to purchase vehicle")
-
-        Task.Wait(.2)     -- allow purchase to go through
-        ProcessIndex()
-    else
-        -- !! WIP !! Add visual confirmation here
-
-        print("GarageBattleMenuClient says you do not have enough to purchase vehicle")
-    end
+function OnTruckNotPurchased()
+    print("GarageTrucksMenuClient received broadcast vehicle not purchased")
+    -- add stuff here that displays for player they can't afford vehicle
 end
 
 
@@ -215,8 +188,6 @@ function Tick(deltaTime)
     if BATTLE_MENU_PANEL.visibility == Visibility.INHERIT then
 
         if menuOpen == false then
-            --DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
-            --VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
             ProcessIndex()
         end
         menuOpen = true
@@ -234,7 +205,7 @@ function Tick(deltaTime)
 end
 
 -- Initialize
--- process default kart geos
+-- process default geos, set index variable
 local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
 for _,vehicle in ipairs(geoVehicles) do
     index = index + 1
@@ -261,7 +232,10 @@ total = index
 index = 1
 currentlyVisible = DEFAULT_GEO_TABLE[index]
 
-EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnSelectVehicleButtonClicked)
+Events.Connect("TruckPurchased", OnTruckPurchased)
+Events.Connect("TruckNotPurchased", OnTruckNotPurchased)
+
+EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
 EDIT_UPGRADE_BUTTON.clickedEvent:Connect(OnEditUpgradeButtonClicked)

@@ -5,32 +5,6 @@ retrieval by uncommenting Game.playerJoinedEvent]]
 
 local LUAMPA_WORLD_KEY = script:GetCustomProperty("LuampaWorldKey")
 
--- !! WIP !! Nothing sends this broadcast yet, needs written into vehicle purchases
--- !! WIP !! Also need to write this up for Battle vehicles once we work out the system
--- !! WIP !! Rewriting this: not going to use Race Framework's uber confusing system :/
--- !! WIP !! The OnVehiclePurchased function might go somewhere else, keeping this just for setup
---[[function OnVehiclePurchased(player, carId, cost)
-
-    -- Update Resource
-    player:RemoveResource("LuampaCoins", cost)
-
-    -- Update .serverUserData
-    player.serverUserData.cars[carId] = carId
-    player.serverUserData.selectedVehicleId = carId
-
-    -- Update PrivateNetworkedData
-    local carsData = player.serverUserData.cars
-    player:SetPrivateNetworkedData("cars", carsData)
-
-    -- Update Luampa Worlds SharedPlayerData
-    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
-
-    playerDataTable.cars = player.serverUserData.cars
-    playerDataTable.selectedVehicleId = player.serverUserData.selectedVehicleId
-    playerDataTable.coins = player:GetResource("LuampaCoins")
-
-    Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
-end]]
 
 -- !! WIP !! Currently triggered by playerJoinedEvent
 function OnPlayerJoined(player)
@@ -168,21 +142,12 @@ function OnPlayerJoined(player)
 end
 
 
-function OnDefaultTruckSelected(player, index)
-    player.serverUserData.selectedTruck = index
-end
-
-function OnDefaultKartSelected(player, index)
-    player.serverUserData.selectedKart = index
-end
-
-
 function OnPlayerLeft(player)
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
     -- !! WIP !! If keeping old system up for conversion, write scripts to remove old system at conversion
     
-    -- NOTE: We do not re-upload cars, will need to update Luampa Race Worlds to use karts
+    -- NOTE: We do not re-upload serverUserData.cars, will need to update Luampa Race Worlds to use karts
 
     playerDataTable.karts = player.serverUserData.karts
     playerDataTable.selectedKart = player.serverUserData.selectedKart
@@ -198,9 +163,6 @@ function OnPlayerLeft(player)
 end
 
 
-Events.ConnectForPlayer("SelectDefaultTruck", OnDefaultTruckSelected)
-Events.ConnectForPlayer("SelectDefaultKart", OnDefaultKartSelected)
---Events.ConnectForPlayer("VehiclePurchased", OnVehiclePurchased)
 Game.playerJoinedEvent:Connect(OnPlayerJoined)     -- see notes at top
 -- temp playerJoinedEvent substitute, allows TempConvertStorageServer to run first
 --Events.Connect("StorageReady", OnPlayerJoined)

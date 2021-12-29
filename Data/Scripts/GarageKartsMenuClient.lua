@@ -13,9 +13,6 @@ local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):Wait
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_VEHICLE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
-local KART_PRICES_DATA_FOLDER = script:GetCustomProperty("KartPricesData"):WaitForObject()
-local KART_UPGRADE_PRICES_DATA = script:GetCustomProperty("KartUpgradePricesData"):WaitForObject()
-
 local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
@@ -41,23 +38,6 @@ local menuOpen = false
 local upgradeButtonOn = false
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
-
-
--- index vehicle prices off data folders
-local KART_PRICES_TABLE = {}
-local customProperties = KART_PRICES_DATA_FOLDER:GetCustomProperties()
-for key, value in pairs(customProperties) do
-    table.insert(KART_PRICES_TABLE, value)
-end
-table.sort(KART_PRICES_TABLE, function(a,b) return a < b end)
-
--- index upgrade prices
-local KART_UPGRADE_PRICES_TABLE = {}
-local customProperties = KART_UPGRADE_PRICES_DATA:GetCustomProperties()
-for key, value in pairs(customProperties) do
-    table.insert(KART_UPGRADE_PRICES_TABLE, value)
-end
-table.sort(KART_UPGRADE_PRICES_TABLE, function(a,b) return a < b end)
 
 
 function OnEditVehicleButtonClicked()
@@ -188,26 +168,19 @@ function OnSetAsDefaultButtonClicked()
     ProcessIndex()
 end
 
--- !! WIP !! Still needs what happens if purchase doesn't go through
--- Should we process purchase here first, THEN broadcast if it goes through?
--- What all would need changed to do this?
+-- NOTE: upgrade doesn't have purchase button yet, will add one when that menu is built
+
 function OnPurchaseVehicleButtonClicked()
-    Events.BroadcastToServer("PurchaseKart", index)
+    Events.Broadcast("PurchaseKart", index)
+end
 
-    local currentCoins = LOCAL_PLAYER:GetResource("LuampaCoins")
-    if currentCoins >= KART_PRICES_TABLE[index] then
+function OnKartPurchased()
+    ProcessIndex()
+end
 
-        -- !! WIP !! Add visual confirmation here
-
-        print("GarageKartsMenuClient says you have enough to purchase vehicle")
-
-        Task.Wait(.2)     -- allow purchase to go through
-        ProcessIndex()
-    else
-        -- !! WIP !! Add visual confirmation here
-
-        print("GarageKartsMenuClient says you do not have enough to purchase vehicle")
-    end
+function OnKartNotPurchased()
+    print("GarageKartsMenuClient received broadcast vehicle not purchased")
+    -- add stuff here that displays for player they can't afford vehicle
 end
 
 
@@ -215,8 +188,6 @@ function Tick(deltaTime)
     if KARTS_MENU_PANEL.visibility == Visibility.INHERIT then
 
         if menuOpen == false then
-            --DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
-            --VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
             ProcessIndex()
         end
         menuOpen = true
@@ -234,7 +205,7 @@ function Tick(deltaTime)
 end
 
 -- Initialize
--- process default kart geos, set index variable
+-- process default geos, set index variable
 local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
 for _,vehicle in ipairs(geoVehicles) do
     index = index + 1
@@ -260,6 +231,9 @@ end
 total = index
 index = 1
 currentlyVisible = DEFAULT_GEO_TABLE[index]
+
+Events.Connect("KartPurchased", OnKartPurchased)
+Events.Connect("KartNotPurchased", OnKartNotPurchased)
 
 EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
