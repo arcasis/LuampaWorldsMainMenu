@@ -4244,7 +4244,6 @@ Objects {
     }
   }
   ParentId: 16057713092089398908
-  ChildIds: 4924766196821982691
   ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
   ChildIds: 12056401378719592435
@@ -5548,6 +5547,7 @@ Objects {
   }
   ParentId: 17212085827600267809
   ChildIds: 15480859360796277606
+  ChildIds: 10613821926654660552
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5593,6 +5593,1300 @@ Objects {
   }
 }
 Objects {
+  Id: 10613821926654660552
+  Name: "Garage Kart Upgrades Menu Panel"
+  Transform {
+    Location {
+      X: 2261.0874
+      Y: -21.6047611
+      Z: -421.621094
+    }
+    Rotation {
+      Pitch: 0.00513630174
+      Yaw: 88.9039917
+      Roll: 0.268322408
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3508418160663392510
+  ChildIds: 14620336332082569881
+  ChildIds: 18119456735426334382
+  ChildIds: 2059056636412982146
+  ChildIds: 3750629515972050201
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 2070
+    Height: 1093
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentHeight: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3750629515972050201
+  Name: "Purchase Button"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+      Yaw: 1.2806604e-05
+      Roll: 8.00422e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10613821926654660552
+  ChildIds: 5327848604151860327
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    UIY: -50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Purchase"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 15
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 5327848604151860327
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 62.7978516
+      Y: 2259.48901
+      Z: 1286.13525
+    }
+    Rotation {
+      Pitch: -0.00532754743
+      Yaw: 93.2868
+      Roll: 0.278584
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3750629515972050201
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2059056636412982146
+  Name: "Select as Default Button"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 6.83018879e-06
+      Yaw: 1.36603767e-05
+      Roll: 7.00364851e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10613821926654660552
+  ChildIds: 17568572221425858163
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    UIY: -50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Select as Default"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 15
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17568572221425858163
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 62.7978516
+      Y: 2259.48901
+      Z: 1286.13525
+    }
+    Rotation {
+      Pitch: -0.00532754743
+      Yaw: 93.2868
+      Roll: 0.278584
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2059056636412982146
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18119456735426334382
+  Name: "Garage Karts Buttons Panel"
+  Transform {
+    Location {
+      X: -43.2218628
+      Y: 4518.17383
+      Z: 864.414429
+    }
+    Rotation {
+      Pitch: -0.273494422
+      Yaw: -177.809219
+      Roll: 0.268328577
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10613821926654660552
+  ChildIds: 5291404624555088359
+  ChildIds: 14156187062000501801
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14156187062000501801
+  Name: "Locked Image"
+  Transform {
+    Location {
+      X: -0.00123446737
+      Y: 0.000707787229
+      Z: 0.00024756862
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18119456735426334382
+  ChildIds: 11997410625102339068
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 150
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 8310587797718236907
+      }
+      Color {
+        R: 0.78
+        G: 0.78
+        B: 0.78
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11997410625102339068
+  Name: "Locked Text"
+  Transform {
+    Location {
+      X: -2261.08643
+      Y: 21.605957
+      Z: 421.621
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039917
+      Roll: 2.96155963e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14156187062000501801
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "LOCKED"
+      Color {
+        R: 0.78
+        G: 0.78
+        B: 0.78
+        A: 1
+      }
+      Size: 40
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5291404624555088359
+  Name: "Choose Upgrade"
+  Transform {
+    Location {
+      X: -21.6118164
+      Y: 2259.08911
+      Z: 432.207275
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039917
+      Roll: 3.02826152e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18119456735426334382
+  ChildIds: 2923657904037034125
+  ChildIds: 5788698727749947873
+  ChildIds: 9859620715720430918
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 380
+    Height: 80
+    UIY: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Choose Upgrade"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9859620715720430918
+  Name: "ArrowRight"
+  Transform {
+    Location {
+      X: -21.6118164
+      Y: 2259.08911
+      Z: 432.207397
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039917
+      Roll: 3.18834577e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5291404624555088359
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 60
+    Height: 30
+    UIX: 230
+    UIY: 40
+    RotationAngle: 90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        G: 0.659999967
+        B: 0.6468876
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6174803333271868359
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5788698727749947873
+  Name: "ArrowLeft"
+  Transform {
+    Location {
+      X: -21.6118164
+      Y: 2259.08911
+      Z: 432.207336
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039917
+      Roll: 3.10830342e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5291404624555088359
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 60
+    Height: 30
+    UIX: -230
+    UIY: 40
+    RotationAngle: -90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        G: 0.659999967
+        B: 0.6468876
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6174803333271868359
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2923657904037034125
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -0.000244140596
+      Y: 0.000244140654
+      Z: -3.05175781e-05
+    }
+    Rotation {
+      Yaw: -6.83018879e-06
+      Roll: -2.66804339e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5291404624555088359
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14620336332082569881
+  Name: "KartUpgradesMenuClient"
+  Transform {
+    Location {
+      X: 2239.47754
+      Y: 2237.4812
+      Z: 10.5863361
+    }
+    Rotation {
+      Yaw: 1.0245285e-05
+      Roll: 2.00103216e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10613821926654660552
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SelectUpgradeButton"
+      ObjectReference {
+        SelfId: 5291404624555088359
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleArrowLeft"
+      ObjectReference {
+        SelfId: 5788698727749947873
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleArrowRight"
+      ObjectReference {
+        SelfId: 9859620715720430918
+      }
+    }
+    Overrides {
+      Name: "cs:DefaultKartGeoFolder"
+      ObjectReference {
+        SelfId: 12056401378719592435
+      }
+    }
+    Overrides {
+      Name: "cs:UnlockedKartGeoFolder"
+      ObjectReference {
+        SelfId: 529580595855855948
+      }
+    }
+    Overrides {
+      Name: "cs:LockedKartGeoFolder"
+      ObjectReference {
+        SelfId: 4496507480726526384
+      }
+    }
+    Overrides {
+      Name: "cs:LockedImage"
+      ObjectReference {
+        SelfId: 14156187062000501801
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText"
+      ObjectReference {
+        SelfId: 10738265668739068418
+      }
+    }
+    Overrides {
+      Name: "cs:WallSpotlights"
+      ObjectReference {
+        SelfId: 17749405240085622520
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder"
+      ObjectReference {
+        SelfId: 2128988704596968986
+      }
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton"
+      ObjectReference {
+        SelfId: 2059056636412982146
+      }
+    }
+    Overrides {
+      Name: "cs:PurchaseButton"
+      ObjectReference {
+        SelfId: 3750629515972050201
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleArrowLeft:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowLeft:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowRight:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowRight:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SelectUpgradeButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SelectUpgradeButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:DefaultKartGeoFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:DefaultKartGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UnlockedKartGeoFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UnlockedKartGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedKartGeoFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedKartGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedImage:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedImage:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:WallSpotlights:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:WallSpotlights:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:PurchaseButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:PurchaseButton:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6580126016545288420
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 15480859360796277606
   Name: "Garage Karts Main Menu Panel"
   Transform {
@@ -5613,6 +6907,7 @@ Objects {
     }
   }
   ParentId: 3508418160663392510
+  ChildIds: 4924766196821982691
   ChildIds: 9258645056405633466
   ChildIds: 9007976052208323057
   ChildIds: 4699498921552161450
@@ -6049,7 +7344,6 @@ Objects {
   }
   ParentId: 15480859360796277606
   ChildIds: 3964049384728287737
-  ChildIds: 8775616664870045363
   ChildIds: 17334094853589001721
   ChildIds: 16722195673712083149
   Collidable_v2 {
@@ -6360,426 +7654,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 8775616664870045363
-  Name: "Choose Upgrade"
-  Transform {
-    Location {
-      X: -21.6118164
-      Y: 2259.08911
-      Z: 432.207275
-    }
-    Rotation {
-      Pitch: -0.268371791
-      Yaw: -88.9039917
-      Roll: 3.02826152e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9258645056405633466
-  ChildIds: 13636035313987749622
-  ChildIds: 9735909977362922046
-  ChildIds: 8015035929456199217
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 380
-    Height: 80
-    UIY: 100
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Button {
-      Label: "Choose Upgrade"
-      FontColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      FontSize: 20
-      ButtonColor {
-        A: 0.742000043
-      }
-      HoveredColor {
-        R: 0.31
-        G: 0.410529554
-        B: 1
-        A: 1
-      }
-      PressedColor {
-        R: 0.269999981
-        G: 1
-        B: 0.550397515
-        A: 1
-      }
-      DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Brush {
-        Id: 6334699134008261182
-      }
-      IsButtonEnabled: true
-      ClickMode {
-        Value: "mc:ebuttonclickmode:default"
-      }
-      Font {
-        Id: 6363320609941978136
-      }
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:center"
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 8015035929456199217
-  Name: "ArrowRight"
-  Transform {
-    Location {
-      X: -21.6118164
-      Y: 2259.08911
-      Z: 432.207397
-    }
-    Rotation {
-      Pitch: -0.268371791
-      Yaw: -88.9039917
-      Roll: 3.18834577e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8775616664870045363
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 60
-    Height: 30
-    UIX: 230
-    UIY: 40
-    RotationAngle: 90
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Button {
-      FontColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      FontSize: 20
-      ButtonColor {
-        G: 0.659999967
-        B: 0.6468876
-        A: 0.742000043
-      }
-      HoveredColor {
-        R: 0.31
-        G: 0.410529554
-        B: 1
-        A: 1
-      }
-      PressedColor {
-        R: 0.269999981
-        G: 1
-        B: 0.550397515
-        A: 1
-      }
-      DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Brush {
-        Id: 6174803333271868359
-      }
-      IsButtonEnabled: true
-      ClickMode {
-        Value: "mc:ebuttonclickmode:default"
-      }
-      Font {
-        Id: 6363320609941978136
-      }
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:center"
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 9735909977362922046
-  Name: "ArrowLeft"
-  Transform {
-    Location {
-      X: -21.6118164
-      Y: 2259.08911
-      Z: 432.207336
-    }
-    Rotation {
-      Pitch: -0.268371791
-      Yaw: -88.9039917
-      Roll: 3.10830342e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8775616664870045363
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 60
-    Height: 30
-    UIX: -230
-    UIY: 40
-    RotationAngle: -90
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Button {
-      FontColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      FontSize: 20
-      ButtonColor {
-        G: 0.659999967
-        B: 0.6468876
-        A: 0.742000043
-      }
-      HoveredColor {
-        R: 0.31
-        G: 0.410529554
-        B: 1
-        A: 1
-      }
-      PressedColor {
-        R: 0.269999981
-        G: 1
-        B: 0.550397515
-        A: 1
-      }
-      DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-      Brush {
-        Id: 6174803333271868359
-      }
-      IsButtonEnabled: true
-      ClickMode {
-        Value: "mc:ebuttonclickmode:default"
-      }
-      Font {
-        Id: 6363320609941978136
-      }
-      Justification {
-        Value: "mc:etextjustify:center"
-      }
-      VerticalJustification {
-        Value: "mc:everticaljustification:center"
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 13636035313987749622
-  Name: "UI Image"
-  Transform {
-    Location {
-      X: -0.000244140596
-      Y: 0.000244140654
-      Z: -3.05175781e-05
-    }
-    Rotation {
-      Yaw: -6.83018879e-06
-      Roll: -2.66804339e-08
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8775616664870045363
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 200
-    Height: 200
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 11996370362624858284
-      }
-      Color {
-        R: 0.7
-        G: 0.940397322
-        B: 1
-        A: 0.990000069
-      }
-      TeamSettings {
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-      ScreenshotIndex: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
         }
       }
     }
@@ -7209,87 +8083,18 @@ Objects {
   }
 }
 Objects {
-  Id: 5865480526048325125
-  Name: "LuampaPurchaseKartsClient"
-  Transform {
-    Location {
-      X: 0.00146457576
-      Y: 2.80191889e-05
-      Z: -7.57154339e-11
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17212085827600267809
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:KartPricesData"
-      ObjectReference {
-        SelfId: 3825881162607431306
-      }
-    }
-    Overrides {
-      Name: "cs:KartUpgradePricesData"
-      ObjectReference {
-        SelfId: 13481171590303052675
-      }
-    }
-    Overrides {
-      Name: "cs:KartPricesData:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:KartPricesData:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:KartUpgradePricesData:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:KartUpgradePricesData:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7042105729151479505
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 4924766196821982691
   Name: "GarageKartsMenuClient"
   Transform {
     Location {
-      X: 3643.08594
-      Y: 4613.39551
-      Z: 0.37908268
+      X: 5882.56299
+      Y: 6850.87695
+      Z: 10.965416
     }
     Rotation {
       Pitch: 0.00513630174
-      Yaw: 88.9039917
-      Roll: 0.268322378
+      Yaw: 88.9040146
+      Roll: 0.268322468
     }
     Scale {
       X: 1
@@ -7297,7 +8102,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 15480859360796277606
   UnregisteredParameters {
     Overrides {
       Name: "cs:GarageMainMenuPanel"
@@ -7338,7 +8143,7 @@ Objects {
     Overrides {
       Name: "cs:SelectUpgradeButton"
       ObjectReference {
-        SelfId: 8775616664870045363
+        SelfId: 5291404624555088359
       }
     }
     Overrides {
@@ -7417,6 +8222,75 @@ Objects {
   Script {
     ScriptAsset {
       Id: 12373637647577488688
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5865480526048325125
+  Name: "LuampaPurchaseKartsClient"
+  Transform {
+    Location {
+      X: 0.00146457576
+      Y: 2.80191889e-05
+      Z: -7.57154339e-11
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17212085827600267809
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:KartPricesData"
+      ObjectReference {
+        SelfId: 3825881162607431306
+      }
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData"
+      ObjectReference {
+        SelfId: 13481171590303052675
+      }
+    }
+    Overrides {
+      Name: "cs:KartPricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:KartPricesData:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7042105729151479505
     }
   }
   NetworkRelevanceDistance {
