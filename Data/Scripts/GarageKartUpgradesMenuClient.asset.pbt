@@ -1,6 +1,6 @@
 Assets {
   Id: 6580126016545288420
-  Name: "KartUpgradesMenuClient"
+  Name: "GarageKartUpgradesMenuClient"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

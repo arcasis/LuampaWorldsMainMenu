@@ -1,6 +1,9 @@
 -- Core Object References
-local GARAGE_MAIN_MENU_PANEL = script:GetCustomProperty("GarageMainMenuPanel"):WaitForObject()
 local KARTS_MENU_PANEL = script:GetCustomProperty("GarageKartsMenuPanel"):WaitForObject()
+local KARTS_BUTTONS_PANEL = script:GetCustomProperty("GarageKartsButtonsPanel"):WaitForObject()
+local KART_UPGRADES_BUTTONS_PANEL = script:GetCustomProperty("GarageKartUpgradesButtonsPanel"):WaitForObject()
+
+local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
 local EDIT_VEHICLE_BUTTON = script:GetCustomProperty("EditVehicleButton"):WaitForObject()
 local EDIT_VEHICLE_IMAGE = script:GetCustomProperty("EditVehicleImage"):WaitForObject()
@@ -9,7 +12,7 @@ local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitFo
 
 local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
-local PURCHASE_VEHICLE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
+local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
 local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
@@ -24,21 +27,24 @@ local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
 
-local DEFAULT_GEO_TABLE = {}
-local LOCKED_GEO_TABLE = {}
-local UNLOCKED_GEO_TABLE = {}
+local DEFAULT_GEO_TABLES = {}
+local LOCKED_GEO_TABLES = {}
+local UNLOCKED_GEO_TABLES = {}
 
-local index = 0
-local upgradeTable = {}
+local index = 0     -- which vehicle player is viewing upgrades for
+local upgradesTables = {}
 local upgradeIndex = 0
 local total = 0
 local currentlyVisible = nil
 
-local upgradesOpen = false
-local upgradeButtonOn = false
+local upgradesPanelOpen = false
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
+
+function OnIndexUpdated(currentIndex)
+    index = currentIndex
+end
 
 function OnVehicleArrowLeftButtonClicked()
     if upgradeIndex > 1 then
@@ -67,7 +73,7 @@ function ProcessUpgradeIndex()
     local karts = Game:GetLocalPlayer().clientUserData.karts
     local selected = Game:GetLocalPlayer().clientUserData.selectedKart
     
-    local kart = karts[index]
+    local kart = karts[index][upgradeIndex]
     if kart then
         --print("there was a kart unlocked, it should be visible")
         DisplayUnlockedUpgrade()
@@ -79,21 +85,12 @@ function ProcessUpgradeIndex()
 end
 
 function DisplaySelectingUpgrade()
-    upgradeButtonOn = true
-    EDIT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
-    VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
-    VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
-    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+    -- !! WIP !! all this handled in GarageKartsMenuClient?
 end
 
 function DisplaySelectingVehicle()
-    upgradeButtonOn = false
-    EDIT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
-    VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
-    VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
-    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+    KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
+    upgradesPanelOpen = false
 end
 
 function DisplayLockedVehicle()
@@ -111,11 +108,11 @@ function DisplayLockedVehicle()
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
-    PURCHASE_VEHICLE_BUTTON.visibility = Visibility.INHERIT
+    PURCHASE_BUTTON.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedUpgrade()
-    PURCHASE_VEHICLE_BUTTON.visibility = Visibility.FORCE_OFF
+    PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
 
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
@@ -139,20 +136,21 @@ function DisplayUnlockedUpgrade()
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
 end
 
-function OnEditUpgradeButtonClicked()
-    Task.Wait(.01)     -- allow player's clientUserData to be set
-    index = LOCAL_PLAYER.clientUserData.index
-    ProcessUpgradeIndex()
+-- TEMP NOTE: DONE
+function OnEditVehicleButtonClicked()
+    DisplaySelectingVehicle()
 end
 
+-- TEMP NOTE: DONE
+function OnBackButtonClicked()
+    DisplaySelectingVehicle()
+end
 
 function OnSetAsDefaultButtonClicked()
     Events.BroadcastToServer("SelectDefaultKartUpgrade", index, upgradeIndex)     -- !! WIP !! Not received in server yet
     Game:GetLocalPlayer().clientUserData.selectedKart = index     -- !! WIP !! How to store upgrade?
     ProcessUpgradeIndex()
 end
-
--- NOTE: upgrade doesn't have purchase button yet, will add one when that menu is built
 
 function OnPurchaseUpgradeButtonClicked()
     Events.Broadcast("PurchaseKartUpgrade", index, upgradeIndex)
@@ -169,22 +167,22 @@ end
 
 ------ TEMP NOTE: TICK UPDATED -----
 function Tick(deltaTime)
-    if EDIT_UPGRADE_BUTTON.visibility == Visibility.INHERIT then
+    if KART_UPGRADES_BUTTONS_PANEL.visibility == Visibility.INHERIT then
 
-        if upgradesOpen == false then
+        if upgradesPanelOpen == false then
             ProcessUpgradeIndex()
         end
-        upgradesOpen = true
+        upgradesPanelOpen = true
     else
 
-        if upgradesOpen == true then
+        if upgradesPanelOpen == true then
             currentlyVisible.visibility = Visibility.FORCE_OFF
             index = 1
             DisplayUnlockedUpgrade()
             currentlyVisible.visibility = Visibility.FORCE_OFF
             UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
         end
-        upgradesOpen = false
+        upgradesPanelOpen = false
     end
 end
 
@@ -216,11 +214,14 @@ total = index
 index = 1
 currentlyVisible = DEFAULT_GEO_TABLE[index]
 
+Events.Connect("UpdateIndex", OnIndexUpdated)
+
 Events.Connect("KartPurchased", OnKartPurchased)
 Events.Connect("KartNotPurchased", OnKartNotPurchased)
 
+EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
-EDIT_UPGRADE_BUTTON.clickedEvent:Connect(OnEditUpgradeButtonClicked)
 SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
-PURCHASE_VEHICLE_BUTTON.clickedEvent:Connect(OnPurchaseUpgradeButtonClicked)
+PURCHASE_BUTTON.clickedEvent:Connect(OnPurchaseUpgradeButtonClicked)
+BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

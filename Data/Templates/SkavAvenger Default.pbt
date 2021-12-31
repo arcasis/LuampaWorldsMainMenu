@@ -22739,2095 +22739,12 @@ Assets {
       }
     }
     Assets {
-      Id: 165491740683467897
-      Name: "VehiclePack_BattleTruck_VehiclePassengerControllerServer"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n\r\n    This script handles passengers that sits with the driver.\r\n--]]\r\n\r\nlocal PASSENGER_ASSAULT_RIFLE = script:GetCustomProperty(\"PassengerAssaultRifle\")\r\nlocal PASSENGER_ROCKET_LAUNCHER = script:GetCustomProperty(\"PassengerRocketLauncher\")\r\n\r\nlocal ReliableEvents = require(script:GetCustomProperty(\"VehiclePack_ReliableEvents\"))\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\nlocal TRIGGER = script:GetCustomProperty(\"Trigger\"):WaitForObject()\r\nlocal SEATS = script:GetCustomProperty(\"Seats\"):WaitForObject()\r\nlocal STANCE = script:GetCustomProperty(\"AnimationStance\")\r\nlocal EXIT_BINDING = script:GetCustomProperty(\"ExitBinding\")\r\nlocal MUST_HAVE_DRIVER = script:GetCustomProperty(\"MustHaveDriver\")\r\n\r\nlocal seats = {}\r\n-- Luampa Edit\r\nlocal currentPassenger = nil\r\n\r\n-- Luampa Edit Start --\r\nfunction FlipVehicle(player)\r\n    local currentRotation = player:GetLookWorldRotation()\r\n    ------ Vehicle flip scripts from isFlipped\r\n    VEHICLE:AddImpulse(Vector3.UP * VEHICLE.mass * 0.20)\r\n    VEHICLE:SetWorldRotation(Rotation.New(0, currentRotation.y, 0))\r\n    -- Reminder: Can\'t use RotateTo on vehicles :/\r\nend\r\n  -- Luampa Edit End --\r\n\r\n  --[[CAN\'T GET PASSENGER TO NOT SPIN YET\r\n--Luampa function\r\nfunction EquipPassengerWeapon(player)\r\n    for _,weapon in ipairs(player:GetEquipment()) do\r\n        if weapon and weapon:IsA(\"Weapon\") then\r\n            weapon.serverUserData.stowed = true\r\n            local ammoType = weapon.ammoType\r\n            local ammoAmount = weapon.currentAmmo\r\n            weapon:Unequip()\r\n            weapon:AttachToPlayer(player, \"lower_spine\")\r\n            --player:SetResource(ammoType, ammoAmount)\r\n\r\n            if weapon.name == \"Advanced Assault Rifle\" then\r\n                local passengerWeapon = World.SpawnAsset(PASSENGER_ASSAULT_RIFLE)\r\n                passengerWeapon.currentAmmo = ammoAmount\r\n                passengerWeapon:Equip(player)\r\n\r\n            elseif weapon.name == \"Advanced Rocket Launcher\" then\r\n                local passengerWeapon = World.SpawnAsset(PASSENGER_ROCKET_LAUNCHER)\r\n                passengerWeapon.currentAmmo = ammoAmount\r\n                passengerWeapon:Equip(player)\r\n            end\r\n        end\r\n    end\r\nend\r\n--]]\r\n--[[WIP SEE NOTE ABOVE\r\nfunction ReequipPassengerWeaponOnExit(player)\r\n\r\n    local ammoAmount = 0\r\n\r\n    -- First destroy the temporary passenger weapon\r\n    for _,weapon in ipairs(player:GetEquipment()) do\r\n        if weapon and weapon:IsA(\"Weapon\") then\r\n            ammoAmount = weapon.ammoAmount\r\n            weapon:Unequip()\r\n            if Object.IsValid(weapon) then\r\n                weapon:Destroy()\r\n            end\r\n        end\r\n    end\r\n\r\n    -- Then reequip player\'s other weapon\r\n    for _,weapon in ipairs(player:GetAttachedObjects()) do\r\n        if weapon and weapon:IsA(\"Weapon\") then\r\n            weapon.serverUserData.stowed = false\r\n            weapon.currentAmmo = ammoAmount\r\n            weapon:Detach()\r\n            weapon:Equip(player)\r\n        end\r\n    end\r\nend\r\n--]]\r\n\r\n\r\nfunction GetSeat(trigger, player)\r\n\r\n    -- Luampa Edit Start--\r\n    local isFlipped = VEHICLE.serverUserData.isFlipped\r\n    --if VEHICLE:GetWorldTransform():GetUpVector() .. Vector3.UP < -0.707 then\r\n    if isFlipped then\r\n        FlipVehicle(player)\r\n    else\r\n    -- Luampa Edit End --\r\n        for _, seatInfo in ipairs(seats) do\r\n            if not seatInfo.passenger then\r\n                player.isCollidable = false\r\n\r\n                -- Luampa Edit Start --\r\n                currentPassenger = player\r\n                VEHICLE.serverUserData.passenger = player\r\n                player.serverUserData.vehicle = VEHICLE:GetReference()\r\n                player.serverUserData.seat = passenger\r\n                player:SetPrivateNetworkedData(\"vehicle\", VEHICLE:GetReference())\r\n                player:SetPrivateNetworkedData(\"seat\", passenger)\r\n                -- Luampa Edit End --\r\n                \r\n                seatInfo.passenger = player\r\n                seatInfo.passengerStance = player.animationStance\r\n\r\n                player.animationStance = STANCE\r\n                player.isCrouchEnabled = true\r\n\r\n                player:AttachToCoreObject(seatInfo.seat)\r\n\r\n                --[[WIP SEE NOTE ABOVE\r\n                -- Luampa Edit\r\n                EquipPassengerWeapon(player)\r\n                --]]\r\n\r\n                ReliableEvents.BroadcastToPlayer(player, \"VehiclePack_VehiclePassengerEnter\", VEHICLE:GetReference())\r\n\r\n                Task.Wait()\r\n                seatInfo.bindingHandler = player.bindingPressedEvent:Connect(OnBindingPressed)\r\n                break\r\n            end\r\n        end\r\n    end\r\nend\r\n\r\nfunction ExitVehicle(player)\r\n    for _, seatInfo in ipairs(seats) do\r\n        if seatInfo.passenger == player then\r\n            player:Detach()\r\n\r\n            -- Luampa Edit\r\n            currentPassenger = nil\r\n            VEHICLE.serverUserData.passenger = nil\r\n            player.serverUserData.vehicle = nil\r\n            player.serverUserData.seat = nil\r\n            player:SetPrivateNetworkedData(\"vehicle\", nil)\r\n            player:SetPrivateNetworkedData(\"seat\", nil)\r\n\r\n            seatInfo.passenger = nil\r\n\t\t\tplayer.isCollidable = true\r\n\t\t\tplayer.animationStance = seatInfo.passengerStance\r\n\r\n            if seatInfo.bindingHandler then\r\n                seatInfo.bindingHandler:Disconnect()\r\n            end\r\n\r\n            --[[WIP SEE NOTE ABOVE\r\n            -- Luampa Edit\r\n            ReequipPassengerWeaponOnExit(player)\r\n            --]]\r\n\r\n            ReliableEvents.BroadcastToPlayer(player, \"VehiclePack_VehiclePassengerExit\", VEHICLE:GetReference())\r\n            break\r\n        end\r\n    end\r\nend\r\n\r\n\r\n-- NEW Luampa functions --\r\nfunction EjectPlayer(player)\r\n    -- AddImpulse snippet from Core docs\r\n    player:SetVelocity(Vector3.UP * 1000)\r\n    -- We can read the player\'s velocity in order to double it! Note that since we\'re adding\r\n    -- a physics impulse directly, we need to scale it by the mass of the player.\r\n    player:AddImpulse(player:GetVelocity() * player.mass)\r\n    -- Fling the player some more.\r\n    player:AddImpulse(Vector3.UP * player.mass * 1000)\r\n    Task.Wait(0.5)\r\n    -- Reset their velocity to zero.\r\n    player:ResetVelocity()\r\nend\r\n\r\nfunction OnDestroy()\r\n    if currentPassenger then\r\n        local oldPassenger = currentPassenger\r\n        ExitVehicle(oldPassenger)\r\n        EjectPlayer(oldPassenger)\r\n    end\r\nend\r\n-- End NEW Luampa function --\r\n\r\n\r\nfunction OnBindingPressed(player, binding)\r\n\tif binding == EXIT_BINDING then\r\n\t\tExitVehicle(player)\r\n\tend\r\nend\r\n\r\nfunction OnPlayerLeft(player)\r\n    for _, seatInfo in ipairs(seats) do\r\n        if seatInfo.passenger == player then\r\n\t\t\tseatInfo.passenger = nil\t\r\n\t\t\tseatInfo.passengerStance = nil\r\n\r\n            if seatInfo.bindingHandler then\r\n                seatInfo.bindingHandler:Disconnect()\r\n            end\r\n            break\r\n        end\r\n    end\r\nend\r\n\r\nfunction OnDriverEntered(vehicle, player)\r\n    TRIGGER.isInteractable = true\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    TRIGGER.isInteractable = false\r\nend\r\n\r\n-- Luampa Edit Starts Here --\r\n-- Uses same scripts Team META uses to kick out turret player when vehicle flips\r\nfunction Tick(dt)\r\n\r\n    -- if the car flips over, kick the passenger and driver out\r\n    if VEHICLE:GetWorldTransform():GetUpVector() .. Vector3.UP < -0.707 then\r\n        if currentPassenger ~= nil then\r\n            ExitVehicle(currentPassenger)\r\n        elseif VEHICLE.driver then\r\n            VEHICLE:RemoveDriver()\r\n        end\r\n    end\r\nend\r\n-- Luampa Edit Ends Here --\r\n\r\n--Initialize\r\nif MUST_HAVE_DRIVER then\r\n    VEHICLE.driverEnteredEvent:Connect(OnDriverEntered)\r\n    VEHICLE.driverExitedEvent:Connect(OnDriverExited)\r\n    TRIGGER.isInteractable = false\r\nend\r\n\r\nTRIGGER.interactedEvent:Connect(GetSeat)\r\nGame.playerLeftEvent:Connect(OnPlayerLeft)\r\n\r\n-- Luampa add to impulse passenger off ground so no pop through terrain\r\nVEHICLE.destroyEvent:Connect(OnDestroy)\r\n\r\nfor index, child in ipairs(SEATS:GetChildren()) do\r\n    table.insert(seats, {\r\n        seat = child\r\n    })\r\nend"
-        CustomParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:Seats"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:AnimationStance"
-            String: "unarmed_sit_car_low"
-          }
-          Overrides {
-            Name: "cs:ExitBinding"
-            String: "ability_extra_33"
-          }
-          Overrides {
-            Name: "cs:MustHaveDriver"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:VehiclePack_ReliableEvents"
-            AssetReference {
-              Id: 16954000269936613756
-            }
-          }
-          Overrides {
-            Name: "cs:AnimationStance:tooltip"
-            String: "Set passenger\'s animation stance."
-          }
-          Overrides {
-            Name: "cs:ExitBinding:tooltip"
-            String: "Set passenger\'s exit key binding."
-          }
-          Overrides {
-            Name: "cs:Seats:tooltip"
-            String: "Group of available seats."
-          }
-          Overrides {
-            Name: "cs:Trigger:tooltip"
-            String: "Trigger for passengers to enter the vehicle."
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 16954000269936613756
-      Name: "VehiclePack_ReliableEvents"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\n  Copyright 2021 Manticore Games, Inc.\r\n  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\n  documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\n  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\n  persons to whom the Software is furnished to do so, subject to the following conditions:\r\n  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\n  Software.\r\n  \r\n  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\n  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\n  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\n  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\nlocal Deque = {}\r\nDeque.__index = Deque\r\n\r\nfunction Deque.New()\r\n    local deque = {}\r\n    setmetatable(deque, Deque)\r\n    deque:Clear()\r\n    return deque\r\nend\r\n\r\nfunction Deque:Clear()\r\n    self.front = 0\r\n    self.back = -1\r\nend\r\n\r\nfunction Deque:Empty()\r\n    return self.front > self.back\r\nend\r\n\r\nfunction Deque:Count()\r\n    if not self:Empty() then return self.back - self.front + 1 else return 0 end\r\nend\r\n\r\nfunction Deque:PushBack(value)\r\n    self.back = self.back + 1\r\n    self[self.back] = value\r\nend\r\n\r\nfunction Deque:PushFront(value)\r\n    self.front = self.front - 1\r\n    self[self.front] = value\r\nend\r\n\r\nfunction Deque:Front()\r\n    if not self:Empty() then return self[self.front] end\r\nend\r\n\r\nfunction Deque:Back()\r\n    if not self:Empty() then return self[self.back] end\r\nend\r\n\r\nfunction Deque:PopBack()\r\n    if not self:Empty() then\r\n        local val = self[self.back]\r\n        self.back = self.back - 1\r\n        return val\r\n    end\r\nend\r\n\r\nfunction Deque:PopFront()\r\n    if not self:Empty() then\r\n        local val = self[self.front]\r\n        self.front = self.front + 1\r\n        return val\r\n    end\r\nend\r\n\r\nlocal txQueue = Deque.New()\r\n\r\nfunction Retry()\r\n    while not txQueue:Empty() do\r\n        local method = txQueue:Front().method\r\n        local broadcast = Events[method]\r\n        local result = broadcast(table.unpack(txQueue:Front()))\r\n        if result ~= BroadcastEventResultCode.EXCEEDED_RATE_LIMIT then\r\n            txQueue:PopFront()\r\n        else\r\n          Task.Spawn(function() Task.Wait(1) Retry() end)\r\n          return\r\n        end\r\n    end\r\nend\r\n\r\nlocal ReliableEvents = {}\r\n\r\nfunction ReliableEvents.BroadcastToServer(...)\r\n    txQueue:PushBack({ method = \"BroadcastToServer\", ... })\r\n    Retry()\r\nend\r\n\r\nfunction ReliableEvents.BroadcastToPlayer(...)\r\n    txQueue:PushBack({ method = \"BroadcastToPlayer\", ... })\r\n    Retry()\r\nend\r\n\r\nfunction ReliableEvents.BroadcastToAllPlayers(...)\r\n    txQueue:PushBack({ method = \"BroadcastToAllPlayers\", ... })\r\n    Retry()  \r\nend\r\n\r\nlocal txTask = Task.Spawn(function() Retry() end)\r\n\r\nreturn ReliableEvents"
-        CustomParameters {
-        }
-      }
-    }
-    Assets {
-      Id: 275465796689744543
-      Name: "LuampaBattleDriverTriggerServer"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[DESCRIPTION: Replaces Team META\'s and default vehicle trigger behaviour to allow for preventing driver\r\nfrom entering a vehicle if it\'s flipped. Instead, driver can only enter if vehicle isn\'t flipped.]]\r\n\r\n--[[INSTRUCTIONS: To install on other vehicles, pull script anywhere not in a client context and\r\npull driver\'s trigger into script\'s in the existing trigger reference. Will only work in a Luampa\r\nBattle vehicle, that also has scripts to handle changing triggers when flipped.]]\r\n\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nlocal TRIGGER = script:GetCustomProperty(\"Trigger\"):WaitForObject()\r\n\r\n\r\nfunction StowWeapons(player)\r\n    for _,weapon in ipairs(player:GetEquipment()) do\r\n        if weapon and weapon:IsA(\"Weapon\") then\r\n            weapon.serverUserData.stowed = true\r\n            local ammoType = weapon.ammoType\r\n            local ammoAmount = weapon.currentAmmo\r\n            weapon:Unequip()\r\n            weapon:AttachToPlayer(player, \"lower_spine\")\r\n            player:SetResource(ammoType, ammoAmount)\r\n        end\r\n    end\r\nend\r\n\r\n\r\nfunction EquipWeapons(player)\r\n\r\n    for _,weapon in ipairs(player:GetAttachedObjects()) do\r\n      if weapon and weapon:IsA(\"Weapon\") then\r\n        weapon.serverUserData.stowed = false\r\n        local ammoType = weapon.ammoType\r\n        local ammoAmount = player:GetResource(ammoType)\r\n        weapon.currentAmmo = ammoAmount\r\n        weapon:Detach()\r\n        weapon:Equip(player)\r\n      end\r\n    end\r\nend\r\n\r\n\r\n-- REMINDER: scripts will already flip vehicle for driver, here we prevent entering when flipped\r\nfunction OnInteracted(trigger, player)\r\n     \r\n    local isFlipped = VEHICLE.serverUserData.isFlipped\r\n     \r\n     if not isFlipped then\r\n        StowWeapons(player)\r\n        VEHICLE:SetDriver(player)\r\n        VEHICLE.serverUserData.driver = player\r\n        player.serverUserData.vehicle = VEHICLE:GetReference()\r\n        player.serverUserData.seat = driver\r\n        player:SetPrivateNetworkedData(\"vehicle\", VEHICLE:GetReference())\r\n        player:SetPrivateNetworkedData(\"seat\", driver)\r\n     end\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    EquipWeapons(player)\r\n    VEHICLE.serverUserData.driver = nil\r\n    player.serverUserData.vehicle = nil\r\n    player.serverUserData.seat = nil\r\n    player:SetPrivateNetworkedData(\"vehicle\", nil)\r\n    player:SetPrivateNetworkedData(\"seat\", nil)\r\nend\r\n\r\n\r\nTRIGGER.interactedEvent:Connect(OnInteracted)\r\nVEHICLE.driverExitedEvent:Connect(OnDriverExited)"
-        CustomParameters {
-        }
-      }
-    }
-    Assets {
-      Id: 9458605601338998455
-      Name: "LuampasVehicleFlipServer"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[DESCRIPTION: Handles changing trigger labels when vehicle is flipped,\r\nTurns driver trigger back on, and allows players to flip vehicle back over\r\nusing driver enter trigger.]]\r\n\r\nlocal VEHICLE = script:FindAncestorByType(\"Vehicle\")\r\n\r\nlocal ENTER_TRIGGER = script:GetCustomProperty(\"EnterTrigger\"):WaitForObject()\r\nlocal TURRET_TRIGGER = script:GetCustomProperty(\"TurretTrigger\"):WaitForObject()\r\nlocal PASSENGER_TRIGGER = script:GetCustomProperty(\"PassengerTrigger\"):WaitForObject()\r\n\r\nTask.Wait(1)     -- labels weren\'t being set\r\n\r\nlocal defaultEnterLabel = ENTER_TRIGGER.interactionLabel\r\nlocal defaultTurretLabel = TURRET_TRIGGER.interactionLabel\r\nlocal defaultPassengerLabel = PASSENGER_TRIGGER.interactionLabel\r\n\r\nlocal flipped = false\r\nlocal enterTriggerFlipListener = nil\r\n\r\n\r\nfunction FlipWithEnterTrigger(trigger, player)\r\n    local currentRotation = player:GetLookWorldRotation()\r\n    ------ Vehicle flip scripts from isGrounded\r\n    VEHICLE:AddImpulse(Vector3.UP * VEHICLE.mass * 0.20)\r\n    VEHICLE:SetWorldRotation(Rotation.New(0, currentRotation.y, 0))\r\nend\r\n\r\n-- Uses same scripts Team META uses to kick out turret player when vehicle flips\r\nfunction Tick(dt)\r\n    -- if the car flips over\r\n    if VEHICLE:GetWorldTransform():GetUpVector() .. Vector3.UP < -0.707 then\r\n        if flipped == false then\r\n            flipped = true\r\n            VEHICLE.serverUserData.isFlipped = true\r\n            ENTER_TRIGGER.interactionLabel = \"Flip Vehicle\"\r\n            TURRET_TRIGGER.interactionLabel = \"Flip Vehicle\"\r\n            PASSENGER_TRIGGER.interactionLabel =  \"Flip Vehicle\"\r\n            ENTER_TRIGGER.isInteractable = true\r\n            enterTriggerFlipListener = ENTER_TRIGGER.interactedEvent:Connect(FlipWithEnterTrigger)\r\n        end\r\n    else\r\n        if flipped == true then\r\n            flipped = false\r\n            VEHICLE.serverUserData.isFlipped = false\r\n            if enterTriggerFlipListener.isConnected then\r\n                enterTriggerFlipListener:Disconnect()\r\n            end\r\n            ENTER_TRIGGER.interactionLabel = defaultEnterLabel\r\n            TURRET_TRIGGER.interactionLabel = defaultTurretLabel\r\n            PASSENGER_TRIGGER.interactionLabel =  defaultPassengerLabel       \r\n        end \r\n    end\r\nend"
-        CustomParameters {
-        }
-      }
-    }
-    Assets {
-      Id: 7467126706120528855
-      Name: "VehiclePack_Turret_VehicleTurretControllerServer"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\n  Copyright 2021 Manticore Games, Inc.\r\n  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\n  documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\n  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\n  persons to whom the Software is furnished to do so, subject to the following conditions:\r\n  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\n  Software.\r\n  \r\n  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\n  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\n  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\n  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n\r\n    This script handles the turret and its control by a player\r\n--]]\r\n\r\nlocal ReliableEvents = require(script:GetCustomProperty(\"VehiclePack_ReliableEvents\"))\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE or not VEHICLE:IsA(\'Vehicle\') then\r\n    VEHICLE = script -- this is if someone wants the turret to be standalone\r\nend\r\n\r\nlocal TRIGGER = script:GetCustomProperty(\"Trigger\"):WaitForObject()\r\nlocal SEAT = script:GetCustomProperty(\"Seat\"):WaitForObject()\r\nlocal seatInfo = {}\r\nlocal TURRET = script:GetCustomProperty(\"Turret\"):WaitForObject()\r\nlocal MUZZLE_1 = script:GetCustomProperty(\"Muzzle1\"):WaitForObject()\r\nlocal MUZZLE_2 = script:GetCustomProperty(\"Muzzle2\"):WaitForObject()\r\n\r\nlocal STANCE = TURRET:GetCustomProperty(\"AnimationStance\")\r\nlocal EXIT_BINDING = TURRET:GetCustomProperty(\"ExitBinding\")\r\nlocal MUST_HAVE_DRIVER = TURRET:GetCustomProperty(\"MustHaveDriver\")\r\nlocal FIRE_RATE = TURRET:GetCustomProperty(\"FireRate\")\r\nlocal BULLET_DAMAGE = TURRET:GetCustomProperty(\"BulletDamage\")\r\nlocal ROTATION_SPEED = TURRET:GetCustomProperty(\"TurretRotationSpeed\")\r\nlocal BULLET_TEMPLATE = TURRET:GetCustomProperty(\"BulletTemplate\")\r\n\r\nlocal isFiring = false\r\nlocal fireCooldown = 0\r\n\r\nlocal seats = {}\r\n\r\nfunction FireTurret()\r\n  local viewRot = TURRET:GetWorldRotation() * Vector3.FORWARD\r\n  local bullet1 = Projectile.Spawn(BULLET_TEMPLATE, MUZZLE_1:GetWorldPosition(), viewRot)\r\n  local bullet2 = Projectile.Spawn(BULLET_TEMPLATE, MUZZLE_2:GetWorldPosition(), viewRot)\r\n\r\n  if seatInfo.passenger then\r\n    bullet1.owner = seatInfo.passenger\r\n    bullet2.owner = seatInfo.passenger\r\n  end\r\n\r\n  bullet1.lifeSpan = 3\r\n  bullet2.lifeSpan = 3  \r\n\r\n  bullet1.impactEvent:Connect(BulletHitEvent, t1)\r\n  bullet2.impactEvent:Connect(BulletHitEvent, t2)\r\n  \r\n  bullet1.gravityScale = 0\r\n  bullet2.gravityScale = 0\r\n\r\n  --Task.Wait()\r\n\r\n  if Object.IsValid(bullet1) and Object.IsValid(bullet2) then\r\n    bullet1.speed = 15000\r\n    bullet2.speed = 15000\r\n  end\r\nend\r\n\r\n-- if you want to change want happens when a bullet\r\n-- hits something, edit this function\r\nfunction BulletHitEvent(projectile, other, hitresult)\r\n  -- don\'t damage self\r\n  if other == VEHICLE then return end\r\n\r\n  -- create Damage\r\n  local damage = Damage.New(BULLET_DAMAGE)\r\n  damage:SetHitResult(hitresult)\r\n  damage.sourcePlayer = projectile.owner\r\n  damage.reason = DamageReason.COMBAT\r\n\r\n  if other and other:IsA(\"Player\") then\r\n    other:ApplyDamage(damage)\r\n    return\r\n  end\r\n  if other and other:IsA(\"Vehicle\") then\r\n    -- checks for the specific script to handle damage\r\n    local s = other:FindDescendantByName(\"VehiclePack_VehicleDamageController\")\r\n    if s then\r\n      s.context.DamageVehicle(damage)\r\n    end\r\n    return\r\n  end\r\n  if other and other.name == \"Hitbox\" then\r\n    -- see if it\'s parent has the vehicle damage controller\r\n    local s = other.parent:FindDescendantByName(\"VehiclePack_VehicleDamageController\")\r\n    if s then\r\n      s.context.DamageVehicle(damage)\r\n    end\r\n    return\r\n  end\r\nend\r\n\r\n-- Luampa Edit Start --\r\nfunction FlipVehicle(player)\r\n  local currentRotation = player:GetLookWorldRotation()\r\n    ------ Vehicle flip scripts from isGrounded\r\n    VEHICLE:AddImpulse(Vector3.UP * VEHICLE.mass * 0.20)\r\n    VEHICLE:SetWorldRotation(Rotation.New(0, currentRotation.y, 0))\r\n    -- Reminder: Can\'t use RotateTo on vehicles :/\r\nend\r\n-- Luampa Edit End --\r\n\r\n-- Luampa added function\r\nfunction StowWeapons(player)\r\n\r\n  for _,weapon in ipairs(player:GetEquipment()) do\r\n    if weapon and weapon:IsA(\"Weapon\") then\r\n      weapon.serverUserData.stowed = true\r\n      local ammoType = weapon.ammoType\r\n      local ammoAmount = weapon.currentAmmo\r\n      weapon:Unequip()\r\n      weapon:AttachToPlayer(player, \"lower_spine\")\r\n      player:SetResource(ammoType, ammoAmount)\r\n    end\r\n  end\r\nend\r\n\r\nfunction EquipWeapons(player)\r\n\r\n  for _,weapon in ipairs(player:GetAttachedObjects()) do\r\n    if weapon and weapon:IsA(\"Weapon\") then\r\n      weapon.serverUserData.stowed = false\r\n      local ammoType = weapon.ammoType\r\n      local ammoAmount = player:GetResource(ammoType)\r\n      weapon.currentAmmo = ammoAmount\r\n      weapon:Detach()\r\n      weapon:Equip(player)\r\n    end\r\n  end\r\nend\r\n\r\n\r\n\r\nfunction GetSeat(trigger, player)\r\n\r\n  -- Luampa Edit Start--\r\n  local isFlipped = VEHICLE.serverUserData.isFlipped\r\n  --if VEHICLE:GetWorldTransform():GetUpVector() .. Vector3.UP < -0.707 then\r\n  if isFlipped then\r\n    FlipVehicle(player)\r\n    Task.Wait(5)\r\n  else\r\n\r\n    StowWeapons(player)\r\n  -- Luampa Edit End --\r\n    \r\n    if not seatInfo.passenger then\r\n      player.isCollidable = false\r\n\r\n      seatInfo.passenger = player\r\n      seatInfo.passengerStance = player.animationStance\r\n          \r\n\r\n      player.animationStance = STANCE\r\n      player.isCrouchEnabled = true\r\n\r\n      player:AttachToCoreObject(SEAT)\r\n          \r\n      -- Begin Luampa edit --\r\n      VEHICLE.serverUserData.turretGunner = player \r\n      player.serverUserData.vehicle = VEHICLE:GetReference()\r\n      player.serverUserData.seat = turret \r\n      local vehicleRef = VEHICLE:GetReference()\r\n      player:SetPrivateNetworkedData(\"vehicle\", vehicleRef)\r\n      player:SetPrivateNetworkedData(\"seat\", turret)\r\n      -- End Luampa edit --\r\n\r\n      ReliableEvents.BroadcastToPlayer(player, \"VehiclePack_BattleTruck_VehicleTurretEnter\", VEHICLE:GetReference())\r\n          \r\n      Task.Wait()\r\n      seatInfo.bindingHandler = player.bindingPressedEvent:Connect(OnBindingPressed)\r\n      seatInfo.bindingHandler2 = player.bindingReleasedEvent:Connect(OnBindingReleased)\r\n    end\r\n  end\r\nend\r\n\r\nfunction ExitVehicle(player)\r\n    if seatInfo.passenger == player then\r\n        player:Detach()\r\n\r\n        seatInfo.passenger = nil\r\n        player.isCollidable = true\r\n        player.animationStance = seatInfo.passengerStance\r\n\r\n        if seatInfo.bindingHandler then\r\n            seatInfo.bindingHandler:Disconnect()\r\n        end\r\n\r\n        if seatInfo.bindingHandler2 then\r\n          seatInfo.bindingHandler2:Disconnect()\r\n        end\r\n\r\n        isFiring = false\r\n        \r\n        -- Begin Luampa edit --\r\n        VEHICLE.serverUserData.turretGunner = nil \r\n        player.serverUserData.vehicle = nil\r\n        player.serverUserData.seat = nil\r\n        player:SetPrivateNetworkedData(\"vehicle\", nil)\r\n        player:SetPrivateNetworkedData(\"seat\", nil)\r\n\r\n        EquipWeapons(player)\r\n        -- End Luampa edit --\r\n\r\n        ReliableEvents.BroadcastToPlayer(player, \"VehiclePack_BattleTruck_VehicleTurretExit\", VEHICLE:GetReference())\r\n    end\r\nend\r\n\r\nfunction EjectPlayer(player)\r\n  -- AddImpulse snippet from Core docs\r\n  player:SetVelocity(Vector3.UP * 1000)\r\n  -- We can read the player\'s velocity in order to double it! Note that since we\'re adding\r\n  -- a physics impulse directly, we need to scale it by the mass of the player.\r\n  player:AddImpulse(player:GetVelocity() * player.mass)\r\n  -- Fling the player some more.\r\n  player:AddImpulse(Vector3.UP * player.mass * 1000)\r\n  Task.Wait(0.5)\r\n  -- Reset their velocity to zero.\r\n  player:ResetVelocity()\r\nend\r\n\r\nfunction OnDestroy()\r\n  if seatInfo.passenger ~= nil then\r\n    ExitVehicle(seatInfo.passenger)\r\n    EjectPlayer(seatInfo.passenger)\r\n  end\r\nend\r\n\r\nfunction OnBindingPressed(player, binding)\r\n\tif binding == EXIT_BINDING then\r\n\t\tExitVehicle(player)\r\n  end\r\n  if binding == \"ability_primary\" then\r\n    isFiring = true\r\n    TURRET:SetNetworkedCustomProperty(\"IsFiring\", true)\r\n  end\r\nend\r\n\r\nfunction OnBindingReleased(player, binding)\r\n  if binding == \"ability_primary\" then\r\n    isFiring = false\r\n    TURRET:SetNetworkedCustomProperty(\"IsFiring\", false)\r\n  end\r\nend\r\n\r\nfunction OnPlayerLeft(player)\r\n    if seatInfo.passenger == player then\r\n        seatInfo.passenger = nil\t\r\n        seatInfo.passengerStance = nil\r\n\r\n        if seatInfo.bindingHandler then\r\n            seatInfo.bindingHandler:Disconnect()\r\n        end\r\n\r\n        if seatInfo.bindingHandler2 then\r\n            seatInfo.bindingHandler2:Disconnect()\r\n        end\r\n    end\r\nend\r\n\r\nfunction OnDriverEntered(vehicle, player)\r\n    TRIGGER.isInteractable = true\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    TRIGGER.isInteractable = false\r\nend\r\n\r\n--Initialize\r\nif MUST_HAVE_DRIVER then\r\n    VEHICLE.driverEnteredEvent:Connect(OnDriverEntered)\r\n    VEHICLE.driverExitedEvent:Connect(OnDriverExited)\r\n    TRIGGER.isInteractable = false\r\nend\r\n\r\nfunction GetTurretRotation()\r\n  if seatInfo.passenger then\r\n    -- raycast from the player camera\'s center \r\n    local rayStart = seatInfo.passenger:GetViewWorldPosition()\r\n    local cameraForward = seatInfo.passenger:GetViewWorldRotation() * Vector3.FORWARD\r\n    local rayEnd = rayStart + cameraForward * 10000\r\n\r\n    local hitResult = World.Raycast(rayStart, rayEnd, {ignorePlayers = true})\r\n\r\n    local turretRot\r\n    if hitResult then\r\n      local hitPos = hitResult:GetImpactPosition()\r\n      -- The green line is the impact normal\r\n      turretRot = Rotation.New(hitPos - MUZZLE_1:GetWorldPosition(), Vector3.UP)\r\n    else\r\n      turretRot = Rotation.New(cameraForward, Vector3.UP)\r\n    end\r\n\r\n    return turretRot\r\n  end\r\n\r\n  return nil\r\nend\r\n\r\nfunction Tick(dt)\r\n  if seatInfo.passenger then\r\n    local turretRot\r\n\r\n    if seatInfo.passenger.isMounted then\r\n      seatInfo.passenger:SetMounted(false)\r\n    end\r\n\r\n    -- if the car flips over, kick the turret player out\r\n    if VEHICLE:GetWorldTransform():GetUpVector() .. Vector3.UP < -0.707 and seatInfo.passenger ~= nil then\r\n      ExitVehicle(seatInfo.passenger)\r\n      turretRot = VEHICLE:GetWorldRotation()\r\n    else \r\n      turretRot = GetTurretRotation()\r\n    end\r\n\r\n    TURRET:RotateTo(turretRot, ROTATION_SPEED)\r\n  end\r\n\r\n  if isFiring then\r\n    fireCooldown = fireCooldown - dt\r\n    if fireCooldown < 0 then\r\n      FireTurret()\r\n      fireCooldown = FIRE_RATE\r\n    end\r\n  end\r\nend\r\n\r\nTRIGGER.interactedEvent:Connect(GetSeat)\r\nVEHICLE.destroyEvent:Connect(OnDestroy)\r\nGame.playerLeftEvent:Connect(OnPlayerLeft)"
-        CustomParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:Seat"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:Turret"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:VehiclePack_ReliableEvents"
-            AssetReference {
-              Id: 16954000269936613756
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 4702038453389834831
-      Name: "VehiclePack_Turret_TurretBase"
-      PlatformAssetType: 3
-      TextAsset {
-        CustomParameters {
-          Overrides {
-            Name: "cs:FireRate"
-            Float: 0.12
-          }
-          Overrides {
-            Name: "cs:BulletDamage"
-            Float: 10
-          }
-          Overrides {
-            Name: "cs:TurretRotationSpeed"
-            Float: 0.2
-          }
-          Overrides {
-            Name: "cs:MustHaveDriver"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:ExitBinding"
-            String: "ability_extra_33"
-          }
-          Overrides {
-            Name: "cs:AnimationStance"
-            String: "unarmed_sit_car_low"
-          }
-          Overrides {
-            Name: "cs:BulletTemplate"
-            AssetReference {
-              Id: 9208230838458831435
-            }
-          }
-          Overrides {
-            Name: "cs:MuzzleFlashTemplate"
-            AssetReference {
-              Id: 15266367289617406413
-            }
-          }
-          Overrides {
-            Name: "cs:IsFiring"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:IsFiring:isrep"
-            Bool: true
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 15266367289617406413
-      Name: "VehiclePack_TurretMuzzleFlash"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 7616721614371304877
-          Objects {
-            Id: 7616721614371304877
-            Name: "TurretMuzzleFlash"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 1004901132462608158
-            ChildIds: 10507359520053060954
-            Lifespan: 2
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Folder {
-              IsGroup: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 1004901132462608158
-            Name: "Generic Muzzleflash VFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-                Pitch: -90
-              }
-              Scale {
-                X: 2
-                Y: 2
-                Z: 2
-              }
-            }
-            ParentId: 7616721614371304877
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:Local Space"
-                Bool: false
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 16322635077100878811
-              }
-              TeamSettings {
-              }
-              Vfx {
-                AutoPlay: true
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:medium"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 10507359520053060954
-            Name: "Gunshot Pistol & Revolver Set 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 3.99147701
-                Y: -3.34195852
-                Z: 3.34195852
-              }
-            }
-            ParentId: 7616721614371304877
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:Type"
-                Enum {
-                  Value: "mc:esfx_gunshot_pistol_revolver:6"
-                }
-              }
-              Overrides {
-                Name: "bp:Main Sound Mix Medium Distance Type"
-                Enum {
-                  Value: "mc:esfx_gunshot_pistol_revolver:6"
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 11671637230280120648
-              }
-              TeamSettings {
-              }
-              AudioBP {
-                AutoPlay: true
-                Volume: 0.6
-                Falloff: 3600
-                Radius: 299.523163
-                EnableOcclusion: true
-                IsSpatializationEnabled: true
-                IsAttenuationEnabled: true
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 11671637230280120648
-      Name: "Gunshot Pistol & Revolver Set 01 SFX"
-      PlatformAssetType: 10
-      PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_gunshot_revolver_ref"
-      }
-    }
-    Assets {
-      Id: 16322635077100878811
-      Name: "Generic Muzzle Flash VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_generic_muzzleflash"
-      }
-    }
-    Assets {
-      Id: 9208230838458831435
-      Name: "VehiclePack_TurretBullet"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 1415260559047129121
-          Objects {
-            Id: 1415260559047129121
-            Name: "TurretBullet"
-            Transform {
-              Scale {
-                X: 3.99147701
-                Y: -3.34195852
-                Z: 3.34195852
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 5866754552019754001
-            Lifespan: 5
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 9826710443425479508
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 5866754552019754001
-            Name: "Basic Projectile Trail VFX"
-            Transform {
-              Location {
-                Z: -9.53674316e-07
-              }
-              Rotation {
-              }
-              Scale {
-                X: 4
-                Y: 4
-                Z: 4
-              }
-            }
-            ParentId: 1415260559047129121
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:colorB"
-                Color {
-                  R: 1
-                  G: 1
-                  B: 1
-                  A: 1
-                }
-              }
-              Overrides {
-                Name: "bp:Particle Scale Multiplier"
-                Float: 0.4
-              }
-              Overrides {
-                Name: "bp:Life"
-                Float: 0.22
-              }
-              Overrides {
-                Name: "bp:Emissive Boost"
-                Float: 2
-              }
-              Overrides {
-                Name: "bp:Color"
-                Color {
-                  R: 0.97
-                  G: 0.366159
-                  A: 1
-                }
-              }
-              Overrides {
-                Name: "bp:ColorB"
-                Color {
-                  R: 1
-                  G: 0.73827821
-                  B: 0.24000001
-                  A: 1
-                }
-              }
-              Overrides {
-                Name: "bp:ColorC"
-                Color {
-                  R: 1
-                  G: 1
-                  B: 1
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 17977280587505271142
-              }
-              Vfx {
-                AutoPlay: true
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 17977280587505271142
-      Name: "Basic Projectile Trail VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_basic_projectile_trail"
-      }
-    }
-    Assets {
-      Id: 9826710443425479508
-      Name: "Modern Weapon Ammo - Bullet 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_tip_001"
-      }
-    }
-    Assets {
-      Id: 10072398091449927535
-      Name: "VehiclePack_VehicleEngineSimulationClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[ \r\n    Engine RPM simulation to support vfx and sfx.\r\n    This script does not impact the vehicle behavior.\r\n\r\n    The engineRPM, gear, and min/maxEngineRPM are saved into \r\n        vehicle clientUserData for other scripts to sync.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed external properties\r\nlocal WHEEL_RADIUS = script:GetCustomProperty(\"WheelRadius\")\r\nlocal MAX_ENGINE_RPM = script:GetCustomProperty(\"MaxEngineRPM\")\r\nlocal MIN_ENGINE_RPM = script:GetCustomProperty(\"MinEngineRPM\")\r\n\r\n-- Internal variables\r\nlocal engineRPM = 0\r\nlocal rpm = 0\r\nlocal currentGear = 1\r\nlocal gearRatios = {}\r\n\r\nfunction Tick()\r\n    if not Object.IsValid(VEHICLE) then return end\r\n    if not VEHICLE.driver then return end\r\n\r\n    local speed = VEHICLE:GetVelocity().size\r\n\r\n    rpm = (speed * 60) / (WHEEL_RADIUS * 2 * math.pi)\r\n    engineRPM = rpm * gearRatios[currentGear]\r\n\r\n    ShiftGears()\r\n    UpdateClientUserData()\r\nend\r\n\r\nfunction ShiftGears()\r\n    if engineRPM >= MAX_ENGINE_RPM then\r\n        for gear=1, #gearRatios, 1 do\r\n            local gearRatio = gearRatios[gear]\r\n            if rpm * gearRatio < MAX_ENGINE_RPM then\r\n                currentGear = gear\r\n                return\r\n            end\r\n        end\r\n    elseif engineRPM <= MIN_ENGINE_RPM then\r\n        for gear=#gearRatios, 1, -1 do\r\n            local gearRatio = gearRatios[gear]\r\n            if rpm * gearRatio > MIN_ENGINE_RPM then\r\n                currentGear = gear\r\n                return\r\n            end\r\n        end\r\n    end\r\nend\r\n\r\nfunction UpdateClientUserData()\r\n    if not Object.IsValid(VEHICLE) then return end\r\n\r\n    VEHICLE.clientUserData.gear = currentGear\r\n    VEHICLE.clientUserData.engineRPM = engineRPM\r\nend\r\n\r\n-- Initialize\r\n-- Fill up gear ratio table using \"GearRatio\" properties in hierarchy\r\nfor key, value in pairs(script:GetCustomProperties()) do\r\n    if string.find(key, \"GearRatio\") then\r\n        local index = tonumber(CoreString.Trim(key, \"GearRatio\"))\r\n        if index then\r\n            gearRatios[index] = value\r\n        end\r\n    end\r\nend\r\n\r\nif #gearRatios == 0 then\r\n    warn(\"No GearRatio properties was found. Add GearRatio1, GearRatio2, etc. properties on the script to customize gear ratios.\")\r\n    gearRatios[1] = 1\r\nend\r\n\r\n-- Update initial engine information\r\nVEHICLE.clientUserData.minEngineRPM = MIN_ENGINE_RPM\r\nVEHICLE.clientUserData.maxEngineRPM = MAX_ENGINE_RPM\r\nUpdateClientUserData()"
-        CustomParameters {
-          Overrides {
-            Name: "cs:WheelRadius"
-            Float: 55
-          }
-          Overrides {
-            Name: "cs:MinEngineRPM"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:MaxEngineRPM"
-            Float: 300
-          }
-          Overrides {
-            Name: "cs:WheelRadius:tooltip"
-            String: "Radius of the wheel. Should be similar to actual wheels on the vehicle."
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 9722211991154994028
-      Name: "VehiclePack_VehicleGroundedHandlerClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[ \r\n    This script uses wheels group visual to check if the vehicle is grounded.\r\n    The isGrounded boolean is saved into vehicle clientUserData for other scripts to use.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal WHEELS = script:GetCustomProperty(\"Wheels\"):WaitForObject()\r\nlocal RAYCAST_LENGTH = script:GetCustomProperty(\"RaycastLength\")\r\nlocal DEBUG = script:GetCustomProperty(\"Debug\")\r\n\r\n-- Internal variables\r\nlocal isGrounded = false\r\n\r\nfunction Tick()\r\n    if not Object.IsValid(VEHICLE) or not Object.IsValid(WHEELS) then return end\r\n\r\n    -- Loop through each wheel to raycast to the ground\r\n    local upVector = VEHICLE:GetWorldTransform():GetUpVector()\r\n    local wheelsGrounded = true\r\n    for index, child in ipairs(WHEELS:GetChildren()) do\r\n        local startPos = child:GetWorldPosition()\r\n        local result = World.Raycast(startPos, startPos - upVector * RAYCAST_LENGTH, {ignorePlayers = true})\r\n        if result == nil and wheelsGrounded then\r\n            wheelsGrounded = false\r\n        end\r\n\r\n        if DEBUG then\r\n            CoreDebug.DrawLine(startPos, startPos - upVector * RAYCAST_LENGTH, {thickness = 5, duration = 1})\r\n            if result then\r\n                local color = Color.GREEN\r\n                if result.other == VEHICLE then\r\n                    color = Color.RED\r\n                end\r\n                CoreDebug.DrawSphere(result:GetImpactPosition(), 5, {color = color, duration = 1})\r\n            end\r\n        end\r\n    end\r\n\r\n    -- If all wheels are on the ground\r\n    isGrounded = wheelsGrounded\r\n\r\n    -- Expose isGrounded information to other scripts via client user data\r\n    VEHICLE.clientUserData.isGrounded = isGrounded\r\n\r\n    Task.Wait(.5)\r\nend\r\n\r\n"
-        CustomParameters {
-          Overrides {
-            Name: "cs:Wheels"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:RaycastLength"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:Debug"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Wheels:tooltip"
-            String: "Reference to group of wheels that will be used to detect the ground under the vehicle."
-          }
-          Overrides {
-            Name: "cs:RaycastLength:tooltip"
-            String: "Length of raycast from each wheel. The number should be bigger than the wheel radius."
-          }
-          Overrides {
-            Name: "cs:Debug:tooltip"
-            String: "Display raycast for debugging."
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 12190463340827898157
-      Name: "Ring"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_004"
-      }
-    }
-    Assets {
-      Id: 8654080080248022917
-      Name: "VehiclePack_Generic Vehicle Lights Toggle Sound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 10937839354280581010
-          Objects {
-            Id: 10937839354280581010
-            Name: "Generic Vehicle Lights Toggle Sound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 6945834466686502107
-              }
-              AutoPlay: true
-              Transient: true
-              Volume: 0.5
-              Falloff: -1
-              Radius: -1
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 6945834466686502107
-      Name: "Flesh Skin Face Slap Light 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_flesh_skin_face_slap_light_01a_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 16630259605395466384
-      Name: "Frosted Glass"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_frosted_glass"
-      }
-    }
-    Assets {
-      Id: 8919871824294249785
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 2656993882723913108
-      Name: "VehiclePack_VehicleLightObjectControllerClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal LIGHT_ON_OBJECT = script:GetCustomProperty(\"LightOnObject\"):WaitForObject()\r\nlocal LIGHT_OFF_OBJECT = script:GetCustomProperty(\"LightOffObject\"):WaitForObject()\r\nlocal LIGHT_ON_WHEN_HANDBRAKING = script:GetCustomProperty(\"LightOnWhenHandbraking\")\r\nlocal LIGHT_ON_WHEN_BRAKING = script:GetCustomProperty(\"LightOnWhenBraking\")\r\nlocal LIGHT_ON_WHEN_BRAKING = script:GetCustomProperty(\"LightOnWhen\")\r\nlocal START_OFF = script:GetCustomProperty(\"StartOff\")\r\nlocal REVERSE = script:GetCustomProperty(\"Reverse\")\r\nlocal TOGGLE_BINDING = script:GetCustomProperty(\"ToggleBinding\")\r\nlocal SOUND_ON_ASSET = script:GetCustomProperty(\"SoundOnAsset\")\r\nlocal SOUND_OFF_ASSET = script:GetCustomProperty(\"SoundOffAsset\")\r\n\r\n-- Internal variables\r\nlocal bindingHandle = nil\r\nlocal isLightOn = false\r\n\r\nfunction Tick()\r\n    if not Object.IsValid(VEHICLE) then return end\r\n    if not VEHICLE.driver then return end\r\n\r\n    local canToggleOn = isLightOn\r\n\r\n    if LIGHT_ON_WHEN_HANDBRAKING and LIGHT_ON_WHEN_BRAKING then\r\n        canToggleOn = VEHICLE.isHandbrakeEngaged or VEHICLE.isBrakeEngaged\r\n    elseif LIGHT_ON_WHEN_BRAKING then\r\n        canToggleOn = VEHICLE.isBrakeEngaged\r\n    elseif LIGHT_ON_WHEN_HANDBRAKING then\r\n        canToggleOn = VEHICLE.isHandbrakeEngaged\r\n    end\r\n\r\n    -- Ignore if light set is still the same\r\n    if canToggleOn == isLightOn then return end\r\n    \r\n    if REVERSE then\r\n        canToggleOn = not canToggleOn\r\n    end\r\n    ToggleLight(canToggleOn)\r\nend\r\n\r\nfunction ToggleLight(isOn)\r\n    if isOn then\r\n        if SOUND_ON_ASSET then\r\n            World.SpawnAsset(SOUND_ON_ASSET, {parent = LIGHT_ON_OBJECT})\r\n        end\r\n        LIGHT_ON_OBJECT.visibility = Visibility.INHERIT\r\n        LIGHT_OFF_OBJECT.visibility = Visibility.FORCE_OFF\r\n    else\r\n        if SOUND_OFF_ASSET then\r\n            World.SpawnAsset(SOUND_OFF_ASSET, {parent = LIGHT_OFF_OBJECT})\r\n        end\r\n        LIGHT_ON_OBJECT.visibility = Visibility.FORCE_OFF\r\n        LIGHT_OFF_OBJECT.visibility = Visibility.INHERIT\r\n    end\r\n    isLightOn = isOn\r\nend \r\n\r\nfunction OnBindingPressed(player, binding)\r\n    if binding == TOGGLE_BINDING then \r\n        ToggleLight(not isLightOn)\r\n    end\r\nend\r\n\r\nfunction OnDriverEntered(vehicle, player)\r\n    if TOGGLE_BINDING ~= \"\" then\r\n        bindingHandle = player.bindingPressedEvent:Connect(OnBindingPressed)\r\n    end\r\n\r\n    if START_OFF then\r\n        ToggleLight(false)\r\n    else\r\n        ToggleLight(true)\r\n    end\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    if bindingHandle then bindingHandle:Disconnect() end\r\n    ToggleLight(false)\r\nend\r\n\r\n--Initialize\r\nVEHICLE.driverEnteredEvent:Connect(OnDriverEntered)\r\nVEHICLE.driverExitedEvent:Connect(OnDriverExited)\r\n\r\n-- Set up light if there is a driver\r\nif not VEHICLE.driver then return end\r\nOnDriverEntered(VEHICLE.driver)\r\n"
-        CustomParameters {
-          Overrides {
-            Name: "cs:LightOnObject"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:LightOffObject"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:LightOnWhenHandbraking"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:LightOnWhenBraking"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:StartOff"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Reverse"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:ToggleBinding"
-            String: ""
-          }
-          Overrides {
-            Name: "cs:SoundOnAsset"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:SoundOffAsset"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:Reverse:tooltip"
-            String: "Reverse the logic when lighting on the object."
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 13163283878713838134
-      Name: "Tank Tread Trail VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_smooth_tankTread_trail"
-      }
-    }
-    Assets {
-      Id: 17687337846913016913
-      Name: "Smoke Volume VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_smoke_volume_vfx"
-      }
-    }
-    Assets {
-      Id: 13143398275891297190
-      Name: "Vehicle Car Tire Skid Screech Drift Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_vehicle_car_tire_skid_screech_drift_loop_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 11236483254878806563
-      Name: "VehiclePack_VehicleDriftEffectClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal DRIFT_SOUND = script:GetCustomProperty(\"DriftSound\"):WaitForObject()\r\nlocal TRAILS = script:GetCustomProperty(\"Trails\"):WaitForObject()\r\nlocal SMOKE_EFFECT = script:GetCustomProperty(\"SmokeEffect\"):WaitForObject()\r\n\r\nlocal isPlaying = false             -- is drifting effect playing\r\n\r\nfunction Tick()\r\n    if not VEHICLE.driver then\r\n        if isPlaying then PlayDriftEffect(false) end \r\n        return \r\n    end\r\n\r\n    local gear = VEHICLE.clientUserData.gear\r\n    local isGrounded = VEHICLE.clientUserData.isGrounded\r\n    local absoluteDriftValue =  math.abs(GetDriftValue()) * 10\r\n    local speed = VEHICLE:GetVelocity().size\r\n\r\n    if absoluteDriftValue > VEHICLE.maxSpeed * .1 and isGrounded then\r\n        DRIFT_SOUND.volume = CoreMath.Clamp(absoluteDriftValue / speed, 0, 1)\r\n        if not isPlaying then PlayDriftEffect(true) end\r\n    else\r\n        if VEHICLE.isBrakeEngaged and speed > 0 and isGrounded then\r\n            DRIFT_SOUND.volume = CoreMath.Clamp(1 - speed / VEHICLE.maxSpeed, 0, 1)\r\n            if not isPlaying then PlayDriftEffect(true) end\r\n        else\r\n            if isPlaying then PlayDriftEffect(false) end\r\n        end\r\n    end\r\nend\r\n\r\nfunction PlayDriftEffect(canPlay)\r\n    if canPlay then\r\n        DRIFT_SOUND:Play()\r\n        SMOKE_EFFECT:Play()\r\n        for _, child in ipairs(TRAILS:GetChildren()) do\r\n            child:Play()\r\n        end\r\n    else\r\n        DRIFT_SOUND:Stop()\r\n        SMOKE_EFFECT:Stop()\r\n        for _, child in ipairs(TRAILS:GetChildren()) do\r\n            child:Stop()\r\n        end\r\n    end\r\n    isPlaying = canPlay\r\nend\r\n\r\nfunction GetDriftValue()\r\n    -- forward vector ^ ground up vector\r\n    local sideways = VEHICLE:GetWorldTransform():GetForwardVector() ^ Vector3.UP\r\n\r\n    -- dot product between sideways and velocity\r\n    return sideways .. VEHICLE:GetVelocity()\r\nend"
-        CustomParameters {
-          Overrides {
-            Name: "cs:DriftSound"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:SmokeEffect"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:Trails"
-            ObjectReference {
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 7607977845979636904
-      Name: "Vehicle Car Horn Honk Blast Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_vehicle_car_horn_blast_loop_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 14519260394381616109
-      Name: "VehiclePack_VehicleHonkControllerClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal HONK_BINDING = script:GetCustomProperty(\"HonkBinding\")\r\nlocal HORN_SOUND = script:GetCustomProperty(\"HornSound\"):WaitForObject()\r\n\r\n-- Internal variables\r\nlocal isPressing = false\r\nlocal pressedHandle = nil\r\nlocal releasedHandle = nil\r\n\r\nfunction Tick()\r\n    if isPressing then\r\n        PlayHonkLoopSound(true)\r\n    else\r\n        PlayHonkLoopSound(false)\r\n    end\r\nend\r\n\r\nfunction PlayHonkLoopSound(play)\r\n    if play then\r\n        if not HORN_SOUND.isPlaying then\r\n            HORN_SOUND:Play()\r\n        end\r\n    else\r\n        if HORN_SOUND.isPlaying then\r\n            HORN_SOUND:Stop()\r\n        end\r\n    end\r\nend\r\n\r\nfunction OnBindingPressed(player, binding)\r\n    if VEHICLE.driver ~= player then return end\r\n    if binding == HONK_BINDING then \r\n        isPressing = true\r\n    end\r\nend\r\n\r\nfunction OnBindingReleased(player, binding)\r\n    if VEHICLE.driver ~= player then return end\r\n    if binding == HONK_BINDING then\r\n        isPressing = false\r\n        PlayHonkLoopSound(false)\r\n    end\r\nend\r\n\r\nfunction OnDriverEntered(vehicle, player)\r\n    pressedHandle = player.bindingPressedEvent:Connect(OnBindingPressed)\r\n    releasedHandle = player.bindingReleasedEvent:Connect(OnBindingReleased)\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    if pressedHandle then pressedHandle:Disconnect() end\r\n    if releasedHandle then releasedHandle:Disconnect() end\r\n\r\n    isPressing = false\r\n    PlayHonkLoopSound(false)\r\nend\r\n\r\n--Initialize\r\nVEHICLE.driverEnteredEvent:Connect(OnDriverEntered)\r\nVEHICLE.driverExitedEvent:Connect(OnDriverExited)\r\n\r\nif VEHICLE.driver then\r\n    OnDriverEntered(vehicle, VEHICLE.driver)\r\nend\r\n\r\n"
-        CustomParameters {
-          Overrides {
-            Name: "cs:HonkBinding"
-            String: "ability_primary"
-          }
-          Overrides {
-            Name: "cs:HornSound"
-            ObjectReference {
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 9118011185503589263
-      Name: "Wireframe"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "wireframe_glow_001"
-      }
-    }
-    Assets {
-      Id: 335795674208497550
-      Name: "VehiclePack_Generic Vehicle Damage Effect"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 2752826058357062061
-          Objects {
-            Id: 2752826058357062061
-            Name: "Generic Vehicle Damage Effect"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 764482257484789245
-            Lifespan: 2
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 3474625365354775767
-              }
-              AutoPlay: true
-              Transient: true
-              Volume: 0.75
-              Falloff: 6000
-              Radius: -1
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 764482257484789245
-            Name: "Impact Sparks VFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 2752826058357062061
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:Enable Sparks"
-                Bool: true
-              }
-              Overrides {
-                Name: "bp:Enable Hotspot"
-                Bool: false
-              }
-              Overrides {
-                Name: "bp:Enable Spark Lines"
-                Bool: false
-              }
-              Overrides {
-                Name: "bp:Enable Flash"
-                Bool: false
-              }
-              Overrides {
-                Name: "bp:Particle Scale Multiplier"
-                Float: 3
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 11887549032181544333
-              }
-              TeamSettings {
-              }
-              Vfx {
-                AutoPlay: true
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:medium"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 11887549032181544333
-      Name: "Impact Sparks VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_impact_sparks"
-      }
-    }
-    Assets {
-      Id: 3474625365354775767
-      Name: "Vehicle Car Crash Heavy Metal Impact 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_car_crash_heavy_metal_impact_01a_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 17949988849539905954
-      Name: "VehiclePack_VehicleDamageEffectsClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n\r\n    This script raycasts uses box collisions of the vehicle to detect\r\n    obstacles and play damage effects.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed external properties\r\nlocal COLLISION_BOXES = script:GetCustomProperty(\"CollisionBoxes\"):WaitForObject()\r\nlocal RAYCAST_LENGTH = script:GetCustomProperty(\"RaycastLength\")\r\nlocal SPEED_DAMAGE_THRESHOLD = script:GetCustomProperty(\"SpeedDamageThreshold\")\r\nlocal DAMAGE_EFFECT_TEMPLATE = script:GetCustomProperty(\"DamageEffectTemplate\")\r\nlocal MAX_RENDER_DISTANCE = script:GetCustomProperty(\"MaxRenderDistance\")\r\nlocal DEBUG = script:GetCustomProperty(\"Debug\")\r\n\r\n-- Constant variables\r\nlocal LOCAL_PLAYER = Game.GetLocalPlayer()\r\nlocal DAMAGE_COOLDOWN = 1\r\n\r\n-- Internal variables\r\nlocal currentPosition = Vector3.New()\r\nlocal lastSpeed = 0\r\nlocal boxDamageTimes = {}\r\nlocal lastDamageTime = time()\r\n\r\nfunction Tick(deltaTime)\r\n    if not Object.IsValid(VEHICLE) then return end\r\n    if not VEHICLE.driver then return end\r\n\r\n    if LOCAL_PLAYER ~= VEHICLE.driver then\r\n        if (LOCAL_PLAYER:GetWorldPosition() - VEHICLE:GetWorldPosition()).size > MAX_RENDER_DISTANCE then\r\n            return\r\n        end\r\n    end\r\n    \r\n    -- Wait for a while before car can do more damage effect\r\n    if time() - lastDamageTime < DAMAGE_COOLDOWN then return end\r\n\r\n    local speed = VEHICLE:GetVelocity().size\r\n\r\n    -- Only consider showing damage effect \r\n    -- if the vehicle moved past the speed threshold\r\n    if lastSpeed - speed > SPEED_DAMAGE_THRESHOLD then\r\n        CheckDamage(COLLISION_BOXES)\r\n    end\r\n\r\n    if DEBUG then\r\n        DebugRays(COLLISION_BOXES)\r\n    end\r\n\r\n    lastSpeed = speed\r\n\r\n    -- Check for damage impact every frame\r\n    Task.Wait(deltaTime)\r\nend\r\n\r\nfunction CheckDamage()\r\n    for _, box in ipairs(COLLISION_BOXES:GetChildren()) do\r\n        local ray1Start, ray1End, ray2Start, ray2End = GetBoxPoints(box)\r\n        local result1 = World.Raycast(ray1Start, ray1End, {ignorePlayers = true})\r\n        local result2 = World.Raycast(ray2Start, ray2End, {ignorePlayers = true})\r\n        \r\n        if result1 and result2 and result1.other ~= VEHICLE and result2.other ~= VEHICLE then\r\n            SpawnDamageEffect(box:GetWorldPosition())\r\n            break\r\n        elseif result1 and result1.other ~= VEHICLE then\r\n            SpawnDamageEffect(result1:GetImpactPosition())\r\n            break\r\n        elseif result2 and result2.other ~= VEHICLE then\r\n            SpawnDamageEffect(result2:GetImpactPosition())\r\n            break\r\n        end\r\n    end\r\nend\r\n\r\nfunction DebugRays()\r\n    for _, box in ipairs(COLLISION_BOXES:GetChildren()) do\r\n        local ray1Start, ray1End, ray2Start, ray2End = GetBoxPoints(box)\r\n\r\n        CoreDebug.DrawLine(ray1Start, ray1End, {thickness = 5})\r\n        CoreDebug.DrawLine(ray2Start, ray2End, {thickness = 5})\r\n    end\r\nend\r\n\r\nfunction GetBoxPoints(box)\r\n    local bottomLeftBack, upRightFront, bottomRightBack, upLeftFront\r\n    local pos = box:GetWorldPosition()\r\n    local transform = box:GetWorldTransform()\r\n    local scale = box:GetScale() * 50\r\n\r\n    local fwdVect = transform:GetForwardVector()\r\n    local rVect = transform:GetRightVector()\r\n    local uVect =transform:GetUpVector()\r\n\r\n    bottomLeftBack =    pos - fwdVect * scale.x - rVect * scale.y - uVect * scale.z\r\n    bottomRightBack =   pos - fwdVect * scale.x + rVect * scale.y - uVect * scale.z\r\n    upRightFront =      pos + fwdVect * scale.x + rVect * scale.y + uVect * scale.z\r\n    upLeftFront =       pos + fwdVect * scale.x - rVect * scale.y + uVect * scale.z\r\n\r\n    return bottomLeftBack, upRightFront, bottomRightBack, upLeftFront\r\nend\r\n\r\nfunction SpawnDamageEffect(spawnPos)\r\n    if DAMAGE_EFFECT_TEMPLATE then\r\n        World.SpawnAsset(DAMAGE_EFFECT_TEMPLATE, {position = spawnPos})\r\n    end\r\n    lastDamageTime = time()\r\nend\r\n\r\nfor _, child in ipairs(COLLISION_BOXES:GetChildren()) do\r\n    child.visibility = Visibility.FORCE_OFF\r\nend"
-        CustomParameters {
-          Overrides {
-            Name: "cs:CollisionBoxes"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:RaycastLength"
-            Float: 70
-          }
-          Overrides {
-            Name: "cs:SpeedDamageThreshold"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:DamageEffectTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:MaxRenderDistance"
-            Float: 5000
-          }
-          Overrides {
-            Name: "cs:Debug"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:CollisionBoxes:tooltip"
-            String: "Group of rays positions in the front of the vehicle."
-          }
-          Overrides {
-            Name: "cs:SpeedDamageThreshold:tooltip"
-            String: "Set the speed threshold when the damage effects can be spawned."
-          }
-          Overrides {
-            Name: "cs:RaycastLength:tooltip"
-            String: "Length of raycast to detect obstacles."
-          }
-          Overrides {
-            Name: "cs:Debug:tooltip"
-            String: "Display raycasts for debugging purposes."
-          }
-          Overrides {
-            Name: "cs:MaxRenderDistance:tooltip"
-            String: "Distance at which the damage effects are allowed to be spawned to the local player who is not the driver of this vehicle."
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 1713962048372340825
-      Name: "Vehicle Rally Car Engine Loop 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_engine_rally_car_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 14343617795957991834
-      Name: "VehiclePack_Generic Gear Shift Sound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 10962488515740605910
-          Objects {
-            Id: 10962488515740605910
-            Name: "Generic Gear Shift Sound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 4215541505699674838
-              }
-              AutoPlay: true
-              Transient: true
-              Volume: 0.3
-              Falloff: -1
-              Radius: -1
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 4215541505699674838
-      Name: "Vehicle Gear Shift 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_vehicle_gear_shift_01a_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 14591646366100163561
-      Name: "VehiclePack_VehicleEngineEffectClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[ \r\n    Plays engine effects for the vehicle.\r\n    Uses engine rpm information from clientUserData.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal ENGINE_SOUND = script:GetCustomProperty(\"EngineSound\"):WaitForObject()\r\nlocal MIN_ENGINE_PITCH = script:GetCustomProperty(\"MinEnginePitch\")\r\nlocal MAX_ENGINE_PITCH = script:GetCustomProperty(\"MaxEnginePitch\")\r\n\r\nlocal GEAR_SHIFT_SOUND_TEMPLATE = script:GetCustomProperty(\"GearShiftSoundTemplate\")\r\n\r\n-- Constant variables\r\nlocal DEFAULT_LIFESPAN = 2.5\r\n\r\n-- Internal variables\r\nlocal previousGear = 1\r\n\r\nfunction Tick()\r\n    if not Object.IsValid(VEHICLE) then return end\r\n    if not VEHICLE.driver then return end\r\n\r\n    -- Gets the engine information if it exists from clientUserData\r\n    local gear = VEHICLE.clientUserData.gear\r\n    local engineRPM = VEHICLE.clientUserData.engineRPM\r\n    local minEngineRPM = VEHICLE.clientUserData.minEngineRPM\r\n    local maxEngineRPM = VEHICLE.clientUserData.maxEngineRPM\r\n\r\n    -- Update engine sound pitch based on current engine rpm\r\n    if engineRPM and minEngineRPM and maxEngineRPM then\r\n        ENGINE_SOUND.pitch = CoreMath.Lerp(MIN_ENGINE_PITCH, MAX_ENGINE_PITCH, \r\n                            (engineRPM - minEngineRPM) / (maxEngineRPM - minEngineRPM))\r\n    else\r\n        ENGINE_SOUND.pitch = 0\r\n    end\r\n\r\n    -- Play gear change sound\r\n    if gear ~= previousGear then\r\n        if previousGear < gear then\r\n            SpawnTemplate(GEAR_SHIFT_SOUND_TEMPLATE)\r\n        end\r\n        previousGear = gear\r\n    end\r\nend\r\n\r\nfunction OnDriverEntered(vehicle, player)\r\n    ENGINE_SOUND:Play()\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    ENGINE_SOUND:Stop()\r\nend\r\n\r\nfunction SpawnTemplate(template)\r\n    if template then\r\n        local instance = World.SpawnAsset(template, {parent = VEHICLE})\r\n        if instance.lifeSpan == 0 then\r\n            instance.lifeSpan = DEFAULT_LIFESPAN\r\n        end\r\n    end\r\nend\r\n\r\n--Initialize\r\nVEHICLE.driverEnteredEvent:Connect(OnDriverEntered)\r\nVEHICLE.driverExitedEvent:Connect(OnDriverExited)\r\n\r\nif VEHICLE.driver then\r\n    ENGINE_SOUND:Play()\r\nend"
-        CustomParameters {
-          Overrides {
-            Name: "cs:EngineSound"
-            ObjectReference {
-            }
-          }
-          Overrides {
-            Name: "cs:MinEnginePitch"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:MaxEnginePitch"
-            Float: 1500
-          }
-          Overrides {
-            Name: "cs:GearShiftSoundTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:MinEnginePitch:tooltip"
-            String: "Engine sound minimum pitch. Sets when vehicle is not accelerating."
-          }
-          Overrides {
-            Name: "cs:MaxEnginePitch:tooltip"
-            String: "Engine sound maximum pitch. Sets towards when vehicle is accelerating and reaches maximum speed."
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 5002926569534351835
-      Name: "VehiclePack_Generic Vehicle Door Close Sound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 15131877299457216728
-          Objects {
-            Id: 15131877299457216728
-            Name: "Generic Vehicle Door Close Sound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 3044846036250752633
-              }
-              AutoPlay: true
-              Transient: true
-              Volume: 0.8
-              Falloff: -1
-              Radius: -1
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 3044846036250752633
-      Name: "Vehicle Car Door Close 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_vehicle_door_close_01a_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 12791237473014552978
-      Name: "VehiclePack_BattleTruck_VehiclePassengerControllerClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n\r\n    This script listens to events of local player sitting in as passenger of the vehicle.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal PASSENGER_ENTER_SOUND_TEMPLATE = script:GetCustomProperty(\"PassengerEnterSoundTemplate\")\r\nlocal PASSENGER_EXIT_SOUND_TEMPLATE = script:GetCustomProperty(\"PassengerExitSoundTemplate\")\r\n\r\n-- Constant variables\r\nlocal DEFAULT_LIFESPAN = 1\r\n\r\nfunction OnPassengerEnter()\r\n    SpawnTemplate(PASSENGER_ENTER_SOUND_TEMPLATE)\r\nend\r\n\r\nfunction OnPassengerExit()\r\n    SpawnTemplate(PASSENGER_EXIT_SOUND_TEMPLATE)\r\nend\r\n\r\nfunction SpawnTemplate(template)\r\n    if template then\r\n        local instance = World.SpawnAsset(template, {parent = VEHICLE})\r\n        if instance.lifeSpan == 0 then\r\n            instance.lifeSpan = DEFAULT_LIFESPAN\r\n        end\r\n    end\r\nend\r\n\r\n--Initialize\r\nEvents.Connect(\"VehiclePack_VehiclePassengerEnter\", OnPassengerEnter)\r\nEvents.Connect(\"VehiclePack_VehiclePassengerExit\", OnPassengerExit)"
-        CustomParameters {
-          Overrides {
-            Name: "cs:PassengerEnterSoundTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:PassengerExitSoundTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 7978132752199371302
-      Name: "VehiclePack_Generic Vehicle Exit Sound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 1814938785858307449
-          Objects {
-            Id: 1814938785858307449
-            Name: "Generic Vehicle Exit Sound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 304294380987503817
-            Lifespan: 5
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 14708008335668268321
-              }
-              AutoPlay: true
-              Transient: true
-              Volume: 1
-              Falloff: 3000
-              Radius: 500
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 304294380987503817
-            Name: "Vehicle Door Close 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 1814938785858307449
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 3044846036250752633
-              }
-              AutoPlay: true
-              Volume: 1
-              Falloff: -1
-              Radius: -1
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 14708008335668268321
-      Name: "Vehicle Car Engine Shutdown Off Cutoff 08"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_vehicle_car_engine_shutdown_off_cutoff_08_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 15107025983823134645
-      Name: "VehiclePack_Generic Vehicle Enter Sound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 7337190052026754162
-          Objects {
-            Id: 7337190052026754162
-            Name: "Generic Vehicle Enter Sound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 14433601220485062445
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 12755994696762521150
-              }
-              AutoPlay: true
-              Transient: true
-              Volume: 1
-              Falloff: 1000
-              Radius: 300
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 14433601220485062445
-            Name: "Vehicle Door Close 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 7337190052026754162
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 3044846036250752633
-              }
-              AutoPlay: true
-              Volume: 1
-              Falloff: -1
-              Radius: -1
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 12755994696762521150
-      Name: "Vehicle Car Start Ignition 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_vehicle_car_start_ignition_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 12905432643761369808
-      Name: "VehiclePack_VehicleDriverEffectsClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2021 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE:IsA(\'Vehicle\') then\r\n    error(script.name .. \" should be part of Vehicle object hierarchy.\")\r\nend\r\n\r\n-- User exposed cutom property\r\nlocal ENTER_SOUND_TEMPLATE = script:GetCustomProperty(\"EnterSoundTemplate\")\r\nlocal EXIT_SOUND_TEMPLATE = script:GetCustomProperty(\"ExitSoundTemplate\")\r\n\r\n-- Constant variables\r\nlocal DEFAULT_LIFESPAN = 1.5\r\n\r\nfunction OnDriverEntered(vehicle, player)\r\n    SpawnTemplate(ENTER_SOUND_TEMPLATE)\r\nend\r\n\r\nfunction OnDriverExited(vehicle, player)\r\n    SpawnTemplate(EXIT_SOUND_TEMPLATE)\r\nend\r\n\r\nfunction SpawnTemplate(template)\r\n    if template then\r\n        local instance = World.SpawnAsset(template, {parent = VEHICLE})\r\n        if instance.lifeSpan == 0 then\r\n            instance.lifeSpan = DEFAULT_LIFESPAN\r\n        end\r\n    end\r\nend\r\n\r\n--Initialize\r\nVEHICLE.driverEnteredEvent:Connect(OnDriverEntered)\r\nVEHICLE.driverExitedEvent:Connect(OnDriverExited)"
-        CustomParameters {
-          Overrides {
-            Name: "cs:EnterSoundTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "cs:ExitSoundTemplate"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 9458829972586732324
-      Name: "LuampaUserDataEditClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[DESCRIPTION: I cannot find SetDriver anywhere in Team META scripts for the\r\nBattle Truck. We need to set vehicle\'s .clientUserData to driver, to handle\r\ncertain events. This is an attempt to identify driver by using Enter/Exit events,\r\nto set the .clientUserData for driver and vehicle.]]\r\n\r\nlocal VEHICLE = script:FindAncestorByType(\"Vehicle\")\r\n\r\nfunction OnDriverEnter(vehicle, player)\r\n    player.clientUserData.seat = driver\r\n    vehicle.clientUserData.driver = player\r\nend\r\n\r\nfunction OnDriverExit(vehicle, player)\r\n    player.clientUserData.seat = nil\r\n    vehicle.clientUserData.driver = nil\r\nend\r\n\r\n\r\nVEHICLE.driverEnteredEvent:Connect(OnDriverEnter)\r\nVEHICLE.driverExitedEvent:Connect(OnDriverExit)"
-        CustomParameters {
-        }
-      }
-    }
-    Assets {
-      Id: 6209556876010214815
-      Name: "Urban Vehicle Car - Brake 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
-      }
-    }
-    Assets {
-      Id: 3342706046178942623
-      Name: "Screen Overlay 03"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_screen_overlay_03"
-      }
-    }
-    Assets {
-      Id: 17591161558402514443
-      Name: "Urban Vehicle Car - Center Console 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_console_center_001_ref"
-      }
-    }
-    Assets {
-      Id: 16049211287924608873
-      Name: "Urban Vehicle Car - Front Seat Bottom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 15353476744572170853
-      Name: "Urban Vehicle Car - Front Seat Leg 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_leg_001_ref"
-      }
-    }
-    Assets {
-      Id: 3203349032132710974
-      Name: "Urban Vehicle Car - Front Seat Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 1772269630312073792
-      Name: "Radar Screen Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_radar_trans"
-      }
-    }
-    Assets {
-      Id: 16516459769229762722
-      Name: "Urban Car Screens 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_tachometer_001_ref"
-      }
-    }
-    Assets {
-      Id: 12821608187918865362
-      Name: "Urban Vehicle Car - Steering Wheel 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_steering_wheel_001_ref"
-      }
-    }
-    Assets {
-      Id: 16737023815630923572
-      Name: "Urban Vehicle Car - Glovebox 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_glovebox_001_ref"
-      }
-    }
-    Assets {
-      Id: 16701740470968256231
-      Name: "Military Tank Historic Container 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_container_002_ref"
-      }
-    }
-    Assets {
-      Id: 4048871353471406004
-      Name: "Mecha - Armor - Pack 01 - Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_jpn_mecha_armor_pack_001_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 263215418038033298
-      Name: "Enginerivetedl"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 10803175672327579936
-        ParameterOverrides {
-          Overrides {
-            Name: "rotate_material"
-            Float: 90
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 10803175672327579936
-      Name: "Rusty Riveted Metal"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_rust_rivets_001_uv"
-      }
-    }
-    Assets {
-      Id: 9143604908401303261
-      Name: "Bone Raw"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bone_raw_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 11508015507968617304
-      Name: "Urban Vehicle Car - Frame 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_frame_001_ref"
-      }
-    }
-    Assets {
-      Id: 3611412382760728892
-      Name: "Urban Vehicle Sedan - Door Rear 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_sdn_door_rear_001_ref"
-      }
-    }
-    Assets {
-      Id: 12482639849349891471
-      Name: "Urban Vehicle Car - Door Front 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_door_front_001_ref"
-      }
-    }
-    Assets {
-      Id: 5439646266583319854
-      Name: "Frosted Glass No Distortion"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_frosted_glass_nodistortion"
-      }
-    }
-    Assets {
-      Id: 13174761023700886097
-      Name: "Metal Corrugated 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_metal_corrugated_metal_002_uv_ref"
-      }
-    }
-    Assets {
-      Id: 13214683604363461790
-      Name: "Additive Soft Edge"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
-      }
-    }
-    Assets {
-      Id: 16223793041255679849
-      Name: "Metal 9 Slice Shipping Container 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mat_advanced_9slice_shipping_container001_ref"
-      }
-    }
-    Assets {
-      Id: 510778788078352226
-      Name: "Metal Vent Duct Spiral 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_urb_vent_duct_round_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 4904349013400544687
-      Name: "Custom Office Carpet Basic 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 11378886407339488354
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.266
-              G: 0.201876372
-              B: 0.1528337
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 11378886407339488354
-      Name: "Office Carpet Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_urb_office_carpet_004_uv_ref"
-      }
-    }
-    Assets {
-      Id: 8426178907157142955
-      Name: "Urban Vehicle Truck - Bumper Rear 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_trk_001_bumper_rear_01_ref"
-      }
-    }
-    Assets {
-      Id: 3036419345280038615
-      Name: "Cube - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_002"
-      }
-    }
-    Assets {
-      Id: 7714592170743622243
-      Name: "Cylinder - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_001"
-      }
-    }
-    Assets {
-      Id: 15714687381745373579
-      Name: "Urban Vehicle Car - Body Front 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_body_front_001_ref"
-      }
-    }
-    Assets {
-      Id: 8060511813986281564
-      Name: "CorrugatedRust"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 13174761023700886097
-        ParameterOverrides {
-          Overrides {
-            Name: "rust_amount"
-            Float: 0.641571522
-          }
-          Overrides {
-            Name: "color_rust"
-            Color {
-              R: 0.820000052
-              G: 0.342119247
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 1
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0
-          }
-          Overrides {
-            Name: "roughness_multiplier"
-            Float: 0.580766678
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 14279704584282367798
-      Name: "Custom Carbon Fiber 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 2249794126015640337
-        ParameterOverrides {
-          Overrides {
-            Name: "clear_coat_roughness"
-            Float: 0
-          }
-          Overrides {
-            Name: "fresnel_amount"
-            Float: 0.876595736
-          }
-          Overrides {
-            Name: "metallic"
-            Float: 0
-          }
-          Overrides {
-            Name: "fresnel_color"
-            Color {
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 30
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 30
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0.0980017
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 2249794126015640337
-      Name: "Carbon Fiber 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_carbon-fiber_001"
-      }
-    }
-    Assets {
-      Id: 16628909226419210785
-      Name: "Chain Link 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_chainlink_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 3640109265954155343
-      Name: "Rubber Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 6426086044615951543
-      Name: "Metal Iron Rusted 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_003"
-      }
-    }
-    Assets {
-      Id: 3225924156252914362
-      Name: "Metal Iron Rusted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_002"
-      }
-    }
-    Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
-      }
-    }
-    Assets {
-      Id: 15810725318543748023
-      Name: "Tire Worn - Large"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_mil_tire_worn_large_01_ref"
-      }
-    }
-    Assets {
-      Id: 1630607435793532884
-      Name: "Military Tank Historic Gear 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_gear_003_ref"
-      }
-    }
-    Assets {
-      Id: 18348342505020437805
-      Name: "Military Tank Historic Turret Seal 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_turret_001_ring_ref"
-      }
-    }
-    Assets {
-      Id: 7455555155075393874
-      Name: "Metal Grates 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_grates_004_uv"
-      }
-    }
-    Assets {
-      Id: 7556079334320139636
-      Name: "Rubber Pattern 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_003_uv"
-      }
-    }
-    Assets {
-      Id: 13028932803405216377
-      Name: "Military Tank Modern Hatch 01 Lid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_hatch_001_lid_ref"
-      }
-    }
-    Assets {
-      Id: 5405788467161147168
-      Name: "Basic Material"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_pbr_material_001"
-      }
-    }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 7320255990073764485
-      Name: "Office Cubicle Wall 01 - 1.5m Mid 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_off_cubicle_wall_001_mid_02_ref"
-      }
-    }
-    Assets {
-      Id: 14823448561875281729
-      Name: "Military Tank Modern Hull 01 - Mid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_hull_001_mid_ref"
-      }
-    }
-    Assets {
-      Id: 10280074408105187427
-      Name: "Sci-fi Antenna Structure"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_antenna_structure_001"
-      }
-    }
-    Assets {
-      Id: 13816823995603172559
-      Name: "Modern Weapon Ammo - Bullet 02 Casing"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_case_002"
-      }
-    }
-    Assets {
-      Id: 803799555064499974
-      Name: "Modern Weapon Ammo - Bullet 01 Casing"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_case_001"
-      }
-    }
-    Assets {
-      Id: 14620852700054372986
-      Name: "Sci-fi Cryo Chamber Pod Top"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_cryo_pod_top_001"
-      }
-    }
-    Assets {
-      Id: 6045540826292531006
-      Name: "Modern Weapon - Sight Forward 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_sight_forw_002"
-      }
-    }
-    Assets {
-      Id: 9036435396988035792
-      Name: "Sci-fi Chair Armrest 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_chair_001_arms_ref"
-      }
-    }
-    Assets {
-      Id: 12888726374622842928
-      Name: "Modern Weapon - Disc 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_disc_001"
-      }
-    }
-    Assets {
-      Id: 122928484173136543
-      Name: "Fantasy Crossbow Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_cross_001"
-      }
-    }
-    Assets {
-      Id: 13085174305471638229
-      Name: "Metal Painted Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_painted_old_001_uv"
-      }
-    }
-    Assets {
-      Id: 13949441344821433690
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 7305258327512852355
-      Name: "Fantasy Crossbow Foregrip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_foregrip_cross_001"
-      }
-    }
-    Assets {
-      Id: 7283825798727192743
-      Name: "Metal Iron Rusted 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_003"
-      }
-    }
-    Assets {
-      Id: 5722845298204989079
-      Name: "Sci-fi Chair Leg 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_chair_002_leg_ref"
-      }
-    }
-    Assets {
-      Id: 7016245623101166198
-      Name: "Metal Iron Rusted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_002"
-      }
-    }
-    Assets {
-      Id: 7847072278214939646
-      Name: "Fabric Burlap Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_fan_fabric_burlap_001_uv"
+      Id: 14663031830242052499
+      Name: "Center Circle 001 Outline"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "CenterCircle_001Outline"
       }
     }
     Assets {
@@ -24840,1092 +22757,597 @@ Assets {
       }
     }
     Assets {
-      Id: 14663031830242052499
-      Name: "Center Circle 001 Outline"
-      PlatformAssetType: 9
+      Id: 7847072278214939646
+      Name: "Fabric Burlap Old 01"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "CenterCircle_001Outline"
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fan_fabric_burlap_001_uv"
       }
     }
     Assets {
-      Id: 12753120008199281916
-      Name: "TurretAimClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\nCopyright 2019 Manticore Games, Inc.\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\npersons to whom the Software is furnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\nSoftware.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n--[[\r\n    When the VEHICLE owner aims, this script changes LOCAL_PLAYER local camera properties\r\n    such as distance, fov and offset for aiming functionality.\r\n\r\n    This script also sends an event when the VEHICLE owner aims:\r\n    VEHICLEAiming (LOCAL_PLAYER owner, bool isAiming) [Client]\r\n    owner       - local LOCAL_PLAYER that aims\r\n    isAiming    - if the owner is aiming or not\r\n\r\n    Note:   This aiming script works best for first-person and third-person camera angles.\r\n            Disable aiming if the VEHICLE is used in other camera angles.\r\n--]]\r\n\r\n--[[Adapted by TaoOfChaos to work for Team META\'s vehicle turrets.]]\r\n\r\n-- New\r\nlocal LOCAL_PLAYER = Game.GetLocalPlayer()\r\nlocal VEHICLE = script:FindAncestorByType(\"Vehicle\")\r\n\r\n-- Exposed variables --\r\nlocal CAN_AIM = script:GetCustomProperty(\"EnableAim\")\r\nlocal AIM_BINDING = \"ability_secondary\"\r\n\r\nlocal ZOOM_DISTANCE = script:GetCustomProperty(\"AimZoomDistance\")\r\n\r\n-- Internal handle variables --\r\nlocal pressedHandle = nil              -- Event handle when LOCAL_PLAYER presses the aim binding\r\nlocal releasedHandle = nil             -- Event handle when LOCAL_PLAYER releases the aim binding\r\n\r\n-- Internal camera variables --\r\nlocal cameraResetDistance = 0\r\nlocal cameraTargetDistance = 0\r\nlocal lerpTime = 0\r\nlocal activeCamera = nil\r\nlocal isScoping = false\r\n\r\n\r\nfunction Tick(deltaTime)\r\n    if not CAN_AIM then return end\r\n\r\n    -- Reset when LOCAL_PLAYER dies\r\n    if isScoping then\r\n        if LOCAL_PLAYER.isDead then\r\n            ResetScoping()\r\n        end\r\n    end\r\n\r\n    -- Smoothly lerps the camera distance when LOCAL_PLAYER aims\r\n    LerpCameraDistance(deltaTime)\r\nend\r\n\r\n -- Moves the camera into position over time\r\nfunction LerpCameraDistance(deltaTime)\r\n    if lerpTime >= 1 then return end\r\n    if not Object.IsValid(activeCamera) then return end\r\n\r\n    lerpTime = lerpTime + deltaTime\r\n    activeCamera.currentDistance = CoreMath.Lerp(activeCamera.currentDistance, cameraTargetDistance, lerpTime)\r\nend\r\n\r\n -- Gets LOCAL_PLAYER current active camera\r\nfunction GetPlayerActiveCamera(LOCAL_PLAYER)\r\n    if not Object.IsValid(LOCAL_PLAYER) then\r\n        return nil\r\n    end\r\n\r\n    if LOCAL_PLAYER:GetOverrideCamera() then\r\n        return LOCAL_PLAYER:GetOverrideCamera()\r\n    else\r\n        return LOCAL_PLAYER:GetDefaultCamera()\r\n    end\r\nend\r\n\r\nfunction EnableScoping(LOCAL_PLAYER)\r\n    if LOCAL_PLAYER.isDead then return end\r\n\r\n    --print(\"EnableScoping runs, camera should scope\")\r\n    cameraTargetDistance = ZOOM_DISTANCE\r\n    lerpTime = 0\r\n    isScoping = true\r\n\r\n    Events.Broadcast(\"TurretAiming\", LOCAL_PLAYER, true)\r\nend\r\n\r\nfunction ResetScoping(LOCAL_PLAYER)\r\n    cameraTargetDistance = cameraResetDistance\r\n    lerpTime = 0\r\n    isScoping = false\r\n\r\n    Events.Broadcast(\"TurretAiming\", LOCAL_PLAYER, false)\r\nend\r\n\r\nfunction OnBindingPressed(LOCAL_PLAYER, actionName)\r\n    if actionName == AIM_BINDING then\r\n        EnableScoping(LOCAL_PLAYER)\r\n\tend\r\nend\r\n\r\nfunction OnBindingReleased(LOCAL_PLAYER, actionName)\r\n    if actionName == AIM_BINDING then\r\n        ResetScoping(LOCAL_PLAYER)\r\n\tend\r\nend\r\n\r\n-- Broadcast only sent to LOCAL_PLAYER who entered, so will be LOCAL_PLAYER\r\nfunction OnTurretEntered(vehicleRef)\r\n    if not CAN_AIM then return end\r\n    local currentVehicle = vehicleRef:GetObject()\r\n    if currentVehicle.id == VEHICLE.id then\r\n        -- Register event handles\r\n        pressedHandle = LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)\r\n        releasedHandle = LOCAL_PLAYER.bindingReleasedEvent:Connect(OnBindingReleased)\r\n\r\n        -- Set new active camera\r\n        activeCamera = GetPlayerActiveCamera(LOCAL_PLAYER)\r\n        if Object.IsValid(activeCamera) then\r\n            cameraResetDistance = activeCamera.currentDistance\r\n            cameraTargetDistance = cameraResetDistance\r\n        end\r\n        lerpTime = 0\r\n    end\r\nend\r\n\r\n-- Broadcast only sent to player who entered, so will be LOCAL_PLAYER\r\nfunction OnTurretExit()\r\n    if not CAN_AIM then return end\r\n    turretSeat = nil\r\n    -- Disconnects all the handle events to avoid event trigger\r\n    -- for previous player when the VEHICLE is used by next player\r\n\tif pressedHandle then pressedHandle:Disconnect() end\r\n\tif releasedHandle then releasedHandle:Disconnect() end\r\n\r\n    ResetScoping(LOCAL_PLAYER)\r\n\r\n    -- Remove the reference to the camera\r\n    if Object.IsValid(activeCamera) then\r\n        activeCamera.currentDistance = cameraResetDistance\r\n        activeCamera = nil\r\n    end\r\nend\r\n\r\n-- Only sent to player who enters\r\nEvents.Connect(\"VehiclePack_BattleTruck_VehicleTurretEnter\", OnTurretEntered)\r\nEvents.Connect(\"VehiclePack_BattleTruck_VehicleTurretExit\", OnTurretExit)"
-        CustomParameters {
-          Overrides {
-            Name: "cs:AimZoomDistance"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:EnableAim"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:AimZoomDistance:tooltip"
-            String: "Camera distance when aiming."
-          }
-          Overrides {
-            Name: "cs:EnableAim:tooltip"
-            String: "Turn turret aimng on and off here."
-          }
-        }
+      Id: 7016245623101166198
+      Name: "Metal Iron Rusted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_002"
       }
     }
     Assets {
-      Id: 2579142944935277471
-      Name: "VehiclePack_Turret_VehicleTurretControllerClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\n  Copyright 2021 Manticore Games, Inc.\r\n  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\n  documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\n  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\n  persons to whom the Software is furnished to do so, subject to the following conditions:\r\n  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\n  Software.\r\n  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\n  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\n  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\n  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\n-- Internal custom properties\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE or not VEHICLE:IsA(\'Vehicle\') then\r\n  VEHICLE = script -- this is if someone wants the turret to be standalone  \r\nend\r\n\r\n\r\n-- User exposed cutom property\r\nlocal TURRET_ENTER_SOUND_TEMPLATE = script.parent:GetCustomProperty(\"TurretEnterSoundTemplate\")\r\nlocal TURRET_EXIT_SOUND_TEMPLATE = script.parent:GetCustomProperty(\"TurretExitSoundTemplate\")\r\nlocal TURRET_CAMERA = script:GetCustomProperty(\"TurretCamera\"):WaitForObject()\r\nlocal TURRET_ROOT = script:GetCustomProperty(\"TurretRoot\"):WaitForObject()\r\nlocal TURRET_ROOT_SERVER = script:GetCustomProperty(\"TurretRootServer\"):WaitForObject()\r\nlocal TURRET_UI = script:GetCustomProperty(\"TurretUI\"):WaitForObject()\r\nlocal MUZZLE_1 = script:GetCustomProperty(\"Muzzle1\"):WaitForObject()\r\nlocal MUZZLE_2 = script:GetCustomProperty(\"Muzzle2\"):WaitForObject()\r\n\r\nlocal FIRE_RATE = TURRET_ROOT_SERVER:GetCustomProperty(\"FireRate\")\r\nlocal BULLET_TEMPLATE = TURRET_ROOT_SERVER:GetCustomProperty(\"BulletTemplate\")\r\nlocal FLASH_TEMPLATE = TURRET_ROOT_SERVER:GetCustomProperty(\"MuzzleFlashTemplate\")\r\n\r\nlocal isFiring = false\r\nlocal fireCooldown = 0\r\n\r\n-- Constant variables\r\nlocal DEFAULT_LIFESPAN = 1\r\n\r\nfunction OnTurretEnter(v)\r\n    if (v:GetObject() ~= VEHICLE and v:GetObject():IsA(\"Vehicle\")) or (v:GetObject():GetCustomProperty(\"Root\") and v:GetObject():GetCustomProperty(\"Root\"):WaitForObject():FindDescendantByName(\"VehiclePack_Turret_VehicleTurretControllerClient\") ~= script) then return end\r\n    SpawnTemplate(TURRET_ENTER_SOUND_TEMPLATE)\r\n    Game.GetLocalPlayer():SetOverrideCamera(TURRET_CAMERA, 0.7)\r\n    TURRET_UI.visibility = Visibility.FORCE_ON\r\nend\r\n\r\nfunction OnTurretExit(v)\r\n    isFiring = false\r\n    SpawnTemplate(TURRET_EXIT_SOUND_TEMPLATE)\r\n    Game.GetLocalPlayer():ClearOverrideCamera()\r\n    if Object.IsValid(TURRET_UI) then\r\n     TURRET_UI.visibility = Visibility.FORCE_OFF\r\n    end\r\nend\r\n\r\nfunction FireTurret()\r\n  local viewRot = TURRET_ROOT:GetWorldRotation()\r\n  local f1 =  World.SpawnAsset(FLASH_TEMPLATE, {position = MUZZLE_1:GetWorldPosition(), rotation = viewRot})\r\n  local f2 =  World.SpawnAsset(FLASH_TEMPLATE, {position = MUZZLE_2:GetWorldPosition(), rotation = viewRot})\r\nend\r\n\r\nfunction NetworkedPropertyChanged(owner, propName) \r\n  if propName == \'IsFiring\' then\r\n    isFiring = owner:GetCustomProperty(propName)\r\n  end\r\nend\r\n\r\nfunction SpawnTemplate(template)\r\n    if template then\r\n        local instance = World.SpawnAsset(template, {parent = VEHICLE})\r\n        if instance.lifeSpan == 0 then\r\n            instance.lifeSpan = DEFAULT_LIFESPAN\r\n        end\r\n    end\r\nend\r\n\r\nfunction Tick(dt)\r\n  TURRET_ROOT:RotateTo(TURRET_ROOT_SERVER:GetWorldRotation(), dt*3)\r\n\r\n  if isFiring then\r\n    fireCooldown = fireCooldown - dt\r\n    if fireCooldown < 0 then\r\n      FireTurret()\r\n      fireCooldown = FIRE_RATE\r\n    end\r\n  end\r\nend\r\n\r\n--Initialize\r\nEvents.Connect(\"VehiclePack_BattleTruck_VehicleTurretEnter\", OnTurretEnter)\r\nEvents.Connect(\"VehiclePack_BattleTruck_VehicleTurretExit\", OnTurretExit)\r\n\r\nTURRET_ROOT_SERVER.networkedPropertyChangedEvent:Connect(NetworkedPropertyChanged)\r\n\r\nTURRET_ROOT:Follow(TURRET_ROOT_SERVER)"
-        CustomParameters {
-        }
+      Id: 5722845298204989079
+      Name: "Sci-fi Chair Leg 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_chair_002_leg_ref"
       }
     }
     Assets {
-      Id: 12903719488005755860
-      Name: "VehiclePack_SFX_TurretExitSound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 18020935191963269407
-          Objects {
-            Id: 18020935191963269407
-            Name: "VehiclePack_SFX_TurretExitSound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 6647933289389764587
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Folder {
-              IsGroup: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 6647933289389764587
-            Name: "Heavy Turning Mechanism Machine End 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 18020935191963269407
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 14226298051926066950
-              }
-              AutoPlay: true
-              Volume: 1
-              Falloff: -1
-              Radius: 1000
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
+      Id: 7283825798727192743
+      Name: "Metal Iron Rusted 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_003"
       }
     }
     Assets {
-      Id: 14226298051926066950
-      Name: "Heavy Turning Mechanism Machine End 01 SFX"
+      Id: 7305258327512852355
+      Name: "Fantasy Crossbow Foregrip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_foregrip_cross_001"
+      }
+    }
+    Assets {
+      Id: 13949441344821433690
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 13085174305471638229
+      Name: "Metal Painted Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_painted_old_001_uv"
+      }
+    }
+    Assets {
+      Id: 122928484173136543
+      Name: "Fantasy Crossbow Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_cross_001"
+      }
+    }
+    Assets {
+      Id: 12888726374622842928
+      Name: "Modern Weapon - Disc 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_disc_001"
+      }
+    }
+    Assets {
+      Id: 9036435396988035792
+      Name: "Sci-fi Chair Armrest 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_chair_001_arms_ref"
+      }
+    }
+    Assets {
+      Id: 6045540826292531006
+      Name: "Modern Weapon - Sight Forward 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_sight_forw_002"
+      }
+    }
+    Assets {
+      Id: 14620852700054372986
+      Name: "Sci-fi Cryo Chamber Pod Top"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_cryo_pod_top_001"
+      }
+    }
+    Assets {
+      Id: 803799555064499974
+      Name: "Modern Weapon Ammo - Bullet 01 Casing"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_case_001"
+      }
+    }
+    Assets {
+      Id: 9826710443425479508
+      Name: "Modern Weapon Ammo - Bullet 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_tip_001"
+      }
+    }
+    Assets {
+      Id: 13816823995603172559
+      Name: "Modern Weapon Ammo - Bullet 02 Casing"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_case_002"
+      }
+    }
+    Assets {
+      Id: 10280074408105187427
+      Name: "Sci-fi Antenna Structure"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_antenna_structure_001"
+      }
+    }
+    Assets {
+      Id: 14823448561875281729
+      Name: "Military Tank Modern Hull 01 - Mid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_hull_001_mid_ref"
+      }
+    }
+    Assets {
+      Id: 7320255990073764485
+      Name: "Office Cubicle Wall 01 - 1.5m Mid 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_off_cubicle_wall_001_mid_02_ref"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 5405788467161147168
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 13028932803405216377
+      Name: "Military Tank Modern Hatch 01 Lid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_hatch_001_lid_ref"
+      }
+    }
+    Assets {
+      Id: 7556079334320139636
+      Name: "Rubber Pattern 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_003_uv"
+      }
+    }
+    Assets {
+      Id: 7455555155075393874
+      Name: "Metal Grates 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_grates_004_uv"
+      }
+    }
+    Assets {
+      Id: 18348342505020437805
+      Name: "Military Tank Historic Turret Seal 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_turret_001_ring_ref"
+      }
+    }
+    Assets {
+      Id: 1630607435793532884
+      Name: "Military Tank Historic Gear 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_gear_003_ref"
+      }
+    }
+    Assets {
+      Id: 15810725318543748023
+      Name: "Tire Worn - Large"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_mil_tire_worn_large_01_ref"
+      }
+    }
+    Assets {
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+      }
+    }
+    Assets {
+      Id: 3225924156252914362
+      Name: "Metal Iron Rusted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_002"
+      }
+    }
+    Assets {
+      Id: 6426086044615951543
+      Name: "Metal Iron Rusted 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_003"
+      }
+    }
+    Assets {
+      Id: 3640109265954155343
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 16628909226419210785
+      Name: "Chain Link 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_chainlink_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 15714687381745373579
+      Name: "Urban Vehicle Car - Body Front 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_body_front_001_ref"
+      }
+    }
+    Assets {
+      Id: 7714592170743622243
+      Name: "Cylinder - Rounded Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_rounded_001"
+      }
+    }
+    Assets {
+      Id: 3036419345280038615
+      Name: "Cube - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_002"
+      }
+    }
+    Assets {
+      Id: 8426178907157142955
+      Name: "Urban Vehicle Truck - Bumper Rear 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_trk_001_bumper_rear_01_ref"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 510778788078352226
+      Name: "Metal Vent Duct Spiral 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_urb_vent_duct_round_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 16223793041255679849
+      Name: "Metal 9 Slice Shipping Container 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mat_advanced_9slice_shipping_container001_ref"
+      }
+    }
+    Assets {
+      Id: 13214683604363461790
+      Name: "Additive Soft Edge"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_additive_edgefade"
+      }
+    }
+    Assets {
+      Id: 13174761023700886097
+      Name: "Metal Corrugated 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_metal_corrugated_metal_002_uv_ref"
+      }
+    }
+    Assets {
+      Id: 5439646266583319854
+      Name: "Frosted Glass No Distortion"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_frosted_glass_nodistortion"
+      }
+    }
+    Assets {
+      Id: 12482639849349891471
+      Name: "Urban Vehicle Car - Door Front 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_door_front_001_ref"
+      }
+    }
+    Assets {
+      Id: 3611412382760728892
+      Name: "Urban Vehicle Sedan - Door Rear 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_sdn_door_rear_001_ref"
+      }
+    }
+    Assets {
+      Id: 11508015507968617304
+      Name: "Urban Vehicle Car - Frame 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_frame_001_ref"
+      }
+    }
+    Assets {
+      Id: 9143604908401303261
+      Name: "Bone Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bone_raw_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 4048871353471406004
+      Name: "Mecha - Armor - Pack 01 - Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_jpn_mecha_armor_pack_001_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 16701740470968256231
+      Name: "Military Tank Historic Container 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_container_002_ref"
+      }
+    }
+    Assets {
+      Id: 16737023815630923572
+      Name: "Urban Vehicle Car - Glovebox 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_glovebox_001_ref"
+      }
+    }
+    Assets {
+      Id: 12821608187918865362
+      Name: "Urban Vehicle Car - Steering Wheel 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_steering_wheel_001_ref"
+      }
+    }
+    Assets {
+      Id: 16516459769229762722
+      Name: "Urban Car Screens 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_tachometer_001_ref"
+      }
+    }
+    Assets {
+      Id: 1772269630312073792
+      Name: "Radar Screen Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_radar_trans"
+      }
+    }
+    Assets {
+      Id: 3203349032132710974
+      Name: "Urban Vehicle Car - Front Seat Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 15353476744572170853
+      Name: "Urban Vehicle Car - Front Seat Leg 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_leg_001_ref"
+      }
+    }
+    Assets {
+      Id: 16049211287924608873
+      Name: "Urban Vehicle Car - Front Seat Bottom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 17591161558402514443
+      Name: "Urban Vehicle Car - Center Console 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_console_center_001_ref"
+      }
+    }
+    Assets {
+      Id: 3342706046178942623
+      Name: "Screen Overlay 03"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_screen_overlay_03"
+      }
+    }
+    Assets {
+      Id: 6209556876010214815
+      Name: "Urban Vehicle Car - Brake 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+      }
+    }
+    Assets {
+      Id: 1713962048372340825
+      Name: "Vehicle Rally Car Engine Loop 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_heavy_turning_mechanism_machine_end_01_Cue_ref"
+        AssetId: "sfx_engine_rally_car_01_Cue_ref"
       }
     }
     Assets {
-      Id: 2316482364227709356
-      Name: "VehiclePack_SFX_TurretEnterSound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 14236835118800773162
-          Objects {
-            Id: 14236835118800773162
-            Name: "VehiclePack_SFX_TurretEnterSound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 9271610696743427590
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Folder {
-              IsGroup: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 9271610696743427590
-            Name: "Heavy Turning Mechanism Machine Start 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 14236835118800773162
-            Lifespan: 1.2
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 8884663456241006907
-              }
-              AutoPlay: true
-              Volume: 1
-              Falloff: -1
-              Radius: 1000
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
+      Id: 9118011185503589263
+      Name: "Wireframe"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "wireframe_glow_001"
       }
     }
     Assets {
-      Id: 8884663456241006907
-      Name: "Heavy Turning Mechanism Machine Start 01 SFX"
+      Id: 7607977845979636904
+      Name: "Vehicle Car Horn Honk Blast Loop 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
-        AssetId: "sfx_heavy_turning_mechanism_machine_start_01_Cue_ref"
+        AssetId: "sfx_vehicle_car_horn_blast_loop_01_Cue_ref"
       }
     }
     Assets {
-      Id: 13081442064580239388
-      Name: "VehiclePack_VehicleDamageClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\n  Copyright 2021 Manticore Games, Inc.\r\n  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\n  documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\n  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\n  persons to whom the Software is furnished to do so, subject to the following conditions:\r\n  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\n  Software.\r\n  \r\n  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\n  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\n  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\n  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\nlocal CONTROLLER = script:GetCustomProperty(\"VehicleDamageController\"):WaitForObject()\r\n\r\nlocal MAX_HEALTH = CONTROLLER:GetCustomProperty(\"MaxHealth\")\r\nlocal DAMAGED_THRESHOLD = CONTROLLER:GetCustomProperty(\"DamagedThreshold\")\r\nlocal DAMAGE_TEMPLATE = CONTROLLER:GetCustomProperty(\"VehicleDamagedFX\")\r\nlocal EXPLOSION_TEMPLATE = CONTROLLER:GetCustomProperty(\"VehicleDestroyedFX\")\r\n\r\nlocal health = CONTROLLER:GetCustomProperty(\"Health\")\r\n\r\nlocal hasSpawnedDamageFX = false\r\n\r\nlocal rand = RandomStream.New()\r\n\r\nfunction Damaged()\r\n  local diff = health\r\n  health = CONTROLLER:GetCustomProperty(\"Health\")\r\n  diff = diff - health\r\n\r\n  UI.ShowFlyUpText(string.format(\"%.0f\", diff), CONTROLLER:GetWorldPosition() + Vector3.New(rand:GetNumber(-80, 80), rand:GetNumber(-80, 80), rand:GetNumber(-80, 80)),\r\n                {duration = 0.5,\r\n                color = Color.RED,\r\n                isBig = IS_BIG_TEXT})\r\n\r\n  if health < DAMAGED_THRESHOLD and not hasSpawnedDamageFX then\r\n    hasSpawnedDamageFX = true\r\n    local t = World.SpawnAsset(DAMAGE_TEMPLATE, {parent = script})\r\n  end\r\n\r\n  if health <= 0 then\r\n    Explode()\r\n  end\r\nend\r\n\r\nfunction Explode()\r\n  local t = World.SpawnAsset(EXPLOSION_TEMPLATE, {position = script:GetWorldPosition()})\r\n  t.parent = nil\r\nend\r\n\r\nfunction NetworkedPropertyChanged(owner, propName) \r\n  if propName == \'Health\' then\r\n    Damaged()\r\n  end\r\nend\r\n\r\n\r\nCONTROLLER.networkedPropertyChangedEvent:Connect(NetworkedPropertyChanged)\r\nscript.destroyEvent:Connect(Explode)"
-        CustomParameters {
-        }
-      }
-    }
-    Assets {
-      Id: 12769977864980027803
-      Name: "VehiclePack_VehicleDamageController"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\n  Copyright 2021 Manticore Games, Inc.\r\n  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\n  documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\n  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\n  persons to whom the Software is furnished to do so, subject to the following conditions:\r\n  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\n  Software.\r\n  \r\n  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\n  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\n  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\n  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n\r\n  Vehicle Damage Controller\r\n  Author: Burnzie\r\n\r\n  Drag and drop this script into your vehicles in order allow them to be damaged\r\n--]]\r\n\r\nlocal VEHICLE = script:FindAncestorByType(\'Vehicle\')\r\nif not VEHICLE or not VEHICLE:IsA(\'Vehicle\') then\r\n    VEHICLE = script.parent\r\nend\r\n\r\nlocal MAX_HEALTH = script:GetCustomProperty(\"MaxHealth\")\r\nlocal DAMAGED_THRESHOLD = script:GetCustomProperty(\"DamagedThreshold\")\r\n\r\nlocal health = MAX_HEALTH\r\n\r\nlocal hasSpawnedDamageFX = false\r\n\r\nfunction DamageVehicle(damage)\r\n  health = health - damage.amount\r\n\r\n  script:SetNetworkedCustomProperty(\"Health\", health)\r\n\r\n  if health <= 0 then\r\n    Task.Wait()\r\n    if Object.IsValid(VEHICLE) then\r\n      if VEHICLE:IsA(\"Vehicle\") then\r\n        VEHICLE:RemoveDriver()\r\n      end\r\n      VEHICLE:Destroy()\r\n    end\r\n  end\r\nend\r\n\r\nfunction EjectPlayer(player)\r\n  -- AddImpulse snippet from Core docs\r\n  player:SetVelocity(Vector3.UP * 1000)\r\n  -- We can read the player\'s velocity in order to double it! Note that since we\'re adding\r\n  -- a physics impulse directly, we need to scale it by the mass of the player.\r\n  player:AddImpulse(player:GetVelocity() * player.mass)\r\n  -- Fling the player some more.\r\n  player:AddImpulse(Vector3.UP * player.mass * 1000)\r\n  Task.Wait(0.5)\r\n  -- Reset their velocity to zero.\r\n  player:ResetVelocity()\r\nend\r\n\r\nfunction DestroyVehicle()\r\n  script:SetNetworkedCustomProperty(\"Health\", 0)\r\n  Task.Wait()\r\n  if Object.IsValid(VEHICLE) then\r\n    if VEHICLE:IsA(\"Vehicle\") then\r\n      local driver = VEHICLE.driver\r\n      if driver then\r\n        VEHICLE:RemoveDriver()\r\n        EjectPlayer(driver)\r\n      end\r\n    end\r\n    VEHICLE:Destroy()\r\n  end\r\nend\r\n\r\nfunction OnRoundEnd()\r\n  if Object.IsValid(VEHICLE) then\r\n    local driver = VEHICLE.driver\r\n      if driver then\r\n        VEHICLE:RemoveDriver()\r\n        EjectPlayer(driver)\r\n      end\r\n    VEHICLE:Destroy()\r\n  end\r\nend\r\n\r\nGame.roundEndEvent:Connect(OnRoundEnd)"
-        CustomParameters {
-          Overrides {
-            Name: "cs:Health"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:MaxHealth"
-            Float: 100
-          }
-          Overrides {
-            Name: "cs:AllowFriendlyFire"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:VehicleDamagedFX"
-            AssetReference {
-              Id: 16458517710932868887
-            }
-          }
-          Overrides {
-            Name: "cs:VehicleDestroyedFX"
-            AssetReference {
-              Id: 15690917881524980754
-            }
-          }
-          Overrides {
-            Name: "cs:DamagedThreshold"
-            Float: 50
-          }
-          Overrides {
-            Name: "cs:Health:isrep"
-            Bool: true
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 15690917881524980754
-      Name: "VehiclePack_VehicleExplosion"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 412745098073306237
-          Objects {
-            Id: 412745098073306237
-            Name: "VehicleExplosion"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 12126354972290805565
-            ChildIds: 13732278646488143624
-            Lifespan: 4
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 17410249809195227793
-              }
-              TeamSettings {
-              }
-              Vfx {
-                AutoPlay: true
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 12126354972290805565
-            Name: "DebrisClient"
-            Transform {
-              Location {
-                Z: 44.0046692
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 412745098073306237
-            ChildIds: 18211911335708873490
-            ChildIds: 18119903062629265801
-            ChildIds: 3842509725547029825
-            ChildIds: 4588385375869089272
-            ChildIds: 1338370044766921177
-            ChildIds: 3943590998965100046
-            ChildIds: 6637272543814333655
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Script {
-              ScriptAsset {
-                Id: 116515112007023451
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 18211911335708873490
-            Name: "Urban Vehicle Car - Brake 01"
-            Transform {
-              Location {
-                X: 21.3129578
-                Y: 12.4555664
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 6209556876010214815
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 18119903062629265801
-            Name: "Urban Vehicle Car - Single Exhaust 02"
-            Transform {
-              Location {
-                X: -17.8294983
-                Y: 3.63232422
-                Z: 9.15527344e-05
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1.94034457
-                Y: 1.94034457
-                Z: 1.94034457
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 4109818814917021309
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 3842509725547029825
-            Name: "Urban Vehicle Car - Single Exhaust 01"
-            Transform {
-              Location {
-                X: -11.2989197
-                Y: -18.4377441
-                Z: 3.05175781e-05
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1.79012215
-                Y: 1.79012215
-                Z: 1.79012215
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 2367890283897712733
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 4588385375869089272
-            Name: "Urban Vehicle Car - Storage Rack Bottom Rail 01"
-            Transform {
-              Location {
-                X: -39.6666565
-                Y: 41.0739746
-                Z: 9.15527344e-05
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1.83127701
-                Y: 1.83127701
-                Z: 1.83127701
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 13724243919183108251
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 1338370044766921177
-            Name: "Urban Vehicle Car - Storage Rack Bottom End 01"
-            Transform {
-              Location {
-                X: 56.1035461
-                Y: -45.390625
-                Z: 18.9609375
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1.29216588
-                Y: 1.29216588
-                Z: 1.29216588
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 1667319647809949701
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 3943590998965100046
-            Name: "Urban Vehicle Car - Tire 01"
-            Transform {
-              Location {
-                X: -50.9590759
-                Y: 25.3830566
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 10493976187644509689
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 6637272543814333655
-            Name: "Urban Vehicle Car - Tire 01"
-            Transform {
-              Location {
-                X: 42.337677
-                Y: -18.717041
-                Z: 12.1520386
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 12126354972290805565
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 10493976187644509689
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              StaticMesh {
-                Physics {
-                  IsEnabled: true
-                  Mass: 100
-                  LinearDamping: 0.01
-                }
-                BoundsScale: 1
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 13732278646488143624
-            Name: "Explosion Creation & Construction Kit 01 SFX"
-            Transform {
-              Location {
-                Z: 44.0046692
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 412745098073306237
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:Explosion Type 1"
-                Enum {
-                  Value: "mc:esfx_explosions:25"
-                }
-              }
-              Overrides {
-                Name: "bp:Sweetener Sub Type"
-                Enum {
-                  Value: "mc:esfx_explosions_sw_sub:17"
-                }
-              }
-              Overrides {
-                Name: "bp:Sweetener Impact Type 2"
-                Enum {
-                  Value: "mc:esfx_explosions_sw_impact:18"
-                }
-              }
-              Overrides {
-                Name: "bp:Sweetener Impact Type 1"
-                Enum {
-                  Value: "mc:esfx_explosions_sw_impact:21"
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 6970563607933101105
-              }
-              TeamSettings {
-              }
-              AudioBP {
-                AutoPlay: true
-                Transient: true
-                Volume: 1.42647672
-                Falloff: 5731.35498
-                Radius: 654.981384
-                EnableOcclusion: true
-                IsSpatializationEnabled: true
-                IsAttenuationEnabled: true
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 6970563607933101105
-      Name: "Explosion Creation & Construction Kit 01 SFX"
-      PlatformAssetType: 10
+      Id: 13143398275891297190
+      Name: "Vehicle Car Tire Skid Screech Drift Loop 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_explosion_construction_kit_ref"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_vehicle_car_tire_skid_screech_drift_loop_01_Cue_ref"
       }
     }
     Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 1667319647809949701
-      Name: "Urban Vehicle Car - Storage Rack Bottom End 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rack_storage_rail_001_bottom_end_001_ref"
-      }
-    }
-    Assets {
-      Id: 13724243919183108251
-      Name: "Urban Vehicle Car - Storage Rack Bottom Rail 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rack_storage_rail_bottom_mid_001_ref"
-      }
-    }
-    Assets {
-      Id: 2367890283897712733
-      Name: "Urban Vehicle Car - Single Exhaust 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_exhaust_single_001_ref"
-      }
-    }
-    Assets {
-      Id: 4109818814917021309
-      Name: "Urban Vehicle Car - Single Exhaust 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_exhaust_single_002_ref"
-      }
-    }
-    Assets {
-      Id: 116515112007023451
-      Name: "VehiclePack_DebrisClient"
-      PlatformAssetType: 3
-      TextAsset {
-        Text: "--[[\r\n  Copyright 2021 Manticore Games, Inc.\r\n  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\r\n  documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\r\n  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\r\n  persons to whom the Software is furnished to do so, subject to the following conditions:\r\n  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the\r\n  Software.\r\n  \r\n  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\r\n  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\r\n  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\r\n  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\r\n--]]\r\n\r\nlocal EXPLOSION_FORCE = 450\r\n\r\nfunction ExplodeChildren()\r\n  local rng = RandomStream.New()\r\n\r\n  local epicenter = script:GetWorldPosition()\r\n\r\n  for _, child in ipairs(script:GetChildren()) do\r\n      -- Enable client physics\r\n      child.isSimulatingDebrisPhysics = true\r\n      -- Impulse vector\r\n      local direction = (child:GetWorldPosition() - epicenter):GetNormalized()\r\n      child:SetVelocity((rng:GetVector3() + direction * 2) * EXPLOSION_FORCE)\r\n  end\r\nend\r\n\r\nTask.Wait()\r\n\r\nExplodeChildren()"
-        CustomParameters {
-        }
-      }
-    }
-    Assets {
-      Id: 17410249809195227793
-      Name: "Ground Explosion VFX"
+      Id: 17687337846913016913
+      Name: "Smoke Volume VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_mil_explosion_ground"
+        AssetId: "fxbp_smoke_volume_vfx"
       }
     }
     Assets {
-      Id: 16458517710932868887
-      Name: "VehiclePack_VehicleFire"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 1800483671356611867
-          Objects {
-            Id: 1800483671356611867
-            Name: "VehicleFire"
-            Transform {
-              Scale {
-                X: 2.69693065
-                Y: 1.86626303
-                Z: 1.86626303
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 2101370424497517939
-            ChildIds: 963517461540918575
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:Particle Scale Multiplier"
-                Float: 0.757217
-              }
-              Overrides {
-                Name: "bp:Density"
-                Float: 1.64127624
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 6474768715633236406
-              }
-              TeamSettings {
-              }
-              Vfx {
-                AutoPlay: true
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:medium"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 2101370424497517939
-            Name: "Fire and Flame Burning Loop Set 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 1800483671356611867
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 4524004223631073795
-              }
-              TeamSettings {
-              }
-              AudioBP {
-                AutoPlay: true
-                Transient: true
-                Volume: 0.66290772
-                Falloff: 3600
-                Radius: 400
-                EnableOcclusion: true
-                IsSpatializationEnabled: true
-                IsAttenuationEnabled: true
-              }
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 963517461540918575
-            Name: "Smoke Volume VFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 0.954674959
-                Y: 1.05293536
-                Z: 0.53583014
-              }
-            }
-            ParentId: 1800483671356611867
-            UnregisteredParameters {
-              Overrides {
-                Name: "bp:Particle Scale Multiplier"
-                Float: 1.26239371
-              }
-              Overrides {
-                Name: "bp:Density"
-                Float: 0.946658254
-              }
-              Overrides {
-                Name: "bp:Color"
-                Color {
-                  R: 0.422000021
-                  G: 0.422000021
-                  B: 0.422000021
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Blueprint {
-              BlueprintAsset {
-                Id: 17687337846913016913
-              }
-              TeamSettings {
-              }
-              Vfx {
-                AutoPlay: true
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:medium"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 4524004223631073795
-      Name: "Fire and Flame Burning Loop Set 01 SFX"
-      PlatformAssetType: 10
-      PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_nature_fireloops_ref"
-      }
-    }
-    Assets {
-      Id: 6474768715633236406
-      Name: "Fire Volume VFX"
+      Id: 13163283878713838134
+      Name: "Tank Tread Trail VFX"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_fire_volume_vfx"
+        AssetId: "fxbp_smooth_tankTread_trail"
+      }
+    }
+    Assets {
+      Id: 8919871824294249785
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 16630259605395466384
+      Name: "Frosted Glass"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_frosted_glass"
+      }
+    }
+    Assets {
+      Id: 12190463340827898157
+      Name: "Ring"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_004"
       }
     }
     PrimaryAssetId {
@@ -25935,4 +23357,3 @@ Assets {
   }
   SerializationVersion: 103
 }
-IncludesAllDependencies: true

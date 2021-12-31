@@ -5547,7 +5547,6 @@ Objects {
   }
   ParentId: 17212085827600267809
   ChildIds: 15480859360796277606
-  ChildIds: 10613821926654660552
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5593,18 +5592,18 @@ Objects {
   }
 }
 Objects {
-  Id: 10613821926654660552
-  Name: "Garage Kart Upgrades Menu Panel"
+  Id: 15480859360796277606
+  Name: "Garage Karts Main Menu Panel"
   Transform {
     Location {
       X: 2261.0874
-      Y: -21.6047611
-      Z: -421.621094
+      Y: -21.6047363
+      Z: -421.621063
     }
     Rotation {
       Pitch: 0.00513630174
       Yaw: 88.9039917
-      Roll: 0.268322408
+      Roll: 0.268322468
     }
     Scale {
       X: 1
@@ -5613,10 +5612,8 @@ Objects {
     }
   }
   ParentId: 3508418160663392510
-  ChildIds: 14620336332082569881
+  ChildIds: 9258645056405633466
   ChildIds: 18119456735426334382
-  ChildIds: 2059056636412982146
-  ChildIds: 3750629515972050201
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5659,6 +5656,76 @@ Objects {
   }
 }
 Objects {
+  Id: 18119456735426334382
+  Name: "Garage Kart Upgrades Buttons Panel"
+  Transform {
+    Location {
+      X: -43.2218628
+      Y: 4518.17383
+      Z: 864.414429
+    }
+    Rotation {
+      Pitch: -0.273494422
+      Yaw: -177.809219
+      Roll: 0.268328577
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15480859360796277606
+  ChildIds: 14620336332082569881
+  ChildIds: 5748521816965573876
+  ChildIds: 5291404624555088359
+  ChildIds: 12511364770560982538
+  ChildIds: 14156187062000501801
+  ChildIds: 2059056636412982146
+  ChildIds: 3750629515972050201
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIY: 20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 3750629515972050201
   Name: "Purchase Button"
   Transform {
@@ -5675,7 +5742,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10613821926654660552
+  ParentId: 18119456735426334382
   ChildIds: 5327848604151860327
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5692,7 +5759,7 @@ Objects {
   Control {
     Width: 200
     Height: 50
-    UIY: -50
+    UIY: 778.64917
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5860,7 +5927,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10613821926654660552
+  ParentId: 18119456735426334382
   ChildIds: 17568572221425858163
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5877,7 +5944,7 @@ Objects {
   Control {
     Width: 200
     Height: 50
-    UIY: -50
+    UIY: 778.64917
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -6020,71 +6087,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 18119456735426334382
-  Name: "Garage Karts Buttons Panel"
-  Transform {
-    Location {
-      X: -43.2218628
-      Y: 4518.17383
-      Z: 864.414429
-    }
-    Rotation {
-      Pitch: -0.273494422
-      Yaw: -177.809219
-      Roll: 0.268328577
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10613821926654660552
-  ChildIds: 5291404624555088359
-  ChildIds: 14156187062000501801
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 100
-    Height: 100
-    UIY: 20
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Panel {
-      Opacity: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -6256,6 +6258,118 @@ Objects {
   }
 }
 Objects {
+  Id: 12511364770560982538
+  Name: "ArrowSmallBack"
+  Transform {
+    Location {
+      X: 2261.09106
+      Y: -21.6040039
+      Z: -421.621277
+    }
+    Rotation {
+      Pitch: 0.00513630174
+      Yaw: 88.9039917
+      Roll: 0.268322468
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18119456735426334382
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 50
+    Height: 20
+    UIX: -290
+    RotationAngle: -90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Back"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 10
+      ButtonColor {
+        G: 0.89
+        B: 0.607086241
+        A: 0.781
+      }
+      HoveredColor {
+        R: 0.31437093
+        B: 0.470000029
+        A: 1
+      }
+      PressedColor {
+        R: 0.760264814
+        B: 0.820000052
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6174803333271868359
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 5291404624555088359
   Name: "Choose Upgrade"
   Transform {
@@ -6283,7 +6397,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6676,17 +6790,18 @@ Objects {
   }
 }
 Objects {
-  Id: 14620336332082569881
-  Name: "KartUpgradesMenuClient"
+  Id: 5748521816965573876
+  Name: "Edit Vehicle"
   Transform {
     Location {
-      X: 2239.47754
-      Y: 2237.4812
-      Z: 10.5863361
+      X: -21.6118164
+      Y: 2259.09204
+      Z: 432.207214
     }
     Rotation {
-      Yaw: 1.0245285e-05
-      Roll: 2.00103216e-07
+      Pitch: -0.268364936
+      Yaw: -88.9039917
+      Roll: 3.00158081e-06
     }
     Scale {
       X: 1
@@ -6694,8 +6809,216 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10613821926654660552
+  ParentId: 18119456735426334382
+  ChildIds: 6382070138050709589
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 380
+    Height: 80
+    UIY: 10
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Button {
+      Label: "Edit Vehicle"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 20
+      ButtonColor {
+        A: 0.742000043
+      }
+      HoveredColor {
+        R: 0.31
+        G: 0.410529554
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.269999981
+        G: 1
+        B: 0.550397515
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 6334699134008261182
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 6363320609941978136
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6382070138050709589
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -0.000244140596
+      Y: 0.000244140654
+      Z: -3.05175781e-05
+    }
+    Rotation {
+      Yaw: -6.83018879e-06
+      Roll: -2.66804339e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5748521816965573876
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 11996370362624858284
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14620336332082569881
+  Name: "GarageKartUpgradesMenuClient"
+  Transform {
+    Location {
+      X: -17.5168457
+      Y: 2266.46582
+      Z: -1275.22473
+    }
+    Rotation {
+      Pitch: -0.278425813
+      Yaw: -93.2868271
+      Roll: 0.0106624374
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18119456735426334382
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:GarageKartsButtonsPanel"
+      ObjectReference {
+        SelfId: 9258645056405633466
+      }
+    }
+    Overrides {
+      Name: "cs:GarageKartUpgradesButtonsPanel"
+      ObjectReference {
+        SelfId: 18119456735426334382
+      }
+    }
+    Overrides {
+      Name: "cs:EditVehicleButton"
+      ObjectReference {
+        SelfId: 5748521816965573876
+      }
+    }
     Overrides {
       Name: "cs:SelectUpgradeButton"
       ObjectReference {
@@ -6766,6 +7089,12 @@ Objects {
       Name: "cs:PurchaseButton"
       ObjectReference {
         SelfId: 3750629515972050201
+      }
+    }
+    Overrides {
+      Name: "cs:BackButton"
+      ObjectReference {
+        SelfId: 12511364770560982538
       }
     }
     Overrides {
@@ -6864,6 +7193,22 @@ Objects {
       Name: "cs:PurchaseButton:ml"
       Bool: false
     }
+    Overrides {
+      Name: "cs:GarageKartsButtonsPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageKartsButtonsPanel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageKartUpgradesButtonsPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageKartUpgradesButtonsPanel:ml"
+      Bool: false
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6887,18 +7232,18 @@ Objects {
   }
 }
 Objects {
-  Id: 15480859360796277606
-  Name: "Garage Karts Main Menu Panel"
+  Id: 9258645056405633466
+  Name: "Garage Karts Buttons Panel"
   Transform {
     Location {
-      X: 2261.0874
-      Y: -21.6047363
-      Z: -421.621063
+      X: -43.2218628
+      Y: 4518.17383
+      Z: 864.414429
     }
     Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.9039917
-      Roll: 0.268322468
+      Pitch: -0.273494422
+      Yaw: -177.809219
+      Roll: 0.268328577
     }
     Scale {
       X: 1
@@ -6906,9 +7251,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3508418160663392510
+  ParentId: 15480859360796277606
   ChildIds: 4924766196821982691
-  ChildIds: 9258645056405633466
+  ChildIds: 3964049384728287737
+  ChildIds: 17334094853589001721
+  ChildIds: 16722195673712083149
   ChildIds: 9007976052208323057
   ChildIds: 4699498921552161450
   Collidable_v2 {
@@ -6924,14 +7271,15 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 2070
-    Height: 1093
+    Width: 100
+    Height: 100
+    UIY: 20
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    UseParentHeight: true
+    UseParentWidth: true
     Panel {
       Opacity: 1
     }
@@ -6969,7 +7317,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   ChildIds: 743496987393925043
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -6986,7 +7334,7 @@ Objects {
   Control {
     Width: 200
     Height: 50
-    UIY: -50
+    UIY: 778.64917
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7154,7 +7502,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   ChildIds: 94549970345308118
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -7171,7 +7519,7 @@ Objects {
   Control {
     Width: 200
     Height: 50
-    UIY: -50
+    UIY: 778.64917
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7314,72 +7662,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 9258645056405633466
-  Name: "Garage Karts Buttons Panel"
-  Transform {
-    Location {
-      X: -43.2218628
-      Y: 4518.17383
-      Z: 864.414429
-    }
-    Rotation {
-      Pitch: -0.273494422
-      Yaw: -177.809219
-      Roll: 0.268328577
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15480859360796277606
-  ChildIds: 3964049384728287737
-  ChildIds: 17334094853589001721
-  ChildIds: 16722195673712083149
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 100
-    Height: 100
-    UIY: 20
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    Panel {
-      Opacity: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -8087,14 +8369,14 @@ Objects {
   Name: "GarageKartsMenuClient"
   Transform {
     Location {
-      X: 5882.56299
-      Y: 6850.87695
-      Z: 10.965416
+      X: -6006.48242
+      Y: -2100.32251
+      Z: -891.976257
     }
     Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.9040146
-      Roll: 0.268322468
+      Pitch: -0.278425813
+      Yaw: -93.2868042
+      Roll: 0.010662104
     }
     Scale {
       X: 1
@@ -8102,7 +8384,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15480859360796277606
+  ParentId: 9258645056405633466
   UnregisteredParameters {
     Overrides {
       Name: "cs:GarageMainMenuPanel"
@@ -8114,6 +8396,18 @@ Objects {
       Name: "cs:GarageKartsMenuPanel"
       ObjectReference {
         SelfId: 15480859360796277606
+      }
+    }
+    Overrides {
+      Name: "cs:GarageKartsButtonsPanel"
+      ObjectReference {
+        SelfId: 9258645056405633466
+      }
+    }
+    Overrides {
+      Name: "cs:GarageKartUpgradesButtonsPanel"
+      ObjectReference {
+        SelfId: 18119456735426334382
       }
     }
     Overrides {
