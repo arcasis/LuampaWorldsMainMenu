@@ -195,7 +195,7 @@ function Tick(deltaTime)
     if KARTS_MENU_PANEL.visibility == Visibility.INHERIT then
 
         if menuOpen == false then
-            KARTS_BUTTONS_PANEL.visibility == Visibility.INHERIT
+            KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
             ProcessIndex()
         end
         menuOpen = true

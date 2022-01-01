@@ -1,12 +1,10 @@
 -- Core Object References
-local KARTS_MENU_PANEL = script:GetCustomProperty("GarageKartsMenuPanel"):WaitForObject()
 local KARTS_BUTTONS_PANEL = script:GetCustomProperty("GarageKartsButtonsPanel"):WaitForObject()
 local KART_UPGRADES_BUTTONS_PANEL = script:GetCustomProperty("GarageKartUpgradesButtonsPanel"):WaitForObject()
 
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
 local EDIT_VEHICLE_BUTTON = script:GetCustomProperty("EditVehicleButton"):WaitForObject()
-local EDIT_VEHICLE_IMAGE = script:GetCustomProperty("EditVehicleImage"):WaitForObject()
 local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForObject()
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
@@ -14,7 +12,7 @@ local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):Wait
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
-local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
+local BUTTON_ON_COLOR = Color.New(Color.WHITE)
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
 local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultKartGeoFolder"):WaitForObject()

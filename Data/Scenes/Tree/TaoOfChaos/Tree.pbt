@@ -4246,11 +4246,8 @@ Objects {
   ParentId: 16057713092089398908
   ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
-  ChildIds: 12056401378719592435
-  ChildIds: 4496507480726526384
-  ChildIds: 529580595855855948
+  ChildIds: 2935919495293603488
   ChildIds: 9856664457127402301
-  ChildIds: 10738265668739068418
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -4270,62 +4267,8 @@ Objects {
   }
 }
 Objects {
-  Id: 10738265668739068418
-  Name: "Vehicle Status Text"
-  Transform {
-    Location {
-      X: -622.455566
-      Y: -2693.21436
-      Z: 925.178894
-    }
-    Rotation {
-      Pitch: -0.268358111
-      Yaw: -88.9040222
-      Roll: 2.70809278e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17212085827600267809
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Text {
-    Text: "Owned"
-    FontAsset {
-    }
-    Color {
-      R: 1
-      G: 1
-      B: 1
-      A: 1
-    }
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 9856664457127402301
-  Name: "Kart Geo - Upgrades"
+  Name: "Kart Upgrades Geo"
   Transform {
     Location {
       X: -713.619873
@@ -4344,12 +4287,9 @@ Objects {
     }
   }
   ParentId: 17212085827600267809
-  ChildIds: 14382756943614794567
-  ChildIds: 2102387434237078965
-  ChildIds: 8771237922685694625
-  ChildIds: 5946142264339665643
-  ChildIds: 12767826725224666325
-  ChildIds: 3073354275223129881
+  ChildIds: 17586607408906963397
+  ChildIds: 7613483076811468070
+  ChildIds: 12289211863630281081
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4370,14 +4310,14 @@ Objects {
   }
 }
 Objects {
-  Id: 3073354275223129881
-  Name: "Kart 6"
+  Id: 12289211863630281081
+  Name: "Kart Upgrades - Owned"
   Transform {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Yaw: 3.07358496e-05
+      Roll: -3.33507977e-08
     }
     Scale {
       X: 1
@@ -4386,6 +4326,3874 @@ Objects {
     }
   }
   ParentId: 9856664457127402301
+  ChildIds: 3788513141072373076
+  ChildIds: 3369347339218468022
+  ChildIds: 835852731972917762
+  ChildIds: 15055340840058946557
+  ChildIds: 11662910517423485631
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11662910517423485631
+  Name: "Kart 5"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12289211863630281081
+  ChildIds: 7622927587035967875
+  ChildIds: 7125052564218228232
+  ChildIds: 7796551273067106164
+  ChildIds: 7513723259094530847
+  ChildIds: 10688750242458541671
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10688750242458541671
+  Name: "GEO - Vendetta Vespa Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 110.048645
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 11662910517423485631
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3790898199827313873
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00108009577
+            Y: 0.054724507
+            Z: -11.9269371
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11642181338662207462
+    }
+  }
+}
+Objects {
+  Id: 7513723259094530847
+  Name: "GEO - Shopping Kart Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 46.3589172
+      Z: 120.500259
+    }
+    Rotation {
+      Pitch: -1.63899255
+      Yaw: 67.192337
+      Roll: 0.26299718
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 11662910517423485631
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14913928856661135900
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0062037
+            Y: 4.63338375
+            Z: -1.45520151
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.64419031
+            Yaw: -2.7331489e-05
+            Roll: 5.52285485e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6133784542686929612
+    }
+  }
+}
+Objects {
+  Id: 7796551273067106164
+  Name: "GEO - buggy bug Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 41.8816833
+      Z: 120.483749
+    }
+    Rotation {
+      Pitch: -3.35116386
+      Yaw: 67.1845932
+      Roll: 0.263339221
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 11662910517423485631
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3310691352632127506
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6.8788085
+            Y: 2.89847183
+            Z: -1.47929811
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -3.35637522
+            Yaw: 0.000123014164
+            Roll: -6.1462e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8883611779929351183
+    }
+  }
+}
+Objects {
+  Id: 7125052564218228232
+  Name: "GEO - Old Timey Kart Large"
+  Transform {
+    Location {
+      X: 11.0062037
+      Y: 4.63338375
+      Z: -1.45520151
+    }
+    Rotation {
+      Yaw: -1.70754702e-05
+      Roll: 1.13391792e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11662910517423485631
+  ChildIds: 2705512978435453500
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2705512978435453500
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 158.92244
+      Y: -272.430634
+      Z: 418.240021
+    }
+    Rotation {
+      Pitch: -0.244363666
+      Yaw: -67.199852
+      Roll: -0.0970961452
+    }
+    Scale {
+      X: 1
+      Y: 1.7
+      Z: 1.7
+    }
+  }
+  ParentId: 7125052564218228232
+  ChildIds: 16492018159490518489
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Old Timey Kart"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16492018159490518489
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 2705512978435453500
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7622927587035967875
+  Name: "GEO - Electric Blue Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 99.6434174
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 11662910517423485631
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 139246566092430045
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00202237815
+            Y: 0.102466427
+            Z: -22.332056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10207102980281913416
+    }
+  }
+}
+Objects {
+  Id: 15055340840058946557
+  Name: "Kart 4"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12289211863630281081
+  ChildIds: 13885386122018785678
+  ChildIds: 11221371992924006517
+  ChildIds: 5873558343244620889
+  ChildIds: 8470367918813799236
+  ChildIds: 997152968327349081
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 997152968327349081
+  Name: "GEO - Vendetta Vespa Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 110.048645
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 15055340840058946557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3790898199827313873
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00108009577
+            Y: 0.054724507
+            Z: -11.9269371
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11642181338662207462
+    }
+  }
+}
+Objects {
+  Id: 8470367918813799236
+  Name: "GEO - Electric Blue Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 99.6434174
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 15055340840058946557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 139246566092430045
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00202237815
+            Y: 0.102466427
+            Z: -22.332056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10207102980281913416
+    }
+  }
+}
+Objects {
+  Id: 5873558343244620889
+  Name: "GEO - Old Timey Kart Large"
+  Transform {
+    Location {
+      X: 11.0062037
+      Y: 4.63338375
+      Z: -1.45520151
+    }
+    Rotation {
+      Yaw: -1.70754702e-05
+      Roll: 1.13391792e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15055340840058946557
+  ChildIds: 6191103634060669852
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6191103634060669852
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 158.92244
+      Y: -272.430634
+      Z: 418.240021
+    }
+    Rotation {
+      Pitch: -0.244363666
+      Yaw: -67.199852
+      Roll: -0.0970961452
+    }
+    Scale {
+      X: 1
+      Y: 1.7
+      Z: 1.7
+    }
+  }
+  ParentId: 5873558343244620889
+  ChildIds: 8079502452908191590
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Old Timey Kart"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8079502452908191590
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 6191103634060669852
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11221371992924006517
+  Name: "GEO - buggy bug Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 41.8816833
+      Z: 120.483749
+    }
+    Rotation {
+      Pitch: -3.35116386
+      Yaw: 67.1845627
+      Roll: 0.263339132
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 15055340840058946557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3310691352632127506
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6.8788085
+            Y: 2.89847183
+            Z: -1.47929811
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -3.35637522
+            Yaw: 8.88630311e-05
+            Roll: -1.10879466e-06
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8883611779929351183
+    }
+  }
+}
+Objects {
+  Id: 13885386122018785678
+  Name: "GEO - Shopping Kart Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 46.3589172
+      Z: 120.500259
+    }
+    Rotation {
+      Pitch: -1.63899255
+      Yaw: 67.192337
+      Roll: 0.26299718
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 15055340840058946557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14913928856661135900
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0062037
+            Y: 4.63338375
+            Z: -1.45520151
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.64419031
+            Yaw: -2.7331489e-05
+            Roll: 5.52285485e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6133784542686929612
+    }
+  }
+}
+Objects {
+  Id: 835852731972917762
+  Name: "Kart 3"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12289211863630281081
+  ChildIds: 549283231128643312
+  ChildIds: 5624824783335141119
+  ChildIds: 14458458592881717449
+  ChildIds: 11283124280678419938
+  ChildIds: 16479797734039581090
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16479797734039581090
+  Name: "GEO - Vendetta Vespa Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 110.048645
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 835852731972917762
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3790898199827313873
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00108009577
+            Y: 0.054724507
+            Z: -11.9269371
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11642181338662207462
+    }
+  }
+}
+Objects {
+  Id: 11283124280678419938
+  Name: "GEO - Shopping Kart Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 46.3589172
+      Z: 120.500259
+    }
+    Rotation {
+      Pitch: -1.63899255
+      Yaw: 67.192337
+      Roll: 0.26299718
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 835852731972917762
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14913928856661135900
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0062037
+            Y: 4.63338375
+            Z: -1.45520151
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.64419031
+            Yaw: -2.7331489e-05
+            Roll: 5.52285485e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6133784542686929612
+    }
+  }
+}
+Objects {
+  Id: 14458458592881717449
+  Name: "GEO - buggy bug Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 41.8816833
+      Z: 120.483749
+    }
+    Rotation {
+      Pitch: -3.35115695
+      Yaw: 67.1845398
+      Roll: 0.263339341
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 835852731972917762
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3310691352632127506
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6.8788085
+            Y: 2.89847183
+            Z: -1.47929811
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -3.35637522
+            Yaw: 6.49296926e-05
+            Roll: -5.14351e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8883611779929351183
+    }
+  }
+}
+Objects {
+  Id: 5624824783335141119
+  Name: "GEO - Old Timey Kart Large"
+  Transform {
+    Location {
+      X: 11.0062037
+      Y: 4.63338375
+      Z: -1.45520151
+    }
+    Rotation {
+      Yaw: -1.70754702e-05
+      Roll: 9.33814803e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 835852731972917762
+  ChildIds: 9487106923935023409
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9487106923935023409
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 158.92244
+      Y: -272.430634
+      Z: 418.240021
+    }
+    Rotation {
+      Pitch: -0.244363666
+      Yaw: -67.199852
+      Roll: -0.0970961452
+    }
+    Scale {
+      X: 1
+      Y: 1.7
+      Z: 1.7
+    }
+  }
+  ParentId: 5624824783335141119
+  ChildIds: 11829056177197365738
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Old Timey Kart"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11829056177197365738
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 9487106923935023409
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 549283231128643312
+  Name: "GEO - Electric Blue Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 99.6434174
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 835852731972917762
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 139246566092430045
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00202237815
+            Y: 0.102466427
+            Z: -22.332056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10207102980281913416
+    }
+  }
+}
+Objects {
+  Id: 3369347339218468022
+  Name: "Kart 2"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12289211863630281081
+  ChildIds: 10099116474850257891
+  ChildIds: 4104547247081197383
+  ChildIds: 4218105009351417119
+  ChildIds: 11523844572562958547
+  ChildIds: 12411172231710016325
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12411172231710016325
+  Name: "GEO - Vendetta Vespa Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 110.048645
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3369347339218468022
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3790898199827313873
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00108009577
+            Y: 0.054724507
+            Z: -11.9269371
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11642181338662207462
+    }
+  }
+}
+Objects {
+  Id: 11523844572562958547
+  Name: "GEO - Electric Blue Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196777
+      Z: 99.6434174
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3369347339218468022
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 139246566092430045
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00202237815
+            Y: 0.102466427
+            Z: -22.332056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 6.66196565e-09
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10207102980281913416
+    }
+  }
+}
+Objects {
+  Id: 4218105009351417119
+  Name: "GEO - Old Timey Kart Large"
+  Transform {
+    Location {
+      X: 11.0062037
+      Y: 4.63338375
+      Z: -1.45520151
+    }
+    Rotation {
+      Yaw: -1.70754702e-05
+      Roll: 6.00309491e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3369347339218468022
+  ChildIds: 212726217597352591
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 212726217597352591
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 158.92244
+      Y: -272.430634
+      Z: 418.240021
+    }
+    Rotation {
+      Pitch: -0.244363666
+      Yaw: -67.199852
+      Roll: -0.0970961452
+    }
+    Scale {
+      X: 1
+      Y: 1.7
+      Z: 1.7
+    }
+  }
+  ParentId: 4218105009351417119
+  ChildIds: 5784657366306106290
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Old Timey Kart"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5784657366306106290
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 212726217597352591
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4104547247081197383
+  Name: "GEO - buggy bug Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 41.8816833
+      Z: 120.483749
+    }
+    Rotation {
+      Pitch: -3.35116386
+      Yaw: 67.1845093
+      Roll: 0.263339132
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3369347339218468022
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3310691352632127506
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6.8788085
+            Y: 2.89847183
+            Z: -1.47929811
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -3.35637522
+            Yaw: 3.41855557e-05
+            Roll: -6.81277356e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8883611779929351183
+    }
+  }
+}
+Objects {
+  Id: 10099116474850257891
+  Name: "GEO - Shopping Kart Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 46.3589172
+      Z: 120.500259
+    }
+    Rotation {
+      Pitch: -1.63899255
+      Yaw: 67.192337
+      Roll: 0.262997121
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3369347339218468022
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14913928856661135900
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0062037
+            Y: 4.63338375
+            Z: -1.45520151
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.64419031
+            Yaw: -2.7331489e-05
+            Roll: 5.52285485e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6133784542686929612
+    }
+  }
+}
+Objects {
+  Id: 3788513141072373076
+  Name: "Kart 1"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12289211863630281081
+  ChildIds: 12585354611211652913
+  ChildIds: 7024287217543640288
+  ChildIds: 12031754196959404264
+  ChildIds: 17132372862675103536
+  ChildIds: 18065079753381155289
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18065079753381155289
+  Name: "GEO - Vendetta Vespa Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.420166
+      Z: 110.048645
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3788513141072373076
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3790898199827313873
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00108009577
+            Y: 0.054724507
+            Z: -11.9269371
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 1.3332067e-08
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 11642181338662207462
+    }
+  }
+}
+Objects {
+  Id: 17132372862675103536
+  Name: "GEO - Shopping Kart Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 46.3594055
+      Z: 120.500259
+    }
+    Rotation {
+      Pitch: -1.63899255
+      Yaw: 67.192337
+      Roll: 0.262997
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3788513141072373076
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14913928856661135900
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0062037
+            Y: 4.63338375
+            Z: -1.45520151
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.64419031
+            Yaw: -3.07453411e-05
+            Roll: 4.41172688e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6133784542686929612
+    }
+  }
+}
+Objects {
+  Id: 12031754196959404264
+  Name: "GEO - buggy bug Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 41.8821716
+      Z: 120.483749
+    }
+    Rotation {
+      Pitch: -3.35115695
+      Yaw: 67.1844711
+      Roll: 0.263339341
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3788513141072373076
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3310691352632127506
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6.8788085
+            Y: 2.89847183
+            Z: -1.47929811
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -3.35637522
+            Yaw: 3.4351483e-06
+            Roll: -6.34481353e-07
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8883611779929351183
+    }
+  }
+}
+Objects {
+  Id: 7024287217543640288
+  Name: "GEO - Old Timey Kart Large"
+  Transform {
+    Location {
+      X: 11.0062037
+      Y: 4.63338375
+      Z: -1.45520151
+    }
+    Rotation {
+      Yaw: -1.70754702e-05
+      Roll: 2.66804214e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3788513141072373076
+  ChildIds: 9827044340276861914
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9827044340276861914
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 158.92244
+      Y: -272.430634
+      Z: 418.240021
+    }
+    Rotation {
+      Pitch: -0.244363666
+      Yaw: -67.199852
+      Roll: -0.0970961452
+    }
+    Scale {
+      X: 1
+      Y: 1.7
+      Z: 1.7
+    }
+  }
+  ParentId: 7024287217543640288
+  ChildIds: 9751086429657770019
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Old Timey Kart"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9751086429657770019
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 9827044340276861914
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12585354611211652913
+  Name: "GEO - Electric Blue Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.420166
+      Z: 99.6434174
+    }
+    Rotation {
+      Pitch: 0.00523875467
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 3788513141072373076
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 139246566092430045
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.00202237815
+            Y: 0.102466427
+            Z: -22.332056
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 5.46415104e-05
+            Yaw: -1.70754702e-05
+            Roll: 1.3332067e-08
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10207102980281913416
+    }
+  }
+}
+Objects {
+  Id: 7613483076811468070
+  Name: "Kart Upgrades - Unlocked"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 1.36603776e-05
+      Roll: -1.33403413e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9856664457127402301
+  ChildIds: 16345178018211021053
+  ChildIds: 14814285862158787353
+  ChildIds: 13061969190711278954
+  ChildIds: 16725683472158394784
+  ChildIds: 2695385924440972134
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2695385924440972134
+  Name: "Kart 5"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7613483076811468070
+  ChildIds: 7627400372091642642
+  ChildIds: 7301287801257156570
+  ChildIds: 12483353272717646584
+  ChildIds: 15363073662881478384
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15363073662881478384
+  Name: "GEO - SkavAvenger UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.1416
+      Y: 22.0134392
+      Z: 151.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.205162
+      Roll: 1.57213259
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2695385924440972134
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -11.4024258
+            Y: -5.01638794
+            Z: 29.0046272
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000988112879
+            Roll: 1.30920744
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7549644669932872156
+    }
+  }
+}
+Objects {
+  Id: 12483353272717646584
+  Name: "GEO - Thrashed Battle Truck UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.10938
+      Y: 64.0160828
+      Z: 112.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.205162
+      Roll: 1.57213211
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2695385924440972134
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 27.3022041
+            Y: 11.4688625
+            Z: -9.92364883
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000988107873
+            Roll: 1.30920696
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15707896951489421267
+    }
+  }
+}
+Objects {
+  Id: 7301287801257156570
+  Name: "GEO - Rusty Beasty UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.08105
+      Y: 46.3681564
+      Z: 147.001587
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.205162
+      Roll: 1.57213259
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2695385924440972134
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0254402
+            Y: 4.49556637
+            Z: 25.0457726
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000988112879
+            Roll: 1.30920744
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3490354650252545231
+    }
+  }
+}
+Objects {
+  Id: 7627400372091642642
+  Name: "GEO - OG Tanker UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.07227
+      Y: -5.03002548
+      Z: 156.002075
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.205162
+      Roll: 1.57213259
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2695385924440972134
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - OG Tanker UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -36.3591881
+            Y: -15.4551239
+            Z: 33.9591064
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000988112879
+            Roll: 1.30920744
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17438479039680390717
+    }
+  }
+}
+Objects {
+  Id: 16725683472158394784
+  Name: "Kart 4"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7613483076811468070
+  ChildIds: 13191387945268684711
+  ChildIds: 4208773747120364478
+  ChildIds: 7390916247078301361
+  ChildIds: 931743591500032313
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 931743591500032313
+  Name: "GEO - SkavAvenger UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.1416
+      Y: 22.0134315
+      Z: 151.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051392
+      Roll: 1.57213306
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16725683472158394784
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -11.4024324
+            Y: -5.01639128
+            Z: 29.0046272
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000974455616
+            Roll: 1.30920804
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7549644669932872156
+    }
+  }
+}
+Objects {
+  Id: 7390916247078301361
+  Name: "GEO - OG Tanker UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.07227
+      Y: -5.03002167
+      Z: 156.002075
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051392
+      Roll: 1.57213306
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16725683472158394784
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - OG Tanker UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -36.3591881
+            Y: -15.4551239
+            Z: 33.9591064
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000974455616
+            Roll: 1.30920804
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17438479039680390717
+    }
+  }
+}
+Objects {
+  Id: 4208773747120364478
+  Name: "GEO - Rusty Beasty UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.08105
+      Y: 46.3681602
+      Z: 147.001587
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051392
+      Roll: 1.57213306
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16725683472158394784
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.025444
+            Y: 4.49556828
+            Z: 25.0457726
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000974455616
+            Roll: 1.30920804
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3490354650252545231
+    }
+  }
+}
+Objects {
+  Id: 13191387945268684711
+  Name: "GEO - Thrashed Battle Truck UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.10938
+      Y: 64.0161133
+      Z: 112.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051392
+      Roll: 1.57213247
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16725683472158394784
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 27.3022327
+            Y: 11.468874
+            Z: -9.92364883
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000974453113
+            Roll: 1.30920756
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15707896951489421267
+    }
+  }
+}
+Objects {
+  Id: 13061969190711278954
+  Name: "Kart 3"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7613483076811468070
+  ChildIds: 10372693920920566672
+  ChildIds: 14068939646349141845
+  ChildIds: 9035791745000080078
+  ChildIds: 4672879132027222828
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4672879132027222828
+  Name: "GEO - SkavAvenger UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.1416
+      Y: 22.0134354
+      Z: 151.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051239
+      Roll: 1.57213342
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13061969190711278954
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -11.4024296
+            Y: -5.01639
+            Z: 29.0046272
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000950554328
+            Roll: 1.30920851
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7549644669932872156
+    }
+  }
+}
+Objects {
+  Id: 9035791745000080078
+  Name: "GEO - Thrashed Battle Truck UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.10938
+      Y: 64.0161
+      Z: 112.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051239
+      Roll: 1.57213295
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13061969190711278954
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 27.3022099
+            Y: 11.4688663
+            Z: -9.92364883
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000950549322
+            Roll: 1.30920804
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15707896951489421267
+    }
+  }
+}
+Objects {
+  Id: 14068939646349141845
+  Name: "GEO - Rusty Beasty UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.08105
+      Y: 46.3681602
+      Z: 147.001587
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051239
+      Roll: 1.57213342
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13061969190711278954
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.025444
+            Y: 4.49556828
+            Z: 25.0457726
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000950554328
+            Roll: 1.30920851
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3490354650252545231
+    }
+  }
+}
+Objects {
+  Id: 10372693920920566672
+  Name: "GEO - OG Tanker UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.07227
+      Y: -5.03002548
+      Z: 156.002075
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051239
+      Roll: 1.57213342
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13061969190711278954
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - OG Tanker UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -36.3591881
+            Y: -15.4551239
+            Z: 33.9591064
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000950554328
+            Roll: 1.30920851
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17438479039680390717
+    }
+  }
+}
+Objects {
+  Id: 14814285862158787353
+  Name: "Kart 2"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Roll: -2.00103152e-08
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7613483076811468070
+  ChildIds: 3746972431074183682
+  ChildIds: 18358240391214638436
+  ChildIds: 16768403934596861149
+  ChildIds: 4291105157132160973
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4291105157132160973
+  Name: "GEO - SkavAvenger UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.1416
+      Y: 22.0134277
+      Z: 151.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051
+      Roll: 1.57213378
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14814285862158787353
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -11.4024363
+            Y: -5.01639271
+            Z: 29.0046272
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000933477422
+            Roll: 1.30920887
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7549644669932872156
+    }
+  }
+}
+Objects {
+  Id: 16768403934596861149
+  Name: "GEO - OG Tanker UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.07227
+      Y: -5.0300293
+      Z: 156.002075
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051
+      Roll: 1.57213378
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14814285862158787353
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - OG Tanker UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -36.3591919
+            Y: -15.4551258
+            Z: 33.9591064
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000933477422
+            Roll: 1.30920887
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17438479039680390717
+    }
+  }
+}
+Objects {
+  Id: 18358240391214638436
+  Name: "GEO - Rusty Beasty UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.08105
+      Y: 46.3681641
+      Z: 147.001587
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051
+      Roll: 1.57213378
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14814285862158787353
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0254478
+            Y: 4.49556923
+            Z: 25.0457726
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000933477422
+            Roll: 1.30920887
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3490354650252545231
+    }
+  }
+}
+Objects {
+  Id: 3746972431074183682
+  Name: "GEO - Thrashed Battle Truck UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.10938
+      Y: 64.0161133
+      Z: 112.002014
+    }
+    Rotation {
+      Pitch: 0.937607348
+      Yaw: 67.2051
+      Roll: 1.57213342
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14814285862158787353
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 27.3022327
+            Y: 11.468874
+            Z: -9.92364883
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000933473231
+            Roll: 1.30920839
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15707896951489421267
+    }
+  }
+}
+Objects {
+  Id: 16345178018211021053
+  Name: "Kart 1"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7613483076811468070
+  ChildIds: 2285329749709832160
+  ChildIds: 1060000196048607097
+  ChildIds: 15777241198587664485
+  ChildIds: 15205738699292179266
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15205738699292179266
+  Name: "GEO - Thrashed Battle Truck UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.10938
+      Y: 64.015625
+      Z: 112.002014
+    }
+    Rotation {
+      Pitch: 0.937614143
+      Yaw: 67.2050934
+      Roll: 1.57213426
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16345178018211021053
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1172344966692303612
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Thrashed Battle Truck UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 27.302227
+            Y: 11.4688702
+            Z: -9.92364883
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000923231593
+            Roll: 1.30920887
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15707896951489421267
+    }
+  }
+}
+Objects {
+  Id: 15777241198587664485
+  Name: "GEO - Rusty Beasty UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.08105
+      Y: 46.3676758
+      Z: 147.001648
+    }
+    Rotation {
+      Pitch: 0.937614143
+      Yaw: 67.2050934
+      Roll: 1.57213449
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16345178018211021053
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17090503063771570967
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Rusty Beasty UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 11.0254478
+            Y: 4.49556923
+            Z: 25.0457726
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000923235784
+            Roll: 1.30920923
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3490354650252545231
+    }
+  }
+}
+Objects {
+  Id: 1060000196048607097
+  Name: "GEO - OG Tanker UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.07227
+      Y: -5.03027344
+      Z: 156.002014
+    }
+    Rotation {
+      Pitch: 0.937614143
+      Yaw: 67.2050934
+      Roll: 1.57213449
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16345178018211021053
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12154118849744460852
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - OG Tanker UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -36.3591881
+            Y: -15.4551239
+            Z: 33.9591064
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000923235784
+            Roll: 1.30920923
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17438479039680390717
+    }
+  }
+}
+Objects {
+  Id: 2285329749709832160
+  Name: "GEO - SkavAvenger UNLOCKED"
+  Transform {
+    Location {
+      X: 6851.1416
+      Y: 22.0126953
+      Z: 151.001953
+    }
+    Rotation {
+      Pitch: 0.937614143
+      Yaw: 67.2050934
+      Roll: 1.57213449
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16345178018211021053
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 16898877154567548061
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - SkavAvenger UNLOCKED"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -11.4024324
+            Y: -5.01639128
+            Z: 29.0046272
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 0.932436883
+            Yaw: 0.000923235784
+            Roll: 1.30920923
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7549644669932872156
+    }
+  }
+}
+Objects {
+  Id: 17586607408906963397
+  Name: "Kart Upgrades - Locked"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9856664457127402301
+  ChildIds: 14382756943614794567
+  ChildIds: 2102387434237078965
+  ChildIds: 8771237922685694625
+  ChildIds: 5946142264339665643
+  ChildIds: 12767826725224666325
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4412,8 +8220,7 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Roll: -2.00103152e-08
     }
     Scale {
       X: 1
@@ -4421,7 +8228,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9856664457127402301
+  ParentId: 17586607408906963397
+  ChildIds: 16632847206863747550
+  ChildIds: 16175874078806961426
+  ChildIds: 14035481874999505515
+  ChildIds: 5544414761555870685
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4436,6 +8247,304 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5544414761555870685
+  Name: "GEO - Vendetta Vespa LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4203262
+      Z: 121.975708
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 12767826725224666325
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6745892828288036862
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000147698258
+            Y: 6.20864084e-05
+            Z: 2.71495878e-07
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 1.36603767e-05
+            Roll: -4.00206304e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1042466993702325011
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14035481874999505515
+  Name: "GEO - Electric Blue LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 126.433273
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999054
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 12767826725224666325
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1611418380828490329
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000551380217
+            Y: -0.0203903988
+            Z: 4.45751858
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 3.07358459e-05
+            Roll: -3.33505277e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14058778756781102909
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16175874078806961426
+  Name: "GEO - buggy bug LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4203262
+      Z: 124.942245
+    }
+    Rotation {
+      Pitch: -1.6741749
+      Yaw: 67.1921768
+      Roll: 0.263001382
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 12767826725224666325
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5249457651869618039
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000416351482
+            Y: -0.0135491686
+            Z: 2.96650648
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.67936587
+            Yaw: 1.70786243e-05
+            Roll: -9.02093902e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15461375151949101575
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16632847206863747550
+  Name: "GEO - Shopping Kart LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196587
+      Z: 117.513947
+    }
+    Rotation {
+      Pitch: -1.49370086
+      Yaw: 67.1930618
+      Roll: 0.262978375
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 12767826725224666325
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6799506153835956340
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.000421646051
+            Y: 0.0204643458
+            Z: -4.46171427
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.49890542
+            Yaw: 7.17256189e-05
+            Roll: -1.91138568e-07
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15187617135700661660
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -4448,8 +8557,7 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Roll: -2.00103152e-08
     }
     Scale {
       X: 1
@@ -4457,7 +8565,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9856664457127402301
+  ParentId: 17586607408906963397
+  ChildIds: 3130009597184905286
+  ChildIds: 10017324491221796338
+  ChildIds: 8390267463926976185
+  ChildIds: 14512314785132103847
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4472,6 +8584,304 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14512314785132103847
+  Name: "GEO - Vendetta Vespa LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 121.975708
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999435
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 5946142264339665643
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6745892828288036862
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000147698258
+            Y: 6.20864084e-05
+            Z: 2.71495878e-07
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 7.17169751e-05
+            Roll: -4.00206304e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1042466993702325011
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8390267463926976185
+  Name: "GEO - Electric Blue LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4203262
+      Z: 126.433273
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1998825
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 5946142264339665643
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1611418380828490329
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000551380217
+            Y: -0.0203903988
+            Z: 4.45751858
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 1.36603767e-05
+            Roll: -4.00206304e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14058778756781102909
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10017324491221796338
+  Name: "GEO - buggy bug LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 124.942245
+    }
+    Rotation {
+      Pitch: -1.67414761
+      Yaw: 67.1922379
+      Roll: 0.263001233
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 5946142264339665643
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5249457651869618039
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000416351482
+            Y: -0.0135491686
+            Z: 2.96650648
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.67935216
+            Yaw: 9.22247345e-05
+            Roll: -4.97795327e-07
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15461375151949101575
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3130009597184905286
+  Name: "GEO - Shopping Kart LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196587
+      Z: 117.513947
+    }
+    Rotation {
+      Pitch: -1.49370086
+      Yaw: 67.1930618
+      Roll: 0.262978375
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 5946142264339665643
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6799506153835956340
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.000421646051
+            Y: 0.0204643458
+            Z: -4.46171427
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.49890542
+            Yaw: 7.17256189e-05
+            Roll: -1.91138568e-07
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15187617135700661660
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -4484,8 +8894,7 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Roll: -2.00103152e-08
     }
     Scale {
       X: 1
@@ -4493,7 +8902,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9856664457127402301
+  ParentId: 17586607408906963397
+  ChildIds: 5428944010115138958
+  ChildIds: 17680221614932482007
+  ChildIds: 6552804353595284751
+  ChildIds: 12717182692897500764
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4514,14 +8927,311 @@ Objects {
   }
 }
 Objects {
+  Id: 12717182692897500764
+  Name: "GEO - Vendetta Vespa LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 121.975708
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999207
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 8771237922685694625
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6745892828288036862
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000147698258
+            Y: 6.20864084e-05
+            Z: 2.71495878e-07
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 5.46415031e-05
+            Roll: -4.66907295e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1042466993702325011
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6552804353595284751
+  Name: "GEO - Electric Blue LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 126.433273
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999435
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 8771237922685694625
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1611418380828490329
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000551380217
+            Y: -0.0203903988
+            Z: 4.45751858
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 7.17169751e-05
+            Roll: -4.00206304e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14058778756781102909
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 17680221614932482007
+  Name: "GEO - buggy bug LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 124.942245
+    }
+    Rotation {
+      Pitch: -1.67414761
+      Yaw: 67.1922073
+      Roll: 0.263001233
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 8771237922685694625
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5249457651869618039
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000416351482
+            Y: -0.0135491686
+            Z: 2.96650648
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.67935216
+            Yaw: 5.46544143e-05
+            Roll: -4.80824497e-07
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15461375151949101575
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5428944010115138958
+  Name: "GEO - Shopping Kart LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196587
+      Z: 117.513947
+    }
+    Rotation {
+      Pitch: -1.49370086
+      Yaw: 67.1930389
+      Roll: 0.262978435
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 8771237922685694625
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6799506153835956340
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.000421646051
+            Y: 0.0204643458
+            Z: -4.46171427
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.49890542
+            Yaw: 4.78166148e-05
+            Roll: -9.18426935e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15187617135700661660
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 2102387434237078965
   Name: "Kart 2"
   Transform {
     Location {
     }
     Rotation {
-      Yaw: 1.55300513e-18
-      Roll: -1.33402125e-08
+      Roll: -2.00103152e-08
     }
     Scale {
       X: 1
@@ -4529,7 +9239,11 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9856664457127402301
+  ParentId: 17586607408906963397
+  ChildIds: 5388052911237747725
+  ChildIds: 10108814080101280386
+  ChildIds: 11276858159764541799
+  ChildIds: 11233712595689531385
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4544,6 +9258,304 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11233712595689531385
+  Name: "GEO - Vendetta Vespa LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 121.975708
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999207
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 2102387434237078965
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6745892828288036862
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000147698258
+            Y: 6.20864084e-05
+            Z: 2.71495878e-07
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 5.46415031e-05
+            Roll: -4.66907295e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1042466993702325011
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11276858159764541799
+  Name: "GEO - Electric Blue LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 126.433273
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999207
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 2102387434237078965
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1611418380828490329
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000551380217
+            Y: -0.0203903988
+            Z: 4.45751858
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 5.46415031e-05
+            Roll: -4.66907295e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14058778756781102909
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10108814080101280386
+  Name: "GEO - buggy bug LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 124.942245
+    }
+    Rotation {
+      Pitch: -1.67414761
+      Yaw: 67.1922073
+      Roll: 0.263001233
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 2102387434237078965
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5249457651869618039
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000416351482
+            Y: -0.0135491686
+            Z: 2.96650648
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.67935216
+            Yaw: 5.46544143e-05
+            Roll: -4.80824497e-07
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15461375151949101575
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5388052911237747725
+  Name: "GEO - Shopping Kart LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4196587
+      Z: 117.513947
+    }
+    Rotation {
+      Pitch: -1.49370086
+      Yaw: 67.1930237
+      Roll: 0.262978494
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 2102387434237078965
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6799506153835956340
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.000421646051
+            Y: 0.0204643458
+            Z: -4.46171427
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.49890542
+            Yaw: 3.07388509e-05
+            Roll: -2.85420381e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15187617135700661660
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -4563,7 +9575,348 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9856664457127402301
+  ParentId: 17586607408906963397
+  ChildIds: 14055544296531178771
+  ChildIds: 2254345735393605727
+  ChildIds: 4496006512293082974
+  ChildIds: 14804526400367715642
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14804526400367715642
+  Name: "GEO - Electric Blue LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 126.433273
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999054
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 14382756943614794567
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1611418380828490329
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Electric Blue LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000551380217
+            Y: -0.0203903988
+            Z: 4.45751858
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 3.07358459e-05
+            Roll: -3.33505277e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14058778756781102909
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4496006512293082974
+  Name: "GEO - Vendetta Vespa LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 121.975708
+    }
+    Rotation {
+      Pitch: 0.00518411351
+      Yaw: 67.1999054
+      Roll: 0.262889087
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 14382756943614794567
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6745892828288036862
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Vendetta Vespa LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000147698258
+            Y: 6.20864084e-05
+            Z: 2.71495878e-07
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 3.07358459e-05
+            Roll: -3.33505277e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1042466993702325011
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2254345735393605727
+  Name: "GEO - buggy bug LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.419838
+      Z: 124.942245
+    }
+    Rotation {
+      Pitch: -1.67414761
+      Yaw: 67.1921921
+      Roll: 0.263001382
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 14382756943614794567
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5249457651869618039
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - buggy bug LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 0.000416351482
+            Y: -0.0135491686
+            Z: 2.96650648
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.67935216
+            Yaw: 3.07418341e-05
+            Roll: -1.83724495e-07
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15461375151949101575
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14055544296531178771
+  Name: "GEO - Shopping Kart LOCKED Large"
+  Transform {
+    Location {
+      X: 6851.05957
+      Y: 34.4201469
+      Z: 117.513947
+    }
+    Rotation {
+      Pitch: -1.49370086
+      Yaw: 67.1930084
+      Roll: 0.262978435
+    }
+    Scale {
+      X: 1.6
+      Y: 1.6
+      Z: 1.6
+    }
+  }
+  ParentId: 14382756943614794567
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6799506153835956340
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GEO - Shopping Kart LOCKED Large"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -0.000421646051
+            Y: 0.0204643458
+            Z: -4.46171427
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -1.49890542
+            Yaw: 1.36610906e-05
+            Roll: 3.47587026e-08
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:forceoff"
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.6
+            Y: 1.6
+            Z: 1.6
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15187617135700661660
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2935919495293603488
+  Name: "Kart Geo"
+  Transform {
+    Location {
+      X: -476
+      Y: -1462
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17212085827600267809
+  ChildIds: 12056401378719592435
+  ChildIds: 4496507480726526384
+  ChildIds: 529580595855855948
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4588,6 +9941,9 @@ Objects {
   Name: "Kart Geo - Unlocked"
   Transform {
     Location {
+      X: 476.000122
+      Y: 1461.99951
+      Z: -9.05990601e-06
     }
     Rotation {
     }
@@ -4597,7 +9953,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 2935919495293603488
   ChildIds: 13645797448743422954
   ChildIds: 8150299406226974804
   ChildIds: 6326186616984625128
@@ -4896,13 +10252,13 @@ Objects {
   Name: "Kart Geo - Locked"
   Transform {
     Location {
-      X: -713.619873
-      Y: -2193.03833
+      X: -237.619629
+      Y: -731.038818
       Z: 933.505249
     }
     Rotation {
-      Pitch: -0.0988123417
-      Yaw: -21.703907
+      Pitch: -0.0988055095
+      Yaw: -21.7038898
       Roll: 0.0154883768
     }
     Scale {
@@ -4911,7 +10267,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 2935919495293603488
   ChildIds: 5951735747467451679
   ChildIds: 8949016093305474135
   ChildIds: 5222953284106314913
@@ -5157,13 +10513,13 @@ Objects {
   Name: "Kart Geo - Default"
   Transform {
     Location {
-      X: -713.619873
-      Y: -2193.03833
+      X: -237.619629
+      Y: -731.038818
       Z: 933.505249
     }
     Rotation {
-      Pitch: -0.0988123417
-      Yaw: -21.703907
+      Pitch: -0.0988055095
+      Yaw: -21.7038898
       Roll: 0.0154883768
     }
     Scale {
@@ -5172,7 +10528,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 2935919495293603488
   ChildIds: 12008113938708256810
   ChildIds: 14677388191940347909
   ChildIds: 6877964960996761990
@@ -5683,6 +11039,7 @@ Objects {
   ChildIds: 14156187062000501801
   ChildIds: 2059056636412982146
   ChildIds: 3750629515972050201
+  ChildIds: 13999355834350886748
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5719,6 +11076,60 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13999355834350886748
+  Name: "Vehicle Status Text"
+  Transform {
+    Location {
+      X: -1469.21729
+      Y: 5033.38477
+      Z: 87.9116745
+    }
+    Rotation {
+      Pitch: 0.00514996238
+      Yaw: 88.9039688
+      Roll: 0.268317282
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18119456735426334382
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Owned"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -7064,7 +12475,7 @@ Objects {
     Overrides {
       Name: "cs:VehicleStatusText"
       ObjectReference {
-        SelfId: 10738265668739068418
+        SelfId: 13999355834350886748
       }
     }
     Overrides {
@@ -7258,6 +12669,7 @@ Objects {
   ChildIds: 16722195673712083149
   ChildIds: 9007976052208323057
   ChildIds: 4699498921552161450
+  ChildIds: 10738265668739068418
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7294,6 +12706,60 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10738265668739068418
+  Name: "Vehicle Status Text"
+  Transform {
+    Location {
+      X: -1469.21582
+      Y: 5033.38086
+      Z: 87.9116898
+    }
+    Rotation {
+      Pitch: 0.00514996238
+      Yaw: 88.9039536
+      Roll: 0.268317282
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9258645056405633466
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Owned"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {

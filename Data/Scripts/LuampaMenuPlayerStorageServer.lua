@@ -76,6 +76,10 @@ function OnPlayerJoined(player)
     end
     ------------------- END CONVERT -------------------
 
+    if not playerDataTable.totalXp then
+        playerDataTable.totalXp = 0
+    end
+    player.serverUserData.totalXp = playerDataTable.totalXp
 
     ----------------------- RACE -----------------------
     -- Get karts table, or create if new player
