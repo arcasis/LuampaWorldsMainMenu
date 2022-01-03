@@ -32,6 +32,10 @@ function UpdateFromNetworkedData(key)
     if key == "selectedAtvs" then
         LOCAL_PLAYER.clientUserData.selectedAtvs = data
     end
+
+    if key == "totalXp" then
+        LOCAL_PLAYER.clientUserData.totalXp = data
+    end
 end
 
 -- React to changes in the data, or receive the initial replication in case

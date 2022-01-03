@@ -15,9 +15,9 @@ local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject
 local BUTTON_ON_COLOR = Color.New(Color.WHITE)
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
-local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultKartGeoFolder"):WaitForObject()
-local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedKartGeoFolder"):WaitForObject()
-local UNLOCKED_GEO_FOLDER = script:GetCustomProperty("UnlockedKartGeoFolder"):WaitForObject()
+local LOCKED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("LockedUpgradesGeoFolder"):WaitForObject() ---@type Folder
+local UNLOCKED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("UnlockedUpgradesGeoFolder"):WaitForObject() ---@type Folder
+local OWNED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("OwnedUpgradesGeoFolder"):WaitForObject()
 
 local UPGRADE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 
@@ -25,14 +25,13 @@ local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
 
-local DEFAULT_GEO_TABLES = {}
+local OWNED_GEO_TABLES = {}
 local LOCKED_GEO_TABLES = {}
 local UNLOCKED_GEO_TABLES = {}
 
-local index = 0     -- which vehicle player is viewing upgrades for
-local upgradesTables = {}
-local upgradeIndex = 0
-local total = 0
+local index = 1     -- which vehicle player is viewing upgrades for
+local upgradeIndex = 1     -- which upgrade player is viewing
+local totalUpgrades = 4     -- !! WIP !! need to fetch this somehow so it auto updates when we add more
 local currentlyVisible = nil
 
 local upgradesPanelOpen = false
@@ -40,7 +39,7 @@ local upgradesPanelOpen = false
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
-function OnIndexUpdated(currentIndex)
+function OnIndexUpdated(currentIndex)     -- can change to using .clientUserData.index instead?
     index = currentIndex
 end
 
@@ -49,13 +48,13 @@ function OnVehicleArrowLeftButtonClicked()
         upgradeIndex = upgradeIndex - 1
         ProcessUpgradeIndex()
     else
-        upgradeIndex = total
+        upgradeIndex = totalUpgrades
         ProcessUpgradeIndex()
     end
 end
 
 function OnVehicleArrowRightButtonClicked()
-    if upgradeIndex == total then
+    if upgradeIndex == totalUpgrades then
         upgradeIndex = 1
         ProcessUpgradeIndex()
     else
@@ -64,21 +63,32 @@ function OnVehicleArrowRightButtonClicked()
     end
 end
 
+-- REMINDER: Player is only in here if vehicle is unlocked
 function ProcessUpgradeIndex()
 
     currentlyVisible.visibility = Visibility.FORCE_OFF
     
-    local karts = Game:GetLocalPlayer().clientUserData.karts
-    local selected = Game:GetLocalPlayer().clientUserData.selectedKart
-    
-    local kart = karts[index][upgradeIndex]
-    if kart then
-        --print("there was a kart unlocked, it should be visible")
-        DisplayUnlockedUpgrade()
+    local kartsTable = LOCAL_PLAYER.clientUserData.karts
+    local selectedKart = LOCAL_PLAYER.clientUserData.selectedKart
+    local currentUpgrade = nil
+    if kartsTable then
+        local kartModel = kartsTable[index]
+        if kartModel then
+            currentUpgrade = kartModel[upgradeIndex]
+        end
+    end
+
+    if currentUpgrade then
+        if currentUpgrade == 0 then
+            --print("there was a kart unlocked, it should be visible")
+            DisplayUnlockedUpgrade()
+        else
+            DisplayOwnedUpgrade()
+        end
     else
         --print("the kart was not unlocked, index is: ")
         --print(index)
-        DisplayLockedVehicle()
+        DisplayLockedUpgrade()
     end
 end
 
@@ -91,14 +101,12 @@ function DisplaySelectingVehicle()
     upgradesPanelOpen = false
 end
 
-function DisplayLockedVehicle()
+function DisplayLockedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    currentlyVisible = LOCKED_GEO_TABLE[index]
-    LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
+    currentlyVisible = LOCKED_GEO_TABLES[index][upgradeIndex]
+    LOCKED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
     LOCKED_IMAGE.visibility = Visibility.INHERIT
-    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
 
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     UPGRADE_STATUS_TEXT.text = "Locked"
@@ -106,22 +114,35 @@ function DisplayLockedVehicle()
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
-    PURCHASE_BUTTON.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedUpgrade()
+    GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
+    currentlyVisible = UNLOCKED_GEO_TABLES[index][upgradeIndex]
+    UNLOCKED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
+    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
+    
+    UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
+    UPGRADE_STATUS_TEXT.text = "Unlocked"
+    UPGRADE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+    UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
+
+    SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
+    PURCHASE_BUTTON.visibility = Visibility.INHERIT
+end
+
+function DisplayOwnedUpgrade()
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
 
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
-    currentlyVisible = DEFAULT_GEO_TABLE[index]
-    DEFAULT_GEO_TABLE[index].visibility = Visibility.INHERIT
-    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+    currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
+    OWNED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
 
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
-    local selected = Game:GetLocalPlayer().clientUserData.selectedKart
+    local selected = LOCAL_PLAYER.clientUserData.selectedKart
     if index == selected then
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
         UPGRADE_STATUS_TEXT.text = "Selected"
@@ -146,7 +167,10 @@ end
 
 function OnSetAsDefaultButtonClicked()
     Events.BroadcastToServer("SelectDefaultKartUpgrade", index, upgradeIndex)     -- !! WIP !! Not received in server yet
-    Game:GetLocalPlayer().clientUserData.selectedKart = index     -- !! WIP !! How to store upgrade?
+    local karts = {}
+    karts[index] = {}
+    karts[index][upgradeIndex] = 1
+    LOCAL_PLAYER.clientUserData.selectedKart = karts  
     ProcessUpgradeIndex()
 end
 
@@ -185,32 +209,49 @@ function Tick(deltaTime)
 end
 
 -- Initialize
--- process default geos, set index variable
-local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
-for _,vehicle in ipairs(geoVehicles) do
-    index = index + 1
-    DEFAULT_GEO_TABLE[index] = vehicle
-end
--- reset index to run locked geos
-index = 0
 -- process locked kart geos
-local geoLocked = LOCKED_GEO_FOLDER:GetChildren()
-for _,locked in ipairs(geoLocked) do
-    index = index + 1
-    LOCKED_GEO_TABLE[index] = locked
+local vehicleFolders = LOCKED_UPGRADES_GEO_FOLDER:GetChildren()
+local tableIndex = 0
+for _,folder in ipairs(vehicleFolders) do
+    tableIndex = tableIndex + 1
+    LOCKED_GEO_TABLES[tableIndex] = {}
+    local geos = folder:GetChildren()
+    local subIndex = 0
+    for _,geo in ipairs(geos) do
+        subIndex = subIndex + 1
+        LOCKED_GEO_TABLES[tableIndex][subIndex] = geo
+    end
 end
 -- reset index to run unlocked geos
-index = 0
+tableIndex = 0
 -- process unlocked kart geos
-local geoUnlocked = UNLOCKED_GEO_FOLDER:GetChildren()
-for _,unlocked in ipairs(geoUnlocked) do
-    index = index + 1
-    UNLOCKED_GEO_TABLE[index] = unlocked
+local vehicleFolders = UNLOCKED_UPGRADES_GEO_FOLDER:GetChildren()
+for _,folder in ipairs(vehicleFolders) do
+    tableIndex = tableIndex + 1
+    UNLOCKED_GEO_TABLES[tableIndex] = {}
+    local geos = folder:GetChildren()
+    local subIndex = 0
+    for _,geo in ipairs(geos) do
+        subIndex = subIndex + 1
+        UNLOCKED_GEO_TABLES[tableIndex][subIndex] = geo
+    end
+end
+-- reset index to run owned geos
+tableIndex = 0
+-- process owned geos, set index variable
+local vehicleFolders = OWNED_UPGRADES_GEO_FOLDER:GetChildren()
+for _,folder in ipairs(vehicleFolders) do
+    tableIndex = tableIndex + 1
+    OWNED_GEO_TABLES[tableIndex] = {}
+    local geos = folder:GetChildren()
+    local subIndex = 0
+    for _,geo in ipairs(geos) do
+        subIndex = subIndex + 1
+        OWNED_GEO_TABLES[tableIndex][subIndex] = geo
+    end
 end
 
-total = index
-index = 1
-currentlyVisible = DEFAULT_GEO_TABLE[index]
+currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
 
 Events.Connect("UpdateIndex", OnIndexUpdated)
 

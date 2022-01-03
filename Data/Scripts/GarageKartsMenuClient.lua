@@ -19,8 +19,8 @@ local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
 local DEFAULT_GEO_FOLDER = script:GetCustomProperty("DefaultKartGeoFolder"):WaitForObject()
-local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedKartGeoFolder"):WaitForObject()
 local UNLOCKED_GEO_FOLDER = script:GetCustomProperty("UnlockedKartGeoFolder"):WaitForObject()
+local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedKartGeoFolder"):WaitForObject()
 
 local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 
@@ -29,8 +29,8 @@ local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForO
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
 
 local DEFAULT_GEO_TABLE = {}
-local LOCKED_GEO_TABLE = {}
 local UNLOCKED_GEO_TABLE = {}
+local LOCKED_GEO_TABLE = {}
 
 local index = 0
 local total = 0
@@ -73,17 +73,30 @@ end
 
 function ProcessIndex()
 
+    print("index is: ", index)
+
     Events.Broadcast("UpdateIndex", index)
 
     currentlyVisible.visibility = Visibility.FORCE_OFF
     
     local karts = LOCAL_PLAYER.clientUserData.karts
-    local selected = LOCAL_PLAYER.clientUserData.selectedKart
     
-    local kart = karts[index]
-    if kart then
-        --print("there was a kart unlocked, it should be visible")
-        DisplayUnlockedVehicle()
+    local kartModel = karts[index]     -- table if unlocked or owned, nil if locked
+    print("nil is locked kart, table is unlocked or owned: ", kartModel)
+    local upgrade = nil
+    if kartModel then
+        upgrade = kartModel[1]     -- nil if unlocked, number if owned
+        print("nil is unlocked kart, number is owned: ", upgrade)
+    end  
+
+    if kartModel then
+        -- NOTE: unlocked vehicles = 0, once owned it's changed to a sub-table that holds upgrades
+        if not upgrade then
+            DisplayUnlockedVehicle()
+        else
+            --print("there was a kart unlocked, it should be visible")
+            DisplayOwnedVehicle()
+        end
     else
         --print("the kart was not unlocked, index is: ")
         --print(index)
@@ -128,10 +141,27 @@ function DisplayLockedVehicle()
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
-    PURCHASE_BUTTON.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedVehicle()
+    GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
+    currentlyVisible = UNLOCKED_GEO_TABLE[index]
+    UNLOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
+    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
+    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+
+    VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_STATUS_TEXT.text = "Unlocked"
+    VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+    VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
+
+    SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
+    PURCHASE_BUTTON.visibility = Visibility.INHERIT
+end
+
+function DisplayOwnedVehicle()
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
 
@@ -143,8 +173,14 @@ function DisplayUnlockedVehicle()
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
-    local selected = LOCAL_PLAYER.clientUserData.selectedKart
-    if index == selected then
+
+    local selectedKart = LOCAL_PLAYER.clientUserData.selectedKart     -- default: selectedKart = karts{[1] = {0,0,0,0}}
+
+    print("selectedKart is: ", selectedKart)
+    print("selectedKart[index] is: ", selectedKart[index])
+    
+    local isThisKart = selectedKart[index]
+    if isThisKart then
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
         VEHICLE_STATUS_TEXT.text = "Selected"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
@@ -175,8 +211,6 @@ function OnSetAsDefaultButtonClicked()
     ProcessIndex()
 end
 
--- NOTE: upgrade doesn't have purchase button yet, will add one when that menu is built
-
 function OnPurchaseVehicleButtonClicked()
     Events.Broadcast("PurchaseKart", index)
 end
@@ -204,7 +238,7 @@ function Tick(deltaTime)
         if menuOpen == true then
             currentlyVisible.visibility = Visibility.FORCE_OFF
             index = 1
-            DisplayUnlockedVehicle()
+            DisplayOwnedVehicle()
             currentlyVisible.visibility = Visibility.FORCE_OFF
             VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
         end
@@ -219,14 +253,6 @@ for _,vehicle in ipairs(geoVehicles) do
     index = index + 1
     DEFAULT_GEO_TABLE[index] = vehicle
 end
--- reset index to run locked geos
-index = 0
--- process locked kart geos
-local geoLocked = LOCKED_GEO_FOLDER:GetChildren()
-for _,locked in ipairs(geoLocked) do
-    index = index + 1
-    LOCKED_GEO_TABLE[index] = locked
-end
 -- reset index to run unlocked geos
 index = 0
 -- process unlocked kart geos
@@ -234,6 +260,14 @@ local geoUnlocked = UNLOCKED_GEO_FOLDER:GetChildren()
 for _,unlocked in ipairs(geoUnlocked) do
     index = index + 1
     UNLOCKED_GEO_TABLE[index] = unlocked
+end
+-- reset index to run locked geos
+index = 0
+-- process locked kart geos
+local geoLocked = LOCKED_GEO_FOLDER:GetChildren()
+for _,locked in ipairs(geoLocked) do
+    index = index + 1
+    LOCKED_GEO_TABLE[index] = locked
 end
 
 total = index

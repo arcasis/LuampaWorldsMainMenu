@@ -60,18 +60,25 @@ function OnPlayerJoined(player)
 
     if selectedVehicleId then
 
+        local karts = {}
         if selectedVehicleId == "D60C2C0F44362F9A" then
-            playerDataTable.selectedKart = 1
+            karts[1] = {0,0,0,0}
+            playerDataTable.selectedKart = karts
         elseif selectedVehicleId == "FB30266E96726D65" then
-            playerDataTable.selectedKart = 1
+            karts[1] = {0,0,0,0}
+            playerDataTable.selectedKart = karts
         elseif selectedVehicleId == "5D37BCDBF40C50C2" then
-            playerDataTable.selectedKart = 2
+            karts[2] = {0,0,0,0}
+            playerDataTable.selectedKart = karts
         elseif selectedVehicleId == "ED2DE1404ABB24A1" then
-            playerDataTable.selectedKart = 3
+            karts[3] = {0,0,0,0}
+            playerDataTable.selectedKart = karts
         elseif selectedVehicleId == "B01F8538673E1BD2" then
-            playerDataTable.selectedKart = 4
+            karts[4] = {0,0,0,0}
+            playerDataTable.selectedKart = karts
         elseif selectedVehicleId == "2D0527061EF1BC26" then
-            playerDataTable.selectedKart = 5
+            karts[5] = {0,0,0,0}
+            playerDataTable.selectedKart = karts
         end
     end
     ------------------- END CONVERT -------------------
@@ -82,21 +89,19 @@ function OnPlayerJoined(player)
     player.serverUserData.totalXp = playerDataTable.totalXp
 
     ----------------------- RACE -----------------------
-    -- Get karts table, or create if new player
+    -- Get karts table, or create one if new player
     if not playerDataTable.karts then
         local karts = {}
         karts[1] = {0,0,0,0}
         playerDataTable.karts = karts
     end
     player.serverUserData.karts = playerDataTable.karts
-    --player:SetPrivateNetworkedData("karts", playerDataTable.karts)     -- already doing this after all is done
 
     -- Get saved kart, or set default
     if not playerDataTable.selectedKart then
-        playerDataTable.selectedKart = 1
+        playerDataTable.selectedKart = playerDataTable.karts     -- !! WIP !! TEST THIS!! working out how to save and if check one item in table of tables
     end
     player.serverUserData.selectedKart = playerDataTable.selectedKart
-    --player:SetPrivateNetworkedData("selectedKart", playerDataTable.selectedKart)     -- already doing this after all is done
     ---------------------- END RACE ----------------------
 
     ----------------------- BATTLE -----------------------
@@ -107,14 +112,12 @@ function OnPlayerJoined(player)
         playerDataTable.trucks = trucks
     end
     player.serverUserData.trucks = playerDataTable.trucks
-    --player:SetPrivateNetworkedData("trucks", playerDataTable.trucks)     -- already doing this after all is done
 
     -- Get saved truck, or set default
     if not playerDataTable.selectedTruck then
-        playerDataTable.selectedTruck = 1
+        playerDataTable.selectedTruck = player.serverUserData.trucks
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
-    --player:SetPrivateNetworkedData("selectedTruck", playerDataTable.selectedTruck)     -- already doing this after all is done
     --------------------- END BATTLE ---------------------
     
     ------------------------ COINS ------------------------
@@ -129,7 +132,7 @@ function OnPlayerJoined(player)
     ---------------------- END COINS ----------------------
 
 
-    -- Load updated data back into shared data so we can pass it to client
+    -- Load updated data back into shared data so we can pass it to client using the Event
     Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 
     -- Set up PrivateNetworkedData for client-side, which is listening for changed event
@@ -160,6 +163,8 @@ function OnPlayerLeft(player)
     playerDataTable.selectedTruck = player.serverUserData.selectedTruck
 
     -- add atvs here once they are ready
+    
+    playerDataTable.totalXp = player.serverUserData.totalXp
 
     playerDataTable.coins = player:GetResource("LuampaCoins")
 

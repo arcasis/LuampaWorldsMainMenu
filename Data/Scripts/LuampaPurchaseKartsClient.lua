@@ -33,16 +33,15 @@ function AttemptToPurchaseVehicle(index)
 
         print("LuampaPurchaseKartsClient says you have enough to purchase vehicle")
 
-        LOCAL_PLAYER.clientUserData.karts[index] = {}
+        LOCAL_PLAYER.clientUserData.karts[index] = {0,0,0,0}
 
         Events.Broadcast("KartPurchased")
         Events.BroadcastToServer("KartPurchased", price, index)
     else
         print("LuampaPurchaseKartsClient says you do not have enough to purchase vehicle")
 
-        Events.Broadcast("KartNotPurchased")
+        Events.Broadcast("KartNotPurchased")     -- use to display fail notification
     end
-    --end
 end
 
 function AttemptToPurchaseUpgrade(index, upgrade)
