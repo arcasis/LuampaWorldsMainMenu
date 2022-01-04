@@ -71,7 +71,7 @@ function ProcessUpgradeIndex()
     local kartsTable = LOCAL_PLAYER.clientUserData.karts
     local selectedKart = LOCAL_PLAYER.clientUserData.selectedKart
     local currentUpgrade = nil
-    if kartsTable then
+    if kartsTable then     -- Core was running this script when game loaded, printing error, so had to add if check :/
         local kartModel = kartsTable[index]
         if kartModel then
             currentUpgrade = kartModel[upgradeIndex]
@@ -142,8 +142,13 @@ function DisplayOwnedUpgrade()
     OWNED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
 
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
-    local selected = LOCAL_PLAYER.clientUserData.selectedKart
-    if index == selected then
+
+    local selectedTable = LOCAL_PLAYER.clientUserData.selectedKart
+
+    local isThisUpgradeSelected = selectedTable[index][upgradeIndex]     -- a number if it matches upgradeIndex, or nil
+
+    -- if selectedKart matches current upgradeIndex, then this upgrade is set as their default kart
+    if isThisUpgradeSelected then
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
         UPGRADE_STATUS_TEXT.text = "Selected"
         UPGRADE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
@@ -166,11 +171,20 @@ function OnBackButtonClicked()
 end
 
 function OnSetAsDefaultButtonClicked()
-    Events.BroadcastToServer("SelectDefaultKartUpgrade", index, upgradeIndex)     -- !! WIP !! Not received in server yet
-    local karts = {}
-    karts[index] = {}
-    karts[index][upgradeIndex] = 1
-    LOCAL_PLAYER.clientUserData.selectedKart = karts  
+
+    Events.BroadcastToServer("SelectDefaultKartUpgrade", index, upgradeIndex)
+    
+    local kartsTable = LOCAL_PLAYER.clientUserData.karts     -- get player's karts table
+    local selectedKartTable = {}     -- create a new, empty karts table
+    selectedKartTable[index] = {}     -- create an new empty kartModel sub-table
+    selectedKartTable[index][upgradeIndex] = kartsTable[index][upgradeIndex]    -- copy upgradeIndex into new table
+
+    LOCAL_PLAYER.clientUserData.selectedKart = selectedKartTable     -- save only the one upgrade into player's selectedKart data
+
+    --[[local karts = {}     -- create a new table
+    karts[index] = {}     -- create a new sub-table where new default kart model is
+    karts[index][upgradeIndex] = 1     -- put the "owned" code there
+    LOCAL_PLAYER.clientUserData.selectedKart = karts  ]]
     ProcessUpgradeIndex()
 end
 
