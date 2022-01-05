@@ -38,18 +38,12 @@ local total = 0
 local currentlyVisible = nil
 
 local menuOpen = false
-local upgradePanelOpen = false
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
 function OnEditVehicleButtonClicked()
-    -- toggle selecting vehicle or selecting upgrade
-    if upgradePanelOpen == false then
-        DisplaySelectingUpgrade()
-    else
-        DisplaySelectingVehicle()
-    end
+    DisplaySelectingUpgrade()
 end
 
 function OnVehicleArrowLeftButtonClicked()
@@ -74,21 +68,23 @@ end
 
 function ProcessIndex()
 
-    print("index is: ", index)
+    --print("ProcessIndex runs, index is: ", index)
 
-    -- !! WIP !! move this to only happen when Edit Vehicle button is clicked
-    Events.Broadcast("UpdateIndex", index)
-
+    -- hide current kart before displaying next one
     currentlyVisible.visibility = Visibility.FORCE_OFF
     
     local karts = LOCAL_PLAYER.clientUserData.karts
+
+    --print("player's karts[1] is: ", karts[1])
+    --print("player's karts[2[ is: ", karts[2])
+    --print("karts[index] is: ", karts[index])
     
     local kartModel = karts[index]     -- table if unlocked or owned, nil if locked
-    print("nil should display locked kart, table is unlocked or owned: ", kartModel)
+    --print("kartModel = karts[index], nil should display locked, table is unlocked or owned: ", kartModel)
     if kartModel then
         local isOwned = kartModel.isOwned
 
-        print("kart is unlocked, isOwned is: ", isOwned)
+        --print("kart is unlocked, isOwned is: ", isOwned)
     
         if isOwned then
             DisplayOwnedVehicle()
@@ -104,23 +100,22 @@ end
 
 function DisplaySelectingUpgrade()
     KARTS_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
-    upgradePanelOpen = true
-    EDIT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
+    --currentlyVisible.visibility = Visibility.FORCE_OFF
+    --[[EDIT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
     VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)]]
     KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.INHERIT
 end
 
 function DisplaySelectingVehicle()
     KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
-    upgradePanelOpen = false
-    EDIT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
+    --[[EDIT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
     VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
+    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)]]
     KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
 end
 
@@ -176,7 +171,7 @@ function DisplayOwnedVehicle()
 
     local kartsTable = LOCAL_PLAYER.clientUserData.selectedKart     -- default: karts[1] = {}
 
-    print("kartsTable is: ", kartsTable)
+    --print("kartsTable is: ", kartsTable)
     
     local isThisKartSelected = kartsTable[index]     -- a table if it matches index, or nil
 
@@ -196,10 +191,14 @@ function DisplayOwnedVehicle()
 end
 
 function OnEditUpgradeButtonClicked()
-    LOCAL_PLAYER.clientUserData.index = index
+    --currentlyVisible.visibility = Visibility.FORCE_OFF
+    LOCAL_PLAYER.clientUserData.index = index     -- upgrade menu uses to fetch current vehicle upgrades table
 end
 
 function OnBackButtonClicked()
+
+    print("karts menu back button scripts run")
+
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
 
     KARTS_MENU_PANEL.visibility = Visibility.FORCE_OFF
@@ -222,17 +221,18 @@ function OnPurchaseVehicleButtonClicked()
     Events.Broadcast("PurchaseKart", index)
 end
 
-function OnKartPurchased()
+function OnKartPurchased()     -- !! WIP !! add stuff here that displays confirmation of purchase
+    print("GarageKartsMenuClient received broadcast vehicle was purchased")
     ProcessIndex()
 end
 
-function OnKartNotPurchased()
+function OnKartNotPurchased()     -- !! WIP !! add stuff here that displays failure to purchase
     print("GarageKartsMenuClient received broadcast vehicle not purchased")
-    -- add stuff here that displays for player they can't afford vehicle
 end
 
 
 function Tick(deltaTime)
+    -- if this panel is hidden when karts menu is opened, unhide this panel
     if KARTS_MENU_PANEL.visibility == Visibility.INHERIT then
 
         if menuOpen == false then
@@ -243,13 +243,20 @@ function Tick(deltaTime)
     else
 
         if menuOpen == true then
-            currentlyVisible.visibility = Visibility.FORCE_OFF
             index = 1
             DisplayOwnedVehicle()
-            currentlyVisible.visibility = Visibility.FORCE_OFF
             VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
         end
         menuOpen = false
+    end
+
+    -- if this panel is hidden, hide current vehicle, else display it
+    if Object.IsValid(currentlyVisible) then
+        if KARTS_BUTTONS_PANEL.visibility == Visibility.FORCE_OFF then
+            currentlyVisible.visibility = Visibility.FORCE_OFF
+        else
+            currentlyVisible.visibility = Visibility.INHERIT
+        end
     end
 end
 

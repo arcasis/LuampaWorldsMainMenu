@@ -39,9 +39,6 @@ local upgradesPanelOpen = false
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
-function OnIndexUpdated(currentIndex)     -- can change to using .clientUserData.index instead?
-    index = currentIndex
-end
 
 function OnVehicleArrowLeftButtonClicked()
     if upgradeIndex > 1 then
@@ -66,6 +63,7 @@ end
 -- REMINDER: Player is only in here if vehicle is unlocked
 function ProcessUpgradeIndex()
 
+    -- hide current upgrade before displaying next one
     currentlyVisible.visibility = Visibility.FORCE_OFF
     
     local kartsTable = LOCAL_PLAYER.clientUserData.karts
@@ -93,12 +91,13 @@ function ProcessUpgradeIndex()
 end
 
 function DisplaySelectingUpgrade()
-    -- !! WIP !! all this handled in GarageKartsMenuClient?
+    -- handled in GarageKartsMenuClient
 end
 
 function DisplaySelectingVehicle()
     KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
-    upgradesPanelOpen = false
+    -- upgradesPanelOpen = false
+    KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
 end
 
 function DisplayLockedUpgrade()
@@ -167,6 +166,7 @@ end
 
 -- TEMP NOTE: DONE
 function OnBackButtonClicked()
+    KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
     DisplaySelectingVehicle()
 end
 
@@ -266,8 +266,6 @@ for _,folder in ipairs(vehicleFolders) do
 end
 
 currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
-
-Events.Connect("UpdateIndex", OnIndexUpdated)
 
 Events.Connect("KartPurchased", OnKartPurchased)
 Events.Connect("KartNotPurchased", OnKartNotPurchased)

@@ -14,8 +14,6 @@ function OnPlayerJoined(player)
 
     --------------------- CONVERT ---------------------
 
-    playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
-
     -- Check if player has cars tables (has raced before)
     if playerDataTable.cars then
 
@@ -65,8 +63,6 @@ function OnPlayerJoined(player)
 
     -- !! WIP !! We will be taking away their karts, giving them back coins
 
-    playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
-
     -- Check if player has a selected kart, convert it to the new system
     local selectedVehicleId = playerDataTable.selectedVehicleId
 
@@ -107,13 +103,16 @@ function OnPlayerJoined(player)
     if not playerDataTable.karts then
         local karts = {}
         karts[1] = {}
+        karts[1].isOwned = true
         playerDataTable.karts = karts
     end
     player.serverUserData.karts = playerDataTable.karts
 
     -- Get saved kart, or set default
     if not playerDataTable.selectedKart then
-        playerDataTable.selectedKart = playerDataTable.karts     -- !! WIP !! TEST THIS!! working out how to save and if check one item in table of tables
+        local karts = {}
+        karts[1] = {}
+        playerDataTable.selectedKart = karts
     end
     player.serverUserData.selectedKart = playerDataTable.selectedKart
     ---------------------- END RACE ----------------------
@@ -123,13 +122,16 @@ function OnPlayerJoined(player)
     if not playerDataTable.trucks then
         local trucks = {}
         trucks[1] = {}
+        trucks[1].isOwned = true
         playerDataTable.trucks = trucks
     end
     player.serverUserData.trucks = playerDataTable.trucks
 
     -- Get saved truck, or set default
     if not playerDataTable.selectedTruck then
-        playerDataTable.selectedTruck = player.serverUserData.trucks
+        local trucks = {}
+        trucks[1] = {}
+        playerDataTable.selectedTruck = trucks
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
     --------------------- END BATTLE ---------------------
@@ -166,12 +168,6 @@ end
 function OnPlayerLeft(player)
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
-    playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.selectedKart = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.trucks = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!!
-
     -- !! WIP !! If keeping old system up for conversion, write scripts to remove old system at conversion
     
     -- NOTE: We do not re-upload serverUserData.cars, will need to update Luampa Race Worlds to use karts
@@ -187,6 +183,13 @@ function OnPlayerLeft(player)
     playerDataTable.totalXp = player.serverUserData.totalXp
 
     playerDataTable.coins = player:GetResource("LuampaCoins")
+
+    playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
+    playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
+    playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
+    playerDataTable.selectedKart = nil  -- !!!!TEMP: DELETE MEH !!!!
+    playerDataTable.trucks = nil  -- !!!!TEMP: DELETE MEH !!!!
+    playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!!
 
     Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 end

@@ -3,6 +3,7 @@
 -- NOTE: When adding new vehicle types, don't forget to include them in LuampaMenuPlayerStorageServer
 -- to save their selection in storage
 
+--!! WIP !! Needs redone with empty upgrades table if player is using default kart for selected vehicle
 -- Save player's selectedKart, so it can be uploaded to storage when they leave
 function OnDefaultKartSelected(player, index)
     local kartsTable = player.serverUserData.karts     -- get player's karts table

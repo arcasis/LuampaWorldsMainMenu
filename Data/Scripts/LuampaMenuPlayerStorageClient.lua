@@ -30,7 +30,7 @@ function UpdateFromNetworkedData(key)
     end
 
     if key == "selectedAtvs" then
-        LOCAL_PLAYER.clientUserData.selectedAtvs = data
+        LOCAL_PLAYER.clientUserData.selectedAtv = data
     end
 
     if key == "totalXp" then
