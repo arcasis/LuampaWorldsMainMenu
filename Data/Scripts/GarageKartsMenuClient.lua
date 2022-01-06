@@ -43,6 +43,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
 function OnEditVehicleButtonClicked()
+    LOCAL_PLAYER.clientUserData.index = index     -- upgrade menu uses to fetch current vehicle upgrades table
     DisplaySelectingUpgrade()
 end
 
@@ -126,8 +127,9 @@ function DisplayLockedVehicle()
     LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
     LOCKED_IMAGE.visibility = Visibility.INHERIT
-    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
+    EDIT_VEHICLE_BUTTON.isInteractable = false
+    EDIT_VEHICLE_BUTTON:SetFontColor(Color.New(Color.RED))
+    EDIT_VEHICLE_IMAGE:SetColor(Color.New(Color.RED))
 
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     VEHICLE_STATUS_TEXT.text = "Locked"
@@ -145,6 +147,7 @@ function DisplayUnlockedVehicle()
     UNLOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
+    EDIT_VEHICLE_BUTTON.isInteractable = false
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)
 
@@ -164,6 +167,7 @@ function DisplayOwnedVehicle()
     OWNED_GEO_TABLE[index].visibility = Visibility.INHERIT
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
+    EDIT_VEHICLE_BUTTON.isInteractable = true
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 
@@ -190,10 +194,10 @@ function DisplayOwnedVehicle()
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 end
 
-function OnEditUpgradeButtonClicked()
+--[[function OnEditUpgradeButtonClicked()
     --currentlyVisible.visibility = Visibility.FORCE_OFF
     LOCAL_PLAYER.clientUserData.index = index     -- upgrade menu uses to fetch current vehicle upgrades table
-end
+end]]
 
 function OnBackButtonClicked()
 
@@ -294,7 +298,7 @@ Events.Connect("KartNotPurchased", OnKartNotPurchased)
 EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
-EDIT_UPGRADE_BUTTON.clickedEvent:Connect(OnEditUpgradeButtonClicked)
+--EDIT_UPGRADE_BUTTON.clickedEvent:Connect(OnEditUpgradeButtonClicked)
 SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
 PURCHASE_BUTTON.clickedEvent:Connect(OnPurchaseVehicleButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

@@ -89,14 +89,29 @@ function OnPlayerJoined(player)
             playerDataTable.selectedKart = karts
         end
     end
-    ------------------- END CONVERT -------------------
 
-    -- !! WIP !! CHANGING THIS TO totalBattleXp/totalRaceXp
-    
-    if not playerDataTable.totalXp then
-        playerDataTable.totalXp = 0
+    local totalXp = nil
+    if playerDataTable.totalXp then
+        totalXp = playerDataTable.totalXp
+        playerDataTable.totalXp = nil
+    else
+        totalXp = 0
     end
-    player.serverUserData.totalXp = playerDataTable.totalXp
+    ------------------- END CONVERT -------------------
+    
+    -- !! WIP !! still some converting, decide if players get to keep their battle xp (or convert it offline for them)
+    -- clean this up after decision is made
+    if playerDataTable.totalBattleXp then
+        player.serverUserData.totalBattleXp = playerDataTable.totalBattleXp
+    else
+        playerDataTable.totalBattleXp = totalXp
+        player.serverUserData.totalBattleXp = playerDataTable.totalBattleXp
+    end
+
+    if not playerDataTable.totalRaceXp then
+        playerDataTable.totalRaceXp = 0
+    end
+    player.serverUserData.totalRaceXp = playerDataTable.totalRaceXp
 
     ----------------------- RACE -----------------------
     -- Get karts table, or create one if new player
@@ -180,7 +195,8 @@ function OnPlayerLeft(player)
 
     -- add atvs here once they are ready
     
-    playerDataTable.totalXp = player.serverUserData.totalXp
+    playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp
+    playerDataTable.totalRaceXp = player.serverUserData.totalRaceXp
 
     playerDataTable.coins = player:GetResource("LuampaCoins")
 

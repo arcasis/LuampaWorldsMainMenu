@@ -39,7 +39,6 @@ local upgradesPanelOpen = false
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
-
 function OnVehicleArrowLeftButtonClicked()
     if upgradeIndex > 1 then
         upgradeIndex = upgradeIndex - 1
@@ -206,6 +205,8 @@ function Tick(deltaTime)
     if KART_UPGRADES_BUTTONS_PANEL.visibility == Visibility.INHERIT then
 
         if upgradesPanelOpen == false then
+            index = LOCAL_PLAYER.clientUserData.index
+            print("upgrades menu was opened, index is: ", index)
             ProcessUpgradeIndex()
         end
         upgradesPanelOpen = true
@@ -213,9 +214,9 @@ function Tick(deltaTime)
 
         if upgradesPanelOpen == true then
             currentlyVisible.visibility = Visibility.FORCE_OFF
-            index = 1
-            DisplayUnlockedUpgrade()
-            currentlyVisible.visibility = Visibility.FORCE_OFF
+            upgradeIndex = 1
+            --DisplayUnlockedUpgrade()
+            --currentlyVisible.visibility = Visibility.FORCE_OFF
             UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
         end
         upgradesPanelOpen = false

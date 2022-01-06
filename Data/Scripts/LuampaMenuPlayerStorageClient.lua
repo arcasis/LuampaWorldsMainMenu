@@ -33,8 +33,12 @@ function UpdateFromNetworkedData(key)
         LOCAL_PLAYER.clientUserData.selectedAtv = data
     end
 
-    if key == "totalXp" then
-        LOCAL_PLAYER.clientUserData.totalXp = data
+    if key == "totalBattleXp" then
+        LOCAL_PLAYER.clientUserData.totalBattleXp = data
+    end
+
+    if key == "totalRaceXp" then
+        LOCAL_PLAYER.clientUserData.totalRaceXp = data
     end
 end
 

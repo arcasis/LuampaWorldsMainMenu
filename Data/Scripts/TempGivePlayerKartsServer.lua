@@ -13,10 +13,24 @@ function OnPlayerJoined(player)
     --player.serverUserData.karts = nil
     --player.serverUserData.selectedKart = nil
     
-    local currentXp = player.serverUserData.totalXp
-    if not currentXp or currentXp < 5000 then
-        currentXp = 100000
-        player.serverUserData.totalXp = currentXp
+    local totalXp = player.serverUserData.totalXp
+    local totalBattleXp = player.serverUserData.totalBattleXp
+    if not totalBattleXp then
+        player.serverUserData.totalBattleXp = 0
+        totalBattleXp = 0
+    end
+    if totalXp then
+        player.serverUserData.totalBattleXp = totalBattleXp + totalXp
+        player.serverUserData.totalXp = nil
+    end
+    if totalBattleXp < 100000 then
+        totalBattleXp = 100000
+        player.serverUserData.totalBattleXp = totalBattleXp
+    end
+
+    local totalRaceXp = player.serverUserData.totalRaceXp
+    if not totalRaceXp then
+        player.serverUserData.totalRaceXp = 100000
     end
 end
 
