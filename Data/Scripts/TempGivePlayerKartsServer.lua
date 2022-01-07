@@ -1,9 +1,9 @@
 
 function OnPlayerJoined(player)
-    Task.Wait(5)
 
+    Task.Wait(1) -- wait for storage to set up serverUserData before we override it
     -- test 
-    local karts = player.serverUserData.karts
+    --local karts = player.serverUserData.karts
 
     --print("serverUserData.karts is: ", karts)
     --print("serverUserData.karts[1] is: ", karts[1])
@@ -29,9 +29,11 @@ function OnPlayerJoined(player)
     end
 
     local totalRaceXp = player.serverUserData.totalRaceXp
-    if not totalRaceXp then
+    if not totalRaceXp or totalRaceXp < 100000 then
         player.serverUserData.totalRaceXp = 100000
     end
+
+    print("GivePlayerKarts ran, player's totalRaceXp is: ", player.serverUserData.totalRaceXp)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

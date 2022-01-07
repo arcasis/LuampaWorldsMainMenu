@@ -198,14 +198,16 @@ function OnPlayerLeft(player)
     playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp
     playerDataTable.totalRaceXp = player.serverUserData.totalRaceXp
 
+    print("PlayerStorage is uploading, totalRaceXp is: ", player.serverUserData.totalRaceXp)
+
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
-    playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --[[playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.selectedKart = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.trucks = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!!
+    playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!!]]
 
     Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 end
