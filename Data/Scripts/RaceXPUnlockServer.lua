@@ -2,10 +2,12 @@
 
 function UnlockVehicles(player)
 
-    Task.Wait(1.5)  -- temp: allows player storage to process, give karts scripts to run
+    Task.Wait(5)  -- temp for main menu: allows player storage to process, give karts scripts to run
     
     local karts = player.serverUserData.karts
-    local totalRaceXp = player.serverUserData.totalRaceXp     -- !! WIP !! totalRaceXp is not a thing yet. Race needs updated with XP and ranks.
+    local totalRaceXp = player.serverUserData.totalRaceXp     -- !! WIP !! totalRaceXp is not a thing yet outside of Main Menu: Race needs updated with XP and ranks.
+
+    --print("RaceXPUnlockServer says player's .totalRaceXp is: ", totalRaceXp)
 
     -- kart #1
     if totalRaceXp >= 1000 and totalRaceXp <= 4000 then
@@ -117,6 +119,10 @@ function UnlockVehicles(player)
     end
 
     player.serverUserData.karts = karts
+
+    print("player's .serverUserData.karts[1] is: ", karts[1])
+    print("player's .serverUserData.karts[1][1] is: ", karts[1][1])
+    print("player's .serverUserData.karts[2] is: ", karts[2])
 end
 
 

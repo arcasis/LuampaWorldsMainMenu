@@ -33,7 +33,8 @@ function AttemptToPurchaseVehicle(index)
 
         print("LuampaPurchaseKartsClient says you have enough to purchase vehicle")
 
-        LOCAL_PLAYER.clientUserData.karts[index] = {0,0,0,0}
+        LOCAL_PLAYER.clientUserData.karts[index] = {}
+        LOCAL_PLAYER.clientUserData.karts[index].isOwned = true
 
         Events.Broadcast("KartPurchased")
         Events.BroadcastToServer("KartPurchased", price, index)

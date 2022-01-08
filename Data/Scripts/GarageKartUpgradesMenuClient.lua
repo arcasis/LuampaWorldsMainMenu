@@ -69,22 +69,27 @@ function ProcessUpgradeIndex()
     local selectedKart = LOCAL_PLAYER.clientUserData.selectedKart
     local currentUpgrade = nil
     if kartsTable then     -- Core was running this script when game loaded, printing error, so had to add if check :/
+
+        print("UpgradesMenu has successfully fetched karts table")
         local kartModel = kartsTable[index]
         if kartModel then
+            print("UpgradesMenu has successfully fetched kart model, index is: ", index)
             currentUpgrade = kartModel[upgradeIndex]
+            print("UpgradesMenu says currentUpgrade is: ", currentUpgrade)
+            print("upgradeIndex is: ", upgradeIndex)
         end
     end
 
     if currentUpgrade then
+        print("UpgradesMenu has successfully fetched currentUpgrade: ", currentUpgrade)
         if currentUpgrade == 0 then
-            --print("there was a kart unlocked, it should be visible")
+            print("there was a kart unlocked, it should be visible")
             DisplayUnlockedUpgrade()
         else
             DisplayOwnedUpgrade()
         end
     else
-        --print("the kart was not unlocked, index is: ")
-        --print(index)
+        print("the kart was not unlocked")
         DisplayLockedUpgrade()
     end
 end
@@ -191,11 +196,11 @@ function OnPurchaseUpgradeButtonClicked()
     Events.Broadcast("PurchaseKartUpgrade", index, upgradeIndex)
 end
 
-function OnKartPurchased()
+function OnKartUpgradePurchased()
     ProcessUpgradeIndex()
 end
 
-function OnKartNotPurchased()
+function OnKartUpgradeNotPurchased()
     print("GarageKartsMenuClient received broadcast vehicle not purchased")
     -- add stuff here that displays for player they can't afford vehicle
 end
@@ -268,8 +273,8 @@ end
 
 currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
 
-Events.Connect("KartPurchased", OnKartPurchased)
-Events.Connect("KartNotPurchased", OnKartNotPurchased)
+Events.Connect("KartUpgradePurchased", OnKartUpgradePurchased)
+Events.Connect("KartUpradeNotPurchased", OnKartUpgradeNotPurchased)
 
 EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)

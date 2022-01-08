@@ -9,7 +9,8 @@ function OnKartPurchased(player, price, index)
     player:SetResource("LuampaCoins", coins)
 
     local kartsTable = player.serverUserData.karts
-    kartsTable[index] = {0,0,0,0}
+    kartsTable[index] = {}
+    kartsTable[index].isOwned = true
     player.serverUserData.karts = kartsTable
     -- NOTE: clientUserData is already set when purchase is processed
 end

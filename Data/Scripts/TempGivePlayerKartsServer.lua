@@ -13,25 +13,39 @@ function OnPlayerJoined(player)
     --player.serverUserData.karts = nil
     --player.serverUserData.selectedKart = nil
     
-    local totalXp = player.serverUserData.totalXp
+    --local totalXp = player.serverUserData.totalXp
     local totalBattleXp = player.serverUserData.totalBattleXp
+    -- first time player tests, they'll get 2000
     if not totalBattleXp then
-        player.serverUserData.totalBattleXp = 0
-        totalBattleXp = 0
+        player.serverUserData.totalBattleXp = 2000
     end
-    if totalXp then
-        player.serverUserData.totalBattleXp = totalBattleXp + totalXp
-        player.serverUserData.totalXp = nil
-    end
-    if totalBattleXp < 100000 then
-        totalBattleXp = 100000
+
+    -- next time player tests, they'll get 5000
+    if totalBattleXp == 2000 then
+        totalBattleXp = 5000
         player.serverUserData.totalBattleXp = totalBattleXp
     end
 
     local totalRaceXp = player.serverUserData.totalRaceXp
-    if not totalRaceXp or totalRaceXp < 100000 then
-        player.serverUserData.totalRaceXp = 100000
+    -- first time player tests, they'll get 2000
+    if not totalRaceXp then
+        player.serverUserData.totalRaceXp = 2000
     end
+
+    -- next time player tests, they'll get 5000
+    if totalRaceXp == 2000 then
+        totalRaceXp = 5000
+        player.serverUserData.totalRaceXp = totalRaceXp
+    end
+
+    --------------- RESET TO NIL -------------------
+    -- uncomment this section to reset totalBattleXp and totalRaceXp to nil
+
+    -- player.serverUserData.totalRaceXp = nil
+    -- player.serverUserData.totalBattleXp = nil
+    ------------------------------------------------
+
+    
 
     print("GivePlayerKarts ran, player's totalRaceXp is: ", player.serverUserData.totalRaceXp)
 end
