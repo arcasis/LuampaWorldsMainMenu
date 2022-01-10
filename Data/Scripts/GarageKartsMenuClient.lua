@@ -11,7 +11,6 @@ local EDIT_VEHICLE_IMAGE = script:GetCustomProperty("EditVehicleImage"):WaitForO
 local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForObject()
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
-local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
@@ -104,8 +103,7 @@ function DisplaySelectingUpgrade()
     KARTS_PANEL.visibility = Visibility.FORCE_OFF
     kartsMenuOpen = false
     --currentlyVisible.visibility = Visibility.FORCE_OFF
-    --[[EDIT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
-    VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
+    --[[VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)]]
@@ -305,7 +303,6 @@ Events.Connect("KartNotPurchased", OnKartNotPurchased)
 EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
---EDIT_UPGRADE_BUTTON.clickedEvent:Connect(OnEditUpgradeButtonClicked)
 SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
 PURCHASE_BUTTON.clickedEvent:Connect(OnPurchaseVehicleButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

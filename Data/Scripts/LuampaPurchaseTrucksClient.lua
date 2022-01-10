@@ -26,6 +26,8 @@ table.sort(TRUCK_UPGRADE_PRICES_TABLE, function(a,b) return a < b end)
 
 function AttemptToPurchaseVehicle(index)
 
+    print("Purchase script received broadcast to purchase truck")
+
     --if player == LOCAL_PLAYER then     -- don't think this is needed, test it
     local coins = LOCAL_PLAYER:GetResource("LuampaCoins")
     local price = TRUCK_PRICES_TABLE[index]
@@ -33,19 +35,21 @@ function AttemptToPurchaseVehicle(index)
 
         print("LuampaPurchaseTrucksClient says you have enough to purchase vehicle")
 
-        LOCAL_PLAYER.clientUserData.trucks[index] = {0,0,0,0}
+        LOCAL_PLAYER.clientUserData.trucks[index] = {}
+        LOCAL_PLAYER.clientUserData.trucks[index].isOwned = true
 
         Events.Broadcast("TruckPurchased")
         Events.BroadcastToServer("TruckPurchased", price, index)
     else
         print("LuampaPurchaseTrucksClient says you do not have enough to purchase vehicle")
 
-        Events.Broadcast("TruckNotPurchased")
+        Events.Broadcast("TruckNotPurchased")     -- use to display fail notification
     end
-    --end
 end
 
 function AttemptToPurchaseUpgrade(index, upgrade)
+
+    print("Purchase script received broadcast to purchase upgrade")
 
     local coins = LOCAL_PLAYER:GetResource("LuampaCoins")
     local price = TRUCK_UPGRADE_PRICES_TABLE[index]
@@ -56,7 +60,7 @@ function AttemptToPurchaseUpgrade(index, upgrade)
         LOCAL_PLAYER.clientUserData.trucks[index][upgrade] = 1
 
         Events.Broadcast("TruckUpgradePurchased")
-        Events.BroadcastToServer("TruckUpgradePurchased", price, index)
+        Events.BroadcastToServer("TruckUpgradePurchased", price, index, upgrade)
     else
         print("LuampaPurchaseTrucksClient says you do not have enough to purchase upgrade")
 
@@ -66,4 +70,4 @@ end
 
 
 Events.Connect("PurchaseTruck", AttemptToPurchaseVehicle)
-Events.Connect("PurchaseUpgrade", AttemptToPurchaseUpgrade)
+Events.Connect("PurchaseTruckUpgrade", AttemptToPurchaseUpgrade)

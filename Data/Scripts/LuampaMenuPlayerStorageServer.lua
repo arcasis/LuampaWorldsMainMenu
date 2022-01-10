@@ -149,6 +149,10 @@ function OnPlayerJoined(player)
         playerDataTable.selectedTruck = trucks
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
+
+    print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
+    local selectedTruckUserData = player.serverUserData.selectedTruck
+    print("selectedTruck trucks[1] is: ", selectedTruckUserData[1])
     --------------------- END BATTLE ---------------------
     
     ------------------------ COINS ------------------------
@@ -202,12 +206,13 @@ function OnPlayerLeft(player)
 
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
-    --[[playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.selectedKart = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.trucks = nil  -- !!!!TEMP: DELETE MEH !!!!
-    playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!!]]
+    --playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --playerDataTable.selectedKart = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --playerDataTable.trucks = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!
+    --playerDataTable.totalBattleXp = nil  -- !!!!TEMP: DELETE MEH !!!
 
     Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 end

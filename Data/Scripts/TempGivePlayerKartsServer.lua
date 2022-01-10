@@ -16,15 +16,22 @@ function OnPlayerJoined(player)
     --local totalXp = player.serverUserData.totalXp
     local totalBattleXp = player.serverUserData.totalBattleXp
     -- first time player tests, they'll get 2000
-    if not totalBattleXp then
+    if not totalBattleXp or totalBattleXp == 0 then
         player.serverUserData.totalBattleXp = 2000
     end
+
+    -- reset
+    --[[totalBattleXp = nil
+        player.serverUserData.totalBattleXp = nil
+    end]]
 
     -- next time player tests, they'll get 5000
     if totalBattleXp == 2000 then
         totalBattleXp = 5000
         player.serverUserData.totalBattleXp = totalBattleXp
     end
+
+    
 
     local totalRaceXp = player.serverUserData.totalRaceXp
     -- first time player tests, they'll get 2000

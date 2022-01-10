@@ -9,7 +9,8 @@ function OnTruckPurchased(player, price, index)
     player:SetResource("LuampaCoins", coins)
 
     local trucksTable = player.serverUserData.trucks
-    trucksTable[index] = {0,0,0,0}
+    trucksTable[index] = {}
+    trucksTable[index].isOwned = true
     player.serverUserData.trucks = trucksTable
     -- NOTE: clientUserData is already set when purchase is processed
 end

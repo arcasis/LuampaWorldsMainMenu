@@ -2,10 +2,12 @@
 
 function UnlockVehicles(player)
 
-    Task.Wait(1.5)  -- temp: allows player storage to process, give karts scripts to run
+    Task.Wait(1.5)  -- temp: allows player storage to process, give trucks scripts to run
 
     local trucks = player.serverUserData.trucks
     local totalBattleXp = player.serverUserData.totalBattleXp
+
+    print("BattleXPUnlockServer says player's .totalBattleXp is: ", totalBattleXp)
 
     -- kart #1
     if totalBattleXp >= 1000 and totalBattleXp <= 4000 then
@@ -117,6 +119,10 @@ function UnlockVehicles(player)
     end
 
     player.serverUserData.trucks = trucks
+
+    print("player's .serverUserData.trucks[1] is: ", trucks[1])
+    print("player's .serverUserData.trucks[1][1] is: ", trucks[1][1])
+    print("player's .serverUserData.trucks[2] is: ", trucks[2])
 end
 
 
