@@ -120,9 +120,9 @@ function UnlockVehicles(player)
 
     player.serverUserData.karts = karts
 
-    print("player's .serverUserData.karts[1] is: ", karts[1])
-    print("player's .serverUserData.karts[1][1] is: ", karts[1][1])
-    print("player's .serverUserData.karts[2] is: ", karts[2])
+    --print("player's .serverUserData.karts[1] is: ", karts[1])
+    --print("player's .serverUserData.karts[1][1] is: ", karts[1][1])
+    --print("player's .serverUserData.karts[2] is: ", karts[2])
 end
 
 

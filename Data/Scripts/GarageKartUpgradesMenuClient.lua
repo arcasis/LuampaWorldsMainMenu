@@ -1,6 +1,6 @@
 -- Core Object References
-local KARTS_BUTTONS_PANEL = script:GetCustomProperty("GarageKartsButtonsPanel"):WaitForObject()
-local KART_UPGRADES_BUTTONS_PANEL = script:GetCustomProperty("GarageKartUpgradesButtonsPanel"):WaitForObject()
+local KARTS_PANEL = script:GetCustomProperty("GarageKartsPanel"):WaitForObject()
+local KART_UPGRADES_PANEL = script:GetCustomProperty("GarageKartUpgradesPanel"):WaitForObject()
 
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
@@ -70,26 +70,27 @@ function ProcessUpgradeIndex()
     local currentUpgrade = nil
     if kartsTable then     -- Core was running this script when game loaded, printing error, so had to add if check :/
 
-        print("UpgradesMenu has successfully fetched karts table")
+        --print("UpgradesMenu has successfully fetched karts table")
         local kartModel = kartsTable[index]
         if kartModel then
-            print("UpgradesMenu has successfully fetched kart model, index is: ", index)
+            --print("UpgradesMenu has successfully fetched kart model, index is: ", index)
             currentUpgrade = kartModel[upgradeIndex]
-            print("UpgradesMenu says currentUpgrade is: ", currentUpgrade)
-            print("upgradeIndex is: ", upgradeIndex)
+            --print("UpgradesMenu says currentUpgrade is: ", currentUpgrade)
+            --print("upgradeIndex is: ", upgradeIndex)
         end
     end
 
     if currentUpgrade then
-        print("UpgradesMenu has successfully fetched currentUpgrade: ", currentUpgrade)
+        --print("UpgradesMenu has successfully fetched currentUpgrade: ", currentUpgrade)
         if currentUpgrade == 0 then
-            print("there was a kart unlocked, it should be visible")
+            print("upgrade should be displaying as unlocked")
             DisplayUnlockedUpgrade()
         else
+            print("upgrade should be displaying as owned")
             DisplayOwnedUpgrade()
         end
     else
-        print("the kart was not unlocked")
+        print("upgrade should be displaying as locked")
         DisplayLockedUpgrade()
     end
 end
@@ -99,9 +100,8 @@ function DisplaySelectingUpgrade()
 end
 
 function DisplaySelectingVehicle()
-    KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
-    -- upgradesPanelOpen = false
-    KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
+    KART_UPGRADES_PANEL.visibility = Visibility.FORCE_OFF
+    KARTS_PANEL.visibility = Visibility.INHERIT
 end
 
 function DisplayLockedUpgrade()
@@ -109,6 +109,7 @@ function DisplayLockedUpgrade()
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     currentlyVisible = LOCKED_GEO_TABLES[index][upgradeIndex]
     LOCKED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
+
     LOCKED_IMAGE.visibility = Visibility.INHERIT
 
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
@@ -117,13 +118,15 @@ function DisplayLockedUpgrade()
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
+    PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 end
 
 function DisplayUnlockedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
-    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     currentlyVisible = UNLOCKED_GEO_TABLES[index][upgradeIndex]
     UNLOCKED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
+
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
@@ -136,18 +139,16 @@ function DisplayUnlockedUpgrade()
 end
 
 function DisplayOwnedUpgrade()
-    PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
-    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
-
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
     currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
     OWNED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
 
+    LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
+
+    -- Set UPGRADE_STATUS_TEXT options
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
-
     local selectedTable = LOCAL_PLAYER.clientUserData.selectedKart
-
     local isThisUpgradeSelected = selectedTable[index][upgradeIndex]     -- a number if it matches upgradeIndex, or nil
 
     -- if selectedKart matches current upgradeIndex, then this upgrade is set as their default kart
@@ -161,23 +162,21 @@ function DisplayOwnedUpgrade()
         UPGRADE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
     end
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
+
+    PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 end
 
--- TEMP NOTE: DONE
+
 function OnEditVehicleButtonClicked()
     DisplaySelectingVehicle()
 end
 
--- TEMP NOTE: DONE
 function OnBackButtonClicked()
-    KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
     DisplaySelectingVehicle()
 end
 
 function OnSetAsDefaultButtonClicked()
-
     Events.BroadcastToServer("SelectDefaultKartUpgrade", index, upgradeIndex)
-    
     local kartsTable = LOCAL_PLAYER.clientUserData.karts     -- get player's karts table
     local selectedKartTable = {}     -- create a new, empty karts table
     selectedKartTable[index] = {}     -- create an new empty kartModel sub-table
@@ -193,11 +192,12 @@ function OnSetAsDefaultButtonClicked()
 end
 
 function OnPurchaseUpgradeButtonClicked()
+    print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
     Events.Broadcast("PurchaseKartUpgrade", index, upgradeIndex)
 end
 
 function OnKartUpgradePurchased()
-    ProcessUpgradeIndex()
+    ProcessUpgradeIndex()  -- refresh kart geo
 end
 
 function OnKartUpgradeNotPurchased()
@@ -207,11 +207,11 @@ end
 
 ------ TEMP NOTE: TICK UPDATED -----
 function Tick(deltaTime)
-    if KART_UPGRADES_BUTTONS_PANEL.visibility == Visibility.INHERIT then
+    if KART_UPGRADES_PANEL.visibility == Visibility.INHERIT then
 
         if upgradesPanelOpen == false then
             index = LOCAL_PLAYER.clientUserData.index
-            print("upgrades menu was opened, index is: ", index)
+            --print("upgrades menu was opened, index is: ", index)
             ProcessUpgradeIndex()
         end
         upgradesPanelOpen = true
@@ -219,10 +219,6 @@ function Tick(deltaTime)
 
         if upgradesPanelOpen == true then
             currentlyVisible.visibility = Visibility.FORCE_OFF
-            upgradeIndex = 1
-            --DisplayUnlockedUpgrade()
-            --currentlyVisible.visibility = Visibility.FORCE_OFF
-            UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
         end
         upgradesPanelOpen = false
     end

@@ -198,7 +198,7 @@ function OnPlayerLeft(player)
     playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp
     playerDataTable.totalRaceXp = player.serverUserData.totalRaceXp
 
-    print("PlayerStorage is uploading, totalRaceXp is: ", player.serverUserData.totalRaceXp)
+    --print("PlayerStorage is uploading, totalRaceXp is: ", player.serverUserData.totalRaceXp)
 
     playerDataTable.coins = player:GetResource("LuampaCoins")
 

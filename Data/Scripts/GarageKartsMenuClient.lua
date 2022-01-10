@@ -1,8 +1,8 @@
 -- Core Object References
 local GARAGE_MAIN_MENU_PANEL = script:GetCustomProperty("GarageMainMenuPanel"):WaitForObject()
-local KARTS_MENU_PANEL = script:GetCustomProperty("GarageKartsMenuPanel"):WaitForObject()
-local KARTS_BUTTONS_PANEL = script:GetCustomProperty("GarageKartsButtonsPanel"):WaitForObject()
-local KART_UPGRADES_BUTTONS_PANEL = script:GetCustomProperty("GarageKartUpgradesButtonsPanel"):WaitForObject()
+local KARTS_MAIN_MENU_PANEL = script:GetCustomProperty("GarageKartsMainMenuPanel"):WaitForObject()
+local KARTS_PANEL = script:GetCustomProperty("GarageKartsPanel"):WaitForObject()
+local KART_UPGRADES_PANEL = script:GetCustomProperty("GarageKartUpgradesPanel"):WaitForObject()
 
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
@@ -37,7 +37,8 @@ local index = 0
 local total = 0
 local currentlyVisible = nil
 
-local menuOpen = false
+local kartsMainMenuOpen = false
+local kartsMenuOpen = false
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -100,25 +101,22 @@ function ProcessIndex()
 end
 
 function DisplaySelectingUpgrade()
-    KARTS_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
+    KARTS_PANEL.visibility = Visibility.FORCE_OFF
+    kartsMenuOpen = false
     --currentlyVisible.visibility = Visibility.FORCE_OFF
     --[[EDIT_UPGRADE_BUTTON.visibility = Visibility.INHERIT
     VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)]]
-    KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.INHERIT
+    KART_UPGRADES_PANEL.visibility = Visibility.INHERIT
 end
 
-function DisplaySelectingVehicle()
-    KART_UPGRADES_BUTTONS_PANEL.visibility = Visibility.FORCE_OFF
-    --[[EDIT_UPGRADE_BUTTON.visibility = Visibility.FORCE_OFF
-    VEHICLE_ARROW_LEFT.visibility = Visibility.INHERIT
-    VEHICLE_ARROW_RIGHT.visibility = Visibility.INHERIT
-    EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
-    EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)]]
-    KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
-end
+-- WIP not being used atm
+--[[function DisplaySelectingVehicle()
+    KART_UPGRADES_PANEL.visibility = Visibility.FORCE_OFF
+    KARTS_PANEL.visibility = Visibility.INHERIT
+end]]
 
 function DisplayLockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
@@ -142,7 +140,7 @@ end
 
 function DisplayUnlockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
-    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     currentlyVisible = UNLOCKED_GEO_TABLE[index]
     UNLOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
@@ -171,12 +169,9 @@ function DisplayOwnedVehicle()
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_ON_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_ON_COLOR)
 
+    -- Set VEHICLE_STATUS_TEXT options
     VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
-
-    local kartsTable = LOCAL_PLAYER.clientUserData.selectedKart     -- default: karts[1] = {}
-
-    --print("kartsTable is: ", kartsTable)
-    
+    local kartsTable = LOCAL_PLAYER.clientUserData.selectedKart     -- default: karts[1] = {}    
     local isThisKartSelected = kartsTable[index]     -- a table if it matches index, or nil
 
     -- if selectedKart matches current index, then this vehicle is set as their default kart
@@ -190,7 +185,7 @@ function DisplayOwnedVehicle()
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
     end
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
-
+    
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 end
 
@@ -202,22 +197,26 @@ end]]
 function OnBackButtonClicked()
 
     print("karts menu back button scripts run")
+    --currentlyVisible.visibility = Visibility.FORCE_OFF
 
-    VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
-
-    KARTS_MENU_PANEL.visibility = Visibility.FORCE_OFF
+    -- Garage Main Menu scripts open KARTS_MAIN_MENU_PANEL, then Tick opens/closes KARTS_PANEL
+    KARTS_MAIN_MENU_PANEL.visibility = Visibility.FORCE_OFF
     GARAGE_MAIN_MENU_PANEL.visibility = Visibility.INHERIT
-
-    DisplaySelectingVehicle()
 end
 
 function OnSetAsDefaultButtonClicked()
     Events.BroadcastToServer("SelectDefaultKart", index)
-    local kartsTable = LOCAL_PLAYER.clientUserData.karts     -- get player's karts table
+    --[[local kartsTable = LOCAL_PLAYER.clientUserData.karts     -- get player's karts table
     local selectedKartUpgrades = kartsTable[index]     -- copy the upgrades for currently viewed vehicle
     local selectedKartTable = {}     -- create a new, empty table
     selectedKartTable[index] = selectedKartUpgrades     -- copy the upgrades into the correct index
     LOCAL_PLAYER.clientUserData.selectedKart = selectedKartTable     -- save only those upgrades into player's selectedKart data
+    ]]
+
+    local karts = {}
+    karts[index] = {}
+    LOCAL_PLAYER.clientUserData.selectedKart = karts
+
     ProcessIndex()
 end
 
@@ -236,30 +235,38 @@ end
 
 
 function Tick(deltaTime)
-    -- if this panel is hidden when karts menu is opened, unhide this panel
-    if KARTS_MENU_PANEL.visibility == Visibility.INHERIT then
 
-        if menuOpen == false then
-            KARTS_BUTTONS_PANEL.visibility = Visibility.INHERIT
+    -- when karts menu is opened, unhide this panel, display vehicle
+    if KARTS_MAIN_MENU_PANEL.visibility == Visibility.INHERIT then
+
+        if kartsMainMenuOpen == false then
+            KARTS_PANEL.visibility = Visibility.INHERIT
+            kartsMenuOpen = true
             ProcessIndex()
         end
-        menuOpen = true
+        kartsMainMenuOpen = true
     else
-
-        if menuOpen == true then
+        -- if player exits karts menu, hide this panel and currently displayed vehicle
+        if kartsMainMenuOpen == true then
             index = 1
-            DisplayOwnedVehicle()
-            VEHICLE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
+            KARTS_PANEL.visibility = Visibility.FORCE_OFF
+            kartsMenuOpen = false
+            DisplayOwnedVehicle ()
+            currentlyVisible.visibility = Visibility.FORCE_OFF
         end
-        menuOpen = false
+        kartsMainMenuOpen = false
     end
 
     -- if this panel is hidden, hide current vehicle, else display it
     if Object.IsValid(currentlyVisible) then
-        if KARTS_BUTTONS_PANEL.visibility == Visibility.FORCE_OFF then
+        if KARTS_PANEL.visibility == Visibility.FORCE_OFF then
             currentlyVisible.visibility = Visibility.FORCE_OFF
         else
-            currentlyVisible.visibility = Visibility.INHERIT
+            if kartsMenuOpen == false then
+                kartsMenuOpen = true
+                DisplayOwnedVehicle()
+            end
+            --currentlyVisible.visibility = Visibility.INHERIT
         end
     end
 end

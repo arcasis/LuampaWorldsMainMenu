@@ -7,7 +7,7 @@ local KART_UPGRADE_PRICES_DATA = script:GetCustomProperty("KartUpgradePricesData
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 
--- index vehicle prices off data folders
+-- index vehicle prices off vehicle prices data folder
 local KART_PRICES_TABLE = {}
 local customProperties = KART_PRICES_DATA_FOLDER:GetCustomProperties()
 for key, value in pairs(customProperties) do
@@ -15,7 +15,7 @@ for key, value in pairs(customProperties) do
 end
 table.sort(KART_PRICES_TABLE, function(a,b) return a < b end)
 
--- index upgrade prices
+-- index upgrade prices off upgrade prices data folder (each vehicle's upgrades cost same amount)
 local KART_UPGRADE_PRICES_TABLE = {}
 local customProperties = KART_UPGRADE_PRICES_DATA:GetCustomProperties()
 for key, value in pairs(customProperties) do
@@ -25,6 +25,8 @@ table.sort(KART_UPGRADE_PRICES_TABLE, function(a,b) return a < b end)
 
 
 function AttemptToPurchaseVehicle(index)
+
+    print("Purchase script received broadcast to purchase kart")
 
     --if player == LOCAL_PLAYER then     -- don't think this is needed, test it
     local coins = LOCAL_PLAYER:GetResource("LuampaCoins")
@@ -47,6 +49,8 @@ end
 
 function AttemptToPurchaseUpgrade(index, upgrade)
 
+    print("Purchase script received broadcast to purchase upgrade")
+
     local coins = LOCAL_PLAYER:GetResource("LuampaCoins")
     local price = KART_UPGRADE_PRICES_TABLE[index]
     if coins >= price then
@@ -56,7 +60,7 @@ function AttemptToPurchaseUpgrade(index, upgrade)
         LOCAL_PLAYER.clientUserData.karts[index][upgrade] = 1
 
         Events.Broadcast("KartUpgradePurchased")
-        Events.BroadcastToServer("KartUpgradePurchased", price, index)
+        Events.BroadcastToServer("KartUpgradePurchased", price, index, upgrade)
     else
         print("LuampaPurchaseKartsClient says you do not have enough to purchase upgrade")
 
@@ -66,4 +70,4 @@ end
 
 
 Events.Connect("PurchaseKart", AttemptToPurchaseVehicle)
-Events.Connect("PurchaseUpgrade", AttemptToPurchaseUpgrade)
+Events.Connect("PurchaseKartUpgrade", AttemptToPurchaseUpgrade)

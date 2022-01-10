@@ -45,9 +45,7 @@ function OnPlayerJoined(player)
     -- player.serverUserData.totalBattleXp = nil
     ------------------------------------------------
 
-    
-
-    print("GivePlayerKarts ran, player's totalRaceXp is: ", player.serverUserData.totalRaceXp)
+    --print("GivePlayerKarts ran, player's totalRaceXp is: ", player.serverUserData.totalRaceXp)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
