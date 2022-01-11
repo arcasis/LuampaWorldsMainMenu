@@ -12,9 +12,16 @@ function OnPlayerJoined(player)
     --player.serverUserData.trucks = nil
     --player.serverUserData.karts = nil
     --player.serverUserData.selectedKart = nil
-    
-    --local totalXp = player.serverUserData.totalXp
+
+    --local totalXp = player.serverUserData.totalXp     -- testing battle data
     local totalBattleXp = player.serverUserData.totalBattleXp
+
+    -- next time player tests, they'll get 5000
+    if totalBattleXp == 2000 then
+        totalBattleXp = 5000
+        player.serverUserData.totalBattleXp = totalBattleXp
+    end
+    
     -- first time player tests, they'll get 2000
     if not totalBattleXp or totalBattleXp == 0 then
         player.serverUserData.totalBattleXp = 2000
@@ -25,11 +32,7 @@ function OnPlayerJoined(player)
         player.serverUserData.totalBattleXp = nil
     end]]
 
-    -- next time player tests, they'll get 5000
-    if totalBattleXp == 2000 then
-        totalBattleXp = 5000
-        player.serverUserData.totalBattleXp = totalBattleXp
-    end
+    
 
     
 
