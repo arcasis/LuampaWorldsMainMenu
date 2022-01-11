@@ -1,6 +1,6 @@
 Assets {
   Id: 2048101420500260394
-  Name: "Scav Avenger Upgrade 3 Unlocked"
+  Name: "Skav Avenger Upgrade 3 Unlocked"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
