@@ -20625,828 +20625,12 @@ Assets {
       }
     }
     Assets {
-      Id: 12190463340827898157
-      Name: "Ring"
+      Id: 17683814330151529420
+      Name: "Office Chair Seat"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_004"
-      }
-    }
-    Assets {
-      Id: 16630259605395466384
-      Name: "Frosted Glass"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_frosted_glass"
-      }
-    }
-    Assets {
-      Id: 6209556876010214815
-      Name: "Urban Vehicle Car - Brake 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
-      }
-    }
-    Assets {
-      Id: 3342706046178942623
-      Name: "Screen Overlay 03"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_screen_overlay_03"
-      }
-    }
-    Assets {
-      Id: 17591161558402514443
-      Name: "Urban Vehicle Car - Center Console 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_console_center_001_ref"
-      }
-    }
-    Assets {
-      Id: 16049211287924608873
-      Name: "Urban Vehicle Car - Front Seat Bottom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 15353476744572170853
-      Name: "Urban Vehicle Car - Front Seat Leg 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_leg_001_ref"
-      }
-    }
-    Assets {
-      Id: 3203349032132710974
-      Name: "Urban Vehicle Car - Front Seat Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 1772269630312073792
-      Name: "Radar Screen Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_radar_trans"
-      }
-    }
-    Assets {
-      Id: 16516459769229762722
-      Name: "Urban Car Screens 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_tachometer_001_ref"
-      }
-    }
-    Assets {
-      Id: 12821608187918865362
-      Name: "Urban Vehicle Car - Steering Wheel 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_steering_wheel_001_ref"
-      }
-    }
-    Assets {
-      Id: 16737023815630923572
-      Name: "Urban Vehicle Car - Glovebox 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_glovebox_001_ref"
-      }
-    }
-    Assets {
-      Id: 16701740470968256231
-      Name: "Military Tank Historic Container 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_container_002_ref"
-      }
-    }
-    Assets {
-      Id: 4048871353471406004
-      Name: "Mecha - Armor - Pack 01 - Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_jpn_mecha_armor_pack_001_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 263215418038033298
-      Name: "Enginerivetedl"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 10803175672327579936
-        ParameterOverrides {
-          Overrides {
-            Name: "rotate_material"
-            Float: 90
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 10803175672327579936
-      Name: "Rusty Riveted Metal"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_rust_rivets_001_uv"
-      }
-    }
-    Assets {
-      Id: 9143604908401303261
-      Name: "Bone Raw"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bone_raw_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 11508015507968617304
-      Name: "Urban Vehicle Car - Frame 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_frame_001_ref"
-      }
-    }
-    Assets {
-      Id: 1662883831283144872
-      Name: "Urban Manhole Cover 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_manhole_cover_01_ref"
-      }
-    }
-    Assets {
-      Id: 9635440827203888092
-      Name: "Custom Metal Basic Steel"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 7283825798727192743
-        ParameterOverrides {
-          Overrides {
-            Name: "roughness"
-            Float: 1
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 2.64911032
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 2.16129804
-          }
-          Overrides {
-            Name: "roughness_multiplier"
-            Float: 2
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 7283825798727192743
-      Name: "Metal Iron Rusted 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_003"
-      }
-    }
-    Assets {
-      Id: 16890205056291965690
-      Name: "Sign Bracket - Round"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_signbracket_round_001"
-      }
-    }
-    Assets {
-      Id: 3433416882178080463
-      Name: "Street Sign - Rectangle"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_street-sign_rectangle_001"
-      }
-    }
-    Assets {
-      Id: 12482639849349891471
-      Name: "Urban Vehicle Car - Door Front 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_door_front_001_ref"
-      }
-    }
-    Assets {
-      Id: 2769563029775643720
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 14359217783623684227
-      Name: "Rubber Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_004_uv"
-      }
-    }
-    Assets {
-      Id: 17112985054030154012
-      Name: "Urban Plank Debris 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urban_destruction_debris_plank_02_ref"
-      }
-    }
-    Assets {
-      Id: 13328715946580888808
-      Name: "Sci-fi Satellite Canister"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_satellite_canister_001"
-      }
-    }
-    Assets {
-      Id: 14805929512282111496
-      Name: "Urban Pipe Clamp 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_clamp_002_ref"
-      }
-    }
-    Assets {
-      Id: 16198346205888411814
-      Name: "Urban Fence Door"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_mil_fence_door_01"
-      }
-    }
-    Assets {
-      Id: 9152619968203525726
-      Name: "Military Tank Historic Armor Plate 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_armorplate_002_ref"
-      }
-    }
-    Assets {
-      Id: 11578428508587114889
-      Name: "Military Tank Historic Armor Skirt 01 - Front"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_skirt_001_front_ref"
-      }
-    }
-    Assets {
-      Id: 5439646266583319854
-      Name: "Frosted Glass No Distortion"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_frosted_glass_nodistortion"
-      }
-    }
-    Assets {
-      Id: 13214683604363461790
-      Name: "Additive Soft Edge"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
-      }
-    }
-    Assets {
-      Id: 16223793041255679849
-      Name: "Metal 9 Slice Shipping Container 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mat_advanced_9slice_shipping_container001_ref"
-      }
-    }
-    Assets {
-      Id: 510778788078352226
-      Name: "Metal Vent Duct Spiral 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_urb_vent_duct_round_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 9503903904385404246
-      Name: "Urban Vehicle Sedan - Bumper Front 01 - Bottom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_sdn_bump_front_001_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 4904349013400544687
-      Name: "Custom Office Carpet Basic 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 11378886407339488354
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.266
-              G: 0.201876372
-              B: 0.1528337
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 11378886407339488354
-      Name: "Office Carpet Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_urb_office_carpet_004_uv_ref"
-      }
-    }
-    Assets {
-      Id: 8426178907157142955
-      Name: "Urban Vehicle Truck - Bumper Rear 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_trk_001_bumper_rear_01_ref"
-      }
-    }
-    Assets {
-      Id: 3036419345280038615
-      Name: "Cube - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_002"
-      }
-    }
-    Assets {
-      Id: 7714592170743622243
-      Name: "Cylinder - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_001"
-      }
-    }
-    Assets {
-      Id: 15714687381745373579
-      Name: "Urban Vehicle Car - Body Front 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_kit_body_front_001_ref"
-      }
-    }
-    Assets {
-      Id: 8060511813986281564
-      Name: "CorrugatedRust"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 13174761023700886097
-        ParameterOverrides {
-          Overrides {
-            Name: "rust_amount"
-            Float: 0.641571522
-          }
-          Overrides {
-            Name: "color_rust"
-            Color {
-              R: 0.820000052
-              G: 0.342119247
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 1
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 0
-          }
-          Overrides {
-            Name: "roughness_multiplier"
-            Float: 0.580766678
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 13174761023700886097
-      Name: "Metal Corrugated 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_metal_corrugated_metal_002_uv_ref"
-      }
-    }
-    Assets {
-      Id: 14279704584282367798
-      Name: "Custom Carbon Fiber 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 2249794126015640337
-        ParameterOverrides {
-          Overrides {
-            Name: "clear_coat_roughness"
-            Float: 0
-          }
-          Overrides {
-            Name: "fresnel_amount"
-            Float: 0.876595736
-          }
-          Overrides {
-            Name: "metallic"
-            Float: 0
-          }
-          Overrides {
-            Name: "fresnel_color"
-            Color {
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 30
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 30
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0.0980017
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 2249794126015640337
-      Name: "Carbon Fiber 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_carbon-fiber_001"
-      }
-    }
-    Assets {
-      Id: 16628909226419210785
-      Name: "Chain Link 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_chainlink_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 6426086044615951543
-      Name: "Metal Iron Rusted 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_003"
-      }
-    }
-    Assets {
-      Id: 3225924156252914362
-      Name: "Metal Iron Rusted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_002"
-      }
-    }
-    Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
-      }
-    }
-    Assets {
-      Id: 15810725318543748023
-      Name: "Tire Worn - Large"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_mil_tire_worn_large_01_ref"
-      }
-    }
-    Assets {
-      Id: 1630607435793532884
-      Name: "Military Tank Historic Gear 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_gear_003_ref"
-      }
-    }
-    Assets {
-      Id: 18348342505020437805
-      Name: "Military Tank Historic Turret Seal 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_hst_turret_001_ring_ref"
-      }
-    }
-    Assets {
-      Id: 7455555155075393874
-      Name: "Metal Grates 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_grates_004_uv"
-      }
-    }
-    Assets {
-      Id: 7556079334320139636
-      Name: "Rubber Pattern 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_003_uv"
-      }
-    }
-    Assets {
-      Id: 13028932803405216377
-      Name: "Military Tank Modern Hatch 01 Lid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_hatch_001_lid_ref"
-      }
-    }
-    Assets {
-      Id: 14272986521887390608
-      Name: "Decal Road Sign Symbols"
-      PlatformAssetType: 14
-      PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_roadsigns_001"
-      }
-    }
-    Assets {
-      Id: 3640109265954155343
-      Name: "Rubber Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 930284029150437119
-      Name: "Street Sign - Diamond"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_street-sign_diamond_001"
-      }
-    }
-    Assets {
-      Id: 6865249745567109080
-      Name: "Corrugated Sheet Bent"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_mil_corrugated_sheet_05_ref"
-      }
-    }
-    Assets {
-      Id: 5405788467161147168
-      Name: "Basic Material"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_pbr_material_001"
-      }
-    }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 7320255990073764485
-      Name: "Office Cubicle Wall 01 - 1.5m Mid 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_off_cubicle_wall_001_mid_02_ref"
-      }
-    }
-    Assets {
-      Id: 14823448561875281729
-      Name: "Military Tank Modern Hull 01 - Mid"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_hull_001_mid_ref"
-      }
-    }
-    Assets {
-      Id: 10280074408105187427
-      Name: "Sci-fi Antenna Structure"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_antenna_structure_001"
-      }
-    }
-    Assets {
-      Id: 13816823995603172559
-      Name: "Modern Weapon Ammo - Bullet 02 Casing"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_case_002"
-      }
-    }
-    Assets {
-      Id: 9826710443425479508
-      Name: "Modern Weapon Ammo - Bullet 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_tip_001"
-      }
-    }
-    Assets {
-      Id: 803799555064499974
-      Name: "Modern Weapon Ammo - Bullet 01 Casing"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_case_001"
-      }
-    }
-    Assets {
-      Id: 14620852700054372986
-      Name: "Sci-fi Cryo Chamber Pod Top"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_cryo_pod_top_001"
-      }
-    }
-    Assets {
-      Id: 6045540826292531006
-      Name: "Modern Weapon - Sight Forward 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_sight_forw_002"
-      }
-    }
-    Assets {
-      Id: 9036435396988035792
-      Name: "Sci-fi Chair Armrest 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_chair_001_arms_ref"
-      }
-    }
-    Assets {
-      Id: 12888726374622842928
-      Name: "Modern Weapon - Disc 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_disc_001"
-      }
-    }
-    Assets {
-      Id: 122928484173136543
-      Name: "Fantasy Crossbow Grip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_grip_cross_001"
-      }
-    }
-    Assets {
-      Id: 13085174305471638229
-      Name: "Metal Painted Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_painted_old_001_uv"
-      }
-    }
-    Assets {
-      Id: 13949441344821433690
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 7305258327512852355
-      Name: "Fantasy Crossbow Foregrip 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_fan_foregrip_cross_001"
-      }
-    }
-    Assets {
-      Id: 5722845298204989079
-      Name: "Sci-fi Chair Leg 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_scf_chair_002_leg_ref"
-      }
-    }
-    Assets {
-      Id: 7016245623101166198
-      Name: "Metal Iron Rusted 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_002"
+        AssetId: "sm_prop_urb_chair_office_seat_001"
       }
     }
     Assets {
@@ -21459,205 +20643,642 @@ Assets {
       }
     }
     Assets {
-      Id: 17683814330151529420
-      Name: "Office Chair Seat"
+      Id: 7016245623101166198
+      Name: "Metal Iron Rusted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_002"
+      }
+    }
+    Assets {
+      Id: 5722845298204989079
+      Name: "Sci-fi Chair Leg 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_chair_office_seat_001"
+        AssetId: "sm_prop_scf_chair_002_leg_ref"
       }
     }
     Assets {
-      Id: 12903719488005755860
-      Name: "VehiclePack_SFX_TurretExitSound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 18020935191963269407
-          Objects {
-            Id: 18020935191963269407
-            Name: "VehiclePack_SFX_TurretExitSound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 6647933289389764587
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Folder {
-              IsGroup: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 6647933289389764587
-            Name: "Heavy Turning Mechanism Machine End 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 18020935191963269407
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 14226298051926066950
-              }
-              AutoPlay: true
-              Volume: 1
-              Falloff: -1
-              Radius: 1000
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 14226298051926066950
-      Name: "Heavy Turning Mechanism Machine End 01 SFX"
-      PlatformAssetType: 7
+      Id: 7283825798727192743
+      Name: "Metal Iron Rusted 02"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_heavy_turning_mechanism_machine_end_01_Cue_ref"
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_003"
       }
     }
     Assets {
-      Id: 2316482364227709356
-      Name: "VehiclePack_SFX_TurretEnterSound"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 14236835118800773162
-          Objects {
-            Id: 14236835118800773162
-            Name: "VehiclePack_SFX_TurretEnterSound"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 9271610696743427590
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            Folder {
-              IsGroup: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 9271610696743427590
-            Name: "Heavy Turning Mechanism Machine Start 01 SFX"
-            Transform {
-              Location {
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 14236835118800773162
-            Lifespan: 1.2
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            EditorIndicatorVisibility {
-              Value: "mc:eindicatorvisibility:visiblewhenselected"
-            }
-            AudioInstance {
-              AudioAsset {
-                Id: 8884663456241006907
-              }
-              AutoPlay: true
-              Volume: 1
-              Falloff: -1
-              Radius: 1000
-              IsSpatializationEnabled: true
-              IsAttenuationEnabled: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-    }
-    Assets {
-      Id: 8884663456241006907
-      Name: "Heavy Turning Mechanism Machine Start 01 SFX"
-      PlatformAssetType: 7
+      Id: 7305258327512852355
+      Name: "Fantasy Crossbow Foregrip 01"
+      PlatformAssetType: 1
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_heavy_turning_mechanism_machine_start_01_Cue_ref"
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_foregrip_cross_001"
+      }
+    }
+    Assets {
+      Id: 13949441344821433690
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 13085174305471638229
+      Name: "Metal Painted Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_painted_old_001_uv"
+      }
+    }
+    Assets {
+      Id: 122928484173136543
+      Name: "Fantasy Crossbow Grip 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_fan_grip_cross_001"
+      }
+    }
+    Assets {
+      Id: 12888726374622842928
+      Name: "Modern Weapon - Disc 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_disc_001"
+      }
+    }
+    Assets {
+      Id: 9036435396988035792
+      Name: "Sci-fi Chair Armrest 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_chair_001_arms_ref"
+      }
+    }
+    Assets {
+      Id: 6045540826292531006
+      Name: "Modern Weapon - Sight Forward 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_sight_forw_002"
+      }
+    }
+    Assets {
+      Id: 14620852700054372986
+      Name: "Sci-fi Cryo Chamber Pod Top"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_cryo_pod_top_001"
+      }
+    }
+    Assets {
+      Id: 803799555064499974
+      Name: "Modern Weapon Ammo - Bullet 01 Casing"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_case_001"
+      }
+    }
+    Assets {
+      Id: 9826710443425479508
+      Name: "Modern Weapon Ammo - Bullet 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_tip_001"
+      }
+    }
+    Assets {
+      Id: 13816823995603172559
+      Name: "Modern Weapon Ammo - Bullet 02 Casing"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_case_002"
+      }
+    }
+    Assets {
+      Id: 10280074408105187427
+      Name: "Sci-fi Antenna Structure"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_antenna_structure_001"
+      }
+    }
+    Assets {
+      Id: 14823448561875281729
+      Name: "Military Tank Modern Hull 01 - Mid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_hull_001_mid_ref"
+      }
+    }
+    Assets {
+      Id: 7320255990073764485
+      Name: "Office Cubicle Wall 01 - 1.5m Mid 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_off_cubicle_wall_001_mid_02_ref"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 5405788467161147168
+      Name: "Basic Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_pbr_material_001"
+      }
+    }
+    Assets {
+      Id: 6865249745567109080
+      Name: "Corrugated Sheet Bent"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_mil_corrugated_sheet_05_ref"
+      }
+    }
+    Assets {
+      Id: 930284029150437119
+      Name: "Street Sign - Diamond"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_street-sign_diamond_001"
+      }
+    }
+    Assets {
+      Id: 3640109265954155343
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 14272986521887390608
+      Name: "Decal Road Sign Symbols"
+      PlatformAssetType: 14
+      PrimaryAsset {
+        AssetType: "DecalBlueprintAssetRef"
+        AssetId: "bp_decal_roadsigns_001"
+      }
+    }
+    Assets {
+      Id: 13028932803405216377
+      Name: "Military Tank Modern Hatch 01 Lid"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_hatch_001_lid_ref"
+      }
+    }
+    Assets {
+      Id: 7556079334320139636
+      Name: "Rubber Pattern 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_003_uv"
+      }
+    }
+    Assets {
+      Id: 7455555155075393874
+      Name: "Metal Grates 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_grates_004_uv"
+      }
+    }
+    Assets {
+      Id: 18348342505020437805
+      Name: "Military Tank Historic Turret Seal 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_turret_001_ring_ref"
+      }
+    }
+    Assets {
+      Id: 1630607435793532884
+      Name: "Military Tank Historic Gear 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_gear_003_ref"
+      }
+    }
+    Assets {
+      Id: 15810725318543748023
+      Name: "Tire Worn - Large"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_mil_tire_worn_large_01_ref"
+      }
+    }
+    Assets {
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+      }
+    }
+    Assets {
+      Id: 3225924156252914362
+      Name: "Metal Iron Rusted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_002"
+      }
+    }
+    Assets {
+      Id: 6426086044615951543
+      Name: "Metal Iron Rusted 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_003"
+      }
+    }
+    Assets {
+      Id: 16628909226419210785
+      Name: "Chain Link 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_chainlink_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 15714687381745373579
+      Name: "Urban Vehicle Car - Body Front 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_body_front_001_ref"
+      }
+    }
+    Assets {
+      Id: 7714592170743622243
+      Name: "Cylinder - Rounded Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_rounded_001"
+      }
+    }
+    Assets {
+      Id: 3036419345280038615
+      Name: "Cube - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_002"
+      }
+    }
+    Assets {
+      Id: 8426178907157142955
+      Name: "Urban Vehicle Truck - Bumper Rear 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_trk_001_bumper_rear_01_ref"
+      }
+    }
+    Assets {
+      Id: 9503903904385404246
+      Name: "Urban Vehicle Sedan - Bumper Front 01 - Bottom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_sdn_bump_front_001_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 510778788078352226
+      Name: "Metal Vent Duct Spiral 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_urb_vent_duct_round_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 16223793041255679849
+      Name: "Metal 9 Slice Shipping Container 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mat_advanced_9slice_shipping_container001_ref"
+      }
+    }
+    Assets {
+      Id: 13214683604363461790
+      Name: "Additive Soft Edge"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_additive_edgefade"
+      }
+    }
+    Assets {
+      Id: 5439646266583319854
+      Name: "Frosted Glass No Distortion"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_frosted_glass_nodistortion"
+      }
+    }
+    Assets {
+      Id: 11578428508587114889
+      Name: "Military Tank Historic Armor Skirt 01 - Front"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_skirt_001_front_ref"
+      }
+    }
+    Assets {
+      Id: 9152619968203525726
+      Name: "Military Tank Historic Armor Plate 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_armorplate_002_ref"
+      }
+    }
+    Assets {
+      Id: 16198346205888411814
+      Name: "Urban Fence Door"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_mil_fence_door_01"
+      }
+    }
+    Assets {
+      Id: 14805929512282111496
+      Name: "Urban Pipe Clamp 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_pipes_acc_clamp_002_ref"
+      }
+    }
+    Assets {
+      Id: 13328715946580888808
+      Name: "Sci-fi Satellite Canister"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_scf_satellite_canister_001"
+      }
+    }
+    Assets {
+      Id: 17112985054030154012
+      Name: "Urban Plank Debris 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urban_destruction_debris_plank_02_ref"
+      }
+    }
+    Assets {
+      Id: 14359217783623684227
+      Name: "Rubber Basic 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_004_uv"
+      }
+    }
+    Assets {
+      Id: 2769563029775643720
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+      }
+    }
+    Assets {
+      Id: 12482639849349891471
+      Name: "Urban Vehicle Car - Door Front 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_door_front_001_ref"
+      }
+    }
+    Assets {
+      Id: 3433416882178080463
+      Name: "Street Sign - Rectangle"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_street-sign_rectangle_001"
+      }
+    }
+    Assets {
+      Id: 16890205056291965690
+      Name: "Sign Bracket - Round"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_signbracket_round_001"
+      }
+    }
+    Assets {
+      Id: 1662883831283144872
+      Name: "Urban Manhole Cover 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_manhole_cover_01_ref"
+      }
+    }
+    Assets {
+      Id: 11508015507968617304
+      Name: "Urban Vehicle Car - Frame 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_frame_001_ref"
+      }
+    }
+    Assets {
+      Id: 9143604908401303261
+      Name: "Bone Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_bone_raw_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 4048871353471406004
+      Name: "Mecha - Armor - Pack 01 - Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_jpn_mecha_armor_pack_001_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 16701740470968256231
+      Name: "Military Tank Historic Container 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_hst_container_002_ref"
+      }
+    }
+    Assets {
+      Id: 16737023815630923572
+      Name: "Urban Vehicle Car - Glovebox 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_glovebox_001_ref"
+      }
+    }
+    Assets {
+      Id: 12821608187918865362
+      Name: "Urban Vehicle Car - Steering Wheel 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_steering_wheel_001_ref"
+      }
+    }
+    Assets {
+      Id: 16516459769229762722
+      Name: "Urban Car Screens 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_tachometer_001_ref"
+      }
+    }
+    Assets {
+      Id: 1772269630312073792
+      Name: "Radar Screen Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_radar_trans"
+      }
+    }
+    Assets {
+      Id: 3203349032132710974
+      Name: "Urban Vehicle Car - Front Seat Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 15353476744572170853
+      Name: "Urban Vehicle Car - Front Seat Leg 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_leg_001_ref"
+      }
+    }
+    Assets {
+      Id: 16049211287924608873
+      Name: "Urban Vehicle Car - Front Seat Bottom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 17591161558402514443
+      Name: "Urban Vehicle Car - Center Console 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_kit_console_center_001_ref"
+      }
+    }
+    Assets {
+      Id: 3342706046178942623
+      Name: "Screen Overlay 03"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_screen_overlay_03"
+      }
+    }
+    Assets {
+      Id: 6209556876010214815
+      Name: "Urban Vehicle Car - Brake 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+      }
+    }
+    Assets {
+      Id: 16630259605395466384
+      Name: "Frosted Glass"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_frosted_glass"
+      }
+    }
+    Assets {
+      Id: 12190463340827898157
+      Name: "Ring"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_004"
       }
     }
     PrimaryAssetId {
@@ -21667,4 +21288,3 @@ Assets {
   }
   SerializationVersion: 103
 }
-IncludesAllDependencies: true
