@@ -6296,8 +6296,9 @@ Objects {
   Name: "Kart Geo"
   Transform {
     Location {
-      X: -476
-      Y: -1462
+      X: -666.056885
+      Y: -2171.22803
+      Z: 989.627869
     }
     Rotation {
     }
@@ -7912,9 +7913,77 @@ Objects {
     }
   }
   ParentId: 2935919495293603488
-  ChildIds: 12056401378719592435
   ChildIds: 4496507480726526384
   ChildIds: 529580595855855948
+  ChildIds: 12056401378719592435
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12056401378719592435
+  Name: "Kart Geo - Owned"
+  Transform {
+    Location {
+      X: -6.10239877e-05
+      Y: -1.16746742e-06
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13778934346550464903
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 10207102980281913416
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 6133784542686929612
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 11642181338662207462
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 8768697395945414097
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7939,9 +8008,6 @@ Objects {
   Name: "Kart Geo - Unlocked"
   Transform {
     Location {
-      X: 476
-      Y: 1461.99951
-      Z: -9.05990601e-06
     }
     Rotation {
     }
@@ -7956,31 +8022,31 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5015320875919799294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15894666702107908735
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3490354650252545231
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 236004454284136026
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -8048,14 +8114,10 @@ Objects {
   Name: "Kart Geo - Locked"
   Transform {
     Location {
-      X: -237.61969
-      Y: -731.038818
-      Z: 933.505249
+      X: -6.10239877e-05
+      Y: -1.16746742e-06
     }
     Rotation {
-      Pitch: -0.0988055095
-      Yaw: -21.7038727
-      Roll: 0.0154883787
     }
     Scale {
       X: 1
@@ -8068,31 +8130,31 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14637868774676377139
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 13393549337518792140
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5740151912626977518
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14673448095775860912
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 841534158063459245
+        Id: 9324373660678580101
       }
     }
     Overrides {
@@ -8134,78 +8196,6 @@ Objects {
     Overrides {
       Name: "cs:5:ml"
       Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 12056401378719592435
-  Name: "Kart Geo - Default"
-  Transform {
-    Location {
-      X: -237.61969
-      Y: -731.038818
-      Z: 933.505249
-    }
-    Rotation {
-      Pitch: -0.0988055095
-      Yaw: -21.7038727
-      Roll: 0.0154883787
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13778934346550464903
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 841534158063459245
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 841534158063459245
-      }
-    }
-    Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 841534158063459245
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 841534158063459245
-      }
-    }
-    Overrides {
-      Name: "cs:5"
-      AssetReference {
-        Id: 841534158063459245
-      }
     }
   }
   Collidable_v2 {
@@ -11278,19 +11268,19 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:DefaultKartGeoFolder"
+      Name: "cs:OwnedGeoFolder"
       ObjectReference {
         SelfId: 12056401378719592435
       }
     }
     Overrides {
-      Name: "cs:UnlockedKartGeoFolder"
+      Name: "cs:UnlockedGeoFolder"
       ObjectReference {
         SelfId: 529580595855855948
       }
     }
     Overrides {
-      Name: "cs:LockedKartGeoFolder"
+      Name: "cs:LockedGeoFolder"
       ObjectReference {
         SelfId: 4496507480726526384
       }
@@ -11412,27 +11402,27 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:DefaultKartGeoFolder:isrep"
+      Name: "cs:OwnedGeoFolder:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:DefaultKartGeoFolder:ml"
+      Name: "cs:OwnedGeoFolder:ml"
       Bool: false
     }
     Overrides {
-      Name: "cs:UnlockedKartGeoFolder:isrep"
+      Name: "cs:UnlockedGeoFolder:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:UnlockedKartGeoFolder:ml"
+      Name: "cs:UnlockedGeoFolder:ml"
       Bool: false
     }
     Overrides {
-      Name: "cs:LockedKartGeoFolder:isrep"
+      Name: "cs:LockedGeoFolder:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:LockedKartGeoFolder:ml"
+      Name: "cs:LockedGeoFolder:ml"
       Bool: false
     }
     Overrides {
