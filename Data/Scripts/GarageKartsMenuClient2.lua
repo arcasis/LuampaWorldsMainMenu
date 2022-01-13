@@ -38,8 +38,6 @@ local index = 0
 local total = 0
 local currentlyVisible = nil
 
-local geoPosition = OWNED_GEO_FOLDER:GetWorldPosition()
-
 local kartsMainMenuOpen = false
 local kartsMenuOpen = false
 
@@ -127,8 +125,6 @@ end]]
 function DisplayLockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    --currentlyVisible = LOCKED_GEO_TABLE[index]
-    --LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
     LOCKED_IMAGE.visibility = Visibility.INHERIT
     EDIT_VEHICLE_BUTTON.isInteractable = false
@@ -143,14 +139,12 @@ function DisplayLockedVehicle()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
-    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER, position = geoPosition})
+    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER})  -- parent folder must be at location
 end
 
 function DisplayUnlockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    --currentlyVisible = UNLOCKED_GEO_TABLE[index]
-    --UNLOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON.isInteractable = false
@@ -165,14 +159,12 @@ function DisplayUnlockedVehicle()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.INHERIT
 
-    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER, position = geoPosition})
+    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER})  -- parent folder must be at location
 end
 
 function DisplayOwnedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
-    --currentlyVisible = OWNED_GEO_TABLE[index]
-    --OWNED_GEO_TABLE[index].visibility = Visibility.INHERIT
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON.isInteractable = true
@@ -198,12 +190,14 @@ function DisplayOwnedVehicle()
     
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
-    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER, position = geoPosition})
+    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER})  -- parent folder must be at location
 
     print("index is: ", index)
     print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index] )
+    print("geoAsset is: ", geoAsset)
     print("currentlyVisible is: ", currentlyVisible)
-    print("geo position is: ", currentlyVisible:GetWorldPosition())
+    print("Owned Kart folder geo position is: ", geoPosition)
+    print("Spawned Kart geo position is: ", currentlyVisible:GetWorldPosition())
 end
 
 --[[function OnEditUpgradeButtonClicked()
@@ -308,7 +302,6 @@ end
 -- put defaulot owned geo asset references in a table
 for name, asset in pairs(OWNED_GEO_FOLDER:GetCustomProperties()) do
     local tableIndex = tonumber(name)
-
     OWNED_GEO_TABLE[tableIndex] = asset
 
     --print("tableIndex is: ", tableIndex)
@@ -344,7 +337,13 @@ end
 
 total = index
 index = 1
---currentlyVisible = OWNED_GEO_TABLE[index]     -- needs to be actual spawned geo, now this is an asset reference
+
+-- TEST: DELETE MEH --
+local test = World.SpawnAsset(OWNED_GEO_TABLE[index])
+    print("index is: ", index)
+    print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index])
+    print("test is: ", test)
+-- END TEST --
 
 
 Events.Connect("KartPurchased", OnKartPurchased)
