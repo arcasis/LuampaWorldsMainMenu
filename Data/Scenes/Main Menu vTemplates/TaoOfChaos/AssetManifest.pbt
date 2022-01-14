@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13949441344821433690
+  Name: "Cylinder"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
   Id: 13766874025060581873
   Name: "Tech Symbol 1"
   PlatformAssetType: 9

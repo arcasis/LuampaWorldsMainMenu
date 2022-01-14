@@ -15,6 +15,7 @@ Objects {
     }
   }
   ChildIds: 1696798925401821095
+  ChildIds: 12958741551856020393
   ChildIds: 6585441192959826313
   UnregisteredParameters {
   }
@@ -63,6 +64,41 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "MonkeyJedi"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12958741551856020393
+  Name: "Pass the Chainsaw"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pass the Chainsaw"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

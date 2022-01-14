@@ -191,10 +191,10 @@ Objects {
   }
   ParentId: 1696798925401821095
   ChildIds: 15835859370704989364
-  ChildIds: 9414514761079459098
-  ChildIds: 13109927566236709296
-  ChildIds: 16057713092089398908
-  ChildIds: 12158074331431296115
+  ChildIds: 2935253058481996132
+  ChildIds: 6075505078444218678
+  ChildIds: 4345241191253639307
+  ChildIds: 11084414636793143187
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -215,18 +215,12 @@ Objects {
   }
 }
 Objects {
-  Id: 12158074331431296115
+  Id: 11084414636793143187
   Name: "Garage Battle Menu"
   Transform {
     Location {
-      X: 66.8249512
-      Y: 2260.25903
-      Z: -421.312378
     }
     Rotation {
-      Pitch: -0.483235866
-      Yaw: 155.902481
-      Roll: 0.275351852
     }
     Scale {
       X: 1
@@ -237,9 +231,7 @@ Objects {
   ParentId: 9188275580542756088
   ChildIds: 6900111359064049426
   ChildIds: 2910209769126176749
-  ChildIds: 8398366710339645358
-  UnregisteredParameters {
-  }
+  ChildIds: 14242996041845712709
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -260,12 +252,10 @@ Objects {
   }
 }
 Objects {
-  Id: 8398366710339645358
+  Id: 14242996041845712709
   Name: "ClientContext"
   Transform {
     Location {
-      X: -2447
-      Y: -3236
     }
     Rotation {
     }
@@ -275,9 +265,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12158074331431296115
+  ParentId: 11084414636793143187
   ChildIds: 18120832145817313819
   ChildIds: 10505102574848237220
+  ChildIds: 11104742030297938276
   ChildIds: 8704119052559485770
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -302,11 +293,12 @@ Objects {
   Name: "Battle Geo"
   Transform {
     Location {
-      X: 351
-      Y: -3592
-      Z: 526
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
     }
     Rotation {
+      Yaw: 89.9999924
     }
     Scale {
       X: 1
@@ -314,7 +306,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8398366710339645358
+  ParentId: 14242996041845712709
   ChildIds: 9990383412583160525
   ChildIds: 3247995148312029257
   Collidable_v2 {
@@ -341,14 +333,8 @@ Objects {
   Name: "Battle Upgrades Geo"
   Transform {
     Location {
-      X: 0.379566967
-      Y: -0.0356330276
-      Z: -14.4947844
     }
     Rotation {
-      Pitch: -0.0988055095
-      Yaw: -21.7038822
-      Roll: 0.0154883955
     }
     Scale {
       X: 1
@@ -2218,14 +2204,8 @@ Objects {
   Name: "Battle Geo - Owned"
   Transform {
     Location {
-      X: 0.386664212
-      Y: -0.127318919
-      Z: 4.83173418
     }
     Rotation {
-      Pitch: -0.0988055095
-      Yaw: -21.7038689
-      Roll: 0.0154884234
     }
     Scale {
       X: 1
@@ -2238,31 +2218,31 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11642181338662207462
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8395753202752431621
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8768697395945414097
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3677500936474418915
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16464074713874394408
       }
     }
     Overrides {
@@ -2322,14 +2302,8 @@ Objects {
   Name: "Battle Geo - Unlocked"
   Transform {
     Location {
-      X: 0.38042751
-      Y: -0.104634494
-      Z: 0.368567765
     }
     Rotation {
-      Pitch: -0.0988191739
-      Yaw: -21.7038822
-      Roll: 0.0154882083
     }
     Scale {
       X: 1
@@ -2342,31 +2316,31 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15707896951489421267
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3490354650252545231
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 17438479039680390717
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 7549644669932872156
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -2426,14 +2400,8 @@ Objects {
   Name: "Battle Geo - Locked"
   Transform {
     Location {
-      X: 0.380779207
-      Y: -0.106616765
-      Z: 0.368561208
     }
     Rotation {
-      Pitch: -0.0988055095
-      Yaw: -21.7038689
-      Roll: 0.0154884234
     }
     Scale {
       X: 1
@@ -2446,31 +2414,31 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 9830842801394050088
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3426904075239409324
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11669863343855639342
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 9324373660678580101
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5740151912626977518
       }
     }
     Overrides {
@@ -2526,6 +2494,76 @@ Objects {
   }
 }
 Objects {
+  Id: 11104742030297938276
+  Name: "DISPLAY LOCATION FOLDER"
+  Transform {
+    Location {
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
+    }
+    Rotation {
+      Yaw: 89.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 10207102980281913416
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 6133784542686929612
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 11642181338662207462
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 8768697395945414097
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 10505102574848237220
   Name: "Battle Menu Container"
   Transform {
@@ -2545,7 +2583,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8398366710339645358
+  ParentId: 14242996041845712709
   ChildIds: 8445281688302102432
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2612,6 +2650,7 @@ Objects {
     }
   }
   ParentId: 10505102574848237220
+  ChildIds: 2274254675366458734
   ChildIds: 7959611291421426607
   ChildIds: 13975775855012976837
   Collidable_v2 {
@@ -2732,9 +2771,9 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -1469.21729
-      Y: 5033.38477
-      Z: 87.9116745
+      X: -5214.78223
+      Y: -4333.44824
+      Z: -813.944519
     }
     Rotation {
       Pitch: 0.00514996238
@@ -2752,7 +2791,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4041,9 +4080,6 @@ Objects {
   Name: "GarageBattleUpgradesMenuClient2"
   Transform {
     Location {
-      X: 0.000816347077
-      Y: -0.00209116098
-      Z: -0.000362390449
     }
     Rotation {
       Pitch: 2.04905664e-05
@@ -4329,7 +4365,6 @@ Objects {
   ChildIds: 9866075515843571691
   ChildIds: 12166770845788654612
   ChildIds: 2359158844426509354
-  ChildIds: 2274254675366458734
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4373,309 +4408,13 @@ Objects {
   }
 }
 Objects {
-  Id: 2274254675366458734
-  Name: "GarageBattleMenuClient2"
-  Transform {
-    Location {
-      X: -302.993896
-      Y: -1221.19873
-      Z: -880.550598
-    }
-    Rotation {
-      Pitch: -0.597473145
-      Yaw: -115.191254
-      Roll: 0.0325002074
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7959611291421426607
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:GarageMainMenuPanel"
-      ObjectReference {
-        SelfId: 14557584287892330648
-      }
-    }
-    Overrides {
-      Name: "cs:GarageBattleMainMenuPanel"
-      ObjectReference {
-        SelfId: 8445281688302102432
-      }
-    }
-    Overrides {
-      Name: "cs:GarageBattlePanel"
-      ObjectReference {
-        SelfId: 7959611291421426607
-      }
-    }
-    Overrides {
-      Name: "cs:GarageBattleUpgradesPanel"
-      ObjectReference {
-        SelfId: 13975775855012976837
-      }
-    }
-    Overrides {
-      Name: "cs:EditVehicleButton"
-      ObjectReference {
-        SelfId: 18001212761352047056
-      }
-    }
-    Overrides {
-      Name: "cs:EditVehicleImage"
-      ObjectReference {
-        SelfId: 9676787866780516591
-      }
-    }
-    Overrides {
-      Name: "cs:VehicleArrowLeft"
-      ObjectReference {
-        SelfId: 307729007882034710
-      }
-    }
-    Overrides {
-      Name: "cs:VehicleArrowRight"
-      ObjectReference {
-        SelfId: 8715028910927077954
-      }
-    }
-    Overrides {
-      Name: "cs:BackButton"
-      ObjectReference {
-        SelfId: 14684816620838083131
-      }
-    }
-    Overrides {
-      Name: "cs:LockedGeoFolder"
-      ObjectReference {
-        SelfId: 7068825633905796462
-      }
-    }
-    Overrides {
-      Name: "cs:UnlockedGeoFolder"
-      ObjectReference {
-        SelfId: 10893767463856759093
-      }
-    }
-    Overrides {
-      Name: "cs:OwnedGeoFolder"
-      ObjectReference {
-        SelfId: 713943643876442
-      }
-    }
-    Overrides {
-      Name: "cs:LockedImage"
-      ObjectReference {
-        SelfId: 7732725985481900805
-      }
-    }
-    Overrides {
-      Name: "cs:VehicleStatusText"
-      ObjectReference {
-        SelfId: 2359158844426509354
-      }
-    }
-    Overrides {
-      Name: "cs:WallSpotlights"
-      ObjectReference {
-        SelfId: 17749405240085622520
-      }
-    }
-    Overrides {
-      Name: "cs:VehicleDisplayLightCylinder"
-      ObjectReference {
-        SelfId: 2128988704596968986
-      }
-    }
-    Overrides {
-      Name: "cs:SetAsDefaultButton"
-      ObjectReference {
-        SelfId: 9866075515843571691
-      }
-    }
-    Overrides {
-      Name: "cs:PurchaseButton"
-      ObjectReference {
-        SelfId: 12166770845788654612
-      }
-    }
-    Overrides {
-      Name: "cs:GarageMainMenuPanel:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageMainMenuPanel:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageBattleMainMenuPanel:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageBattleMainMenuPanel:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageBattlePanel:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageBattlePanel:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageBattleUpgradesPanel:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:GarageBattleUpgradesPanel:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:EditVehicleButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:EditVehicleButton:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:EditVehicleImage:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:EditVehicleImage:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleArrowLeft:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleArrowLeft:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleArrowRight:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleArrowRight:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:BackButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:BackButton:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:LockedGeoFolder:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:LockedGeoFolder:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:UnlockedGeoFolder:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:UnlockedGeoFolder:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:OwnedGeoFolder:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:OwnedGeoFolder:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:LockedImage:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:LockedImage:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleStatusText:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleStatusText:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:WallSpotlights:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:WallSpotlights:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleDisplayLightCylinder:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VehicleDisplayLightCylinder:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SetAsDefaultButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SetAsDefaultButton:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:PurchaseButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:PurchaseButton:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 3003635620557483509
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 2359158844426509354
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: 1977.69922
-      Y: 6022.55078
-      Z: -332.549957
+      X: -5214.7793
+      Y: -4333.44434
+      Z: -813.944153
     }
     Rotation {
       Pitch: 0.00514313206
@@ -5786,18 +5525,14 @@ Objects {
   }
 }
 Objects {
-  Id: 18120832145817313819
-  Name: "LuampaPurchaseTrucksClient"
+  Id: 2274254675366458734
+  Name: "GarageBattleMenuClient2"
   Transform {
     Location {
-      X: 0.000137412455
-      Y: 0.00327035598
-      Z: 0.000444142
+      X: -0.000224731484
+      Y: 9.53934359e-05
     }
     Rotation {
-      Pitch: 1.36603776e-05
-      Yaw: 3.25050181e-13
-      Roll: 4.08210462e-06
     }
     Scale {
       X: 1
@@ -5805,7 +5540,297 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8398366710339645358
+  ParentId: 8445281688302102432
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GarageMainMenuPanel"
+      ObjectReference {
+        SelfId: 14557584287892330648
+      }
+    }
+    Overrides {
+      Name: "cs:GarageBattleMainMenuPanel"
+      ObjectReference {
+        SelfId: 8445281688302102432
+      }
+    }
+    Overrides {
+      Name: "cs:GarageBattlePanel"
+      ObjectReference {
+        SelfId: 7959611291421426607
+      }
+    }
+    Overrides {
+      Name: "cs:GarageBattleUpgradesPanel"
+      ObjectReference {
+        SelfId: 13975775855012976837
+      }
+    }
+    Overrides {
+      Name: "cs:EditVehicleButton"
+      ObjectReference {
+        SelfId: 18001212761352047056
+      }
+    }
+    Overrides {
+      Name: "cs:EditVehicleImage"
+      ObjectReference {
+        SelfId: 9676787866780516591
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleArrowLeft"
+      ObjectReference {
+        SelfId: 307729007882034710
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleArrowRight"
+      ObjectReference {
+        SelfId: 8715028910927077954
+      }
+    }
+    Overrides {
+      Name: "cs:BackButton"
+      ObjectReference {
+        SelfId: 14684816620838083131
+      }
+    }
+    Overrides {
+      Name: "cs:LockedGeoFolder"
+      ObjectReference {
+        SelfId: 7068825633905796462
+      }
+    }
+    Overrides {
+      Name: "cs:UnlockedGeoFolder"
+      ObjectReference {
+        SelfId: 10893767463856759093
+      }
+    }
+    Overrides {
+      Name: "cs:OwnedGeoFolder"
+      ObjectReference {
+        SelfId: 713943643876442
+      }
+    }
+    Overrides {
+      Name: "cs:LockedImage"
+      ObjectReference {
+        SelfId: 7732725985481900805
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText"
+      ObjectReference {
+        SelfId: 2359158844426509354
+      }
+    }
+    Overrides {
+      Name: "cs:WallSpotlights"
+      ObjectReference {
+        SelfId: 17749405240085622520
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder"
+      ObjectReference {
+        SelfId: 2128988704596968986
+      }
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton"
+      ObjectReference {
+        SelfId: 9866075515843571691
+      }
+    }
+    Overrides {
+      Name: "cs:PurchaseButton"
+      ObjectReference {
+        SelfId: 12166770845788654612
+      }
+    }
+    Overrides {
+      Name: "cs:GarageMainMenuPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageMainMenuPanel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageBattleMainMenuPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageBattleMainMenuPanel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageBattlePanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageBattlePanel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageBattleUpgradesPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageBattleUpgradesPanel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:EditVehicleButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:EditVehicleButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:EditVehicleImage:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:EditVehicleImage:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowLeft:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowLeft:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowRight:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleArrowRight:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:BackButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:BackButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedGeoFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UnlockedGeoFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UnlockedGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:OwnedGeoFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:OwnedGeoFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedImage:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:LockedImage:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleStatusText:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:WallSpotlights:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:WallSpotlights:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleDisplayLightCylinder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SetAsDefaultButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:PurchaseButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:PurchaseButton:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3003635620557483509
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18120832145817313819
+  Name: "LuampaPurchaseTrucksClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
   UnregisteredParameters {
     Overrides {
       Name: "cs:TruckPricesData"
@@ -5871,7 +5896,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12158074331431296115
+  ParentId: 11084414636793143187
   ChildIds: 12589734875258169645
   ChildIds: 16129434330388531456
   Collidable_v2 {
@@ -5980,9 +6005,6 @@ Objects {
     Location {
     }
     Rotation {
-      Pitch: -0.0595046058
-      Yaw: -66.9993744
-      Roll: -0.284084857
     }
     Scale {
       X: 1
@@ -5990,7 +6012,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12158074331431296115
+  ParentId: 11084414636793143187
   ChildIds: 4587510823809761776
   UnregisteredParameters {
     Overrides {
@@ -6210,18 +6232,12 @@ Objects {
   }
 }
 Objects {
-  Id: 16057713092089398908
+  Id: 4345241191253639307
   Name: "Garage Karts Menu"
   Transform {
     Location {
-      X: 66.8249512
-      Y: 2260.25903
-      Z: -421.312378
     }
     Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.904007
-      Roll: 0.268322378
     }
     Scale {
       X: 1
@@ -6231,8 +6247,8 @@ Objects {
   }
   ParentId: 9188275580542756088
   ChildIds: 3825881162607431306
-  ChildIds: 7018944591413314931
-  ChildIds: 17212085827600267809
+  ChildIds: 8826659184625726104
+  ChildIds: 10894713328343682309
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6253,13 +6269,10 @@ Objects {
   }
 }
 Objects {
-  Id: 17212085827600267809
+  Id: 10894713328343682309
   Name: "ClientContext"
   Transform {
     Location {
-      X: -1382
-      Y: -4635
-      Z: -422
     }
     Rotation {
     }
@@ -6269,9 +6282,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16057713092089398908
+  ParentId: 4345241191253639307
   ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
+  ChildIds: 12333704757248786248
   ChildIds: 2935919495293603488
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -6296,11 +6310,12 @@ Objects {
   Name: "Kart Geo"
   Transform {
     Location {
-      X: -666.056885
-      Y: -2171.22803
-      Z: 989.627869
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
     }
     Rotation {
+      Yaw: 90
     }
     Scale {
       X: 1
@@ -6308,7 +6323,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 10894713328343682309
   ChildIds: 13778934346550464903
   ChildIds: 9856664457127402301
   Collidable_v2 {
@@ -6337,9 +6352,6 @@ Objects {
     Location {
     }
     Rotation {
-      Pitch: -0.0988055095
-      Yaw: -21.7038898
-      Roll: 0.0154883768
     }
     Scale {
       X: 1
@@ -6432,25 +6444,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6133784542686929612
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8883611779929351183
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10207102980281913416
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11642181338662207462
       }
     }
     Overrides {
@@ -6526,25 +6538,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6133784542686929612
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8883611779929351183
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10207102980281913416
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11642181338662207462
       }
     }
     Overrides {
@@ -6620,25 +6632,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6133784542686929612
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8883611779929351183
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10207102980281913416
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11642181338662207462
       }
     }
     Overrides {
@@ -6714,25 +6726,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6133784542686929612
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8883611779929351183
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10207102980281913416
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11642181338662207462
       }
     }
     Overrides {
@@ -6808,25 +6820,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6133784542686929612
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 8883611779929351183
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10207102980281913416
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11642181338662207462
       }
     }
     Overrides {
@@ -6943,25 +6955,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 236004454284136026
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5015320875919799294
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15894666702107908735
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -7037,25 +7049,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 236004454284136026
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5015320875919799294
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15894666702107908735
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -7131,25 +7143,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 236004454284136026
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5015320875919799294
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15894666702107908735
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -7225,25 +7237,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 236004454284136026
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5015320875919799294
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15894666702107908735
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -7319,25 +7331,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 236004454284136026
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5015320875919799294
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15894666702107908735
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -7451,25 +7463,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15461375151949101575
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14058778756781102909
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15187617135700661660
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1042466993702325011
       }
     }
     Overrides {
@@ -7544,25 +7556,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15461375151949101575
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14058778756781102909
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15187617135700661660
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1042466993702325011
       }
     }
     Overrides {
@@ -7637,25 +7649,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15461375151949101575
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14058778756781102909
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15187617135700661660
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1042466993702325011
       }
     }
     Overrides {
@@ -7730,25 +7742,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15461375151949101575
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14058778756781102909
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15187617135700661660
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1042466993702325011
       }
     }
     Overrides {
@@ -7822,25 +7834,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15461375151949101575
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 14058778756781102909
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 15187617135700661660
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1042466993702325011
       }
     }
     Overrides {
@@ -8215,6 +8227,76 @@ Objects {
   }
 }
 Objects {
+  Id: 12333704757248786248
+  Name: "DISPLAY LOCATION FOLDER"
+  Transform {
+    Location {
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
+    }
+    Rotation {
+      Yaw: 89.9999771
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10894713328343682309
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 10207102980281913416
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 6133784542686929612
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 11642181338662207462
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 8768697395945414097
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 3508418160663392510
   Name: "Karts Menu Container"
   Transform {
@@ -8234,7 +8316,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 10894713328343682309
   ChildIds: 15480859360796277606
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -8421,9 +8503,9 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -1469.21729
-      Y: 5033.38477
-      Z: 87.9116745
+      X: -9542.22168
+      Y: 2535.09082
+      Z: -771.521179
     }
     Rotation {
       Pitch: 0.00514996238
@@ -9730,14 +9812,8 @@ Objects {
   Name: "GarageKartUpgradesMenuClient2"
   Transform {
     Location {
-      X: -17.5168457
-      Y: 2266.4668
-      Z: -1275.22461
     }
     Rotation {
-      Pitch: -0.278411865
-      Yaw: -93.2868347
-      Roll: 0.0106624374
     }
     Scale {
       X: 1
@@ -10069,9 +10145,9 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -1469.21582
-      Y: 5033.38086
-      Z: 87.9116898
+      X: -9542.21191
+      Y: 2535.08936
+      Z: -771.52124
     }
     Rotation {
       Pitch: 0.00514996238
@@ -11188,9 +11264,8 @@ Objects {
   Name: "GarageKartsMenuClient2"
   Transform {
     Location {
-      X: 0.000975801551
-      Y: -1.86798279e-05
-      Z: 0.000126642233
+      X: -5.82694383e-07
+      Z: 0.000122067584
     }
     Rotation {
       Yaw: 3.41509485e-06
@@ -11497,9 +11572,6 @@ Objects {
   Name: "LuampaPurchaseKartsClient"
   Transform {
     Location {
-      X: 0.00146457576
-      Y: 2.80191889e-05
-      Z: -7.57154339e-11
     }
     Rotation {
     }
@@ -11509,7 +11581,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17212085827600267809
+  ParentId: 10894713328343682309
   UnregisteredParameters {
     Overrides {
       Name: "cs:KartPricesData"
@@ -11562,7 +11634,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7018944591413314931
+  Id: 8826659184625726104
   Name: "ServerContext"
   Transform {
     Location {
@@ -11575,7 +11647,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16057713092089398908
+  ParentId: 4345241191253639307
   ChildIds: 17492634533640924148
   ChildIds: 4103537604295010180
   Collidable_v2 {
@@ -11602,14 +11674,11 @@ Objects {
   Name: "LuampaPurchaseKartsServer"
   Transform {
     Location {
-      X: -2261.08569
-      Y: 21.6052246
-      Z: 421.62088
+      Y: 0.000244140625
     }
     Rotation {
-      Pitch: -0.268371791
-      Yaw: -88.9039764
-      Roll: 2.93487892e-06
+      Yaw: 1.36603767e-05
+      Roll: 5.3360818e-08
     }
     Scale {
       X: 1
@@ -11617,7 +11686,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7018944591413314931
+  ParentId: 8826659184625726104
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -11646,8 +11715,14 @@ Objects {
   Name: "GarageKartsMenuServer"
   Transform {
     Location {
+      X: 66.8249512
+      Y: 2260.25903
+      Z: -421.312378
     }
     Rotation {
+      Pitch: 0.00513630174
+      Yaw: 88.904007
+      Roll: 0.268322378
     }
     Scale {
       X: 1
@@ -11655,7 +11730,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7018944591413314931
+  ParentId: 8826659184625726104
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -11691,7 +11766,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 16057713092089398908
+  ParentId: 4345241191253639307
   ChildIds: 13481171590303052675
   UnregisteredParameters {
     Overrides {
@@ -11871,18 +11946,12 @@ Objects {
   }
 }
 Objects {
-  Id: 13109927566236709296
+  Id: 6075505078444218678
   Name: "Garage Main Menu"
   Transform {
     Location {
-      X: 0.00048828125
-      Y: -0.00146484375
-      Z: 0.000183105469
     }
     Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.904007
-      Roll: 0.268322378
     }
     Scale {
       X: 1
@@ -11891,7 +11960,7 @@ Objects {
     }
   }
   ParentId: 9188275580542756088
-  ChildIds: 4345911546112190514
+  ChildIds: 3013217966661650341
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -11912,12 +11981,10 @@ Objects {
   }
 }
 Objects {
-  Id: 4345911546112190514
+  Id: 3013217966661650341
   Name: "ClientContext"
   Transform {
     Location {
-      X: 61
-      Y: -978
     }
     Rotation {
     }
@@ -11927,7 +11994,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13109927566236709296
+  ParentId: 6075505078444218678
   ChildIds: 17661243849115904086
   ChildIds: 16344698159990179387
   ChildIds: 14117059892126765878
@@ -11969,7 +12036,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4345911546112190514
+  ParentId: 3013217966661650341
   ChildIds: 14557584287892330648
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -12801,14 +12868,13 @@ Objects {
   Name: "GarageMainMenuClient"
   Transform {
     Location {
-      X: -104.226074
-      Y: 5496.17822
-      Z: 864.414612
+      X: -4522.17725
+      Y: 43.2028198
+      Z: 843.242371
     }
     Rotation {
-      Pitch: -0.268371791
-      Yaw: -88.9039688
-      Roll: 2.97489987e-06
+      Yaw: 1.7075472e-05
+      Roll: 1.06721664e-07
     }
     Scale {
       X: 1
@@ -12816,7 +12882,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4345911546112190514
+  ParentId: 3013217966661650341
   UnregisteredParameters {
     Overrides {
       Name: "cs:MainMenuPanel"
@@ -12921,13 +12987,14 @@ Objects {
   Name: "Garage Menu Camera"
   Transform {
     Location {
-      X: 163.98291
-      Y: -6473.24805
-      Z: 324.453827
+      X: 7452.5874
+      Y: 82.4147339
+      Z: 359.365509
     }
     Rotation {
-      Yaw: 89.9999847
-      Roll: 2.50562882e-09
+      Pitch: -0.268323958
+      Yaw: 178.903961
+      Roll: 0.00513642794
     }
     Scale {
       X: 8.17229
@@ -12935,7 +13002,7 @@ Objects {
       Z: 0.137821108
     }
   }
-  ParentId: 4345911546112190514
+  ParentId: 3013217966661650341
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -12973,13 +13040,10 @@ Objects {
   }
 }
 Objects {
-  Id: 9414514761079459098
+  Id: 2935253058481996132
   Name: "Main Menu UI"
   Transform {
     Location {
-      X: 2261
-      Y: -22
-      Z: -422
     }
     Rotation {
     }
@@ -12990,7 +13054,7 @@ Objects {
     }
   }
   ParentId: 9188275580542756088
-  ChildIds: 8504442605259582918
+  ChildIds: 17394876653139755256
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -13011,13 +13075,10 @@ Objects {
   }
 }
 Objects {
-  Id: 8504442605259582918
+  Id: 17394876653139755256
   Name: "ClientContext"
   Transform {
     Location {
-      X: 0.0891113281
-      Y: 0.395751953
-      Z: 0.379058838
     }
     Rotation {
     }
@@ -13027,7 +13088,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9414514761079459098
+  ParentId: 2935253058481996132
   ChildIds: 6716722386091345714
   ChildIds: 2016190126149047528
   Collidable_v2 {
@@ -13068,7 +13129,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8504442605259582918
+  ParentId: 17394876653139755256
   ChildIds: 12978439604578497302
   ChildIds: 3518919065487025658
   ChildIds: 13800337983050309370
@@ -17895,9 +17956,9 @@ Objects {
   Name: "Main Menu Camera"
   Transform {
     Location {
-      X: 336.345734
-      Y: 8530.70312
-      Z: 591.8703
+      X: 2597.43481
+      Y: 8509.09863
+      Z: 170.249374
     }
     Rotation {
       Pitch: 1.522
@@ -17955,7 +18016,7 @@ Objects {
     Location {
     }
     Rotation {
-      Yaw: 4.07110977e-13
+      Yaw: 4.0711095e-13
       Roll: 3.97569144e-15
     }
     Scale {
@@ -17964,7 +18025,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8504442605259582918
+  ParentId: 17394876653139755256
   UnregisteredParameters {
     Overrides {
       Name: "cs:Container"
@@ -18395,56 +18456,51 @@ Objects {
   }
 }
 Objects {
-  Id: 11104742030297938276
-  Name: "temp parent folder"
+  Id: 4735171363339789861
+  Name: "Vehicle Display Light ON"
   Transform {
     Location {
-      X: 6829.90137
-      Y: 82.3894043
-      Z: 177.999908
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
     }
     Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.904007
-      Roll: 0.268322378
+      Yaw: -14.815033
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 8.17229
+      Y: 8.17229
+      Z: 0.137821108
     }
   }
   ParentId: 1696798925401821095
   UnregisteredParameters {
     Overrides {
-      Name: "cs:1"
+      Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 8883611779929351183
+        Id: 13229798138451002191
       }
     }
     Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10207102980281913416
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.431000024
+        G: 0.431000024
+        B: 0.431000024
+        A: 1
       }
     }
     Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 6133784542686929612
-      }
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
     Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 11642181338662207462
-      }
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1.34078336
     }
     Overrides {
-      Name: "cs:5"
-      AssetReference {
-        Id: 8768697395945414097
-      }
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.00458133
     }
   }
   Collidable_v2 {
@@ -18459,8 +18515,75 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Folder {
-    IsGroup: true
+  CoreMesh {
+    MeshAsset {
+      Id: 13949441344821433690
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7790783926779858196
+  Name: "STATUS TEXT POSITION"
+  Transform {
+    Location {
+      X: 7352.94727
+      Y: 115.999512
+      Z: 116.000366
+    }
+    Rotation {
+      Pitch: 2.04905664e-05
+      Yaw: 2.04905646e-05
+      Roll: 6.93693892e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Owned"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
