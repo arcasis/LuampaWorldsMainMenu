@@ -100,7 +100,6 @@ function ProcessIndex()
             DisplayUnlockedVehicle()
         end
     else
-        --print("the kart w
         DisplayLockedVehicle()
     end
 end
@@ -140,6 +139,7 @@ function DisplayLockedVehicle()
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
     currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedVehicle()
@@ -160,6 +160,7 @@ function DisplayUnlockedVehicle()
     PURCHASE_BUTTON.visibility = Visibility.INHERIT
 
     currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedVehicle()
@@ -191,13 +192,13 @@ function DisplayOwnedVehicle()
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
     currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 
-    print("index is: ", index)
-    print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index] )
-    print("geoAsset is: ", geoAsset)
-    print("currentlyVisible is: ", currentlyVisible)
-    print("Owned Kart folder geo position is: ", geoPosition)
-    print("Spawned Kart geo position is: ", currentlyVisible:GetWorldPosition())
+    --print("index is: ", index)
+    --print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index])     -- prints the asset reference
+    --print("currentlyVisible is: ", currentlyVisible)     -- prints a folder?!
+    --print("parent folder location is: ", OWNED_GEO_FOLDER:GetWorldPosition())
+    --print("Spawned Kart geo position is: ", currentlyVisible:GetWorldPosition())
 end
 
 --[[function OnEditUpgradeButtonClicked()
@@ -207,7 +208,7 @@ end]]
 
 function OnBackButtonClicked()
 
-    print("karts menu back button scripts run")
+    --print("karts menu back button scripts run")
     --currentlyVisible.visibility = Visibility.FORCE_OFF
 
     -- Garage Main Menu scripts open KARTS_MAIN_MENU_PANEL, then Tick opens/closes KARTS_PANEL
@@ -337,13 +338,6 @@ end
 
 total = index
 index = 1
-
--- TEST: DELETE MEH --
-local test = World.SpawnAsset(OWNED_GEO_TABLE[index])
-    print("index is: ", index)
-    print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index])
-    print("test is: ", test)
--- END TEST --
 
 
 Events.Connect("KartPurchased", OnKartPurchased)

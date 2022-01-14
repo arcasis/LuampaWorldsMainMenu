@@ -150,9 +150,9 @@ function OnPlayerJoined(player)
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
 
-    print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
+    --print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
     local selectedTruckUserData = player.serverUserData.selectedTruck
-    print("selectedTruck trucks[1] is: ", selectedTruckUserData[1])
+    --print("selectedTruck trucks[1] is: ", selectedTruckUserData[1])
     --------------------- END BATTLE ---------------------
     
     ------------------------ COINS ------------------------

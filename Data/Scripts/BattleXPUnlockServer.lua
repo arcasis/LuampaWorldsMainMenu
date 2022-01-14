@@ -7,7 +7,7 @@ function UnlockVehicles(player)
     local trucks = player.serverUserData.trucks
     local totalBattleXp = player.serverUserData.totalBattleXp
 
-    print("BattleXPUnlockServer says player's .totalBattleXp is: ", totalBattleXp)
+    --print("BattleXPUnlockServer says player's .totalBattleXp is: ", totalBattleXp)
 
     -- kart #1
     if totalBattleXp >= 1000 and totalBattleXp <= 4000 then
@@ -120,9 +120,9 @@ function UnlockVehicles(player)
 
     player.serverUserData.trucks = trucks
 
-    print("player's .serverUserData.trucks[1] is: ", trucks[1])
-    print("player's .serverUserData.trucks[1][1] is: ", trucks[1][1])
-    print("player's .serverUserData.trucks[2] is: ", trucks[2])
+    --print("player's .serverUserData.trucks[1] is: ", trucks[1])
+    --print("player's .serverUserData.trucks[1][1] is: ", trucks[1][1])
+    --print("player's .serverUserData.trucks[2] is: ", trucks[2])
 end
 
 

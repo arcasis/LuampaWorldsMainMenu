@@ -441,25 +441,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 509079934592953291
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5247418899811124199
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10552935343672386347
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16547402600529970902
       }
     }
     Overrides {
@@ -533,25 +533,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 509079934592953291
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5247418899811124199
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10552935343672386347
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16547402600529970902
       }
     }
     Overrides {
@@ -625,25 +625,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 509079934592953291
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5247418899811124199
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10552935343672386347
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16547402600529970902
       }
     }
     Overrides {
@@ -717,25 +717,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 509079934592953291
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5247418899811124199
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10552935343672386347
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16547402600529970902
       }
     }
     Overrides {
@@ -809,25 +809,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 509079934592953291
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5247418899811124199
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10552935343672386347
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16547402600529970902
       }
     }
     Overrides {
@@ -901,25 +901,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 509079934592953291
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 5247418899811124199
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10552935343672386347
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16547402600529970902
       }
     }
     Overrides {
@@ -1033,25 +1033,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4886017605021124364
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10829740752232347592
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2048101420500260394
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2254938023492922603
       }
     }
     Overrides {
@@ -1125,25 +1125,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4886017605021124364
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10829740752232347592
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2048101420500260394
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2254938023492922603
       }
     }
     Overrides {
@@ -1217,25 +1217,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4886017605021124364
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10829740752232347592
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2048101420500260394
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2254938023492922603
       }
     }
     Overrides {
@@ -1309,25 +1309,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4886017605021124364
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10829740752232347592
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2048101420500260394
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2254938023492922603
       }
     }
     Overrides {
@@ -1401,25 +1401,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4886017605021124364
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10829740752232347592
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2048101420500260394
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2254938023492922603
       }
     }
     Overrides {
@@ -1493,25 +1493,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4886017605021124364
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10829740752232347592
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2048101420500260394
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 2254938023492922603
       }
     }
     Overrides {
@@ -1628,25 +1628,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16201507078899524131
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10606676063634080272
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6881735181445311574
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3624150409616268551
       }
     }
     Overrides {
@@ -1723,25 +1723,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16201507078899524131
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10606676063634080272
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6881735181445311574
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3624150409616268551
       }
     }
     Overrides {
@@ -1818,25 +1818,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16201507078899524131
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10606676063634080272
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6881735181445311574
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3624150409616268551
       }
     }
     Overrides {
@@ -1913,25 +1913,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16201507078899524131
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10606676063634080272
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6881735181445311574
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3624150409616268551
       }
     }
     Overrides {
@@ -2008,25 +2008,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16201507078899524131
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10606676063634080272
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6881735181445311574
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3624150409616268551
       }
     }
     Overrides {
@@ -2103,25 +2103,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 841534158063459245
+        Id: 16201507078899524131
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10606676063634080272
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 6881735181445311574
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 3624150409616268551
       }
     }
     Overrides {
@@ -6335,9 +6335,6 @@ Objects {
   Name: "Kart Upgrades Geo"
   Transform {
     Location {
-      X: -237.619629
-      Y: -731.038818
-      Z: 933.505249
     }
     Rotation {
       Pitch: -0.0988055095
@@ -18392,6 +18389,169 @@ Objects {
     ScriptAsset {
       Id: 13610660147926064887
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11104742030297938276
+  Name: "temp parent folder"
+  Transform {
+    Location {
+      X: 6829.90137
+      Y: 82.3894043
+      Z: 177.999908
+    }
+    Rotation {
+      Pitch: 0.00513630174
+      Yaw: 88.904007
+      Roll: 0.268322378
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 10207102980281913416
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 6133784542686929612
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 11642181338662207462
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 8768697395945414097
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 231847093048189429
+  Name: "tempspawntestserver"
+  Transform {
+    Location {
+      X: 6829.90039
+      Y: 82.3908691
+      Z: 177.999817
+    }
+    Rotation {
+      Pitch: 0.00513630174
+      Yaw: 88.904007
+      Roll: 0.268322378
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GEOBuggyBugLarge"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:ParentFolder"
+      ObjectReference {
+        SelfId: 11104742030297938276
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15190707591586946062
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6171099205028301999
+  Name: "WORKING ON TEMPLATES"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "WORKING ON TEMPLATES"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

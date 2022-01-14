@@ -65,7 +65,12 @@ end
 function ProcessUpgradeIndex()
 
     -- hide current upgrade before displaying next one
-    currentlyVisible.visibility = Visibility.FORCE_OFF
+    --currentlyVisible.visibility = Visibility.FORCE_OFF
+
+    -- vSpawnTempate:
+    if Object.IsValid(currentlyVisible) then
+        currentlyVisible:Destroy()
+    end
     
     local kartsTable = LOCAL_PLAYER.clientUserData.karts
     local selectedKart = LOCAL_PLAYER.clientUserData.selectedKart
@@ -104,13 +109,14 @@ end
 function DisplaySelectingVehicle()
     KART_UPGRADES_PANEL.visibility = Visibility.FORCE_OFF
     KARTS_PANEL.visibility = Visibility.INHERIT
+    if Object.IsValid(currentlyVisible) then
+        currentlyVisible:Destroy()
+    end
 end
 
 function DisplayLockedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    currentlyVisible = LOCKED_GEO_TABLES[index][upgradeIndex]
-    LOCKED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
 
     LOCKED_IMAGE.visibility = Visibility.INHERIT
 
@@ -121,13 +127,14 @@ function DisplayLockedUpgrade()
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
+
+    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLES[index][upgradeIndex], {parent = LOCKED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    currentlyVisible = UNLOCKED_GEO_TABLES[index][upgradeIndex]
-    UNLOCKED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     
@@ -138,13 +145,14 @@ function DisplayUnlockedUpgrade()
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.INHERIT
+
+    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLES[index][upgradeIndex], {parent = UNLOCKED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
-    currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
-    OWNED_GEO_TABLES[index][upgradeIndex].visibility = Visibility.INHERIT
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
 
@@ -166,6 +174,9 @@ function DisplayOwnedUpgrade()
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
 
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
+
+    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLES[index][upgradeIndex], {parent = OWNED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 
@@ -220,7 +231,9 @@ function Tick(deltaTime)
     else
 
         if upgradesPanelOpen == true then
-            currentlyVisible.visibility = Visibility.FORCE_OFF
+            if Object.IsValid(currentlyVisible) then
+                currentlyVisible:Destroy()
+            end
         end
         upgradesPanelOpen = false
     end
@@ -233,11 +246,9 @@ local tableIndex = 0
 for _,folder in ipairs(vehicleFolders) do
     tableIndex = tableIndex + 1
     LOCKED_GEO_TABLES[tableIndex] = {}
-    local geos = folder:GetChildren()
-    local subIndex = 0
-    for _,geo in ipairs(geos) do
-        subIndex = subIndex + 1
-        LOCKED_GEO_TABLES[tableIndex][subIndex] = geo
+    for name,asset in pairs(folder:GetCustomProperties()) do
+        local subIndex = tonumber(name)
+        LOCKED_GEO_TABLES[tableIndex][subIndex] = asset
     end
 end
 -- reset index to run unlocked geos
@@ -247,11 +258,9 @@ local vehicleFolders = UNLOCKED_UPGRADES_GEO_FOLDER:GetChildren()
 for _,folder in ipairs(vehicleFolders) do
     tableIndex = tableIndex + 1
     UNLOCKED_GEO_TABLES[tableIndex] = {}
-    local geos = folder:GetChildren()
-    local subIndex = 0
-    for _,geo in ipairs(geos) do
-        subIndex = subIndex + 1
-        UNLOCKED_GEO_TABLES[tableIndex][subIndex] = geo
+    for name,asset in pairs(folder:GetCustomProperties()) do
+        local subIndex = tonumber(name)
+        UNLOCKED_GEO_TABLES[tableIndex][subIndex] = asset
     end
 end
 -- reset index to run owned geos
@@ -261,15 +270,12 @@ local vehicleFolders = OWNED_UPGRADES_GEO_FOLDER:GetChildren()
 for _,folder in ipairs(vehicleFolders) do
     tableIndex = tableIndex + 1
     OWNED_GEO_TABLES[tableIndex] = {}
-    local geos = folder:GetChildren()
-    local subIndex = 0
-    for _,geo in ipairs(geos) do
-        subIndex = subIndex + 1
-        OWNED_GEO_TABLES[tableIndex][subIndex] = geo
+    for name,asset in pairs(folder:GetCustomProperties()) do
+        local subIndex = tonumber(name)
+        OWNED_GEO_TABLES[tableIndex][subIndex] = asset
     end
 end
 
-currentlyVisible = OWNED_GEO_TABLES[index][upgradeIndex]
 
 Events.Connect("KartUpgradePurchased", OnKartUpgradePurchased)
 Events.Connect("KartUpradeNotPurchased", OnKartUpgradeNotPurchased)

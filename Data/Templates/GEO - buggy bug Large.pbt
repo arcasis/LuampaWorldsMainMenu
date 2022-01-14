@@ -15,10 +15,8 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 1696798925401821095
-        ChildIds: 5892816562125300898
-        ChildIds: 10803313733141197269
-        ChildIds: 16448018835607565572
+        ParentId: 6171099205028301999
+        ChildIds: 6076274866368625645
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -39,18 +37,57 @@ Assets {
         }
       }
       Objects {
+        Id: 6076274866368625645
+        Name: "ClientContext"
+        Transform {
+          Location {
+            X: 29
+            Y: -55
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3310691352632127506
+        ChildIds: 5892816562125300898
+        ChildIds: 10803313733141197269
+        ChildIds: 16448018835607565572
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 5892816562125300898
         Name: "Vehicle Name"
         Transform {
           Location {
-            X: 86.4265
-            Y: -169.184814
+            X: 57.4264946
+            Y: -114.184814
             Z: 266.932892
           }
           Rotation {
             Pitch: 1.056036
-            Yaw: -67.2216415
-            Roll: -3.19148111
+            Yaw: -67.2216568
+            Roll: -3.19148159
           }
           Scale {
             X: 0.625
@@ -58,7 +95,7 @@ Assets {
             Z: 1.0625
           }
         }
-        ParentId: 3310691352632127506
+        ParentId: 6076274866368625645
         ChildIds: 14877029492235902686
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -147,6 +184,8 @@ Assets {
         Name: "Wheels"
         Transform {
           Location {
+            X: -29
+            Y: 55
           }
           Rotation {
           }
@@ -156,7 +195,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3310691352632127506
+        ParentId: 6076274866368625645
         ChildIds: 16938873427889597528
         ChildIds: 1360524644525016190
         ChildIds: 4567017290898328142
@@ -866,7 +905,8 @@ Assets {
         Name: "Geo"
         Transform {
           Location {
-            Y: 2.78515625
+            X: -29
+            Y: 57.7851562
           }
           Rotation {
           }
@@ -876,7 +916,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3310691352632127506
+        ParentId: 6076274866368625645
         ChildIds: 1541600527132520129
         ChildIds: 8304496143415438730
         ChildIds: 15978862465812843610

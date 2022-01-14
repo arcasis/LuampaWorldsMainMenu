@@ -19,7 +19,7 @@ local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject
 local BUTTON_ON_COLOR = Color.New(EDIT_VEHICLE_IMAGE:GetColor())
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
-local DEFAULT_GEO_FOLDER = script:GetCustomProperty("OwnedGeoFolder"):WaitForObject()
+local OWNED_GEO_FOLDER = script:GetCustomProperty("OwnedGeoFolder"):WaitForObject()
 local UNLOCKED_GEO_FOLDER = script:GetCustomProperty("UnlockedGeoFolder"):WaitForObject()
 local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedGeoFolder"):WaitForObject()
 
@@ -74,8 +74,13 @@ function ProcessIndex()
     --print("ProcessIndex runs, index is: ", index)
 
     -- hide current truck before displaying next one
-    currentlyVisible.visibility = Visibility.FORCE_OFF
+    --currentlyVisible.visibility = Visibility.FORCE_OFF
     
+    -- vSpawnTempate:
+    if Object.IsValid(currentlyVisible) then
+        currentlyVisible:Destroy()
+    end
+
     local trucks = LOCAL_PLAYER.clientUserData.trucks
 
     --print("player's trucks[1] is: ", trucks[1])
@@ -95,8 +100,6 @@ function ProcessIndex()
             DisplayUnlockedVehicle()
         end
     else
-        --print("the truck was not unlocked, index is: ")
-        --print(index)
         DisplayLockedVehicle()
     end
 end
@@ -121,8 +124,6 @@ end]]
 function DisplayLockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    currentlyVisible = LOCKED_GEO_TABLE[index]
-    LOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
     LOCKED_IMAGE.visibility = Visibility.INHERIT
     EDIT_VEHICLE_BUTTON.isInteractable = false
@@ -136,13 +137,14 @@ function DisplayLockedVehicle()
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
+
+    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 function DisplayUnlockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
-    currentlyVisible = UNLOCKED_GEO_TABLE[index]
-    UNLOCKED_GEO_TABLE[index].visibility = Visibility.INHERIT
     
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON.isInteractable = false
@@ -156,13 +158,14 @@ function DisplayUnlockedVehicle()
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.INHERIT
+
+    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
-    currentlyVisible = OWNED_GEO_TABLE[index]
-    OWNED_GEO_TABLE[index].visibility = Visibility.INHERIT
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON.isInteractable = true
@@ -187,6 +190,15 @@ function DisplayOwnedVehicle()
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
     
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
+
+    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible.visibility = Visibility.INHERIT
+
+    --print("index is: ", index)
+    --print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index])     -- prints the asset reference
+    --print("currentlyVisible is: ", currentlyVisible)     -- prints a folder?!
+    --print("parent folder location is: ", OWNED_GEO_FOLDER:GetWorldPosition())
+    --print("Spawned Kart geo position is: ", currentlyVisible:GetWorldPosition())
 end
 
 --[[function OnEditUpgradeButtonClicked()
@@ -251,53 +263,56 @@ function Tick(deltaTime)
             index = 1
             BATTLE_PANEL.visibility = Visibility.FORCE_OFF
             battleMenuOpen = false
-            DisplayOwnedVehicle ()
-            currentlyVisible.visibility = Visibility.FORCE_OFF
+            --DisplayOwnedVehicle ()
+            --currentlyVisible.visibility = Visibility.FORCE_OFF
+            if Object.IsValid(currentlyVisible) then
+                currentlyVisible:Destroy()
+            end
         end
         battleMainMenuOpen = false
     end
 
     -- if this panel is hidden, hide current vehicle, else display it
-    if Object.IsValid(currentlyVisible) then
-        if BATTLE_PANEL.visibility == Visibility.FORCE_OFF then
-            currentlyVisible.visibility = Visibility.FORCE_OFF
-        else
-            if battleMenuOpen == false then
-                battleMenuOpen = true
-                DisplayOwnedVehicle()
-            end
-            --currentlyVisible.visibility = Visibility.INHERIT
+    if BATTLE_PANEL.visibility == Visibility.FORCE_OFF then
+        --currentlyVisible.visibility = Visibility.FORCE_OFF
+        if Object.IsValid(currentlyVisible) then
+            currentlyVisible:Destroy()
         end
+    else
+        if battleMenuOpen == false then
+            battleMenuOpen = true
+            DisplayOwnedVehicle()
+        end
+        --currentlyVisible.visibility = Visibility.INHERIT
     end
 end
 
 -- Initialize
--- process default geos, set index variable
-local geoVehicles = DEFAULT_GEO_FOLDER:GetChildren()
-for _,vehicle in ipairs(geoVehicles) do
-    index = index + 1
-    OWNED_GEO_TABLE[index] = vehicle
+-- put default locked geo asset references in a table
+for name, asset in pairs(LOCKED_GEO_FOLDER:GetCustomProperties()) do
+    local tableIndex = tonumber(name)
+    LOCKED_GEO_TABLE[tableIndex] = asset
 end
--- reset index to run unlocked geos
-index = 0
--- process unlocked truck geos
-local geoUnlocked = UNLOCKED_GEO_FOLDER:GetChildren()
-for _,unlocked in ipairs(geoUnlocked) do
-    index = index + 1
-    UNLOCKED_GEO_TABLE[index] = unlocked
+
+-- put default unlocked geo asset references in a table
+for name, asset in pairs(UNLOCKED_GEO_FOLDER:GetCustomProperties()) do
+    local tableIndex = tonumber(name)
+    UNLOCKED_GEO_TABLE[tableIndex] = asset
 end
--- reset index to run locked geos
-index = 0
--- process locked truck geos
-local geoLocked = LOCKED_GEO_FOLDER:GetChildren()
-for _,locked in ipairs(geoLocked) do
-    index = index + 1
-    LOCKED_GEO_TABLE[index] = locked
+
+-- put defaulot owned geo asset references in a table
+for name, asset in pairs(OWNED_GEO_FOLDER:GetCustomProperties()) do
+    local tableIndex = tonumber(name)
+    OWNED_GEO_TABLE[tableIndex] = asset
+
+    --print("tableIndex is: ", tableIndex)
+    --print("OWNED_GEO_TABLE[tableIndex] is: ", OWNED_GEO_TABLE[tableIndex])
+
+    index = index + 1     -- count total geos
 end
 
 total = index
 index = 1
-currentlyVisible = OWNED_GEO_TABLE[index]
 
 Events.Connect("TruckPurchased", OnVehiclePurchased)
 Events.Connect("TruckNotPurchased", OnVehicleNotPurchased)
