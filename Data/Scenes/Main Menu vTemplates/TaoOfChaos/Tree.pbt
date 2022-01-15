@@ -2771,14 +2771,14 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -5214.78223
-      Y: -4333.44824
+      X: -5214.78711
+      Y: -4333.45215
       Z: -813.944519
     }
     Rotation {
-      Pitch: 0.00514996238
-      Yaw: 88.9039688
-      Roll: 0.268317282
+      Pitch: -0.597463906
+      Yaw: -115.191254
+      Roll: 0.0325001776
     }
     Scale {
       X: 1
@@ -2791,7 +2791,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3953,10 +3953,7 @@ Objects {
         A: 1
       }
       DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
+        A: 0.742000043
       }
       Brush {
         Id: 6334699134008261182
@@ -4412,14 +4409,14 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -5214.7793
-      Y: -4333.44434
+      X: -5214.78662
+      Y: -4333.44873
       Z: -813.944153
     }
     Rotation {
-      Pitch: 0.00514313206
-      Yaw: 88.9039459
-      Roll: 0.268317342
+      Pitch: -0.597463906
+      Yaw: -115.191254
+      Roll: 0.0325002074
     }
     Scale {
       X: 1
@@ -4432,7 +4429,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5174,10 +5171,7 @@ Objects {
         A: 1
       }
       DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
+        A: 0.742000043
       }
       Brush {
         Id: 6334699134008261182
@@ -8503,14 +8497,12 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -9542.22168
-      Y: 2535.09082
-      Z: -771.521179
+      X: -9542.23145
+      Y: 2535.09204
+      Z: -771.521118
     }
     Rotation {
-      Pitch: 0.00514996238
-      Yaw: 88.9039688
-      Roll: 0.268317282
+      Yaw: 180
     }
     Scale {
       X: 1
@@ -9685,10 +9677,7 @@ Objects {
         A: 1
       }
       DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
+        A: 0.742000043
       }
       Brush {
         Id: 6334699134008261182
@@ -10145,14 +10134,12 @@ Objects {
   Name: "Vehicle Status Text"
   Transform {
     Location {
-      X: -9542.21191
-      Y: 2535.08936
-      Z: -771.52124
+      X: -9542.23145
+      Y: 2535.0918
+      Z: -771.521118
     }
     Rotation {
-      Pitch: 0.00514996238
-      Yaw: 88.9039536
-      Roll: 0.268317282
+      Yaw: 180
     }
     Scale {
       X: 1
@@ -10909,10 +10896,7 @@ Objects {
         A: 1
       }
       DisabledColor {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
+        A: 0.742000043
       }
       Brush {
         Id: 6334699134008261182

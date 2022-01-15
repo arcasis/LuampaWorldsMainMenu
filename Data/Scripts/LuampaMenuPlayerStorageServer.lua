@@ -15,7 +15,7 @@ function OnPlayerJoined(player)
     --------------------- CONVERT ---------------------
 
     -- Check if player has cars tables (has raced before)
-    if playerDataTable.cars then
+    --[[if playerDataTable.cars then
 
         -- convert purchased karts table
         local karts = {}
@@ -59,12 +59,12 @@ function OnPlayerJoined(player)
         end
 
         playerDataTable.karts = karts
-    end
+    end]]
 
     -- !! WIP !! We will be taking away their karts, giving them back coins
 
     -- Check if player has a selected kart, convert it to the new system
-    local selectedVehicleId = playerDataTable.selectedVehicleId
+    --[[local selectedVehicleId = playerDataTable.selectedVehicleId
 
     if selectedVehicleId then
 
@@ -88,7 +88,7 @@ function OnPlayerJoined(player)
             karts[5] = {}
             playerDataTable.selectedKart = karts
         end
-    end
+    end]]
 
     local totalXp = nil
     if playerDataTable.totalXp then

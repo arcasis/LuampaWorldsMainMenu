@@ -10,27 +10,27 @@ function UnlockVehicles(player)
     --print("BattleXPUnlockServer says player's .totalBattleXp is: ", totalBattleXp)
 
     -- kart #1
-    if totalBattleXp >= 1000 and totalBattleXp <= 4000 then
+    if totalBattleXp >= 1000 then  -- nil and totalBattleXp <= 4000 
 
         -- kart #1
         -- kart #1 is already unlocked by default
 
         -- kart #1 upgrades
-        if totalBattleXp > 1000 and not trucks[1][1] then
+        if totalBattleXp >= 1000 and not trucks[1][1] then
             trucks[1][1] = 0
         end
-        if totalBattleXp > 2000 and not trucks[1][2] then
+        if totalBattleXp >= 2000 and not trucks[1][2] then
             trucks[1][2] = 0
         end
-        if totalBattleXp > 3000 and not trucks[1][3] then
+        if totalBattleXp >= 3000 and not trucks[1][3] then
             trucks[1][3] = 0
         end
-        if totalBattleXp > 4000 and not trucks[1][4] then
+        if totalBattleXp >= 4000 and not trucks[1][4] then
             trucks[1][4] = 0
         end
     end
 
-    if totalBattleXp >= 5000 and totalBattleXp <= 13000 then
+    if totalBattleXp >= 5000 then  -- nil and totalBattleXp <= 13000 
 
         -- kart #2
         if totalBattleXp >= 5000 and not trucks[2] then
@@ -38,21 +38,21 @@ function UnlockVehicles(player)
         end
 
         -- kart #2 upgrades
-        if totalBattleXp > 7000 and not trucks[2][1] then
+        if totalBattleXp >= 7000 and not trucks[2][1] then
             trucks[2][1] = 0
         end
-        if totalBattleXp > 9000 and not trucks[2][2] then
+        if totalBattleXp >= 9000 and not trucks[2][2] then
             trucks[2][2] = 0
         end
-        if totalBattleXp > 11000 and not trucks[2][3] then
+        if totalBattleXp >= 11000 and not trucks[2][3] then
             trucks[2][3] = 0
         end
-        if totalBattleXp > 13000 and not trucks[2][4] then
+        if totalBattleXp >= 13000 and not trucks[2][4] then
             trucks[2][4] = 0
         end
     end
 
-    if totalBattleXp >= 15000 and totalBattleXp <= 31000 then
+    if totalBattleXp >= 15000 then  -- nil and totalBattleXp <= 31000 
 
         -- kart #3
         if totalBattleXp >= 15000 and not trucks[3] then
@@ -60,21 +60,21 @@ function UnlockVehicles(player)
         end
 
         -- kart #3 upgrades
-        if totalBattleXp > 19000 and not trucks[3][1] then
+        if totalBattleXp >= 19000 and not trucks[3][1] then
             trucks[3][1] = 0
         end
-        if totalBattleXp > 23000 and not trucks[3][2] then
+        if totalBattleXp >= 23000 and not trucks[3][2] then
             trucks[3][2] = 0
         end
-        if totalBattleXp > 27000 and not trucks[3][3] then
+        if totalBattleXp >= 27000 and not trucks[3][3] then
             trucks[3][3] = 0
         end
-        if totalBattleXp > 31000 and not trucks[1][4] then
+        if totalBattleXp >= 31000 and not trucks[1][4] then
             trucks[1][4] = 0
         end
     end
 
-    if totalBattleXp >= 35000 and totalBattleXp <= 66000 then
+    if totalBattleXp >= 35000 then  -- nil and totalBattleXp <= 66000 
 
         -- kart #4
         if totalBattleXp >= 35000 and not trucks[4] then
@@ -82,21 +82,21 @@ function UnlockVehicles(player)
         end
 
         -- kart #4 upgrades
-        if totalBattleXp > 42000 and not trucks[4][1] then
+        if totalBattleXp >= 42000 and not trucks[4][1] then
             trucks[4][1] = 0
         end
-        if totalBattleXp > 50000 and not trucks[4][2] then
+        if totalBattleXp >= 50000 and not trucks[4][2] then
             trucks[4][2] = 0
         end
-        if totalBattleXp > 58000 and not trucks[4][3] then
+        if totalBattleXp >= 58000 and not trucks[4][3] then
             trucks[4][3] = 0
         end
-        if totalBattleXp > 66000 and not trucks[4][4] then
+        if totalBattleXp >= 66000 and not trucks[4][4] then
             trucks[4][4] = 0
         end
     end
 
-    if totalBattleXp >= 74000 and totalBattleXp <= 138000 then
+    if totalBattleXp >= 74000 then  -- nil and totalBattleXp <= 138000 
 
         -- kart #5
         if totalBattleXp >= 74000 and not trucks[5] then
@@ -104,16 +104,16 @@ function UnlockVehicles(player)
         end
 
         -- kart #5 upgrades
-        if totalBattleXp > 90000 and not trucks[5][1] then
+        if totalBattleXp >= 90000 and not trucks[5][1] then
             trucks[5][1] = 0
         end
-        if totalBattleXp > 106000 and not trucks[5][2] then
+        if totalBattleXp >= 106000 and not trucks[5][2] then
             trucks[5][2] = 0
         end
-        if totalBattleXp > 122000 and not trucks[5][3] then
+        if totalBattleXp >= 122000 and not trucks[5][3] then
             trucks[5][3] = 0
         end
-        if totalBattleXp > 138000 and not trucks[5][4] then
+        if totalBattleXp >= 138000 and not trucks[5][4] then
             trucks[5][4] = 0
         end
     end
@@ -136,3 +136,6 @@ end
 
 --Game.roundEndEvent:Connect(OnRoundEnd)     -- for actual game
 Game.playerJoinedEvent:Connect(UnlockVehicles)     -- for main menu testing only
+
+----TEST BROADCAST----
+Events.Connect("UpdateXP", UnlockVehicles)
