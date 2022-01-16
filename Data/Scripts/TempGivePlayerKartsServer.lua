@@ -23,38 +23,50 @@ function OnPlayerJoined(player)
         player.serverUserData.totalBattleXp = totalBattleXp
         player.serverUserData.trucks = nil
         player.serverUserData.selectedTruck = nil
+
+        print("***** TEST #6 - data is reset. Wait until trucks and karts print in error log as nil before exiting.")
     end
 
     if totalBattleXp == 150000 then
         totalBattleXp = 150001
         player.serverUserData.totalBattleXp = totalBattleXp
+
+        print("***** TEST #5 - all vehicles and upgrades should be unlocked. Purchase vehicles and set to 'Selected'.")
     end
 
     -- third time player tests, they'll get 150000 (all vehicles and upgrades should be unlocked)
     if totalBattleXp == 5001 then
         totalBattleXp = 150000
         player.serverUserData.totalBattleXp = totalBattleXp
+
+        print("***** TEST #4 - Check that vehicle #2 is still owned and set to 'Selected'.")
     end
 
 
     if totalBattleXp == 5000 then
         totalBattleXp = 5001
         player.serverUserData.totalBattleXp = totalBattleXp
+
+        print("***** TEST #3 - all of first vehicle's upgrades unlocked, second vehicle should be unlocked, all it's upgrades locked. Purchase vehicle #2, set to 'Selected'.")
     end
 
     -- third test second vehicle should be unlocked, all it's upgrades locked, and they get 5000
     if totalBattleXp == 2001 then
         totalBattleXp = 5000
         player.serverUserData.totalBattleXp = totalBattleXp
+
+        print("***** TEST #2 - first two upgrades should be unlocked for vehicle 1.")
     end
 
     -- second time player tests, first vehicle and two of it's upgrades should be unlocked
     if totalBattleXp == 2000 then
         totalBattleXp = 2001
         player.serverUserData.totalBattleXp = totalBattleXp
+
+        print("***** TEST #1 - first vehicle should be owned, set to 'Selected'.")
     end
     
-    -- first time player tests, they'll get 2000 (first vehicle and two of it's upgrades should be unlocked)
+    -- this resets xp on test #6, when it's set to nil
     if not totalBattleXp or totalBattleXp == 0 then
         player.serverUserData.totalBattleXp = 2000
     end

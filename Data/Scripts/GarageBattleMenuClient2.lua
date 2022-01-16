@@ -107,6 +107,7 @@ end
 function DisplaySelectingUpgrade()
     BATTLE_PANEL.visibility = Visibility.FORCE_OFF
     battleMenuOpen = false
+    VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     --currentlyVisible.visibility = Visibility.FORCE_OFF
     --[[VEHICLE_ARROW_LEFT.visibility = Visibility.FORCE_OFF
     VEHICLE_ARROW_RIGHT.visibility = Visibility.FORCE_OFF

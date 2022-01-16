@@ -69,8 +69,8 @@ function UnlockVehicles(player)
         if totalRaceXp >= 27000 and not karts[3][3] then
             karts[3][3] = 0
         end
-        if totalRaceXp >= 31000 and not karts[1][4] then
-            karts[1][4] = 0
+        if totalRaceXp >= 31000 and not karts[3][4] then
+            karts[3][4] = 0
         end
     end
 

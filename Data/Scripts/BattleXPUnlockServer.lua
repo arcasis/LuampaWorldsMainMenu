@@ -69,8 +69,8 @@ function UnlockVehicles(player)
         if totalBattleXp >= 27000 and not trucks[3][3] then
             trucks[3][3] = 0
         end
-        if totalBattleXp >= 31000 and not trucks[1][4] then
-            trucks[1][4] = 0
+        if totalBattleXp >= 31000 and not trucks[3][4] then
+            trucks[3][4] = 0
         end
     end
 

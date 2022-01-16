@@ -427,25 +427,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 509079934592953291
+        Id: 3178505782682640294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 5247418899811124199
+        Id: 17674940031049317364
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 10552935343672386347
+        Id: 8029938295469206953
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16547402600529970902
+        Id: 1732665923798203128
       }
     }
     Overrides {
@@ -519,25 +519,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 509079934592953291
+        Id: 3178505782682640294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 5247418899811124199
+        Id: 17674940031049317364
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 10552935343672386347
+        Id: 8029938295469206953
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16547402600529970902
+        Id: 1732665923798203128
       }
     }
     Overrides {
@@ -611,25 +611,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 509079934592953291
+        Id: 3178505782682640294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 5247418899811124199
+        Id: 17674940031049317364
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 10552935343672386347
+        Id: 8029938295469206953
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16547402600529970902
+        Id: 1732665923798203128
       }
     }
     Overrides {
@@ -703,25 +703,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 509079934592953291
+        Id: 3178505782682640294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 5247418899811124199
+        Id: 17674940031049317364
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 10552935343672386347
+        Id: 8029938295469206953
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16547402600529970902
+        Id: 1732665923798203128
       }
     }
     Overrides {
@@ -795,25 +795,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 509079934592953291
+        Id: 3178505782682640294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 5247418899811124199
+        Id: 17674940031049317364
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 10552935343672386347
+        Id: 8029938295469206953
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16547402600529970902
+        Id: 1732665923798203128
       }
     }
     Overrides {
@@ -887,25 +887,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 509079934592953291
+        Id: 3178505782682640294
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 5247418899811124199
+        Id: 17674940031049317364
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 10552935343672386347
+        Id: 8029938295469206953
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16547402600529970902
+        Id: 1732665923798203128
       }
     }
     Overrides {
@@ -18441,7 +18441,7 @@ Objects {
 }
 Objects {
   Id: 4735171363339789861
-  Name: "Vehicle Display Light ON"
+  Name: "VEHICLE DISPLAY POSITION"
   Transform {
     Location {
       X: 6829.90186
@@ -18491,7 +18491,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
