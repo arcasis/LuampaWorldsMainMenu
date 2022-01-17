@@ -15,9 +15,19 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6171099205028301999
         ChildIds: 6523790829945788204
         ChildIds: 5358642765705671492
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Electric Blue"
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Name of vehicle for garage display"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

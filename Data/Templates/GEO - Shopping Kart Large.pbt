@@ -15,10 +15,20 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 12056401378719592435
+        ParentId: 6171099205028301999
         ChildIds: 10817741217393610502
         ChildIds: 5594449712267854520
         ChildIds: 8814628784695314819
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Shopping Kart"
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Name of vehicle for garage display"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

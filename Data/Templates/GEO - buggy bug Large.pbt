@@ -17,6 +17,16 @@ Assets {
         }
         ParentId: 6171099205028301999
         ChildIds: 6076274866368625645
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Buggy Bug"
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Name of vehicle for garage display"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

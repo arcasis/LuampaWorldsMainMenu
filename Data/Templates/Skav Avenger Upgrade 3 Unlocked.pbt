@@ -20,6 +20,12 @@ Assets {
         ChildIds: 17176263102239360370
         ChildIds: 4744120394398484757
         ChildIds: 8283122152226455640
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Skav Avenger"
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"

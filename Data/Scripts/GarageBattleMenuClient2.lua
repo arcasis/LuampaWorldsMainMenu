@@ -6,6 +6,9 @@ local BATTLE_MAIN_MENU_PANEL = script:GetCustomProperty("GarageBattleMainMenuPan
 local BATTLE_PANEL = script:GetCustomProperty("GarageBattlePanel"):WaitForObject()
 local BATTLE_UPGRADES_PANEL = script:GetCustomProperty("GarageBattleUpgradesPanel"):WaitForObject()
 
+local BATTLE_MENU_OPEN_SFX = script:GetCustomProperty("BattleMenuOpenSFX"):WaitForObject()
+local UPGRADES_MENU_OPEN_SFX = script:GetCustomProperty("UpgradesMenuOpenSFX"):WaitForObject()
+
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
 local EDIT_VEHICLE_BUTTON = script:GetCustomProperty("EditVehicleButton"):WaitForObject()
@@ -23,6 +26,10 @@ local OWNED_GEO_FOLDER = script:GetCustomProperty("OwnedGeoFolder"):WaitForObjec
 local UNLOCKED_GEO_FOLDER = script:GetCustomProperty("UnlockedGeoFolder"):WaitForObject()
 local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedGeoFolder"):WaitForObject()
 
+local PRICES_DATA_FOLDER = script:GetCustomProperty("TruckPricesData"):WaitForObject()
+
+local VEHICLE_NAME_TEXT = script:GetCustomProperty("VehicleName"):WaitForObject()
+local VEHICLE_PRICE_TEXT = script:GetCustomProperty("VehiclePrice"):WaitForObject()
 local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
@@ -33,6 +40,9 @@ local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylin
 local OWNED_GEO_TABLE = {}
 local UNLOCKED_GEO_TABLE = {}
 local LOCKED_GEO_TABLE = {}
+
+-- Prices Table
+local PRICES_TABLE = {}
 
 local index = 0
 local total = 0
@@ -114,6 +124,7 @@ function DisplaySelectingUpgrade()
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)]]
     BATTLE_UPGRADES_PANEL.visibility = Visibility.INHERIT
+    UPGRADES_MENU_OPEN_SFX:Play()
 end
 
 -- WIP not being used atm
@@ -126,6 +137,9 @@ function DisplayLockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     
+    VEHICLE_NAME_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_PRICE_TEXT.visibility = Visibility.FORCE_OFF
+
     LOCKED_IMAGE.visibility = Visibility.INHERIT
     EDIT_VEHICLE_BUTTON.isInteractable = false
     EDIT_VEHICLE_BUTTON:SetFontColor(Color.New(Color.RED))
@@ -147,6 +161,9 @@ function DisplayUnlockedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
     
+    VEHICLE_NAME_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_PRICE_TEXT.visibility = Visibility.FORCE_OFF
+
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON.isInteractable = false
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
@@ -162,11 +179,20 @@ function DisplayUnlockedVehicle()
 
     currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
+    local name = currentlyVisible:GetCustomProperty("Name")
+    VEHICLE_NAME_TEXT.text = name
+    local price = PRICES_TABLE[index]
+    VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
+    VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
+    VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedVehicle()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
+
+    VEHICLE_NAME_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_PRICE_TEXT.visibility = Visibility.FORCE_OFF
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     EDIT_VEHICLE_BUTTON.isInteractable = true
@@ -194,6 +220,12 @@ function DisplayOwnedVehicle()
 
     currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
+    local name = currentlyVisible:GetCustomProperty("Name")
+    VEHICLE_NAME_TEXT.text = name
+    local price = PRICES_TABLE[index]
+    VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
+    VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
+    VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
     --print("index is: ", index)
     --print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index])     -- prints the asset reference
@@ -256,6 +288,7 @@ function Tick(deltaTime)
             BATTLE_PANEL.visibility = Visibility.INHERIT
             battleMenuOpen = true
             ProcessIndex()
+            BATTLE_MENU_OPEN_SFX:Play()
         end
         battleMainMenuOpen = true
     else
@@ -314,6 +347,13 @@ end
 
 total = index
 index = 1
+
+local prices = PRICES_DATA_FOLDER:GetCustomProperties()
+for key, value in pairs(prices) do
+    table.insert(PRICES_TABLE, value)
+end
+table.sort(PRICES_TABLE, function(a,b) return a < b end)
+
 
 Events.Connect("TruckPurchased", OnVehiclePurchased)
 Events.Connect("TruckNotPurchased", OnVehicleNotPurchased)

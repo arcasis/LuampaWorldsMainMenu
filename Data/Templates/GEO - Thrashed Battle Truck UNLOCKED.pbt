@@ -15,11 +15,17 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10893767463856759093
+        ParentId: 6171099205028301999
         ChildIds: 14975030140601432320
         ChildIds: 4643904136231316747
         ChildIds: 4615468966437689937
         ChildIds: 15617405120936436679
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Thrashed Battle Truck"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

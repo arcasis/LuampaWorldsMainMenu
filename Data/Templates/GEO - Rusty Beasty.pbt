@@ -15,12 +15,18 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 713943643876442
+        ParentId: 6171099205028301999
         ChildIds: 12109576709147847332
         ChildIds: 14025454583539801919
         ChildIds: 14458441727355438593
         ChildIds: 9212351200322389732
         ChildIds: 12870644206094060161
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Rusty Beasty"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

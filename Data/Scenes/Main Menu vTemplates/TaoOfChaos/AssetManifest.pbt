@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15065695696845701021
+  Name: "Vehicle Car Ignition Short Engine Burst Start 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_vehicle_car_ignition_short_engine_burst_start_01_Cue_ref"
+  }
+}
+Assets {
   Id: 13949441344821433690
   Name: "Cylinder"
   PlatformAssetType: 1
@@ -122,6 +131,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Scifi_Icon_029"
+  }
+}
+Assets {
+  Id: 1834689303491898517
+  Name: "Pneumatic Impact Air Drill Whine 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_air_pneumatic_impact_drillwhine_repair_01_Cue_ref"
   }
 }
 Assets {

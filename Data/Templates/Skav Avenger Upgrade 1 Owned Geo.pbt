@@ -7,7 +7,7 @@ Assets {
       RootId: 2860705432846008818
       Objects {
         Id: 2860705432846008818
-        Name: "Scav Avenger Upgrade 1 Owned Geo"
+        Name: "Skav Avenger Upgrade 1 Owned Geo"
         Transform {
           Scale {
             X: 1
@@ -15,11 +15,17 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6171099205028301999
         ChildIds: 6048771165157935342
         ChildIds: 16568209038300813983
         ChildIds: 11349793515117819678
         ChildIds: 9128368142079833941
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Skav Avenger"
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"

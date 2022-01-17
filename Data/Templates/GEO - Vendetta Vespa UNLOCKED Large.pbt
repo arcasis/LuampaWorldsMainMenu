@@ -15,9 +15,19 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6171099205028301999
         ChildIds: 15619181079748727976
         ChildIds: 7569749329765211059
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Vendetta Vespa"
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Name of vehicle for garage display"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

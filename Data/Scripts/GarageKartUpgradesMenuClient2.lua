@@ -17,19 +17,27 @@ local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject
 local BUTTON_ON_COLOR = Color.New(Color.WHITE)
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
-local LOCKED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("LockedUpgradesGeoFolder"):WaitForObject() ---@type Folder
-local UNLOCKED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("UnlockedUpgradesGeoFolder"):WaitForObject() ---@type Folder
+local LOCKED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("LockedUpgradesGeoFolder"):WaitForObject()
+local UNLOCKED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("UnlockedUpgradesGeoFolder"):WaitForObject()
 local OWNED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("OwnedUpgradesGeoFolder"):WaitForObject()
 
+local PRICES_DATA_FOLDER = script:GetCustomProperty("KartUpgradePricesData"):WaitForObject()
+
+local VEHICLE_NAME_TEXT = script:GetCustomProperty("VehicleName"):WaitForObject()
+local VEHICLE_PRICE_TEXT = script:GetCustomProperty("VehiclePrice"):WaitForObject()
 local UPGRADE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
 
+-- Geo Tables
 local OWNED_GEO_TABLES = {}
 local LOCKED_GEO_TABLES = {}
 local UNLOCKED_GEO_TABLES = {}
+
+-- Prices Tables
+local PRICES_TABLE = {}
 
 local index = 1     -- which vehicle player is viewing upgrades for
 local upgradeIndex = 1     -- which upgrade player is viewing
@@ -118,6 +126,9 @@ function DisplayLockedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.FORCE_OFF
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
 
+    VEHICLE_NAME_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_PRICE_TEXT.visibility = Visibility.FORCE_OFF
+
     LOCKED_IMAGE.visibility = Visibility.INHERIT
 
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
@@ -136,6 +147,9 @@ function DisplayUnlockedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.FORCE_OFF
 
+    VEHICLE_NAME_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_PRICE_TEXT.visibility = Visibility.FORCE_OFF
+
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
     
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
@@ -148,11 +162,20 @@ function DisplayUnlockedUpgrade()
 
     currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLES[index][upgradeIndex], {parent = UNLOCKED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
+    local name = currentlyVisible:GetCustomProperty("Name")
+    VEHICLE_NAME_TEXT.text = name
+    local price = PRICES_TABLE[upgradeIndex]
+    VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
+    VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
+    VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedUpgrade()
     GARAGE_LIGHTS_FOLDER.visibility = Visibility.INHERIT
     VEHICLE_DISPLAY_FLOOR.visibility = Visibility.INHERIT
+
+    VEHICLE_NAME_TEXT.visibility = Visibility.FORCE_OFF
+    VEHICLE_PRICE_TEXT.visibility = Visibility.FORCE_OFF
 
     LOCKED_IMAGE.visibility = Visibility.FORCE_OFF
 
@@ -177,6 +200,12 @@ function DisplayOwnedUpgrade()
 
     currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLES[index][upgradeIndex], {parent = OWNED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
+    local name = currentlyVisible:GetCustomProperty("Name")
+    VEHICLE_NAME_TEXT.text = name
+    local price = PRICES_TABLE[upgradeIndex]
+    VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
+    VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
+    VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 end
 
 
@@ -275,6 +304,12 @@ for _,folder in ipairs(vehicleFolders) do
         OWNED_GEO_TABLES[tableIndex][subIndex] = asset
     end
 end
+
+local prices = PRICES_DATA_FOLDER:GetCustomProperties()
+for key, value in pairs(prices) do
+    table.insert(PRICES_TABLE, value)
+end
+table.sort(PRICES_TABLE, function(a,b) return a < b end)
 
 
 Events.Connect("KartUpgradePurchased", OnKartUpgradePurchased)

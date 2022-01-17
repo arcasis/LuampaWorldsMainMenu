@@ -270,6 +270,8 @@ Objects {
   ChildIds: 10505102574848237220
   ChildIds: 11104742030297938276
   ChildIds: 8704119052559485770
+  ChildIds: 9232345134599714151
+  ChildIds: 4264668423567706380
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -283,6 +285,84 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4264668423567706380
+  Name: "Pneumatic Impact Air Drill Whine 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 1834689303491898517
+    }
+    Volume: 0.6
+    Falloff: -1
+    Radius: -1
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9232345134599714151
+  Name: "Vehicle Car Ignition Short Engine Burst Start 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 15065695696845701021
+    }
+    Volume: 0.362978667
+    Falloff: -1
+    Radius: -1
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -2218,7 +2298,7 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 11642181338662207462
+        Id: 3677500936474418915
       }
     }
     Overrides {
@@ -2340,7 +2420,7 @@ Objects {
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 4564578252548970668
+        Id: 3490354650252545231
       }
     }
     Overrides {
@@ -2426,7 +2506,7 @@ Objects {
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 11669863343855639342
+        Id: 3622933792280256068
       }
     }
     Overrides {
@@ -2438,7 +2518,7 @@ Objects {
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 5740151912626977518
+        Id: 3426904075239409324
       }
     }
     Overrides {
@@ -2650,7 +2730,6 @@ Objects {
     }
   }
   ParentId: 10505102574848237220
-  ChildIds: 2274254675366458734
   ChildIds: 7959611291421426607
   ChildIds: 13975775855012976837
   Collidable_v2 {
@@ -2719,6 +2798,7 @@ Objects {
   ChildIds: 14663364741984228552
   ChildIds: 15201836303060589185
   ChildIds: 15829922299348405289
+  ChildIds: 9052619125937569422
   ChildIds: 18284270133444766245
   ChildIds: 1784793984950011237
   ChildIds: 10832428798285758936
@@ -3346,6 +3426,110 @@ Objects {
           Value: "mc:euianchor:bottomcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9052619125937569422
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: -5142.29395
+      Y: -4103.31689
+      Z: -401.520203
+    }
+    Rotation {
+      Pitch: -0.597443461
+      Yaw: -115.191246
+      Roll: 0.0325002857
+    }
+    Scale {
+      X: 1
+      Y: 1.69999993
+      Z: 1.69999993
+    }
+  }
+  ParentId: 13975775855012976837
+  ChildIds: 10709820624801167686
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Rusty Beasty"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10709820624801167686
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 9052619125937569422
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -4186,6 +4370,24 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:VehicleName"
+      ObjectReference {
+        SelfId: 9052619125937569422
+      }
+    }
+    Overrides {
+      Name: "cs:VehiclePrice"
+      ObjectReference {
+        SelfId: 10709820624801167686
+      }
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData"
+      ObjectReference {
+        SelfId: 13481171590303052675
+      }
+    }
+    Overrides {
       Name: "cs:GarageBattlePanel:isrep"
       Bool: false
     }
@@ -4356,8 +4558,10 @@ Objects {
     }
   }
   ParentId: 8445281688302102432
+  ChildIds: 2274254675366458734
   ChildIds: 18001212761352047056
   ChildIds: 14684816620838083131
+  ChildIds: 4087604848933773807
   ChildIds: 7732725985481900805
   ChildIds: 9866075515843571691
   ChildIds: 12166770845788654612
@@ -4990,6 +5194,110 @@ Objects {
   }
 }
 Objects {
+  Id: 4087604848933773807
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: -5142.29102
+      Y: -4103.31396
+      Z: -401.519806
+    }
+    Rotation {
+      Pitch: -0.597457111
+      Yaw: -115.191254
+      Roll: 0.0325001515
+    }
+    Scale {
+      X: 1
+      Y: 1.69999993
+      Z: 1.69999993
+    }
+  }
+  ParentId: 7959611291421426607
+  ChildIds: 367010448187567794
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Rusty Beasty"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 367010448187567794
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 4087604848933773807
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 14684816620838083131
   Name: "ArrowSmallBack"
   Transform {
@@ -5523,10 +5831,14 @@ Objects {
   Name: "GarageBattleMenuClient2"
   Transform {
     Location {
-      X: -0.000224731484
-      Y: 9.53934359e-05
+      X: 133.651855
+      Y: 4520.52344
+      Z: -842.624878
     }
     Rotation {
+      Pitch: -0.263037413
+      Yaw: 177.807922
+      Roll: 0.278590262
     }
     Scale {
       X: 1
@@ -5534,7 +5846,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8445281688302102432
+  ParentId: 7959611291421426607
   UnregisteredParameters {
     Overrides {
       Name: "cs:GarageMainMenuPanel"
@@ -5642,6 +5954,36 @@ Objects {
       Name: "cs:PurchaseButton"
       ObjectReference {
         SelfId: 12166770845788654612
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleName"
+      ObjectReference {
+        SelfId: 4087604848933773807
+      }
+    }
+    Overrides {
+      Name: "cs:VehiclePrice"
+      ObjectReference {
+        SelfId: 367010448187567794
+      }
+    }
+    Overrides {
+      Name: "cs:TruckPricesData"
+      ObjectReference {
+        SelfId: 6900111359064049426
+      }
+    }
+    Overrides {
+      Name: "cs:BattleMenuOpenSFX"
+      ObjectReference {
+        SelfId: 9232345134599714151
+      }
+    }
+    Overrides {
+      Name: "cs:UpgradesMenuOpenSFX"
+      ObjectReference {
+        SelfId: 4264668423567706380
       }
     }
     Overrides {
@@ -6279,8 +6621,9 @@ Objects {
   ParentId: 4345241191253639307
   ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
-  ChildIds: 12333704757248786248
   ChildIds: 2935919495293603488
+  ChildIds: 3101770726936739654
+  ChildIds: 3886638203935870196
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -6294,6 +6637,84 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3886638203935870196
+  Name: "Pneumatic Impact Air Drill Whine 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10894713328343682309
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 1834689303491898517
+    }
+    Volume: 0.6
+    Falloff: -1
+    Radius: -1
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3101770726936739654
+  Name: "Vehicle Car Ignition Short Engine Burst Start 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10894713328343682309
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 15065695696845701021
+    }
+    Volume: 0.362978667
+    Falloff: -1
+    Radius: -1
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -7983,7 +8404,7 @@ Objects {
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 8768697395945414097
+        Id: 10207102980281913416
       }
     }
   }
@@ -8037,7 +8458,7 @@ Objects {
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 3490354650252545231
+        Id: 4564578252548970668
       }
     }
     Overrides {
@@ -8049,7 +8470,7 @@ Objects {
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 4564578252548970668
+        Id: 15894666702107908735
       }
     }
     Overrides {
@@ -8157,7 +8578,7 @@ Objects {
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 9324373660678580101
+        Id: 14058778756781102909
       }
     }
     Overrides {
@@ -8199,76 +8620,6 @@ Objects {
     Overrides {
       Name: "cs:5:ml"
       Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 12333704757248786248
-  Name: "DISPLAY LOCATION FOLDER"
-  Transform {
-    Location {
-      X: 6829.90186
-      Y: 82.3851318
-      Z: 103.991287
-    }
-    Rotation {
-      Yaw: 89.9999771
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10894713328343682309
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 8883611779929351183
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10207102980281913416
-      }
-    }
-    Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 6133784542686929612
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 11642181338662207462
-      }
-    }
-    Overrides {
-      Name: "cs:5"
-      AssetReference {
-        Id: 8768697395945414097
-      }
     }
   }
   Collidable_v2 {
@@ -8445,6 +8796,7 @@ Objects {
   ChildIds: 5748521816965573876
   ChildIds: 5291404624555088359
   ChildIds: 12511364770560982538
+  ChildIds: 3374366179177011690
   ChildIds: 14156187062000501801
   ChildIds: 2059056636412982146
   ChildIds: 3750629515972050201
@@ -9070,6 +9422,110 @@ Objects {
           Value: "mc:euianchor:bottomcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3374366179177011690
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: -9299.7041
+      Y: 2556.42358
+      Z: -360.364136
+    }
+    Rotation {
+      Pitch: -0.263023734
+      Yaw: 177.807938
+      Roll: 0.278590322
+    }
+    Scale {
+      X: 1
+      Y: 1.69999993
+      Z: 1.69999993
+    }
+  }
+  ParentId: 18119456735426334382
+  ChildIds: 3061774360881950339
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Rusty Beasty"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3061774360881950339
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 3374366179177011690
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -9909,6 +10365,24 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:VehicleName"
+      ObjectReference {
+        SelfId: 3374366179177011690
+      }
+    }
+    Overrides {
+      Name: "cs:VehiclePrice"
+      ObjectReference {
+        SelfId: 3061774360881950339
+      }
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData"
+      ObjectReference {
+        SelfId: 13481171590303052675
+      }
+    }
+    Overrides {
       Name: "cs:GarageKartsPanel:isrep"
       Bool: false
     }
@@ -10082,6 +10556,7 @@ Objects {
   ChildIds: 17494033326592192291
   ChildIds: 3964049384728287737
   ChildIds: 17334094853589001721
+  ChildIds: 2462646450811235477
   ChildIds: 16722195673712083149
   ChildIds: 9007976052208323057
   ChildIds: 4699498921552161450
@@ -10707,6 +11182,110 @@ Objects {
           Value: "mc:euianchor:bottomcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2462646450811235477
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: -9299.68
+      Y: 2556.41724
+      Z: -360.364
+    }
+    Rotation {
+      Pitch: -0.263037413
+      Yaw: 177.807938
+      Roll: 0.278590381
+    }
+    Scale {
+      X: 1
+      Y: 1.69999993
+      Z: 1.69999993
+    }
+  }
+  ParentId: 9258645056405633466
+  ChildIds: 7417504362426034019
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Rusty Beasty"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7417504362426034019
+  Name: "Vehicle Price"
+  Transform {
+    Location {
+      Z: -20
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 0.705882192
+      Z: 0.70588243
+    }
+  }
+  ParentId: 2462646450811235477
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -11378,6 +11957,36 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:VehicleName"
+      ObjectReference {
+        SelfId: 2462646450811235477
+      }
+    }
+    Overrides {
+      Name: "cs:VehiclePrice"
+      ObjectReference {
+        SelfId: 7417504362426034019
+      }
+    }
+    Overrides {
+      Name: "cs:KartPricesData"
+      ObjectReference {
+        SelfId: 3825881162607431306
+      }
+    }
+    Overrides {
+      Name: "cs:KartsMenuOpenSFX"
+      ObjectReference {
+        SelfId: 3101770726936739654
+      }
+    }
+    Overrides {
+      Name: "cs:UpgradesMenuOpenSFX"
+      ObjectReference {
+        SelfId: 3886638203935870196
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -11527,6 +12136,14 @@ Objects {
     }
     Overrides {
       Name: "cs:PurchaseButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpgradesMenuOpenSFX:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpgradesMenuOpenSFX:ml"
       Bool: false
     }
   }
@@ -12167,8 +12784,8 @@ Objects {
   }
   Control {
     Width: 100
-    Height: 100
-    UIY: 20
+    Height: 180
+    UIY: -97
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -12181,12 +12798,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topcenter"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -12231,7 +12848,7 @@ Objects {
   }
   Control {
     Width: 380
-    Height: 80
+    Height: 160
     UIX: 200
     UIY: 10
     RenderTransformPivot {
@@ -12240,14 +12857,14 @@ Objects {
       }
     }
     Button {
-      Label: "Battle Cars"
+      Label: "Battle Trucks\r\nGarage"
       FontColor {
         R: 1
         G: 1
         B: 1
         A: 1
       }
-      FontSize: 20
+      FontSize: 30
       ButtonColor {
         A: 0.742000043
       }
@@ -12373,12 +12990,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -12420,10 +13037,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 130
-    Height: 130
-    UIX: 130
-    UIY: -10
+    Width: 250
+    Height: 250
+    UIY: 30
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -12451,12 +13067,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -12501,7 +13117,7 @@ Objects {
   }
   Control {
     Width: 380
-    Height: 80
+    Height: 160
     UIX: -200
     UIY: 10
     RenderTransformPivot {
@@ -12510,14 +13126,14 @@ Objects {
       }
     }
     Button {
-      Label: "Karts"
+      Label: "Race Karts\r\nGarage"
       FontColor {
         R: 1
         G: 1
         B: 1
         A: 1
       }
-      FontSize: 20
+      FontSize: 30
       ButtonColor {
         A: 0.742000043
       }
@@ -12643,12 +13259,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -12690,10 +13306,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 130
-    Height: 130
-    UIX: 130
-    UIY: -10
+    Width: 250
+    Height: 250
+    UIY: 30
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -12721,12 +13336,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -12769,8 +13384,8 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 50
-    Height: 20
+    Width: 100
+    Height: 40
     UIX: -470
     RotationAngle: -90
     RenderTransformPivot {
@@ -12786,7 +13401,7 @@ Objects {
         B: 1
         A: 1
       }
-      FontSize: 10
+      FontSize: 15
       ButtonColor {
         G: 0.89
         B: 0.607086241
@@ -18440,16 +19055,237 @@ Objects {
   }
 }
 Objects {
+  Id: 231847093048189429
+  Name: "tempspawntestserver"
+  Transform {
+    Location {
+      X: 6829.90039
+      Y: 82.3908691
+      Z: 177.999817
+    }
+    Rotation {
+      Pitch: 0.00513630174
+      Yaw: 88.904007
+      Roll: 0.268322378
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:GEOBuggyBugLarge"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:ParentFolder"
+      ObjectReference {
+        SelfId: 11104742030297938276
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15190707591586946062
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 788520047915300620
+  Name: "POSITION FOLDERS"
+  Transform {
+    Location {
+      X: 7109.51074
+      Y: 83.420517
+      Z: 525.890808
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  ChildIds: 10313387175741346181
+  ChildIds: 4735171363339789861
+  ChildIds: 7790783926779858196
+  ChildIds: 12333704757248786248
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12333704757248786248
+  Name: "DISPLAY LOCATION FOLDER"
+  Transform {
+    Location {
+      X: -279.608887
+      Y: -1.03538513
+      Z: -421.899536
+    }
+    Rotation {
+      Yaw: 89.9999619
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 788520047915300620
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 10207102980281913416
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 6133784542686929612
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 11642181338662207462
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 8768697395945414097
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7790783926779858196
+  Name: "STATUS TEXT POSITION"
+  Transform {
+    Location {
+      X: 243.436523
+      Y: 32.5789948
+      Z: -409.890442
+    }
+    Rotation {
+      Pitch: 2.04905664e-05
+      Yaw: 2.04905591e-05
+      Roll: 6.93693721e-07
+    }
+    Scale {
+      X: 1
+      Y: 0.99999994
+      Z: 0.99999994
+    }
+  }
+  ParentId: 788520047915300620
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Owned"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 4735171363339789861
   Name: "VEHICLE DISPLAY POSITION"
   Transform {
     Location {
-      X: 6829.90186
-      Y: 82.3851318
-      Z: 103.991287
+      X: -279.608887
+      Y: -1.03538513
+      Z: -421.899536
     }
     Rotation {
-      Yaw: -14.815033
+      Yaw: -14.815052
     }
     Scale {
       X: 8.17229
@@ -18457,7 +19293,7 @@ Objects {
       Z: 0.137821108
     }
   }
-  ParentId: 1696798925401821095
+  ParentId: 788520047915300620
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -18520,26 +19356,21 @@ Objects {
   }
 }
 Objects {
-  Id: 7790783926779858196
-  Name: "STATUS TEXT POSITION"
+  Id: 10313387175741346181
+  Name: "VEHICLE NAME POSITION"
   Transform {
     Location {
-      X: 7352.94727
-      Y: 115.999512
-      Z: 116.000366
     }
     Rotation {
-      Pitch: 2.04905664e-05
-      Yaw: 2.04905646e-05
-      Roll: 6.93693892e-07
     }
     Scale {
       X: 1
-      Y: 1
-      Z: 1
+      Y: 1.69999993
+      Z: 1.69999993
     }
   }
-  ParentId: 1696798925401821095
+  ParentId: 788520047915300620
+  ChildIds: 7409817332509943192
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -18553,7 +19384,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Text {
-    Text: "Owned"
+    Text: "Rusty Beasty"
     FontAsset {
     }
     Color {
@@ -18563,7 +19394,7 @@ Objects {
       A: 1
     }
     HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
+      Value: "mc:ecoretexthorizontalalign:center"
     }
     VerticalAlignment {
       Value: "mc:ecoretextverticalalign:center"
@@ -18574,40 +19405,21 @@ Objects {
   }
 }
 Objects {
-  Id: 231847093048189429
-  Name: "tempspawntestserver"
+  Id: 7409817332509943192
+  Name: "VEHICLE PRICE POSITION"
   Transform {
     Location {
-      X: 6829.90039
-      Y: 82.3908691
-      Z: 177.999817
+      Z: -20
     }
     Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.904007
-      Roll: 0.268322378
     }
     Scale {
       X: 1
-      Y: 1
-      Z: 1
+      Y: 0.705882192
+      Z: 0.70588243
     }
   }
-  ParentId: 1696798925401821095
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:GEOBuggyBugLarge"
-      AssetReference {
-        Id: 8883611779929351183
-      }
-    }
-    Overrides {
-      Name: "cs:ParentFolder"
-      ObjectReference {
-        SelfId: 11104742030297938276
-      }
-    }
-  }
+  ParentId: 10313387175741346181
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -18620,9 +19432,21 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Script {
-    ScriptAsset {
-      Id: 15190707591586946062
+  Text {
+    Text: "? Luampa Coins"
+    FontAsset {
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -18634,6 +19458,9 @@ Objects {
   Name: "WORKING ON TEMPLATES"
   Transform {
     Location {
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
     }
     Rotation {
     }
