@@ -321,7 +321,7 @@ Objects {
     AudioAsset {
       Id: 1834689303491898517
     }
-    Volume: 0.6
+    Volume: 0.8
     Falloff: -1
     Radius: -1
   }
@@ -360,7 +360,7 @@ Objects {
     AudioAsset {
       Id: 15065695696845701021
     }
-    Volume: 0.362978667
+    Volume: 0.8
     Falloff: -1
     Radius: -1
   }
@@ -6673,7 +6673,7 @@ Objects {
     AudioAsset {
       Id: 1834689303491898517
     }
-    Volume: 0.6
+    Volume: 0.8
     Falloff: -1
     Radius: -1
   }
@@ -6712,7 +6712,7 @@ Objects {
     AudioAsset {
       Id: 15065695696845701021
     }
-    Volume: 0.362978667
+    Volume: 0.8
     Falloff: -1
     Radius: -1
   }
