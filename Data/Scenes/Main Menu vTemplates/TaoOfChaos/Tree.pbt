@@ -270,8 +270,7 @@ Objects {
   ChildIds: 10505102574848237220
   ChildIds: 11104742030297938276
   ChildIds: 8704119052559485770
-  ChildIds: 9232345134599714151
-  ChildIds: 4264668423567706380
+  ChildIds: 6015728792495957233
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -291,6 +290,42 @@ Objects {
   }
 }
 Objects {
+  Id: 6015728792495957233
+  Name: "SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
+  ChildIds: 9232345134599714151
+  ChildIds: 4264668423567706380
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 4264668423567706380
   Name: "Pneumatic Impact Air Drill Whine 01 SFX"
   Transform {
@@ -304,7 +339,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14242996041845712709
+  ParentId: 6015728792495957233
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -343,7 +378,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14242996041845712709
+  ParentId: 6015728792495957233
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6622,8 +6657,7 @@ Objects {
   ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
   ChildIds: 2935919495293603488
-  ChildIds: 3101770726936739654
-  ChildIds: 3886638203935870196
+  ChildIds: 11446438267394999886
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -6643,6 +6677,42 @@ Objects {
   }
 }
 Objects {
+  Id: 11446438267394999886
+  Name: "SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10894713328343682309
+  ChildIds: 3101770726936739654
+  ChildIds: 3886638203935870196
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 3886638203935870196
   Name: "Pneumatic Impact Air Drill Whine 01 SFX"
   Transform {
@@ -6656,7 +6726,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10894713328343682309
+  ParentId: 11446438267394999886
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6695,7 +6765,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10894713328343682309
+  ParentId: 11446438267394999886
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -12785,7 +12855,7 @@ Objects {
   Control {
     Width: 100
     Height: 180
-    UIY: -97
+    UIY: -95
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -12849,7 +12919,7 @@ Objects {
   Control {
     Width: 380
     Height: 160
-    UIX: 200
+    UIX: 201
     UIY: 10
     RenderTransformPivot {
       Anchor {
@@ -13118,7 +13188,7 @@ Objects {
   Control {
     Width: 380
     Height: 160
-    UIX: -200
+    UIX: -201
     UIY: 10
     RenderTransformPivot {
       Anchor {
@@ -13384,7 +13454,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 100
+    Width: 101
     Height: 40
     UIX: -470
     RotationAngle: -90

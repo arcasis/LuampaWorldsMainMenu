@@ -124,6 +124,7 @@ function DisplaySelectingUpgrade()
     EDIT_VEHICLE_BUTTON:SetFontColor(BUTTON_OFF_COLOR)
     EDIT_VEHICLE_IMAGE:SetColor(BUTTON_OFF_COLOR)]]
     BATTLE_UPGRADES_PANEL.visibility = Visibility.INHERIT
+    
     UPGRADES_MENU_OPEN_SFX:Play()
 end
 
@@ -288,6 +289,7 @@ function Tick(deltaTime)
             BATTLE_PANEL.visibility = Visibility.INHERIT
             battleMenuOpen = true
             ProcessIndex()
+
             BATTLE_MENU_OPEN_SFX:Play()
         end
         battleMainMenuOpen = true
