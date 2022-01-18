@@ -2,7 +2,7 @@ Assets {
   Id: 11376880785348513642
   Name: "Garage Lettering"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 13674719708830618715
     ParameterOverrides {

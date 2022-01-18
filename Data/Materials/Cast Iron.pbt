@@ -2,7 +2,7 @@ Assets {
   Id: 12691356770271524678
   Name: "Cast Iron"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 453237349022983430
     ParameterOverrides {

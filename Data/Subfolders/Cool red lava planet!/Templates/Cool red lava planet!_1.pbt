@@ -161,6 +161,6 @@ Assets {
   Marketplace {
     Description: "i think its easy to understand, its a lava planet, thats all it is"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }
