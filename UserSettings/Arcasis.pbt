@@ -4584,4 +4584,4 @@ ObjectSettings {
     }
   }
 }
-LastSavedScene: "Main"
+LastSavedScene: "Main Menu vTemplates"
