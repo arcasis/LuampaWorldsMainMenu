@@ -271,6 +271,7 @@ Objects {
   ChildIds: 11104742030297938276
   ChildIds: 8704119052559485770
   ChildIds: 6015728792495957233
+  ChildIds: 17354584335773677665
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -284,6 +285,809 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 17354584335773677665
+  Name: "Vehicle Templates"
+  Transform {
+    Location {
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
+    }
+    Rotation {
+      Yaw: 89.9999771
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
+  ChildIds: 16618086750977406914
+  ChildIds: 2366965123534712912
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2366965123534712912
+  Name: "Upgrade Templates"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17354584335773677665
+  ChildIds: 8372621935723013639
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8372621935723013639
+  Name: "Battle Upgrades - Owned"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: -6.83018879e-06
+      Yaw: -3.75660347e-05
+      Roll: -3.20163764e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2366965123534712912
+  ChildIds: 2589461428051831612
+  ChildIds: 13701522221845949179
+  ChildIds: 2374952225616568754
+  ChildIds: 17250998740947806973
+  ChildIds: 3452094453916058228
+  ChildIds: 10055360721902158733
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10055360721902158733
+  Name: "Battle 6"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8372621935723013639
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3452094453916058228
+  Name: "Battle 5"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8372621935723013639
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 17250998740947806973
+  Name: "Battle 4"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8372621935723013639
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2374952225616568754
+  Name: "Battle 3"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8372621935723013639
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13701522221845949179
+  Name: "Battle 2"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8372621935723013639
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2589461428051831612
+  Name: "Battle 1"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8372621935723013639
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16618086750977406914
+  Name: "Default Templates"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17354584335773677665
+  ChildIds: 6876428192119663519
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6876428192119663519
+  Name: "Battle Geo - Owned"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16618086750977406914
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:4:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
