@@ -2,6 +2,7 @@ GameId: "141bf91f798a4f3e955969d2e9d1a900"
 ClientVersion: "1.0.224-prod-s"
 Name: "LuampaWorldsMainMenu"
 Description: "Main menu test  "
+IsOpenForEdit: true
 Tags: "Action"
 Tags: "Adventure"
 Tags: "Casual"
@@ -13,5 +14,9 @@ SerializationVersion: 2
 SceneNameToSceneIdMap {
   key: "Main"
   value: "d0c346e0482efa6deed1f8ba52a53846"
+}
+SceneNameToSceneIdMap {
+  key: "Main Menu vTemplates"
+  value: "b3368c884a27ff448a66e9b6dd4ba367"
 }
 MaxPlayersForMainScene: 8
