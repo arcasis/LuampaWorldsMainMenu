@@ -1307,99 +1307,6 @@ Objects {
   ChildIds: 2071440135843399120
   ChildIds: 5365256447000296551
   ChildIds: 15118625734982558593
-  ChildIds: 4544197525143975442
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 4544197525143975442
-  Name: "Battle 6"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11963144033599667833
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 3178505782682640294
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 17674940031049317364
-      }
-    }
-    Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 8029938295469206953
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 1732665923798203128
-      }
-    }
-    Overrides {
-      Name: "cs:1:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:1:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:2:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:2:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:3:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:3:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:4:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:4:ml"
-      Bool: false
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1438,25 +1345,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 3178505782682640294
+        Id: 11092297676915485082
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 17674940031049317364
+        Id: 258892065930281367
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 8029938295469206953
+        Id: 9957315148980478217
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 1732665923798203128
+        Id: 15335373834802453509
       }
     }
     Overrides {
@@ -1530,25 +1437,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 3178505782682640294
+        Id: 2765487597710095439
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 17674940031049317364
+        Id: 15592160400992696236
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 8029938295469206953
+        Id: 12193859748712149258
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 1732665923798203128
+        Id: 15817827262377393680
       }
     }
     Overrides {
@@ -1899,99 +1806,6 @@ Objects {
   ChildIds: 17792872373087929364
   ChildIds: 2712961394424518706
   ChildIds: 10041164262007388449
-  ChildIds: 14289696454840320985
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 14289696454840320985
-  Name: "Battle 6"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3259439264599774573
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 4886017605021124364
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10829740752232347592
-      }
-    }
-    Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 2048101420500260394
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 2254938023492922603
-      }
-    }
-    Overrides {
-      Name: "cs:1:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:1:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:2:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:2:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:3:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:3:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:4:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:4:ml"
-      Bool: false
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2030,25 +1844,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 4886017605021124364
+        Id: 3394131146165772063
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 10829740752232347592
+        Id: 4587834859993956501
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 2048101420500260394
+        Id: 10292002906744023642
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 2254938023492922603
+        Id: 11236232891855535915
       }
     }
     Overrides {
@@ -2122,25 +1936,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 4886017605021124364
+        Id: 10348545312209848985
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 10829740752232347592
+        Id: 9376158370591216090
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 2048101420500260394
+        Id: 6502115283469039714
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 2254938023492922603
+        Id: 14573979020948442700
       }
     }
     Overrides {
@@ -2491,102 +2305,6 @@ Objects {
   ChildIds: 3639295064404113239
   ChildIds: 13841790934508846906
   ChildIds: 409071968375369434
-  ChildIds: 3500052568564199464
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3500052568564199464
-  Name: "Battle 6"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Pitch: -6.83018879e-06
-      Yaw: -1.36603767e-05
-      Roll: -1.33401301e-07
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13161655997277139669
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 16201507078899524131
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10606676063634080272
-      }
-    }
-    Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 6881735181445311574
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 3624150409616268551
-      }
-    }
-    Overrides {
-      Name: "cs:1:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:1:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:2:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:2:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:3:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:3:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:4:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:4:ml"
-      Bool: false
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2628,25 +2346,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 16201507078899524131
+        Id: 13365454205232479360
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 10606676063634080272
+        Id: 15967238916931781797
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 6881735181445311574
+        Id: 14343845384706865801
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 3624150409616268551
+        Id: 5609523255417519858
       }
     }
     Overrides {
@@ -2723,25 +2441,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 16201507078899524131
+        Id: 9861916077722441788
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 10606676063634080272
+        Id: 3119875018517153593
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 6881735181445311574
+        Id: 18139238391865909442
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 3624150409616268551
+        Id: 8021930419740158542
       }
     }
     Overrides {
@@ -3137,31 +2855,31 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 3677500936474418915
+        Id: 16464074713874394408
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 8395753202752431621
+        Id: 8768697395945414097
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 8768697395945414097
+        Id: 5594362309092185775
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 3677500936474418915
+        Id: 17081935478145002578
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 16464074713874394408
+        Id: 10113057309104952111
       }
     }
     Overrides {
@@ -3247,19 +2965,19 @@ Objects {
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 17438479039680390717
+        Id: 14200763476598269846
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 7549644669932872156
+        Id: 10317323103950852001
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 3490354650252545231
+        Id: 10776682244042762173
       }
     }
     Overrides {
@@ -3339,25 +3057,25 @@ Objects {
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 3426904075239409324
+        Id: 9324373660678580101
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 3622933792280256068
+        Id: 5502100934587859502
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 9324373660678580101
+        Id: 11669863343855639342
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 3426904075239409324
+        Id: 13968230155843819772
       }
     }
     Overrides {
