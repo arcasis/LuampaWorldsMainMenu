@@ -1,8 +1,6 @@
 --[[DESCRIPTION: Gets players' XP at game end and unlocks any vehicles that weren't already.]]
 
 function UnlockVehicles(player)
-
-    Task.Wait(5)  -- temp for main menu: allows player storage to process, give karts scripts to run
     
     local karts = player.serverUserData.karts
     local totalRaceXp = player.serverUserData.totalRaceXp     -- !! WIP !! totalRaceXp is not a thing yet outside of Main Menu: Race needs updated with XP and ranks.
@@ -135,7 +133,6 @@ function OnRoundEnd()
 end
 
 --Game.roundEndEvent:Connect(OnRoundEnd)     -- for actual game
-Game.playerJoinedEvent:Connect(UnlockVehicles)     -- for main menu testing only
 
-----TEST BROADCAST----
+-- Sent after player storage is downloaded, again for test scripts
 Events.Connect("UpdateXP", UnlockVehicles)

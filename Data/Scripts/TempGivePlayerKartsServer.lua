@@ -1,7 +1,29 @@
 
+-- Decide which test system to implement by commenting out all except the one that will be used
+
 function OnPlayerJoined(player)
 
-    Task.Wait(1) -- wait for storage to set up serverUserData before we override it
+    Task.Wait(5) -- wait for storage to set up serverUserData before we override it
+
+    -- for playtest sessions, sets players up with enough xp and coins to unlock and purchase first three vehicles, first two upgrades of vehicle #3
+    OneTimeTestSystem(player)
+
+    --ProgressiveTestSystem(player)
+end
+
+function OneTimeTestSystem(player)
+    player.serverUserData.totalRaceXp = 0
+    player:SetPrivateNetworkedData("totalRaceXp", player.serverUserData.totalRaceXp)
+    player.serverUserData.totalBattleXp = 23000
+    player:SetPrivateNetworkedData("totalBattleXp", player.serverUserData.totalBattleXp)
+    player:SetResource("LuampaCoins", 117000)
+
+    ----- !! DELETE BROADCAST BEFORE PUBLISH !! -------
+    Events.Broadcast("UpdateXP", player)  -- temporary, to force unlockservers to refresh tables for testing
+end
+
+function ProgressiveTestSystem(player)
+
     -- test 
     --local karts = player.serverUserData.karts
 
@@ -122,6 +144,7 @@ function OnPlayerJoined(player)
         player.serverUserData.totalRaceXp = 2000
     end
 
+    ----- !! DELETE BROADCAST HERE AND IN UNLOCK SERVER BEFORE PUBLISH !! -------
     Events.Broadcast("UpdateXP", player)  -- temporary, to force unlockservers to refresh tables
     --------------- RESET TO NIL -------------------
     -- uncomment this section to reset totalBattleXp and totalRaceXp to nil

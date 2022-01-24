@@ -13,6 +13,9 @@ function OnPlayerJoined(player)
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
 
     --------------------- CONVERT ---------------------
+    --------- !! UNCOMMENT WHEN WE GO LIVE !! --------
+
+    -----!! WIP !! CHANGE ALL THIS TO REFUND MONEY INSTEAD !! -----
 
     -- Check if player has cars tables (has raced before)
     --[[if playerDataTable.cars then
@@ -63,11 +66,19 @@ function OnPlayerJoined(player)
 
     -- !! WIP !! We will be taking away their karts, giving them back coins
 
-    -- Check if player has a selected kart, convert it to the new system
-    --[[local selectedVehicleId = playerDataTable.selectedVehicleId
+    -- Check if player has a selected kart, if they do mark them for kart tester helmet
+    local selectedVehicleId = playerDataTable.selectedVehicleId
+    local isTester = playerDataTable.isTester
 
     if selectedVehicleId then
 
+        if not isTester then
+            player.serverUserData.isTester = {}
+            player.serverUserData.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race
+        end
+
+        ----- !! UNCOMMENT WHEN WE GO LIVE WITH CONVERT !! -----
+        --[[
         local karts = {}
         if selectedVehicleId == "D60C2C0F44362F9A" then
             karts[1] = {}
@@ -87,33 +98,43 @@ function OnPlayerJoined(player)
         elseif selectedVehicleId == "2D0527061EF1BC26" then
             karts[5] = {}
             playerDataTable.selectedKart = karts
-        end
-    end]]
-
-    local totalXp = nil
+        end]]
+    end
+   
+    -- wipe first XP system if any testers have it in storage
     if playerDataTable.totalXp then
-        totalXp = playerDataTable.totalXp
         playerDataTable.totalXp = nil
-    else
-        totalXp = 0
-    end
-    ------------------- END CONVERT -------------------
-    
-    -- !! WIP !! still some converting, decide if players get to keep their battle xp (or convert it offline for them)
-    -- clean this up after decision is made
-    if playerDataTable.totalBattleXp then
-        player.serverUserData.totalBattleXp = playerDataTable.totalBattleXp
-    else
-        playerDataTable.totalBattleXp = totalXp
-        player.serverUserData.totalBattleXp = playerDataTable.totalBattleXp
+        if not isTester then
+            playerDataTable.isTester = {}
+            playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
+        end
     end
 
+    ---- !! COMMENT THIS OUT AFTER WE GO LIVE !! -----
+    if playerDataTable.totalBattleXp then
+        if not isTester then
+            playerDataTable.isTester = {}
+            playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
+        end
+    end
+    --------------------------------------------------
+    ------------------- END CONVERT -------------------
+
+    -- ***** DELETE AFTER TESTING ***** --
+    playerDataTable.totalRaceXp = nil
+    playerDataTable.totalBattleXp = nil
+    playerDataTable.karts = nil
+    playerDataTable.trucks = nil
+    playerDataTable.selectedKart = nil
+    playerDataTable.selectedTruck = nil
+    -- ***** END DELETE AFTER TESTING ***** --
+
+    ----------------------- RACE -----------------------
     if not playerDataTable.totalRaceXp then
         playerDataTable.totalRaceXp = 0
     end
     player.serverUserData.totalRaceXp = playerDataTable.totalRaceXp
 
-    ----------------------- RACE -----------------------
     -- Get karts table, or create one if new player
     if not playerDataTable.karts then
         local karts = {}
@@ -133,6 +154,11 @@ function OnPlayerJoined(player)
     ---------------------- END RACE ----------------------
 
     ----------------------- BATTLE -----------------------
+    if not playerDataTable.totalBattleXp then
+        playerDataTable.totalBattleXp = 0
+    end
+    player.serverUserData.totalBattleXp = playerDataTable.totalBattleXp
+
     -- Get trucks table, or create if new player
     if not playerDataTable.trucks then
         local trucks = {}
@@ -151,7 +177,7 @@ function OnPlayerJoined(player)
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
 
     --print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
-    local selectedTruckUserData = player.serverUserData.selectedTruck
+    --local selectedTruckUserData = player.serverUserData.selectedTruck
     --print("selectedTruck trucks[1] is: ", selectedTruckUserData[1])
     --------------------- END BATTLE ---------------------
     
@@ -167,8 +193,9 @@ function OnPlayerJoined(player)
     ---------------------- END COINS ----------------------
 
 
-    -- Load updated data back into shared data so we can pass it to client using the Event
-    Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
+    -- ***** !! UNCOMMENT OUT RE-UPLOADING SHARED PLAYER DATA WHEN ABOVE ISN'T RESETTING XP FOR TESTING!! ***** --
+    -- Load updated data back into shared data
+    --Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
 
     -- Set up PrivateNetworkedData for client-side, which is listening for changed event
     for key, value in pairs(playerDataTable) do
@@ -181,30 +208,32 @@ function OnPlayerJoined(player)
             warn("Setting private data " .. key .. " for player " .. player.name .. " exceeded the limit.")
         end
     end
+
+    -- ***** !! UNCOMMENT OUT BEFORE GOING LIVE !! Currently this is sent by test scripts ***** --
+    --Events.Broadcast("UpdateXP", player)
 end
 
 
 function OnPlayerLeft(player)
     local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
-
-    -- !! WIP !! If keeping old system up for conversion, write scripts to remove old system at conversion
     
     -- NOTE: We do not re-upload serverUserData.cars, will need to update Luampa Race Worlds to use karts
 
-    playerDataTable.karts = player.serverUserData.karts
-    playerDataTable.selectedKart = player.serverUserData.selectedKart
+    --------- !! UNCOMMENT ALL FUNCTIONS HERE WHEN WE GO LIVE !! --------
+    --playerDataTable.karts = player.serverUserData.karts
+    --playerDataTable.selectedKart = player.serverUserData.selectedKart
 
-    playerDataTable.trucks = player.serverUserData.trucks
+    --playerDataTable.trucks = player.serverUserData.trucks
     playerDataTable.selectedTruck = player.serverUserData.selectedTruck
 
     -- add atvs here once they are ready
     
-    playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp
-    playerDataTable.totalRaceXp = player.serverUserData.totalRaceXp
+    --playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp
+    --playerDataTable.totalRaceXp = player.serverUserData.totalRaceXp
 
     --print("PlayerStorage is uploading, totalRaceXp is: ", player.serverUserData.totalRaceXp)
 
-    playerDataTable.coins = player:GetResource("LuampaCoins")
+    --playerDataTable.coins = player:GetResource("LuampaCoins")
 
     --playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
     --playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
@@ -221,4 +250,5 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)     -- see notes at top
 -- temp playerJoinedEvent substitute, allows TempConvertStorageServer to run first
 --Events.Connect("StorageReady", OnPlayerJoined)
+
 Game.playerLeftEvent:Connect(OnPlayerLeft)

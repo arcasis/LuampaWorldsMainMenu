@@ -82,27 +82,27 @@ function ProcessUpgradeIndex()
     local currentUpgrade = nil
     if trucksTable then     -- Core was running this script when game loaded, printing error, so had to add if check :/
 
-        print("UpgradesMenu has successfully fetched trucks table")
+        --print("UpgradesMenu has successfully fetched trucks table")
         local truckModel = trucksTable[index]
         if truckModel then
-            print("UpgradesMenu has successfully fetched truck model, index is: ", index)
+            --print("UpgradesMenu has successfully fetched truck model, index is: ", index)
             currentUpgrade = truckModel[upgradeIndex]
-            print("UpgradesMenu says currentUpgrade is: ", currentUpgrade)
-            print("upgradeIndex is: ", upgradeIndex)
+            --print("UpgradesMenu says currentUpgrade is: ", currentUpgrade)
+            --print("upgradeIndex is: ", upgradeIndex)
         end
     end
 
     if currentUpgrade then
-        print("UpgradesMenu has successfully fetched currentUpgrade: ", currentUpgrade)
+        --print("UpgradesMenu has successfully fetched currentUpgrade: ", currentUpgrade)
         if currentUpgrade == 0 then
-            print("upgrade should be displaying as unlocked")
+            --print("upgrade should be displaying as unlocked")
             DisplayUnlockedUpgrade()
         else
-            print("upgrade should be displaying as owned")
+            --print("upgrade should be displaying as owned")
             DisplayOwnedUpgrade()
         end
     else
-        print("upgrade should be displaying as locked")
+        --print("upgrade should be displaying as locked")
         DisplayLockedUpgrade()
     end
 end

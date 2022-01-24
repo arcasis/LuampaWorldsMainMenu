@@ -2,7 +2,9 @@
 
 function UnlockVehicles(player)
 
-    Task.Wait(1.5)  -- temp: allows player storage to process, give trucks scripts to run
+    Task.Wait(1)  -- testing if a wait is needed
+
+    --print("UnlockVehicles gets broadcast. Player name/battleXp: ", player.name, player.serverUserData.totalBattleXp)
 
     local trucks = player.serverUserData.trucks
     local totalBattleXp = player.serverUserData.totalBattleXp
@@ -15,9 +17,14 @@ function UnlockVehicles(player)
         -- kart #1
         -- kart #1 is already unlocked by default
 
+        --print("totalBattleXp was more than 1000")
+        --print("trucks[1][1] shouldn't exist, it is: ", trucks[1][1])
+
         -- kart #1 upgrades
         if totalBattleXp >= 1000 and not trucks[1][1] then
             trucks[1][1] = 0
+
+            --print("trucks[1][1] didn't exist, now it should be 0: ", trucks[1][1])
         end
         if totalBattleXp >= 2000 and not trucks[1][2] then
             trucks[1][2] = 0
@@ -31,6 +38,8 @@ function UnlockVehicles(player)
     end
 
     if totalBattleXp >= 5000 then  -- nil and totalBattleXp <= 13000 
+
+        --print("totalBattleXp was more than 5000")
 
         -- kart #2
         if totalBattleXp >= 5000 and not trucks[2] then
@@ -53,6 +62,8 @@ function UnlockVehicles(player)
     end
 
     if totalBattleXp >= 15000 then  -- nil and totalBattleXp <= 31000 
+
+        --print("totalBattleXp was more than 15000")
 
         -- kart #3
         if totalBattleXp >= 15000 and not trucks[3] then
@@ -119,6 +130,7 @@ function UnlockVehicles(player)
     end
 
     player.serverUserData.trucks = trucks
+    player:SetPrivateNetworkedData("trucks", trucks)
 
     --print("player's .serverUserData.trucks[1] is: ", trucks[1])
     --print("player's .serverUserData.trucks[1][1] is: ", trucks[1][1])
@@ -135,7 +147,6 @@ function OnRoundEnd()
 end
 
 --Game.roundEndEvent:Connect(OnRoundEnd)     -- for actual game
-Game.playerJoinedEvent:Connect(UnlockVehicles)     -- for main menu testing only
 
-----TEST BROADCAST----
+-- Sent after player storage is downloaded, again for test scripts
 Events.Connect("UpdateXP", UnlockVehicles)
