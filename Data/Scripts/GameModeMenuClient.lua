@@ -12,7 +12,7 @@ function OnKartsButtonClicked()
 end
 
 function OnBattleButtonClicked()
-    Game.GetLocalPlayer():TransferToGame("13be5a/deserttest2")
+    Game.GetLocalPlayer():TransferToGame("747744/luampadesertbattlemap")
 end
 
 function OnBackButtonClicked()
