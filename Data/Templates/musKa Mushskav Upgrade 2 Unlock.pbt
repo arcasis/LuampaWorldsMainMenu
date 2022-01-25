@@ -15,11 +15,17 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6171099205028301999
         ChildIds: 4001747164294595578
         ChildIds: 3727727469416064201
         ChildIds: 11894114156070613407
         ChildIds: 8289532978106712368
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "musKa Mushskav"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

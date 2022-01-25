@@ -7,7 +7,7 @@ Assets {
       RootId: 10668529984693081724
       Objects {
         Id: 10668529984693081724
-        Name: "ScavAvenger Default Owned Geo"
+        Name: "SkavAvenger Default Owned Geo"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1696798925401821095
+        ParentId: 6171099205028301999
         ChildIds: 1814865050925611
         ChildIds: 1186494470851286179
         ChildIds: 11297385380962194023
@@ -282,6 +282,12 @@ Assets {
         ChildIds: 10940141186825494344
         ChildIds: 15548695388266824503
         ChildIds: 4396418484517058437
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Skav Avenger"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

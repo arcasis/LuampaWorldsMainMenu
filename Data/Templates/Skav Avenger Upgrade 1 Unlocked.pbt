@@ -27,7 +27,6 @@ Assets {
             String: "Skav Avenger"
           }
         }
-        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
