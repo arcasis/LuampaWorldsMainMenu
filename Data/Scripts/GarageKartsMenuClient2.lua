@@ -153,7 +153,7 @@ function DisplayLockedVehicle()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
-    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
 end
 
@@ -177,7 +177,7 @@ function DisplayUnlockedVehicle()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.INHERIT
 
-    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
     local name = currentlyVisible:GetCustomProperty("Name")
     VEHICLE_NAME_TEXT.text = name
@@ -218,7 +218,7 @@ function DisplayOwnedVehicle()
     
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
-    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
     local name = currentlyVisible:GetCustomProperty("Name")
     VEHICLE_NAME_TEXT.text = name

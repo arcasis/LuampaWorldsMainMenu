@@ -1214,10 +1214,10 @@ Objects {
     Location {
       X: 6829.90186
       Y: 82.3851318
-      Z: 103.991287
+      Z: 144
     }
     Rotation {
-      Yaw: 89.9999924
+      Yaw: 60
     }
     Scale {
       X: 1
@@ -3861,7 +3861,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 150
+    UIY: 200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -5622,7 +5622,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 150
+    UIY: 200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -7319,10 +7319,10 @@ Objects {
     Location {
       X: 6829.90186
       Y: 82.3851318
-      Z: 103.991287
+      Z: 120
     }
     Rotation {
-      Yaw: 90
+      Yaw: 60
     }
     Scale {
       X: 1
@@ -9892,7 +9892,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 150
+    UIY: 200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -11652,7 +11652,7 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIY: 150
+    UIY: 200
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -16343,7 +16343,7 @@ Objects {
 }
 Objects {
   Id: 1263358833129880458
-  Name: "BattleCars"
+  Name: "Battle"
   Transform {
     Location {
       X: -21.6118164
@@ -16386,7 +16386,7 @@ Objects {
       }
     }
     Button {
-      Label: "Battle Cars"
+      Label: "Battle"
       FontColor {
         R: 1
         G: 1
@@ -16613,7 +16613,7 @@ Objects {
 }
 Objects {
   Id: 8106024140583710711
-  Name: "Karts"
+  Name: "Race"
   Transform {
     Location {
       X: -21.6118164
@@ -16656,7 +16656,7 @@ Objects {
       }
     }
     Button {
-      Label: "Karts"
+      Label: "Race"
       FontColor {
         R: 1
         G: 1

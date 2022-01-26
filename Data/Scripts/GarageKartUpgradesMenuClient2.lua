@@ -139,7 +139,7 @@ function DisplayLockedUpgrade()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
-    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLES[index][upgradeIndex], {parent = LOCKED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLES[index][upgradeIndex], {parent = LOCKED_UPGRADES_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
 end
 
@@ -160,7 +160,7 @@ function DisplayUnlockedUpgrade()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.INHERIT
 
-    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLES[index][upgradeIndex], {parent = UNLOCKED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLES[index][upgradeIndex], {parent = UNLOCKED_UPGRADES_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
     local name = currentlyVisible:GetCustomProperty("Name")
     VEHICLE_NAME_TEXT.text = name
@@ -204,7 +204,7 @@ function DisplayOwnedUpgrade()
 
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
-    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLES[index][upgradeIndex], {parent = OWNED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
+    currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLES[index][upgradeIndex], {parent = OWNED_UPGRADES_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
     local name = currentlyVisible:GetCustomProperty("Name")
     VEHICLE_NAME_TEXT.text = name
