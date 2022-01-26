@@ -35,7 +35,6 @@ function AttemptToPurchaseVehicle(index)
 
         print("LuampaPurchaseKartsClient says you have enough to purchase vehicle")
 
-        LOCAL_PLAYER.clientUserData.karts[index] = {}
         LOCAL_PLAYER.clientUserData.karts[index].isOwned = true
 
         Events.Broadcast("KartPurchased")

@@ -4208,7 +4208,7 @@ Objects {
 }
 Objects {
   Id: 15201836303060589185
-  Name: "Choose Upgrade"
+  Name: "Exit Upgrades"
   Transform {
     Location {
       X: -21.6118164
@@ -4252,7 +4252,7 @@ Objects {
       }
     }
     Button {
-      Label: "Choose Upgrade"
+      Label: "Exit Upgrades"
       FontColor {
         R: 1
         G: 1
@@ -4849,7 +4849,7 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:SelectUpgradeButton"
+      Name: "cs:ExitUpgradesButton"
       ObjectReference {
         SelfId: 15201836303060589185
       }
@@ -4969,11 +4969,11 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectUpgradeButton:isrep"
+      Name: "cs:ExitUpgradesButton:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectUpgradeButton:ml"
+      Name: "cs:ExitUpgradesButton:ml"
       Bool: false
     }
     Overrides {
@@ -10239,7 +10239,7 @@ Objects {
 }
 Objects {
   Id: 5291404624555088359
-  Name: "Choose Upgrade"
+  Name: "Exit Upgrades"
   Transform {
     Location {
       X: -21.6118164
@@ -10283,7 +10283,7 @@ Objects {
       }
     }
     Button {
-      Label: "Choose Upgrade"
+      Label: "Exit Upgrades"
       FontColor {
         R: 1
         G: 1
@@ -10879,7 +10879,7 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:SelectUpgradeButton"
+      Name: "cs:ExitUpgradesButton"
       ObjectReference {
         SelfId: 5291404624555088359
       }
@@ -10999,11 +10999,11 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectUpgradeButton:isrep"
+      Name: "cs:ExitUpgradesButton:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:SelectUpgradeButton:ml"
+      Name: "cs:ExitUpgradesButton:ml"
       Bool: false
     }
     Overrides {

@@ -10,7 +10,7 @@ local EDIT_VEHICLE_BUTTON = script:GetCustomProperty("EditVehicleButton"):WaitFo
 local VEHICLE_ARROW_LEFT = script:GetCustomProperty("VehicleArrowLeft"):WaitForObject()
 local VEHICLE_ARROW_RIGHT = script:GetCustomProperty("VehicleArrowRight"):WaitForObject()
 
-local EDIT_UPGRADE_BUTTON = script:GetCustomProperty("SelectUpgradeButton"):WaitForObject()
+local EXIT_UPGRADES_BUTTON = script:GetCustomProperty("ExitUpgradesButton"):WaitForObject()
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
@@ -213,9 +213,14 @@ function OnEditVehicleButtonClicked()
     DisplaySelectingVehicle()
 end
 
+function OnExitUpgradesButtonClicked()
+    DisplaySelectingVehicle()
+end
+
 function OnBackButtonClicked()
     DisplaySelectingVehicle()
 end
+
 
 function OnSetAsDefaultButtonClicked()
     Events.BroadcastToServer("SelectDefaultKartUpgrade", index, upgradeIndex)
@@ -316,6 +321,7 @@ Events.Connect("KartUpgradePurchased", OnKartUpgradePurchased)
 Events.Connect("KartUpradeNotPurchased", OnKartUpgradeNotPurchased)
 
 EDIT_VEHICLE_BUTTON.clickedEvent:Connect(OnEditVehicleButtonClicked)
+EXIT_UPGRADES_BUTTON.clickedEvent:Connect(OnExitUpgradesButtonClicked)
 VEHICLE_ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 VEHICLE_ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
 SET_AS_DEFAULT_BUTTON.clickedEvent:Connect(OnSetAsDefaultButtonClicked)
