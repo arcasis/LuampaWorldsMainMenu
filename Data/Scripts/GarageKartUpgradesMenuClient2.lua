@@ -182,8 +182,14 @@ function DisplayOwnedUpgrade()
     -- Set UPGRADE_STATUS_TEXT options
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     local selectedTable = LOCAL_PLAYER.clientUserData.selectedKart
-    local isThisUpgradeSelected = selectedTable[index][upgradeIndex]     -- a number if it matches upgradeIndex, or nil
 
+    local isThisUpgradeSelected = nil
+    if selectedTable[index] then
+        if selectedTable[index][upgradeIndex] then
+            isThisUpgradeSelected = selectedTable[index][upgradeIndex]
+        end
+    end
+    
     -- if selectedKart matches current upgradeIndex, then this upgrade is set as their default kart
     if isThisUpgradeSelected then
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF

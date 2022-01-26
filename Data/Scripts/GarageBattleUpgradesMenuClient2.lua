@@ -179,7 +179,13 @@ function DisplayOwnedUpgrade()
     -- Set UPGRADE_STATUS_TEXT options
     UPGRADE_STATUS_TEXT.visibility = Visibility.FORCE_OFF
     local selectedTable = LOCAL_PLAYER.clientUserData.selectedTruck
-    local isThisUpgradeSelected = selectedTable[index][upgradeIndex]     -- a number if it matches upgradeIndex, or nil
+
+    local isThisUpgradeSelected = nil
+    if selectedTable[index] then
+        if selectedTable[index][upgradeIndex] then
+            isThisUpgradeSelected = selectedTable[index][upgradeIndex]
+        end
+    end
 
     -- if selectedTruck matches current upgradeIndex, then this upgrade is set as their default truck
     if isThisUpgradeSelected then
