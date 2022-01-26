@@ -224,6 +224,15 @@ function OnPlayerLeft(player)
     --playerDataTable.selectedKart = player.serverUserData.selectedKart
 
     --playerDataTable.trucks = player.serverUserData.trucks
+
+    -- !! DELETE WHEN DONE TESTING !! ---
+    -- set tester's trucks table to default, to remove any they've purchased but prevent Battle from setting their selected to default (nil trucks table swill set selected to default)
+    local trucks = {}
+    trucks[1] = {}
+    trucks[1].isOwned = true
+    playerDataTable.trucks = trucks
+    -- !! END DELETE WHEN DONE TESTING !! --
+
     playerDataTable.selectedTruck = player.serverUserData.selectedTruck
 
     -- add atvs here once they are ready
