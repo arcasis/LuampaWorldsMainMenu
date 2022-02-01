@@ -120,6 +120,22 @@ function OnPlayerJoined(player)
     --------------------------------------------------
     ------------------- END CONVERT -------------------
 
+    ----- BEGIN TEST PRINTS - DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
+    local stTable = playerDataTable.selectedTruck
+    for index,value in pairs(stTable) do
+        if value then
+            print("storage download says saved truck is index: ", index)
+            for subIndex, subValue in pairs(value) do
+                if subValue then
+                    print("storage download says saved upgrade is index/subindex", index, subIndex)
+                else
+                    print("storage download says default truck was saved")
+                end
+            end
+        end
+    end
+    ------------------------ END TEST PRINTS ------------------------
+
     -- ***** DELETE AFTER TESTING ***** --
     playerDataTable.totalRaceXp = nil
     playerDataTable.totalBattleXp = nil
@@ -175,22 +191,6 @@ function OnPlayerJoined(player)
         playerDataTable.selectedTruck = trucks
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
-
-    ----- BEGIN TEST PRINTS - DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
-    local stTable = player.serverUserData.selectedTruck
-    for index,value in pairs(stTable) do
-        if value then
-            print("storage download says saved truck is index: ", index)
-            for subIndex, subValue in pairs(value) do
-                if subValue then
-                    print("storage download says saved upgrade is index/subindex", index, subIndex)
-                else
-                    print("storage download says default truck was saved")
-                end
-            end
-        end
-    end
-    ------------------------ END TEST PRINTS ------------------------
 
 
     --print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
