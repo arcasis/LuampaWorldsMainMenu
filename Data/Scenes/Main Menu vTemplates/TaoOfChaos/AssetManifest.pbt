@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11946892999598968881
+  Name: "Experiment Shape 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Experiment_Shape_002"
+  }
+}
+Assets {
   Id: 10737368364154921283
   Name: "UI Basic Shape Triangle"
   PlatformAssetType: 9
@@ -68,6 +77,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundHighlighted_022"
+  }
+}
+Assets {
+  Id: 9827424890478033190
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
   }
 }
 Assets {
@@ -140,6 +158,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_air_pneumatic_impact_drillwhine_repair_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 977848448472169971
+  Name: "Cabin Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "CabinBold_ref"
   }
 }
 Assets {

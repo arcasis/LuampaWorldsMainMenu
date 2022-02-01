@@ -235,6 +235,22 @@ function OnPlayerLeft(player)
 
     playerDataTable.selectedTruck = player.serverUserData.selectedTruck
 
+    ----- BEGIN TEST PRINTS - DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
+    local stTable = player.serverUserData.selectedTruck
+    for index,value in pairs(stTable) do
+        if value then
+            print("storage says saved truck is index: ", index)
+            for subIndex, subValue in pairs(value) do
+                if subValue then
+                    print("storage says saved upgrade is index/subindex", index, subIndex)
+                else
+                    print("default truck was saved")
+                end
+            end
+        end
+    end
+    ------------------------ END TEST PRINTS ------------------------
+
     -- add atvs here once they are ready
     
     --playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp

@@ -7,7 +7,7 @@
 function OnDefaultKartSelected(player, index)
     local karts = {}
     karts[index] = {}
-    player.serverUserData.selectedTruck = karts
+    player.serverUserData.selectedKart = karts
 end
 
 -- client sets itself, then broadcasts so server can update
