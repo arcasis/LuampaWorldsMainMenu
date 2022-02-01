@@ -176,6 +176,23 @@ function OnPlayerJoined(player)
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
 
+    ----- BEGIN TEST PRINTS - DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
+    local stTable = player.serverUserData.selectedTruck
+    for index,value in pairs(stTable) do
+        if value then
+            print("storage download says saved truck is index: ", index)
+            for subIndex, subValue in pairs(value) do
+                if subValue then
+                    print("storage download says saved upgrade is index/subindex", index, subIndex)
+                else
+                    print("storage download says default truck was saved")
+                end
+            end
+        end
+    end
+    ------------------------ END TEST PRINTS ------------------------
+
+
     --print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
     --local selectedTruckUserData = player.serverUserData.selectedTruck
     --print("selectedTruck trucks[1] is: ", selectedTruckUserData[1])
@@ -239,12 +256,12 @@ function OnPlayerLeft(player)
     local stTable = player.serverUserData.selectedTruck
     for index,value in pairs(stTable) do
         if value then
-            print("storage says saved truck is index: ", index)
+            print("storage upload says saved truck is index: ", index)
             for subIndex, subValue in pairs(value) do
                 if subValue then
-                    print("storage says saved upgrade is index/subindex", index, subIndex)
+                    print("storage upload says saved upgrade is index/subindex", index, subIndex)
                 else
-                    print("default truck was saved")
+                    print("storage upload says default truck was saved")
                 end
             end
         end
