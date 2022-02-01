@@ -6731,6 +6731,41 @@ Objects {
   ParentId: 14242996041845712709
   ChildIds: 7942385358318566028
   ChildIds: 9896059117707087901
+  ChildIds: 15481122284111150664
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15481122284111150664
+  Name: "delete meh"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6613933708093249466
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

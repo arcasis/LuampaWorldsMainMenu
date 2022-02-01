@@ -2,7 +2,7 @@ Assets {
   Id: 10444380682588435716
   Name: "GarageMarble"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 4431719508842050625
     ParameterOverrides {

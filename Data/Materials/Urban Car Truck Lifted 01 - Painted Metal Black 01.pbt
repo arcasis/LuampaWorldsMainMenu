@@ -2,7 +2,7 @@ Assets {
   Id: 5016891705173553466
   Name: "Urban Car Truck Lifted 01 - Painted Metal Black 01"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 10322605838482412185
     ParameterOverrides {
