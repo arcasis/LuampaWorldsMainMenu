@@ -31,6 +31,7 @@ local PRICES_DATA_FOLDER = script:GetCustomProperty("KartPricesData"):WaitForObj
 local VEHICLE_NAME_TEXT = script:GetCustomProperty("VehicleName"):WaitForObject()
 local VEHICLE_PRICE_TEXT = script:GetCustomProperty("VehiclePrice"):WaitForObject()
 local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
+local UPGRADE_SELECTED_TEXT = script:GetCustomProperty("UpgradeSelectedText"):WaitForObject()
 
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
@@ -206,10 +207,36 @@ function DisplayOwnedVehicle()
 
     -- if selectedKart matches current index, then this vehicle is set as their default kart
     if isThisKartSelected then
-        SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
-        VEHICLE_STATUS_TEXT.text = "Selected"
-        VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
+
+        -- check if default kart or an upgrade is Selected
+        local upgradeSelected = false
+        for _,kart in pairs(kartsTable) do
+            if kart then
+                for _,upgrade in pairs(kart) do
+                    if upgrade then
+                        upgradeSelected = true
+                    end
+                end
+            end
+        end
+
+        if upgradeSelected == true then
+            UPGRADE_SELECTED_TEXT.visibility = Visibility.INHERIT
+
+            SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
+            VEHICLE_STATUS_TEXT.text = "Owned"
+            VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+        else
+            UPGRADE_SELECTED_TEXT.visibility = Visibility.FORCE_OFF
+
+            SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
+            VEHICLE_STATUS_TEXT.text = "Selected"
+            VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
+        end
+
     else
+        UPGRADE_SELECTED_TEXT.visibility = Visibility.FORCE_OFF
+
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
         VEHICLE_STATUS_TEXT.text = "Owned"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))

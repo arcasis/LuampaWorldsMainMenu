@@ -124,12 +124,12 @@ function OnPlayerJoined(player)
     local stTable = playerDataTable.selectedTruck
     for index,value in pairs(stTable) do
         if value then
-            print("storage download says saved truck is index: ", index)
+            --print("storage download says saved truck is index: ", index)
             for subIndex, subValue in pairs(value) do
                 if subValue then
-                    print("storage download says saved upgrade is index/subindex", index, subIndex)
+                    --print("storage download says saved upgrade is index/subindex", index, subIndex)
                 else
-                    print("storage download says default truck was saved")
+                    --print("storage download says default truck was saved")
                 end
             end
         end
@@ -256,12 +256,12 @@ function OnPlayerLeft(player)
     local stTable = player.serverUserData.selectedTruck
     for index,value in pairs(stTable) do
         if value then
-            print("storage upload says saved truck is index: ", index)
+            --print("storage upload says saved truck is index: ", index)
             for subIndex, subValue in pairs(value) do
                 if subValue then
-                    print("storage upload says saved upgrade is index/subindex", index, subIndex)
+                    --print("storage upload says saved upgrade is index/subindex", index, subIndex)
                 else
-                    print("storage upload says default truck was saved")
+                    --print("storage upload says default truck was saved")
                 end
             end
         end

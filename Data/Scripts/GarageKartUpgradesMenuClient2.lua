@@ -98,14 +98,14 @@ function ProcessUpgradeIndex()
     if currentUpgrade then
         --print("UpgradesMenu has successfully fetched currentUpgrade: ", currentUpgrade)
         if currentUpgrade == 0 then
-            print("upgrade should be displaying as unlocked")
+            --print("upgrade should be displaying as unlocked")
             DisplayUnlockedUpgrade()
         else
-            print("upgrade should be displaying as owned")
+            --print("upgrade should be displaying as owned")
             DisplayOwnedUpgrade()
         end
     else
-        print("upgrade should be displaying as locked")
+        --print("upgrade should be displaying as locked")
         DisplayLockedUpgrade()
     end
 end
@@ -245,7 +245,7 @@ function OnSetAsDefaultButtonClicked()
 end
 
 function OnPurchaseUpgradeButtonClicked()
-    print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
+    --print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
     Events.Broadcast("PurchaseKartUpgrade", index, upgradeIndex)
 end
 
@@ -254,7 +254,7 @@ function OnKartUpgradePurchased()
 end
 
 function OnKartUpgradeNotPurchased()
-    print("GarageKartsMenuClient received broadcast vehicle not purchased")
+    print("GarageKartsMenuClient received broadcast vehicle not purchased, fail feedback not set up yet")
     -- add stuff here that displays for player they can't afford vehicle
 end
 

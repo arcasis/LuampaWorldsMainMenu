@@ -242,7 +242,7 @@ function OnSetAsDefaultButtonClicked()
 end
 
 function OnPurchaseUpgradeButtonClicked()
-    print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
+    --print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
     Events.Broadcast("PurchaseTruckUpgrade", index, upgradeIndex)
 end
 
@@ -251,7 +251,7 @@ function OnTruckUpgradePurchased()
 end
 
 function OnTruckUpgradeNotPurchased()
-    print("GarageBattleMenuClient received broadcast vehicle not purchased")
+    --print("GarageBattleMenuClient received broadcast vehicle not purchased")
     -- add stuff here that displays for player they can't afford vehicle
 end
 

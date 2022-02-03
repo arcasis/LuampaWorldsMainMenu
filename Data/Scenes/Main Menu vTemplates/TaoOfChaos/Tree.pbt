@@ -1,185 +1,6 @@
 Name: "TaoOfChaos"
 RootId: 1696798925401821095
 Objects {
-  Id: 10007822524971558635
-  Name: "XP Unlocks Vehicles"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1696798925401821095
-  ChildIds: 6364064867439856010
-  ChildIds: 10839315259484718108
-  ChildIds: 998686284917360553
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 998686284917360553
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10007822524971558635
-  ChildIds: 11772102593914289670
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 11772102593914289670
-  Name: "KartXPUnlockClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 998686284917360553
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 3810389332572418779
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 10839315259484718108
-  Name: "BattleXPUnlockServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10007822524971558635
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4856259256735720600
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 6364064867439856010
-  Name: "RaceXPUnlockServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10007822524971558635
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15773743923918541475
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 9188275580542756088
   Name: "Luampa Worlds Main Menu"
   Transform {
@@ -268,8 +89,8 @@ Objects {
   ParentId: 11084414636793143187
   ChildIds: 18120832145817313819
   ChildIds: 6613933708093249466
-  ChildIds: 10505102574848237220
   ChildIds: 11104742030297938276
+  ChildIds: 10505102574848237220
   ChildIds: 8704119052559485770
   ChildIds: 6015728792495957233
   ChildIds: 17354584335773677665
@@ -3132,76 +2953,6 @@ Objects {
   }
 }
 Objects {
-  Id: 11104742030297938276
-  Name: "DISPLAY LOCATION FOLDER"
-  Transform {
-    Location {
-      X: 6829.90186
-      Y: 82.3851318
-      Z: 103.991287
-    }
-    Rotation {
-      Yaw: 89.9999924
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14242996041845712709
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 8883611779929351183
-      }
-    }
-    Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10207102980281913416
-      }
-    }
-    Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 6133784542686929612
-      }
-    }
-    Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 11642181338662207462
-      }
-    }
-    Overrides {
-      Name: "cs:5"
-      AssetReference {
-        Id: 8768697395945414097
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 10505102574848237220
   Name: "Battle Menu Container"
   Transform {
@@ -5124,6 +4875,7 @@ Objects {
   ChildIds: 9866075515843571691
   ChildIds: 12166770845788654612
   ChildIds: 2359158844426509354
+  ChildIds: 11364227209321736797
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5160,6 +4912,59 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11364227209321736797
+  Name: "Upgrade Selected Text"
+  Transform {
+    Location {
+      X: -5159.47266
+      Y: -4359.15771
+      Z: -840.976562
+    }
+    Rotation {
+      Pitch: -0.597457111
+      Yaw: -115.191216
+      Roll: 0.0325002074
+    }
+    Scale {
+      X: 0.8
+      Y: 0.8
+      Z: 0.8
+    }
+  }
+  ParentId: 7959611291421426607
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "An upgrade is selected"
+    FontAsset {
+    }
+    Color {
+      G: 0.87
+      B: 0.749006569
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -6545,6 +6350,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:UpgradeSelectedText"
+      ObjectReference {
+        SelfId: 11364227209321736797
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -6711,11 +6522,81 @@ Objects {
   }
 }
 Objects {
+  Id: 11104742030297938276
+  Name: "DISPLAY LOCATION FOLDER"
+  Transform {
+    Location {
+      X: 6829.90186
+      Y: 82.3851318
+      Z: 103.991287
+    }
+    Rotation {
+      Yaw: 89.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14242996041845712709
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:1"
+      AssetReference {
+        Id: 8883611779929351183
+      }
+    }
+    Overrides {
+      Name: "cs:2"
+      AssetReference {
+        Id: 10207102980281913416
+      }
+    }
+    Overrides {
+      Name: "cs:3"
+      AssetReference {
+        Id: 6133784542686929612
+      }
+    }
+    Overrides {
+      Name: "cs:4"
+      AssetReference {
+        Id: 11642181338662207462
+      }
+    }
+    Overrides {
+      Name: "cs:5"
+      AssetReference {
+        Id: 8768697395945414097
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 6613933708093249466
   Name: "CHALKBOARD POSITION"
   Transform {
     Location {
-      X: 6838
+      X: 6871
       Y: -652
       Z: 252
     }
@@ -6808,9 +6689,7 @@ Objects {
   ChildIds: 10016950772810490278
   ChildIds: 2589367566651918290
   ChildIds: 1437965392079168050
-  ChildIds: 16863572805792472133
   ChildIds: 17296541695341290463
-  ChildIds: 9927669976855937886
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6831,65 +6710,12 @@ Objects {
   }
 }
 Objects {
-  Id: 9927669976855937886
-  Name: "Coins Display"
-  Transform {
-    Location {
-      X: 710.287415
-      Y: 476.899
-      Z: -13
-    }
-    Rotation {
-      Yaw: 89.1846848
-    }
-    Scale {
-      X: 1.3
-      Y: 1.3
-      Z: 1.3
-    }
-  }
-  ParentId: 9896059117707087901
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Text {
-    Text: "0"
-    FontAsset {
-      Id: 977848448472169971
-    }
-    Color {
-      R: 1
-      G: 1
-      B: 1
-      A: 1
-    }
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 17296541695341290463
   Name: "Luampa Coins Title"
   Transform {
     Location {
-      X: 507.649963
-      Y: 442.322174
+      X: 485.761078
+      Y: 442.010742
       Z: -13
     }
     Rotation {
@@ -6902,6 +6728,7 @@ Objects {
     }
   }
   ParentId: 9896059117707087901
+  ChildIds: 9927669976855937886
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6937,24 +6764,23 @@ Objects {
   }
 }
 Objects {
-  Id: 16863572805792472133
-  Name: "XP Display"
+  Id: 9927669976855937886
+  Name: "Coins Display"
   Transform {
     Location {
-      X: 652.40686
-      Y: 468.0914
-      Z: 17
+      X: 3.67932844
+      Y: -129.262177
     }
     Rotation {
-      Yaw: 89.1847153
+      Yaw: -4.09811328e-05
     }
     Scale {
-      X: 1.3
-      Y: 1.3
-      Z: 1.3
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
-  ParentId: 9896059117707087901
+  ParentId: 17296541695341290463
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6994,8 +6820,8 @@ Objects {
   Name: "Battle XP Title"
   Transform {
     Location {
-      X: 507.649963
-      Y: 442.322174
+      X: 485.761078
+      Y: 442.010742
       Z: 17
     }
     Rotation {
@@ -7008,6 +6834,7 @@ Objects {
     }
   }
   ParentId: 9896059117707087901
+  ChildIds: 16863572805792472133
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -7043,12 +6870,64 @@ Objects {
   }
 }
 Objects {
+  Id: 16863572805792472133
+  Name: "XP Display"
+  Transform {
+    Location {
+      X: 2.58493876
+      Y: -90.8162155
+    }
+    Rotation {
+      Yaw: -4.78113216e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1437965392079168050
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "0"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 2589367566651918290
   Name: "Owned Status"
   Transform {
     Location {
-      X: 679.252747
-      Y: 479.11908
+      X: 635.642639
+      Y: 451.401154
       Z: 81
     }
     Rotation {
@@ -11984,6 +11863,7 @@ Objects {
   ChildIds: 9007976052208323057
   ChildIds: 4699498921552161450
   ChildIds: 10738265668739068418
+  ChildIds: 12937766603195736591
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -12021,6 +11901,59 @@ Objects {
           Value: "mc:euianchor:topcenter"
         }
       }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12937766603195736591
+  Name: "Upgrade Selected Text"
+  Transform {
+    Location {
+      X: -9544.43066
+      Y: 2474.25781
+      Z: -798.81665
+    }
+    Rotation {
+      Pitch: -0.263010085
+      Yaw: 177.808044
+      Roll: 0.278591
+    }
+    Scale {
+      X: 0.8
+      Y: 0.8
+      Z: 0.8
+    }
+  }
+  ParentId: 9258645056405633466
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "An upgrade is selected"
+    FontAsset {
+    }
+    Color {
+      G: 0.87
+      B: 0.749006569
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
     }
   }
   NetworkRelevanceDistance {
@@ -13407,6 +13340,12 @@ Objects {
       Name: "cs:UpgradesMenuOpenSFX"
       ObjectReference {
         SelfId: 3886638203935870196
+      }
+    }
+    Overrides {
+      Name: "cs:UpgradeSelectedText"
+      ObjectReference {
+        SelfId: 12937766603195736591
       }
     }
     Overrides {
@@ -20166,209 +20105,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1351234920270188164
-  Name: "Vehicle Name TEMP"
-  Transform {
-    Location {
-      X: 7292
-      Y: 183
-      Z: 166
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1.6
-      Z: 1.69999993
-    }
-  }
-  ParentId: 1696798925401821095
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Text {
-    Text: "Shopping Kart"
-    FontAsset {
-    }
-    Color {
-      G: 0.37169531
-      B: 0.422000021
-      A: 1
-    }
-    HorizontalAlignment {
-      Value: "mc:ecoretexthorizontalalign:left"
-    }
-    VerticalAlignment {
-      Value: "mc:ecoretextverticalalign:center"
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 6572843767714576044
-  Name: "Player Storage"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1696798925401821095
-  ChildIds: 2776348175731281553
-  ChildIds: 2433667427270308067
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 2433667427270308067
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6572843767714576044
-  ChildIds: 14836222321211522839
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 14836222321211522839
-  Name: "LuampaMenuPlayerStorageClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2433667427270308067
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 6552274138260686367
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 2776348175731281553
-  Name: "LuampaMenuPlayerStorageServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6572843767714576044
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:LuampaWorldKey"
-      NetReference {
-        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
-        Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
-        }
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 10777850534356422625
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 9086936746104183945
   Name: "Gameplay Settings"
   Transform {
@@ -20406,10 +20142,12 @@ Objects {
   }
 }
 Objects {
-  Id: 1947271498492052109
-  Name: "TempGivePlayerKartsServer"
+  Id: 905450796135989709
+  Name: "TESTING"
   Transform {
     Location {
+      X: 4154
+      Y: 50
     }
     Rotation {
     }
@@ -20420,6 +20158,47 @@ Objects {
     }
   }
   ParentId: 1696798925401821095
+  ChildIds: 6171099205028301999
+  ChildIds: 788520047915300620
+  ChildIds: 231847093048189429
+  ChildIds: 2255719547443819261
+  ChildIds: 1947271498492052109
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 1947271498492052109
+  Name: "TempGivePlayerKartsServer"
+  Transform {
+    Location {
+      X: -4154
+      Y: -50
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 905450796135989709
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -20446,6 +20225,8 @@ Objects {
   Name: "TempGivePlayerMoneyServer"
   Transform {
     Location {
+      X: -4154
+      Y: -50
     }
     Rotation {
     }
@@ -20455,7 +20236,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1696798925401821095
+  ParentId: 905450796135989709
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -20482,8 +20263,8 @@ Objects {
   Name: "tempspawntestserver"
   Transform {
     Location {
-      X: 6829.90039
-      Y: 82.3908691
+      X: 2675.90039
+      Y: 32.3908691
       Z: 177.999817
     }
     Rotation {
@@ -20497,7 +20278,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1696798925401821095
+  ParentId: 905450796135989709
   UnregisteredParameters {
     Overrides {
       Name: "cs:GEOBuggyBugLarge"
@@ -20538,8 +20319,8 @@ Objects {
   Name: "POSITION FOLDERS"
   Transform {
     Location {
-      X: 7109.51074
-      Y: 83.420517
+      X: 2955.51074
+      Y: 33.420517
       Z: 525.890808
     }
     Rotation {
@@ -20550,7 +20331,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1696798925401821095
+  ParentId: 905450796135989709
   ChildIds: 10313387175741346181
   ChildIds: 4735171363339789861
   ChildIds: 7790783926779858196
@@ -20920,8 +20701,8 @@ Objects {
   Name: "WORKING ON TEMPLATES"
   Transform {
     Location {
-      X: 6829.90186
-      Y: 82.3851318
+      X: 2675.90186
+      Y: 32.3851318
       Z: 103.991287
     }
     Rotation {
@@ -20932,7 +20713,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 1696798925401821095
+  ParentId: 905450796135989709
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
