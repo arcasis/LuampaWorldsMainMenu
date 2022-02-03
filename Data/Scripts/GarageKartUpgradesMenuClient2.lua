@@ -23,13 +23,21 @@ local OWNED_UPGRADES_GEO_FOLDER = script:GetCustomProperty("OwnedUpgradesGeoFold
 
 local PRICES_DATA_FOLDER = script:GetCustomProperty("KartUpgradePricesData"):WaitForObject()
 
+-- Vehicle display texts
 local VEHICLE_NAME_TEXT = script:GetCustomProperty("VehicleName"):WaitForObject()
 local VEHICLE_PRICE_TEXT = script:GetCustomProperty("VehiclePrice"):WaitForObject()
 local UPGRADE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 
+-- Vehicle display
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
+
+-- Chalkboard display
+local CHALKBOARD_TEXT_FOLDER = script:GetCustomProperty("ChalkboardTextFolder"):WaitForObject()
+local VEHICLE_NAME_CB = script:GetCustomProperty("VehicleNameCB"):WaitForObject()
+local UPGRADE_STATUS_CB = script:GetCustomProperty("UpgradeStatusCB"):WaitForObject()
+local OWNED_STATUS_CB = script:GetCustomProperty("OwnedStatusCB"):WaitForObject()
 
 -- Geo Tables
 local OWNED_GEO_TABLES = {}
@@ -71,9 +79,6 @@ end
 
 -- REMINDER: Player is only in here if vehicle is unlocked
 function ProcessUpgradeIndex()
-
-    -- hide current upgrade before displaying next one
-    --currentlyVisible.visibility = Visibility.FORCE_OFF
 
     -- vSpawnTempate:
     if Object.IsValid(currentlyVisible) then
@@ -139,6 +144,8 @@ function DisplayLockedUpgrade()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.FORCE_OFF
+
     currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLES[index][upgradeIndex], {parent = LOCKED_UPGRADES_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
 end
@@ -168,6 +175,11 @@ function DisplayUnlockedUpgrade()
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
+
+    VEHICLE_NAME_CB.text = name
+    UPGRADE_STATUS_CB.text = "Upgrade " .. tostring(upgradeIndex)
+    OWNED_STATUS_CB.text = "Unlocked"
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedUpgrade()
@@ -195,10 +207,14 @@ function DisplayOwnedUpgrade()
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
         UPGRADE_STATUS_TEXT.text = "Selected"
         UPGRADE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
+
+        OWNED_STATUS_CB.text = "Selected"
     else
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
         UPGRADE_STATUS_TEXT.text = "Owned"
         UPGRADE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+
+        OWNED_STATUS_CB.text = "Owned"
     end
     UPGRADE_STATUS_TEXT.visibility = Visibility.INHERIT
 
@@ -212,6 +228,10 @@ function DisplayOwnedUpgrade()
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
+
+    VEHICLE_NAME_CB.text = name
+    UPGRADE_STATUS_CB.text = "Upgrade " .. tostring(upgradeIndex)
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
 end
 
 

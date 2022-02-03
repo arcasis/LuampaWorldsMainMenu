@@ -2971,6 +2971,7 @@ Objects {
     }
   }
   ParentId: 14242996041845712709
+  ChildIds: 17672543079215479667
   ChildIds: 7942385358318566028
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3688,6 +3689,56 @@ Objects {
         }
       }
     }
+  }
+}
+Objects {
+  Id: 17672543079215479667
+  Name: "BattleBlackboardDisplayClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6613933708093249466
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:XPDisplay"
+      ObjectReference {
+        SelfId: 16863572805792472133
+      }
+    }
+    Overrides {
+      Name: "cs:CoinsDisplay"
+      ObjectReference {
+        SelfId: 9927669976855937886
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2668181967056641244
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -7878,6 +7929,7 @@ Objects {
   ParentId: 4345241191253639307
   ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
+  ChildIds: 6134199712724578751
   ChildIds: 2935919495293603488
   ChildIds: 11446438267394999886
   Collidable_v2 {
@@ -9934,6 +9986,812 @@ Objects {
   }
 }
 Objects {
+  Id: 6134199712724578751
+  Name: "Karts Menu Chalkboard"
+  Transform {
+    Location {
+      X: 6826
+      Y: -652
+      Z: 252
+    }
+    Rotation {
+      Yaw: -14.8151798
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10894713328343682309
+  ChildIds: 1924244702565057069
+  ChildIds: 8711745507482317922
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8711745507482317922
+  Name: "Battle Chalkboard Container"
+  Transform {
+    Location {
+      X: -2.30137134
+      Y: 8.70103931
+    }
+    Rotation {
+      Yaw: 104
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6134199712724578751
+  ChildIds: 10363042103925114403
+  ChildIds: 2612291936900729994
+  ChildIds: 10157753715825829538
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+      ContentType {
+        Value: "mc:ecanvascontenttype:dynamic"
+      }
+      Opacity: 1
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      RedrawTime: 30
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10157753715825829538
+  Name: "Chalkboard Text"
+  Transform {
+    Location {
+      X: -425.292603
+      Y: 368.987
+      Z: 52
+    }
+    Rotation {
+      Yaw: -90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8711745507482317922
+  ChildIds: 7155061139164177109
+  ChildIds: 11149497139376627631
+  ChildIds: 9103206788413708190
+  ChildIds: 2276519178171232413
+  ChildIds: 6134081009097640854
+  ChildIds: 15201780387706846002
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15201780387706846002
+  Name: "Luampa Coins Title"
+  Transform {
+    Location {
+      X: 557.753723
+      Y: 443.035
+      Z: -25
+    }
+    Rotation {
+      Yaw: 89.1847153
+    }
+    Scale {
+      X: 1.3
+      Y: 1.3
+      Z: 1.3
+    }
+  }
+  ParentId: 10157753715825829538
+  ChildIds: 7280391507737112239
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Luampa Coins:"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7280391507737112239
+  Name: "Coins Display"
+  Transform {
+    Location {
+      X: 3.67932844
+      Y: -129.262177
+    }
+    Rotation {
+      Yaw: -4.09811328e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15201780387706846002
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "0"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6134081009097640854
+  Name: "Battle XP Title"
+  Transform {
+    Location {
+      X: 557.753723
+      Y: 443.035
+      Z: 4
+    }
+    Rotation {
+      Yaw: 89.1847687
+    }
+    Scale {
+      X: 1.3
+      Y: 1.3
+      Z: 1.3
+    }
+  }
+  ParentId: 10157753715825829538
+  ChildIds: 9374613395357639535
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Battle XP:"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9374613395357639535
+  Name: "XP Display"
+  Transform {
+    Location {
+      X: 2.58493876
+      Y: -90.8162155
+    }
+    Rotation {
+      Yaw: -4.78113216e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6134081009097640854
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "0"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:left"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2276519178171232413
+  Name: "Owned Status"
+  Transform {
+    Location {
+      X: 717.634277
+      Y: 452.567657
+      Z: 81
+    }
+    Rotation {
+      Yaw: 89.1848068
+    }
+    Scale {
+      X: 1.5
+      Y: 1.5
+      Z: 1.5
+    }
+  }
+  ParentId: 10157753715825829538
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Selected"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:right"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9103206788413708190
+  Name: "Upgrade Status"
+  Transform {
+    Location {
+      X: 422.664124
+      Y: 448.370911
+      Z: 81
+    }
+    Rotation {
+      Yaw: 89.184845
+    }
+    Scale {
+      X: 1.5
+      Y: 1.5
+      Z: 1.5
+    }
+  }
+  ParentId: 10157753715825829538
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Default"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11149497139376627631
+  Name: "Vehicle Name"
+  Transform {
+    Location {
+      X: 553.763184
+      Y: 442.344727
+      Z: 138
+    }
+    Rotation {
+      Yaw: 89.1848602
+    }
+    Scale {
+      X: 2.5
+      Y: 2.5
+      Z: 2.5
+    }
+  }
+  ParentId: 10157753715825829538
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Text {
+    Text: "Vehicle Name"
+    FontAsset {
+      Id: 977848448472169971
+    }
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    HorizontalAlignment {
+      Value: "mc:ecoretexthorizontalalign:center"
+    }
+    VerticalAlignment {
+      Value: "mc:ecoretextverticalalign:center"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7155061139164177109
+  Name: "Line"
+  Transform {
+    Location {
+      X: 545.656738
+      Y: 6846.45459
+      Z: -252
+    }
+    Rotation {
+      Yaw: -89.1848602
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10157753715825829538
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 350
+    Height: 5
+    UIX: 185
+    UIY: -160
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 5619580598160374927
+      }
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2612291936900729994
+  Name: "Blackboard texture"
+  Transform {
+    Location {
+      X: 545.655762
+      Y: 6846.45459
+      Z: -252
+    }
+    Rotation {
+      Yaw: -89.1848602
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8711745507482317922
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 650
+    Height: 300
+    UIY: -90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 11946892999598968881
+      }
+      Color {
+        R: 0.016
+        G: 0.016
+        B: 0.016
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10363042103925114403
+  Name: "Blackboard"
+  Transform {
+    Location {
+      X: 545.655762
+      Y: 6846.45508
+      Z: -252
+    }
+    Rotation {
+      Yaw: -89.1848602
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8711745507482317922
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 650
+    Height: 300
+    UIY: -90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9827424890478033190
+      }
+      Color {
+        R: 0.013
+        G: 0.013
+        B: 0.013
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middleright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1924244702565057069
+  Name: "KartBlackboardDisplayClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6134199712724578751
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:XPDisplay"
+      ObjectReference {
+        SelfId: 9374613395357639535
+      }
+    }
+    Overrides {
+      Name: "cs:CoinsDisplay"
+      ObjectReference {
+        SelfId: 7280391507737112239
+      }
+    }
+    Overrides {
+      Name: "cs:XPDisplay:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:XPDisplay:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CoinsDisplay:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CoinsDisplay:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16929696605305626832
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 3508418160663392510
   Name: "Karts Menu Container"
   Transform {
@@ -11675,6 +12533,30 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:ChalkboardTextFolder"
+      ObjectReference {
+        SelfId: 10157753715825829538
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleNameCB"
+      ObjectReference {
+        SelfId: 11149497139376627631
+      }
+    }
+    Overrides {
+      Name: "cs:UpgradeStatusCB"
+      ObjectReference {
+        SelfId: 9103206788413708190
+      }
+    }
+    Overrides {
+      Name: "cs:OwnedStatusCB"
+      ObjectReference {
+        SelfId: 2276519178171232413
+      }
+    }
+    Overrides {
       Name: "cs:GarageKartsPanel:isrep"
       Bool: false
     }
@@ -11800,6 +12682,38 @@ Objects {
     }
     Overrides {
       Name: "cs:BackButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ChalkboardTextFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ChalkboardTextFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleNameCB:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleNameCB:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpgradeStatusCB:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpgradeStatusCB:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:OwnedStatusCB:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:OwnedStatusCB:ml"
       Bool: false
     }
   }
@@ -13339,6 +14253,30 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:ChalkboardTextFolder"
+      ObjectReference {
+        SelfId: 10157753715825829538
+      }
+    }
+    Overrides {
+      Name: "cs:VehicleNameCB"
+      ObjectReference {
+        SelfId: 11149497139376627631
+      }
+    }
+    Overrides {
+      Name: "cs:UpgradeStatusCB"
+      ObjectReference {
+        SelfId: 9103206788413708190
+      }
+    }
+    Overrides {
+      Name: "cs:OwnedStatusCB"
+      ObjectReference {
+        SelfId: 2276519178171232413
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -13496,6 +14434,38 @@ Objects {
     }
     Overrides {
       Name: "cs:UpgradesMenuOpenSFX:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ChalkboardTextFolder:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ChalkboardTextFolder:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleNameCB:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:VehicleNameCB:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpgradeStatusCB:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpgradeStatusCB:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:OwnedStatusCB:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:OwnedStatusCB:ml"
       Bool: false
     }
   }

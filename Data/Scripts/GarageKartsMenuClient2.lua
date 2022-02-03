@@ -28,14 +28,22 @@ local LOCKED_GEO_FOLDER = script:GetCustomProperty("LockedGeoFolder"):WaitForObj
 
 local PRICES_DATA_FOLDER = script:GetCustomProperty("KartPricesData"):WaitForObject()
 
+-- Vehicle display texts
 local VEHICLE_NAME_TEXT = script:GetCustomProperty("VehicleName"):WaitForObject()
 local VEHICLE_PRICE_TEXT = script:GetCustomProperty("VehiclePrice"):WaitForObject()
 local VEHICLE_STATUS_TEXT = script:GetCustomProperty("VehicleStatusText"):WaitForObject()
 local UPGRADE_SELECTED_TEXT = script:GetCustomProperty("UpgradeSelectedText"):WaitForObject()
 
+-- Vehicle display
 local LOCKED_IMAGE = script:GetCustomProperty("LockedImage"):WaitForObject()
 local GARAGE_LIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_FLOOR = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
+
+-- Chalkboard display
+local CHALKBOARD_TEXT_FOLDER = script:GetCustomProperty("ChalkboardTextFolder"):WaitForObject()
+local VEHICLE_NAME_CB = script:GetCustomProperty("VehicleNameCB"):WaitForObject()
+local UPGRADE_STATUS_CB = script:GetCustomProperty("UpgradeStatusCB"):WaitForObject()
+local OWNED_STATUS_CB = script:GetCustomProperty("OwnedStatusCB"):WaitForObject()
 
 -- Geo Tables
 local OWNED_GEO_TABLE = {}
@@ -154,6 +162,8 @@ function DisplayLockedVehicle()
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
     PURCHASE_BUTTON.visibility = Visibility.FORCE_OFF
 
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.FORCE_OFF
+
     currentlyVisible = World.SpawnAsset(LOCKED_GEO_TABLE[index], {parent = LOCKED_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
 end
@@ -186,6 +196,11 @@ function DisplayUnlockedVehicle()
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
+
+    VEHICLE_NAME_CB.text = name
+    UPGRADE_STATUS_CB.text = "Default"
+    OWNED_STATUS_CB.text = "Unlocked"
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
 end
 
 function DisplayOwnedVehicle()
@@ -226,12 +241,16 @@ function DisplayOwnedVehicle()
             SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
             VEHICLE_STATUS_TEXT.text = "Owned"
             VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+
+            OWNED_STATUS_CB.text = "Owned"
         else
             UPGRADE_SELECTED_TEXT.visibility = Visibility.FORCE_OFF
 
             SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
             VEHICLE_STATUS_TEXT.text = "Selected"
             VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.CYAN))
+
+            OWNED_STATUS_CB.text = "Selected"
         end
 
     else
@@ -240,6 +259,8 @@ function DisplayOwnedVehicle()
         SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
         VEHICLE_STATUS_TEXT.text = "Owned"
         VEHICLE_STATUS_TEXT:SetColor(Color.New(Color.WHITE))
+
+        OWNED_STATUS_CB.text = "Owned"
     end
     VEHICLE_STATUS_TEXT.visibility = Visibility.INHERIT
     
@@ -253,6 +274,10 @@ function DisplayOwnedVehicle()
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
+
+    VEHICLE_NAME_CB.text = name
+    UPGRADE_STATUS_CB.text = "Default"
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
 
     --print("index is: ", index)
     --print("OWNED_GEO_TABLE[index] is: ", OWNED_GEO_TABLE[index])     -- prints the asset reference
@@ -273,6 +298,7 @@ function OnBackButtonClicked()
 
     -- Garage Main Menu scripts open KARTS_MAIN_MENU_PANEL, then Tick opens/closes KARTS_PANEL
     KARTS_MAIN_MENU_PANEL.visibility = Visibility.FORCE_OFF
+    CHALKBOARD_TEXT_FOLDER.visibility = Visibility.FORCE_OFF
     GARAGE_MAIN_MENU_PANEL.visibility = Visibility.INHERIT
 end
 
@@ -313,6 +339,7 @@ function Tick(deltaTime)
 
         if kartsMainMenuOpen == false then
             KARTS_PANEL.visibility = Visibility.INHERIT
+            CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
             kartsMenuOpen = true
             ProcessIndex()
             KARTS_MENU_OPEN_SFX:Play()
@@ -323,6 +350,7 @@ function Tick(deltaTime)
         if kartsMainMenuOpen == true then
             index = 1
             KARTS_PANEL.visibility = Visibility.FORCE_OFF
+            CHALKBOARD_TEXT_FOLDER.visibility = Visibility.FORCE_OFF
             kartsMenuOpen = false
             --DisplayOwnedVehicle ()
             --currentlyVisible.visibility = Visibility.FORCE_OFF
