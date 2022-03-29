@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "This template takes a group of objects and gives them a floating animation. Just drag and drop the items into the \'FloatingObjects\' group and watch them float!\r\n\r\nPlese check out the README file for more detailed information and instructions!"
   }
-  SerializationVersion: 105
+  SerializationVersion: 110
 }

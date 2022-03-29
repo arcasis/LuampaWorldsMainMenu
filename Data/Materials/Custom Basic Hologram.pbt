@@ -2,7 +2,7 @@ Assets {
   Id: 2802158724293285260
   Name: "Custom Basic Hologram"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 110
   CustomMaterialAsset {
     BaseMaterialId: 5761793600187362465
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 8637190038194609621
   Name: "Custom Lights from Urban Vehicle Truck - Bumper Front 01 - Top 01"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 110
   CustomMaterialAsset {
     BaseMaterialId: 18388313966444956028
     ParameterOverrides {

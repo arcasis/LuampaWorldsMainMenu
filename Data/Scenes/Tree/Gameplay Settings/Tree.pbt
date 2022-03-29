@@ -256,6 +256,14 @@ Objects {
         }
       }
       RelevanceSettings {
+        key: "mesh"
+        value {
+          LowDistance: 4500
+          MediumDistance: 7000
+          HighDistance: 9000
+        }
+      }
+      RelevanceSettings {
         key: "vfx"
         value {
           LowDistance: 4500
@@ -292,6 +300,7 @@ Objects {
         VoiceChatEntryVerticalFlow {
           Value: "mc:ecoreverticalflow:toptobottom"
         }
+        IsVoiceChatWidgetVisible: true
       }
       PlayerInteractDistance: 500
       PlayerInteractAngleDeg: 50

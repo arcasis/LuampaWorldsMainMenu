@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "exUnity\'s Animated SolarSystem version 1\r\n\r\nAn animated solar system with some planets , a couple different tiny asteroids etc. Moon rotates around earth, all other planets rotate around their own axis. All planets rotate around sun."
   }
-  SerializationVersion: 105
+  SerializationVersion: 110
 }

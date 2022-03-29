@@ -2,7 +2,7 @@ Assets {
   Id: 14842598604038967619
   Name: "HoloUnlock"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 110
   CustomMaterialAsset {
     BaseMaterialId: 9804609765582245154
     ParameterOverrides {
