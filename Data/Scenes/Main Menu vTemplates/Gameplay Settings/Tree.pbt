@@ -304,9 +304,9 @@ Objects {
     Overrides {
       Name: "cs:LuampaWorldKey"
       NetReference {
-        Key: "07707398090c4a4cbc2d5fcf8f1f1cbe"
+        Key: "6afd5dcb06754c298a3a02c759a1fca7"
         Type {
-          Value: "mc:enetreferencetype:sharedpersistence"
+          Value: "mc:enetreferencetype:concurrentplayerpersistence"
         }
       }
     }
