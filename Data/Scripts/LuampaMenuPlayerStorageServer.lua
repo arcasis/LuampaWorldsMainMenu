@@ -3,14 +3,16 @@
 --[[INSTRUCTIONS: When Main Menu is ready to be published, remove broadcast and run storage
 retrieval by uncommenting Game.playerJoinedEvent]]
 
-local LUAMPA_WORLD_KEY = script:GetCustomProperty("LuampaWorldKey")
+local STORAGE_KEY = script:GetCustomProperty("LuampaWorldKey")
 
 
 -- !! WIP !! Currently triggered by playerJoinedEvent
 function OnPlayerJoined(player)
 
     -- Get player storage
-    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
+    -- nil local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
+
+    local playerDataTable = Storage.GetConcurrentPlayerData(STORAGE_KEY, player)
 
     --------------------- CONVERT ---------------------
     --------- !! UNCOMMENT WHEN WE GO LIVE !! --------
@@ -210,9 +212,9 @@ function OnPlayerJoined(player)
     ---------------------- END COINS ----------------------
 
 
-    -- ***** !! UNCOMMENT OUT RE-UPLOADING SHARED PLAYER DATA WHEN ABOVE ISN'T RESETTING XP FOR TESTING!! ***** --
     -- Load updated data back into shared data
-    --Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
+    -- nil Storage.SetSharedPlayerData(STORAGE_KEY, player, playerDataTable)
+    --Storage.SetConcurrentPlayerData(STORAGE_KEY, player, playerDataTable)     -- we don't need to upload to server here
 
     -- Set up PrivateNetworkedData for client-side, which is listening for changed event
     for key, value in pairs(playerDataTable) do
@@ -232,7 +234,8 @@ end
 
 
 function OnPlayerLeft(player)
-    local playerDataTable = Storage.GetSharedPlayerData(LUAMPA_WORLD_KEY, player)
+    -- nil local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
+    local playerDataTable = Storage.GetConcurrentPlayerData(STORAGE_KEY, player)
     
     -- NOTE: We do not re-upload serverUserData.cars, will need to update Luampa Race Worlds to use karts
 
@@ -285,7 +288,7 @@ function OnPlayerLeft(player)
     --playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!
     --playerDataTable.totalBattleXp = nil  -- !!!!TEMP: DELETE MEH !!!
 
-    Storage.SetSharedPlayerData(LUAMPA_WORLD_KEY, player, playerDataTable)
+    -- nil Storage.SetConcurrentPlayerData(STORAGE_KEY, player, playerDataTable)
 end
 
 
