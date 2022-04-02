@@ -17,6 +17,24 @@ Assets {
   }
 }
 Assets {
+  Id: 16288136505121487422
+  Name: "BG Gradient 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_019"
+  }
+}
+Assets {
+  Id: 16039133630551883937
+  Name: "BG Highlighted 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_019"
+  }
+}
+Assets {
   Id: 15065695696845701021
   Name: "Vehicle Car Ignition Short Engine Burst Start 01 SFX"
   PlatformAssetType: 7
@@ -140,6 +158,24 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Core_UI_AbstractPack_Background_005"
+  }
+}
+Assets {
+  Id: 3386087430817663663
+  Name: "Frame Highlighted 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameHighlighted_019"
+  }
+}
+Assets {
+  Id: 2683121858224047550
+  Name: "Cabin Italic"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "CabinItalic_ref"
   }
 }
 Assets {

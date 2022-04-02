@@ -2,21 +2,22 @@
 local MAIN_MENU_CONTAINER = script:GetCustomProperty("Container"):WaitForObject()
 local MAIN_MENU_PANEL = script:GetCustomProperty("MainMenuPanel"):WaitForObject()
 
-local CORE_WORLD_BUTTON = script:GetCustomProperty("CoreWorldButton"):WaitForObject()
 local GAME_MODE_BUTTON = script:GetCustomProperty("GameModeButton"):WaitForObject()
 local GARAGE_BUTTON = script:GetCustomProperty("GarageButton"):WaitForObject()
-local OPTIONS_BUTTON = script:GetCustomProperty("OptionsButton"):WaitForObject()
+local STATS_BUTTON = script:GetCustomProperty("StatsButton"):WaitForObject()
 
 local GAME_MODE_PANEL = script:GetCustomProperty("GameModePanel"):WaitForObject()
 local GARAGE_PANEL = script:GetCustomProperty("GaragePanel"):WaitForObject()
+local STATS_PANEL = script:GetCustomProperty("StatsPanel"):WaitForObject()
+
 
 -- override camera
 local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForObject()
 
 
-function OnCoreWorldButtonClicked()
+--[[function OnCoreWorldButtonClicked()
     Game.GetLocalPlayer():TransferToGame("e39f3e/core-world")
-end
+end]]
 
 function OnGameModeButtonClicked()
     HideMainMenuPanel()
@@ -32,6 +33,13 @@ function OnGarageButtonClicked()
     GARAGE_PANEL.visibility = Visibility.INHERIT
 end
 
+function OnStatsButtonClicked()
+    HideMainMenuPanel()
+
+    --Game.GetLocalPlayer():SetOverrideCamera(STATS_MENU_CAMERA, 0)  -- doesn't exist, placer in case we use one
+    STATS_PANEL.visibility = Visibility.INHERIT
+end
+
 
 function HideMainMenuPanel()
     MAIN_MENU_PANEL.visibility = Visibility.FORCE_OFF
@@ -45,6 +53,7 @@ UI.SetCanCursorInteractWithUI(true)
 MAIN_MENU_PANEL.visibility = Visibility.INHERIT
 
 
-CORE_WORLD_BUTTON.clickedEvent:Connect(OnCoreWorldButtonClicked)
+STATS_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
 GAME_MODE_BUTTON.clickedEvent:Connect(OnGameModeButtonClicked)
 GARAGE_BUTTON.clickedEvent:Connect(OnGarageButtonClicked)
+STATS_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)

@@ -5,14 +5,19 @@ retrieval by uncommenting Game.playerJoinedEvent]]
 
 local STORAGE_KEY = script:GetCustomProperty("LuampaWorldKey")
 
-
+print("LuampaMenuPlayerStorageServer is online")
 -- !! WIP !! Currently triggered by playerJoinedEvent
 function OnPlayerJoined(player)
+
+    print("LuampaMenuPlayerStorageServer runs OnPlayerJoined")
 
     -- Get player storage
     -- nil local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
 
-    local playerDataTable = Storage.GetConcurrentPlayerData(STORAGE_KEY, player)
+    local playerId = player.id
+    print("playerId is: ", player.name, player.id)
+    local playerDataTable = Storage.GetConcurrentSharedPlayerData(STORAGE_KEY, playerId)
+    print("playerDataTable is: ", playerDataTable)
 
     --------------------- CONVERT ---------------------
     --------- !! UNCOMMENT WHEN WE GO LIVE !! --------
@@ -69,15 +74,20 @@ function OnPlayerJoined(player)
     -- !! WIP !! We will be taking away their karts, giving them back coins
 
     -- Check if player has a selected kart, if they do mark them for kart tester helmet
-    local selectedVehicleId = playerDataTable.selectedVehicleId
+    --local selectedVehicleId = playerDataTable.selectedVehicleId
     local isTester = playerDataTable.isTester
 
+     -- wipe old Battle XP system if any testers have it in their storage
+    --[[nil: this won't be in the new concurrent storage, if I want to do this, I'll need to also access old storage
     if selectedVehicleId then
+
+        print("Player has a selectedVehicleId")
 
         if not isTester then
             player.serverUserData.isTester = {}
-            player.serverUserData.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race
         end
+        player.serverUserData.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race alpha
+        
 
         ----- !! UNCOMMENT WHEN WE GO LIVE WITH CONVERT !! -----
         --[[
@@ -101,29 +111,42 @@ function OnPlayerJoined(player)
             karts[5] = {}
             playerDataTable.selectedKart = karts
         end]]
-    end
+    --end
    
-    -- wipe first XP system if any testers have it in storage
+    -- wipe old Battle XP system if any testers have it in their storage
+    --[[nil: this won't be in the new concurrent storage, if I want to do this, I'll need to also access old storage
     if playerDataTable.totalXp then
         playerDataTable.totalXp = nil
         if not isTester then
             playerDataTable.isTester = {}
-            playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
+            playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle alpha
         end
-    end
+    end]]
 
+    -- Give Race testers data
     ---- !! COMMENT THIS OUT AFTER WE GO LIVE !! -----
-    if playerDataTable.totalBattleXp then
+    if playerDataTable.totalRaceXp then
+        print("Player had totalRaceXp")
         if not isTester then
             playerDataTable.isTester = {}
-            playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
         end
+        playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
+    end
+
+    -- Give Battle testers data
+    ---- !! COMMENT THIS OUT AFTER WE GO LIVE !! -----
+    if playerDataTable.totalBattleXp then
+        print("Player had totalBattleXp")
+        if not isTester then
+            playerDataTable.isTester = {}
+        end
+        playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
     end
     --------------------------------------------------
     ------------------- END CONVERT -------------------
 
     ----- BEGIN TEST PRINTS - DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
-    local stTable = playerDataTable.selectedTruck
+    --[[local stTable = playerDataTable.selectedTruck
     for index,value in pairs(stTable) do
         if value then
             --print("storage download says saved truck is index: ", index)
@@ -135,17 +158,20 @@ function OnPlayerJoined(player)
                 end
             end
         end
-    end
+    end]]
     ------------------------ END TEST PRINTS ------------------------
 
-    -- ***** DELETE AFTER TESTING ***** --
+    -------------------- DELETE AFTER TESTING ----------------------
+    --Uncomment to clear data, comment to test saved data
+    -- *****  ***** --
     playerDataTable.totalRaceXp = nil
     playerDataTable.totalBattleXp = nil
     playerDataTable.karts = nil
     playerDataTable.trucks = nil
     playerDataTable.selectedKart = nil
     playerDataTable.selectedTruck = nil
-    -- ***** END DELETE AFTER TESTING ***** --
+    ------------------ END DELETE AFTER TESTING --------------------
+
 
     ----------------------- RACE -----------------------
     if not playerDataTable.totalRaceXp then
@@ -161,6 +187,8 @@ function OnPlayerJoined(player)
         playerDataTable.karts = karts
     end
     player.serverUserData.karts = playerDataTable.karts
+
+    print("LuampaMenuPlayerStorageServer says player.serverUserData.karts is: ", player.serverUserData.karts, time())
 
     -- Get saved kart, or set default
     if not playerDataTable.selectedKart then
@@ -214,7 +242,7 @@ function OnPlayerJoined(player)
 
     -- Load updated data back into shared data
     -- nil Storage.SetSharedPlayerData(STORAGE_KEY, player, playerDataTable)
-    --Storage.SetConcurrentPlayerData(STORAGE_KEY, player, playerDataTable)     -- we don't need to upload to server here
+    --Storage.SetConcurrentSharedPlayerData(STORAGE_KEY, player, playerDataTable)     -- we don't need to upload to server here
 
     -- Set up PrivateNetworkedData for client-side, which is listening for changed event
     for key, value in pairs(playerDataTable) do
@@ -235,7 +263,8 @@ end
 
 function OnPlayerLeft(player)
     -- nil local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
-    local playerDataTable = Storage.GetConcurrentPlayerData(STORAGE_KEY, player)
+    local playerId = player.id
+    local playerDataTable = Storage.GetConcurrentSharedPlayerData(STORAGE_KEY, playerId)
     
     -- NOTE: We do not re-upload serverUserData.cars, will need to update Luampa Race Worlds to use karts
 
@@ -288,7 +317,8 @@ function OnPlayerLeft(player)
     --playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!
     --playerDataTable.totalBattleXp = nil  -- !!!!TEMP: DELETE MEH !!!
 
-    -- nil Storage.SetConcurrentPlayerData(STORAGE_KEY, player, playerDataTable)
+    local playerId = player.id
+    Storage.SetConcurrentSharedPlayerData(STORAGE_KEY, playerId, playerDataTable)
 end
 
 

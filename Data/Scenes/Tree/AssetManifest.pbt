@@ -12,6 +12,19 @@ Assets {
   }
 }
 Assets {
+  Id: 12184999428164037228
+  Name: "LuampaWorldsKey"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "2c9e3a3af7df468c95d83e21d52cff1f"
+      Type {
+        Value: "mc:enetreferencetype:concurrentplayerpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 773154990096783009
   Name: "LuampaWorldsKey"
   PlatformAssetType: 23

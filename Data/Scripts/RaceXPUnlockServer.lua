@@ -5,6 +5,7 @@ function UnlockVehicles(player)
     local karts = player.serverUserData.karts
     local totalRaceXp = player.serverUserData.totalRaceXp     -- !! WIP !! totalRaceXp is not a thing yet outside of Main Menu: Race needs updated with XP and ranks.
 
+    print("UnlockVehicles runs in RaceXPUnlockServer, serverUserData.karts/time is:", player.serverUserData.karts, time(), player.name)
     --print("RaceXPUnlockServer says player's .totalRaceXp is: ", totalRaceXp)
 
     -- kart #1

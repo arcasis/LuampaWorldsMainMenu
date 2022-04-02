@@ -304,7 +304,7 @@ Objects {
     Overrides {
       Name: "cs:LuampaWorldKey"
       NetReference {
-        Key: "6afd5dcb06754c298a3a02c759a1fca7"
+        Key: "2c9e3a3af7df468c95d83e21d52cff1f"
         Type {
           Value: "mc:enetreferencetype:concurrentplayerpersistence"
         }
@@ -639,6 +639,8 @@ Objects {
       PlayerStorageMode {
         Value: "mc:eplayerstoragemode:none"
       }
+      EnableConcurrentPlayerStorage: true
+      EnableConcurrentCreatorStorage: true
       EnableNetworkedEventsQueuing: true
     }
   }

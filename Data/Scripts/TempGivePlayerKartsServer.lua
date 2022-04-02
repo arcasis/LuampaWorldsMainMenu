@@ -3,7 +3,7 @@
 
 function OnPlayerJoined(player)
 
-    Task.Wait(5) -- wait for storage to set up serverUserData before we override it
+    Task.Wait(15) -- wait for storage to set up serverUserData before we override it
 
     -- for playtest sessions, sets players up with enough xp and coins to unlock and purchase first three vehicles, first two upgrades of vehicle #3
     OneTimeTestSystem(player)
@@ -156,4 +156,5 @@ function ProgressiveTestSystem(player)
     --print("GivePlayerKarts ran, player's totalRaceXp is: ", player.serverUserData.totalRaceXp)
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+print("TempGivePlayerKartsServer currently turned OFF")
+--Game.playerJoinedEvent:Connect(OnPlayerJoined)
