@@ -24169,7 +24169,6 @@ Objects {
   ParentId: 1696798925401821095
   ChildIds: 6171099205028301999
   ChildIds: 788520047915300620
-  ChildIds: 231847093048189429
   ChildIds: 2255719547443819261
   ChildIds: 1947271498492052109
   ChildIds: 7779237541336212255
@@ -26088,62 +26087,6 @@ Objects {
   Script {
     ScriptAsset {
       Id: 13610660147926064887
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 231847093048189429
-  Name: "tempspawntestserver"
-  Transform {
-    Location {
-      X: 2675.90039
-      Y: 32.3908691
-      Z: 177.999817
-    }
-    Rotation {
-      Pitch: 0.00513630174
-      Yaw: 88.904007
-      Roll: 0.268322378
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 905450796135989709
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:GEOBuggyBugLarge"
-      AssetReference {
-        Id: 8883611779929351183
-      }
-    }
-    Overrides {
-      Name: "cs:ParentFolder"
-      ObjectReference {
-        SelfId: 11104742030297938276
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15190707591586946062
     }
   }
   NetworkRelevanceDistance {
