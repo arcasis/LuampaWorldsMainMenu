@@ -61,24 +61,6 @@ function OnPlayerJoined(player)
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
 
 
-    ------------------ BEGIN TEST PRINTS --------------------------
-    ----- DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
-    --[[local stTable = playerDataTable.selectedTruck
-    for index,value in pairs(stTable) do
-        if value then
-            --print("storage download says saved truck is index: ", index)
-            for subIndex, subValue in pairs(value) do
-                if subValue then
-                    --print("storage download says saved upgrade is index/subindex", index, subIndex)
-                else
-                    --print("storage download says default truck was saved")
-                end
-            end
-        end
-    end]]
-    ------------------------ END TEST PRINTS ------------------------
-
-
     -------------------- DELETE AFTER TESTING ----------------------
     -- Uncomment to clear data, comment to test saved data
     --[[playerDataTable.totalRaceXp = nil
@@ -144,6 +126,24 @@ function OnPlayerJoined(player)
     --local selectedTruckUserData = player.serverUserData.selectedTruck
     --print("selectedTruck trucks[1] is: ", selectedTruckUserData[1])
     --------------------- END BATTLE ---------------------
+
+
+     ------------------ BEGIN TEST PRINTS --------------------------
+    ----- DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
+    local stTable = playerDataTable.selectedTruck
+    for index,value in pairs(stTable) do
+        if value then
+            print("storage download says saved truck for player is index: ", player.name, index)
+            for subIndex, subValue in pairs(value) do
+                if subValue then
+                    print("storage download says saved upgrade for player is index/subindex", player.name, index, subIndex)
+                else
+                    print("storage download says default truck was saved for player", player.name)
+                end
+            end
+        end
+    end
+    ------------------------ END TEST PRINTS ------------------------
 
     
     ------------------------ COINS ------------------------

@@ -3012,6 +3012,7 @@ Objects {
   ParentId: 6613933708093249466
   ChildIds: 13615452287816286204
   ChildIds: 10217737152736166566
+  ChildIds: 1737799582481348599
   ChildIds: 9896059117707087901
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3075,7 +3076,6 @@ Objects {
     }
   }
   ParentId: 7942385358318566028
-  ChildIds: 10676143114467025645
   ChildIds: 6402409118477208175
   ChildIds: 10016950772810490278
   ChildIds: 2589367566651918290
@@ -3105,9 +3105,9 @@ Objects {
   Name: "Luampa Coins Title"
   Transform {
     Location {
-      X: 557.753723
-      Y: 443.035
-      Z: -25
+      X: 577.659851
+      Y: 447.000031
+      Z: -9.56216431
     }
     Rotation {
       Yaw: 89.1847153
@@ -3211,9 +3211,9 @@ Objects {
   Name: "Battle XP Title"
   Transform {
     Location {
-      X: 557.753723
-      Y: 443.035
-      Z: 4
+      X: 623.989
+      Y: 450.65921
+      Z: 25.4107971
     }
     Rotation {
       Yaw: 89.1847687
@@ -3265,11 +3265,11 @@ Objects {
   Name: "XP Display"
   Transform {
     Location {
-      X: 2.58493876
-      Y: -90.8162155
+      X: 2.6456511
+      Y: -92.9502563
     }
     Rotation {
-      Yaw: -4.78113216e-05
+      Yaw: -9.15527344e-05
     }
     Scale {
       X: 1
@@ -3370,8 +3370,8 @@ Objects {
   Name: "Upgrade Status"
   Transform {
     Location {
-      X: 422.664124
-      Y: 448.370911
+      X: 527.78479
+      Y: 449.866547
       Z: 81
     }
     Rotation {
@@ -3423,8 +3423,8 @@ Objects {
   Name: "Vehicle Name"
   Transform {
     Location {
-      X: 553.763184
-      Y: 442.344727
+      X: 605.367798
+      Y: 443.078949
       Z: 138
     }
     Rotation {
@@ -3472,8 +3472,8 @@ Objects {
   }
 }
 Objects {
-  Id: 10676143114467025645
-  Name: "Line"
+  Id: 1737799582481348599
+  Name: "Frame"
   Transform {
     Location {
       X: 545.656738
@@ -3489,7 +3489,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9896059117707087901
+  ParentId: 7942385358318566028
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3503,10 +3503,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 350
-    Height: 5
-    UIX: 185
-    UIY: -160
+    Width: 550
+    Height: 300
+    UIY: -90
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3514,12 +3513,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 5619580598160374927
+        Id: 8091523741223053062
       }
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.178
+        G: 0.0817732
+        B: 0.0176219959
         A: 1
       }
       TeamSettings {
@@ -3534,12 +3533,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:middleright"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:middleright"
         }
       }
     }
@@ -3577,7 +3576,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 650
+    Width: 550
     Height: 300
     UIY: -90
     RenderTransformPivot {
@@ -3650,7 +3649,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 650
+    Width: 550
     Height: 300
     UIY: -90
     RenderTransformPivot {
@@ -10045,6 +10044,7 @@ Objects {
   ParentId: 6134199712724578751
   ChildIds: 10363042103925114403
   ChildIds: 2612291936900729994
+  ChildIds: 15463617510989578015
   ChildIds: 10157753715825829538
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10108,7 +10108,6 @@ Objects {
     }
   }
   ParentId: 8711745507482317922
-  ChildIds: 7155061139164177109
   ChildIds: 11149497139376627631
   ChildIds: 9103206788413708190
   ChildIds: 2276519178171232413
@@ -10138,9 +10137,9 @@ Objects {
   Name: "Luampa Coins Title"
   Transform {
     Location {
-      X: 557.753723
-      Y: 443.035
-      Z: -25
+      X: 579.68988
+      Y: 447.029
+      Z: -9.56216431
     }
     Rotation {
       Yaw: 89.1847153
@@ -10241,12 +10240,12 @@ Objects {
 }
 Objects {
   Id: 6134081009097640854
-  Name: "Battle XP Title"
+  Name: "Race XP Title"
   Transform {
     Location {
-      X: 557.753723
-      Y: 443.035
-      Z: 4
+      X: 636.035828
+      Y: 450.9133
+      Z: 17.2205811
     }
     Rotation {
       Yaw: 89.1847687
@@ -10272,7 +10271,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Text {
-    Text: "Battle XP:"
+    Text: "Race XP:"
     FontAsset {
       Id: 977848448472169971
     }
@@ -10298,11 +10297,11 @@ Objects {
   Name: "XP Display"
   Transform {
     Location {
-      X: 2.58493876
-      Y: -90.8162155
+      X: 2.42398787
+      Y: -85.1611862
     }
     Rotation {
-      Yaw: -4.78113216e-05
+      Yaw: -6.10351562e-05
     }
     Scale {
       X: 1
@@ -10403,8 +10402,8 @@ Objects {
   Name: "Upgrade Status"
   Transform {
     Location {
-      X: 422.664124
-      Y: 448.370911
+      X: 527.78479
+      Y: 449.866547
       Z: 81
     }
     Rotation {
@@ -10456,8 +10455,8 @@ Objects {
   Name: "Vehicle Name"
   Transform {
     Location {
-      X: 553.763184
-      Y: 442.344727
+      X: 605.367798
+      Y: 443.078949
       Z: 138
     }
     Rotation {
@@ -10505,11 +10504,11 @@ Objects {
   }
 }
 Objects {
-  Id: 7155061139164177109
-  Name: "Line"
+  Id: 15463617510989578015
+  Name: "Frame"
   Transform {
     Location {
-      X: 545.656738
+      X: 545.657715
       Y: 6846.45459
       Z: -252
     }
@@ -10522,7 +10521,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10157753715825829538
+  ParentId: 8711745507482317922
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -10536,10 +10535,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 350
-    Height: 5
-    UIX: 185
-    UIY: -160
+    Width: 550
+    Height: 300
+    UIY: -90
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -10547,12 +10545,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 5619580598160374927
+        Id: 8091523741223053062
       }
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.178
+        G: 0.0817732
+        B: 0.0176219959
         A: 1
       }
       TeamSettings {
@@ -10567,12 +10565,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:middleright"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:middlecenter"
+          Value: "mc:euianchor:middleright"
         }
       }
     }
@@ -10610,7 +10608,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 650
+    Width: 550
     Height: 300
     UIY: -90
     RenderTransformPivot {
@@ -10683,7 +10681,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 650
+    Width: 550
     Height: 300
     UIY: -90
     RenderTransformPivot {

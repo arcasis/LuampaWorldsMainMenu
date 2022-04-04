@@ -125,6 +125,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8091523741223053062
+  Name: "Frame Outlined Thick 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameFlat_020"
+  }
+}
+Assets {
   Id: 6363320609941978136
   Name: "Play"
   PlatformAssetType: 28
