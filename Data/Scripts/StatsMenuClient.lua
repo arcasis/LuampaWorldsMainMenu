@@ -59,38 +59,38 @@ if not bestLapNeon then
 end
 FASTEST_LAP_NEON.text = tostring(bestLapNeon)
 
-local totalRaces = LOCAL_PLAYER.clientUserData.totalRaces
+local totalRaces = LOCAL_PLAYER.clientUserData.statsRaces
 if not totalRaces then
     totalRaces = 0
 end
 TOTAL_RACES.text = tostring(totalRaces)
 
-local totalLaps = LOCAL_PLAYER.clientUserData.totalLaps
+local totalLaps = LOCAL_PLAYER.clientUserData.statsLaps
 if not totalLaps then
     totalLaps = 0
 end
 TOTAL_LAPS.text = tostring(totalLaps)
 
 local totalBoostsUsed = 0
-local speedUsed = LOCAL_PLAYER.clientUserData.speedUsed
-local gravityUsed = LOCAL_PLAYER.clientUserData.gravityUsed
-local gripUsed = LOCAL_PLAYER.clientUserData.gripUsed
+local speedUsed = LOCAL_PLAYER.clientUserData.statsSpeedUsed
+local gravityUsed = LOCAL_PLAYER.clientUserData.statsGravityUsed
+local gripUsed = LOCAL_PLAYER.clientUserData.statsGripUsed
 if speedUsed then
     totalBoostsUsed = speedUsed + gravityUsed + gripUsed
 end
 TOTAL_BOOSTS_USED.text = tostring(totalBoostsUsed)
 
 local totalTrapsUsed = 0
-local oilDropped = LOCAL_PLAYER.clientUserData.oilDropped
-local slowDropped = LOCAL_PLAYER.clientUserData.slowDropped
+local oilDropped = LOCAL_PLAYER.clientUserData.statsOilDropped
+local slowDropped = LOCAL_PLAYER.clientUserData.statsSlowDropped
 if oilDropped then
     totalTrapsUsed = oilDropped + slowDropped
 end
 TOTAL_TRAPS_USED_RACE.text = tostring(totalTrapsUsed)
 
 local totalTrapped = 0
-local oilTrapped = LOCAL_PLAYER.clientUserData.oilTrapped
-local slowTrapped = LOCAL_PLAYER.clientUserData.slowTrapped
+local oilTrapped = LOCAL_PLAYER.clientUserData.statsOilTrapped
+local slowTrapped = LOCAL_PLAYER.clientUserData.statsSlowTrapped
 if oilTrapped then
     totalTrapped = oilTrapped + slowTrapped
 end
