@@ -7,24 +7,20 @@ local STORAGE_KEY = script:GetCustomProperty("LuampaWorldKey")
 
 function OnPlayerJoined(player)
 
-    print("LuampaMenuPlayerStorageServer runs OnPlayerJoined")
-
     -- Get player storage
     local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
-
 
     --------------------- CATCH ALPHA TESTERS ---------------------
     local isTester = playerDataTable.isTester
 
     -- Check if player helped test Luampa Worlds Race alpha
     if playerDataTable.cars then
-
-        if not isTester then
-            player.serverUserData.isTester = {}
-        end
-        player.serverUserData.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race alpha
-
         playerDataTable.cars = nil
+        if not isTester then
+            playerDataTable.isTester = {}
+        end
+        playerDataTable.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race alpha
+        player.serverUserData.isTester = playerDataTable.isTester
     end
 
     -- Check if player helped test Luampa Worlds Race Battle mode
@@ -33,7 +29,8 @@ function OnPlayerJoined(player)
         if not isTester then
             playerDataTable.isTester = {}
         end
-        playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle alpha
+        playerDataTable.isTester[2] = 1    -- index 2 = 1 means player helped test Luampa Battle alpha
+        player.serverUserData.isTester = playerDataTable.isTester
     end
     ----------------- END CATCH ALPHA TESTERS ---------------------
 
@@ -47,7 +44,8 @@ function OnPlayerJoined(player)
         if not isTester then
             playerDataTable.isTester = {}
         end
-        playerDataTable.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race
+        playerDataTable.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race alpha
+        player.serverUserData.isTester = playerDataTable.isTester
     end
 
     -- Check if player helped playtest MAJOR UPDATE Battle
@@ -57,8 +55,17 @@ function OnPlayerJoined(player)
             playerDataTable.isTester = {}
         end
         playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
+        player.serverUserData.isTester = playerDataTable.isTester
     end
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
+
+
+    -- Give players the helmet if they're a tester and don't have it yet
+    if player.serverUserData.isTester and not playerDataTable.helmets then
+        local helmets = {}
+        helmets[1] = 1
+        player.serverUserData.helmets = helmets
+    end
 
 
     -------------------- DELETE AFTER TESTING ----------------------
@@ -130,7 +137,7 @@ function OnPlayerJoined(player)
 
      ------------------ BEGIN TEST PRINTS --------------------------
     ----- DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
-    local stTable = playerDataTable.selectedTruck
+    --[[local stTable = playerDataTable.selectedTruck
     for index,value in pairs(stTable) do
         if value then
             print("storage download says saved truck for player is index: ", player.name, index)
@@ -142,7 +149,7 @@ function OnPlayerJoined(player)
                 end
             end
         end
-    end
+    end]]
     ------------------------ END TEST PRINTS ------------------------
 
     
@@ -158,8 +165,8 @@ function OnPlayerJoined(player)
     ---------------------- END COINS ----------------------
 
 
-    -- Load updated data back into shared data
-    -- Storage.SetSharedPlayerData(STORAGE_KEY, player, playerDataTable)     -- there is no reason to do this?
+    -- Load updated data back into shared data (new isTester status and nil'd deprecated data)
+    Storage.SetSharedPlayerData(STORAGE_KEY, player, playerDataTable)
 
     -- Set up PrivateNetworkedData for client-side, which is listening for changed event
     for key, value in pairs(playerDataTable) do

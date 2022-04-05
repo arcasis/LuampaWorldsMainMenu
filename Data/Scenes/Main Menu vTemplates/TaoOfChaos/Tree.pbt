@@ -1,6 +1,53 @@
 Name: "TaoOfChaos"
 RootId: 1696798925401821095
 Objects {
+  Id: 14407121827428704047
+  Name: "Message Banner"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2215929790428371099
+      value {
+        Overrides {
+          Name: "Size"
+          Int: 30
+        }
+        Overrides {
+          Name: "Label"
+          String: ""
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11168525500713847895
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Message Banner"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14907129132626088283
+    }
+  }
+}
+Objects {
   Id: 9188275580542756088
   Name: "Luampa Worlds Main Menu"
   Transform {

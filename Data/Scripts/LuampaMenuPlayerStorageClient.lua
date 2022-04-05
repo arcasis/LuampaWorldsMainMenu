@@ -8,6 +8,10 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 function UpdateFromNetworkedData(key)
 
     local data = LOCAL_PLAYER:GetPrivateNetworkedData(key)
+
+    if key == "helmets" then
+        LOCAL_PLAYER.clientUserData.helmets = data
+    end
     
     if key == "karts" then
         LOCAL_PLAYER.clientUserData.karts = data
@@ -53,4 +57,11 @@ LOCAL_PLAYER.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChan
 -- In case the client script loaded after the networked data has replicated
 for i,key in ipairs(LOCAL_PLAYER:GetPrivateNetworkedDataKeys()) do 
     UpdateFromNetworkedData(key)
+end
+
+Task.Wait(15)
+
+local helmet = LOCAL_PLAYER.clientUserData.helmets
+if helmet then
+    Events.Broadcast("BannerMessage", "Thanks for helping test Luampa! You've been gifted a helmet for Race.", 10)
 end
