@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12270127298805872935
+  Name: "Frame Outlined 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid4px_020"
+  }
+}
+Assets {
   Id: 11996370362624858284
   Name: "Abstract Frame 10"
   PlatformAssetType: 9

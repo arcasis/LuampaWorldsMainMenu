@@ -3,12 +3,27 @@
 
 local STORAGE_KEY = script:GetCustomProperty("LuampaWorldKey")
 
+local messageTime = {}
 
 
 function OnPlayerJoined(player)
 
     -- Get player storage
     local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
+
+
+    -------------------- DELETE AFTER TESTING ----------------------
+    -- Uncomment to clear data, comment to test saved data
+    --playerDataTable.totalRaceXp = nil
+    playerDataTable.totalRaceXp = 100
+    playerDataTable.totalBattleXp = nil
+    playerDataTable.karts = nil
+    playerDataTable.trucks = nil
+    playerDataTable.selectedKart = nil
+    playerDataTable.selectedTruck = nil
+    playerDataTable.helmets = nil
+    ------------------ END DELETE AFTER TESTING --------------------
+
 
     --------------------- CATCH ALPHA TESTERS ---------------------
     local isTester = playerDataTable.isTester
@@ -40,7 +55,7 @@ function OnPlayerJoined(player)
 
     -- Check if player helped playtest MAJOR UPDATE Race
     if playerDataTable.totalRaceXp then
-        print("Player had totalRaceXp")
+        --print("Player had totalRaceXp")
         if not isTester then
             playerDataTable.isTester = {}
         end
@@ -50,7 +65,7 @@ function OnPlayerJoined(player)
 
     -- Check if player helped playtest MAJOR UPDATE Battle
     if playerDataTable.totalBattleXp then
-        print("Player had totalBattleXp")
+        --print("Player had totalBattleXp")
         if not isTester then
             playerDataTable.isTester = {}
         end
@@ -60,23 +75,18 @@ function OnPlayerJoined(player)
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
 
 
+    ----------------------- GIVE HELMET -----------------------
     -- Give players the helmet if they're a tester and don't have it yet
     if player.serverUserData.isTester and not playerDataTable.helmets then
+
+        messageTime[player] = time() + 5
+
         local helmets = {}
         helmets[1] = 1
+        playerDataTable.helmets = helmets
         player.serverUserData.helmets = helmets
     end
-
-
-    -------------------- DELETE AFTER TESTING ----------------------
-    -- Uncomment to clear data, comment to test saved data
-    --[[playerDataTable.totalRaceXp = nil
-    playerDataTable.totalBattleXp = nil
-    playerDataTable.karts = nil
-    playerDataTable.trucks = nil
-    playerDataTable.selectedKart = nil
-    playerDataTable.selectedTruck = nil]]
-    ------------------ END DELETE AFTER TESTING --------------------
+    --------------------- END GIVE HELMET ---------------------
 
 
     ----------------------- RACE -----------------------
@@ -199,6 +209,12 @@ function OnPlayerLeft(player)
 
     -- add atvs here once they are ready
 
+    -- update helmet if player got a new helmet or set a new helmet status
+    local helmets = player.serverUserData.helmets
+    if helmets then
+        playerDataTable.helmets = helmets
+    end
+
 
     ------------ !! DELETE WHEN DONE TESTING !! ------------
     -- set tester's trucks table to default, to remove any they've purchased but prevent Battle from setting their selected to default (nil trucks table will set selected to default)
@@ -244,10 +260,23 @@ function OnPlayerLeft(player)
     playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!
     playerDataTable.totalBattleXp = nil  -- !!!!TEMP: DELETE MEH !!!
     playerDataTable.coins = nil
+    playerDataTable.helmets = nil
     
     ---------------------- !! END FOR TESTING !! -----------------------
 
     Storage.SetSharedPlayerData(STORAGE_KEY, player, playerDataTable)
+end
+
+
+function Tick(deltaTime)
+    local currentTime = time()
+
+    for player,t in pairs(messageTime) do
+        if t < currentTime then
+            messageTime[player] = nil
+            Events.BroadcastToPlayer(player, "BannerMessage", "Thanks for helping test Luampa! You've been gifted a helmet for Race.", 10)
+        end
+    end
 end
 
 

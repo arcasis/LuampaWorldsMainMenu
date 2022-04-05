@@ -58,10 +58,3 @@ LOCAL_PLAYER.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChan
 for i,key in ipairs(LOCAL_PLAYER:GetPrivateNetworkedDataKeys()) do 
     UpdateFromNetworkedData(key)
 end
-
-Task.Wait(15)
-
-local helmet = LOCAL_PLAYER.clientUserData.helmets
-if helmet then
-    Events.Broadcast("BannerMessage", "Thanks for helping test Luampa! You've been gifted a helmet for Race.", 10)
-end
