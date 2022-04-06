@@ -1,6 +1,80 @@
 Name: "TaoOfChaos"
 RootId: 1696798925401821095
 Objects {
+  Id: 3221954004587662100
+  Name: "Luampa Core Reward Points RP"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1696798925401821095
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2794897292825528455
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Luampa Core Reward Points RP"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3354113406447522472
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10397026133646897893
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14345205382930242514
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 17260996846648489781
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7359553105297484121
+    }
+  }
+}
+Objects {
   Id: 14407121827428704047
   Name: "Message Banner"
   Transform {
