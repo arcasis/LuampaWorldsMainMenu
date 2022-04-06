@@ -24,7 +24,7 @@ function IsFirstJoinToday(player)
         data.dailyRP = 0
     end
     player.serverUserData.dailyRP = data.dailyRP
-    -- end Luampa edit --
+    -- Luampa edit end --
 
     if day ~= data.lastJoinDay
     or month ~= data.lastJoinMonth then
@@ -32,7 +32,7 @@ function IsFirstJoinToday(player)
         -- Luampa edit start--
         -- wipe dailyRP if it's a new day
         data.dailyRP = 0
-        player.serverUserData.dailyRP = data.dailyRP
+        player.serverUserData.dailyRP = 0
         -- end Luampa edit --
 
         data.lastJoinDay = day
@@ -44,7 +44,7 @@ function IsFirstJoinToday(player)
 end
 
 
-function OnPlayerJoined(player)
+function OnStorageReady(player)
     if IsFirstJoinToday(player) then
         player:GrantRewardPoints(DAILY_REWARD_AMOUNT, DAILY_REWARD_NAME)
 
@@ -66,10 +66,20 @@ function OnRewardPointsPickup(player)
     player.serverUserData.dailyRP = currentPoints
     if currentPoints >= 500 then
         Events.BroadcastToPlayer(player, "HidePickups")
+
+        local data = Storage.GetPlayerData(player)
     end
 end
 
 
+function OnPlayerLeft(player)
+    local data = Storage.GetPlayerData(player)
+    data.dailyRP = player.serverUserData.dailyRP
+    Storage.SetPlayerData(player, data)
+end
+
+
 -- Initialize
+Events.Connect("StorageReady", OnStorageReady)
 Events.ConnectForPlayer("PickedUpRP", OnRewardPointsPickup)
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerLeftEvent:Connect(OnPlayerLeft)

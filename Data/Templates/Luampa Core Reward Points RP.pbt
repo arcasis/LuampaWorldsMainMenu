@@ -213,7 +213,6 @@ Assets {
         ChildIds: 7492339546138020710
         ChildIds: 6232612637235431107
         ChildIds: 9196611342562324227
-        ChildIds: 11115136414556640056
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -468,11 +467,12 @@ Assets {
         ParentId: 3614485955850671405
         ChildIds: 11654846878016821211
         ChildIds: 3154977832319231905
+        ChildIds: 11115136414556640056
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceoff"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -690,7 +690,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3614485955850671405
+        ParentId: 9196611342562324227
         ChildIds: 9873130921698532302
         ChildIds: 878373180203176758
         Collidable_v2 {
@@ -864,7 +864,6 @@ Assets {
         ChildIds: 7031611094203015362
         ChildIds: 7953137240731910005
         ChildIds: 10227964893254258434
-        ChildIds: 15876507876627473961
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -1119,6 +1118,7 @@ Assets {
         ParentId: 1999839776688332194
         ChildIds: 8968102050468587097
         ChildIds: 15037925533540533947
+        ChildIds: 15876507876627473961
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1332,7 +1332,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1999839776688332194
+        ParentId: 10227964893254258434
         ChildIds: 18438900263940376994
         ChildIds: 4730389545320541715
         Collidable_v2 {
@@ -1512,7 +1512,6 @@ Assets {
         ChildIds: 3396312311555414485
         ChildIds: 2055597915938929158
         ChildIds: 2303997008164116098
-        ChildIds: 3835450513518968682
         ChildIds: 11996337292856322348
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1725,6 +1724,7 @@ Assets {
         ParentId: 5878611620000882458
         ChildIds: 5352378519251912049
         ChildIds: 15332075046137867307
+        ChildIds: 3835450513518968682
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1938,7 +1938,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5878611620000882458
+        ParentId: 2303997008164116098
         ChildIds: 7097490584019281442
         ChildIds: 7542952257711158360
         Collidable_v2 {
@@ -2165,7 +2165,6 @@ Assets {
         ChildIds: 13354445306419084233
         ChildIds: 17549812499068518245
         ChildIds: 10908034761499021430
-        ChildIds: 12105330476220634394
         ChildIds: 2732677394334018186
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -2378,6 +2377,7 @@ Assets {
         ParentId: 8329164625838015593
         ChildIds: 3055207149158973319
         ChildIds: 5843440767587751231
+        ChildIds: 12105330476220634394
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2591,7 +2591,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8329164625838015593
+        ParentId: 10908034761499021430
         ChildIds: 11656526098025024607
         ChildIds: 778344127390918524
         Collidable_v2 {
@@ -2805,7 +2805,7 @@ Assets {
     }
   }
   Marketplace {
-    Description: "Gives a one-time daily Reward in any Luampa game, then each game has pickups that players can pick up for their remainder creative limit. Pickups display if they have not picked up all of their creative Reward Points for the day. Resets daily. \r\n\r\nInstructions: Pull template into hierarchy, place pickups in desired locations, update storage scripts to match Luampa Race for dailyRP."
+    Description: "Gives a one-time daily Reward in any Luampa game, then each game has pickups that players can pick up for their remainder creative limit. Pickups display if they have not picked up all of their creative Reward Points for the day. Resets daily. \r\n\r\nInstructions: Pull template into hierarchy, place pickups in desired locations."
   }
   SerializationVersion: 110
   DirectlyPublished: true

@@ -38,7 +38,7 @@ Assets {
     OwnerAccountId: "2c0f556623f7448e96dc7226dfa02611"
     OwnerName: "TaoOfChaos"
     Version: "1.0.0"
-    Description: "Gives a one-time daily Reward in any Luampa game, then each game has pickups that players can pick up for their remainder creative limit. Pickups display if they have not picked up all of their creative Reward Points for the day. Resets daily. \r\n\r\nInstructions: Pull template into hierarchy, place pickups in desired locations, update storage scripts to match Luampa Race for dailyRP."
+    Description: "Gives a one-time daily Reward in any Luampa game, then each game has pickups that players can pick up for their remainder creative limit. Pickups display if they have not picked up all of their creative Reward Points for the day. Resets daily. \r\n\r\nInstructions: Pull template into hierarchy, place pickups in desired locations."
   }
   SerializationVersion: 110
 }

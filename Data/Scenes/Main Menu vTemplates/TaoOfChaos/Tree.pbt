@@ -20,51 +20,13 @@ Objects {
           String: "Luampa Core Reward Points RP"
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3354113406447522472
-      value {
-        Overrides {
           Name: "Position"
           Vector {
           }
         }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10397026133646897893
-      value {
         Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 14345205382930242514
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 17260996846648489781
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
