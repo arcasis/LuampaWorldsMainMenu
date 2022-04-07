@@ -15677,161 +15677,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
+      Id: 2045648755612282326
       Name: "Cylinder"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 17842172761033527551
-      Name: "Basic Bean Thin Long"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_bean_thin_long_001_ref"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 13620911055631284208
-      Name: "Pipe - 90-Degree Short Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve90_003"
-      }
-    }
-    Assets {
-      Id: 14669304767145580684
-      Name: "Cylinder - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_test_001"
-      }
-    }
-    Assets {
-      Id: 9082260781483054898
-      Name: "Clay Form 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_clayform_001_ref"
-      }
-    }
-    Assets {
-      Id: 2767127061345157352
-      Name: "Racing Flag - Square - Edge"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_flags_racing_sqr_001_ref"
-      }
-    }
-    Assets {
-      Id: 4889626186703038779
-      Name: "Cylinder - Rounded Small"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_rounded_003"
-      }
-    }
-    Assets {
-      Id: 2062312305449231890
-      Name: "Cube - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_001"
-      }
-    }
-    Assets {
-      Id: 15959255917611524949
-      Name: "Go Kart Tire Material"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 12542223800925587202
-        ParameterOverrides {
-          Overrides {
-            Name: "index"
-            Float: 113949
-          }
-          Overrides {
-            Name: "cmpc:Material"
-            Color {
-              R: 0.155926
-              G: 0.141263
-              B: 0.124772
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 12542223800925587202
-      Name: "Urban Car Tire Sidewall 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_veh_urb_car_sidewall_001_ref"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
-      }
-    }
-    Assets {
-      Id: 2039606655896571360
-      Name: "Urban Vehicle Car - Brake 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
-      }
-    }
-    Assets {
-      Id: 2769563029775643720
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
       }
     }
     Assets {
@@ -15844,38 +15695,129 @@ Assets {
       }
     }
     Assets {
-      Id: 13545708288262914804
-      Name: "HOLBLOCK"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9804609765582245154
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.85
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 9804609765582245154
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
+      Id: 2769563029775643720
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
       PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
       }
     }
     Assets {
-      Id: 2045648755612282326
+      Id: 2039606655896571360
+      Name: "Urban Vehicle Car - Brake 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+      }
+    }
+    Assets {
+      Id: 16163665952175281032
+      Name: "Urban Pipe Coupling 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+      }
+    }
+    Assets {
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+      }
+    }
+    Assets {
+      Id: 2062312305449231890
+      Name: "Cube - Rounded Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_001"
+      }
+    }
+    Assets {
+      Id: 4889626186703038779
+      Name: "Cylinder - Rounded Small"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_rounded_003"
+      }
+    }
+    Assets {
+      Id: 2767127061345157352
+      Name: "Racing Flag - Square - Edge"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_flags_racing_sqr_001_ref"
+      }
+    }
+    Assets {
+      Id: 9082260781483054898
+      Name: "Clay Form 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_clayform_001_ref"
+      }
+    }
+    Assets {
+      Id: 14669304767145580684
+      Name: "Cylinder - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_test_001"
+      }
+    }
+    Assets {
+      Id: 13620911055631284208
+      Name: "Pipe - 90-Degree Short Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve90_003"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 17842172761033527551
+      Name: "Basic Bean Thin Long"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_bean_thin_long_001_ref"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
       Name: "Cylinder"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
       }
     }
     PrimaryAssetId {
@@ -15885,4 +15827,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

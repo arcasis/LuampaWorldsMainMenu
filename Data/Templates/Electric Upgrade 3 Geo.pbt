@@ -3935,291 +3935,84 @@ Assets {
       }
     }
     Assets {
-      Id: 2859380088271525357
-      Name: "Coral Tubes Big"
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_coral_tube_big_01"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
       }
     }
     Assets {
-      Id: 4888853119798933285
-      Name: "Coral Branches Small"
+      Id: 2039606655896571360
+      Name: "Urban Vehicle Car - Brake 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_coral_branch_small_01"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
       }
     }
     Assets {
-      Id: 3476181260098466593
-      Name: "Coral Tubes Small"
+      Id: 16163665952175281032
+      Name: "Urban Pipe Coupling 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_coral_tube_small_01"
+        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
       }
     }
     Assets {
-      Id: 6831932807595125106
-      Name: "Coral Spikes Small"
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_coral_spike_small_01"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
       }
     }
     Assets {
-      Id: 10440323068721475910
-      Name: "Rock 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
-      }
-    }
-    Assets {
-      Id: 12389427897998698165
-      Name: "Stone Basic"
+      Id: 14359217783623684227
+      Name: "Rubber Basic 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "stone_001"
+        AssetId: "mi_scf_rubber_panels_004_uv"
       }
     }
     Assets {
-      Id: 2249794126015640337
-      Name: "Carbon Fiber 01"
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 15177918941119336720
+      Name: "Metal Floor Panel 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_carbon-fiber_001"
+        AssetId: "mi_scf_simple_floor_panel_002_uv"
       }
     }
     Assets {
-      Id: 6120830901374274316
-      Name: "Rubber Old 01"
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 10403588182349226913
+      Name: "Metal Complex Tech Panel Wall 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 11132498090744587473
-      Name: "Lathe Bulb"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_lathe_bulb_001_ref"
-      }
-    }
-    Assets {
-      Id: 15763739372691970393
-      Name: "Water Jet VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_water_jet"
-      }
-    }
-    Assets {
-      Id: 18051350306510480532
-      Name: "Horn Curved Double - Horizontal"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_horn_h_curved_double_001_ref"
-      }
-    }
-    Assets {
-      Id: 17103411978050105532
-      Name: "Horn Curled"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_curled_001_ref"
-      }
-    }
-    Assets {
-      Id: 3026036060536697571
-      Name: "Helix -  0.5 Pointed Tapered"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_horn_helix_50cm_tapered_001_ref"
-      }
-    }
-    Assets {
-      Id: 15768414954678223856
-      Name: "Helix -  0.25 Pointed Tapered"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_horn_helix_25cm_tapered_001_ref"
-      }
-    }
-    Assets {
-      Id: 2936565409571704116
-      Name: "Helix -  1.0 Pointed Tapered"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_horn_helix_100cm_tapered_001_ref"
-      }
-    }
-    Assets {
-      Id: 18135958756219536419
-      Name: "Horn Curved Double - Vertical"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_horn_v_curve_double_001_ref"
-      }
-    }
-    Assets {
-      Id: 9652899028443205571
-      Name: "Optopus"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 15473544180085705915
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.61
-              B: 0.0848341808
-              A: 0.3
-            }
-          }
-          Overrides {
-            Name: "inner color"
-            Color {
-              G: 0.78
-              B: 0.73351
-              A: 0.436000019
-            }
-          }
-          Overrides {
-            Name: "sss"
-            Color {
-              R: 0.3423841
-              G: 0.470000029
-              A: 0.311000019
-            }
-          }
-          Overrides {
-            Name: "emissive"
-            Float: 0
-          }
-          Overrides {
-            Name: "metallic"
-            Float: 0
-          }
-          Overrides {
-            Name: "roughness"
-            Float: 0
-          }
-          Overrides {
-            Name: "displacement distance"
-            Float: 1.11380696
-          }
-          Overrides {
-            Name: "displacement scale"
-            Float: 2.24125051
-          }
-          Overrides {
-            Name: "displacement speed"
-            Float: 0
-          }
-          Overrides {
-            Name: "bubble brightness"
-            Float: 4.49613762
-          }
-          Overrides {
-            Name: "bubble speed"
-            Float: 0
-          }
-          Overrides {
-            Name: "scale"
-            Float: 10
-          }
-          Overrides {
-            Name: "fresnel"
-            Float: 2.57675624
-          }
-          Overrides {
-            Name: "milkiness"
-            Float: 0.00803170446
-          }
-          Overrides {
-            Name: "rim brightness"
-            Float: 1.96893525
-          }
-          Overrides {
-            Name: "thickness"
-            Float: 0.496590555
-          }
-          Overrides {
-            Name: "specular"
-            Float: 0
-          }
-          Overrides {
-            Name: "bubble direction"
-            Vector {
-              X: 10
-              Y: 15
-              Z: 20
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 15473544180085705915
-      Name: "Faucet Water"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_faucet_water"
-      }
-    }
-    Assets {
-      Id: 1728066247874301355
-      Name: "Basic Pepper 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_pepper_001_ref"
-      }
-    }
-    Assets {
-      Id: 5313430657937779536
-      Name: "Metal Floor Panel 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_001_uv"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 11095574216851977536
-      Name: "Custom Emissive Glow Transparent_2"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 14387494754929522827
-        ParameterOverrides {
-        }
+        AssetId: "mi_scf_complex_tech_panel_002_uv"
       }
     }
     Assets {
@@ -4241,84 +4034,174 @@ Assets {
       }
     }
     Assets {
-      Id: 10403588182349226913
-      Name: "Metal Complex Tech Panel Wall 02"
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 5313430657937779536
+      Name: "Metal Floor Panel 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_complex_tech_panel_002_uv"
+        AssetId: "mi_scf_simple_floor_panel_001_uv"
       }
     }
     Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
+      Id: 1728066247874301355
+      Name: "Basic Pepper 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
+        AssetId: "sm_prim_org_pepper_001_ref"
       }
     }
     Assets {
-      Id: 15177918941119336720
-      Name: "Metal Floor Panel 02"
+      Id: 18135958756219536419
+      Name: "Horn Curved Double - Vertical"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_horn_v_curve_double_001_ref"
+      }
+    }
+    Assets {
+      Id: 2936565409571704116
+      Name: "Helix -  1.0 Pointed Tapered"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_horn_helix_100cm_tapered_001_ref"
+      }
+    }
+    Assets {
+      Id: 15768414954678223856
+      Name: "Helix -  0.25 Pointed Tapered"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_horn_helix_25cm_tapered_001_ref"
+      }
+    }
+    Assets {
+      Id: 3026036060536697571
+      Name: "Helix -  0.5 Pointed Tapered"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_horn_helix_50cm_tapered_001_ref"
+      }
+    }
+    Assets {
+      Id: 17103411978050105532
+      Name: "Horn Curled"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_horn_curled_001_ref"
+      }
+    }
+    Assets {
+      Id: 18051350306510480532
+      Name: "Horn Curved Double - Horizontal"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_horn_h_curved_double_001_ref"
+      }
+    }
+    Assets {
+      Id: 15763739372691970393
+      Name: "Water Jet VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_water_jet"
+      }
+    }
+    Assets {
+      Id: 11132498090744587473
+      Name: "Lathe Bulb"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_lathe_bulb_001_ref"
+      }
+    }
+    Assets {
+      Id: 6120830901374274316
+      Name: "Rubber Old 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_002_uv"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
       }
     }
     Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 14359217783623684227
-      Name: "Rubber Basic 01"
+      Id: 2249794126015640337
+      Name: "Carbon Fiber 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_004_uv"
+        AssetId: "mi_carbon-fiber_001"
       }
     }
     Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
+      Id: 12389427897998698165
+      Name: "Stone Basic"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+        AssetType: "MaterialAssetRef"
+        AssetId: "stone_001"
       }
     }
     Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
+      Id: 10440323068721475910
+      Name: "Rock 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+        AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
       }
     }
     Assets {
-      Id: 2039606655896571360
-      Name: "Urban Vehicle Car - Brake 01"
+      Id: 6831932807595125106
+      Name: "Coral Spikes Small"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+        AssetId: "sm_coral_spike_small_01"
       }
     }
     Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
+      Id: 3476181260098466593
+      Name: "Coral Tubes Small"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+        AssetId: "sm_coral_tube_small_01"
+      }
+    }
+    Assets {
+      Id: 4888853119798933285
+      Name: "Coral Branches Small"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_coral_branch_small_01"
+      }
+    }
+    Assets {
+      Id: 2859380088271525357
+      Name: "Coral Tubes Big"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_coral_tube_big_01"
       }
     }
     PrimaryAssetId {
@@ -4328,4 +4211,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

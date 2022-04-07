@@ -12546,300 +12546,12 @@ Assets {
       }
     }
     Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 3613296641601149104
-      Name: "Pipe - 7-Sided Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_7_sided_thick_001"
-      }
-    }
-    Assets {
-      Id: 14669304767145580684
-      Name: "Cylinder - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_test_001"
-      }
-    }
-    Assets {
-      Id: 1717580252587172483
-      Name: "Pipe - 90-Degree Long"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve90_002"
-      }
-    }
-    Assets {
-      Id: 2062312305449231890
-      Name: "Cube - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_001"
-      }
-    }
-    Assets {
-      Id: 13800164861431086472
-      Name: "Ring - Quarter Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_003"
-      }
-    }
-    Assets {
-      Id: 10699661390325116495
-      Name: "Urban Vehicle Car - Front Seat Bottom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 4687434041811739163
-      Name: "Urban Vehicle Car - Front Seat Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 9194258842198861561
-      Name: "Trim - Straight - 08m"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_trimitives_001_straight_8m_ref"
-      }
-    }
-    Assets {
-      Id: 6040461109962236062
-      Name: "Military Tank Modern Mudflap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
-      }
-    }
-    Assets {
-      Id: 289956829384114960
-      Name: "Horn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
-      }
-    }
-    Assets {
-      Id: 10341985677322135286
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
-      }
-    }
-    Assets {
-      Id: 6042541398969087147
-      Name: "Donut"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_001"
-      }
-    }
-    Assets {
-      Id: 5251119395865291253
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 3497770579481158719
-      Name: "Prism - Asymmetrical Beveled - Large 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_corelogo_shape_002_half_top_01_ref"
-      }
-    }
-    Assets {
-      Id: 5055429345916703247
-      Name: "Pipe"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_001"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 8936463881719161671
-      Name: "Ring - Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_005"
-      }
-    }
-    Assets {
-      Id: 7743026498385456138
-      Name: "Cylinder Half - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_half_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 7843271397880719726
-      Name: "Gem - Trillion Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_trillion_polished_001"
-      }
-    }
-    Assets {
-      Id: 16941473965829282315
-      Name: "Crescent 02 - Large"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_crescent_lg_002_ref"
-      }
-    }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 3095542454204157164
-      Name: "Ring - Quarter Extra Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_004"
-      }
-    }
-    Assets {
-      Id: 2045648755612282326
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 16510875708337341714
-      Name: "Pipe - 45-Degree Long Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_006"
-      }
-    }
-    Assets {
-      Id: 8907250712472379037
-      Name: "Text 01: H"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_007"
-      }
-    }
-    Assets {
-      Id: 15137020520114347825
-      Name: "Text 01: C"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_002"
-      }
-    }
-    Assets {
-      Id: 3623106146891470624
-      Name: "Text 01: T"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_019"
-      }
-    }
-    Assets {
-      Id: 3884688726305173572
-      Name: "Text 01: W"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_022"
-      }
-    }
-    Assets {
-      Id: 17703210634578221906
-      Name: "Text 01: A"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_000"
-      }
-    }
-    Assets {
-      Id: 165148029823862965
-      Name: "Text 01: U"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_020"
-      }
-    }
-    Assets {
-      Id: 14813702630119492338
-      Name: "Text 01: L"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_011"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
       }
     }
     Assets {
@@ -12852,31 +12564,300 @@ Assets {
       }
     }
     Assets {
-      Id: 14842598604038967619
-      Name: "HoloUnlock"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9804609765582245154
-        ParameterOverrides {
-        }
-      }
-    }
-    Assets {
-      Id: 9804609765582245154
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
+      Id: 14813702630119492338
+      Name: "Text 01: L"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+        AssetId: "F1_Text_011"
+      }
+    }
+    Assets {
+      Id: 165148029823862965
+      Name: "Text 01: U"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_020"
+      }
+    }
+    Assets {
+      Id: 17703210634578221906
+      Name: "Text 01: A"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_000"
+      }
+    }
+    Assets {
+      Id: 3884688726305173572
+      Name: "Text 01: W"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_022"
+      }
+    }
+    Assets {
+      Id: 3623106146891470624
+      Name: "Text 01: T"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_019"
+      }
+    }
+    Assets {
+      Id: 15137020520114347825
+      Name: "Text 01: C"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_002"
+      }
+    }
+    Assets {
+      Id: 8907250712472379037
+      Name: "Text 01: H"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_007"
+      }
+    }
+    Assets {
+      Id: 16510875708337341714
+      Name: "Pipe - 45-Degree Long Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve45_006"
+      }
+    }
+    Assets {
+      Id: 2045648755612282326
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 3095542454204157164
+      Name: "Ring - Quarter Extra Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_004"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 16941473965829282315
+      Name: "Crescent 02 - Large"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_crescent_lg_002_ref"
+      }
+    }
+    Assets {
+      Id: 7843271397880719726
+      Name: "Gem - Trillion Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_gem_trillion_polished_001"
+      }
+    }
+    Assets {
+      Id: 7743026498385456138
+      Name: "Cylinder Half - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_half_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 8936463881719161671
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 5055429345916703247
+      Name: "Pipe"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_001"
+      }
+    }
+    Assets {
+      Id: 3497770579481158719
+      Name: "Prism - Asymmetrical Beveled - Large 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_corelogo_shape_002_half_top_01_ref"
+      }
+    }
+    Assets {
+      Id: 5251119395865291253
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 6042541398969087147
+      Name: "Donut"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_001"
+      }
+    }
+    Assets {
+      Id: 10341985677322135286
+      Name: "Teardrop - Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_truncated_teardrop_001"
+      }
+    }
+    Assets {
+      Id: 289956829384114960
+      Name: "Horn"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_horn_001"
+      }
+    }
+    Assets {
+      Id: 6040461109962236062
+      Name: "Military Tank Modern Mudflap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
+      }
+    }
+    Assets {
+      Id: 9194258842198861561
+      Name: "Trim - Straight - 08m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_trimitives_001_straight_8m_ref"
+      }
+    }
+    Assets {
+      Id: 4687434041811739163
+      Name: "Urban Vehicle Car - Front Seat Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 10699661390325116495
+      Name: "Urban Vehicle Car - Front Seat Bottom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 13800164861431086472
+      Name: "Ring - Quarter Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_003"
+      }
+    }
+    Assets {
+      Id: 2062312305449231890
+      Name: "Cube - Rounded Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_001"
+      }
+    }
+    Assets {
+      Id: 1717580252587172483
+      Name: "Pipe - 90-Degree Long"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve90_002"
+      }
+    }
+    Assets {
+      Id: 14669304767145580684
+      Name: "Cylinder - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_test_001"
+      }
+    }
+    Assets {
+      Id: 3613296641601149104
+      Name: "Pipe - 7-Sided Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_7_sided_thick_001"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
       }
     }
     PrimaryAssetId {
@@ -12886,4 +12867,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

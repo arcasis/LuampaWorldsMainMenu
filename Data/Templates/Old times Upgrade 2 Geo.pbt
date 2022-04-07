@@ -13857,37 +13857,457 @@ Assets {
       }
     }
     Assets {
-      Id: 5313430657937779536
-      Name: "Metal Floor Panel 01"
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+      }
+    }
+    Assets {
+      Id: 2039606655896571360
+      Name: "Urban Vehicle Car - Brake 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+      }
+    }
+    Assets {
+      Id: 16163665952175281032
+      Name: "Urban Pipe Coupling 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+      }
+    }
+    Assets {
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+      }
+    }
+    Assets {
+      Id: 10638299353573151252
+      Name: "Urban Vehicle Car - Rim 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_rim_003_ref"
+      }
+    }
+    Assets {
+      Id: 2045648755612282326
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 14212988502358508072
+      Name: "Metal Basic Steel"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_001_uv"
+        AssetId: "steel_001"
       }
     }
     Assets {
-      Id: 13229798138451002191
-      Name: "Custom Emissive Glow Transparent"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8919871824294249785
-        ParameterOverrides {
-          Overrides {
-            Name: "emissive_boost"
-            Float: 40.3685951
-          }
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.320000052
-              A: 1
-            }
-          }
-        }
+      Id: 13460705691453707480
+      Name: "Metal Iron Rusted 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_003"
       }
     }
     Assets {
-      Id: 8919871824294249785
+      Id: 9736348815614444872
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 3066155598661664392
+      Name: "Container - Hex- Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_container_hex_rnd_001_ref"
+      }
+    }
+    Assets {
+      Id: 5055429345916703247
+      Name: "Pipe"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_001"
+      }
+    }
+    Assets {
+      Id: 2249794126015640337
+      Name: "Carbon Fiber 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_carbon-fiber_001"
+      }
+    }
+    Assets {
+      Id: 1527224994251334627
+      Name: "Urban Pipe Flange 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_pipes_acc_flange_002_ref"
+      }
+    }
+    Assets {
+      Id: 17852528110173120551
+      Name: "Pipe - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_004"
+      }
+    }
+    Assets {
+      Id: 697130077529532955
+      Name: "Metal Painted Basic 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_painted_metal_basic_001"
+      }
+    }
+    Assets {
+      Id: 1331797004501394473
+      Name: "Capsule"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_capsule_001"
+      }
+    }
+    Assets {
+      Id: 3587065604244498421
+      Name: "Metal Complex Tech Panel Wall 03"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_complex_tech_panel_003_uv"
+      }
+    }
+    Assets {
+      Id: 17362244809109464487
+      Name: "Gem - Baguette Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_gem_baguette_polished_001"
+      }
+    }
+    Assets {
+      Id: 10403588182349226913
+      Name: "Metal Complex Tech Panel Wall 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_complex_tech_panel_002_uv"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 14669304767145580684
+      Name: "Cylinder - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_test_001"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 15895172776591162917
+      Name: "Metal Painted Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_painted_old_001_uv"
+      }
+    }
+    Assets {
+      Id: 470659976995623250
+      Name: "Container - Rectangle"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_container_rectangle_ref"
+      }
+    }
+    Assets {
+      Id: 10834081793086782683
+      Name: "Rubber Dot Panels 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_001_uv"
+      }
+    }
+    Assets {
+      Id: 8557758414225635367
+      Name: "Text 02: B"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_001"
+      }
+    }
+    Assets {
+      Id: 12335945233839235996
+      Name: "Text 02: O"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_014"
+      }
+    }
+    Assets {
+      Id: 14102719251252016831
+      Name: "Text 02: T"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_019"
+      }
+    }
+    Assets {
+      Id: 18379449288563335502
+      Name: "Text 02: C"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_002"
+      }
+    }
+    Assets {
+      Id: 11831184301275785465
+      Name: "Text 02: A"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_000"
+      }
+    }
+    Assets {
+      Id: 3006473903434306266
+      Name: "Text 02: M"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_012"
+      }
+    }
+    Assets {
+      Id: 1325732437888983959
+      Name: "Text 02: P"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_015"
+      }
+    }
+    Assets {
+      Id: 12715360250534035700
+      Name: "Urban Vehicle Accessory - Sedan Tail Light 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_taillight_001_ref"
+      }
+    }
+    Assets {
+      Id: 13689847373844968359
+      Name: "Military Tank Modern Light 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_light_001_ref"
+      }
+    }
+    Assets {
+      Id: 11085376824642961392
+      Name: "Urban Vehicle Car - Light Roof 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_light_exterior_003_ref"
+      }
+    }
+    Assets {
+      Id: 2566880633644170439
+      Name: "Barrier Light"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_barrier_light_001"
+      }
+    }
+    Assets {
+      Id: 17735885163494797228
+      Name: "Text 02: R"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_017"
+      }
+    }
+    Assets {
+      Id: 13114462582462780333
+      Name: "Text 02: E"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_004"
+      }
+    }
+    Assets {
+      Id: 11282329710451417122
+      Name: "Text 02: D"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_003"
+      }
+    }
+    Assets {
+      Id: 7564717268428786587
+      Name: "Text 02: Y"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_024"
+      }
+    }
+    Assets {
+      Id: 4090709657435174114
+      Name: "Short Banner Manticore"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_banner_002"
+      }
+    }
+    Assets {
+      Id: 1015778824531196266
+      Name: "Text 02: S"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_018"
+      }
+    }
+    Assets {
+      Id: 18069186510401124354
+      Name: "Text 02: H"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_007"
+      }
+    }
+    Assets {
+      Id: 289504536223389458
+      Name: "Text 02: L"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_011"
+      }
+    }
+    Assets {
+      Id: 12758815850513655121
+      Name: "Text 02: U"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "Text_020"
+      }
+    }
+    Assets {
+      Id: 12667524768957844711
+      Name: "Manticore Logo"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_logo_manticore_01"
+      }
+    }
+    Assets {
+      Id: 6120830901374274316
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 10069588324162714145
+      Name: "Rocket Trail VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_rocket_trail"
+      }
+    }
+    Assets {
+      Id: 15177918941119336720
+      Name: "Metal Floor Panel 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_simple_floor_panel_002_uv"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 14387494754929522827
       Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {
@@ -13905,616 +14325,12 @@ Assets {
       }
     }
     Assets {
-      Id: 14387494754929522827
-      Name: "Emissive Glow Transparent"
+      Id: 5313430657937779536
+      Name: "Metal Floor Panel 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 15177918941119336720
-      Name: "Metal Floor Panel 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_002_uv"
-      }
-    }
-    Assets {
-      Id: 10069588324162714145
-      Name: "Rocket Trail VFX"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_rocket_trail"
-      }
-    }
-    Assets {
-      Id: 6120830901374274316
-      Name: "Rubber Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 12667524768957844711
-      Name: "Manticore Logo"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_logo_manticore_01"
-      }
-    }
-    Assets {
-      Id: 12758815850513655121
-      Name: "Text 02: U"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_020"
-      }
-    }
-    Assets {
-      Id: 289504536223389458
-      Name: "Text 02: L"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_011"
-      }
-    }
-    Assets {
-      Id: 18069186510401124354
-      Name: "Text 02: H"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_007"
-      }
-    }
-    Assets {
-      Id: 1015778824531196266
-      Name: "Text 02: S"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_018"
-      }
-    }
-    Assets {
-      Id: 4090709657435174114
-      Name: "Short Banner Manticore"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_banner_002"
-      }
-    }
-    Assets {
-      Id: 7564717268428786587
-      Name: "Text 02: Y"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_024"
-      }
-    }
-    Assets {
-      Id: 11282329710451417122
-      Name: "Text 02: D"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_003"
-      }
-    }
-    Assets {
-      Id: 13114462582462780333
-      Name: "Text 02: E"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_004"
-      }
-    }
-    Assets {
-      Id: 17735885163494797228
-      Name: "Text 02: R"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_017"
-      }
-    }
-    Assets {
-      Id: 2566880633644170439
-      Name: "Barrier Light"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_barrier_light_001"
-      }
-    }
-    Assets {
-      Id: 11085376824642961392
-      Name: "Urban Vehicle Car - Light Roof 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_light_exterior_003_ref"
-      }
-    }
-    Assets {
-      Id: 13689847373844968359
-      Name: "Military Tank Modern Light 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_light_001_ref"
-      }
-    }
-    Assets {
-      Id: 7375018467158415958
-      Name: "RustyPaintYellow"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 13085174305471638229
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.950000048
-              G: 0.868212044
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 13085174305471638229
-      Name: "Metal Painted Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_painted_old_001_uv"
-      }
-    }
-    Assets {
-      Id: 12715360250534035700
-      Name: "Urban Vehicle Accessory - Sedan Tail Light 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_taillight_001_ref"
-      }
-    }
-    Assets {
-      Id: 1325732437888983959
-      Name: "Text 02: P"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_015"
-      }
-    }
-    Assets {
-      Id: 3006473903434306266
-      Name: "Text 02: M"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_012"
-      }
-    }
-    Assets {
-      Id: 11831184301275785465
-      Name: "Text 02: A"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_000"
-      }
-    }
-    Assets {
-      Id: 18379449288563335502
-      Name: "Text 02: C"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_002"
-      }
-    }
-    Assets {
-      Id: 14102719251252016831
-      Name: "Text 02: T"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_019"
-      }
-    }
-    Assets {
-      Id: 12335945233839235996
-      Name: "Text 02: O"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_014"
-      }
-    }
-    Assets {
-      Id: 8557758414225635367
-      Name: "Text 02: B"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "Text_001"
-      }
-    }
-    Assets {
-      Id: 10834081793086782683
-      Name: "Rubber Dot Panels 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_001_uv"
-      }
-    }
-    Assets {
-      Id: 470659976995623250
-      Name: "Container - Rectangle"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_container_rectangle_ref"
-      }
-    }
-    Assets {
-      Id: 15895172776591162917
-      Name: "Metal Painted Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_painted_old_001_uv"
-      }
-    }
-    Assets {
-      Id: 11479232767097195070
-      Name: "BusGlass"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 3998592366905403415
-        ParameterOverrides {
-          Overrides {
-            Name: "opacity"
-            Float: 0.390351087
-          }
-          Overrides {
-            Name: "curvature_roughness"
-            Float: 0.0164541937
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 3998592366905403415
-      Name: "Glass 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_glass_refrac_001"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 14669304767145580684
-      Name: "Cylinder - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_test_001"
-      }
-    }
-    Assets {
-      Id: 9443696384793282129
-      Name: "Custom Emissive Glow Transparent"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8919871824294249785
-        ParameterOverrides {
-          Overrides {
-            Name: "emissive_boost"
-            Float: 3.616431
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 10403588182349226913
-      Name: "Metal Complex Tech Panel Wall 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_complex_tech_panel_002_uv"
-      }
-    }
-    Assets {
-      Id: 17362244809109464487
-      Name: "Gem - Baguette Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_baguette_polished_001"
-      }
-    }
-    Assets {
-      Id: 3587065604244498421
-      Name: "Metal Complex Tech Panel Wall 03"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_complex_tech_panel_003_uv"
-      }
-    }
-    Assets {
-      Id: 1331797004501394473
-      Name: "Capsule"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_capsule_001"
-      }
-    }
-    Assets {
-      Id: 697130077529532955
-      Name: "Metal Painted Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_painted_metal_basic_001"
-      }
-    }
-    Assets {
-      Id: 17852528110173120551
-      Name: "Pipe - Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_004"
-      }
-    }
-    Assets {
-      Id: 1527224994251334627
-      Name: "Urban Pipe Flange 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_flange_002_ref"
-      }
-    }
-    Assets {
-      Id: 2249794126015640337
-      Name: "Carbon Fiber 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_carbon-fiber_001"
-      }
-    }
-    Assets {
-      Id: 5055429345916703247
-      Name: "Pipe"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_001"
-      }
-    }
-    Assets {
-      Id: 15385682896892773252
-      Name: "SchoolBus"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 1376976208896698458
-        ParameterOverrides {
-          Overrides {
-            Name: "material_scale"
-            Float: 15
-          }
-          Overrides {
-            Name: "front_border_xy"
-            Vector2 {
-              X: 1
-              Y: 1
-            }
-          }
-          Overrides {
-            Name: "side_border_xy"
-            Vector2 {
-            }
-          }
-          Overrides {
-            Name: "top_border_xy"
-            Vector2 {
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 1376976208896698458
-      Name: "Metal 9 Slice Lockers 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_advanced_9slice_lockers_001_ref"
-      }
-    }
-    Assets {
-      Id: 3066155598661664392
-      Name: "Container - Hex- Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_container_hex_rnd_001_ref"
-      }
-    }
-    Assets {
-      Id: 9736348815614444872
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 13460705691453707480
-      Name: "Metal Iron Rusted 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_003"
-      }
-    }
-    Assets {
-      Id: 14212988502358508072
-      Name: "Metal Basic Steel"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
-      }
-    }
-    Assets {
-      Id: 2045648755612282326
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 10638299353573151252
-      Name: "Urban Vehicle Car - Rim 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_003_ref"
-      }
-    }
-    Assets {
-      Id: 7131432885276510925
-      Name: "Custom Base Material from Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 153732520764153993
-        ParameterOverrides {
-          Overrides {
-            Name: "index"
-            Int: 2
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 153732520764153993
-      Name: "Urban Car Tire Sidewall 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_veh_urb_car_sidewall_001_ref"
-      }
-    }
-    Assets {
-      Id: 16501325518384777865
-      Name: "Custom Detail 1 from Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 7855827117095412946
-        ParameterOverrides {
-          Overrides {
-            Name: "index"
-            Int: 3
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 7855827117095412946
-      Name: "Urban Car Tire Tread 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_veh_urb_car_tire_tread_001_ref"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
-      }
-    }
-    Assets {
-      Id: 2039606655896571360
-      Name: "Urban Vehicle Car - Brake 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
-      }
-    }
-    Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+        AssetId: "mi_scf_simple_floor_panel_001_uv"
       }
     }
     PrimaryAssetId {
@@ -14524,4 +14340,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

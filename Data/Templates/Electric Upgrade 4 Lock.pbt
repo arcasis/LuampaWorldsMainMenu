@@ -4481,192 +4481,12 @@ Assets {
       }
     }
     Assets {
-      Id: 17047458770352118167
-      Name: "Fern 01"
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fern_generic_001"
-      }
-    }
-    Assets {
-      Id: 1236853727603054891
-      Name: "Nature - Mushroom 05"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_nat_fun_mushroom_005_ref"
-      }
-    }
-    Assets {
-      Id: 5936712643887704885
-      Name: "Flower Bellflower 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_foliage_gen_flower_bell_001_ref"
-      }
-    }
-    Assets {
-      Id: 17937897607637698960
-      Name: "Kelp Bush 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_kelp_bush_02"
-      }
-    }
-    Assets {
-      Id: 10506565063693933876
-      Name: "Nature - Mushroom 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_nat_fun_mushroom_003_ref"
-      }
-    }
-    Assets {
-      Id: 4228711515840187807
-      Name: "Nature - Mushroom 04"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_nat_fun_mushroom_004_ref"
-      }
-    }
-    Assets {
-      Id: 11228013958838919953
-      Name: "Nature - Mushroom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_nat_fun_mushroom_001_ref"
-      }
-    }
-    Assets {
-      Id: 4760250879382697360
-      Name: "Flower Wild Lily 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_foliage_gen_flower_wild_lily_001_ref"
-      }
-    }
-    Assets {
-      Id: 10591173889683305426
-      Name: "Fern 04"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fern_generic_004"
-      }
-    }
-    Assets {
-      Id: 13007661230925689363
-      Name: "Urban - Wooden Water Bucket 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_bucket_water_wood_001_ref"
-      }
-    }
-    Assets {
-      Id: 5485327238565360296
-      Name: "Urban Bottle Water Jug 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_gen_bottle_010_ref"
-      }
-    }
-    Assets {
-      Id: 13107966392896632912
-      Name: "Urban - Modern Shovel 01 - Handle 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_shovel_mod_001_handle_001_ref"
-      }
-    }
-    Assets {
-      Id: 8965945709989309580
-      Name: "Urban - Modern Shovel 01 - Head 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_shovel_mod_001_head_001_ref"
-      }
-    }
-    Assets {
-      Id: 7360542700831378587
-      Name: "Urban - Modern Water Bucket 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_bucket_water_plastic_001_ref"
-      }
-    }
-    Assets {
-      Id: 10149302257519243217
-      Name: "Urban - Modern Water Bucket 01 - Handle 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_bucket_water_plastic_001_handle_001_ref"
-      }
-    }
-    Assets {
-      Id: 9820333862526212022
-      Name: "Shipping Pallet - Rectangular"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_mil_shipping_pallet_001"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
       }
     }
     Assets {
@@ -4679,38 +4499,192 @@ Assets {
       }
     }
     Assets {
-      Id: 13545708288262914804
-      Name: "HOLBLOCK"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9804609765582245154
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.85
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 9804609765582245154
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
-      }
-    }
-    Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
+      Id: 16163665952175281032
+      Name: "Urban Pipe Coupling 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+      }
+    }
+    Assets {
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 9820333862526212022
+      Name: "Shipping Pallet - Rectangular"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_mil_shipping_pallet_001"
+      }
+    }
+    Assets {
+      Id: 10149302257519243217
+      Name: "Urban - Modern Water Bucket 01 - Handle 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_bucket_water_plastic_001_handle_001_ref"
+      }
+    }
+    Assets {
+      Id: 7360542700831378587
+      Name: "Urban - Modern Water Bucket 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_bucket_water_plastic_001_ref"
+      }
+    }
+    Assets {
+      Id: 8965945709989309580
+      Name: "Urban - Modern Shovel 01 - Head 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_shovel_mod_001_head_001_ref"
+      }
+    }
+    Assets {
+      Id: 13107966392896632912
+      Name: "Urban - Modern Shovel 01 - Handle 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_shovel_mod_001_handle_001_ref"
+      }
+    }
+    Assets {
+      Id: 5485327238565360296
+      Name: "Urban Bottle Water Jug 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_gen_bottle_010_ref"
+      }
+    }
+    Assets {
+      Id: 13007661230925689363
+      Name: "Urban - Wooden Water Bucket 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_bucket_water_wood_001_ref"
+      }
+    }
+    Assets {
+      Id: 10591173889683305426
+      Name: "Fern 04"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_fern_generic_004"
+      }
+    }
+    Assets {
+      Id: 4760250879382697360
+      Name: "Flower Wild Lily 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_foliage_gen_flower_wild_lily_001_ref"
+      }
+    }
+    Assets {
+      Id: 11228013958838919953
+      Name: "Nature - Mushroom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_nat_fun_mushroom_001_ref"
+      }
+    }
+    Assets {
+      Id: 4228711515840187807
+      Name: "Nature - Mushroom 04"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_nat_fun_mushroom_004_ref"
+      }
+    }
+    Assets {
+      Id: 10506565063693933876
+      Name: "Nature - Mushroom 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_nat_fun_mushroom_003_ref"
+      }
+    }
+    Assets {
+      Id: 17937897607637698960
+      Name: "Kelp Bush 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_kelp_bush_02"
+      }
+    }
+    Assets {
+      Id: 5936712643887704885
+      Name: "Flower Bellflower 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_foliage_gen_flower_bell_001_ref"
+      }
+    }
+    Assets {
+      Id: 1236853727603054891
+      Name: "Nature - Mushroom 05"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_nat_fun_mushroom_005_ref"
+      }
+    }
+    Assets {
+      Id: 17047458770352118167
+      Name: "Fern 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_fern_generic_001"
       }
     }
     PrimaryAssetId {
@@ -4720,4 +4694,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

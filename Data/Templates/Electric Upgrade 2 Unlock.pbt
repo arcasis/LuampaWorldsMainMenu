@@ -5235,39 +5235,12 @@ Assets {
       }
     }
     Assets {
-      Id: 16191797952116540333
-      Name: "Wedge - Polished"
+      Id: 18032733315106131619
+      Name: "Cylinder"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_wedge_hq_001"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 2039606655896571360
-      Name: "Urban Vehicle Car - Brake 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+        AssetId: "sm_cylinder_002"
       }
     }
     Assets {
@@ -5280,31 +5253,39 @@ Assets {
       }
     }
     Assets {
-      Id: 14842598604038967619
-      Name: "HoloUnlock"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9804609765582245154
-        ParameterOverrides {
-        }
-      }
-    }
-    Assets {
-      Id: 9804609765582245154
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
+      Id: 2039606655896571360
+      Name: "Urban Vehicle Car - Brake 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 16191797952116540333
+      Name: "Wedge - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_wedge_hq_001"
       }
     }
     PrimaryAssetId {
@@ -5314,4 +5295,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

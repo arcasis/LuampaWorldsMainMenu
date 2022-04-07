@@ -11018,237 +11018,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 9322981661257251752
-      Name: "Cylinder Bulged"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_cylinder_buldged_001_ref"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 2264041107168619230
-      Name: "Cone - Bullet"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bullet_001"
-      }
-    }
-    Assets {
-      Id: 8944607976256557303
-      Name: "Arch"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_arch_001"
-      }
-    }
-    Assets {
-      Id: 3455996186086712350
-      Name: "Basic Bean 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_bean_001_ref"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 2554866549312619757
-      Name: "Gift Ribbon 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_gen_ribbon_gift_002_ref"
-      }
-    }
-    Assets {
-      Id: 13800164861431086472
-      Name: "Ring - Quarter Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_003"
-      }
-    }
-    Assets {
-      Id: 10699661390325116495
-      Name: "Urban Vehicle Car - Front Seat Bottom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 4687434041811739163
-      Name: "Urban Vehicle Car - Front Seat Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 9194258842198861561
-      Name: "Trim - Straight - 08m"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_trimitives_001_straight_8m_ref"
-      }
-    }
-    Assets {
-      Id: 6040461109962236062
-      Name: "Military Tank Modern Mudflap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
-      }
-    }
-    Assets {
-      Id: 4163673387721216347
-      Name: "Ring - Beveled Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ring_faceted_002"
-      }
-    }
-    Assets {
-      Id: 3742192248512024947
-      Name: "Pipe - Spiral"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_spiral_001"
-      }
-    }
-    Assets {
-      Id: 16462543262703932678
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 17266395722054945459
-      Name: "Cone - Hollow"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cone-hollow_001"
-      }
-    }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 13929299943696999960
-      Name: "Ring - Beveled Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ring_faceted_002"
-      }
-    }
-    Assets {
-      Id: 14488757550966657950
-      Name: "Pipe - Spiral"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_spiral_001"
-      }
-    }
-    Assets {
-      Id: 9826710443425479508
-      Name: "Modern Weapon Ammo - Bullet 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_ammo_bullet_tip_001"
-      }
-    }
-    Assets {
-      Id: 14475225479698410254
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 9480674718042530341
-      Name: "Cone - Hollow"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cone-hollow_001"
-      }
-    }
-    Assets {
-      Id: 3095542454204157164
-      Name: "Ring - Quarter Extra Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_004"
-      }
-    }
-    Assets {
-      Id: 2045648755612282326
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 16510875708337341714
-      Name: "Pipe - 45-Degree Long Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_006"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
       }
     }
     Assets {
@@ -11261,31 +11036,237 @@ Assets {
       }
     }
     Assets {
-      Id: 14842598604038967619
-      Name: "HoloUnlock"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9804609765582245154
-        ParameterOverrides {
-        }
-      }
-    }
-    Assets {
-      Id: 9804609765582245154
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
+      Id: 16510875708337341714
+      Name: "Pipe - 45-Degree Long Thick"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+        AssetId: "sm_pipe_curve45_006"
+      }
+    }
+    Assets {
+      Id: 2045648755612282326
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 3095542454204157164
+      Name: "Ring - Quarter Extra Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_004"
+      }
+    }
+    Assets {
+      Id: 9480674718042530341
+      Name: "Cone - Hollow"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cone-hollow_001"
+      }
+    }
+    Assets {
+      Id: 14475225479698410254
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 9826710443425479508
+      Name: "Modern Weapon Ammo - Bullet 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_weap_modern_ammo_bullet_tip_001"
+      }
+    }
+    Assets {
+      Id: 14488757550966657950
+      Name: "Pipe - Spiral"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_spiral_001"
+      }
+    }
+    Assets {
+      Id: 13929299943696999960
+      Name: "Ring - Beveled Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ring_faceted_002"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 17266395722054945459
+      Name: "Cone - Hollow"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cone-hollow_001"
+      }
+    }
+    Assets {
+      Id: 16462543262703932678
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 3742192248512024947
+      Name: "Pipe - Spiral"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_spiral_001"
+      }
+    }
+    Assets {
+      Id: 4163673387721216347
+      Name: "Ring - Beveled Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ring_faceted_002"
+      }
+    }
+    Assets {
+      Id: 6040461109962236062
+      Name: "Military Tank Modern Mudflap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
+      }
+    }
+    Assets {
+      Id: 9194258842198861561
+      Name: "Trim - Straight - 08m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_trimitives_001_straight_8m_ref"
+      }
+    }
+    Assets {
+      Id: 4687434041811739163
+      Name: "Urban Vehicle Car - Front Seat Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 10699661390325116495
+      Name: "Urban Vehicle Car - Front Seat Bottom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 13800164861431086472
+      Name: "Ring - Quarter Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_003"
+      }
+    }
+    Assets {
+      Id: 2554866549312619757
+      Name: "Gift Ribbon 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_gen_ribbon_gift_002_ref"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 3455996186086712350
+      Name: "Basic Bean 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_bean_001_ref"
+      }
+    }
+    Assets {
+      Id: 8944607976256557303
+      Name: "Arch"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_arch_001"
+      }
+    }
+    Assets {
+      Id: 2264041107168619230
+      Name: "Cone - Bullet"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bullet_001"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 9322981661257251752
+      Name: "Cylinder Bulged"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_cylinder_buldged_001_ref"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
       }
     }
     PrimaryAssetId {
@@ -11295,4 +11276,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

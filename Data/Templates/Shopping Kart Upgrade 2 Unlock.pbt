@@ -17279,287 +17279,12 @@ Assets {
       }
     }
     Assets {
-      Id: 13273306434404376496
-      Name: "Japanese Bamboo Hat - Tassel 01"
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_hat_tassel_01_ref"
-      }
-    }
-    Assets {
-      Id: 4673230646238167984
-      Name: "Japanese Umbrella Canopy 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_umbrella_canopy_001_ref"
-      }
-    }
-    Assets {
-      Id: 14790108367861695602
-      Name: "Japanese Umbrella Handle"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_umbrella_handle_001_ref"
-      }
-    }
-    Assets {
-      Id: 14104534632939460471
-      Name: "Japanese Hand Fan 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_fan_hand_001_ref"
-      }
-    }
-    Assets {
-      Id: 15275463334341845517
-      Name: "Katana Handle"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_katana_handle_001"
-      }
-    }
-    Assets {
-      Id: 3642695097438974619
-      Name: "Katana Guard"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_katana_guard_001"
-      }
-    }
-    Assets {
-      Id: 11326233822180704771
-      Name: "Katana Scabbard"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_katana_scabbard_001"
-      }
-    }
-    Assets {
-      Id: 13421850443352797633
-      Name: "Japanese Paper Lantern Simple 03"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_lantern_paper_simple_003_ref"
-      }
-    }
-    Assets {
-      Id: 2697686730902720891
-      Name: "Fantasy Chain Spiral 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_fan_chain_spiral_002_ref"
-      }
-    }
-    Assets {
-      Id: 16510875708337341714
-      Name: "Pipe - 45-Degree Long Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_006"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 8271972372222753270
-      Name: "Japanese Sitting Pillow 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_jpn_pillow_sitting_002_ref"
-      }
-    }
-    Assets {
-      Id: 7123132819432163114
-      Name: "Cube - Chamfered Large Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_hq_002"
-      }
-    }
-    Assets {
-      Id: 3833988768822260553
-      Name: "Cone - Truncated Hollow Concave"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cone_truncated_hollow_convex_001"
-      }
-    }
-    Assets {
-      Id: 5055429345916703247
-      Name: "Pipe"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_001"
-      }
-    }
-    Assets {
-      Id: 9194258842198861561
-      Name: "Trim - Straight - 08m"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_trimitives_001_straight_8m_ref"
-      }
-    }
-    Assets {
-      Id: 14388735883944523777
-      Name: "Cone - Truncated Hollow Thin"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cone_truncated_hollow_003"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 16625097751607684175
-      Name: "Prism - 8-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_octagon_001"
-      }
-    }
-    Assets {
-      Id: 12576872438035793628
-      Name: "Pipe - 6-Sided Thick - Rounded"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_sixsided_thick_001_ref"
-      }
-    }
-    Assets {
-      Id: 6839912269357168401
-      Name: "Cube - Chamfered Large"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_chamfer"
-      }
-    }
-    Assets {
-      Id: 3095542454204157164
-      Name: "Ring - Quarter Extra Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_004"
-      }
-    }
-    Assets {
-      Id: 2045648755612282326
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 6040461109962236062
-      Name: "Military Tank Modern Mudflap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
-      }
-    }
-    Assets {
-      Id: 15959255917611524949
-      Name: "Go Kart Tire Material"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 12542223800925587202
-        ParameterOverrides {
-          Overrides {
-            Name: "index"
-            Float: 113949
-          }
-          Overrides {
-            Name: "cmpc:Material"
-            Color {
-              R: 0.155926
-              G: 0.141263
-              B: 0.124772
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 12542223800925587202
-      Name: "Urban Car Tire Sidewall 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_veh_urb_car_sidewall_001_ref"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
-      }
-    }
-    Assets {
-      Id: 2039606655896571360
-      Name: "Urban Vehicle Car - Brake 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
       }
     }
     Assets {
@@ -17572,31 +17297,255 @@ Assets {
       }
     }
     Assets {
-      Id: 14842598604038967619
-      Name: "HoloUnlock"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 9804609765582245154
-        ParameterOverrides {
-        }
-      }
-    }
-    Assets {
-      Id: 9804609765582245154
-      Name: "Basic Hologram"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxmi_basic_hologram"
-      }
-    }
-    Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
+      Id: 2039606655896571360
+      Name: "Urban Vehicle Car - Brake 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+        AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+      }
+    }
+    Assets {
+      Id: 16163665952175281032
+      Name: "Urban Pipe Coupling 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+      }
+    }
+    Assets {
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+      }
+    }
+    Assets {
+      Id: 6040461109962236062
+      Name: "Military Tank Modern Mudflap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
+      }
+    }
+    Assets {
+      Id: 2045648755612282326
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 3095542454204157164
+      Name: "Ring - Quarter Extra Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_004"
+      }
+    }
+    Assets {
+      Id: 6839912269357168401
+      Name: "Cube - Chamfered Large"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_chamfer"
+      }
+    }
+    Assets {
+      Id: 12576872438035793628
+      Name: "Pipe - 6-Sided Thick - Rounded"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_sixsided_thick_001_ref"
+      }
+    }
+    Assets {
+      Id: 16625097751607684175
+      Name: "Prism - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_octagon_001"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 14388735883944523777
+      Name: "Cone - Truncated Hollow Thin"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cone_truncated_hollow_003"
+      }
+    }
+    Assets {
+      Id: 9194258842198861561
+      Name: "Trim - Straight - 08m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_trimitives_001_straight_8m_ref"
+      }
+    }
+    Assets {
+      Id: 5055429345916703247
+      Name: "Pipe"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_001"
+      }
+    }
+    Assets {
+      Id: 3833988768822260553
+      Name: "Cone - Truncated Hollow Concave"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cone_truncated_hollow_convex_001"
+      }
+    }
+    Assets {
+      Id: 7123132819432163114
+      Name: "Cube - Chamfered Large Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_hq_002"
+      }
+    }
+    Assets {
+      Id: 8271972372222753270
+      Name: "Japanese Sitting Pillow 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_pillow_sitting_002_ref"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 16510875708337341714
+      Name: "Pipe - 45-Degree Long Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve45_006"
+      }
+    }
+    Assets {
+      Id: 2697686730902720891
+      Name: "Fantasy Chain Spiral 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_fan_chain_spiral_002_ref"
+      }
+    }
+    Assets {
+      Id: 13421850443352797633
+      Name: "Japanese Paper Lantern Simple 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_lantern_paper_simple_003_ref"
+      }
+    }
+    Assets {
+      Id: 11326233822180704771
+      Name: "Katana Scabbard"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_katana_scabbard_001"
+      }
+    }
+    Assets {
+      Id: 3642695097438974619
+      Name: "Katana Guard"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_katana_guard_001"
+      }
+    }
+    Assets {
+      Id: 15275463334341845517
+      Name: "Katana Handle"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_katana_handle_001"
+      }
+    }
+    Assets {
+      Id: 14104534632939460471
+      Name: "Japanese Hand Fan 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_fan_hand_001_ref"
+      }
+    }
+    Assets {
+      Id: 14790108367861695602
+      Name: "Japanese Umbrella Handle"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_umbrella_handle_001_ref"
+      }
+    }
+    Assets {
+      Id: 4673230646238167984
+      Name: "Japanese Umbrella Canopy 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_umbrella_canopy_001_ref"
+      }
+    }
+    Assets {
+      Id: 13273306434404376496
+      Name: "Japanese Bamboo Hat - Tassel 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_jpn_hat_tassel_01_ref"
       }
     }
     PrimaryAssetId {
@@ -17606,4 +17555,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

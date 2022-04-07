@@ -15,17 +15,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6171099205028301999
+        ParentId: 4781671109827199097
         ChildIds: 12033818478033793623
         ChildIds: 595790240185220777
         ChildIds: 14059466076925027910
         ChildIds: 1410197839460349172
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Name"
-            String: "Tanker"
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }

@@ -5020,389 +5020,12 @@ Assets {
       }
     }
     Assets {
-      Id: 17538471581454369460
-      Name: "Metal Frame 05"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_grates_003_uv"
-      }
-    }
-    Assets {
-      Id: 10403588182349226913
-      Name: "Metal Complex Tech Panel Wall 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_complex_tech_panel_002_uv"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
+      Id: 8221182919805045275
+      Name: "Urban Vehicle Car - Rim 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 15177918941119336720
-      Name: "Metal Floor Panel 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_002_uv"
-      }
-    }
-    Assets {
-      Id: 9443696384793282129
-      Name: "Custom Emissive Glow Transparent"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8919871824294249785
-        ParameterOverrides {
-          Overrides {
-            Name: "emissive_boost"
-            Float: 3.616431
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 8919871824294249785
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 16258530429147644632
-      Name: "Lens - Half"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_half_lense_001"
-      }
-    }
-    Assets {
-      Id: 17842172761033527551
-      Name: "Basic Bean Thin Long"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_bean_thin_long_001_ref"
-      }
-    }
-    Assets {
-      Id: 9082260781483054898
-      Name: "Clay Form 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_clayform_001_ref"
-      }
-    }
-    Assets {
-      Id: 12772144586976769309
-      Name: "catskin3"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 17132691209281062938
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.321
-              G: 0.321
-              B: 0.321
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 5.93222284
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 2.06554651
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.0940000042
-              G: 0.0940000042
-              B: 0.0940000042
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 1
-          }
-          Overrides {
-            Name: "gradient_direction"
-            Vector {
-              X: 20
-              Z: 50
-            }
-          }
-          Overrides {
-            Name: "subsurface_scattering_color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "subsurface_scattering_intensity"
-            Float: 0.351644278
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0.65631175
-          }
-          Overrides {
-            Name: "v_offset"
-            Float: 0.74087
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 17132691209281062938
-      Name: "Mushroom Gills 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_nat_mushroom_gills_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 7323623308616107280
-      Name: "Clay Form 08"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_clayform_008_ref"
-      }
-    }
-    Assets {
-      Id: 16448140058190253871
-      Name: "Clay Form 15"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_clayform_015_ref"
-      }
-    }
-    Assets {
-      Id: 6305753378562858790
-      Name: "Clay Form 10"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_clayform_010_ref"
-      }
-    }
-    Assets {
-      Id: 16462543262703932678
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 10024842473709326090
-      Name: "CatSkin2"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 17132691209281062938
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.321
-              G: 0.321
-              B: 0.321
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "gradient_color"
-            Color {
-              R: 0.0940000042
-              G: 0.0940000042
-              B: 0.0940000042
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "subsurface_scattering_color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "u_tiles"
-            Float: 5.93222284
-          }
-          Overrides {
-            Name: "v_tiles"
-            Float: 2.06554651
-          }
-          Overrides {
-            Name: "rotate_material"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_shift"
-            Float: 0
-          }
-          Overrides {
-            Name: "gradient_falloff"
-            Float: 1
-          }
-          Overrides {
-            Name: "gradient_direction"
-            Vector {
-              X: 20
-              Z: 50
-            }
-          }
-          Overrides {
-            Name: "gradient_worldspace"
-            Bool: false
-          }
-          Overrides {
-            Name: "subsurface_scattering_intensity"
-            Float: 0.351644278
-          }
-          Overrides {
-            Name: "roughness_multiplier"
-            Float: 1
-          }
-          Overrides {
-            Name: "u_offset"
-            Float: 0.65631175
-          }
-          Overrides {
-            Name: "v_offset"
-            Float: 0.74087
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 5709338148592920452
-      Name: "Clay Form 13"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prim_org_clayform_013_ref"
-      }
-    }
-    Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 10834081793086782683
-      Name: "Rubber Dot Panels 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_001_uv"
-      }
-    }
-    Assets {
-      Id: 14387494754929522827
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 8558831699494248963
-      Name: "Car Paint 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_car-paint_001"
-      }
-    }
-    Assets {
-      Id: 8880548822722915942
-      Name: "Pipe - 8-Sided"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_eightsided_002"
-      }
-    }
-    Assets {
-      Id: 5313430657937779536
-      Name: "Metal Floor Panel 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_001_uv"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 14359217783623684227
-      Name: "Rubber Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_004_uv"
-      }
-    }
-    Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
-      }
-    }
-    Assets {
-      Id: 16163665952175281032
-      Name: "Urban Pipe Coupling 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
       }
     }
     Assets {
@@ -5415,12 +5038,201 @@ Assets {
       }
     }
     Assets {
-      Id: 8221182919805045275
-      Name: "Urban Vehicle Car - Rim 02"
+      Id: 16163665952175281032
+      Name: "Urban Pipe Coupling 02"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_rim_002_ref"
+        AssetId: "sm_prop_urb_pipes_acc_coupling_002_ref"
+      }
+    }
+    Assets {
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+      }
+    }
+    Assets {
+      Id: 14359217783623684227
+      Name: "Rubber Basic 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_004_uv"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 5313430657937779536
+      Name: "Metal Floor Panel 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_simple_floor_panel_001_uv"
+      }
+    }
+    Assets {
+      Id: 8880548822722915942
+      Name: "Pipe - 8-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_eightsided_002"
+      }
+    }
+    Assets {
+      Id: 8558831699494248963
+      Name: "Car Paint 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_car-paint_001"
+      }
+    }
+    Assets {
+      Id: 14387494754929522827
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 10834081793086782683
+      Name: "Rubber Dot Panels 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_001_uv"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
+      }
+    }
+    Assets {
+      Id: 5709338148592920452
+      Name: "Clay Form 13"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_clayform_013_ref"
+      }
+    }
+    Assets {
+      Id: 16462543262703932678
+      Name: "Sphere"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_002"
+      }
+    }
+    Assets {
+      Id: 6305753378562858790
+      Name: "Clay Form 10"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_clayform_010_ref"
+      }
+    }
+    Assets {
+      Id: 16448140058190253871
+      Name: "Clay Form 15"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_clayform_015_ref"
+      }
+    }
+    Assets {
+      Id: 7323623308616107280
+      Name: "Clay Form 08"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_clayform_008_ref"
+      }
+    }
+    Assets {
+      Id: 9082260781483054898
+      Name: "Clay Form 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_org_clayform_001_ref"
+      }
+    }
+    Assets {
+      Id: 17842172761033527551
+      Name: "Basic Bean Thin Long"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_bean_thin_long_001_ref"
+      }
+    }
+    Assets {
+      Id: 16258530429147644632
+      Name: "Lens - Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_half_lense_001"
+      }
+    }
+    Assets {
+      Id: 15177918941119336720
+      Name: "Metal Floor Panel 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_simple_floor_panel_002_uv"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 10403588182349226913
+      Name: "Metal Complex Tech Panel Wall 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_complex_tech_panel_002_uv"
+      }
+    }
+    Assets {
+      Id: 17538471581454369460
+      Name: "Metal Frame 05"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_grates_003_uv"
       }
     }
     PrimaryAssetId {
@@ -5430,4 +5242,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true

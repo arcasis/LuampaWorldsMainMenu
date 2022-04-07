@@ -12679,1262 +12679,12 @@ Assets {
       }
     }
     Assets {
-      Id: 11242450435817934693
-      Name: "Cube - Bottom-Aligned"
+      Id: 10493976187644509689
+      Name: "Urban Vehicle Car - Tire 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
-      }
-    }
-    Assets {
-      Id: 13229798138451002191
-      Name: "Custom Emissive Glow Transparent"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8919871824294249785
-        ParameterOverrides {
-          Overrides {
-            Name: "emissive_boost"
-            Float: 40.3685951
-          }
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.320000052
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 8919871824294249785
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 17538471581454369460
-      Name: "Metal Frame 05"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_grates_003_uv"
-      }
-    }
-    Assets {
-      Id: 10403588182349226913
-      Name: "Metal Complex Tech Panel Wall 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_complex_tech_panel_002_uv"
-      }
-    }
-    Assets {
-      Id: 8692326561761228252
-      Name: "Cylinder - Chamfered Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_002"
-      }
-    }
-    Assets {
-      Id: 1376976208896698458
-      Name: "Metal 9 Slice Lockers 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_advanced_9slice_lockers_001_ref"
-      }
-    }
-    Assets {
-      Id: 3613296641601149104
-      Name: "Pipe - 7-Sided Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_7_sided_thick_001"
-      }
-    }
-    Assets {
-      Id: 14023212398559948573
-      Name: "Metal Chrome"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "chrome_001"
-      }
-    }
-    Assets {
-      Id: 16628909226419210785
-      Name: "Chain Link 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_chainlink_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 13214683604363461790
-      Name: "Additive Soft Edge"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
-      }
-    }
-    Assets {
-      Id: 14669304767145580684
-      Name: "Cylinder - Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_hq_test_001"
-      }
-    }
-    Assets {
-      Id: 1717580252587172483
-      Name: "Pipe - 90-Degree Long"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve90_002"
-      }
-    }
-    Assets {
-      Id: 9443696384793282129
-      Name: "Custom Emissive Glow Transparent"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 8919871824294249785
-        ParameterOverrides {
-          Overrides {
-            Name: "emissive_boost"
-            Float: 3.616431
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 15177918941119336720
-      Name: "Metal Floor Panel 02"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_002_uv"
-      }
-    }
-    Assets {
-      Id: 2062312305449231890
-      Name: "Cube - Rounded Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_rounded_001"
-      }
-    }
-    Assets {
-      Id: 14387494754929522827
-      Name: "Emissive Glow Transparent"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_basic_emissive_001"
-      }
-    }
-    Assets {
-      Id: 5313430657937779536
-      Name: "Metal Floor Panel 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_simple_floor_panel_001_uv"
-      }
-    }
-    Assets {
-      Id: 7411120636089541575
-      Name: "Rubber Track 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_track_rubber_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 13800164861431086472
-      Name: "Ring - Quarter Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_003"
-      }
-    }
-    Assets {
-      Id: 17985009095639489418
-      Name: "Rubber Pattern 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_003_uv"
-      }
-    }
-    Assets {
-      Id: 10699661390325116495
-      Name: "Urban Vehicle Car - Front Seat Bottom 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 4687434041811739163
-      Name: "Urban Vehicle Car - Front Seat Top 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
-      }
-    }
-    Assets {
-      Id: 9736348815614444872
-      Name: "Metal Iron 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_iron_001"
-      }
-    }
-    Assets {
-      Id: 9194258842198861561
-      Name: "Trim - Straight - 08m"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_trimitives_001_straight_8m_ref"
-      }
-    }
-    Assets {
-      Id: 8976037617425375548
-      Name: "Metal Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_metal_basic_001"
-      }
-    }
-    Assets {
-      Id: 14212988502358508072
-      Name: "Metal Basic Steel"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
-      }
-    }
-    Assets {
-      Id: 6040461109962236062
-      Name: "Military Tank Modern Mudflap 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
-      }
-    }
-    Assets {
-      Id: 14607220722230306820
-      Name: "Ducky Swimring"
-      PlatformAssetType: 5
-      TemplateAsset {
-        ObjectBlock {
-          RootId: 17807431796005764175
-          Objects {
-            Id: 17807431796005764175
-            Name: "Ducky Swimring"
-            Transform {
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 4781671109827199097
-            ChildIds: 14415011355810457787
-            ChildIds: 9374908640348410320
-            ChildIds: 2414013291588255147
-            ChildIds: 9858265369161447518
-            ChildIds: 6360371486987278694
-            ChildIds: 7607992359455659862
-            ChildIds: 3206978829500112786
-            ChildIds: 14084105215295206564
-            ChildIds: 5296248913126203377
-            ChildIds: 2993037765961413927
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Folder {
-              IsGroup: true
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 14415011355810457787
-            Name: "Sphere"
-            Transform {
-              Location {
-                X: -7.38678
-                Y: -3.25330767e-08
-                Z: 47.2162476
-              }
-              Rotation {
-              }
-              Scale {
-                X: 0.673068225
-                Y: 0.646250129
-                Z: 0.733308911
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  R: 1
-                  G: 0.868874252
-                  B: 0.100000024
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 5251119395865291253
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 9374908640348410320
-            Name: "Donut"
-            Transform {
-              Location {
-                X: -62.9882927
-                Y: -3.25330767e-08
-              }
-              Rotation {
-              }
-              Scale {
-                X: 1
-                Y: 1
-                Z: 1
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  R: 1
-                  G: 0.868874252
-                  B: 0.100000024
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 6042541398969087147
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 2414013291588255147
-            Name: "Teardrop - Truncated"
-            Transform {
-              Location {
-                X: 50.4375038
-                Y: -3.25330767e-08
-                Z: 31.5709305
-              }
-              Rotation {
-                Pitch: 74.8612137
-                Yaw: -6.10351344e-05
-                Roll: -6.10351344e-05
-              }
-              Scale {
-                X: 0.18612279
-                Y: 0.498887092
-                Z: 0.498886883
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  R: 1
-                  G: 0.868874252
-                  B: 0.100000024
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 10341985677322135286
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 9858265369161447518
-            Name: "Sphere"
-            Transform {
-              Location {
-                X: 23.9169502
-                Y: 5
-                Z: 54.3863297
-              }
-              Rotation {
-                Pitch: 10.9777317
-              }
-              Scale {
-                X: 0.0392492898
-                Y: 0.186028138
-                Z: 0.294816375
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 5251119395865291253
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 6360371486987278694
-            Name: "Sphere"
-            Transform {
-              Location {
-                X: 23.9169502
-                Y: -5
-                Z: 54.3863297
-              }
-              Rotation {
-                Pitch: 10.9777317
-              }
-              Scale {
-                X: 0.0392492898
-                Y: 0.186028138
-                Z: 0.294816375
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 5251119395865291253
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 7607992359455659862
-            Name: "Sphere"
-            Transform {
-              Location {
-                X: 26.2285194
-                Y: -5
-                Z: 50.406189
-              }
-              Rotation {
-                Pitch: 10.9777317
-              }
-              Scale {
-                X: 0.0152451126
-                Y: 0.0722565874
-                Z: 0.114511855
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 5251119395865291253
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 3206978829500112786
-            Name: "Sphere"
-            Transform {
-              Location {
-                X: 26.2285194
-                Y: 5
-                Z: 50.406189
-              }
-              Rotation {
-                Pitch: 10.9777317
-              }
-              Scale {
-                X: 0.0152451126
-                Y: 0.0722565874
-                Z: 0.114511855
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 5251119395865291253
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 14084105215295206564
-            Name: "Teardrop - Truncated"
-            Transform {
-              Location {
-                X: 50.3872032
-                Y: 2.92797694e-07
-                Z: 30.4082031
-              }
-              Rotation {
-                Pitch: 74.8611526
-                Yaw: -6.10351635e-05
-                Roll: -6.10351635e-05
-              }
-              Scale {
-                X: -0.025
-                Y: 0.5
-                Z: 0.499
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 10341985677322135286
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 5296248913126203377
-            Name: "Horn"
-            Transform {
-              Location {
-                X: -12.116745
-                Y: -3.25330767e-08
-                Z: 74.8959274
-              }
-              Rotation {
-                Yaw: -89.9999924
-                Roll: -59.4657135
-              }
-              Scale {
-                X: 0.26823312
-                Y: 0.201992974
-                Z: 0.162094817
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  R: 1
-                  G: 0.868874252
-                  B: 0.100000024
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 289956829384114960
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-          Objects {
-            Id: 2993037765961413927
-            Name: "Horn"
-            Transform {
-              Location {
-                X: -118.62381
-                Y: -3.25330767e-08
-                Z: 3.51560211
-              }
-              Rotation {
-                Yaw: -90
-                Roll: -57.8168373
-              }
-              Scale {
-                X: 0.953587353
-                Y: 0.368688881
-                Z: 0.233470812
-              }
-            }
-            ParentId: 17807431796005764175
-            UnregisteredParameters {
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:id"
-                AssetReference {
-                  Id: 17984746574507509586
-                }
-              }
-              Overrides {
-                Name: "ma:Shared_BaseMaterial:color"
-                Color {
-                  R: 1
-                  G: 0.868874252
-                  B: 0.100000024
-                  A: 1
-                }
-              }
-            }
-            Collidable_v2 {
-              Value: "mc:ecollisionsetting:inheritfromparent"
-            }
-            Visible_v2 {
-              Value: "mc:evisibilitysetting:inheritfromparent"
-            }
-            CameraCollidable {
-              Value: "mc:ecollisionsetting:forceon"
-            }
-            CoreMesh {
-              MeshAsset {
-                Id: 289956829384114960
-              }
-              Teams {
-                IsTeamCollisionEnabled: true
-                IsEnemyCollisionEnabled: true
-              }
-              InteractWithTriggers: true
-              StaticMesh {
-                Physics {
-                }
-                BoundsScale: 1
-              }
-            }
-            Relevance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-            NetworkRelevanceDistance {
-              Value: "mc:eproxyrelevance:critical"
-            }
-          }
-        }
-        PrimaryAssetId {
-          AssetType: "None"
-          AssetId: "None"
-        }
-      }
-      Marketplace {
-        Description: "A child favorite pool or beach buddy!"
-      }
-      DirectlyPublished: true
-    }
-    Assets {
-      Id: 289956829384114960
-      Name: "Horn"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_horn_001"
-      }
-    }
-    Assets {
-      Id: 10341985677322135286
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
-      }
-    }
-    Assets {
-      Id: 6042541398969087147
-      Name: "Donut"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_001"
-      }
-    }
-    Assets {
-      Id: 17984746574507509586
-      Name: "Plastic Shiny"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "plastic_shiny_001"
-      }
-    }
-    Assets {
-      Id: 5251119395865291253
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 3497770579481158719
-      Name: "Prism - Asymmetrical Beveled - Large 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_corelogo_shape_002_half_top_01_ref"
-      }
-    }
-    Assets {
-      Id: 4904349013400544687
-      Name: "Custom Office Carpet Basic 01"
-      PlatformAssetType: 13
-      CustomMaterialAsset {
-        BaseMaterialId: 11378886407339488354
-        ParameterOverrides {
-          Overrides {
-            Name: "color"
-            Color {
-              R: 0.266
-              G: 0.201876372
-              B: 0.1528337
-              A: 1
-            }
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 11378886407339488354
-      Name: "Office Carpet Basic 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_urb_office_carpet_004_uv_ref"
-      }
-    }
-    Assets {
-      Id: 5055429345916703247
-      Name: "Pipe"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_001"
-      }
-    }
-    Assets {
-      Id: 2249794126015640337
-      Name: "Carbon Fiber 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_carbon-fiber_001"
-      }
-    }
-    Assets {
-      Id: 18032733315106131619
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 10879927612783763979
-      Name: "Plastic Inflatable 02 (Flat)"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_racing_inflatable_002_uv_ref"
-      }
-    }
-    Assets {
-      Id: 8936463881719161671
-      Name: "Ring - Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_005"
-      }
-    }
-    Assets {
-      Id: 7743026498385456138
-      Name: "Cylinder Half - Bottom-Aligned"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_half_bot_001_ref"
-      }
-    }
-    Assets {
-      Id: 8907250712472379037
-      Name: "Text 01: H"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_007"
-      }
-    }
-    Assets {
-      Id: 15137020520114347825
-      Name: "Text 01: C"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_002"
-      }
-    }
-    Assets {
-      Id: 3623106146891470624
-      Name: "Text 01: T"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_019"
-      }
-    }
-    Assets {
-      Id: 3884688726305173572
-      Name: "Text 01: W"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_022"
-      }
-    }
-    Assets {
-      Id: 17703210634578221906
-      Name: "Text 01: A"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_000"
-      }
-    }
-    Assets {
-      Id: 165148029823862965
-      Name: "Text 01: U"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_020"
-      }
-    }
-    Assets {
-      Id: 10834081793086782683
-      Name: "Rubber Dot Panels 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_scf_rubber_panels_001_uv"
-      }
-    }
-    Assets {
-      Id: 14813702630119492338
-      Name: "Text 01: L"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "F1_Text_011"
-      }
-    }
-    Assets {
-      Id: 7843271397880719726
-      Name: "Gem - Trillion Polished"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_gem_trillion_polished_001"
-      }
-    }
-    Assets {
-      Id: 16941473965829282315
-      Name: "Crescent 02 - Large"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_crescent_lg_002_ref"
-      }
-    }
-    Assets {
-      Id: 4678823670540210246
-      Name: "Plastic Matte"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "plastic_matte_001"
-      }
-    }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 3095542454204157164
-      Name: "Ring - Quarter Extra Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_quarter_torus_004"
-      }
-    }
-    Assets {
-      Id: 16223793041255679849
-      Name: "Metal 9 Slice Shipping Container 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mat_advanced_9slice_shipping_container001_ref"
-      }
-    }
-    Assets {
-      Id: 2045648755612282326
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 6120830901374274316
-      Name: "Rubber Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
-      Id: 16510875708337341714
-      Name: "Pipe - 45-Degree Long Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_curve45_006"
+        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
       }
     }
     Assets {
@@ -13947,12 +12697,444 @@ Assets {
       }
     }
     Assets {
-      Id: 10493976187644509689
-      Name: "Urban Vehicle Car - Tire 01"
+      Id: 16510875708337341714
+      Name: "Pipe - 45-Degree Long Thick"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_veh_urb_car_acc_tire_001_ref"
+        AssetId: "sm_pipe_curve45_006"
+      }
+    }
+    Assets {
+      Id: 6120830901374274316
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 2045648755612282326
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 16223793041255679849
+      Name: "Metal 9 Slice Shipping Container 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mat_advanced_9slice_shipping_container001_ref"
+      }
+    }
+    Assets {
+      Id: 3095542454204157164
+      Name: "Ring - Quarter Extra Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_004"
+      }
+    }
+    Assets {
+      Id: 12095835209017042614
+      Name: "Cube"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 4678823670540210246
+      Name: "Plastic Matte"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "plastic_matte_001"
+      }
+    }
+    Assets {
+      Id: 16941473965829282315
+      Name: "Crescent 02 - Large"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_crescent_lg_002_ref"
+      }
+    }
+    Assets {
+      Id: 7843271397880719726
+      Name: "Gem - Trillion Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_gem_trillion_polished_001"
+      }
+    }
+    Assets {
+      Id: 14813702630119492338
+      Name: "Text 01: L"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_011"
+      }
+    }
+    Assets {
+      Id: 10834081793086782683
+      Name: "Rubber Dot Panels 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_001_uv"
+      }
+    }
+    Assets {
+      Id: 165148029823862965
+      Name: "Text 01: U"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_020"
+      }
+    }
+    Assets {
+      Id: 17703210634578221906
+      Name: "Text 01: A"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_000"
+      }
+    }
+    Assets {
+      Id: 3884688726305173572
+      Name: "Text 01: W"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_022"
+      }
+    }
+    Assets {
+      Id: 3623106146891470624
+      Name: "Text 01: T"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_019"
+      }
+    }
+    Assets {
+      Id: 15137020520114347825
+      Name: "Text 01: C"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_002"
+      }
+    }
+    Assets {
+      Id: 8907250712472379037
+      Name: "Text 01: H"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "F1_Text_007"
+      }
+    }
+    Assets {
+      Id: 7743026498385456138
+      Name: "Cylinder Half - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_half_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 8936463881719161671
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
+      Id: 10879927612783763979
+      Name: "Plastic Inflatable 02 (Flat)"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_racing_inflatable_002_uv_ref"
+      }
+    }
+    Assets {
+      Id: 18032733315106131619
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 2249794126015640337
+      Name: "Carbon Fiber 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_carbon-fiber_001"
+      }
+    }
+    Assets {
+      Id: 5055429345916703247
+      Name: "Pipe"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_001"
+      }
+    }
+    Assets {
+      Id: 3497770579481158719
+      Name: "Prism - Asymmetrical Beveled - Large 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_corelogo_shape_002_half_top_01_ref"
+      }
+    }
+    Assets {
+      Id: 6040461109962236062
+      Name: "Military Tank Modern Mudflap 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_mil_tank_mod_mudflap_001_ref"
+      }
+    }
+    Assets {
+      Id: 14212988502358508072
+      Name: "Metal Basic Steel"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "steel_001"
+      }
+    }
+    Assets {
+      Id: 8976037617425375548
+      Name: "Metal Basic 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_basic_001"
+      }
+    }
+    Assets {
+      Id: 9194258842198861561
+      Name: "Trim - Straight - 08m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_trimitives_001_straight_8m_ref"
+      }
+    }
+    Assets {
+      Id: 9736348815614444872
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
+      }
+    }
+    Assets {
+      Id: 4687434041811739163
+      Name: "Urban Vehicle Car - Front Seat Top 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
+      }
+    }
+    Assets {
+      Id: 10699661390325116495
+      Name: "Urban Vehicle Car - Front Seat Bottom 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
+      }
+    }
+    Assets {
+      Id: 17985009095639489418
+      Name: "Rubber Pattern 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_003_uv"
+      }
+    }
+    Assets {
+      Id: 13800164861431086472
+      Name: "Ring - Quarter Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_quarter_torus_003"
+      }
+    }
+    Assets {
+      Id: 7411120636089541575
+      Name: "Rubber Track 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_track_rubber_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 5313430657937779536
+      Name: "Metal Floor Panel 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_simple_floor_panel_001_uv"
+      }
+    }
+    Assets {
+      Id: 14387494754929522827
+      Name: "Emissive Glow Transparent"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_basic_emissive_001"
+      }
+    }
+    Assets {
+      Id: 2062312305449231890
+      Name: "Cube - Rounded Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_rounded_001"
+      }
+    }
+    Assets {
+      Id: 15177918941119336720
+      Name: "Metal Floor Panel 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_simple_floor_panel_002_uv"
+      }
+    }
+    Assets {
+      Id: 1717580252587172483
+      Name: "Pipe - 90-Degree Long"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_curve90_002"
+      }
+    }
+    Assets {
+      Id: 14669304767145580684
+      Name: "Cylinder - Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_test_001"
+      }
+    }
+    Assets {
+      Id: 13214683604363461790
+      Name: "Additive Soft Edge"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_additive_edgefade"
+      }
+    }
+    Assets {
+      Id: 16628909226419210785
+      Name: "Chain Link 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_chainlink_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 14023212398559948573
+      Name: "Metal Chrome"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "chrome_001"
+      }
+    }
+    Assets {
+      Id: 3613296641601149104
+      Name: "Pipe - 7-Sided Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_7_sided_thick_001"
+      }
+    }
+    Assets {
+      Id: 1376976208896698458
+      Name: "Metal 9 Slice Lockers 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_advanced_9slice_lockers_001_ref"
+      }
+    }
+    Assets {
+      Id: 8692326561761228252
+      Name: "Cylinder - Chamfered Polished"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 10403588182349226913
+      Name: "Metal Complex Tech Panel Wall 02"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_complex_tech_panel_002_uv"
+      }
+    }
+    Assets {
+      Id: 17538471581454369460
+      Name: "Metal Frame 05"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_grates_003_uv"
+      }
+    }
+    Assets {
+      Id: 11242450435817934693
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
       }
     }
     PrimaryAssetId {
@@ -13962,4 +13144,3 @@ Assets {
   }
   SerializationVersion: 110
 }
-IncludesAllDependencies: true
