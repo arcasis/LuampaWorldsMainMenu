@@ -1,5 +1,7 @@
 --[[DESCRIPTION: Gets players' XP at game end and unlocks any vehicles that weren't already.]]
 
+--[[NOTE: Main Menu doesn't have round end, and so message broadcasts aren't included in this version of the script.]]
+
 function UnlockVehicles(player)
     
     local karts = player.serverUserData.karts

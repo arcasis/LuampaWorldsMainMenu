@@ -190,6 +190,7 @@ function OnPlayerJoined(player)
         end
     end
 
+    Events.BroadcastToPlayer(player, "StorageReady")
     -- ***** !! UNCOMMENT OUT BEFORE GOING LIVE !! Currently this is sent by test scripts after XP is given ***** --
     --Events.Broadcast("UpdateXP", player)
 end
