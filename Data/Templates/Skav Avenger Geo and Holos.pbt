@@ -1,6 +1,6 @@
 Assets {
   Id: 6045639201480520401
-  Name: "Scav Avenger Geo and Holos"
+  Name: "Skav Avenger Geo and Holos"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -837,4 +837,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Trucks Geo"
+  VirtualFolderPath: "2 Skav Avenger"
 }

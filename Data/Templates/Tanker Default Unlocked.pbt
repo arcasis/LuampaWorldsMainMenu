@@ -51789,4 +51789,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Trucks Geo"
+  VirtualFolderPath: "4 Tanker"
 }

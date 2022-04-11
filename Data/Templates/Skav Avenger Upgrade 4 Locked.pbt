@@ -1,13 +1,13 @@
 Assets {
-  Id: 2254938023492922603
-  Name: "Scav Avenger Upgrade 4 Unlocked"
+  Id: 3624150409616268551
+  Name: "Skav Avenger Upgrade 4 Locked"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 10222396190924574885
+      RootId: 7870539815647093554
       Objects {
-        Id: 10222396190924574885
-        Name: "Scav Avenger Upgrade 4 Unlocked"
+        Id: 7870539815647093554
+        Name: "Scav Avenger Upgrade 4 Locked"
         Transform {
           Scale {
             X: 1
@@ -16,10 +16,10 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 5735031132879914401
-        ChildIds: 8056953510296735074
-        ChildIds: 12183647355429084784
-        ChildIds: 11837978157456717090
+        ChildIds: 6819732460660260002
+        ChildIds: 14120019134087148355
+        ChildIds: 4683633746792798764
+        ChildIds: 16299510781308895950
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -39,7 +39,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5735031132879914401
+        Id: 6819732460660260002
         Name: "Turret"
         Transform {
           Location {
@@ -55,9 +55,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10222396190924574885
-        ChildIds: 15720456007656733424
-        ChildIds: 3632330639369715264
+        ParentId: 7870539815647093554
+        ChildIds: 7926196660738676841
+        ChildIds: 8081079024787686655
         UnregisteredParameters {
           Overrides {
             Name: "cs:TurretEnterSoundTemplate"
@@ -92,7 +92,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15720456007656733424
+        Id: 7926196660738676841
         Name: "Turret Root"
         Transform {
           Location {
@@ -107,40 +107,40 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5735031132879914401
-        ChildIds: 5433035600003767773
-        ChildIds: 5796539373939429344
-        ChildIds: 14167553819036175075
-        ChildIds: 16289963737607510257
-        ChildIds: 1161616795282279150
-        ChildIds: 4342131783448980666
-        ChildIds: 3712544679006719017
-        ChildIds: 11398044544857566801
-        ChildIds: 12710083371350057771
-        ChildIds: 5103486797154922366
-        ChildIds: 8336584709655848659
-        ChildIds: 8665832163049564785
-        ChildIds: 6929126871803098200
-        ChildIds: 14132176716329499743
-        ChildIds: 617914722043679295
-        ChildIds: 14517633127595843020
-        ChildIds: 588199083960463363
-        ChildIds: 17848068827331437674
-        ChildIds: 7251203187878314998
-        ChildIds: 5647812719009605375
-        ChildIds: 12263437203798465739
-        ChildIds: 3807328063703379118
-        ChildIds: 9402080158926251558
-        ChildIds: 11643782909686015554
-        ChildIds: 17548147600625862679
-        ChildIds: 2682859524139394560
-        ChildIds: 7857872543476766180
-        ChildIds: 10684618246492202656
-        ChildIds: 3069465217342379599
-        ChildIds: 7890370426339480131
-        ChildIds: 1083972947618517421
-        ChildIds: 11221399932425151478
-        ChildIds: 8052263300318350574
+        ParentId: 6819732460660260002
+        ChildIds: 7532110852996513749
+        ChildIds: 8750764965929330424
+        ChildIds: 16636762421808967997
+        ChildIds: 173445347437092083
+        ChildIds: 17639720327806016745
+        ChildIds: 8896514603152552343
+        ChildIds: 16399069040091812083
+        ChildIds: 8885140796740776079
+        ChildIds: 6223183923309431079
+        ChildIds: 16160867051820299500
+        ChildIds: 5202520154401150585
+        ChildIds: 17269233906124904829
+        ChildIds: 13955844268067841403
+        ChildIds: 18376451899889320253
+        ChildIds: 3410394972975355938
+        ChildIds: 13887381117923150176
+        ChildIds: 1911612134838101593
+        ChildIds: 5572627177866618960
+        ChildIds: 17357048200630775655
+        ChildIds: 3949165799142725132
+        ChildIds: 5494100451094710661
+        ChildIds: 12846556742902780535
+        ChildIds: 14448660771390380535
+        ChildIds: 228050824632219231
+        ChildIds: 14222288959270242865
+        ChildIds: 13676562654240930776
+        ChildIds: 9999080600386598080
+        ChildIds: 7832415626535313360
+        ChildIds: 17238280237220366469
+        ChildIds: 8193619019850848479
+        ChildIds: 13815090369232895008
+        ChildIds: 11634014046522459145
+        ChildIds: 13609286842946377941
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -161,7 +161,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5433035600003767773
+        Id: 7532110852996513749
         Name: "Sci-fi Ship Chair 01"
         Transform {
           Location {
@@ -177,24 +177,24 @@ Assets {
             Z: 0.786611795
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -234,7 +234,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5796539373939429344
+        Id: 8750764965929330424
         Name: "Sci-fi Chair Leg 01"
         Transform {
           Location {
@@ -250,12 +250,18 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 13545708288262914804
             }
           }
         }
@@ -295,7 +301,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14167553819036175075
+        Id: 16636762421808967997
         Name: "Mecha - Frame - Forearm 01"
         Transform {
           Location {
@@ -312,12 +318,12 @@ Assets {
             Z: 0.579961956
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -357,7 +363,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16289963737607510257
+        Id: 173445347437092083
         Name: "Mecha - Frame - Knee Joint 01"
         Transform {
           Location {
@@ -374,18 +380,18 @@ Assets {
             Z: 0.529291272
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -425,7 +431,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1161616795282279150
+        Id: 17639720327806016745
         Name: "Modern Weapon - Disc 01"
         Transform {
           Location {
@@ -442,12 +448,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -487,7 +493,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4342131783448980666
+        Id: 8896514603152552343
         Name: "Modern Weapon - Disc 01"
         Transform {
           Location {
@@ -504,12 +510,12 @@ Assets {
             Z: 1.2782464
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -549,7 +555,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3712544679006719017
+        Id: 16399069040091812083
         Name: "Modern Weapon - Disc 01"
         Transform {
           Location {
@@ -566,12 +572,12 @@ Assets {
             Z: 1.2782464
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -611,7 +617,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11398044544857566801
+        Id: 8885140796740776079
         Name: "Modern Weapon - Disc 01"
         Transform {
           Location {
@@ -628,12 +634,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -673,7 +679,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12710083371350057771
+        Id: 6223183923309431079
         Name: "Sci-fi Chair Armrest 01"
         Transform {
           Location {
@@ -691,12 +697,18 @@ Assets {
             Z: 0.635982752
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:id"
+            AssetReference {
+              Id: 13545708288262914804
             }
           }
         }
@@ -736,7 +748,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5103486797154922366
+        Id: 16160867051820299500
         Name: "Modern Weapon - Sight Forward 02"
         Transform {
           Location {
@@ -755,12 +767,12 @@ Assets {
             Z: 2.98994875
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -800,7 +812,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8336584709655848659
+        Id: 5202520154401150585
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -819,18 +831,18 @@ Assets {
             Z: 1.04217708
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -870,7 +882,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8665832163049564785
+        Id: 17269233906124904829
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
@@ -889,18 +901,18 @@ Assets {
             Z: 1.04217708
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -940,7 +952,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6929126871803098200
+        Id: 13955844268067841403
         Name: "Modern Weapon - Body 04"
         Transform {
           Location {
@@ -959,18 +971,18 @@ Assets {
             Z: 1.55890858
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -1010,7 +1022,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14132176716329499743
+        Id: 18376451899889320253
         Name: "Modern Weapon - Body 04"
         Transform {
           Location {
@@ -1029,18 +1041,18 @@ Assets {
             Z: 1.55890858
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -1080,7 +1092,7 @@ Assets {
         }
       }
       Objects {
-        Id: 617914722043679295
+        Id: 3410394972975355938
         Name: "Group"
         Transform {
           Location {
@@ -1096,10 +1108,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
-        ChildIds: 1030055252288310231
-        ChildIds: 14505161123697996559
-        ChildIds: 15950303317666589877
+        ParentId: 7926196660738676841
+        ChildIds: 13699124211169857291
+        ChildIds: 12524891755003074629
+        ChildIds: 1128716128025354298
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1120,7 +1132,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1030055252288310231
+        Id: 13699124211169857291
         Name: "Group"
         Transform {
           Location {
@@ -1136,7 +1148,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 617914722043679295
+        ParentId: 3410394972975355938
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1157,7 +1169,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14505161123697996559
+        Id: 12524891755003074629
         Name: "Group"
         Transform {
           Location {
@@ -1173,7 +1185,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 617914722043679295
+        ParentId: 3410394972975355938
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1194,7 +1206,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15950303317666589877
+        Id: 1128716128025354298
         Name: "Group"
         Transform {
           Location {
@@ -1210,7 +1222,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 617914722043679295
+        ParentId: 3410394972975355938
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1231,7 +1243,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14517633127595843020
+        Id: 13887381117923150176
         Name: "Mecha - Armor - Ankle 02"
         Transform {
           Location {
@@ -1245,12 +1257,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -1290,7 +1302,7 @@ Assets {
         }
       }
       Objects {
-        Id: 588199083960463363
+        Id: 1911612134838101593
         Name: "Group"
         Transform {
           Location {
@@ -1306,10 +1318,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
-        ChildIds: 1171151284641241835
-        ChildIds: 275227573520743445
-        ChildIds: 501051225326809429
+        ParentId: 7926196660738676841
+        ChildIds: 13727019148634860759
+        ChildIds: 8864696245996052045
+        ChildIds: 11200175367508669062
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1330,7 +1342,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1171151284641241835
+        Id: 13727019148634860759
         Name: "Group"
         Transform {
           Location {
@@ -1346,7 +1358,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 588199083960463363
+        ParentId: 1911612134838101593
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1367,7 +1379,7 @@ Assets {
         }
       }
       Objects {
-        Id: 275227573520743445
+        Id: 8864696245996052045
         Name: "Group"
         Transform {
           Location {
@@ -1383,7 +1395,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 588199083960463363
+        ParentId: 1911612134838101593
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1404,7 +1416,7 @@ Assets {
         }
       }
       Objects {
-        Id: 501051225326809429
+        Id: 11200175367508669062
         Name: "Group"
         Transform {
           Location {
@@ -1420,7 +1432,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 588199083960463363
+        ParentId: 1911612134838101593
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1441,7 +1453,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17848068827331437674
+        Id: 5572627177866618960
         Name: "Modern Weapon - Body 04"
         Transform {
           Location {
@@ -1460,18 +1472,18 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -1511,7 +1523,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7251203187878314998
+        Id: 17357048200630775655
         Name: "Mecha - Frame - Neck 01"
         Transform {
           Location {
@@ -1530,18 +1542,32 @@ Assets {
             Z: 0.930507362
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -1581,7 +1607,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5647812719009605375
+        Id: 3949165799142725132
         Name: "Mecha - Frame - Knee Joint 01"
         Transform {
           Location {
@@ -1599,18 +1625,32 @@ Assets {
             Z: 0.553020477
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -1650,7 +1690,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12263437203798465739
+        Id: 5494100451094710661
         Name: "Mecha - Cannon Socket 01"
         Transform {
           Location {
@@ -1666,18 +1706,32 @@ Assets {
             Z: 0.613099158
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -1717,7 +1771,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3807328063703379118
+        Id: 12846556742902780535
         Name: "Modern Weapon - Body 04"
         Transform {
           Location {
@@ -1736,18 +1790,18 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -1787,7 +1841,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9402080158926251558
+        Id: 14448660771390380535
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -1803,18 +1857,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -1854,7 +1922,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11643782909686015554
+        Id: 228050824632219231
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -1870,18 +1938,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -1921,7 +2003,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17548147600625862679
+        Id: 14222288959270242865
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -1937,18 +2019,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -1988,7 +2084,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2682859524139394560
+        Id: 13676562654240930776
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -2004,18 +2100,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -2055,7 +2165,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7857872543476766180
+        Id: 9999080600386598080
         Name: "Mecha - Frame - Neck 01"
         Transform {
           Location {
@@ -2074,18 +2184,32 @@ Assets {
             Z: 0.930289209
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -2125,7 +2249,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10684618246492202656
+        Id: 7832415626535313360
         Name: "Mecha - Frame - Knee Joint 01"
         Transform {
           Location {
@@ -2144,18 +2268,32 @@ Assets {
             Z: 0.553020477
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -2195,7 +2333,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3069465217342379599
+        Id: 17238280237220366469
         Name: "Mecha - Frame - Knee Joint 01"
         Transform {
           Location {
@@ -2214,18 +2352,32 @@ Assets {
             Z: 0.553020477
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -2265,7 +2417,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7890370426339480131
+        Id: 8193619019850848479
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -2284,12 +2436,12 @@ Assets {
             Z: 0.790893495
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2303,7 +2455,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2317,7 +2469,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2331,7 +2483,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -2371,7 +2523,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1083972947618517421
+        Id: 13815090369232895008
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -2390,12 +2542,12 @@ Assets {
             Z: 0.790893495
           }
         }
-        ParentId: 15720456007656733424
+        ParentId: 7926196660738676841
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2409,7 +2561,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2423,7 +2575,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2437,7 +2589,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -2477,7 +2629,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11221399932425151478
+        Id: 11634014046522459145
         Name: "Group"
         Transform {
           Location {
@@ -2493,10 +2645,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
-        ChildIds: 11992906076259510785
-        ChildIds: 952459691952140693
-        ChildIds: 8218448495001322027
+        ParentId: 7926196660738676841
+        ChildIds: 13353024547041979110
+        ChildIds: 11229075340445871370
+        ChildIds: 12563632169707931553
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2517,7 +2669,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11992906076259510785
+        Id: 13353024547041979110
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -2535,12 +2687,12 @@ Assets {
             Z: 0.753263175
           }
         }
-        ParentId: 11221399932425151478
+        ParentId: 11634014046522459145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2558,7 +2710,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2572,7 +2724,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2586,7 +2738,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -2626,7 +2778,7 @@ Assets {
         }
       }
       Objects {
-        Id: 952459691952140693
+        Id: 11229075340445871370
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -2644,12 +2796,12 @@ Assets {
             Z: 0.753263175
           }
         }
-        ParentId: 11221399932425151478
+        ParentId: 11634014046522459145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2667,7 +2819,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2681,7 +2833,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2695,7 +2847,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -2735,7 +2887,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8218448495001322027
+        Id: 12563632169707931553
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -2752,12 +2904,12 @@ Assets {
             Z: 0.753263175
           }
         }
-        ParentId: 11221399932425151478
+        ParentId: 11634014046522459145
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2775,7 +2927,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2789,7 +2941,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2803,7 +2955,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -2843,7 +2995,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8052263300318350574
+        Id: 13609286842946377941
         Name: "Group"
         Transform {
           Location {
@@ -2859,10 +3011,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15720456007656733424
-        ChildIds: 12449119348063634216
-        ChildIds: 13328125315507645849
-        ChildIds: 7077737820657068720
+        ParentId: 7926196660738676841
+        ChildIds: 17718312468170871629
+        ChildIds: 6106384750409172324
+        ChildIds: 6944037887127573181
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2883,7 +3035,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12449119348063634216
+        Id: 17718312468170871629
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -2901,12 +3053,12 @@ Assets {
             Z: 0.753263175
           }
         }
-        ParentId: 8052263300318350574
+        ParentId: 13609286842946377941
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2924,7 +3076,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2938,7 +3090,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -2952,7 +3104,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -2992,7 +3144,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13328125315507645849
+        Id: 6106384750409172324
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -3010,12 +3162,12 @@ Assets {
             Z: 0.753263175
           }
         }
-        ParentId: 8052263300318350574
+        ParentId: 13609286842946377941
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3033,7 +3185,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3047,7 +3199,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3061,7 +3213,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -3101,7 +3253,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7077737820657068720
+        Id: 6944037887127573181
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -3118,12 +3270,12 @@ Assets {
             Z: 0.753263175
           }
         }
-        ParentId: 8052263300318350574
+        ParentId: 13609286842946377941
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3141,7 +3293,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3155,7 +3307,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3169,7 +3321,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -3209,7 +3361,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3632330639369715264
+        Id: 8081079024787686655
         Name: "Turret Base Geo"
         Transform {
           Location {
@@ -3224,10 +3376,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5735031132879914401
-        ChildIds: 14895839427250858589
-        ChildIds: 8909192882901377370
-        ChildIds: 17361133528814784200
+        ParentId: 6819732460660260002
+        ChildIds: 6329295410948265552
+        ChildIds: 16549133142614398127
+        ChildIds: 17179719755526729019
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3248,7 +3400,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14895839427250858589
+        Id: 6329295410948265552
         Name: "Military Tank Historic Turret Seal 01"
         Transform {
           Location {
@@ -3264,12 +3416,12 @@ Assets {
             Z: 0.721159041
           }
         }
-        ParentId: 3632330639369715264
+        ParentId: 8081079024787686655
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3321,7 +3473,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8909192882901377370
+        Id: 16549133142614398127
         Name: "Mecha - Armor - Calf 01"
         Transform {
           Location {
@@ -3339,12 +3491,12 @@ Assets {
             Z: 0.557257056
           }
         }
-        ParentId: 3632330639369715264
+        ParentId: 8081079024787686655
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3392,7 +3544,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17361133528814784200
+        Id: 17179719755526729019
         Name: "Military Tank Historic Turret Seal 01"
         Transform {
           Location {
@@ -3411,12 +3563,12 @@ Assets {
             Z: 0.491832256
           }
         }
-        ParentId: 3632330639369715264
+        ParentId: 8081079024787686655
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3464,7 +3616,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8056953510296735074
+        Id: 14120019134087148355
         Name: "Wheels"
         Transform {
           Location {
@@ -3477,11 +3629,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10222396190924574885
-        ChildIds: 13584301189494519415
-        ChildIds: 17981020255113422126
-        ChildIds: 16016566067071567417
-        ChildIds: 1563704056007355848
+        ParentId: 7870539815647093554
+        ChildIds: 5546532034776606149
+        ChildIds: 2481413999485668548
+        ChildIds: 16872674520027297170
+        ChildIds: 1938885135869628878
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3499,7 +3651,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13584301189494519415
+        Id: 5546532034776606149
         Name: "Wheel Driver Side Front "
         Transform {
           Location {
@@ -3515,9 +3667,9 @@ Assets {
             Z: 1.031
           }
         }
-        ParentId: 8056953510296735074
-        ChildIds: 17297657055359206343
-        ChildIds: 11786018781608882591
+        ParentId: 14120019134087148355
+        ChildIds: 10211423691079759640
+        ChildIds: 2452350886273525437
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3535,7 +3687,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17297657055359206343
+        Id: 10211423691079759640
         Name: "Tire Worn"
         Transform {
           Location {
@@ -3550,12 +3702,12 @@ Assets {
             Z: 0.735
           }
         }
-        ParentId: 13584301189494519415
+        ParentId: 5546532034776606149
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -3593,7 +3745,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11786018781608882591
+        Id: 2452350886273525437
         Name: "Urban Vehicle Car - Rim 01"
         Transform {
           Location {
@@ -3608,18 +3760,18 @@ Assets {
             Z: 1.1
           }
         }
-        ParentId: 13584301189494519415
+        ParentId: 5546532034776606149
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3629,7 +3781,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3679,7 +3831,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17981020255113422126
+        Id: 2481413999485668548
         Name: "Wheel Driver Side Rear"
         Transform {
           Location {
@@ -3695,9 +3847,9 @@ Assets {
             Z: 1.031
           }
         }
-        ParentId: 8056953510296735074
-        ChildIds: 9135105237346468511
-        ChildIds: 7062438092050637565
+        ParentId: 14120019134087148355
+        ChildIds: 8801637768246661814
+        ChildIds: 5934619525342495403
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3715,7 +3867,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9135105237346468511
+        Id: 8801637768246661814
         Name: "Tire Worn"
         Transform {
           Location {
@@ -3730,12 +3882,12 @@ Assets {
             Z: 0.734999895
           }
         }
-        ParentId: 17981020255113422126
+        ParentId: 2481413999485668548
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -3773,7 +3925,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7062438092050637565
+        Id: 5934619525342495403
         Name: "Urban Vehicle Car - Rim 01"
         Transform {
           Location {
@@ -3788,18 +3940,18 @@ Assets {
             Z: 1.1
           }
         }
-        ParentId: 17981020255113422126
+        ParentId: 2481413999485668548
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3809,7 +3961,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3859,7 +4011,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16016566067071567417
+        Id: 16872674520027297170
         Name: "Wheel Passenger Side Front "
         Transform {
           Location {
@@ -3875,9 +4027,9 @@ Assets {
             Z: 1.031
           }
         }
-        ParentId: 8056953510296735074
-        ChildIds: 375617674035884021
-        ChildIds: 5458032611911283272
+        ParentId: 14120019134087148355
+        ChildIds: 13299605394048844925
+        ChildIds: 17891573930256359738
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -3895,7 +4047,7 @@ Assets {
         }
       }
       Objects {
-        Id: 375617674035884021
+        Id: 13299605394048844925
         Name: "Tire Worn"
         Transform {
           Location {
@@ -3911,12 +4063,12 @@ Assets {
             Z: 0.719453156
           }
         }
-        ParentId: 16016566067071567417
+        ParentId: 16872674520027297170
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -3954,7 +4106,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5458032611911283272
+        Id: 17891573930256359738
         Name: "Urban Vehicle Car - Rim 01"
         Transform {
           Location {
@@ -3968,18 +4120,18 @@ Assets {
             Z: 1.1
           }
         }
-        ParentId: 16016566067071567417
+        ParentId: 16872674520027297170
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -3989,7 +4141,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4039,7 +4191,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1563704056007355848
+        Id: 1938885135869628878
         Name: "Wheel Passenger Side Rear"
         Transform {
           Location {
@@ -4055,9 +4207,9 @@ Assets {
             Z: 1.03068435
           }
         }
-        ParentId: 8056953510296735074
-        ChildIds: 18090796109925277977
-        ChildIds: 7082102360523861854
+        ParentId: 14120019134087148355
+        ChildIds: 2228641266918635322
+        ChildIds: 12936682816673340721
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4075,7 +4227,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18090796109925277977
+        Id: 2228641266918635322
         Name: "Tire Worn"
         Transform {
           Location {
@@ -4091,12 +4243,12 @@ Assets {
             Z: 0.735
           }
         }
-        ParentId: 1563704056007355848
+        ParentId: 1938885135869628878
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -4134,7 +4286,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7082102360523861854
+        Id: 12936682816673340721
         Name: "Urban Vehicle Car - Rim 01"
         Transform {
           Location {
@@ -4149,18 +4301,18 @@ Assets {
             Z: 1.1
           }
         }
-        ParentId: 1563704056007355848
+        ParentId: 1938885135869628878
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4170,7 +4322,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4220,7 +4372,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12183647355429084784
+        Id: 4683633746792798764
         Name: "Urban Car - Truck Lifted 01 (Prop)"
         Transform {
           Location {
@@ -4235,10 +4387,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10222396190924574885
-        ChildIds: 5037817631228147608
-        ChildIds: 13210169835187211502
-        ChildIds: 5622467783041915820
+        ParentId: 7870539815647093554
+        ChildIds: 8072271435601284459
+        ChildIds: 849813128091856765
+        ChildIds: 3507342156314337643
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4256,7 +4408,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5037817631228147608
+        Id: 8072271435601284459
         Name: "Hood"
         Transform {
           Location {
@@ -4271,7 +4423,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12183647355429084784
+        ParentId: 4683633746792798764
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4289,7 +4441,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13210169835187211502
+        Id: 849813128091856765
         Name: "Body"
         Transform {
           Location {
@@ -4303,35 +4455,35 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12183647355429084784
-        ChildIds: 6089821247776144789
-        ChildIds: 4420215976901783715
-        ChildIds: 2195976927566211897
-        ChildIds: 1330430415765319890
-        ChildIds: 1272142189849201924
-        ChildIds: 10095237480472493510
-        ChildIds: 13486186437557533655
-        ChildIds: 10819266081028456543
-        ChildIds: 11113225748886151884
-        ChildIds: 15347829099730722907
-        ChildIds: 3740814069794376691
-        ChildIds: 6491342688499654133
-        ChildIds: 7643323786689571425
-        ChildIds: 13555903588886902667
-        ChildIds: 7091430935118290508
-        ChildIds: 12753612011040512488
-        ChildIds: 8530836833056768780
-        ChildIds: 9878598473407637027
-        ChildIds: 7664008544963676346
-        ChildIds: 8106259249931259877
-        ChildIds: 316327979937669779
-        ChildIds: 14324094532140866843
-        ChildIds: 5188566785432575677
-        ChildIds: 7603775002680589154
-        ChildIds: 7024778311094916206
-        ChildIds: 1648346555029971045
-        ChildIds: 12725558438589626980
-        ChildIds: 17635414263964532454
+        ParentId: 4683633746792798764
+        ChildIds: 4407985000641521896
+        ChildIds: 1692298897989176074
+        ChildIds: 11607491499823575128
+        ChildIds: 11324482800124502690
+        ChildIds: 2053047069284688177
+        ChildIds: 2323050262093546092
+        ChildIds: 17182489362061222778
+        ChildIds: 16072202070349227508
+        ChildIds: 17714472834371630932
+        ChildIds: 1575472137221739688
+        ChildIds: 14927178068258713379
+        ChildIds: 6116541793704624932
+        ChildIds: 7514938697172415337
+        ChildIds: 5394948822698213863
+        ChildIds: 6313208002847828751
+        ChildIds: 15975780121402423936
+        ChildIds: 10482011768122814207
+        ChildIds: 7850394756978001439
+        ChildIds: 2402081808372207967
+        ChildIds: 3088014698886659779
+        ChildIds: 8083061514423001772
+        ChildIds: 12249496738387581489
+        ChildIds: 14203056167118636602
+        ChildIds: 7933202545465924407
+        ChildIds: 10847950958076524476
+        ChildIds: 10191896119890319085
+        ChildIds: 4534164433500934586
+        ChildIds: 15209164914542354768
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -4349,7 +4501,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6089821247776144789
+        Id: 4407985000641521896
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -4368,12 +4520,12 @@ Assets {
             Z: 1.31612408
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4387,19 +4539,19 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -4439,7 +4591,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4420215976901783715
+        Id: 1692298897989176074
         Name: "Mecha - Armor - Ribs 01"
         Transform {
           Location {
@@ -4458,12 +4610,12 @@ Assets {
             Z: 1.31612408
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4477,19 +4629,19 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -4529,7 +4681,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2195976927566211897
+        Id: 11607491499823575128
         Name: "Mecha - Cannon 01"
         Transform {
           Location {
@@ -4545,24 +4697,24 @@ Assets {
             Z: 1.27952754
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -4602,7 +4754,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1330430415765319890
+        Id: 11324482800124502690
         Name: "Mecha - Armor - Shoulder Thruster 01"
         Transform {
           Location {
@@ -4621,12 +4773,12 @@ Assets {
             Z: 0.401128441
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4640,13 +4792,34 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -4686,7 +4859,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1272142189849201924
+        Id: 2053047069284688177
         Name: "Mecha - Armor - Shoulder Thruster 01"
         Transform {
           Location {
@@ -4705,12 +4878,12 @@ Assets {
             Z: 0.401128441
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4724,13 +4897,34 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -4770,7 +4964,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10095237480472493510
+        Id: 2323050262093546092
         Name: "Mecha - Armor - Pack 01 - Top 01"
         Transform {
           Location {
@@ -4789,12 +4983,12 @@ Assets {
             Z: 0.610835433
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4808,19 +5002,40 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -4860,7 +5075,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13486186437557533655
+        Id: 17182489362061222778
         Name: "Urban Vehicle Truck - Bumper Rear 01"
         Transform {
           Location {
@@ -4875,12 +5090,12 @@ Assets {
             Z: 1.05969214
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4890,7 +5105,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Lights:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4936,7 +5151,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10819266081028456543
+        Id: 16072202070349227508
         Name: "Urban Vehicle Car - Body Front 01"
         Transform {
           Location {
@@ -4953,12 +5168,12 @@ Assets {
             Z: 1.1
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -4976,13 +5191,13 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -5022,7 +5237,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11113225748886151884
+        Id: 17714472834371630932
         Name: "Wedge - Pointed Complex - Large 01"
         Transform {
           Location {
@@ -5040,12 +5255,12 @@ Assets {
             Z: 0.157144859
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -5097,7 +5312,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15347829099730722907
+        Id: 1575472137221739688
         Name: "Wedge - Pointed Complex - Large 01"
         Transform {
           Location {
@@ -5116,12 +5331,12 @@ Assets {
             Z: 0.157144859
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -5173,7 +5388,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3740814069794376691
+        Id: 14927178068258713379
         Name: "Wedge - Pointed Complex - Large 01"
         Transform {
           Location {
@@ -5192,12 +5407,12 @@ Assets {
             Z: 0.157144859
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -5249,7 +5464,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6491342688499654133
+        Id: 6116541793704624932
         Name: "Wedge - Pointed Complex - Large 01"
         Transform {
           Location {
@@ -5268,12 +5483,12 @@ Assets {
             Z: 0.157144859
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -5325,7 +5540,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7643323786689571425
+        Id: 7514938697172415337
         Name: "Wedge - Pointed Complex - Large 01"
         Transform {
           Location {
@@ -5344,12 +5559,12 @@ Assets {
             Z: 0.157144859
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -5401,7 +5616,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13555903588886902667
+        Id: 5394948822698213863
         Name: "Running Board Passenger Side"
         Transform {
           Location {
@@ -5417,11 +5632,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 13982891369888276038
-        ChildIds: 4708039374812360804
-        ChildIds: 2608520367108544626
-        ChildIds: 10668046306288374698
+        ParentId: 849813128091856765
+        ChildIds: 8456831496553949715
+        ChildIds: 11175493975835654252
+        ChildIds: 4615492422271085661
+        ChildIds: 13863738994047567108
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5439,7 +5654,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13982891369888276038
+        Id: 8456831496553949715
         Name: "Urban Vehicle Car - Running Board Middle 01"
         Transform {
           Location {
@@ -5454,18 +5669,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13555903588886902667
+        ParentId: 5394948822698213863
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5503,7 +5732,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4708039374812360804
+        Id: 11175493975835654252
         Name: "Urban Vehicle Car - Running Board End 01"
         Transform {
           Location {
@@ -5519,18 +5748,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13555903588886902667
+        ParentId: 5394948822698213863
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5568,7 +5811,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2608520367108544626
+        Id: 4615492422271085661
         Name: "Urban Vehicle Car - Running Board Middle 01"
         Transform {
           Location {
@@ -5584,18 +5827,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13555903588886902667
+        ParentId: 5394948822698213863
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5633,7 +5890,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10668046306288374698
+        Id: 13863738994047567108
         Name: "Urban Vehicle Car - Running Board End 01"
         Transform {
           Location {
@@ -5649,18 +5906,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13555903588886902667
+        ParentId: 5394948822698213863
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5698,7 +5969,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7091430935118290508
+        Id: 6313208002847828751
         Name: "Running Board Driver Side"
         Transform {
           Location {
@@ -5714,12 +5985,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 3651336230251844740
-        ChildIds: 776727922430210957
-        ChildIds: 916477602105853489
-        ChildIds: 6394506266807603215
-        ChildIds: 15926810181998423331
+        ParentId: 849813128091856765
+        ChildIds: 12211954416908840312
+        ChildIds: 8944009759787940215
+        ChildIds: 1734708875694965053
+        ChildIds: 13194652243385528214
+        ChildIds: 2280642416468632156
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5737,7 +6008,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3651336230251844740
+        Id: 12211954416908840312
         Name: "Urban Vehicle Car - Running Board Middle 01"
         Transform {
           Location {
@@ -5752,18 +6023,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7091430935118290508
+        ParentId: 6313208002847828751
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5801,7 +6086,7 @@ Assets {
         }
       }
       Objects {
-        Id: 776727922430210957
+        Id: 8944009759787940215
         Name: "Urban Vehicle Car - Running Board End 01"
         Transform {
           Location {
@@ -5817,18 +6102,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7091430935118290508
+        ParentId: 6313208002847828751
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5866,7 +6165,7 @@ Assets {
         }
       }
       Objects {
-        Id: 916477602105853489
+        Id: 1734708875694965053
         Name: "Urban Vehicle Car - Running Board Middle 01"
         Transform {
           Location {
@@ -5882,18 +6181,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7091430935118290508
+        ParentId: 6313208002847828751
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5931,7 +6244,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6394506266807603215
+        Id: 13194652243385528214
         Name: "Urban Vehicle Car - Running Board End 01"
         Transform {
           Location {
@@ -5947,18 +6260,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7091430935118290508
+        ParentId: 6313208002847828751
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -5996,7 +6323,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15926810181998423331
+        Id: 2280642416468632156
         Name: "Urban Vehicle Car - Frame 01"
         Transform {
           Location {
@@ -6012,18 +6339,18 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7091430935118290508
+        ParentId: 6313208002847828751
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -6037,19 +6364,19 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail4:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -6059,6 +6386,20 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
             Float: 7.77589083
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -6095,7 +6436,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12753612011040512488
+        Id: 15975780121402423936
         Name: "engine"
         Transform {
           Location {
@@ -6112,23 +6453,23 @@ Assets {
             Z: 0.8
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 7807190762440354005
-        ChildIds: 14816161283796896767
-        ChildIds: 3250911112857289998
-        ChildIds: 8526053370005697340
-        ChildIds: 2090915845174477385
-        ChildIds: 10866511845467913408
-        ChildIds: 3457888906324369407
-        ChildIds: 6366406805679132855
-        ChildIds: 17890258827333691453
-        ChildIds: 5060978466070707543
-        ChildIds: 5405215759002999301
-        ChildIds: 10847907176829126428
-        ChildIds: 10523339176751258606
-        ChildIds: 18217368168463312577
-        ChildIds: 15746779138634008991
-        ChildIds: 14260944673102481989
+        ParentId: 849813128091856765
+        ChildIds: 13474567270390125111
+        ChildIds: 12443747877328722362
+        ChildIds: 1324082381633714584
+        ChildIds: 5328838669406903196
+        ChildIds: 12392047187010389464
+        ChildIds: 593553575980538603
+        ChildIds: 10772149739243113797
+        ChildIds: 2950682586866099027
+        ChildIds: 1282200670232368215
+        ChildIds: 7986143748265114055
+        ChildIds: 16562972839072011609
+        ChildIds: 15396106892683816427
+        ChildIds: 7845599508753469087
+        ChildIds: 987769015847892845
+        ChildIds: 3486830304203677731
+        ChildIds: 1107096537603860450
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6149,7 +6490,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7807190762440354005
+        Id: 13474567270390125111
         Name: "Mecha - Cannon 01"
         Transform {
           Location {
@@ -6165,24 +6506,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6222,7 +6584,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14816161283796896767
+        Id: 12443747877328722362
         Name: "Mecha - Cannon 01"
         Transform {
           Location {
@@ -6238,24 +6600,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6295,7 +6678,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3250911112857289998
+        Id: 1324082381633714584
         Name: "Mecha - Cannon 01"
         Transform {
           Location {
@@ -6311,24 +6694,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6368,7 +6772,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8526053370005697340
+        Id: 5328838669406903196
         Name: "Mecha - Cannon Socket 01"
         Transform {
           Location {
@@ -6384,18 +6788,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6435,7 +6853,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2090915845174477385
+        Id: 12392047187010389464
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -6452,18 +6870,32 @@ Assets {
             Z: 1.60495818
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6503,7 +6935,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10866511845467913408
+        Id: 593553575980538603
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -6520,18 +6952,32 @@ Assets {
             Z: 1.60495818
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6571,7 +7017,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3457888906324369407
+        Id: 10772149739243113797
         Name: "Mecha - Frame - Hinge 01"
         Transform {
           Location {
@@ -6590,12 +7036,19 @@ Assets {
             Z: 0.495757341
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6635,7 +7088,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6366406805679132855
+        Id: 2950682586866099027
         Name: "Mecha - Frame - Hinge 01"
         Transform {
           Location {
@@ -6654,12 +7107,19 @@ Assets {
             Z: 0.495757341
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6699,7 +7159,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17890258827333691453
+        Id: 1282200670232368215
         Name: "Mecha - Frame - Hinge 01"
         Transform {
           Location {
@@ -6718,12 +7178,19 @@ Assets {
             Z: 0.495757341
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6763,7 +7230,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5060978466070707543
+        Id: 7986143748265114055
         Name: "Mecha - Frame - Hinge 01"
         Transform {
           Location {
@@ -6782,12 +7249,19 @@ Assets {
             Z: 0.495757341
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6827,7 +7301,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5405215759002999301
+        Id: 16562972839072011609
         Name: "Mecha - Frame - Hinge 01"
         Transform {
           Location {
@@ -6846,12 +7320,19 @@ Assets {
             Z: 0.495757341
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -6891,7 +7372,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10847907176829126428
+        Id: 15396106892683816427
         Name: "Group"
         Transform {
           Location {
@@ -6907,54 +7388,54 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
-        ChildIds: 12622154997414170446
-        ChildIds: 386026833672515040
-        ChildIds: 13380446495651361936
-        ChildIds: 12573950083471950413
-        ChildIds: 9752100883051724250
-        ChildIds: 16387760656875270485
-        ChildIds: 12600840988468614434
-        ChildIds: 17962087490583578806
-        ChildIds: 2333573605483489060
-        ChildIds: 16691163045449465201
-        ChildIds: 347360719670486695
-        ChildIds: 5481641982881065538
-        ChildIds: 13201861061145909084
-        ChildIds: 5553083923081557649
-        ChildIds: 17532645723536273503
-        ChildIds: 12005605131534273834
-        ChildIds: 1475625996203385433
-        ChildIds: 12859283452278628198
-        ChildIds: 2462444342486037205
-        ChildIds: 6363620409673259787
-        ChildIds: 5168901738116644930
-        ChildIds: 11342761144019825058
-        ChildIds: 2384358707062291530
-        ChildIds: 14970377370154626220
-        ChildIds: 7821660076306697328
-        ChildIds: 17725014003722966792
-        ChildIds: 3048786606948565798
-        ChildIds: 10274771840177586869
-        ChildIds: 4500974747917241590
-        ChildIds: 9673456107471617728
-        ChildIds: 14766960603174575667
-        ChildIds: 6008185822527492367
-        ChildIds: 18292544882228283601
-        ChildIds: 16320499243263340890
-        ChildIds: 3122889394910830528
-        ChildIds: 14366316315909643218
-        ChildIds: 18136370969205464752
-        ChildIds: 15566926504994767997
-        ChildIds: 3264241159248505711
-        ChildIds: 7462065055474722110
-        ChildIds: 17531411940503911550
-        ChildIds: 13363002393918835870
-        ChildIds: 18193489142990983080
-        ChildIds: 1041641240961370296
-        ChildIds: 8118693424797539086
-        ChildIds: 12030660798313458594
-        ChildIds: 17545760794305143077
+        ParentId: 15975780121402423936
+        ChildIds: 14776617952196514953
+        ChildIds: 11979761128017965314
+        ChildIds: 6679788653596072482
+        ChildIds: 14702683827496743867
+        ChildIds: 16675309474654337827
+        ChildIds: 8359318297460806406
+        ChildIds: 13470085148364166817
+        ChildIds: 3515254409881413231
+        ChildIds: 9247557270134684358
+        ChildIds: 6768417763681946291
+        ChildIds: 11896978010664626445
+        ChildIds: 18098439347340074104
+        ChildIds: 17147499784911479994
+        ChildIds: 12220541145779302033
+        ChildIds: 3035091126428633577
+        ChildIds: 3661598804186103519
+        ChildIds: 1941196156505569288
+        ChildIds: 6761267528551495746
+        ChildIds: 2656637321435723838
+        ChildIds: 6761375338176296890
+        ChildIds: 5429189623036998349
+        ChildIds: 317642931049068550
+        ChildIds: 10735089859793631038
+        ChildIds: 15838939262577432096
+        ChildIds: 13054028215391853088
+        ChildIds: 258614699066710311
+        ChildIds: 576054919713181899
+        ChildIds: 14595367637028973903
+        ChildIds: 14187504539085906962
+        ChildIds: 13886881481306533303
+        ChildIds: 8921768614377202138
+        ChildIds: 6133697677128254686
+        ChildIds: 7444124820758001413
+        ChildIds: 13446613439520113825
+        ChildIds: 6554390315855024555
+        ChildIds: 7035162290058719128
+        ChildIds: 1338914721957911315
+        ChildIds: 16070357455938054085
+        ChildIds: 2709593351722434403
+        ChildIds: 6266851942800717853
+        ChildIds: 10020245448808065024
+        ChildIds: 15021295939023786947
+        ChildIds: 17516542642593120224
+        ChildIds: 6164696507696328706
+        ChildIds: 11718972618245757926
+        ChildIds: 16247036066643590535
+        ChildIds: 12355936781144015067
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6975,7 +7456,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12622154997414170446
+        Id: 14776617952196514953
         Name: "Pipe"
         Transform {
           Location {
@@ -6994,17 +7475,24 @@ Assets {
             Z: 0.250668228
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7043,7 +7531,7 @@ Assets {
         }
       }
       Objects {
-        Id: 386026833672515040
+        Id: 11979761128017965314
         Name: "Pipe"
         Transform {
           Location {
@@ -7062,17 +7550,24 @@ Assets {
             Z: 0.761063099
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7111,7 +7606,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13380446495651361936
+        Id: 6679788653596072482
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -7130,17 +7625,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7179,7 +7681,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12573950083471950413
+        Id: 14702683827496743867
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -7198,17 +7700,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7247,7 +7756,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9752100883051724250
+        Id: 16675309474654337827
         Name: "Pipe"
         Transform {
           Location {
@@ -7266,17 +7775,24 @@ Assets {
             Z: 0.677255154
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7315,7 +7831,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16387760656875270485
+        Id: 8359318297460806406
         Name: "Pipe"
         Transform {
           Location {
@@ -7334,17 +7850,24 @@ Assets {
             Z: 0.229721844
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7383,7 +7906,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12600840988468614434
+        Id: 13470085148364166817
         Name: "Pipe"
         Transform {
           Location {
@@ -7402,17 +7925,24 @@ Assets {
             Z: 0.202587932
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7451,7 +7981,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17962087490583578806
+        Id: 3515254409881413231
         Name: "Pipe"
         Transform {
           Location {
@@ -7470,17 +8000,24 @@ Assets {
             Z: 0.677255154
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7519,7 +8056,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2333573605483489060
+        Id: 9247557270134684358
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -7538,17 +8075,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7587,7 +8131,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16691163045449465201
+        Id: 6768417763681946291
         Name: "Sci-fi Satellite Canister"
         Transform {
           Location {
@@ -7606,18 +8150,18 @@ Assets {
             Z: 0.368793041
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -7631,7 +8175,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -7671,7 +8236,7 @@ Assets {
         }
       }
       Objects {
-        Id: 347360719670486695
+        Id: 11896978010664626445
         Name: "Sci-fi Satellite Canister"
         Transform {
           Location {
@@ -7690,18 +8255,18 @@ Assets {
             Z: 0.368793041
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -7715,7 +8280,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -7755,7 +8341,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5481641982881065538
+        Id: 18098439347340074104
         Name: "Sci-fi Satellite Canister"
         Transform {
           Location {
@@ -7774,18 +8360,18 @@ Assets {
             Z: 0.368793041
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -7799,7 +8385,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -7839,7 +8446,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13201861061145909084
+        Id: 17147499784911479994
         Name: "Pipe"
         Transform {
           Location {
@@ -7858,17 +8465,24 @@ Assets {
             Z: 0.417285323
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7907,7 +8521,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5553083923081557649
+        Id: 12220541145779302033
         Name: "Pipe"
         Transform {
           Location {
@@ -7926,17 +8540,24 @@ Assets {
             Z: 0.417285323
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -7975,7 +8596,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17532645723536273503
+        Id: 3035091126428633577
         Name: "Pipe"
         Transform {
           Location {
@@ -7992,17 +8613,24 @@ Assets {
             Z: 0.417285323
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8041,7 +8669,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12005605131534273834
+        Id: 3661598804186103519
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -8059,18 +8687,32 @@ Assets {
             Z: 1.18817604
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -8110,7 +8752,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1475625996203385433
+        Id: 1941196156505569288
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -8129,18 +8771,32 @@ Assets {
             Z: 0.973562658
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -8180,7 +8836,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12859283452278628198
+        Id: 6761267528551495746
         Name: "Pipe"
         Transform {
           Location {
@@ -8199,17 +8855,24 @@ Assets {
             Z: 1.26517284
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8248,7 +8911,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2462444342486037205
+        Id: 2656637321435723838
         Name: "Pipe"
         Transform {
           Location {
@@ -8267,17 +8930,24 @@ Assets {
             Z: 1.43788803
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8316,7 +8986,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6363620409673259787
+        Id: 6761375338176296890
         Name: "Pipe"
         Transform {
           Location {
@@ -8335,17 +9005,24 @@ Assets {
             Z: 1.62159669
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8384,7 +9061,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5168901738116644930
+        Id: 5429189623036998349
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8403,17 +9080,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8452,7 +9136,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11342761144019825058
+        Id: 317642931049068550
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8471,17 +9155,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8520,7 +9211,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2384358707062291530
+        Id: 10735089859793631038
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8539,17 +9230,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8588,7 +9286,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14970377370154626220
+        Id: 15838939262577432096
         Name: "Pipe"
         Transform {
           Location {
@@ -8607,17 +9305,24 @@ Assets {
             Z: 0.638780951
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8656,7 +9361,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7821660076306697328
+        Id: 13054028215391853088
         Name: "Pipe"
         Transform {
           Location {
@@ -8675,17 +9380,24 @@ Assets {
             Z: 0.767711341
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8724,7 +9436,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17725014003722966792
+        Id: 258614699066710311
         Name: "Pipe"
         Transform {
           Location {
@@ -8743,17 +9455,24 @@ Assets {
             Z: 0.905297637
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8792,7 +9511,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3048786606948565798
+        Id: 576054919713181899
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8811,17 +9530,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8860,7 +9586,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10274771840177586869
+        Id: 14595367637028973903
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8879,17 +9605,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8928,7 +9661,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4500974747917241590
+        Id: 14187504539085906962
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -8947,17 +9680,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -8996,7 +9736,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9673456107471617728
+        Id: 13886881481306533303
         Name: "Pipe"
         Transform {
           Location {
@@ -9015,17 +9755,24 @@ Assets {
             Z: 0.872117639
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9064,7 +9811,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14766960603174575667
+        Id: 8921768614377202138
         Name: "Pipe"
         Transform {
           Location {
@@ -9083,17 +9830,24 @@ Assets {
             Z: 0.905297637
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9132,7 +9886,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6008185822527492367
+        Id: 6133697677128254686
         Name: "Pipe"
         Transform {
           Location {
@@ -9151,17 +9905,24 @@ Assets {
             Z: 0.905297637
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9200,7 +9961,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18292544882228283601
+        Id: 7444124820758001413
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -9219,17 +9980,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9268,7 +10036,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16320499243263340890
+        Id: 13446613439520113825
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -9287,17 +10055,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9336,7 +10111,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3122889394910830528
+        Id: 6554390315855024555
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -9355,17 +10130,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9404,7 +10186,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14366316315909643218
+        Id: 7035162290058719128
         Name: "Pipe"
         Transform {
           Location {
@@ -9423,17 +10205,24 @@ Assets {
             Z: 0.614038527
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9472,7 +10261,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18136370969205464752
+        Id: 1338914721957911315
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -9491,17 +10280,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9540,7 +10336,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15566926504994767997
+        Id: 16070357455938054085
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -9559,17 +10355,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9608,7 +10411,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3264241159248505711
+        Id: 2709593351722434403
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -9627,17 +10430,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9676,7 +10486,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7462065055474722110
+        Id: 6266851942800717853
         Name: "Pipe"
         Transform {
           Location {
@@ -9695,17 +10505,24 @@ Assets {
             Z: 0.554288507
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9744,7 +10561,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17531411940503911550
+        Id: 10020245448808065024
         Name: "Pipe"
         Transform {
           Location {
@@ -9763,17 +10580,24 @@ Assets {
             Z: 0.615357459
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9812,7 +10636,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13363002393918835870
+        Id: 15021295939023786947
         Name: "Pipe"
         Transform {
           Location {
@@ -9831,17 +10655,24 @@ Assets {
             Z: 0.219448298
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9880,7 +10711,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18193489142990983080
+        Id: 17516542642593120224
         Name: "Pipe"
         Transform {
           Location {
@@ -9899,17 +10730,24 @@ Assets {
             Z: 0.219448298
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -9948,7 +10786,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1041641240961370296
+        Id: 6164696507696328706
         Name: "Pipe"
         Transform {
           Location {
@@ -9967,17 +10805,24 @@ Assets {
             Z: 0.219448298
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10016,7 +10861,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8118693424797539086
+        Id: 11718972618245757926
         Name: "Pipe - 90-Degree Short"
         Transform {
           Location {
@@ -10035,17 +10880,24 @@ Assets {
             Z: 0.141891539
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10084,7 +10936,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12030660798313458594
+        Id: 16247036066643590535
         Name: "Pipe - 90-Degree Short"
         Transform {
           Location {
@@ -10103,17 +10955,24 @@ Assets {
             Z: 0.141891539
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10152,7 +11011,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17545760794305143077
+        Id: 12355936781144015067
         Name: "Pipe - 90-Degree Short"
         Transform {
           Location {
@@ -10171,17 +11030,24 @@ Assets {
             Z: 0.141891539
           }
         }
-        ParentId: 10847907176829126428
+        ParentId: 15396106892683816427
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10220,7 +11086,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10523339176751258606
+        Id: 7845599508753469087
         Name: "Mecha - Frame - Hinge 01"
         Transform {
           Location {
@@ -10239,12 +11105,19 @@ Assets {
             Z: 0.495757341
           }
         }
-        ParentId: 12753612011040512488
+        ParentId: 15975780121402423936
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -10284,7 +11157,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18217368168463312577
+        Id: 987769015847892845
         Name: "a"
         Transform {
           Location {
@@ -10300,9 +11173,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
-        ChildIds: 4935120018752221021
-        ChildIds: 13976124486910244236
+        ParentId: 15975780121402423936
+        ChildIds: 3496360534209054908
+        ChildIds: 5238823421527953673
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -10323,7 +11196,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4935120018752221021
+        Id: 3496360534209054908
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -10342,18 +11215,32 @@ Assets {
             Z: 1.60495818
           }
         }
-        ParentId: 18217368168463312577
+        ParentId: 987769015847892845
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -10393,7 +11280,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13976124486910244236
+        Id: 5238823421527953673
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -10412,18 +11299,32 @@ Assets {
             Z: 1.60495818
           }
         }
-        ParentId: 18217368168463312577
+        ParentId: 987769015847892845
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -10463,7 +11364,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15746779138634008991
+        Id: 3486830304203677731
         Name: "a"
         Transform {
           Location {
@@ -10480,9 +11381,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
-        ChildIds: 9405884793832572652
-        ChildIds: 17192460130526974242
+        ParentId: 15975780121402423936
+        ChildIds: 14697927642337319841
+        ChildIds: 660610457274280991
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -10503,7 +11404,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9405884793832572652
+        Id: 14697927642337319841
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -10522,18 +11423,32 @@ Assets {
             Z: 1.60495818
           }
         }
-        ParentId: 15746779138634008991
+        ParentId: 3486830304203677731
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -10573,7 +11488,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17192460130526974242
+        Id: 660610457274280991
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -10592,18 +11507,32 @@ Assets {
             Z: 1.60495818
           }
         }
-        ParentId: 15746779138634008991
+        ParentId: 3486830304203677731
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -10643,7 +11572,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14260944673102481989
+        Id: 1107096537603860450
         Name: "Group"
         Transform {
           Location {
@@ -10660,54 +11589,54 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12753612011040512488
-        ChildIds: 16600674383026785275
-        ChildIds: 7458758890640974533
-        ChildIds: 16253586927403765981
-        ChildIds: 14292594929278365381
-        ChildIds: 5000378775046396388
-        ChildIds: 17548342584675931597
-        ChildIds: 12632018142653608817
-        ChildIds: 13913292771703889358
-        ChildIds: 15528892285668278904
-        ChildIds: 4293213153197455677
-        ChildIds: 16179251392811592836
-        ChildIds: 9893829410379321172
-        ChildIds: 9867321431720239815
-        ChildIds: 15593596607440668106
-        ChildIds: 3797776314428485373
-        ChildIds: 4731028537786139385
-        ChildIds: 1469922104854402445
-        ChildIds: 7468870587321981807
-        ChildIds: 17596814863462856524
-        ChildIds: 9180861343640015223
-        ChildIds: 17020977882508356108
-        ChildIds: 16126417301685286750
-        ChildIds: 6225995593294560406
-        ChildIds: 12870359758994252814
-        ChildIds: 3454098395172062077
-        ChildIds: 4653267362022877458
-        ChildIds: 15288858877535544300
-        ChildIds: 17973203727891868040
-        ChildIds: 15677535796814678322
-        ChildIds: 16881362308563546578
-        ChildIds: 2831961466323040376
-        ChildIds: 6798711240249293896
-        ChildIds: 900582297442942063
-        ChildIds: 5406731966650546296
-        ChildIds: 3543662496920341465
-        ChildIds: 4728070651519541571
-        ChildIds: 15802822402127463228
-        ChildIds: 9743386070883660671
-        ChildIds: 14384203963362278433
-        ChildIds: 7584154622321426691
-        ChildIds: 6822215741984557810
-        ChildIds: 17798067878015369424
-        ChildIds: 6945465787278822613
-        ChildIds: 10720524936995104468
-        ChildIds: 14751233568581762041
-        ChildIds: 10260124992949132925
-        ChildIds: 13180579955872982495
+        ParentId: 15975780121402423936
+        ChildIds: 1240568507872097305
+        ChildIds: 4932609647370963124
+        ChildIds: 16880061868596069274
+        ChildIds: 6019095777721113089
+        ChildIds: 18373069736328963946
+        ChildIds: 15095363721199094115
+        ChildIds: 3883780129110222058
+        ChildIds: 8433141825991521494
+        ChildIds: 1765248637353126299
+        ChildIds: 10892130680491582451
+        ChildIds: 12284822777527251062
+        ChildIds: 16463392563296350379
+        ChildIds: 13070227700940601832
+        ChildIds: 13763645342852547429
+        ChildIds: 7411757027066112931
+        ChildIds: 120369628123260512
+        ChildIds: 17909793879603101699
+        ChildIds: 7504489298510583451
+        ChildIds: 1742015511420621275
+        ChildIds: 8686515825971012416
+        ChildIds: 17871358033368582418
+        ChildIds: 16618385790694046106
+        ChildIds: 17634744545341302245
+        ChildIds: 14208678353585214378
+        ChildIds: 13235491676409950389
+        ChildIds: 16095357458838749941
+        ChildIds: 2064206806606679827
+        ChildIds: 4702242605003717477
+        ChildIds: 9622210287427531873
+        ChildIds: 7912882440158791117
+        ChildIds: 5941981481526269405
+        ChildIds: 14517621726002981942
+        ChildIds: 11012735152705048399
+        ChildIds: 16619917997494327563
+        ChildIds: 1425169761997752449
+        ChildIds: 2963551584487807411
+        ChildIds: 16956790159569231636
+        ChildIds: 9879493927513060629
+        ChildIds: 16432487832009480653
+        ChildIds: 15696186705587251036
+        ChildIds: 9946160497178224484
+        ChildIds: 16056447773343714388
+        ChildIds: 11217176671147517635
+        ChildIds: 8045561505664368502
+        ChildIds: 4724156421041999656
+        ChildIds: 11262181522637529901
+        ChildIds: 11772979727140585484
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -10728,7 +11657,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16600674383026785275
+        Id: 1240568507872097305
         Name: "Pipe"
         Transform {
           Location {
@@ -10747,17 +11676,24 @@ Assets {
             Z: 0.250668228
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10796,7 +11732,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7458758890640974533
+        Id: 4932609647370963124
         Name: "Pipe"
         Transform {
           Location {
@@ -10815,17 +11751,24 @@ Assets {
             Z: 0.761063099
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10864,7 +11807,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16253586927403765981
+        Id: 16880061868596069274
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -10883,17 +11826,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -10932,7 +11882,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14292594929278365381
+        Id: 6019095777721113089
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -10951,17 +11901,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11000,7 +11957,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5000378775046396388
+        Id: 18373069736328963946
         Name: "Pipe"
         Transform {
           Location {
@@ -11019,17 +11976,24 @@ Assets {
             Z: 0.677255154
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11068,7 +12032,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17548342584675931597
+        Id: 15095363721199094115
         Name: "Pipe"
         Transform {
           Location {
@@ -11087,17 +12051,24 @@ Assets {
             Z: 0.229721844
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11136,7 +12107,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12632018142653608817
+        Id: 3883780129110222058
         Name: "Pipe"
         Transform {
           Location {
@@ -11155,17 +12126,24 @@ Assets {
             Z: 0.202587932
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11204,7 +12182,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13913292771703889358
+        Id: 8433141825991521494
         Name: "Pipe"
         Transform {
           Location {
@@ -11223,17 +12201,24 @@ Assets {
             Z: 0.677255154
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11272,7 +12257,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15528892285668278904
+        Id: 1765248637353126299
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -11291,17 +12276,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11340,7 +12332,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4293213153197455677
+        Id: 10892130680491582451
         Name: "Sci-fi Satellite Canister"
         Transform {
           Location {
@@ -11359,18 +12351,18 @@ Assets {
             Z: 0.368793041
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -11384,7 +12376,14 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -11424,7 +12423,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16179251392811592836
+        Id: 12284822777527251062
         Name: "Sci-fi Satellite Canister"
         Transform {
           Location {
@@ -11443,18 +12442,18 @@ Assets {
             Z: 0.368793041
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -11468,7 +12467,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -11508,7 +12528,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9893829410379321172
+        Id: 16463392563296350379
         Name: "Sci-fi Satellite Canister"
         Transform {
           Location {
@@ -11527,18 +12547,18 @@ Assets {
             Z: 0.368793041
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -11552,7 +12572,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -11592,7 +12633,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9867321431720239815
+        Id: 13070227700940601832
         Name: "Pipe"
         Transform {
           Location {
@@ -11611,17 +12652,24 @@ Assets {
             Z: 0.417285323
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11660,7 +12708,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15593596607440668106
+        Id: 13763645342852547429
         Name: "Pipe"
         Transform {
           Location {
@@ -11679,17 +12727,24 @@ Assets {
             Z: 0.417285323
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11728,7 +12783,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3797776314428485373
+        Id: 7411757027066112931
         Name: "Pipe"
         Transform {
           Location {
@@ -11745,17 +12800,24 @@ Assets {
             Z: 0.417285323
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -11794,7 +12856,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4731028537786139385
+        Id: 120369628123260512
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -11812,18 +12874,32 @@ Assets {
             Z: 1.18817604
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -11863,7 +12939,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1469922104854402445
+        Id: 17909793879603101699
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -11882,18 +12958,32 @@ Assets {
             Z: 0.973562658
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -11933,7 +13023,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7468870587321981807
+        Id: 7504489298510583451
         Name: "Pipe"
         Transform {
           Location {
@@ -11952,17 +13042,24 @@ Assets {
             Z: 1.26517284
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12001,7 +13098,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17596814863462856524
+        Id: 1742015511420621275
         Name: "Pipe"
         Transform {
           Location {
@@ -12020,17 +13117,24 @@ Assets {
             Z: 1.43788803
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12069,7 +13173,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9180861343640015223
+        Id: 8686515825971012416
         Name: "Pipe"
         Transform {
           Location {
@@ -12088,17 +13192,24 @@ Assets {
             Z: 1.62159669
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12137,7 +13248,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17020977882508356108
+        Id: 17871358033368582418
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12156,17 +13267,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12205,7 +13323,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16126417301685286750
+        Id: 16618385790694046106
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12224,17 +13342,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12273,7 +13398,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6225995593294560406
+        Id: 17634744545341302245
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12292,17 +13417,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12341,7 +13473,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12870359758994252814
+        Id: 14208678353585214378
         Name: "Pipe"
         Transform {
           Location {
@@ -12360,17 +13492,24 @@ Assets {
             Z: 0.638780951
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12409,7 +13548,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3454098395172062077
+        Id: 13235491676409950389
         Name: "Pipe"
         Transform {
           Location {
@@ -12428,17 +13567,24 @@ Assets {
             Z: 0.767711341
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12477,7 +13623,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4653267362022877458
+        Id: 16095357458838749941
         Name: "Pipe"
         Transform {
           Location {
@@ -12496,17 +13642,24 @@ Assets {
             Z: 0.905297637
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12545,7 +13698,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15288858877535544300
+        Id: 2064206806606679827
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12564,17 +13717,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12613,7 +13773,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17973203727891868040
+        Id: 4702242605003717477
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12632,17 +13792,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12681,7 +13848,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15677535796814678322
+        Id: 9622210287427531873
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12700,17 +13867,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12749,7 +13923,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16881362308563546578
+        Id: 7912882440158791117
         Name: "Pipe"
         Transform {
           Location {
@@ -12768,17 +13942,24 @@ Assets {
             Z: 0.872117639
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12817,7 +13998,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2831961466323040376
+        Id: 5941981481526269405
         Name: "Pipe"
         Transform {
           Location {
@@ -12836,17 +14017,24 @@ Assets {
             Z: 0.905297637
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12885,7 +14073,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6798711240249293896
+        Id: 14517621726002981942
         Name: "Pipe"
         Transform {
           Location {
@@ -12904,17 +14092,24 @@ Assets {
             Z: 0.905297637
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -12953,7 +14148,7 @@ Assets {
         }
       }
       Objects {
-        Id: 900582297442942063
+        Id: 11012735152705048399
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -12972,17 +14167,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13021,7 +14223,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5406731966650546296
+        Id: 16619917997494327563
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -13040,17 +14242,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13089,7 +14298,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3543662496920341465
+        Id: 1425169761997752449
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -13108,17 +14317,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13157,7 +14373,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4728070651519541571
+        Id: 2963551584487807411
         Name: "Pipe"
         Transform {
           Location {
@@ -13176,17 +14392,24 @@ Assets {
             Z: 0.614038527
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13225,7 +14448,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15802822402127463228
+        Id: 16956790159569231636
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -13244,17 +14467,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13293,7 +14523,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9743386070883660671
+        Id: 9879493927513060629
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -13312,17 +14542,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13361,7 +14598,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14384203963362278433
+        Id: 16432487832009480653
         Name: "Pipe - 45-Degree Long "
         Transform {
           Location {
@@ -13380,17 +14617,24 @@ Assets {
             Z: 0.144403145
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13429,7 +14673,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7584154622321426691
+        Id: 15696186705587251036
         Name: "Pipe"
         Transform {
           Location {
@@ -13448,17 +14692,24 @@ Assets {
             Z: 0.554288507
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13497,7 +14748,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6822215741984557810
+        Id: 9946160497178224484
         Name: "Pipe"
         Transform {
           Location {
@@ -13516,17 +14767,24 @@ Assets {
             Z: 0.615357459
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13565,7 +14823,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17798067878015369424
+        Id: 16056447773343714388
         Name: "Pipe"
         Transform {
           Location {
@@ -13584,17 +14842,24 @@ Assets {
             Z: 0.219448298
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13633,7 +14898,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6945465787278822613
+        Id: 11217176671147517635
         Name: "Pipe"
         Transform {
           Location {
@@ -13652,17 +14917,24 @@ Assets {
             Z: 0.219448298
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13701,7 +14973,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10720524936995104468
+        Id: 8045561505664368502
         Name: "Pipe"
         Transform {
           Location {
@@ -13720,7 +14992,7 @@ Assets {
             Z: 0.219448298
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -13729,7 +15001,14 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -13769,7 +15048,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14751233568581762041
+        Id: 4724156421041999656
         Name: "Pipe - 90-Degree Short"
         Transform {
           Location {
@@ -13788,17 +15067,24 @@ Assets {
             Z: 0.141891539
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13837,7 +15123,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10260124992949132925
+        Id: 11262181522637529901
         Name: "Pipe - 90-Degree Short"
         Transform {
           Location {
@@ -13856,17 +15142,24 @@ Assets {
             Z: 0.141891539
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13905,7 +15198,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13180579955872982495
+        Id: 11772979727140585484
         Name: "Pipe - 90-Degree Short"
         Transform {
           Location {
@@ -13924,17 +15217,24 @@ Assets {
             Z: 0.141891539
           }
         }
-        ParentId: 14260944673102481989
+        ParentId: 1107096537603860450
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -13973,7 +15273,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8530836833056768780
+        Id: 10482011768122814207
         Name: "Mecha - Armor - Pack 01 - Top 01"
         Transform {
           Location {
@@ -13990,30 +15290,58 @@ Assets {
             Z: 0.739318669
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail3:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -14053,7 +15381,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9878598473407637027
+        Id: 7850394756978001439
         Name: "Military Tank Historic Container 02"
         Transform {
           Location {
@@ -14069,12 +15397,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14084,7 +15412,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14098,7 +15426,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -14138,7 +15466,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7664008544963676346
+        Id: 2402081808372207967
         Name: "Military Tank Historic Container 02"
         Transform {
           Location {
@@ -14155,12 +15483,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14178,13 +15506,13 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -14224,7 +15552,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8106259249931259877
+        Id: 3088014698886659779
         Name: "Military Tank Historic Armor Skirt 01 - Rear"
         Transform {
           Location {
@@ -14240,12 +15568,12 @@ Assets {
             Z: 0.504727721
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14259,7 +15587,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14269,6 +15597,20 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:vtile"
             Float: 3.5247736
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -14307,7 +15649,7 @@ Assets {
         }
       }
       Objects {
-        Id: 316327979937669779
+        Id: 8083061514423001772
         Name: "Military Tank Historic Armor Plate 02"
         Transform {
           Location {
@@ -14323,12 +15665,12 @@ Assets {
             Z: 2.17029667
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14342,7 +15684,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14356,6 +15698,20 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:vtile"
             Float: 15.3911409
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
           }
         }
         Collidable_v2 {
@@ -14394,7 +15750,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14324094532140866843
+        Id: 12249496738387581489
         Name: "Group"
         Transform {
           Location {
@@ -14410,9 +15766,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 12502488592324968969
-        ChildIds: 11955411010855119544
+        ParentId: 849813128091856765
+        ChildIds: 17550091692964891028
+        ChildIds: 5334147776041962555
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -14433,7 +15789,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12502488592324968969
+        Id: 17550091692964891028
         Name: "Mecha - Armor - Helm 02"
         Transform {
           Location {
@@ -14450,12 +15806,12 @@ Assets {
             Z: 0.781358302
           }
         }
-        ParentId: 14324094532140866843
+        ParentId: 12249496738387581489
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14469,7 +15825,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14483,7 +15839,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14529,7 +15885,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11955411010855119544
+        Id: 5334147776041962555
         Name: "Mecha - Armor - Thigh 01"
         Transform {
           Location {
@@ -14545,12 +15901,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14324094532140866843
+        ParentId: 12249496738387581489
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14564,19 +15920,33 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
               Id: 3435961998858191531
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -14616,7 +15986,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5188566785432575677
+        Id: 14203056167118636602
         Name: "Mecha - Armor - Hand 01 - Posed Fist 01"
         Transform {
           Location {
@@ -14635,12 +16005,12 @@ Assets {
             Z: 2.0218358
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14654,7 +16024,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14668,13 +16038,13 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -14714,7 +16084,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7603775002680589154
+        Id: 7933202545465924407
         Name: "Group"
         Transform {
           Location {
@@ -14730,9 +16100,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 11038316560508911180
-        ChildIds: 5547322360994652907
+        ParentId: 849813128091856765
+        ChildIds: 17503919174120920146
+        ChildIds: 8470309600888868314
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -14753,7 +16123,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11038316560508911180
+        Id: 17503919174120920146
         Name: "Mecha - Armor - Helm 02"
         Transform {
           Location {
@@ -14770,12 +16140,12 @@ Assets {
             Z: 0.781358302
           }
         }
-        ParentId: 7603775002680589154
+        ParentId: 7933202545465924407
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14789,7 +16159,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14803,7 +16173,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14849,7 +16219,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5547322360994652907
+        Id: 8470309600888868314
         Name: "Mecha - Armor - Thigh 01"
         Transform {
           Location {
@@ -14866,12 +16236,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7603775002680589154
+        ParentId: 7933202545465924407
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -14885,19 +16255,33 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
               Id: 3435961998858191531
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -14937,7 +16321,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7024778311094916206
+        Id: 10847950958076524476
         Name: "Group"
         Transform {
           Location {
@@ -14953,21 +16337,21 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 11718505308894505693
-        ChildIds: 419163279028753901
-        ChildIds: 16456369187591100038
-        ChildIds: 6256802068963579061
-        ChildIds: 7548972424746786786
-        ChildIds: 1708913947481239781
-        ChildIds: 7987762934293452197
-        ChildIds: 2701373230536991432
-        ChildIds: 13276814208686837226
-        ChildIds: 152083682691005594
-        ChildIds: 14796379701743972191
-        ChildIds: 6968739369781453639
-        ChildIds: 10999693336227692637
-        ChildIds: 16586158246384013669
+        ParentId: 849813128091856765
+        ChildIds: 9108280243488121129
+        ChildIds: 9357150946351173745
+        ChildIds: 17840744670664676568
+        ChildIds: 4348007251506868833
+        ChildIds: 5398273875097088871
+        ChildIds: 13114965103276976147
+        ChildIds: 2526827711878463293
+        ChildIds: 9974467004271305729
+        ChildIds: 15650937513830050250
+        ChildIds: 12520882268951002408
+        ChildIds: 5171854004969562928
+        ChildIds: 7573699056832158824
+        ChildIds: 16421389577581234596
+        ChildIds: 6807382809515736701
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -14988,7 +16372,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11718505308894505693
+        Id: 9108280243488121129
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -15007,18 +16391,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15058,7 +16456,7 @@ Assets {
         }
       }
       Objects {
-        Id: 419163279028753901
+        Id: 9357150946351173745
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -15077,18 +16475,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15128,7 +16540,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16456369187591100038
+        Id: 17840744670664676568
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -15144,18 +16556,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15195,7 +16621,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6256802068963579061
+        Id: 4348007251506868833
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -15211,18 +16637,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15262,7 +16702,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7548972424746786786
+        Id: 5398273875097088871
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -15279,18 +16719,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15330,7 +16784,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1708913947481239781
+        Id: 13114965103276976147
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -15346,18 +16800,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15397,7 +16865,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7987762934293452197
+        Id: 2526827711878463293
         Name: "Mecha - Cannon 01"
         Transform {
           Location {
@@ -15413,24 +16881,45 @@ Assets {
             Z: 1.46480501
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15470,7 +16959,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2701373230536991432
+        Id: 9974467004271305729
         Name: "Sci-fi Satellite Piston"
         Transform {
           Location {
@@ -15488,18 +16977,32 @@ Assets {
             Z: 0.502735317
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15539,7 +17042,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13276814208686837226
+        Id: 15650937513830050250
         Name: "Sci-fi Satellite Piston"
         Transform {
           Location {
@@ -15557,18 +17060,32 @@ Assets {
             Z: 0.502735317
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15608,7 +17125,7 @@ Assets {
         }
       }
       Objects {
-        Id: 152083682691005594
+        Id: 12520882268951002408
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -15624,12 +17141,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -15643,7 +17160,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15683,7 +17214,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14796379701743972191
+        Id: 5171854004969562928
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -15699,12 +17230,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -15718,7 +17249,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15758,7 +17303,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6968739369781453639
+        Id: 7573699056832158824
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -15774,12 +17319,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -15793,7 +17338,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15833,7 +17392,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10999693336227692637
+        Id: 16421389577581234596
         Name: "Sci-fi Cryo Chamber Back"
         Transform {
           Location {
@@ -15850,12 +17409,12 @@ Assets {
             Z: 0.226281255
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -15869,7 +17428,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -15883,7 +17442,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15923,7 +17503,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16586158246384013669
+        Id: 6807382809515736701
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -15939,12 +17519,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 7024778311094916206
+        ParentId: 10847950958076524476
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -15958,7 +17538,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -15998,7 +17592,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1648346555029971045
+        Id: 10191896119890319085
         Name: "Military Tank Historic Armor Skirt 01 - Front"
         Transform {
           Location {
@@ -16014,12 +17608,12 @@ Assets {
             Z: 0.61814934
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -16033,7 +17627,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16073,7 +17681,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12725558438589626980
+        Id: 4534164433500934586
         Name: "Urban Vehicle Truck - Bumper Rear 01"
         Transform {
           Location {
@@ -16090,12 +17698,12 @@ Assets {
             Z: 0.834733546
           }
         }
-        ParentId: 13210169835187211502
+        ParentId: 849813128091856765
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -16113,7 +17721,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Lights:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
         }
@@ -16151,7 +17759,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17635414263964532454
+        Id: 15209164914542354768
         Name: "Group"
         Transform {
           Location {
@@ -16167,21 +17775,21 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13210169835187211502
-        ChildIds: 13567547158561328882
-        ChildIds: 14741026502309225721
-        ChildIds: 1506367956195299923
-        ChildIds: 4751823965164490969
-        ChildIds: 5248134013354861811
-        ChildIds: 11938672178626145373
-        ChildIds: 3887621438717484510
-        ChildIds: 243256225025691102
-        ChildIds: 333269557730182153
-        ChildIds: 6086616535189485871
-        ChildIds: 2938930572119072722
-        ChildIds: 4373539418720616586
-        ChildIds: 7666836511629324881
-        ChildIds: 12233961869199928736
+        ParentId: 849813128091856765
+        ChildIds: 11918728407182930431
+        ChildIds: 3150116245635197816
+        ChildIds: 10406114327542026663
+        ChildIds: 14082064582842990251
+        ChildIds: 7358016052447761419
+        ChildIds: 1938316932710543994
+        ChildIds: 11992532222795985958
+        ChildIds: 10508442551712407092
+        ChildIds: 9699885278352573963
+        ChildIds: 3588837224677290574
+        ChildIds: 9825585116012670282
+        ChildIds: 18404093106943952574
+        ChildIds: 7550027025202126670
+        ChildIds: 162198600599324035
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -16202,7 +17810,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13567547158561328882
+        Id: 11918728407182930431
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -16221,18 +17829,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16272,7 +17894,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14741026502309225721
+        Id: 3150116245635197816
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -16291,18 +17913,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16342,7 +17978,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1506367956195299923
+        Id: 10406114327542026663
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -16358,18 +17994,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16409,7 +18059,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4751823965164490969
+        Id: 14082064582842990251
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -16425,18 +18075,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16476,7 +18140,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5248134013354861811
+        Id: 7358016052447761419
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -16493,18 +18157,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16544,7 +18222,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11938672178626145373
+        Id: 1938316932710543994
         Name: "Mecha - Cannon - Lasersight 01"
         Transform {
           Location {
@@ -16560,18 +18238,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16611,7 +18303,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3887621438717484510
+        Id: 11992532222795985958
         Name: "Mecha - Cannon 01"
         Transform {
           Location {
@@ -16627,24 +18319,45 @@ Assets {
             Z: 1.46480501
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16684,7 +18397,7 @@ Assets {
         }
       }
       Objects {
-        Id: 243256225025691102
+        Id: 10508442551712407092
         Name: "Sci-fi Satellite Piston"
         Transform {
           Location {
@@ -16702,18 +18415,32 @@ Assets {
             Z: 0.502735317
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16753,7 +18480,7 @@ Assets {
         }
       }
       Objects {
-        Id: 333269557730182153
+        Id: 9699885278352573963
         Name: "Sci-fi Satellite Piston"
         Transform {
           Location {
@@ -16771,18 +18498,32 @@ Assets {
             Z: 0.502735317
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16822,7 +18563,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6086616535189485871
+        Id: 3588837224677290574
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -16838,12 +18579,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -16857,7 +18598,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16897,7 +18652,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2938930572119072722
+        Id: 9825585116012670282
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -16913,12 +18668,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -16932,7 +18687,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -16972,7 +18741,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4373539418720616586
+        Id: 18404093106943952574
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -16988,12 +18757,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -17007,7 +18776,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17047,7 +18830,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7666836511629324881
+        Id: 7550027025202126670
         Name: "Sci-fi Cryo Chamber Back"
         Transform {
           Location {
@@ -17064,12 +18847,12 @@ Assets {
             Z: 0.226281255
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -17083,7 +18866,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -17097,7 +18880,28 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17137,7 +18941,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12233961869199928736
+        Id: 162198600599324035
         Name: "Mecha - Frame - Arm Joint 01"
         Transform {
           Location {
@@ -17153,12 +18957,12 @@ Assets {
             Z: 1.21076179
           }
         }
-        ParentId: 17635414263964532454
+        ParentId: 15209164914542354768
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -17172,7 +18976,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17212,7 +19030,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5622467783041915820
+        Id: 3507342156314337643
         Name: "Interior"
         Transform {
           Location {
@@ -17226,20 +19044,20 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12183647355429084784
-        ChildIds: 7873928611108897903
-        ChildIds: 4905071054854002319
-        ChildIds: 10131683466810480891
-        ChildIds: 7521864011683830222
-        ChildIds: 17711192486391466384
-        ChildIds: 10438595391755580656
-        ChildIds: 10653598775840779453
-        ChildIds: 11322172784394491483
-        ChildIds: 6855269679342386718
-        ChildIds: 11960146065129126982
-        ChildIds: 1057725380157719045
-        ChildIds: 1957525737767711313
-        ChildIds: 15067020225096830319
+        ParentId: 4683633746792798764
+        ChildIds: 2818571523946952933
+        ChildIds: 11600757153673782296
+        ChildIds: 1177381427563599869
+        ChildIds: 482125914997998035
+        ChildIds: 15486940464689626994
+        ChildIds: 16282803459016024887
+        ChildIds: 17959866859002054425
+        ChildIds: 7428755544206940702
+        ChildIds: 10479519754544832142
+        ChildIds: 16995936574915117703
+        ChildIds: 14133592503545640473
+        ChildIds: 14478179774701328949
+        ChildIds: 15842860681062412894
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -17257,7 +19075,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7873928611108897903
+        Id: 2818571523946952933
         Name: "Urban Vehicle Car - Glovebox 01"
         Transform {
           Location {
@@ -17274,12 +19092,19 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17317,7 +19142,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4905071054854002319
+        Id: 11600757153673782296
         Name: "Urban Vehicle Car - Steering Wheel 01"
         Transform {
           Location {
@@ -17335,24 +19160,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17390,7 +19236,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10131683466810480891
+        Id: 1177381427563599869
         Name: "Urban Car Screens 01"
         Transform {
           Location {
@@ -17407,18 +19253,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17456,7 +19316,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7521864011683830222
+        Id: 482125914997998035
         Name: "Urban Vehicle Car - Front Seat Top 01"
         Transform {
           Location {
@@ -17472,12 +19332,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -17491,7 +19351,21 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17529,7 +19403,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17711192486391466384
+        Id: 15486940464689626994
         Name: "Urban Vehicle Car - Front Seat Leg 01"
         Transform {
           Location {
@@ -17545,12 +19419,19 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17588,7 +19469,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10438595391755580656
+        Id: 16282803459016024887
         Name: "Urban Vehicle Car - Front Seat Leg 01"
         Transform {
           Location {
@@ -17604,12 +19485,19 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17647,7 +19535,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10653598775840779453
+        Id: 17959866859002054425
         Name: "Urban Vehicle Car - Front Seat Bottom 01"
         Transform {
           Location {
@@ -17663,24 +19551,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17718,7 +19627,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11322172784394491483
+        Id: 7428755544206940702
         Name: "Urban Vehicle Car - Front Seat Leg 01"
         Transform {
           Location {
@@ -17734,12 +19643,19 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17777,7 +19693,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6855269679342386718
+        Id: 10479519754544832142
         Name: "Urban Vehicle Car - Front Seat Top 01"
         Transform {
           Location {
@@ -17793,18 +19709,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17842,7 +19772,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11960146065129126982
+        Id: 16995936574915117703
         Name: "Urban Vehicle Car - Front Seat Bottom 01"
         Transform {
           Location {
@@ -17858,24 +19788,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17913,7 +19864,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1057725380157719045
+        Id: 14133592503545640473
         Name: "Urban Vehicle Car - Front Seat Leg 01"
         Transform {
           Location {
@@ -17929,12 +19880,19 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -17972,7 +19930,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1957525737767711313
+        Id: 14478179774701328949
         Name: "Urban Vehicle Car - Center Console 01"
         Transform {
           Location {
@@ -17987,24 +19945,45 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -18042,7 +20021,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15067020225096830319
+        Id: 15842860681062412894
         Name: "Sci-fi Console Screen 01"
         Transform {
           Location {
@@ -18060,24 +20039,58 @@ Assets {
             Z: 0.12443085
           }
         }
-        ParentId: 5622467783041915820
+        ParentId: 3507342156314337643
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail3:id"
             AssetReference {
-              Id: 1062156472714689715
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5016891705173553466
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 11940477864616612793
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 13545708288262914804
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.85
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail3:color"
+            Color {
+              R: 0.85
+              A: 1
             }
           }
         }
@@ -18115,7 +20128,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11837978157456717090
+        Id: 16299510781308895950
         Name: "Effects"
         Transform {
           Location {
@@ -18128,8 +20141,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10222396190924574885
-        ChildIds: 372487338778235340
+        ParentId: 7870539815647093554
+        ChildIds: 13701416833801114466
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -18150,7 +20163,7 @@ Assets {
         }
       }
       Objects {
-        Id: 372487338778235340
+        Id: 13701416833801114466
         Name: "Lights"
         Transform {
           Location {
@@ -18163,9 +20176,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11837978157456717090
-        ChildIds: 1967991280504667489
-        ChildIds: 11998378918933308098
+        ParentId: 16299510781308895950
+        ChildIds: 15256117672263230254
+        ChildIds: 3107394379281434692
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -18186,7 +20199,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1967991280504667489
+        Id: 15256117672263230254
         Name: "Rear Lights"
         Transform {
           Location {
@@ -18199,8 +20212,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 372487338778235340
-        ChildIds: 14700918447979180788
+        ParentId: 13701416833801114466
+        ChildIds: 5269435237347839000
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -18221,7 +20234,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14700918447979180788
+        Id: 5269435237347839000
         Name: "Rear Lights Off"
         Transform {
           Location {
@@ -18236,11 +20249,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1967991280504667489
-        ChildIds: 15696830210623148005
-        ChildIds: 9196081875717368286
-        ChildIds: 9774172942456790828
-        ChildIds: 6622950357570299808
+        ParentId: 15256117672263230254
+        ChildIds: 2208223723922514382
+        ChildIds: 17574585488335959305
+        ChildIds: 4035763987009567151
+        ChildIds: 3518490721710193946
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -18261,7 +20274,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15696830210623148005
+        Id: 2208223723922514382
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -18278,24 +20291,24 @@ Assets {
             Z: 0.416282952
           }
         }
-        ParentId: 14700918447979180788
+        ParentId: 5269435237347839000
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -18335,7 +20348,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9196081875717368286
+        Id: 17574585488335959305
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -18352,24 +20365,24 @@ Assets {
             Z: 0.299497664
           }
         }
-        ParentId: 14700918447979180788
+        ParentId: 5269435237347839000
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -18409,7 +20422,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9774172942456790828
+        Id: 4035763987009567151
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -18426,24 +20439,24 @@ Assets {
             Z: 0.299497664
           }
         }
-        ParentId: 14700918447979180788
+        ParentId: 5269435237347839000
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -18483,7 +20496,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6622950357570299808
+        Id: 3518490721710193946
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -18500,24 +20513,24 @@ Assets {
             Z: 0.416282952
           }
         }
-        ParentId: 14700918447979180788
+        ParentId: 5269435237347839000
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -18557,7 +20570,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11998378918933308098
+        Id: 3107394379281434692
         Name: "Front Lights"
         Transform {
           Location {
@@ -18570,8 +20583,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 372487338778235340
-        ChildIds: 225304793070171055
+        ParentId: 13701416833801114466
+        ChildIds: 1647420218196491724
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -18592,7 +20605,7 @@ Assets {
         }
       }
       Objects {
-        Id: 225304793070171055
+        Id: 1647420218196491724
         Name: "Front Lights Off"
         Transform {
           Location {
@@ -18607,21 +20620,21 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11998378918933308098
-        ChildIds: 13896063631128186776
-        ChildIds: 4073572752351109377
-        ChildIds: 8808903591496833642
-        ChildIds: 3968273652710709022
-        ChildIds: 9701763021716478608
-        ChildIds: 4264312419617980757
-        ChildIds: 1552232510700748455
-        ChildIds: 1469115835701777338
-        ChildIds: 13871559471069473906
-        ChildIds: 2778425377831777758
-        ChildIds: 11710349832860619349
-        ChildIds: 7776909674886647213
-        ChildIds: 15133007459547788250
-        ChildIds: 7215147944772081270
+        ParentId: 3107394379281434692
+        ChildIds: 13099953175255067081
+        ChildIds: 7807374049739543760
+        ChildIds: 16673289563430900142
+        ChildIds: 14482911178706439818
+        ChildIds: 15549218957226425107
+        ChildIds: 17033518980073081139
+        ChildIds: 11859108367878764213
+        ChildIds: 13157455478729577362
+        ChildIds: 3781200013776709346
+        ChildIds: 11988708864165949613
+        ChildIds: 3752258864550058221
+        ChildIds: 13888975343833629720
+        ChildIds: 8907554543238542567
+        ChildIds: 12021654054133315763
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -18642,7 +20655,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13896063631128186776
+        Id: 13099953175255067081
         Name: "Ring"
         Transform {
           Location {
@@ -18659,12 +20672,12 @@ Assets {
             Z: 0.319793642
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -18708,7 +20721,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4073572752351109377
+        Id: 7807374049739543760
         Name: "Cylinder"
         Transform {
           Location {
@@ -18725,12 +20738,12 @@ Assets {
             Z: 0.317722678
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -18774,7 +20787,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8808903591496833642
+        Id: 16673289563430900142
         Name: "Cylinder"
         Transform {
           Location {
@@ -18791,12 +20804,12 @@ Assets {
             Z: 0.359224796
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -18840,7 +20853,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3968273652710709022
+        Id: 14482911178706439818
         Name: "Cylinder"
         Transform {
           Location {
@@ -18857,12 +20870,12 @@ Assets {
             Z: 0.140694529
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -18906,7 +20919,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9701763021716478608
+        Id: 15549218957226425107
         Name: "Ring"
         Transform {
           Location {
@@ -18923,12 +20936,12 @@ Assets {
             Z: 0.319793642
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -18972,7 +20985,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4264312419617980757
+        Id: 17033518980073081139
         Name: "Cylinder"
         Transform {
           Location {
@@ -18989,12 +21002,12 @@ Assets {
             Z: 0.140694529
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -19038,7 +21051,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1552232510700748455
+        Id: 11859108367878764213
         Name: "Cylinder"
         Transform {
           Location {
@@ -19055,12 +21068,12 @@ Assets {
             Z: 0.317722678
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -19104,7 +21117,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1469115835701777338
+        Id: 13157455478729577362
         Name: "Cylinder"
         Transform {
           Location {
@@ -19121,12 +21134,12 @@ Assets {
             Z: 0.359224796
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
@@ -19170,7 +21183,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13871559471069473906
+        Id: 3781200013776709346
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -19189,24 +21202,24 @@ Assets {
             Z: 0.328529924
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -19246,7 +21259,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2778425377831777758
+        Id: 11988708864165949613
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -19265,24 +21278,24 @@ Assets {
             Z: 0.328529924
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -19322,7 +21335,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11710349832860619349
+        Id: 3752258864550058221
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -19341,24 +21354,24 @@ Assets {
             Z: 0.328529924
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -19398,7 +21411,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7776909674886647213
+        Id: 13888975343833629720
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -19417,24 +21430,24 @@ Assets {
             Z: 0.328529924
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -19474,7 +21487,7 @@ Assets {
         }
       }
       Objects {
-        Id: 15133007459547788250
+        Id: 8907554543238542567
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -19493,24 +21506,24 @@ Assets {
             Z: 0.328529924
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -19550,7 +21563,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7215147944772081270
+        Id: 12021654054133315763
         Name: "Mecha - Frame - Thruster 01"
         Transform {
           Location {
@@ -19569,24 +21582,24 @@ Assets {
             Z: 0.328529924
           }
         }
-        ParentId: 225304793070171055
+        ParentId: 1647420218196491724
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14842598604038967619
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 3435961998858191531
+              Id: 13545708288262914804
             }
           }
         }
@@ -20118,4 +22131,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Trucks Geo"
+  VirtualFolderPath: "2 Skav Avenger"
 }

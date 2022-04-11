@@ -57,6 +57,8 @@ local index = 0
 local total = 0
 local currentlyVisible = nil
 
+local vehicleName = nil
+
 local battleMainMenuOpen = false
 local battleMenuOpen = false
 
@@ -191,14 +193,16 @@ function DisplayUnlockedVehicle()
 
     currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
-    local name = currentlyVisible:GetCustomProperty("Name")
-    VEHICLE_NAME_TEXT.text = name
+    -- nil local name = currentlyVisible:GetCustomProperty("Name")
+    
+    GetVehicleName()
+    VEHICLE_NAME_TEXT.text = vehicleName
     local price = PRICES_TABLE[index]
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
-    VEHICLE_NAME_CB.text = name
+    VEHICLE_NAME_CB.text = vehicleName
     UPGRADE_STATUS_CB.text = "Default"
     OWNED_STATUS_CB.text = "Unlocked"
     CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
@@ -269,14 +273,15 @@ function DisplayOwnedVehicle()
 
     currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
-    local name = currentlyVisible:GetCustomProperty("Name")
-    VEHICLE_NAME_TEXT.text = name
+    -- nillocal name = currentlyVisible:GetCustomProperty("Name")
+    GetVehicleName()
+    VEHICLE_NAME_TEXT.text = vehicleName
     local price = PRICES_TABLE[index]
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
-    VEHICLE_NAME_CB.text = name
+    VEHICLE_NAME_CB.text = vehicleName
     UPGRADE_STATUS_CB.text = "Default"
     CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
 
@@ -291,6 +296,20 @@ end
     --currentlyVisible.visibility = Visibility.FORCE_OFF
     LOCAL_PLAYER.clientUserData.index = index     -- upgrade menu uses to fetch current vehicle upgrades table
 end]]
+
+function GetVehicleName()
+    if index == 1 then
+        vehicleName = "Thrashed Battle Truck"
+    elseif index == 2 then
+        vehicleName = "Skav Avenger"
+    elseif index == 3 then
+        vehicleName = "Rusty Beasty"
+    elseif index == 4 then
+        vehicleName = "Tanker" 
+    elseif index == 5 then
+        vehicleName = "musKa Mushka"
+    end
+end
 
 function OnBackButtonClicked()
 

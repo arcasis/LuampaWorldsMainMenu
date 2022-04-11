@@ -57,6 +57,8 @@ local index = 0
 local total = 0
 local currentlyVisible = nil
 
+local vehicleName = nil
+
 local kartsMainMenuOpen = false
 local kartsMenuOpen = false
 
@@ -190,14 +192,15 @@ function DisplayUnlockedVehicle()
 
     currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLE[index], {parent = UNLOCKED_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
-    local name = currentlyVisible:GetCustomProperty("Name")
-    VEHICLE_NAME_TEXT.text = name
+    --local name = currentlyVisible:GetCustomProperty("Name")
+    GetVehicleName()
+    VEHICLE_NAME_TEXT.text = vehicleName
     local price = PRICES_TABLE[index]
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
-    VEHICLE_NAME_CB.text = name
+    VEHICLE_NAME_CB.text = vehicleName
     UPGRADE_STATUS_CB.text = "Default"
     OWNED_STATUS_CB.text = "Unlocked"
     CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
@@ -268,14 +271,15 @@ function DisplayOwnedVehicle()
 
     currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLE[index], {parent = OWNED_GEO_FOLDER, scale = 1.6})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
-    local name = currentlyVisible:GetCustomProperty("Name")
-    VEHICLE_NAME_TEXT.text = name
+    --nil local name = currentlyVisible:GetCustomProperty("Name")
+    GetVehicleName()
+    VEHICLE_NAME_TEXT.text = vehicleName
     local price = PRICES_TABLE[index]
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
-    VEHICLE_NAME_CB.text = name
+    VEHICLE_NAME_CB.text = vehicleName
     UPGRADE_STATUS_CB.text = "Default"
     CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
 
@@ -290,6 +294,20 @@ end
     --currentlyVisible.visibility = Visibility.FORCE_OFF
     LOCAL_PLAYER.clientUserData.index = index     -- upgrade menu uses to fetch current vehicle upgrades table
 end]]
+
+function GetVehicleName()
+    if index == 1 then
+        vehicleName = "Shopping Kart"
+    elseif index == 2 then
+        vehicleName = "Buggy Bug"
+    elseif index == 3 then
+        vehicleName = "Old Timey"
+    elseif index == 4 then
+        vehicleName = "Vespa Vendetta" 
+    elseif index == 5 then
+        vehicleName = "Electric Blue"
+    end
+end
 
 function OnBackButtonClicked()
 

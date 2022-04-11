@@ -11060,4 +11060,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Karts Geo"
+  VirtualFolderPath: "3 Old Timey Kart"
 }

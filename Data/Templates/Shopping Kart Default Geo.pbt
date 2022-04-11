@@ -15,9 +15,15 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6171099205028301999
         ChildIds: 7054528153067301752
         ChildIds: 9891271091579552160
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Shopping Kart"
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -11919,4 +11925,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Karts Geo"
+  VirtualFolderPath: "1 Shopping Kart"
 }

@@ -15,12 +15,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6171099205028301999
         ChildIds: 17969787526427164806
         ChildIds: 11413229905815029952
         ChildIds: 11000434581171744482
         ChildIds: 5062907878058323387
-        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -56608,4 +56607,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Trucks Geo"
+  VirtualFolderPath: "4 Tanker"
 }

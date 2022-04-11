@@ -52,6 +52,8 @@ local upgradeIndex = 1     -- which upgrade player is viewing
 local totalUpgrades = 4     -- !! WIP !! need to fetch this somehow so it auto updates when we add more
 local currentlyVisible = nil
 
+local vehicleName = nil
+
 local upgradesPanelOpen = false
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -169,14 +171,15 @@ function DisplayUnlockedUpgrade()
 
     currentlyVisible = World.SpawnAsset(UNLOCKED_GEO_TABLES[index][upgradeIndex], {parent = UNLOCKED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
-    local name = currentlyVisible:GetCustomProperty("Name")
-    VEHICLE_NAME_TEXT.text = name
+    -- nil local name = currentlyVisible:GetCustomProperty("Name")
+    GetVehicleName()
+    VEHICLE_NAME_TEXT.text = vehicleName
     local price = PRICES_TABLE[upgradeIndex]
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
-    VEHICLE_NAME_CB.text = name
+    VEHICLE_NAME_CB.text = vehicleName
     UPGRADE_STATUS_CB.text = "Upgrade " .. tostring(upgradeIndex)
     OWNED_STATUS_CB.text = "Unlocked"
     CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
@@ -222,16 +225,32 @@ function DisplayOwnedUpgrade()
 
     currentlyVisible = World.SpawnAsset(OWNED_GEO_TABLES[index][upgradeIndex], {parent = OWNED_UPGRADES_GEO_FOLDER})  -- parent folder must be at location
     currentlyVisible.visibility = Visibility.INHERIT
-    local name = currentlyVisible:GetCustomProperty("Name")
-    VEHICLE_NAME_TEXT.text = name
+    -- nil local name = currentlyVisible:GetCustomProperty("Name")
+    GetVehicleName()
+    VEHICLE_NAME_TEXT.text = vehicleName
     local price = PRICES_TABLE[upgradeIndex]
     VEHICLE_PRICE_TEXT.text = tostring(price) .. " Luampa Coins"
     VEHICLE_NAME_TEXT.visibility = Visibility.INHERIT
     VEHICLE_PRICE_TEXT.visibility = Visibility.INHERIT
 
-    VEHICLE_NAME_CB.text = name
+    VEHICLE_NAME_CB.text = vehicleName
     UPGRADE_STATUS_CB.text = "Upgrade " .. tostring(upgradeIndex)
     CHALKBOARD_TEXT_FOLDER.visibility = Visibility.INHERIT
+end
+
+
+function GetVehicleName()
+    if index == 1 then
+        vehicleName = "Thrashed Battle Truck"
+    elseif index == 2 then
+        vehicleName = "Skav Avenger"
+    elseif index == 3 then
+        vehicleName = "Rusty Beasty"
+    elseif index == 4 then
+        vehicleName = "Tanker" 
+    elseif index == 5 then
+        vehicleName = "musKa Mushka"
+    end
 end
 
 

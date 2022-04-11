@@ -61,7 +61,6 @@ Assets {
           }
         }
         ParentId: 16472073607485404107
-        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -840,4 +839,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Trucks Geo"
+  VirtualFolderPath: "4 Tanker"
 }

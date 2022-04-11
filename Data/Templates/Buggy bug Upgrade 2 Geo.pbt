@@ -10379,4 +10379,6 @@ Assets {
     }
   }
   SerializationVersion: 110
+  VirtualFolderPath: "Karts Geo"
+  VirtualFolderPath: "2 Buggy Bug"
 }
