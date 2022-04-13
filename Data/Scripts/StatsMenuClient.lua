@@ -63,30 +63,25 @@ function DisplayStats()
     end
     TOTAL_LAPS.text = tostring(totalLaps)
 
-    local totalBoostsUsed = 0
     local speedUsed = LOCAL_PLAYER.clientUserData.statsSpeedUsed
     local gravityUsed = LOCAL_PLAYER.clientUserData.statsGravityUsed
     local gripUsed = LOCAL_PLAYER.clientUserData.statsGripUsed
-    if speedUsed then
-        totalBoostsUsed = speedUsed + gravityUsed + gripUsed
-    end
-    TOTAL_BOOSTS_USED.text = tostring(totalBoostsUsed)
+    if not speedUsed then speedUsed = 0 end
+    if not gravityUsed then gravityUsed = 0 end
+    if not gripUsed then gripUsed = 0 end
+    TOTAL_BOOSTS_USED.text = tostring(speedUsed + gravityUsed + gripUsed)
 
-    local totalTrapsUsed = 0
     local oilDropped = LOCAL_PLAYER.clientUserData.statsOilDropped
     local slowDropped = LOCAL_PLAYER.clientUserData.statsSlowDropped
-    if oilDropped then
-        totalTrapsUsed = oilDropped + slowDropped
-    end
-    TOTAL_TRAPS_USED_RACE.text = tostring(totalTrapsUsed)
+    if not oilDropped then oilDropped = 0 end
+    if not slowDropped then slowDropped = 0 end
+    TOTAL_TRAPS_USED_RACE.text = tostring(oilDropped + slowDropped)
 
-    local totalTrapped = 0
     local oilTrapped = LOCAL_PLAYER.clientUserData.statsOilTrapped
     local slowTrapped = LOCAL_PLAYER.clientUserData.statsSlowTrapped
-    if oilTrapped then
-        totalTrapped = oilTrapped + slowTrapped
-    end
-    TOTAL_TRAPPED_RACE.text = tostring(totalTrapped)
+    if not oilTrapped then oilTrapped = 0 end
+    if not slowTrapped then slowTrapped = 0 end
+    TOTAL_TRAPPED_RACE.text = tostring(oilTrapped + slowTrapped)
 
 
     -- Battle stats
@@ -120,30 +115,23 @@ function DisplayStats()
     end
     TOTAL_TURRET_KILLS.text = tostring(statsTurretKills)
 
-    local totalTrapped = 0
     local statsMolotovTrapped = LOCAL_PLAYER.clientUserData.statsMolotovTrapped
     local statsSpikesTrapped = LOCAL_PLAYER.clientUserData.statsSpikesTrapped
-    if statsMolotovTrapped then
-        totalTrapped = statsMolotovTrapped + statsSpikesTrapped
-    end
-    TOTAL_TRAPPED_BATTLE.text = tostring(totalTrapped)
+    if not statsMolotovTrapped then statsMolotovTrapped = 0 end
+    if not statsSpikesTrapped then statsSpikesTrapped = 0 end
+    TOTAL_TRAPPED_BATTLE.text = tostring(statsMolotovTrapped + statsSpikesTrapped)
 
-    local totalTrapDmg = 0
     local statsMolotovDamage = LOCAL_PLAYER.clientUserData.statsMolotovDamage
     local statsSpikesDamage = LOCAL_PLAYER.clientUserData.statsSpikesDamage
-    if statsMolotovDamage then
-        totalTrapDmg = statsMolotovDamage + statsSpikesDamage
-    end
-    TOTAL_TRAP_DAMAGE.text = tostring(totalTrapDmg)
+    if not statsMolotovDamage then statsMolotovDamage = 0 end
+    if not statsSpikesDamage then statsSpikesDamage = 0 end
+    TOTAL_TRAP_DAMAGE.text = tostring(statsMolotovDamage + statsSpikesDamage)
 
-    local totalTrapKills = 0
     local statsMolotovKills = LOCAL_PLAYER.clientUserData.statsMolotovKills
     local statsSpikesKills = LOCAL_PLAYER.clientUserData.statsSpikesKills
-    if statsMolotovKills then
-        totalTrapKills = statsMolotovKills + statsSpikesKills
-    end
-    TOTAL_TRAP_KILLS.text = tostring(totalTrapKills)
-
+    if not statsMolotovKills then statsMolotovKills = 0 end
+    if not statsSpikesKills then statsSpikesKills = 0 end
+    TOTAL_TRAP_KILLS.text = tostring(statsMolotovKills + statsSpikesKills)
 
     MESSAGE_TEXT.text = "More stats coming soon!"
 end
