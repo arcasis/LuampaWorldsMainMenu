@@ -2,7 +2,7 @@ Assets {
   Id: 8218857145103637677
   Name: "CustomMetalFloorTriangle"
   PlatformAssetType: 13
-  SerializationVersion: 110
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 15177918941119336720
     ParameterOverrides {

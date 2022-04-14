@@ -2,7 +2,7 @@ Assets {
   Id: 11479232767097195070
   Name: "BusGlass"
   PlatformAssetType: 13
-  SerializationVersion: 110
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 3998592366905403415
     ParameterOverrides {

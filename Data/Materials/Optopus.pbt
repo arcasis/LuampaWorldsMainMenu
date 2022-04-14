@@ -2,7 +2,7 @@ Assets {
   Id: 9652899028443205571
   Name: "Optopus"
   PlatformAssetType: 13
-  SerializationVersion: 110
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 15473544180085705915
     ParameterOverrides {

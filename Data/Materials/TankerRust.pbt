@@ -2,7 +2,7 @@ Assets {
   Id: 11466387466865802823
   Name: "TankerRust"
   PlatformAssetType: 13
-  SerializationVersion: 110
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 7283825798727192743
     ParameterOverrides {

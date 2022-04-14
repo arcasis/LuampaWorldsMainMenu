@@ -52,5 +52,5 @@ Assets {
     Version: "1.0.0"
     Description: "Quickly add different audio zones within your game!\r\nSelect from pre-made lists of sounds, or add your own!\r\n\r\n-EASY TO USE\r\n-Reverb support\r\n-BGM support\r\n-Customizable"
   }
-  SerializationVersion: 110
+  SerializationVersion: 113
 }

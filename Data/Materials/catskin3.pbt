@@ -2,7 +2,7 @@ Assets {
   Id: 12772144586976769309
   Name: "catskin3"
   PlatformAssetType: 13
-  SerializationVersion: 110
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 17132691209281062938
     ParameterOverrides {

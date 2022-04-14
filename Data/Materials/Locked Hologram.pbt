@@ -2,7 +2,7 @@ Assets {
   Id: 7036999502579039907
   Name: "Locked Hologram"
   PlatformAssetType: 13
-  SerializationVersion: 110
+  SerializationVersion: 113
   CustomMaterialAsset {
     BaseMaterialId: 5761793600187362465
     ParameterOverrides {

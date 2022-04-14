@@ -2807,6 +2807,6 @@ Assets {
   Marketplace {
     Description: "Gives a one-time daily Reward in any Luampa game, then each game has pickups that players can pick up for their remainder creative limit. Pickups display if they have not picked up all of their creative Reward Points for the day. Resets daily. \r\n\r\nInstructions: Pull template into hierarchy, place pickups in desired locations."
   }
-  SerializationVersion: 110
+  SerializationVersion: 113
   DirectlyPublished: true
 }
