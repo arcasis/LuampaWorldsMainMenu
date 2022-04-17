@@ -103,11 +103,11 @@ function DisplayStats()
     end
     TOTAL_KILLS.text = tostring(statsKills)
 
-    local statsTotalGames = LOCAL_PLAYER.clientUserData.statsTotalGames
-    if not statsTotalGames then
-        statsTotalGames = 0
+    local statsHillBattles = LOCAL_PLAYER.clientUserData.statsHillBattles
+    if not statsHillBattles then
+        statsHillBattles = 0
     end
-    TOTAL_GAMES.text = tostring(statsTotalGames)
+    TOTAL_GAMES.text = tostring(statsHillBattles)
 
     local statsTurretKills = LOCAL_PLAYER.clientUserData.statsTurretKills
     if not statsTurretKills then
