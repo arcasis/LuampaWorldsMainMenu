@@ -25,26 +25,66 @@ function OnPlayerJoined(player)
     ------------------ END DELETE AFTER TESTING --------------------
 
 
+    --------------- CLEAN UP OLD TESTER TABLES ---------------------
+    local isTester1 = nil
+    local isTester2 = nil
+    if playerDataTable.isTester[1] == 1 then
+        isTester1 = true
+    end
+    if playerDataTable.isTester[2] == 1 then
+        isTester2 = true
+    end
+    if isTester1 or isTester2 then
+        local isTester = {}
+        if isTester1 then
+            isTester[1] = {}
+            isTester[1][1] = 1
+        end
+        if isTester2 then
+            isTester[2] = {}
+            isTester[2][2] = 1
+        end
+        playerDataTable.isTester = isTester
+    end
+    if playerDataTable.helmets[1] == 1 then
+        playerDataTable.helmets = nil
+        local newTable1 = {}
+        newTable1[1] = {}
+        newTable1[1][1] = 1
+        playerDataTable.helmets = newTable1
+        local newTable2 = {}
+        newTable2[1] = {}
+        newTable2[1][1] = 1
+        playerDataTable.selectedHelmet = newTable2
+        playerDataTable.helmetOn = true
+    end
+    -------------- END CLEAN UP OLD TESTER TABLE --------------------
+
+
     --------------------- CATCH ALPHA TESTERS ---------------------
     local isTester = playerDataTable.isTester
 
     -- Check if player helped test Luampa Worlds Race alpha
     if playerDataTable.cars then
         playerDataTable.cars = nil
-        if not isTester then
-            playerDataTable.isTester = {}
+        if not isTester then  -- build isTester table
+            isTester = {}
+            isTester[1] = {}     -- [1] is Luampa Race
+            playerDataTable.isTester = isTester
         end
-        playerDataTable.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race alpha
+        playerDataTable.isTester[1][1] = 1  -- [1][1] is Race alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
 
     -- Check if player helped test Luampa Worlds Race Battle mode
     if playerDataTable.totalXp then
         playerDataTable.totalXp = nil
-        if not isTester then
-            playerDataTable.isTester = {}
+        if not isTester then  -- build isTester table
+            isTester = {}
+            isTester[2] = {}     -- [2] is Luampa Battle
+            playerDataTable.isTester = isTester
         end
-        playerDataTable.isTester[2] = 1    -- index 2 = 1 means player helped test Luampa Battle alpha
+        playerDataTable.isTester[2][2] = 1  -- [2][2] is Battle alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
     ----------------- END CATCH ALPHA TESTERS ---------------------
@@ -57,36 +97,26 @@ function OnPlayerJoined(player)
     if playerDataTable.totalRaceXp then
         --print("Player had totalRaceXp")
         if not isTester then
-            playerDataTable.isTester = {}
+            isTester = {}
+            isTester[2] = {}     -- [2] is Luampa Battle
+            playerDataTable.isTester = isTester
         end
-        playerDataTable.isTester[1] = 1     -- index 1 = 1 means player helped test Luampa Race alpha
+        playerDataTable.isTester[1][1] = 1     -- [1][1] is Race alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
 
     -- Check if player helped playtest MAJOR UPDATE Battle
     if playerDataTable.totalBattleXp then
         --print("Player had totalBattleXp")
-        if not isTester then
-            playerDataTable.isTester = {}
+        if not isTester then  -- build isTester table
+            isTester = {}
+            isTester[2] = {}     -- [2] is Luampa Battle
+            playerDataTable.isTester = isTester
         end
-        playerDataTable.isTester[2] = 1     -- index 2 = 1 means player helped test Luampa Battle
+        playerDataTable.isTester[2][2] = 1  -- [2][2] is Battle alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
-
-
-    ----------------------- GIVE HELMET -----------------------
-    -- Give players the helmet if they're a tester and don't have it yet
-    if player.serverUserData.isTester and not playerDataTable.helmets then
-
-        messageTime[player] = time() + 5
-
-        local helmets = {}
-        helmets[1] = 1
-        playerDataTable.helmets = helmets
-        player.serverUserData.helmets = helmets
-    end
-    --------------------- END GIVE HELMET ---------------------
 
 
     ----------------------- RACE -----------------------
