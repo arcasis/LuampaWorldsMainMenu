@@ -21,18 +21,20 @@ function OnPlayerJoined(player)
     playerDataTable.trucks = nil
     playerDataTable.selectedKart = nil
     playerDataTable.selectedTruck = nil
-    playerDataTable.helmets = nil
+    --playerDataTable.helmets = nil
     ------------------ END DELETE AFTER TESTING --------------------
 
 
     --------------- CLEAN UP OLD TESTER TABLES ---------------------
     local isTester1 = nil
     local isTester2 = nil
-    if playerDataTable.isTester[1] == 1 then
-        isTester1 = true
-    end
-    if playerDataTable.isTester[2] == 1 then
-        isTester2 = true
+    if playerDataTable.isTester then
+        if playerDataTable.isTester[1] and playerDataTable.isTester[1] == 1 then
+            isTester1 = true
+        end
+        if playerDataTable.isTester[2] and playerDataTable.isTester[2] == 1 then
+            isTester2 = true
+        end
     end
     if isTester1 or isTester2 then
         local isTester = {}
@@ -46,7 +48,7 @@ function OnPlayerJoined(player)
         end
         playerDataTable.isTester = isTester
     end
-    if playerDataTable.helmets[1] == 1 then
+    if playerDataTable.helmets and playerDataTable.helmets[1] == 1 then
         playerDataTable.helmets = nil
         local newTable1 = {}
         newTable1[1] = {}

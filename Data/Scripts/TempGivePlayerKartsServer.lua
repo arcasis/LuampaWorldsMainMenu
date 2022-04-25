@@ -20,6 +20,7 @@ function OneTimeTestSystem(player)
 
     ----- !! DELETE BROADCAST BEFORE PUBLISH !! -------
     Events.Broadcast("UpdateXP", player)  -- temporary, to force unlockservers to refresh tables for testing
+    print("Test XP has been given. You can go into garages now.")
 end
 
 function ProgressiveTestSystem(player)
