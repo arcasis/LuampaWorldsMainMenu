@@ -105,7 +105,7 @@ function ProcessIndex()
     local karts = LOCAL_PLAYER.clientUserData.karts
 
     --print("player's karts[1] is: ", karts[1])
-    --print("player's karts[2[ is: ", karts[2])
+    --print("player's karts[2] is: ", karts[2])
     --print("karts[index] is: ", karts[index])
     
     local kartModel = karts[index]     -- table if unlocked or owned, nil if locked

@@ -12,7 +12,7 @@ function OnPlayerJoined(player)
 end
 
 function OneTimeTestSystem(player)
-    player.serverUserData.totalRaceXp = 2300
+    player.serverUserData.totalRaceXp = 23000
     player:SetPrivateNetworkedData("totalRaceXp", player.serverUserData.totalRaceXp)
     player.serverUserData.totalBattleXp = 23000
     player:SetPrivateNetworkedData("totalBattleXp", player.serverUserData.totalBattleXp)

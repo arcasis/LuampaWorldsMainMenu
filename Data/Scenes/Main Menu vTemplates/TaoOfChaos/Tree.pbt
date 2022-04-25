@@ -9954,6 +9954,10 @@ Objects {
       Name: "cs:5:ml"
       Bool: false
     }
+    Overrides {
+      Name: "cs:1:tooltip"
+      String: "Remains empty: already owned"
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -10061,6 +10065,10 @@ Objects {
     Overrides {
       Name: "cs:5:ml"
       Bool: false
+    }
+    Overrides {
+      Name: "cs:1:tooltip"
+      String: "Remains empty: Already owned"
     }
   }
   Collidable_v2 {

@@ -2,8 +2,6 @@
 
 function UnlockVehicles(player)
 
-    Task.Wait(1)  -- testing if a wait is needed
-
     --print("UnlockVehicles gets broadcast. Player name/battleXp: ", player.name, player.serverUserData.totalBattleXp)
 
     local trucks = player.serverUserData.trucks
