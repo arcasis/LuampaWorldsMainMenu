@@ -4128,9 +4128,8 @@ Objects {
       Z: 60.0000687
     }
     Rotation {
-      Pitch: -1.36603776e-05
       Yaw: 7.39519464e-06
-      Roll: -59.999958
+      Roll: -59.9999695
     }
     Scale {
       X: 1
