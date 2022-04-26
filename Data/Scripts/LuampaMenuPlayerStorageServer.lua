@@ -232,8 +232,6 @@ function OnPlayerLeft(player)
 
     local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
     
-    -- NOTE: We do not re-upload serverUserData.cars, will need to update Luampa Race Worlds to use karts
-
     playerDataTable.karts = player.serverUserData.karts
     playerDataTable.selectedKart = player.serverUserData.selectedKart
 
@@ -285,7 +283,7 @@ function OnPlayerLeft(player)
 
     ------------------------ !! FOR TESTING !! -------------------------
     
-    playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
+    --[[playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.selectedKart = nil  -- !!!!TEMP: DELETE MEH !!!!
@@ -293,7 +291,7 @@ function OnPlayerLeft(player)
     playerDataTable.selectedTruck = nil  -- !!!!TEMP: DELETE MEH !!!
     playerDataTable.totalBattleXp = nil  -- !!!!TEMP: DELETE MEH !!!
     playerDataTable.coins = nil
-    playerDataTable.helmets = nil
+    playerDataTable.helmets = nil]]
     
     ---------------------- !! END FOR TESTING !! -----------------------
 
