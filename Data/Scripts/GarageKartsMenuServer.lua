@@ -12,6 +12,8 @@ end
 
 -- client sets itself, then broadcasts so server can update
 function OnDefaultKartUpgradeSelected(player, index, upgradeIndex)
+
+    print("OnDefaultKartUpgradeSelected runs, index/upgradeIndex is:", index, upgradeIndex)
     local karts = {}
     karts[index] = {}
     karts[index][upgradeIndex] = 1

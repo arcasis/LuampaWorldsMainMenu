@@ -15,12 +15,12 @@ function OnPlayerJoined(player)
     -------------------- DELETE AFTER TESTING ----------------------
     -- Uncomment to clear data, comment to test saved data
     --playerDataTable.totalRaceXp = nil
-    playerDataTable.totalRaceXp = 100
-    playerDataTable.totalBattleXp = nil
-    playerDataTable.karts = nil
-    playerDataTable.trucks = nil
-    playerDataTable.selectedKart = nil
-    playerDataTable.selectedTruck = nil
+    --playerDataTable.totalRaceXp = 100
+    --playerDataTable.totalBattleXp = nil
+    --playerDataTable.karts = nil
+    --playerDataTable.trucks = nil
+    --playerDataTable.selectedKart = nil
+    --playerDataTable.selectedTruck = nil
     --playerDataTable.helmets = nil
     ------------------ END DELETE AFTER TESTING --------------------
 
