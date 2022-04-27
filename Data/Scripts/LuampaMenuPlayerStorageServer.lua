@@ -44,7 +44,7 @@ function OnPlayerJoined(player)
         end
         if isTester2 then
             isTester[2] = {}
-            isTester[2][2] = 1
+            isTester[2][1] = 1
         end
         playerDataTable.isTester = isTester
     end
@@ -86,7 +86,7 @@ function OnPlayerJoined(player)
             isTester[2] = {}     -- [2] is Luampa Battle
             playerDataTable.isTester = isTester
         end
-        playerDataTable.isTester[2][2] = 1  -- [2][2] is Battle alpha testing
+        playerDataTable.isTester[2][1] = 1  -- [2][2] is Battle alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
     ----------------- END CATCH ALPHA TESTERS ---------------------
@@ -95,27 +95,38 @@ function OnPlayerJoined(player)
     ----------------- CATCH MAJOR UPDATE TESTERS -----------------
     --------- !! COMMENT THESE OUT AFTER WE GO LIVE !! ----------
 
-    -- Check if player helped playtest MAJOR UPDATE Race
-    if playerDataTable.totalRaceXp then
+    -- Check if player helped playtest MAJOR UPDATE Race but hasn't gotten helmet yet
+    if playerDataTable.totalRaceXp and not playerDataTable.helmets then
         --print("Player had totalRaceXp")
         if not isTester then
             isTester = {}
-            isTester[2] = {}     -- [2] is Luampa Battle
+            isTester[1] = {}     -- [1] is Luampa Race
             playerDataTable.isTester = isTester
+        else
+            if not isTester[1] then
+                isTester[1] = {}
+                playerDataTable.isTester = isTester
+            end
         end
         playerDataTable.isTester[1][1] = 1     -- [1][1] is Race alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
 
-    -- Check if player helped playtest MAJOR UPDATE Battle
-    if playerDataTable.totalBattleXp then
+    -- Check if player helped playtest MAJOR UPDATE Battle but hasn't gotten helmet yet
+    if playerDataTable.totalBattleXp and not playerDataTable.helmets then
         --print("Player had totalBattleXp")
+        
         if not isTester then  -- build isTester table
             isTester = {}
             isTester[2] = {}     -- [2] is Luampa Battle
             playerDataTable.isTester = isTester
+        else
+            if not isTester[2] then
+                isTester[2] = {}
+                playerDataTable.isTester = isTester
+            end
         end
-        playerDataTable.isTester[2][2] = 1  -- [2][2] is Battle alpha testing
+        playerDataTable.isTester[2][1] = 1  -- [2][1] is Battle alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
     end
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
