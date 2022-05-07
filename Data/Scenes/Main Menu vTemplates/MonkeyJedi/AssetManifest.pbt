@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 18130546755631559017
+  Name: "Street Light Pole Extension 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_st_post_lights_pole_ext_001"
+  }
+}
+Assets {
   Id: 18032733315106131619
   Name: "Cylinder"
   PlatformAssetType: 1
@@ -98,6 +107,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17680666645830167541
+  Name: "Urban Dumpster 01 - Base"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_trashbin_big_001_base_001_ref"
+  }
+}
+Assets {
   Id: 17656495108824350163
   Name: "Corrugated Sheet Small"
   PlatformAssetType: 1
@@ -116,12 +134,30 @@ Assets {
   }
 }
 Assets {
+  Id: 17591161558402514443
+  Name: "Urban Vehicle Car - Center Console 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_kit_console_center_001_ref"
+  }
+}
+Assets {
   Id: 17280976981586363031
   Name: "Corrugated Sheet Tall"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_mil_corrugated_sheet_02_ref"
+  }
+}
+Assets {
+  Id: 17231997532612305784
+  Name: "Pipe - Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_004"
   }
 }
 Assets {
@@ -188,12 +224,39 @@ Assets {
   }
 }
 Assets {
+  Id: 16516459769229762722
+  Name: "Urban Car Screens 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_kit_tachometer_001_ref"
+  }
+}
+Assets {
   Id: 16471063547951275134
   Name: "Decal Bullet Damage Metal"
   PlatformAssetType: 14
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_bullet_metal_001"
+  }
+}
+Assets {
+  Id: 16258530429147644632
+  Name: "Lens - Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half_lense_001"
+  }
+}
+Assets {
+  Id: 16243317139499550448
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
   }
 }
 Assets {
@@ -233,6 +296,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16049211287924608873
+  Name: "Urban Vehicle Car - Front Seat Bottom 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_acc_seat_front_bot_001_ref"
+  }
+}
+Assets {
   Id: 15923106616284873904
   Name: "\"Flags Of Honor\" Music Construction Kit (Sections) 01"
   PlatformAssetType: 10
@@ -257,6 +329,33 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_mil_tire_worn_large_01_ref"
+  }
+}
+Assets {
+  Id: 15497712985966458783
+  Name: "Sci-fi Ship Blaster 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_scf_ship_blaster_002_ref"
+  }
+}
+Assets {
+  Id: 15376374145827134769
+  Name: "Metal Steel Brushed"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_stainless-steel_001_uv"
+  }
+}
+Assets {
+  Id: 15353476744572170853
+  Name: "Urban Vehicle Car - Front Seat Leg 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_acc_seat_front_leg_001_ref"
   }
 }
 Assets {
@@ -365,6 +464,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_emissive_001"
+  }
+}
+Assets {
+  Id: 14272986521887390608
+  Name: "Decal Road Sign Symbols"
+  PlatformAssetType: 14
+  PrimaryAsset {
+    AssetType: "DecalBlueprintAssetRef"
+    AssetId: "bp_decal_roadsigns_001"
   }
 }
 Assets {
@@ -530,6 +638,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12839023638132340927
+  Name: "Cube - Bottom-Aligned"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_001"
+  }
+}
+Assets {
   Id: 12821608187918865362
   Name: "Urban Vehicle Car - Steering Wheel 01"
   PlatformAssetType: 1
@@ -602,6 +719,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12190463340827898157
+  Name: "Ring"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_004"
+  }
+}
+Assets {
   Id: 12095835209017042614
   Name: "Cube"
   PlatformAssetType: 1
@@ -647,6 +773,24 @@ Assets {
   }
 }
 Assets {
+  Id: 11638225697129107731
+  Name: "Urban Pedestrian Barrier 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_barrier_pedestrian_001"
+  }
+}
+Assets {
+  Id: 11618562317607024123
+  Name: "Trim - Straight - 08m"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_trimitives_001_straight_8m_ref"
+  }
+}
+Assets {
   Id: 11547421392472302864
   Name: "Sign Font 1 Neon Outline: R"
   PlatformAssetType: 1
@@ -665,6 +809,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11242933075375658963
+  Name: "Military Tank Historic Hull 01 - Front"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_mil_tank_hst_hull_001_front_ref"
+  }
+}
+Assets {
   Id: 11242450435817934693
   Name: "Cube - Bottom-Aligned"
   PlatformAssetType: 1
@@ -680,6 +833,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_001"
+  }
+}
+Assets {
+  Id: 10848303548770075420
+  Name: "Street Light Pole Extension 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_urb_st_post_lights_pole_ext_002"
   }
 }
 Assets {
@@ -752,6 +914,24 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_002"
+  }
+}
+Assets {
+  Id: 9977390916839915811
+  Name: "Metal Diamond Plates 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_rust_diamond-plate_002"
+  }
+}
+Assets {
+  Id: 9839902665463939433
+  Name: "Military Mobile Radar 01 - Antenna 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_mil_radar_mobile_01_01_ref"
   }
 }
 Assets {
@@ -887,6 +1067,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_rounded_001"
+  }
+}
+Assets {
+  Id: 8697645788411543907
+  Name: "Mecha - Frame - Knee Joint 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_jpn_mecha_frame_hinge_knee_001_ref"
   }
 }
 Assets {
@@ -1106,6 +1295,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6865249745567109080
+  Name: "Corrugated Sheet Bent"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_mil_corrugated_sheet_05_ref"
+  }
+}
+Assets {
   Id: 6717098540383755117
   Name: "Sign Font 1 Neon Outline: A"
   PlatformAssetType: 1
@@ -1151,6 +1349,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6067711860393633075
+  Name: "Urban Vehicle Car - Storage Rack Top End 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_acc_rack_storage_rail_top_end_001_ref"
+  }
+}
+Assets {
   Id: 6045540826292531006
   Name: "Modern Weapon - Sight Forward 02"
   PlatformAssetType: 1
@@ -1175,6 +1382,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_scf_chair_002_leg_ref"
+  }
+}
+Assets {
+  Id: 5626465369024768397
+  Name: "Military Tank Historic Gear 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_mil_tank_hst_gear_002_ref"
   }
 }
 Assets {
@@ -1349,6 +1565,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3998592366905403415
+  Name: "Glass 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_glass_refrac_001"
+  }
+}
+Assets {
   Id: 3857961723526696386
   Name: "Basic Sparks"
   PlatformAssetType: 8
@@ -1364,6 +1589,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_mil_tank_mod_gun_001_ref"
+  }
+}
+Assets {
+  Id: 3682206342183528038
+  Name: "Fantasy Sword Grip 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_fan_grip_sword_001"
   }
 }
 Assets {
@@ -1394,6 +1628,24 @@ Assets {
   }
 }
 Assets {
+  Id: 3439609705864591532
+  Name: "Military Tank Historic Maingun 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_mil_tank_hst_maingun_001_ref"
+  }
+}
+Assets {
+  Id: 3433416882178080463
+  Name: "Street Sign - Rectangle"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_street-sign_rectangle_001"
+  }
+}
+Assets {
   Id: 3286632740216585626
   Name: "Metal Painted 01"
   PlatformAssetType: 2
@@ -1409,6 +1661,24 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_002"
+  }
+}
+Assets {
+  Id: 3203349032132710974
+  Name: "Urban Vehicle Car - Front Seat Top 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_urb_car_acc_seat_front_top_001_ref"
+  }
+}
+Assets {
+  Id: 3177874601567349368
+  Name: "Metal Painted Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_painted_metal_basic_001"
   }
 }
 Assets {
@@ -1454,6 +1724,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "CollegeNeon_Outline_01_Text_004"
+  }
+}
+Assets {
+  Id: 2706761020859682454
+  Name: "Urban Interior - Oil Lantern 02 - Handle 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_lantern_oil_handle_002_ref"
   }
 }
 Assets {
@@ -1556,12 +1835,30 @@ Assets {
   }
 }
 Assets {
+  Id: 1565984136802991240
+  Name: "Fantasy Chain - Straight 4m 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_fan_chain_strt_4m_002_ref"
+  }
+}
+Assets {
   Id: 1454889897083546388
   Name: "Additive Axis Aligned Soft Edge Z"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_additive_axis_aligned_fresnel"
+  }
+}
+Assets {
+  Id: 1227539998602669490
+  Name: "Urban Interior - Oil Lantern 02 - Base 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_lantern_oil_base_002_ref"
   }
 }
 Assets {
@@ -1580,6 +1877,24 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_burned_streak_002_ref"
+  }
+}
+Assets {
+  Id: 930284029150437119
+  Name: "Street Sign - Diamond"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_street-sign_diamond_001"
+  }
+}
+Assets {
+  Id: 893792839601250744
+  Name: "Mecha - Frame - Forearm 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_veh_jpn_mecha_frame_forearm_001_ref"
   }
 }
 Assets {
@@ -1616,6 +1931,24 @@ Assets {
   PrimaryAsset {
     AssetType: "SkinnedMeshAssetRef"
     AssetId: "npc_human_guy_lower_scifi_005_ref"
+  }
+}
+Assets {
+  Id: 628634007863935959
+  Name: "Urban Dumpster 01 - Lid"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_trashbin_big_001_lid_001_ref"
+  }
+}
+Assets {
+  Id: 625906690733978220
+  Name: "Modern Weapon - Body 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_weap_modern_body_004"
   }
 }
 Assets {
