@@ -838,7 +838,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
   VirtualFolderPath: "Trucks Geo"
   VirtualFolderPath: "4 Tanker"
 }

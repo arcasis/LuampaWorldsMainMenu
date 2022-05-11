@@ -2,7 +2,7 @@ Assets {
   Id: 7375018467158415958
   Name: "RustyPaintYellow"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 13085174305471638229
     ParameterOverrides {

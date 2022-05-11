@@ -5930,7 +5930,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
   VirtualFolderPath: "Trucks Geo"
   VirtualFolderPath: "1 Thrashed Battle Truck"
 }

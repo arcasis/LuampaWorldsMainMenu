@@ -500,5 +500,5 @@ Assets {
       AssetId: "Animated_Neon_Sign-_V_Frame"
     }
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
 }

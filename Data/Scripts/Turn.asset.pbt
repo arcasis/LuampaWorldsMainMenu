@@ -25,6 +25,6 @@ Assets {
   Marketplace {
     Description: "infinitely turns the parent of the script !\r\n\r\nscript explain for you can easily change the speed and direction of rotation"
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
   DirectlyPublished: true
 }

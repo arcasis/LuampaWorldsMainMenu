@@ -27,6 +27,12 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -628,6 +634,6 @@ Assets {
   Marketplace {
     Description: "Quickly add different audio zones within your game!\r\nSelect from pre-made lists of sounds, or add your own!\r\n\r\n-EASY TO USE\r\n-Reverb support\r\n-BGM support\r\n-Customizable"
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
   DirectlyPublished: true
 }

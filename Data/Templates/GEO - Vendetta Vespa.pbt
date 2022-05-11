@@ -9462,7 +9462,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
   VirtualFolderPath: "Karts Geo"
   VirtualFolderPath: "4 Vendetta Vespa"
 }

@@ -65,6 +65,12 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -754,5 +760,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
 }

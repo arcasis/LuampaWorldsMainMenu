@@ -2,7 +2,7 @@ Assets {
   Id: 15385682896892773252
   Name: "SchoolBus"
   PlatformAssetType: 13
-  SerializationVersion: 113
+  SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 1376976208896698458
     ParameterOverrides {
