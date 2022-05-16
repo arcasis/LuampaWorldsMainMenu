@@ -40,8 +40,8 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: 2384.57715
-      Y: -231.646973
+      X: 2022.57312
+      Y: 599.748047
       Z: 482.750916
     }
     Rotation {

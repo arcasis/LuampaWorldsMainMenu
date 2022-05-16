@@ -3731,12 +3731,12 @@ Objects {
   Name: "Humanoid 2 Rig"
   Transform {
     Location {
-      X: 1804.46582
-      Y: -171.22998
+      X: 1263.18201
+      Y: 600.989258
       Z: 203.994568
     }
     Rotation {
-      Yaw: -172.377487
+      Yaw: -159.472656
     }
     Scale {
       X: 1
@@ -3799,9 +3799,9 @@ Objects {
   Name: "Tire Stack 05 - Mixed Tire Stack Messy Template"
   Transform {
     Location {
-      X: 974.14624
-      Y: 578.724609
-      Z: 98.7432098
+      X: 1520.05078
+      Y: 386.612793
+      Z: 98.7432404
     }
     Rotation {
       Yaw: 52.6464195
@@ -75698,6 +75698,7 @@ Objects {
   ChildIds: 2224436807366343026
   ChildIds: 2648775316518718022
   ChildIds: 5566489821507198353
+  ChildIds: 6480700493207134981
   ChildIds: 7291533654656129621
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -75723,14 +75724,14 @@ Objects {
   Name: "junk vehicle"
   Transform {
     Location {
-      X: 294.374023
-      Y: -1720.28015
-      Z: 41.9876709
+      X: -5880.87402
+      Y: -8302.66309
+      Z: 41.9879
     }
     Rotation {
-      Pitch: 6.50419092
-      Yaw: -42.1874084
-      Roll: 21.6232471
+      Pitch: 4.74088192
+      Yaw: -141.483734
+      Roll: -3.29855347
     }
     Scale {
       X: 1
@@ -82454,7 +82455,6 @@ Objects {
   ChildIds: 10755592282647347276
   ChildIds: 15113705280858928930
   ChildIds: 14811645016353559802
-  ChildIds: 238923583035558905
   ChildIds: 4536933170740066118
   ChildIds: 16166820023272472719
   ChildIds: 11807053027781303983
@@ -82796,990 +82796,6 @@ Objects {
   CoreMesh {
     MeshAsset {
       Id: 6067711860393633075
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 238923583035558905
-  Name: "Military Tank Historic Gear 02"
-  Transform {
-    Location {
-      X: 217.214111
-      Y: 24.2341309
-      Z: 194.439255
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.592551351
-      Y: 0.592551351
-      Z: 0.592551351
-    }
-  }
-  ParentId: 2760770583241122286
-  ChildIds: 4567874820115040394
-  ChildIds: 3824074683339962507
-  ChildIds: 14890433675789032538
-  ChildIds: 44611233463093737
-  ChildIds: 15971478455251614040
-  ChildIds: 2282554975243991070
-  ChildIds: 17521234634770398175
-  ChildIds: 10611440919015337378
-  ChildIds: 12709749257911764670
-  ChildIds: 15752628898471551349
-  ChildIds: 3766601173436067273
-  ChildIds: 3435867212653330987
-  ChildIds: 8907259611333422347
-  ChildIds: 13551373402668992010
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 7016245623101166198
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:utile"
-      Float: 6.34841108
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:vtile"
-      Float: 3.75345
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 5626465369024768397
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 13551373402668992010
-  Name: "Military Tank Historic Gear 02"
-  Transform {
-    Location {
-      Y: -29.2762089
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 7016245623101166198
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:utile"
-      Float: 6.34841108
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:vtile"
-      Float: 3.75345
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 5626465369024768397
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 8907259611333422347
-  Name: "Military Tank Historic Gear 02"
-  Transform {
-    Location {
-      Y: -61.1353455
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 7016245623101166198
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:utile"
-      Float: 6.34841108
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:vtile"
-      Float: 3.75345
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 5626465369024768397
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3435867212653330987
-  Name: "Turn"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.68761742
-      Y: 1.68761742
-      Z: 1.68761742
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:X"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:Z"
-      Float: 0
-    }
-    Overrides {
-      Name: "cs:Y"
-      Float: 150
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7917150208525785342
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3766601173436067273
-  Name: "Military Tank Historic Gear 02"
-  Transform {
-    Location {
-      Y: -87.3461533
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 7016245623101166198
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:utile"
-      Float: 6.34841108
-    }
-    Overrides {
-      Name: "ma:Shared_Detail1:vtile"
-      Float: 3.75345
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 5626465369024768397
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 15752628898471551349
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: -8.20605469
-      Y: -76.6530762
-      Z: 0.730499268
-    }
-    Rotation {
-      Yaw: 90
-      Roll: 67.5128174
-    }
-    Scale {
-      X: 0.176657274
-      Y: -0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 12709749257911764670
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: -8.20406246
-      Y: -10.7725706
-      Z: 0.736658871
-    }
-    Rotation {
-      Yaw: -90
-      Roll: -67.5128784
-    }
-    Scale {
-      X: 0.176657274
-      Y: 0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 10611440919015337378
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: -5.16503906
-      Y: -76.6530762
-      Z: -6.72857666
-    }
-    Rotation {
-      Yaw: 90
-      Roll: 145.237259
-    }
-    Scale {
-      X: 0.176657274
-      Y: -0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 17521234634770398175
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: -5.1646204
-      Y: -10.7725706
-      Z: -6.72410107
-    }
-    Rotation {
-      Yaw: -90
-      Roll: -145.237259
-    }
-    Scale {
-      X: 0.176657274
-      Y: 0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 2282554975243991070
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: 3.6484375
-      Y: -76.6530762
-      Z: -7.50073242
-    }
-    Rotation {
-      Yaw: 90
-      Roll: -139.593277
-    }
-    Scale {
-      X: 0.176657274
-      Y: -0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 15971478455251614040
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: 3.64840174
-      Y: -10.7725706
-      Z: -7.4964509
-    }
-    Rotation {
-      Yaw: -90
-      Roll: 139.593277
-    }
-    Scale {
-      X: 0.176657274
-      Y: 0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 44611233463093737
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: 7.27905273
-      Y: -76.6530762
-      Z: 2.6144104
-    }
-    Rotation {
-      Yaw: 90
-      Roll: -75.1447144
-    }
-    Scale {
-      X: 0.176657274
-      Y: -0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 14890433675789032538
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      X: 7.27908659
-      Y: -10.7725706
-      Z: 2.61622429
-    }
-    Rotation {
-      Yaw: -90
-      Roll: 75.1448
-    }
-    Scale {
-      X: 0.176657274
-      Y: 0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3824074683339962507
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      Y: -76.6530762
-      Z: 7.79821777
-    }
-    Rotation {
-      Yaw: 90
-    }
-    Scale {
-      X: 0.176657274
-      Y: -0.220193
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 4567874820115040394
-  Name: "Sci-fi Ship Blaster 02"
-  Transform {
-    Location {
-      Y: -10.7725706
-      Z: 7.79822683
-    }
-    Rotation {
-      Yaw: -90
-    }
-    Scale {
-      X: 0.176657274
-      Y: 0.220192984
-      Z: 0.22019358
-    }
-  }
-  ParentId: 238923583035558905
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11466387466865802823
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15497712985966458783
     }
     Teams {
       IsTeamCollisionEnabled: true
@@ -99079,6 +98095,1234 @@ Objects {
       IsEnemyCollisionEnabled: true
     }
     DisableAngularMotionBlur: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6480700493207134981
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: -6059.11621
+      Y: -8398.20215
+      Z: 266.899017
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6886469498598604258
+  ChildIds: 4567874820115040394
+  ChildIds: 3824074683339962507
+  ChildIds: 14890433675789032538
+  ChildIds: 44611233463093737
+  ChildIds: 15971478455251614040
+  ChildIds: 2282554975243991070
+  ChildIds: 17521234634770398175
+  ChildIds: 10611440919015337378
+  ChildIds: 12709749257911764670
+  ChildIds: 15752628898471551349
+  ChildIds: 3766601173436067273
+  ChildIds: 8907259611333422347
+  ChildIds: 13551373402668992010
+  ChildIds: 238923583035558905
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+    MinDetailLevel {
+      Value: "mc:edetaillevel:low"
+    }
+    MaxDetailLevel {
+      Value: "mc:edetaillevel:ultra"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 238923583035558905
+  Name: "Military Tank Historic Gear 02"
+  Transform {
+    Location {
+      Y: 0.00048828125
+    }
+    Rotation {
+      Pitch: 4.741
+      Yaw: -141.48378
+    }
+    Scale {
+      X: 0.592551351
+      Y: -0.592551351
+      Z: 0.592551351
+    }
+  }
+  ParentId: 6480700493207134981
+  ChildIds: 3435867212653330987
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7016245623101166198
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:utile"
+      Float: 6.34841108
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:vtile"
+      Float: 3.75345
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5626465369024768397
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3435867212653330987
+  Name: "Turn"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Pitch: 1.64627361
+      Yaw: -141.267654
+      Roll: 5.53442144
+    }
+    Scale {
+      X: 1.68761754
+      Y: 1.68761754
+      Z: 1.68761754
+    }
+  }
+  ParentId: 238923583035558905
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:X"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Z"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Y"
+      Float: 150
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7917150208525785342
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 13551373402668992010
+  Name: "Military Tank Historic Gear 02"
+  Transform {
+    Location {
+      X: 10.8496094
+      Y: -13.4985352
+      Z: 0.994751
+    }
+    Rotation {
+      Pitch: 4.74088192
+      Yaw: -141.48381
+    }
+    Scale {
+      X: 0.592551351
+      Y: -0.592551351
+      Z: 0.592551351
+    }
+  }
+  ParentId: 6480700493207134981
+  ChildIds: 3827094630618233767
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7016245623101166198
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:utile"
+      Float: 6.34841108
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:vtile"
+      Float: 3.75345
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5626465369024768397
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3827094630618233767
+  Name: "Turn"
+  Transform {
+    Location {
+      X: -0.000585835252
+      Y: 29.2283115
+      Z: -1.68447411
+    }
+    Rotation {
+      Pitch: 1.64617801
+      Yaw: -141.267715
+      Roll: 5.53435326
+    }
+    Scale {
+      X: 1.68761754
+      Y: 1.68761754
+      Z: 1.68761754
+    }
+  }
+  ParentId: 13551373402668992010
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:X"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Z"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Y"
+      Float: 150
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7917150208525785342
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8907259611333422347
+  Name: "Military Tank Historic Gear 02"
+  Transform {
+    Location {
+      X: 22.6564941
+      Y: -28.1889648
+      Z: 2.07727051
+    }
+    Rotation {
+      Pitch: 4.74088192
+      Yaw: -141.48381
+    }
+    Scale {
+      X: 0.592551351
+      Y: -0.592551351
+      Z: 0.592551351
+    }
+  }
+  ParentId: 6480700493207134981
+  ChildIds: 462360997995362535
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7016245623101166198
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:utile"
+      Float: 6.34841108
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:vtile"
+      Float: 3.75345
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5626465369024768397
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 462360997995362535
+  Name: "Turn"
+  Transform {
+    Location {
+      X: 0.000212445753
+      Y: 61.03302
+      Z: -3.51769042
+    }
+    Rotation {
+      Pitch: 1.64617801
+      Yaw: -141.267715
+      Roll: 5.53435326
+    }
+    Scale {
+      X: 1.68761754
+      Y: 1.68761754
+      Z: 1.68761754
+    }
+  }
+  ParentId: 8907259611333422347
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:X"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Z"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Y"
+      Float: 150
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7917150208525785342
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3766601173436067273
+  Name: "Military Tank Historic Gear 02"
+  Transform {
+    Location {
+      X: 32.3702393
+      Y: -40.2749023
+      Z: 2.96786499
+    }
+    Rotation {
+      Pitch: 4.74088192
+      Yaw: -141.48381
+    }
+    Scale {
+      X: 0.592551351
+      Y: -0.592551351
+      Z: 0.592551351
+    }
+  }
+  ParentId: 6480700493207134981
+  ChildIds: 11720339916885185129
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 7016245623101166198
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:utile"
+      Float: 6.34841108
+    }
+    Overrides {
+      Name: "ma:Shared_Detail1:vtile"
+      Float: 3.75345
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5626465369024768397
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11720339916885185129
+  Name: "Turn"
+  Transform {
+    Location {
+      X: 0.000611586263
+      Y: 87.200531
+      Z: -5.02591753
+    }
+    Rotation {
+      Pitch: 1.64617801
+      Yaw: -141.267715
+      Roll: 5.53435326
+    }
+    Scale {
+      X: 1.68761754
+      Y: 1.68761754
+      Z: 1.68761754
+    }
+  }
+  ParentId: 3766601173436067273
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:X"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Z"
+      Float: 0
+    }
+    Overrides {
+      Name: "cs:Y"
+      Float: 150
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7917150208525785342
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15752628898471551349
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 32.2114258
+      Y: -32.2851562
+      Z: 2.63330078
+    }
+    Rotation {
+      Pitch: -3.28725386
+      Yaw: 128.789108
+      Roll: -72.2615
+    }
+    Scale {
+      X: 0.104678504
+      Y: 0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12709749257911764670
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 7.79541
+      Y: -1.90722656
+      Z: 0.398529053
+    }
+    Rotation {
+      Pitch: 3.28724694
+      Yaw: -51.2108688
+      Roll: 72.2615738
+    }
+    Scale {
+      X: 0.104678504
+      Y: -0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 10611440919015337378
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 30.6793213
+      Y: -33.8295898
+      Z: -1.61523438
+    }
+    Rotation {
+      Pitch: -3.28726053
+      Yaw: 128.789108
+      Roll: -149.985962
+    }
+    Scale {
+      X: 0.104678504
+      Y: 0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 17521234634770398175
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 6.26403809
+      Y: -3.45117188
+      Z: -3.85107422
+    }
+    Rotation {
+      Pitch: 3.28725386
+      Yaw: -51.2108688
+      Roll: 149.985962
+    }
+    Scale {
+      X: 0.104678504
+      Y: -0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2282554975243991070
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 26.5939941
+      Y: -37.1147461
+      Z: -1.63882446
+    }
+    Rotation {
+      Pitch: -3.28725386
+      Yaw: 128.789108
+      Roll: 134.844543
+    }
+    Scale {
+      X: 0.104678504
+      Y: 0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15971478455251614040
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 2.17895508
+      Y: -6.73632812
+      Z: -3.87478638
+    }
+    Rotation {
+      Pitch: 3.28724694
+      Yaw: -51.2108765
+      Roll: -134.844543
+    }
+    Scale {
+      X: 0.104678504
+      Y: -0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 44611233463093737
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 25.088623
+      Y: -37.8720703
+      Z: 4.50231934
+    }
+    Rotation {
+      Pitch: -3.28726053
+      Yaw: 128.789108
+      Roll: 70.3959961
+    }
+    Scale {
+      X: 0.104678504
+      Y: 0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14890433675789032538
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 0.673584
+      Y: -7.49365234
+      Z: 2.26489258
+    }
+    Rotation {
+      Pitch: 3.28726053
+      Yaw: -51.210865
+      Roll: -70.3960724
+    }
+    Scale {
+      X: 0.104678504
+      Y: -0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3824074683339962507
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 28.5401611
+      Y: -34.8989258
+      Z: 7.20193481
+    }
+    Rotation {
+      Pitch: -3.28725386
+      Yaw: 128.789124
+      Roll: -4.7487154
+    }
+    Scale {
+      X: 0.104678504
+      Y: 0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4567874820115040394
+  Name: "Sci-fi Ship Blaster 02"
+  Transform {
+    Location {
+      X: 4.125
+      Y: -4.52099609
+      Z: 4.96344
+    }
+    Rotation {
+      Pitch: 3.28725386
+      Yaw: -51.2108688
+      Roll: 4.7487154
+    }
+    Scale {
+      X: 0.104678504
+      Y: -0.130475655
+      Z: 0.130476
+    }
+  }
+  ParentId: 6480700493207134981
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 11466387466865802823
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15497712985966458783
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
     StaticMesh {
       Physics {
         Mass: 100
@@ -116746,7 +116990,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -117641,7 +117885,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
