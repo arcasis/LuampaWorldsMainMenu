@@ -188,6 +188,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17110364119456872672
+  Name: "Frame Outline Thin 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_022"
+  }
+}
+Assets {
   Id: 16974951774123509249
   Name: "Metal Simple Tech Panel Wall 01"
   PlatformAssetType: 2
@@ -284,6 +293,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_sphere_002"
+  }
+}
+Assets {
+  Id: 16198136617983446506
+  Name: "Center Rect 001 Outline"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterRect_001Outline"
   }
 }
 Assets {
@@ -647,6 +665,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13066997685339875756
+  Name: "Abstract Frame 02"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Core_UI_AbstractPack_Cframe_002"
+  }
+}
+Assets {
   Id: 13028932803405216377
   Name: "Military Tank Modern Hatch 01 Lid"
   PlatformAssetType: 1
@@ -752,6 +779,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_004"
+  }
+}
+Assets {
+  Id: 12106163194967304158
+  Name: "Emblem 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Icon_057"
   }
 }
 Assets {
@@ -1355,6 +1391,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_mil_corrugated_sheet_05_ref"
+  }
+}
+Assets {
+  Id: 6724962617897031598
+  Name: "BG Gradient 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_015"
   }
 }
 Assets {
