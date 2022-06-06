@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 18322860713923765200
+  Name: "BG Highlighted 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_022"
+  }
+}
+Assets {
   Id: 18130546755631559017
   Name: "Street Light Pole Extension 01"
   PlatformAssetType: 1
@@ -152,6 +161,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17269740971833997173
+  Name: "Icon Skull"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Skull"
+  }
+}
+Assets {
   Id: 17231997532612305784
   Name: "Pipe - Thick"
   PlatformAssetType: 1
@@ -239,6 +257,15 @@ Assets {
   PrimaryAsset {
     AssetType: "DecalBlueprintAssetRef"
     AssetId: "bp_decal_bullet_metal_001"
+  }
+}
+Assets {
+  Id: 16288136505121487422
+  Name: "BG Gradient 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundFlat_019"
   }
 }
 Assets {
@@ -746,6 +773,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11996370362624858284
+  Name: "Abstract Frame 10"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Core_UI_AbstractPackFrame_004"
+  }
+}
+Assets {
   Id: 11963148078608998450
   Name: "Bone Human Hand 01"
   PlatformAssetType: 1
@@ -860,6 +896,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_rust_rivets_001_uv"
+  }
+}
+Assets {
+  Id: 10737368364154921283
+  Name: "UI Basic Shape Triangle"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_Triangle"
   }
 }
 Assets {
@@ -1085,6 +1130,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_painted_new_001_uv"
+  }
+}
+Assets {
+  Id: 8619371972198943276
+  Name: "Center Arrow 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_008"
   }
 }
 Assets {
@@ -1340,12 +1394,39 @@ Assets {
   }
 }
 Assets {
+  Id: 6363320609941978136
+  Name: "Play"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "PlayRegular_ref"
+  }
+}
+Assets {
+  Id: 6334699134008261182
+  Name: "BG Highlighted 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_020"
+  }
+}
+Assets {
   Id: 6209556876010214815
   Name: "Urban Vehicle Car - Brake 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_veh_urb_car_acc_brake_001_ref"
+  }
+}
+Assets {
+  Id: 6174803333271868359
+  Name: "Center Arrow 004 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_004Wedge"
   }
 }
 Assets {
@@ -1391,6 +1472,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_mil_tank_hst_gear_002_ref"
+  }
+}
+Assets {
+  Id: 5619580598160374927
+  Name: "Abstract Background 04"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Core_UI_AbstractPack_Background_005"
   }
 }
 Assets {
@@ -1646,6 +1736,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3386087430817663663
+  Name: "Frame Highlighted 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameHighlighted_019"
+  }
+}
+Assets {
   Id: 3286632740216585626
   Name: "Metal Painted 01"
   PlatformAssetType: 2
@@ -1745,6 +1844,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2683121858224047550
+  Name: "Cabin Italic"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "CabinItalic_ref"
+  }
+}
+Assets {
   Id: 2617361319805279588
   Name: "Nebula"
   PlatformAssetType: 6
@@ -1796,6 +1904,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_steel_tri_002"
+  }
+}
+Assets {
+  Id: 1841443240640943412
+  Name: "Alert Triangle"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_029"
   }
 }
 Assets {
@@ -1913,6 +2030,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_ammo_bullet_case_001"
+  }
+}
+Assets {
+  Id: 800399860672169055
+  Name: "Frame Tri 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameTri_001"
   }
 }
 Assets {
