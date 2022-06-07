@@ -1,6 +1,6 @@
 Assets {
   Id: 10892234022758810792
-  Name: "Custom Magic Glass_1"
+  Name: "PlanetGas"
   PlatformAssetType: 13
   SerializationVersion: 115
   CustomMaterialAsset {
@@ -9,27 +9,26 @@ Assets {
       Overrides {
         Name: "color"
         Color {
-          R: 1
-          G: 0.136821151
-          B: 0.0199999809
+          R: 0.0299999714
+          B: 0.0107284682
           A: 1
         }
       }
       Overrides {
         Name: "color b"
         Color {
-          R: 0.840000033
-          G: 0.400529802
+          R: 0.283443809
+          B: 0.399999976
           A: 1
         }
       }
       Overrides {
         Name: "metallic"
-        Float: 0.00697461888
+        Float: 0
       }
       Overrides {
         Name: "roughness"
-        Float: 0.659890532
+        Float: 1
       }
       Overrides {
         Name: "specular"
@@ -37,11 +36,11 @@ Assets {
       }
       Overrides {
         Name: "magic distortion"
-        Float: 0.55512774
+        Float: 0.501749873
       }
       Overrides {
         Name: "magic gradient high"
-        Float: 8.49829674
+        Float: 6.14941406
       }
       Overrides {
         Name: "scale"
@@ -49,29 +48,28 @@ Assets {
       }
       Overrides {
         Name: "speed"
-        Float: 0.0376916341
+        Float: 0.00581501937
       }
       Overrides {
         Name: "object normal strength"
-        Float: 0.155364603
+        Float: 0.280589551
       }
       Overrides {
         Name: "color c"
         Color {
-          R: 0.580000043
-          G: 0.218940437
+          G: 0.99
+          B: 0.793311357
           A: 1
         }
       }
       Overrides {
         Name: "magic gradient low"
-        Float: 0.202849388
+        Float: 0
       }
       Overrides {
         Name: "glass color"
         Color {
-          R: 1
-          G: 0.258278131
+          R: 0.559999943
           A: 1
         }
       }
@@ -88,7 +86,7 @@ Assets {
       }
       Overrides {
         Name: "magic color blend power"
-        Float: 1.73037636
+        Float: 2.21884489
       }
     }
     Assets {

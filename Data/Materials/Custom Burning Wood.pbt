@@ -1,35 +1,11 @@
 Assets {
-  Id: 18409154117074797250
-  Name: "SunDisc"
+  Id: 8983700394710637281
+  Name: "sun2"
   PlatformAssetType: 13
   SerializationVersion: 115
   CustomMaterialAsset {
     BaseMaterialId: 15114965043284020838
     ParameterOverrides {
-      Overrides {
-        Name: "emissiveboost"
-        Float: 50
-      }
-      Overrides {
-        Name: "embersoftness"
-        Float: 0.915291369
-      }
-      Overrides {
-        Name: "embererode"
-        Float: 0.592273474
-      }
-      Overrides {
-        Name: "asherode"
-        Float: 0
-      }
-      Overrides {
-        Name: "speed"
-        Float: 0.892771482
-      }
-      Overrides {
-        Name: "gradient_shifthot"
-        Float: 0.138915047
-      }
       Overrides {
         Name: "color"
         Color {
@@ -39,27 +15,32 @@ Assets {
       Overrides {
         Name: "embercolor"
         Color {
-          R: 1
-          G: 0.679602623
-          B: 0.410000026
+          G: 0.100000024
+          B: 0.0384106264
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "embercolor2"
+        Color {
+          R: 0.470000029
+          G: 0.968410552
+          B: 1
           A: 1
         }
       }
       Overrides {
         Name: "embercolor3"
         Color {
-          R: 0.0700000525
-          G: 0.0250331312
+          R: 0.45
+          G: 0.945364356
+          B: 1
           A: 1
         }
       }
       Overrides {
-        Name: "ashcolor"
-        Color {
-          R: 0.61
-          G: 0.0484768339
-          A: 1
-        }
+        Name: "emissiveboost"
+        Float: 50
       }
       Overrides {
         Name: "curvature_brightness"
@@ -67,14 +48,6 @@ Assets {
       }
       Overrides {
         Name: "curvature_roughness"
-        Float: 0.994629085
-      }
-      Overrides {
-        Name: "u_tiles"
-        Float: 1
-      }
-      Overrides {
-        Name: "v_tiles"
         Float: 1
       }
       Overrides {
@@ -83,11 +56,15 @@ Assets {
       }
       Overrides {
         Name: "gradient_shift"
-        Float: 0
+        Float: 0.9719612
+      }
+      Overrides {
+        Name: "gradient_shifthot"
+        Float: 0.10491316
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.0765782595
+        Float: 0.133248061
       }
       Overrides {
         Name: "gradient_worldspace"
@@ -95,23 +72,27 @@ Assets {
       }
       Overrides {
         Name: "gradient_worldspacehot"
-        Bool: false
+        Bool: true
       }
       Overrides {
-        Name: "v_offset"
-        Float: 0
+        Name: "speed"
+        Float: 0.4847489
+      }
+      Overrides {
+        Name: "embersoftness"
+        Float: 1
+      }
+      Overrides {
+        Name: "embererode"
+        Float: 1
       }
       Overrides {
         Name: "u_offset"
         Float: 0
       }
       Overrides {
-        Name: "embercolor2"
-        Color {
-          R: 0.100000024
-          G: 0.0337748416
-          A: 1
-        }
+        Name: "v_offset"
+        Float: 0
       }
     }
     Assets {

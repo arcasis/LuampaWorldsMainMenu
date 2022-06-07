@@ -98,6 +98,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17706318684787113777
+  Name: "Frame Outline Thin 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_015"
+  }
+}
+Assets {
   Id: 17687337846913016913
   Name: "Smoke Volume VFX"
   PlatformAssetType: 8
@@ -350,15 +359,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16039133630551883937
-  Name: "BG Highlighted 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_019"
-  }
-}
-Assets {
   Id: 15923106616284873904
   Name: "\"Flags Of Honor\" Music Construction Kit (Sections) 01"
   PlatformAssetType: 10
@@ -482,6 +482,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cone_truncated_003"
+  }
+}
+Assets {
+  Id: 14691102939663399310
+  Name: "Frame Outline Thin 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameOutline_019"
   }
 }
 Assets {
@@ -1358,6 +1367,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7710101019197855506
+  Name: "Center Circle 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001"
+  }
+}
+Assets {
   Id: 7558108725407987182
   Name: "Metal Complex Tech Panel Wall 01"
   PlatformAssetType: 2
@@ -1736,6 +1754,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4424627668192703601
+  Name: "Energy Tube Glow"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "Energy_Tube_Glow"
+  }
+}
+Assets {
   Id: 4272271572783880361
   Name: "Vehicle Armored Tank Vehicle Engine Loop 01 SFX"
   PlatformAssetType: 7
@@ -1841,15 +1868,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_street-sign_rectangle_001"
-  }
-}
-Assets {
-  Id: 3386087430817663663
-  Name: "Frame Highlighted 002"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameHighlighted_019"
   }
 }
 Assets {
@@ -2078,6 +2096,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1539819886436910254
+  Name: "Icon Player"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Player"
+  }
+}
+Assets {
   Id: 1454889897083546388
   Name: "Additive Axis Aligned Soft Edge Z"
   PlatformAssetType: 2
@@ -2156,15 +2183,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_ammo_bullet_case_001"
-  }
-}
-Assets {
-  Id: 800399860672169055
-  Name: "Frame Tri 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameTri_001"
   }
 }
 Assets {
