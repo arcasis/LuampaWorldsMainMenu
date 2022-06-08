@@ -110542,12 +110542,12 @@ Objects {
   Name: "Animated Neon Sign- Wrench Frame"
   Transform {
     Location {
-      X: 150.034912
-      Y: -316.51413
+      X: 128.284592
+      Y: 277.265594
       Z: 130.519638
     }
     Rotation {
-      Yaw: 14.0012484
+      Yaw: -165.998215
     }
     Scale {
       X: 0.448934168
@@ -110614,9 +110614,9 @@ Objects {
   Name: "Garage Lettering"
   Transform {
     Location {
-      X: -11.3775635
-      Y: -8.93335724
-      Z: -16.7214661
+      X: -11.5527906
+      Y: 3.40056562
+      Z: -16.7214622
     }
     Rotation {
     }
