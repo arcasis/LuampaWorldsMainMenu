@@ -138,5 +138,5 @@ end
 
 --Game.roundEndEvent:Connect(OnRoundEnd)     -- for actual game
 
--- Sent after player storage is downloaded, again for test scripts
+-- Sent after player storage is downloaded, again in test scripts that give xp
 Events.Connect("UpdateXP", UnlockVehicles)

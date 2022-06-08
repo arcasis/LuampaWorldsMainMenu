@@ -17,16 +17,10 @@ local canRP = false
 local isRound = false
 
 
-------- TESTING -------
-canRP = true
------ END TESTING -----
-
-
 -- set isRound for join in progress players
 if LOCAL_PLAYER.clientUserData.joinInProgress then
     isRound = true
 end
-
 
 -- broadcast received when player joins runs this
 function OnPlayerCanGetRP(player)
@@ -39,7 +33,6 @@ function OnPlayerCanGetRP(player)
     end
 end
 
-
 function OnRoundStart()
     isRound = true
 
@@ -48,13 +41,11 @@ function OnRoundStart()
     end
 end
 
-
 function DisplayPickup()
     TRIGGER.collision = Collision.FORCE_ON
     GEO_FOLDER.visibility = Visibility.INHERIT
     GEO_FOLDER:RotateContinuous(Rotation.New(0, 0, ROTATE_SPEED))
 end
-
 
 function OnBeginTriggerOverlap(trigger, other)
     if other and other:IsA("Vehicle") then
@@ -68,14 +59,12 @@ function OnBeginTriggerOverlap(trigger, other)
     end        
 end
 
-
 function HidePickup()
     canRP = false
     GEO_FOLDER.visibility = Visibility.FORCE_OFF
     TRIGGER.collision = Collision.FORCE_OFF
     GEO_FOLDER:StopRotate()
 end
-
 
 function OnRoundEnd()
     isRound = false

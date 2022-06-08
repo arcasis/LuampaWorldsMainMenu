@@ -2,15 +2,17 @@
 local MAIN_MENU_CONTAINER = script:GetCustomProperty("Container"):WaitForObject()
 local MAIN_MENU_PANEL = script:GetCustomProperty("MainMenuPanel"):WaitForObject()
 
-local PLAY_BUTTON = script:GetCustomProperty("PlayButton"):WaitForObject()
-local GARAGE_BUTTON = script:GetCustomProperty("GarageButton"):WaitForObject()
-local STATS_BUTTON = script:GetCustomProperty("StatsButton"):WaitForObject()
---local GAME_MODE_BUTTON = script:GetCustomProperty("GameModeButton"):WaitForObject()  -- WIP not allowing to choose mode
-
 local ARE_YOU_SURE_PANEL = script:GetCustomProperty("AreYouSurePanel"):WaitForObject()
 local GARAGE_PANEL = script:GetCustomProperty("GaragePanel"):WaitForObject()
 local STATS_PANEL = script:GetCustomProperty("StatsPanel"):WaitForObject()
 --local GAME_MODE_PANEL = script:GetCustomProperty("GameModePanel"):WaitForObject()
+
+local PLAY_BUTTON = script:GetCustomProperty("GameModeButton"):WaitForObject()
+local GARAGE_BUTTON = script:GetCustomProperty("GarageButton"):WaitForObject()
+local STATS_BUTTON = script:GetCustomProperty("StatsButton"):WaitForObject()
+--local GAME_MODE_BUTTON = script:GetCustomProperty("GameModeButton"):WaitForObject()  -- WIP not allowing to choose mode
+local YES_BUTTON = script:GetCustomProperty("YesButton"):WaitForObject()
+local NO_BUTTON = script:GetCustomProperty("NoButton"):WaitForObject()
 
 -- override camera
 local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForObject()
@@ -70,6 +72,6 @@ GARAGE_BUTTON.clickedEvent:Connect(OnGarageButtonClicked)
 PLAY_BUTTON.clickedEvent:Connect(OnPlayButtonClicked)
 STATS_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
 -- nil GAME_MODE_BUTTON.clickedEvent:Connect(OnGameModeButtonClicked)  -- WIP Game mode button won't be used unless we get a player base
-YES_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
-NO_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
+YES_BUTTON.clickedEvent:Connect(OnYesButtonClicked)
+NO_BUTTON.clickedEvent:Connect(OnNoButtonClicked)
 

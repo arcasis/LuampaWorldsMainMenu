@@ -135,16 +135,16 @@ function UnlockVehicles(player)
     --print("player's .serverUserData.trucks[2] is: ", trucks[2])
 end
 
-
-function OnRoundEnd()
+-- Not used in Main Menu
+--[[function OnRoundEnd()
     Task.Wait(1)     -- !! WIP !! is totalXp configured by then?
     local players = Game.GetPlayers()
     for _,player in pairs(players) do 
         UnlockVehicles(player)
     end
-end
+end]]
 
 --Game.roundEndEvent:Connect(OnRoundEnd)     -- for actual game
 
--- Sent after player storage is downloaded, again for test scripts
+--Sent after player storage is downloaded, and again if testing and giving XP
 Events.Connect("UpdateXP", UnlockVehicles)

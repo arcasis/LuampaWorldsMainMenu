@@ -3,8 +3,7 @@
 
 local STORAGE_KEY = script:GetCustomProperty("LuampaWorldKey")
 
-local messageTime = {}
-
+local thanksBroadcast = {}
 
 function OnPlayerJoined(player)
 
@@ -73,6 +72,8 @@ function OnPlayerJoined(player)
             isTester = {}
             isTester[1] = {}     -- [1] is Luampa Race
             playerDataTable.isTester = isTester
+
+            thanksBroadcast[player] = time() + 20
         end
         playerDataTable.isTester[1][1] = 1  -- [1][1] is Race alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
@@ -85,6 +86,8 @@ function OnPlayerJoined(player)
             isTester = {}
             isTester[2] = {}     -- [2] is Luampa Battle
             playerDataTable.isTester = isTester
+
+            thanksBroadcast[player] = time() + 20
         end
         playerDataTable.isTester[2][1] = 1  -- [2][2] is Battle alpha testing
         player.serverUserData.isTester = playerDataTable.isTester
@@ -102,6 +105,8 @@ function OnPlayerJoined(player)
             isTester = {}
             isTester[1] = {}     -- [1] is Luampa Race
             playerDataTable.isTester = isTester
+
+            thanksBroadcast[player] = time() + 20
         else
             if not isTester[1] then
                 isTester[1] = {}
@@ -120,6 +125,8 @@ function OnPlayerJoined(player)
             isTester = {}
             isTester[2] = {}     -- [2] is Luampa Battle
             playerDataTable.isTester = isTester
+
+            thanksBroadcast[player] = time() + 20
         else
             if not isTester[2] then
                 isTester[2] = {}
@@ -234,8 +241,8 @@ function OnPlayerJoined(player)
     end
 
     Events.BroadcastToPlayer(player, "StorageReady")
-    -- ***** !! UNCOMMENT OUT BEFORE GOING LIVE !! Currently this is sent by test scripts after XP is given ***** --
-    --Events.Broadcast("UpdateXP", player)
+    -- ***** !! UNCOMMENT OUT BEFORE GOING LIVE !! Comment out when test scripts that give XP are in hierarchy ***** --
+    Events.Broadcast("UpdateXP", player)
 end
 
 
@@ -266,8 +273,6 @@ function OnPlayerLeft(player)
     playerDataTable.trucks = trucks]]
     ---------- !! END DELETE WHEN DONE TESTING !! ----------
 
-
-
     ----- BEGIN TEST PRINTS - DEBUGGING NO SELECTED TRUCK DOWNLOADED IN BATTLE -----
     --[[local stTable = player.serverUserData.selectedTruck
     for index,value in pairs(stTable) do
@@ -284,7 +289,6 @@ function OnPlayerLeft(player)
     end]]
     ------------------------ END TEST PRINTS ------------------------
 
-
     playerDataTable.totalBattleXp = player.serverUserData.totalBattleXp
     playerDataTable.totalRaceXp = player.serverUserData.totalRaceXp
 
@@ -293,7 +297,6 @@ function OnPlayerLeft(player)
     playerDataTable.coins = player:GetResource("LuampaCoins")
 
     ------------------------ !! FOR TESTING !! -------------------------
-    
     --[[playerDataTable.cars = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.selectedVehicleId = nil  -- !!!!TEMP: DELETE MEH !!!!
     playerDataTable.karts = nil  -- !!!!TEMP: DELETE MEH !!!!
@@ -303,7 +306,6 @@ function OnPlayerLeft(player)
     playerDataTable.totalBattleXp = nil  -- !!!!TEMP: DELETE MEH !!!
     playerDataTable.coins = nil
     playerDataTable.helmets = nil]]
-    
     ---------------------- !! END FOR TESTING !! -----------------------
 
     Storage.SetSharedPlayerData(STORAGE_KEY, player, playerDataTable)
@@ -312,10 +314,9 @@ end
 
 function Tick(deltaTime)
     local currentTime = time()
-
-    for player,t in pairs(messageTime) do
-        if t < currentTime then
-            messageTime[player] = nil
+    for player, time in pairs(thanksBroadcast) do
+        if time < currentTime then
+            thanksBroadcast[player] = nil
             Events.BroadcastToPlayer(player, "BannerMessage", "Thanks for helping test Luampa! You've been gifted a helmet for Race.", 10)
         end
     end
