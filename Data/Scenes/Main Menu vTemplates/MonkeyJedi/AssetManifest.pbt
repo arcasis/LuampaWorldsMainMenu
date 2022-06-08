@@ -692,15 +692,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13066997685339875756
-  Name: "Abstract Frame 02"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Core_UI_AbstractPack_Cframe_002"
-  }
-}
-Assets {
   Id: 13028932803405216377
   Name: "Military Tank Modern Hatch 01 Lid"
   PlatformAssetType: 1
@@ -842,15 +833,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_curve45_002"
-  }
-}
-Assets {
-  Id: 11996370362624858284
-  Name: "Abstract Frame 10"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Core_UI_AbstractPackFrame_004"
   }
 }
 Assets {
@@ -1367,15 +1349,6 @@ Assets {
   }
 }
 Assets {
-  Id: 7710101019197855506
-  Name: "Center Circle 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterCircle_001"
-  }
-}
-Assets {
   Id: 7558108725407987182
   Name: "Metal Complex Tech Panel Wall 01"
   PlatformAssetType: 2
@@ -1526,15 +1499,6 @@ Assets {
   PrimaryAsset {
     AssetType: "FontAssetRef"
     AssetId: "PlayRegular_ref"
-  }
-}
-Assets {
-  Id: 6334699134008261182
-  Name: "BG Highlighted 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundHighlighted_020"
   }
 }
 Assets {

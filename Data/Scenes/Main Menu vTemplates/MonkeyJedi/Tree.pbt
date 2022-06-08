@@ -3040,7 +3040,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3276,7 +3276,7 @@ Objects {
         A: 1
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -3356,7 +3356,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.7
@@ -3409,6 +3409,9 @@ Objects {
   }
   ParentId: 13975775855012976837
   ChildIds: 1964565708813537508
+  ChildIds: 1761016376164224125
+  ChildIds: 11110789705766868094
+  ChildIds: 9356251700561887896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3462,7 +3465,7 @@ Objects {
         A: 1
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -3495,6 +3498,242 @@ Objects {
         }
       }
     }
+  }
+}
+Objects {
+  Id: 9356251700561887896
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -1221.24219
+      Y: 4393.05566
+      Z: 1299.34705
+    }
+    Rotation {
+      Pitch: -0.282223403
+      Yaw: 160.285
+      Roll: 0.587990701
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1784793984950011237
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 90
+    Height: 90
+    UIX: 55
+    UIY: -19
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 16198136617983446506
+      }
+      Color {
+        G: 0.490860671
+        B: 0.679999948
+        A: 0.265000015
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11110789705766868094
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -1221.23584
+      Y: 4393.05273
+      Z: 1299.34705
+    }
+    Rotation {
+      Pitch: -0.282223403
+      Yaw: 160.285
+      Roll: 0.587990701
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1784793984950011237
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 17110364119456872672
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 1761016376164224125
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -1221.23926
+      Y: 4393.05469
+      Z: 1299.34705
+    }
+    Rotation {
+      Pitch: -0.282223403
+      Yaw: 160.285
+      Roll: 0.587990701
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1784793984950011237
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 80
+    Height: 80
+    UIX: 60
+    UIY: -15.2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 16198136617983446506
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.0870000049
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -3542,7 +3781,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.7
@@ -3863,6 +4102,7 @@ Objects {
     }
   }
   ParentId: 13975775855012976837
+  ChildIds: 7243603830295075456
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3957,6 +4197,157 @@ Objects {
   }
 }
 Objects {
+  Id: 7243603830295075456
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -159.267822
+      Y: 2811.87451
+      Z: -1687.00879
+    }
+    Rotation {
+      Pitch: 0.0846806839
+      Yaw: 62.617218
+      Roll: -0.0901300609
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15829922299348405289
+  ChildIds: 11891084503832959268
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 55
+    Height: 53
+    UIX: 6.64413028e-06
+    UIY: 37.9999924
+    RotationAngle: 270
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 17706318684787113777
+      }
+      Color {
+        R: 0.08988
+        G: 0.321
+        B: 0.219980657
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11891084503832959268
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -0.000699592871
+      Y: -0.00172294863
+      Z: 5.3029733e-05
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039536
+      Roll: 2.92153845e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7243603830295075456
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 61
+    Height: 61
+    UIX: -2.8
+    UIY: -4
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6724962617897031598
+      }
+      Color {
+        A: 0.164
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 15201836303060589185
   Name: "Exit Upgrades"
   Transform {
@@ -4033,7 +4424,7 @@ Objects {
         A: 1
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -4092,6 +4483,7 @@ Objects {
     }
   }
   ParentId: 15201836303060589185
+  ChildIds: 17631116102685664909
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4187,6 +4579,242 @@ Objects {
   }
 }
 Objects {
+  Id: 17631116102685664909
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -426.580017
+      Y: 6419.93652
+      Z: 889.774109
+    }
+    Rotation {
+      Pitch: -0.282209754
+      Yaw: 160.284927
+      Roll: 0.587986827
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3249528986411839046
+  ChildIds: 11264852606536645862
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 152
+    Height: 71
+    UIX: -15.0000019
+    UIY: -10.9999981
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        A: 0.303
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11264852606536645862
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 4429.50684
+      Y: -209.643555
+      Z: -1697.58704
+    }
+    Rotation {
+      Pitch: -0.0108326795
+      Yaw: -4.38274193
+      Roll: -0.00986525882
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17631116102685664909
+  ChildIds: 936957463176041767
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 117
+    Height: 50
+    UIX: 16.8000488
+    UIY: 12
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        G: 0.529000044
+        B: 0.476450711
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 936957463176041767
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: 2213.0835
+      Y: -4456.55322
+      Z: 421.410675
+    }
+    Rotation {
+      Pitch: 2.04905664e-05
+      Yaw: -3.07358532e-05
+      Roll: 1.52078019e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11264852606536645862
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 39
+    Height: 33
+    UIX: 43.0000076
+    UIY: 40.0000038
+    RotationAngle: 270
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Next"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 11368850572020320274
   Name: "ArrowLeft"
   Transform {
@@ -4207,6 +4835,7 @@ Objects {
     }
   }
   ParentId: 15201836303060589185
+  ChildIds: 7553771495801393375
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -4302,6 +4931,242 @@ Objects {
   }
 }
 Objects {
+  Id: 7553771495801393375
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 1691.24622
+      Y: 5633.47363
+      Z: 1322.2832
+    }
+    Rotation {
+      Pitch: 0.314093053
+      Yaw: 71.3824844
+      Roll: 0.293416679
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11368850572020320274
+  ChildIds: 16136143993401921583
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 152
+    Height: 71
+    UIX: -15.0000019
+    UIY: -10.9999943
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        A: 0.303
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16136143993401921583
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 4429.50684
+      Y: -209.643555
+      Z: -1697.58704
+    }
+    Rotation {
+      Pitch: -0.0108326795
+      Yaw: -4.38274193
+      Roll: -0.00986525882
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7553771495801393375
+  ChildIds: 10474657130164848430
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 117
+    Height: 50
+    UIX: 16.8000488
+    UIY: 12
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        G: 0.529000044
+        B: 0.476450711
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10474657130164848430
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: 5014.66455
+      Y: 8462.50488
+      Z: -1675.51221
+    }
+    Rotation {
+      Pitch: 0.0148078492
+      Yaw: 84.5212
+      Roll: 0.257289082
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16136143993401921583
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 39
+    Height: 33
+    UIX: 76.1999435
+    UIY: 9.20020866
+    RotationAngle: 90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Prev"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 163971921576398924
   Name: "UI Image"
   Transform {
@@ -4345,7 +5210,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.7
@@ -4451,7 +5316,7 @@ Objects {
         A: 0.742000043
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -4533,7 +5398,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.2
@@ -5155,7 +6020,7 @@ Objects {
         A: 1
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -5235,7 +6100,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.7
@@ -5285,6 +6150,9 @@ Objects {
   }
   ParentId: 7959611291421426607
   ChildIds: 1166951763366303138
+  ChildIds: 6608487997233021242
+  ChildIds: 477196669206432944
+  ChildIds: 13486549788254969310
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5338,7 +6206,7 @@ Objects {
         A: 1
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -5371,6 +6239,242 @@ Objects {
         }
       }
     }
+  }
+}
+Objects {
+  Id: 13486549788254969310
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -1221.24121
+      Y: 4393.05762
+      Z: 1299.34729
+    }
+    Rotation {
+      Pitch: -0.282230228
+      Yaw: 160.284973
+      Roll: 0.587992966
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9866075515843571691
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 90
+    Height: 90
+    UIX: 55
+    UIY: -19
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 16198136617983446506
+      }
+      Color {
+        G: 0.490860671
+        B: 0.679999948
+        A: 0.265000015
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 477196669206432944
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -1221.23584
+      Y: 4393.05518
+      Z: 1299.34729
+    }
+    Rotation {
+      Pitch: -0.282230228
+      Yaw: 160.284973
+      Roll: 0.587992966
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9866075515843571691
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 17110364119456872672
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.990000069
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6608487997233021242
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -1221.23877
+      Y: 4393.05664
+      Z: 1299.34729
+    }
+    Rotation {
+      Pitch: -0.282230228
+      Yaw: 160.284973
+      Roll: 0.587992966
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9866075515843571691
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 80
+    Height: 80
+    UIX: 60
+    UIY: -15.2
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 16198136617983446506
+      }
+      Color {
+        R: 0.7
+        G: 0.940397322
+        B: 1
+        A: 0.0870000049
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5418,7 +6522,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.7
@@ -5741,6 +6845,7 @@ Objects {
     }
   }
   ParentId: 7959611291421426607
+  ChildIds: 6397142837308553268
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -5834,6 +6939,157 @@ Objects {
   }
 }
 Objects {
+  Id: 6397142837308553268
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 2786.55322
+      Y: 2480.01416
+      Z: -1254.03662
+    }
+    Rotation {
+      Pitch: -0.0387681499
+      Yaw: -26.2868729
+      Roll: -0.328416497
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14684816620838083131
+  ChildIds: 10441994809453347578
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 55
+    Height: 53
+    UIX: 52.0000076
+    UIY: 37.9999847
+    RotationAngle: 180
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 17706318684787113777
+      }
+      Color {
+        R: 0.08988
+        G: 0.321
+        B: 0.219980657
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10441994809453347578
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -0.000699592871
+      Y: -0.00172294863
+      Z: 5.3029733e-05
+    }
+    Rotation {
+      Pitch: -0.268371791
+      Yaw: -88.9039536
+      Roll: 2.92153845e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6397142837308553268
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 61
+    Height: 61
+    UIX: -2.8
+    UIY: -4
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6724962617897031598
+      }
+      Color {
+        A: 0.164
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 18001212761352047056
   Name: "View Upgrades"
   Transform {
@@ -5907,7 +7163,7 @@ Objects {
         A: 0.742000043
       }
       Brush {
-        Id: 6334699134008261182
+        Id: 18322860713923765200
       }
       IsButtonEnabled: true
       ClickMode {
@@ -5966,6 +7222,7 @@ Objects {
     }
   }
   ParentId: 18001212761352047056
+  ChildIds: 7979692200268264930
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6061,6 +7318,242 @@ Objects {
   }
 }
 Objects {
+  Id: 7979692200268264930
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -4169.93262
+      Y: -325.305328
+      Z: 438.040283
+    }
+    Rotation {
+      Pitch: -0.37755236
+      Yaw: -110.809647
+      Roll: 0.337120473
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8715028910927077954
+  ChildIds: 12302737253762071133
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 152
+    Height: 71
+    UIX: -15.000001
+    UIY: -10.9999981
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        A: 0.303
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12302737253762071133
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 4429.50684
+      Y: -209.643555
+      Z: -1697.58704
+    }
+    Rotation {
+      Pitch: -0.0108326795
+      Yaw: -4.38274193
+      Roll: -0.00986525882
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7979692200268264930
+  ChildIds: 13354718185669798428
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 117
+    Height: 50
+    UIX: 16.8000488
+    UIY: 12
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        G: 0.529000044
+        B: 0.476450711
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13354718185669798428
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: 2213.0835
+      Y: -4456.55322
+      Z: 421.410675
+    }
+    Rotation {
+      Pitch: 2.04905664e-05
+      Yaw: -3.07358532e-05
+      Roll: 1.52078019e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12302737253762071133
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 39
+    Height: 33
+    UIX: 43.0000076
+    UIY: 40.0000038
+    RotationAngle: 270
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Next"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 307729007882034710
   Name: "ArrowLeft"
   Transform {
@@ -6081,6 +7574,7 @@ Objects {
     }
   }
   ParentId: 18001212761352047056
+  ChildIds: 13581046592565821810
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -6176,6 +7670,242 @@ Objects {
   }
 }
 Objects {
+  Id: 13581046592565821810
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: -3345.13867
+      Y: 1777.08887
+      Z: 874.417725
+    }
+    Rotation {
+      Pitch: 0.06145804
+      Yaw: 160.286789
+      Roll: 0.383945704
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 307729007882034710
+  ChildIds: 3060768725509950295
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 152
+    Height: 71
+    UIX: -15.0000019
+    UIY: -9.99999523
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        A: 0.303
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3060768725509950295
+  Name: "UI Image"
+  Transform {
+    Location {
+      X: 4429.50684
+      Y: -209.643555
+      Z: -1697.58704
+    }
+    Rotation {
+      Pitch: -0.0108326795
+      Yaw: -4.38274193
+      Roll: -0.00986525882
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13581046592565821810
+  ChildIds: 8020759023756394330
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 117
+    Height: 50
+    UIX: 16.8000488
+    UIY: 12
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6174803333271868359
+      }
+      Color {
+        G: 0.529000044
+        B: 0.476450711
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8020759023756394330
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: 5014.66455
+      Y: 8462.50488
+      Z: -1675.51221
+    }
+    Rotation {
+      Pitch: 0.0148078492
+      Yaw: 84.5212
+      Roll: 0.257289082
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3060768725509950295
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 39
+    Height: 33
+    UIX: 76.1999435
+    UIY: 9.20020866
+    RotationAngle: 90
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Prev"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 15
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 841534158063459245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 9676787866780516591
   Name: "UI Image"
   Transform {
@@ -6219,7 +7949,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 11996370362624858284
+        Id: 17110364119456872672
       }
       Color {
         R: 0.7
@@ -13180,7 +14910,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -17935,12 +19665,11 @@ Objects {
     }
     Image {
       Brush {
-        Id: 13066997685339875756
+        Id: 17706318684787113777
       }
       Color {
-        R: 1
-        G: 1
-        B: 1
+        G: 0.950000048
+        B: 0.515894175
         A: 1
       }
       TeamSettings {
@@ -18113,8 +19842,10 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 87
-    Height: 91
+    Width: 100
+    Height: 100
+    UIX: -6
+    UIY: -4
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -18122,7 +19853,7 @@ Objects {
     }
     Image {
       Brush {
-        Id: 7710101019197855506
+        Id: 14663031830242052499
       }
       Color {
         A: 0.512
@@ -29247,6 +30978,7 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
+      Y: 18
       Z: 115
     }
     Rotation {
