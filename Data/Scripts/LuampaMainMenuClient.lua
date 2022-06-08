@@ -2,14 +2,15 @@
 local MAIN_MENU_CONTAINER = script:GetCustomProperty("Container"):WaitForObject()
 local MAIN_MENU_PANEL = script:GetCustomProperty("MainMenuPanel"):WaitForObject()
 
-local GAME_MODE_BUTTON = script:GetCustomProperty("GameModeButton"):WaitForObject()
+local PLAY_BUTTON = script:GetCustomProperty("PlayButton"):WaitForObject()
 local GARAGE_BUTTON = script:GetCustomProperty("GarageButton"):WaitForObject()
 local STATS_BUTTON = script:GetCustomProperty("StatsButton"):WaitForObject()
+--local GAME_MODE_BUTTON = script:GetCustomProperty("GameModeButton"):WaitForObject()  -- WIP not allowing to choose mode
 
-local GAME_MODE_PANEL = script:GetCustomProperty("GameModePanel"):WaitForObject()
+local ARE_YOU_SURE_PANEL = script:GetCustomProperty("AreYouSurePanel"):WaitForObject()
 local GARAGE_PANEL = script:GetCustomProperty("GaragePanel"):WaitForObject()
 local STATS_PANEL = script:GetCustomProperty("StatsPanel"):WaitForObject()
-
+--local GAME_MODE_PANEL = script:GetCustomProperty("GameModePanel"):WaitForObject()
 
 -- override camera
 local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForObject()
@@ -19,10 +20,11 @@ local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForO
     Game.GetLocalPlayer():TransferToGame("e39f3e/core-world")
 end]]
 
-function OnGameModeButtonClicked()
+-- WIP no longer allowing players to choose game mode unless player pool grows large
+--[[function OnGameModeButtonClicked()
     HideMainMenuPanel()
     GAME_MODE_PANEL.visibility = Visibility.INHERIT
-end
+end]]
 
 function OnGarageButtonClicked()
     HideMainMenuPanel()
@@ -40,6 +42,18 @@ function OnStatsButtonClicked()
     STATS_PANEL.visibility = Visibility.INHERIT
 end
 
+function OnPlayButtonClicked()
+    ARE_YOU_SURE_PANEL.visibility = Visibility.INHERIT
+end
+
+function OnYesButtonClicked()
+    print("Player clicked to go play, matchmaking will be set up soon!")
+    Events.BroadcastToServer("FindAGame")
+end
+
+function OnNoButtonClicked()
+    ARE_YOU_SURE_PANEL.visibility = Visibility.FORCE_OFF
+end
 
 function HideMainMenuPanel()
     MAIN_MENU_PANEL.visibility = Visibility.FORCE_OFF
@@ -52,8 +66,10 @@ UI.SetCanCursorInteractWithUI(true)
 -- Initialize
 MAIN_MENU_PANEL.visibility = Visibility.INHERIT
 
-
-STATS_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
-GAME_MODE_BUTTON.clickedEvent:Connect(OnGameModeButtonClicked)
 GARAGE_BUTTON.clickedEvent:Connect(OnGarageButtonClicked)
+PLAY_BUTTON.clickedEvent:Connect(OnPlayButtonClicked)
 STATS_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
+-- nil GAME_MODE_BUTTON.clickedEvent:Connect(OnGameModeButtonClicked)  -- WIP Game mode button won't be used unless we get a player base
+YES_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
+NO_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
+
