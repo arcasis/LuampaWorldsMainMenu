@@ -203,78 +203,16 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: -676.29834
-      Y: 418.603027
-      Z: 124.082718
-    }
-    Rotation {
-      Yaw: -59.8135338
-    }
-    Scale {
-      X: 0.0932190716
-      Y: 5.05423832
-      Z: 2.265028
-    }
-  }
-  ParentId: 9906699973644061237
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4585151032717412831
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3391908450899882438
-  Name: "Cube"
-  Transform {
-    Location {
-      X: -288.294128
-      Y: 646.101746
+      X: -577.673218
+      Y: 474.941498
       Z: 124.082718
     }
     Rotation {
       Yaw: -59.8135376
     }
     Scale {
-      X: 0.0932194069
-      Y: 3.06145239
+      X: 0.0932189673
+      Y: 7.0021019
       Z: 2.265028
     }
   }
