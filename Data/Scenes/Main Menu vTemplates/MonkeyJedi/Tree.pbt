@@ -105891,8 +105891,8 @@ Objects {
   Name: "Drill"
   Transform {
     Location {
-      X: 154.273743
-      Y: -5.58455
+      X: 39.2041397
+      Y: -36.0191536
       Z: 133.562866
     }
     Rotation {
@@ -107231,8 +107231,8 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 474.813324
-      Y: 92.6415558
+      X: 194.132767
+      Y: 18.4047298
       Z: 156.980652
     }
     Rotation {
@@ -107706,8 +107706,8 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 474.813324
-      Y: 92.6415558
+      X: 194.132767
+      Y: 18.4047298
       Z: 111.659576
     }
     Rotation {
@@ -108181,8 +108181,8 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 474.813324
-      Y: 92.6415558
+      X: 194.132767
+      Y: 18.4047298
       Z: 67.4573669
     }
     Rotation {
@@ -108228,8 +108228,9 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: 6.59228516
-      Y: -43.4584961
+      X: 6.59218407
+      Y: -43.4583817
+      Z: 1.14440918e-05
     }
     Rotation {
       Yaw: -179.47258
@@ -108289,11 +108290,11 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: -0.00439453125
-      Y: -33.8618164
+      X: -0.00448799133
+      Y: -33.8617172
     }
     Rotation {
-      Yaw: -89.4722214
+      Yaw: -89.472229
     }
     Scale {
       X: 0.0836676732
@@ -108350,8 +108351,9 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: -6.515625
-      Y: -43.5791
+      X: -6.51571274
+      Y: -43.5790024
+      Z: -7.62939453e-06
     }
     Rotation {
       Yaw: -179.47258
@@ -108411,9 +108413,9 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: 6.55859375
-      Y: 43.0029297
-      Z: 0.167877197
+      X: 6.55877686
+      Y: 43.0027809
+      Z: 0.167869568
     }
     Rotation {
     }
@@ -108472,9 +108474,9 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: -6.54980469
-      Y: 43.0029297
-      Z: 0.167877197
+      X: -6.54984093
+      Y: 43.0029373
+      Z: 0.167884827
     }
     Rotation {
     }
@@ -108533,9 +108535,9 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: -0.041015625
-      Y: 33.3457031
-      Z: 0.167877197
+      X: -0.0410242081
+      Y: 33.3457108
+      Z: 0.167900085
     }
     Rotation {
       Yaw: 89.9999924
@@ -108595,9 +108597,9 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: -0.041015625
-      Y: 1.54736328
-      Z: 0.167877197
+      X: -0.0408821106
+      Y: 1.54726279
+      Z: 0.167884827
     }
     Rotation {
     }
@@ -108656,8 +108658,8 @@ Objects {
   Name: "Hammer"
   Transform {
     Location {
-      X: 175.430328
-      Y: 8.28621864
+      X: 29.622303
+      Y: -30.2783546
       Z: 57.8895569
     }
     Rotation {
@@ -110542,9 +110544,9 @@ Objects {
   Name: "Animated Neon Sign- Wrench Frame"
   Transform {
     Location {
-      X: 128.284592
-      Y: 277.265594
-      Z: 130.519638
+      X: 293.337677
+      Y: 342.931641
+      Z: 132.629257
     }
     Rotation {
       Yaw: -165.998215
@@ -110556,7 +110558,6 @@ Objects {
     }
   }
   ParentId: 15630991729437494536
-  ChildIds: 3622812766263661566
   UnregisteredParameters {
     Overrides {
       Name: "ma:Font_Neon:color"
@@ -110594,506 +110595,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 3012078693641648408
-    SubobjectId: 13784188184431862914
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-    WasRoot: true
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3622812766263661566
-  Name: "Garage Lettering"
-  Transform {
-    Location {
-      X: -11.5527906
-      Y: 3.40056562
-      Z: -16.7214622
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3012078693641648408
-  ChildIds: 18210322086488987510
-  ChildIds: 9934094794226821970
-  ChildIds: 13113558952806520437
-  ChildIds: 8898196850815016395
-  ChildIds: 5783068796022305925
-  ChildIds: 6215243319865393090
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 3622812766263661566
-    SubobjectId: 11871658526468181604
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 6215243319865393090
-  Name: "Sign Font 1 Neon Outline: E"
-  Transform {
-    Location {
-      X: 63.678833
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.236494213
-      Y: 0.236494213
-      Z: 0.236494213
-    }
-  }
-  ParentId: 3622812766263661566
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font_Neon:id"
-      AssetReference {
-        Id: 11376880785348513642
-      }
-    }
-    Overrides {
-      Name: "ma:Font_Neon:color"
-      Color {
-        R: 0.0299999714
-        G: 0.961456954
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 2709911507539892983
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  InstanceHistory {
-    SelfId: 6215243319865393090
-    SubobjectId: 13890985115288920664
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 5783068796022305925
-  Name: "Sign Font 1 Neon Outline: G"
-  Transform {
-    Location {
-      X: 43.678833
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.236494213
-      Y: 0.236494213
-      Z: 0.236494213
-    }
-  }
-  ParentId: 3622812766263661566
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font_Neon:id"
-      AssetReference {
-        Id: 11376880785348513642
-      }
-    }
-    Overrides {
-      Name: "ma:Font_Neon:color"
-      Color {
-        R: 0.0299999714
-        G: 0.961456954
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12607576693317675692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  InstanceHistory {
-    SelfId: 5783068796022305925
-    SubobjectId: 14323661153387211039
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 8898196850815016395
-  Name: "Sign Font 1 Neon Outline: A"
-  Transform {
-    Location {
-      X: 14.0861816
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.236494213
-      Y: 0.236494213
-      Z: 0.236494213
-    }
-  }
-  ParentId: 3622812766263661566
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font_Neon:id"
-      AssetReference {
-        Id: 11376880785348513642
-      }
-    }
-    Overrides {
-      Name: "ma:Font_Neon:color"
-      Color {
-        R: 0.0299999714
-        G: 0.961456954
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6717098540383755117
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  InstanceHistory {
-    SelfId: 8898196850815016395
-    SubobjectId: 17148288357695930449
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 13113558952806520437
-  Name: "Sign Font 1 Neon Outline: R"
-  Transform {
-    Location {
-      X: -13.3125
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.236494213
-      Y: 0.236494213
-      Z: 0.236494213
-    }
-  }
-  ParentId: 3622812766263661566
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font_Neon:id"
-      AssetReference {
-        Id: 11376880785348513642
-      }
-    }
-    Overrides {
-      Name: "ma:Font_Neon:color"
-      Color {
-        R: 0.0299999714
-        G: 0.961456954
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 11547421392472302864
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  InstanceHistory {
-    SelfId: 13113558952806520437
-    SubobjectId: 2556623883278470127
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 9934094794226821970
-  Name: "Sign Font 1 Neon Outline: A"
-  Transform {
-    Location {
-      X: -44.3756104
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.236494213
-      Y: 0.236494213
-      Z: 0.236494213
-    }
-  }
-  ParentId: 3622812766263661566
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font_Neon:id"
-      AssetReference {
-        Id: 11376880785348513642
-      }
-    }
-    Overrides {
-      Name: "ma:Font_Neon:color"
-      Color {
-        R: 0.0299999714
-        G: 0.961456954
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 6717098540383755117
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  InstanceHistory {
-    SelfId: 9934094794226821970
-    SubobjectId: 2259317272642893512
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 18210322086488987510
-  Name: "Sign Font 1 Neon Outline: G"
-  Transform {
-    Location {
-      X: -63.7559814
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.236494213
-      Y: 0.236494213
-      Z: 0.236494213
-    }
-  }
-  ParentId: 3622812766263661566
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font_Neon:id"
-      AssetReference {
-        Id: 11376880785348513642
-      }
-    }
-    Overrides {
-      Name: "ma:Font_Neon:color"
-      Color {
-        R: 0.0299999714
-        G: 0.961456954
-        B: 1
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12607576693317675692
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  InstanceHistory {
-    SelfId: 18210322086488987510
-    SubobjectId: 7655632245475674860
-    InstanceId: 13851627259951467395
-    TemplateId: 6373073360692482816
   }
   Relevance {
     Value: "mc:eproxyrelevance:critical"

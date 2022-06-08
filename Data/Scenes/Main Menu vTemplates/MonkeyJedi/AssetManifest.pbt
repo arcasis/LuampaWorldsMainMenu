@@ -674,15 +674,6 @@ Assets {
   }
 }
 Assets {
-  Id: 12607576693317675692
-  Name: "Sign Font 1 Neon Outline: G"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "CollegeNeon_Outline_01_Text_006"
-  }
-}
-Assets {
   Id: 12598129352734110789
   Name: "Corrugated Sheet Large"
   PlatformAssetType: 1
@@ -788,15 +779,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_trimitives_001_straight_8m_ref"
-  }
-}
-Assets {
-  Id: 11547421392472302864
-  Name: "Sign Font 1 Neon Outline: R"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "CollegeNeon_Outline_01_Text_017"
   }
 }
 Assets {
@@ -1304,15 +1286,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6717098540383755117
-  Name: "Sign Font 1 Neon Outline: A"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "CollegeNeon_Outline_01_Text_000"
-  }
-}
-Assets {
   Id: 6677237403455816226
   Name: "Portal VFX"
   PlatformAssetType: 6
@@ -1724,15 +1697,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_container_hex_rnd_001_ref"
-  }
-}
-Assets {
-  Id: 2709911507539892983
-  Name: "Sign Font 1 Neon Outline: E"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "CollegeNeon_Outline_01_Text_004"
   }
 }
 Assets {
