@@ -100254,12 +100254,12 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: -80.7832
+      X: -176.776855
       Y: -1288.88477
       Z: 172.510849
     }
     Rotation {
-      Pitch: -35.5994492
+      Pitch: -35.5994568
       Yaw: 162.254364
       Roll: 27.0154057
     }
@@ -105891,12 +105891,14 @@ Objects {
   Name: "Drill"
   Transform {
     Location {
-      X: 39.2041397
-      Y: -36.0191536
+      X: -98.8386307
+      Y: -69.3506
       Z: 133.562866
     }
     Rotation {
-      Yaw: -33
+      Pitch: 21.4287
+      Yaw: -37.9355774
+      Roll: -25.6624451
     }
     Scale {
       X: 1
@@ -106863,12 +106865,12 @@ Objects {
     Location {
       X: -156.367035
       Y: -82.5735855
-      Z: 66.6653137
+      Z: 51.4502258
     }
     Rotation {
-      Pitch: 1.89970088
-      Yaw: 12.1295242
-      Roll: -91.0471191
+      Pitch: 31.8766747
+      Yaw: 11.6552677
+      Roll: -92.6283264
     }
     Scale {
       X: 1
@@ -107231,8 +107233,8 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 194.132767
-      Y: 18.4047298
+      X: 29.6956825
+      Y: -31.9708233
       Z: 156.980652
     }
     Rotation {
@@ -107706,8 +107708,8 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 194.132767
-      Y: 18.4047298
+      X: 29.6956825
+      Y: -31.9708233
       Z: 111.659576
     }
     Rotation {
@@ -108181,8 +108183,8 @@ Objects {
   Name: "Grip"
   Transform {
     Location {
-      X: 194.132767
-      Y: 18.4047298
+      X: 29.6956825
+      Y: -31.9708233
       Z: 67.4573669
     }
     Rotation {
@@ -108658,14 +108660,14 @@ Objects {
   Name: "Hammer"
   Transform {
     Location {
-      X: 29.622303
-      Y: -30.2783546
+      X: -82.4106
+      Y: -59.90979
       Z: 57.8895569
     }
     Rotation {
-      Pitch: 1.89967358
-      Yaw: 18.1293774
-      Roll: -91.0470276
+      Pitch: 35.375721
+      Yaw: 18.8791332
+      Roll: -88.8012695
     }
     Scale {
       X: 1
@@ -110544,8 +110546,8 @@ Objects {
   Name: "Animated Neon Sign- Wrench Frame"
   Transform {
     Location {
-      X: 293.337677
-      Y: 342.931641
+      X: 254.181442
+      Y: 332.575684
       Z: 132.629257
     }
     Rotation {
