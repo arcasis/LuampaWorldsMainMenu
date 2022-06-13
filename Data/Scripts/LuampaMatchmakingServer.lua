@@ -12,6 +12,7 @@ local SEND_PERIOD = 5
 -- Script Helpers
 local servers = {}
 local newPlayersInScene = 0
+local serverIsLocked = false
 
 
 
@@ -49,7 +50,7 @@ function FindGameForPlayer(player)
     local lowest2 = lowest[2]
 
     if lowest2 then
-        if not lowest1 or lowest2 < lowest 1 then
+        if not lowest1 or lowest2 < lowest1 then
             bestGame = 2
         end
     end
@@ -58,15 +59,14 @@ function FindGameForPlayer(player)
         player:TransferToGame("2681e0/luampa-racing-worlds")
     elseif availableGame == 2 then
         player:TransferToGame("747744/luampadesertbattlemap")
-        print("** MUST REPLACE THIS ID WITH PUBLISHED VERSION WHEN PUBLISHED **")
     end
 end
 
 
-function Tick(deltaTime()
+function Tick(deltaTime)
     Task.Wait(SEND_PERIOD)
 
-    if newPlayersInScene = 0 then return end
+    if newPlayersInScene == 0 then return end
 
     if Storage.HasPendingSetConcurrentCreatorData(CONCURRENT_KEY) then return end
 
@@ -158,6 +158,11 @@ function OnPlayerLeft(player)
     end
 end
 
+function OnRoundEnd()
+    --Game.StopAcceptingPlayers()
+    --serverIsLocked = true
+end
+
 
 -- Initialize
 Storage.ConnectToConcurrentCreatorDataChanged(LUAMPA_CREATOR_KEY, OnConcurrentDataChanged)
@@ -165,6 +170,8 @@ Events.ConnectForPlayer("FindAGame", FindGameForPlayer)
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
+
+Game.roundEndEvent:Connect(OnRoundEnd)
 
 SCENE_NAME = Game.GetCurrentSCENE_NAME()
 
