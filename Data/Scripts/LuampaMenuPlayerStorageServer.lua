@@ -1,6 +1,5 @@
 --[[DESCRIPTION: Downloads player storage for Luampa Main Menu. Uploads purchases and selections.]]
 
-
 local STORAGE_KEY = script:GetCustomProperty("LuampaWorldKey")
 
 local thanksBroadcast = {}
@@ -139,6 +138,28 @@ function OnPlayerJoined(player)
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
 
 
+    ------------------------ COINS ------------------------
+    -- Get coins or create player Resource if new player
+    if not playerDataTable.coins then
+        player:SetResource("LuampaCoins", 0)
+        playerDataTable.coins = 0
+    else
+        local resource = playerDataTable.coins
+        player:SetResource("LuampaCoins", resource)
+    end
+    ---------------------- END COINS ----------------------
+
+    
+    --------------------- XP BOOSTS ---------------------
+    if not playerDataTable.XPBoosts then
+        playerDataTable.XPBoosts = {}
+        playerDataTable.XPBoosts.active = false
+        playerDataTable.XPBoosts.total = 0
+    end
+    player.serverUserData.XPBoosts = playerDataTable.XPBoosts
+    ------------------- END XP BOOSTS -------------------
+
+
     ----------------------- RACE -----------------------
     if not playerDataTable.totalRaceXp then
         playerDataTable.totalRaceXp = 0
@@ -211,18 +232,6 @@ function OnPlayerJoined(player)
         end
     end]]
     ------------------------ END TEST PRINTS ------------------------
-
-    
-    ------------------------ COINS ------------------------
-    -- Get coins or create player Resource if new player
-    if not playerDataTable.coins then
-        player:SetResource("LuampaCoins", 0)
-        playerDataTable.coins = 0
-    else
-        local resource = playerDataTable.coins
-        player:SetResource("LuampaCoins", resource)
-    end
-    ---------------------- END COINS ----------------------
 
 
     -- Load updated data back into shared data (new isTester status and nil'd deprecated data)

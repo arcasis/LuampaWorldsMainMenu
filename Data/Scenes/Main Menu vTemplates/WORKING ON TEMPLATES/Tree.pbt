@@ -138,7 +138,8 @@ Objects {
     }
   }
   ParentId: 7258182682999968965
-  ChildIds: 17892291905165667077
+  ChildIds: 13999143502332439003
+  ChildIds: 551323801296827940
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -185,67 +186,8 @@ Objects {
   }
 }
 Objects {
-  Id: 17892291905165667077
-  Name: "UI Panel"
-  Transform {
-    Location {
-      X: 7213
-      Y: 732
-      Z: 182.999985
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11133920402312887299
-  ChildIds: 13999143502332439003
-  ChildIds: 551323801296827940
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 100
-    Height: 100
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    UseParentWidth: true
-    UseParentHeight: true
-    Panel {
-      Opacity: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 551323801296827940
-  Name: "Perks Buttons"
+  Name: "UI Panel"
   Transform {
     Location {
       Z: 1.52587891e-05
@@ -258,7 +200,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17892291905165667077
+  ParentId: 11133920402312887299
   ChildIds: 1387946232195884136
   ChildIds: 12335228665137151033
   ChildIds: 7779726888692169648
@@ -400,7 +342,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "- Bonus 1000 coins & Double XP for 2 weeks -"
+      Label: "- Bonus 2000 Luampa Coins + 14 Daily XP Boosts -"
       Color {
         R: 1
         G: 1
@@ -615,7 +557,7 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     Text {
-      Label: "- Bonus 1000 Luampa Coins & Double XP for 1 week -"
+      Label: "- Bonus 1000 Luampa Coins + 7 Daily XP Boosts -"
       Color {
         R: 1
         G: 1
@@ -1573,7 +1515,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17892291905165667077
+  ParentId: 11133920402312887299
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2579,9 +2521,9 @@ Objects {
   ChildIds: 12387602564815389780
   ChildIds: 6234024626987748
   ChildIds: 7066904174243055465
+  ChildIds: 9248633902915127290
   ChildIds: 660242894200477453
   ChildIds: 3984317437083343396
-  ChildIds: 9248633902915127290
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2603,76 +2545,13 @@ Objects {
   }
 }
 Objects {
-  Id: 9248633902915127290
-  Name: "Luampa Coin"
-  Transform {
-    Location {
-      X: -6.90185547
-      Y: -12.3851318
-      Z: 21.0087128
-    }
-    Rotation {
-      Pitch: -14
-      Roll: -14
-    }
-    Scale {
-      X: 0.3
-      Y: 0.3
-      Z: 0.03
-    }
-  }
-  ParentId: 7119568132590318925
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 14212988502358508072
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 18032733315106131619
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 3984317437083343396
   Name: "Luampa Coin"
   Transform {
     Location {
-      X: 10.0981445
-      Y: 5.61486816
-      Z: 21.0087128
+      X: 14.9018555
+      Y: -7
+      Z: 12.0087128
     }
     Rotation {
       Roll: -23
@@ -2732,12 +2611,75 @@ Objects {
   Name: "Luampa Coin"
   Transform {
     Location {
-      X: -1.90185547
+      X: -8.09814453
       Y: 5.61486816
-      Z: 21.0087128
+      Z: 9.00871277
     }
     Rotation {
-      Roll: -14.0000381
+      Roll: -14.0000305
+    }
+    Scale {
+      X: 0.3
+      Y: 0.3
+      Z: 0.03
+    }
+  }
+  ParentId: 7119568132590318925
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 14212988502358508072
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 18032733315106131619
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9248633902915127290
+  Name: "Luampa Coin"
+  Transform {
+    Location {
+      X: 1.90185547
+      Y: -17
+      Z: 15.0087128
+    }
+    Rotation {
+      Pitch: -14
+      Roll: -14
     }
     Scale {
       X: 0.3
