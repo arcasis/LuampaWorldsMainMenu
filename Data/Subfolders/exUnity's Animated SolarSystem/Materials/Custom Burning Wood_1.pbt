@@ -8,7 +8,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "emissiveboost"
-        Float: 50
+        Float: 38.1141472
       }
       Overrides {
         Name: "embersoftness"
@@ -24,11 +24,11 @@ Assets {
       }
       Overrides {
         Name: "speed"
-        Float: 0.892771482
+        Float: 0.841768622
       }
       Overrides {
         Name: "gradient_shifthot"
-        Float: 0.138915047
+        Float: 0
       }
       Overrides {
         Name: "color"
@@ -63,15 +63,15 @@ Assets {
       }
       Overrides {
         Name: "curvature_brightness"
-        Float: 2
+        Float: 1.59256959
       }
       Overrides {
         Name: "curvature_roughness"
-        Float: 0.994629085
+        Float: 1
       }
       Overrides {
         Name: "u_tiles"
-        Float: 1
+        Float: 1.13945401
       }
       Overrides {
         Name: "v_tiles"
@@ -87,7 +87,7 @@ Assets {
       }
       Overrides {
         Name: "gradient_falloff"
-        Float: 0.0765782595
+        Float: 0
       }
       Overrides {
         Name: "gradient_worldspace"
@@ -112,6 +112,22 @@ Assets {
           G: 0.0337748416
           A: 1
         }
+      }
+      Overrides {
+        Name: "coloroffseta"
+        Float: 0.507268786
+      }
+      Overrides {
+        Name: "coloroffsetb"
+        Float: 0.427931041
+      }
+      Overrides {
+        Name: "coloroffsetc"
+        Float: 1
+      }
+      Overrides {
+        Name: "gradient_falloffhot"
+        Float: 0.0255754311
       }
     }
     Assets {
