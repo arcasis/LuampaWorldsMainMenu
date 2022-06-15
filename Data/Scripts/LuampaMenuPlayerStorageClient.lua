@@ -9,6 +9,10 @@ function UpdateFromNetworkedData(key)
 
     local data = LOCAL_PLAYER:GetPrivateNetworkedData(key)
 
+    if key == "XPBoosts" then
+        LOCAL_PLAYER.clientUserData.helmets = data
+    end
+
     if key == "helmets" then
         LOCAL_PLAYER.clientUserData.helmets = data
     end
