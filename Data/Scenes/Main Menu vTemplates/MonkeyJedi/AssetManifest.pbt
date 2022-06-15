@@ -1,4 +1,13 @@
 Assets {
+  Id: 18441810659176357459
+  Name: "Planet"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Planet"
+  }
+}
+Assets {
   Id: 18393437648231545508
   Name: "Urban Pipe Flange 01"
   PlatformAssetType: 1
@@ -44,15 +53,6 @@ Assets {
   }
 }
 Assets {
-  Id: 17977280587505271142
-  Name: "Basic Projectile Trail VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_basic_projectile_trail"
-  }
-}
-Assets {
   Id: 17933570741495538470
   Name: "Military Common Crate Lid"
   PlatformAssetType: 1
@@ -86,15 +86,6 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_smoke_puff"
-  }
-}
-Assets {
-  Id: 17687337846913016913
-  Name: "Smoke Volume VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_smoke_volume_vfx"
   }
 }
 Assets {
@@ -170,30 +161,21 @@ Assets {
   }
 }
 Assets {
+  Id: 17063449512846892296
+  Name: "Planetary Ring"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_PlanetaryRing"
+  }
+}
+Assets {
   Id: 16974951774123509249
   Name: "Metal Simple Tech Panel Wall 01"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_scf_simple_tech_panel_001_uv"
-  }
-}
-Assets {
-  Id: 16927965734783418731
-  Name: "Funny Cartoon Clown Car Horn Honk Double 02 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_funny_cartoon_clown_car_horn_honk_double_02a_Cue_ref"
-  }
-}
-Assets {
-  Id: 16910278292812118833
-  Name: "Sun Light"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_SunLight"
   }
 }
 Assets {
@@ -230,15 +212,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_veh_urb_car_kit_tachometer_001_ref"
-  }
-}
-Assets {
-  Id: 16471063547951275134
-  Name: "Decal Bullet Damage Metal"
-  PlatformAssetType: 14
-  PrimaryAsset {
-    AssetType: "DecalBlueprintAssetRef"
-    AssetId: "bp_decal_bullet_metal_001"
   }
 }
 Assets {
@@ -422,15 +395,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14663031830242052499
-  Name: "Center Circle 001 Outline"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterCircle_001Outline"
-  }
-}
-Assets {
   Id: 14620852700054372986
   Name: "Sci-fi Cryo Chamber Pod Top"
   PlatformAssetType: 1
@@ -581,33 +545,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_st_post_lights_sign_xing_001"
-  }
-}
-Assets {
-  Id: 13223482241329215724
-  Name: "Clear Coat Reflector Hex 02"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_reflector_hex_002"
-  }
-}
-Assets {
-  Id: 13163283878713838134
-  Name: "Tank Tread Trail VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_smooth_tankTread_trail"
-  }
-}
-Assets {
-  Id: 13143398275891297190
-  Name: "Vehicle Car Tire Skid Screech Drift Loop 01 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_vehicle_car_tire_skid_screech_drift_loop_01_Cue_ref"
   }
 }
 Assets {
@@ -980,12 +917,12 @@ Assets {
   }
 }
 Assets {
-  Id: 9319410304317692746
-  Name: "Rock 01"
-  PlatformAssetType: 1
+  Id: 9335960620444669978
+  Name: "Metal Simple Tech Panel Wall 02"
+  PlatformAssetType: 2
   PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_001"
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_simple_tech_panel_002_uv"
   }
 }
 Assets {
@@ -998,39 +935,12 @@ Assets {
   }
 }
 Assets {
-  Id: 9118011185503589263
-  Name: "Wireframe"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "wireframe_glow_001"
-  }
-}
-Assets {
-  Id: 9071038446808606111
-  Name: "Moon Surface 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_planet_moon_001_uv"
-  }
-}
-Assets {
   Id: 9036435396988035792
   Name: "Sci-fi Chair Armrest 01"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_scf_chair_001_arms_ref"
-  }
-}
-Assets {
-  Id: 8919871824294249785
-  Name: "Emissive Glow Transparent"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_basic_emissive_001"
   }
 }
 Assets {
@@ -1097,15 +1007,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8399266434287214900
-  Name: "Rocket Trail VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_rocket_trail"
-  }
-}
-Assets {
   Id: 8221182919805045275
   Name: "Urban Vehicle Car - Rim 02"
   PlatformAssetType: 1
@@ -1133,15 +1034,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8105941569596900735
-  Name: "Military Tank Modern Light 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_mil_tank_mod_light_002_ref"
-  }
-}
-Assets {
   Id: 8085460518288650129
   Name: "Humanoid 2 Tactical Shirt"
   PlatformAssetType: 26
@@ -1157,15 +1049,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cube_rounded_002"
-  }
-}
-Assets {
-  Id: 7887238662729938253
-  Name: "Sky Dome"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_Sky"
   }
 }
 Assets {
@@ -1421,15 +1304,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5117326109845707677
-  Name: "Plane 4m - One Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_plane_4m_001"
-  }
-}
-Assets {
   Id: 5055429345916703247
   Name: "Pipe"
   PlatformAssetType: 1
@@ -1475,30 +1349,12 @@ Assets {
   }
 }
 Assets {
-  Id: 4674218416198329058
-  Name: "Sphere"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_sphere_002"
-  }
-}
-Assets {
   Id: 4543315673208588897
   Name: "Street Sign - Triangle"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_street-sign_triangle_001"
-  }
-}
-Assets {
-  Id: 4513618068462179893
-  Name: "Donut"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_torus_001"
   }
 }
 Assets {
@@ -1517,15 +1373,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "Energy_Tube_Glow"
-  }
-}
-Assets {
-  Id: 4272271572783880361
-  Name: "Vehicle Armored Tank Vehicle Engine Loop 01 SFX"
-  PlatformAssetType: 7
-  PrimaryAsset {
-    AssetType: "AudioAssetRef"
-    AssetId: "sfx_vehicle_armored_tank_vehicle_engine_loop_01_Cue_ref"
   }
 }
 Assets {
@@ -1691,15 +1538,6 @@ Assets {
   }
 }
 Assets {
-  Id: 3066155598661664392
-  Name: "Container - Hex- Rounded"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_container_hex_rnd_001_ref"
-  }
-}
-Assets {
   Id: 2706761020859682454
   Name: "Urban Interior - Oil Lantern 02 - Handle 01"
   PlatformAssetType: 1
@@ -1733,6 +1571,24 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_street-sign_round_001"
+  }
+}
+Assets {
+  Id: 2224571462023946700
+  Name: "Environment Fog Default VFX"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_env_fog_default"
+  }
+}
+Assets {
+  Id: 2112804179467698174
+  Name: "Metal Frame 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_frames_001_uv"
   }
 }
 Assets {
@@ -1817,12 +1673,12 @@ Assets {
   }
 }
 Assets {
-  Id: 1454889897083546388
-  Name: "Additive Axis Aligned Soft Edge Z"
-  PlatformAssetType: 2
+  Id: 1353607577508895962
+  Name: "Moon"
+  PlatformAssetType: 6
   PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "fxma_additive_axis_aligned_fresnel"
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Moon"
   }
 }
 Assets {
@@ -1868,15 +1724,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_veh_jpn_mecha_frame_forearm_001_ref"
-  }
-}
-Assets {
-  Id: 846393637057513372
-  Name: "Skull and  Bones 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_fan_ground_bones_001_uv"
   }
 }
 Assets {
