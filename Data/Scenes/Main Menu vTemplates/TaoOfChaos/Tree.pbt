@@ -31951,42 +31951,6 @@ Objects {
   }
 }
 Objects {
-  Id: 3221954004587662100
-  Name: "Luampa Core Reward Points RP"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1696798925401821095
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 2794897292825528455
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Luampa Core Reward Points RP"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7359553105297484121
-    }
-  }
-}
-Objects {
   Id: 14407121827428704047
   Name: "Message Banner"
   Transform {

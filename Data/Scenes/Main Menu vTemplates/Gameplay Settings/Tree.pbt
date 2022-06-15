@@ -1,6 +1,76 @@
 Name: "Gameplay Settings"
 RootId: 9086936746104183945
 Objects {
+  Id: 13587754549163719512
+  Name: "Luampa XP Boost System"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9086936746104183945
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9599594640398618260
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Luampa XP Boost System"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14485244394589580875
+    }
+  }
+}
+Objects {
+  Id: 3221954004587662100
+  Name: "Luampa Core Reward Points RP"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9086936746104183945
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2794897292825528455
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Luampa Core Reward Points RP"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7359553105297484121
+    }
+  }
+}
+Objects {
   Id: 10007822524971558635
   Name: "XP Unlocks Vehicles"
   Transform {
