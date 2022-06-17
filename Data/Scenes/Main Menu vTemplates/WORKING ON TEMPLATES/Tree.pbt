@@ -1885,9 +1885,9 @@ Objects {
   Name: "dinner"
   Transform {
     Location {
-      X: 3.8649292
-      Y: 66.9999847
-      Z: -71.4846954
+      X: 3.86492157
+      Y: 64.9018402
+      Z: -71.4847
     }
     Rotation {
       Yaw: 4.78113216e-05
@@ -1939,8 +1939,8 @@ Objects {
   Transform {
     Location {
       X: 4.38483429
-      Y: 66.9999847
-      Z: -41.201931
+      Y: 64.9018402
+      Z: -41.2019272
     }
     Rotation {
       Yaw: 3.41509403e-05
@@ -1992,8 +1992,8 @@ Objects {
   Transform {
     Location {
       X: 4.7497406
-      Y: 66.9999847
-      Z: -11.8982372
+      Y: 64.9018402
+      Z: -11.8982353
     }
     Rotation {
       Yaw: 2.39056571e-05
@@ -2045,7 +2045,7 @@ Objects {
   Transform {
     Location {
       X: 5.42552948
-      Y: 66.9999924
+      Y: 64.9018402
       Z: 18.3686829
     }
     Rotation {
@@ -2097,9 +2097,9 @@ Objects {
   Name: "Sign Title"
   Transform {
     Location {
-      X: 0.999999881
-      Y: -5.96046448e-08
-      Z: 78
+      X: 1.0000248
+      Y: -2.0981431
+      Z: 77.9999771
     }
     Rotation {
     }

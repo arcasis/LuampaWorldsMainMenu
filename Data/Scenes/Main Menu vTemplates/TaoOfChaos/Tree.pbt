@@ -3199,14 +3199,14 @@ Objects {
   Name: "Battle Garage Sign"
   Transform {
     Location {
-      X: 4315.77148
-      Y: 9261.25293
-      Z: 351.374237
+      X: 4233.15234
+      Y: 9066.89258
+      Z: 352.252441
     }
     Rotation {
       Pitch: 0.235866904
-      Yaw: -113.813789
-      Roll: -0.169137344
+      Yaw: -113.813782
+      Roll: -0.169128418
     }
     Scale {
       X: 1.12233543
@@ -12476,14 +12476,12 @@ Objects {
   Name: "Race Garage Sign"
   Transform {
     Location {
-      X: 9514.67
+      X: 9302.47363
       Y: 3069.67358
       Z: 384.038483
     }
     Rotation {
-      Pitch: -6.83018879e-06
       Yaw: 179.186966
-      Roll: -1.81810975e-07
     }
     Scale {
       X: 1.12233543

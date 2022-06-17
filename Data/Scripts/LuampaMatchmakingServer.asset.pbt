@@ -4,6 +4,14 @@ Assets {
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
+      Overrides {
+        Name: "cs:LuampaCreatorKey"
+        NetReference {
+          Type {
+            Value: "mc:enetreferencetype:unknown"
+          }
+        }
+      }
     }
   }
   SerializationVersion: 115
