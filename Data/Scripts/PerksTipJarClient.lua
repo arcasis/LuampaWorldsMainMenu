@@ -56,16 +56,20 @@ end
 
 
 function OnPurchasedCookie()
+    print("Cookie perk was clicked")
     Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 500)
 end
 function OnPurchasedCoffee()
+    print("Coffee perk was clicked")
     Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 1000)
 end
 function OnPurchasedSammich()
+    print("Sammich perk was clicked")
     Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 1000)
     Events.BroadcastToServer("GetXPBoosts", 7)
 end
 function OnPurchasedDinner()
+    print("Dinner perk was clicked")
     Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 2000)
     Events.BroadcastToServer("GetXPBoosts", LOCAL_PLAYER, 14)
 end

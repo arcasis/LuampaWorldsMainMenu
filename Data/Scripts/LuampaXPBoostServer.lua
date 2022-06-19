@@ -48,8 +48,10 @@ function OnStorageReady(player)
 end
 
 
-function GivePlayerXP(player, amount)
+function GivePlayerXPBoosts(player, amount)
     local XPBoosts = player.serverUserData.XPBoosts
+
+    print("GivePlayerXPBoosts runs, current/new boosts are:", XPBoosts, amount)
 
     XPBoosts.total = XPBoosts.total + amount
 
@@ -74,5 +76,5 @@ end
 
 
 Events.Connect("StorageReady", OnStorageReady)
-Events.Connect("GetXPBoosts", GivePlayerXP)
+Events.Connect("GetXPBoosts", GivePlayerXPBoosts)
 Events.Connect("UseXPBoost", OnUseXPBoost)
