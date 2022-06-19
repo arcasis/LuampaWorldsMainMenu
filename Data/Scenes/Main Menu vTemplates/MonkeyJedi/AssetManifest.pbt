@@ -719,15 +719,6 @@ Assets {
   }
 }
 Assets {
-  Id: 11515840070784317904
-  Name: "Skylight"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_Skylight"
-  }
-}
-Assets {
   Id: 11242933075375658963
   Name: "Military Tank Historic Hull 01 - Front"
   PlatformAssetType: 1
@@ -1670,15 +1661,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_prop_fan_chain_strt_4m_002_ref"
-  }
-}
-Assets {
-  Id: 1353607577508895962
-  Name: "Moon"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "CORESKY_Moon"
   }
 }
 Assets {
