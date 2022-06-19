@@ -48,7 +48,7 @@ function OnStorageReady(player)
 end
 
 
-function OnPurchaseXPBoost(player, amount)
+function GivePlayerXP(player, amount)
     local XPBoosts = player.serverUserData.XPBoosts
 
     XPBoosts.total = XPBoosts.total + amount
@@ -56,7 +56,6 @@ function OnPurchaseXPBoost(player, amount)
     player.serverUserData.XPBoosts = XPBoosts
     player:SetPrivateNetworkedData("XPBoosts", XPBoosts)
 end
-
 
 
 function OnUseXPBoost(player)
@@ -75,5 +74,5 @@ end
 
 
 Events.Connect("StorageReady", OnStorageReady)
-Events.Connect("PurchaseXPBoost", OnPurchaseXPBoost)
+Events.Connect("GetXPBoosts", GivePlayerXP)
 Events.Connect("UseXPBoost", OnUseXPBoost)

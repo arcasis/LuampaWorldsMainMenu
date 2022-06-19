@@ -18,6 +18,7 @@ Objects {
     }
   }
   ParentId: 6171099205028301999
+  ChildIds: 11866640147799291583
   ChildIds: 1813940048445964265
   ChildIds: 9244649617482642733
   ChildIds: 17870371089510618586
@@ -144,7 +145,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -307,7 +308,7 @@ Objects {
 }
 Objects {
   Id: 3423072734414529700
-  Name: "UI Perk Purchase Button"
+  Name: "Dinner Perk Button"
   Transform {
     Location {
       X: 7213
@@ -395,7 +396,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -474,7 +475,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -585,7 +586,7 @@ Objects {
 }
 Objects {
   Id: 15259645868788798284
-  Name: "UI Perk Purchase Button"
+  Name: "Sammich Perk Button"
   Transform {
     Location {
       X: 7213
@@ -673,7 +674,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -752,7 +753,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -863,7 +864,7 @@ Objects {
 }
 Objects {
   Id: 253064838743971622
-  Name: "UI Perk Purchase Button"
+  Name: "Coffee Perk Button"
   Transform {
     Location {
       X: 7213
@@ -951,7 +952,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -1030,7 +1031,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -1141,7 +1142,7 @@ Objects {
 }
 Objects {
   Id: 13217927774601142133
-  Name: "UI Perk Purchase Button"
+  Name: "Cookie Perk Button"
   Transform {
     Location {
       X: 7213
@@ -1170,7 +1171,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 150
+    Width: 130
     Height: 50
     RenderTransformPivot {
       Anchor {
@@ -1229,7 +1230,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -1308,7 +1309,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: -150
+    Width: -160
     Height: 60
     RenderTransformPivot {
       Anchor {
@@ -1920,6 +1921,30 @@ Objects {
       Name: "cs:SignOutline"
       ObjectReference {
         SelfId: 12040132687725367406
+      }
+    }
+    Overrides {
+      Name: "cs:CookiePerkButton"
+      ObjectReference {
+        SelfId: 13217927774601142133
+      }
+    }
+    Overrides {
+      Name: "cs:CoffeePerkButton"
+      ObjectReference {
+        SelfId: 253064838743971622
+      }
+    }
+    Overrides {
+      Name: "cs:SammichPerkButton"
+      ObjectReference {
+        SelfId: 15259645868788798284
+      }
+    }
+    Overrides {
+      Name: "cs:DinnerPerkButton"
+      ObjectReference {
+        SelfId: 3423072734414529700
       }
     }
   }
@@ -3465,6 +3490,100 @@ Objects {
   }
   Relevance {
     Value: "mc:eproxyrelevance:critical"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11866640147799291583
+  Name: "TipJarPerksServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4756283693287450189
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:CookiePerkButton"
+      ObjectReference {
+        SelfId: 13217927774601142133
+      }
+    }
+    Overrides {
+      Name: "cs:CoffeePerkButton"
+      ObjectReference {
+        SelfId: 253064838743971622
+      }
+    }
+    Overrides {
+      Name: "cs:SammichPerkButton"
+      ObjectReference {
+        SelfId: 15259645868788798284
+      }
+    }
+    Overrides {
+      Name: "cs:DinnerPerkButton"
+      ObjectReference {
+        SelfId: 3423072734414529700
+      }
+    }
+    Overrides {
+      Name: "cs:CookiePerkButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CookiePerkButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CoffeePerkButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CoffeePerkButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SammichPerkButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SammichPerkButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:DinnerPerkButton:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:DinnerPerkButton:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5301134758715965854
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
