@@ -10,55 +10,94 @@ local SCENE_NAME = nil
 local SEND_PERIOD = 5
 
 -- Script Helpers
+local totalPlayers = 0
 local servers = {}
 local newPlayersInScene = 0
 local serverIsLocked = false
+
+local allSceneNames = {}
+local allGameIds = {}
+local allGameTransfers = {}
 
 
 
 function FindGameForPlayer(player)
 
+    local partyLeader = nil
     local partySize = 1
+
     if player.isInParty then
         local partyInfo = player:GetPartyInfo()
         if partyInfo.isPlayAsParty then
+            partyLeader = partyInfo.partyLeaderId
             partySize = partyInfo.partySize
+        else
+            partyLeader = player
         end
     end
 
-    local lowest = {}
-    local gameSpots = nil
-    for gameNumber, table in(server) do
-        for sceneNumber, scenePlayers in(table) do
-            openSpots = scenePlayers % 8
-            -- check if scene has enough spots
-            if openSpots >= partySize then
-                -- find the scene with the smallest number of open spots
-                if not lowest[gameNumber] then
-                    lowest[gameNumber] = openSpots
-                else
-                    if openSpots < lowest[gameNumber] then
+    if not partyLeader then return end -- don't continue running scripts if player is in a party that isPlayAsParty
+
+    if partySize >= 6 then
+
+        TransferPlayerToNextScene(player)
+    else
+
+        -- find which game has a scene with the smallest number of open spots
+        local lowest = {}
+        local openSpots = nil
+        for gameNumber, table in(servers) do
+            for sceneNumber, scenePlayers in(table) do
+                openSpots = scenePlayers % 8
+                -- check if scene has enough spots
+                if openSpots >= partySize then
+                    -- find the scene with the smallest number of open spots
+                    if not lowest[gameNumber] then
                         lowest[gameNumber] = openSpots
+                    else
+                        if openSpots < lowest[gameNumber] then
+                            lowest[gameNumber] = openSpots
+                        end
                     end
                 end
             end
         end
-    end
-    
-    local bestGame = 1
-    local lowest1 = lowest[1]
-    local lowest2 = lowest[2]
+        
+        local bestGame = 1
+        local lowest1 = lowest[1]
+        local lowest2 = lowest[2]
+        -- will need to add local lowest3 = lowest[3] when flag comes out
 
-    if lowest2 then
-        if not lowest1 or lowest2 < lowest1 then
-            bestGame = 2
+        if lowest2 then
+            if not lowest1 or lowest2 < lowest1 then
+                bestGame = 2
+            end
         end
-    end
 
-    if bestGame == 1 then
-        player:TransferToGame("2681e0/luampa-racing-worlds")
-    elseif availableGame == 2 then
-        player:TransferToGame("747744/luampadesertbattlemap")
+        player:TransferToGame(allGameIds[bestGame])  -- game will process them when they join and send them to best scene
+    end
+end
+
+
+function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader
+    -- check if payer is in a party
+    
+    -- determine if player will go to next scene or transfer to next game
+    local totalGames = #allGameIds
+    local scenesInThisGame = #allSceneNames[GAME_NUMBER]
+    local nextSceneNumber = SCENE_NUMBER + 1
+
+    if nextSceneNumber < scenesInThisGame then  -- player will transfer to next scene in this game
+
+        player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+        
+    else  -- player finished a game on last scene, send them to next game
+
+        if GAME_NUMBER < totalGames then
+            player:TransferToGame(allGameIds[GAME_NUMBER + 1])
+        else
+            player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
+        end
     end
 end
 
@@ -66,7 +105,7 @@ end
 function Tick(deltaTime)
     Task.Wait(SEND_PERIOD)
 
-    if newPlayersInScene == 0 then return end
+    if newPlayersInScene == 0 then return end  -- for empty servers and Main Menu
 
     if Storage.HasPendingSetConcurrentCreatorData(CONCURRENT_KEY) then return end
 
@@ -115,7 +154,6 @@ function Tick(deltaTime)
     end
 end
 
-local totalPlayers = 0
 
 function OnConcurrentDataChanged(_, data)
     if data.totalPlayers and data.totalPlayers ~= totalPlayers then
@@ -126,7 +164,7 @@ function OnConcurrentDataChanged(_, data)
 end
 
 
-function GetSceneAndGameNumbers()
+function GetCurrentSceneAndGameNumers()
     local GameId = Game.GetCurrentGameId()
     if GameId == "2681e0/luampa-racing-worlds" then
         GAME_NUMBER = 1
@@ -147,20 +185,81 @@ end
 
 
 function OnPlayerJoined(player)
+
     if SCENE_NAME ~= "Main Menu" then
+        -- update newPlayersInScene for creative storage matchmaking system
         newPlayersInScene = newPlayersInScene + 1
+
+        -- determine if players need sent to a more populated scene
+        local totalPlayers = #Game.GetPlayers()
+        if totalPlayers < 6 then
+            
+            local partyLeader = nil
+            local partySize = 1
+
+            if player.isInParty then
+                local partyInfo = player:GetPartyInfo()
+                if partyInfo.isPlayAsParty then
+                    partyLeader = partyInfo.partyLeaderId
+                    partySize = partyInfo.partySize
+                else
+                    partyLeader = player
+                end
+            end
+
+            -- if party size is smaller than 6, find the scene with the smallest empty spots
+            local bestScene = nil
+
+            if partySize < 6 then
+                local lowestOpenSpots = nil
+                for sceneNumber, scenePlayers in(servers[GAME_NUMBER]) do
+                    local openSpots = scenePlayers % 8
+                    -- check if scene has enough spots
+                    if openSpots >= partySize then
+                        -- find the scene with the smallest number of open spots
+                        if openSpots < bestScene then
+                            bestScene = sceneNumber
+                        end
+                    end
+                end
+            end
+                
+            if bestScene then     -- only transfer them if we found a scene with smaller open spots
+                player:TransferToGame(allSceneNames[bestScene])  -- game will process them when they join and send them to best scene
+            end
+        end
     end
 end
 
+
 function OnPlayerLeft(player)
+
     if SCENE_NAME ~= "Main Menu" then
+        -- update newPlayersInScene for creative storage matchmaking system
         newPlayersInScene = newPlayersInScene - 1
     end
 end
 
+
 function OnRoundEnd()
     --Game.StopAcceptingPlayers()
     --serverIsLocked = true
+end
+
+function BuildAllSceneNamesTables()
+    allSceneNames[1] = {}
+    allSceneNames[1][1] = "Neon Race"
+    allSceneNames[1][2] = "Desert Race"
+    allSceneNames[2] = {}
+    allSceneNames[2][1] = "Desert Battle"
+    allSceneNames[2][2] = "Neon Battle"
+end
+
+function BuildAllGameIdTables()
+    allGameIdTables = {}
+    allGameIdTables[1] = "2681e0/luampa-racing-worlds"
+    allGameIdTables[2] = "747744/luampadesertbattlemap"
+    --allGameIdTables[3] = CTF GOES HERE
 end
 
 
@@ -173,9 +272,11 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 Game.roundEndEvent:Connect(OnRoundEnd)
 
-SCENE_NAME = Game.GetCurrentSCENE_NAME()
+SCENE_NAME = Game.GetCurrentSceneName()
 
-GetSceneAndGameNumbers()
+BuildAllSceneNamesTables()
+BuildAllGameIdTables()
+GetCurrentSceneAndGameNumers()  -- can redo this now and use above tables to fetch this
 
 -- When this server instance comes online, fetch the latest data right away
 local data, result, message = Storage.GetConcurrentCreatorData(CONCURRENT_KEY)
