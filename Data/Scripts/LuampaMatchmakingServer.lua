@@ -141,10 +141,10 @@ function Tick(deltaTime)
 
     if newPlayersInScene == 0 then return end  -- for empty servers and Main Menu
 
-    if Storage.HasPendingSetConcurrentCreatorData(CONCURRENT_KEY) then return end
+    if Storage.HasPendingSetConcurrentCreatorData(LUAMPA_CREATOR_KEY) then return end
 
     -- Apply the difference in total players
-    local data, result, message = Storage.SetConcurrentCreatorData(CONCURRENT_KEY, function(data)
+    local data, result, message = Storage.SetConcurrentCreatorData(LUAMPA_CREATOR_KEY, function(data)
 
         -- make a table that holds all servers
         if not data.servers then
@@ -301,10 +301,10 @@ function BuildAllSceneNamesTables()
 end
 
 function BuildAllGameIdTables()
-    allGameIdTables = {}
-    allGameIdTables[1] = "2681e0/luampa-racing-worlds"
-    allGameIdTables[2] = "747744/luampadesertbattlemap"
-    --allGameIdTables[3] = CTF GOES HERE
+    allGameIds = {}
+    allGameIds[1] = "2681e0/luampa-racing-worlds"
+    allGameIds[2] = "747744/luampadesertbattlemap"
+    --allGameIds[3] = CTF GOES HERE
 end
 
 
@@ -325,7 +325,7 @@ BuildAllGameIdTables()
 GetCurrentSceneAndGameNumers()  -- can redo this now and use above tables to fetch this
 
 -- When this server instance comes online, fetch the latest data right away
-local data, result, message = Storage.GetConcurrentCreatorData(CONCURRENT_KEY)
+local data, result, message = Storage.GetConcurrentCreatorData(LUAMPA_CREATOR_KEY)
 if result == StorageResultCode.SUCCESS then
     OnConcurrentDataChanged(_, data)
 else
