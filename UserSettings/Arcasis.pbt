@@ -7479,4 +7479,25 @@ ObjectSettings {
     }
   }
 }
-LastSavedScene: "Main Menu vTemplates"
+DebugPerks {
+  Perks {
+    PerkId: "7c81eda56458487aace52eefd9b583ae"
+    PerkCounts {
+      key: 0
+      value: 1
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+}
+LastSavedScene: "Main"

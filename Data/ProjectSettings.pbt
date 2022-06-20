@@ -1,3 +1,3 @@
 LeaderboardConfigs {
 }
-MainScene: "Main Menu vTemplates"
+MainScene: "Main Menu"
