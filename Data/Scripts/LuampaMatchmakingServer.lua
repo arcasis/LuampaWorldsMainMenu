@@ -110,12 +110,13 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
     
     -- determine if player will go to next scene or transfer to next game
     local totalGames = #allGameIds
-    local scenesInThisGame = #allSceneNames[GAME_NUMBER]
+    local scenesInThisGame = allSceneNames[GAME_NUMBER]
+    local sceneCount = #scenesInThisGame
     local nextSceneNumber = SCENE_NUMBER + 1
 
     print("This game number/scene is:", GAME_NUMBER, SCENE_NUMBER)
 
-    if nextSceneNumber < scenesInThisGame then  -- player will transfer to next scene in this game
+    if nextSceneNumber < sceneCount then  -- player will transfer to next scene in this game
 
         if player then
             print("Player should transfer to next scene in this game", player.name)
