@@ -60,15 +60,17 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         local openSpots = nil
         for gameNumber, games in ipairs(servers) do
             for sceneNumber, scenePlayers in ipairs(games) do
-                openSpots = scenePlayers % 8
-                -- check if scene has enough spots
-                if openSpots >= partySize then
-                    -- find the scene with the smallest number of open spots
-                    if not lowest[gameNumber] then
-                        lowest[gameNumber] = openSpots
-                    else
-                        if openSpots < lowest[gameNumber] then
+                if scenePlayers then
+                    openSpots = scenePlayers % 8
+                    -- check if scene has enough spots
+                    if openSpots >= partySize then
+                        -- find the scene with the smallest number of open spots
+                        if not lowest[gameNumber] then
                             lowest[gameNumber] = openSpots
+                        else
+                            if openSpots < lowest[gameNumber] then
+                                lowest[gameNumber] = openSpots
+                            end
                         end
                     end
                 end
@@ -247,18 +249,20 @@ function OnPlayerJoined(player)
             if partySize < 6 then
                 local lowestOpenSpots = nil
                 for sceneNumber, scenePlayers in ipairs(servers[GAME_NUMBER]) do
-                    local openSpots = scenePlayers % 8
-                    -- check if scene has enough spots
-                    if openSpots >= partySize then
-                        -- find the scene with the smallest number of open spots
-                        if openSpots < bestScene then
-                            bestScene = sceneNumber
+                    if scenePlayers then
+                        local openSpots = scenePlayers % 8
+                        -- check if scene has enough spots
+                        if openSpots >= partySize then
+                            -- find the scene with the smallest number of open spots
+                            if openSpots < bestScene then
+                                bestScene = sceneNumber
+                            end
                         end
                     end
                 end
             end
                 
-            if bestScene then     -- only transfer them if we found a scene with smaller open spots
+            if bestScene and bestScene ~= SCENE_NAME then     -- only transfer them if we found a scene with smaller open spots
                 player:TransferToGame(allSceneNames[bestScene])  -- game will process them when they join and send them to best scene
             end
         end
