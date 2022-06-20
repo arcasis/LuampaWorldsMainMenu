@@ -314,6 +314,7 @@ Objects {
       PlayerStorageMode {
         Value: "mc:eplayerstoragemode:none"
       }
+      EnableConcurrentCreatorStorage: true
       EnableNetworkedEventsQueuing: true
     }
   }
