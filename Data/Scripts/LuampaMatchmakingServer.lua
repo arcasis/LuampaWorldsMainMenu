@@ -21,7 +21,9 @@ local allGameTransfers = {}
 
 
 
-function FindGameForPlayer(player)
+function FindGameForPlayer(player)  -- runs in Main Menu and round end for all players if lobby < 6
+
+    print("FindGameForPlayer runs in MatchmakingServer for ", player.name)
 
     local partyLeader = nil
     local partySize = 1
@@ -29,19 +31,29 @@ function FindGameForPlayer(player)
     if player.isInParty then
         local partyInfo = player:GetPartyInfo()
         if partyInfo.isPlayAsParty then
+
+            print("Player is in a party that isPlayAsParty, player name, player id, party leader ID is:", player.name, player.id, partyInfo.partyLeaderId)
             partyLeader = partyInfo.partyLeaderId
             partySize = partyInfo.partySize
         else
             partyLeader = player
         end
+    else
+        partyLeader = player
     end
+
+    print("If partyLeader is nil, then someone else is leader and player won't be processed:", player.name, partyLeader)
 
     if not partyLeader then return end -- don't continue running scripts if player is in a party that isPlayAsParty
 
     if partySize >= 6 then
 
+        print("Party size was >= 6, party should transfer to next scene. partyLeader.id is:", partyLeader)
+
         TransferPlayerToNextScene(player)
     else
+
+        print("Party size was < 6, player should join a server with other players or first scene", player.name)
 
         -- find which game has a scene with the smallest number of open spots
         local lowest = {}
@@ -79,24 +91,46 @@ function FindGameForPlayer(player)
 end
 
 
-function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader
-    -- check if payer is in a party
+function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader, doesn't pass player if entire lobby should transfer
+
+    print("TransferPlayerToNextScene runs, is there a player?", player.name)
+    print("If there was no player, entire lobby should transfer together")
     
     -- determine if player will go to next scene or transfer to next game
     local totalGames = #allGameIds
     local scenesInThisGame = #allSceneNames[GAME_NUMBER]
     local nextSceneNumber = SCENE_NUMBER + 1
 
+    print("This game number/scene is:", GAME_NUMBER, SCENE_NUMBER)
+
     if nextSceneNumber < scenesInThisGame then  -- player will transfer to next scene in this game
 
-        player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+        if player then
+            print("Player should transfer to next scene in this game", player.name)
+            player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+        else
+            print("Lobby should transfer to next scene in this game")
+            Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+        end
         
     else  -- player finished a game on last scene, send them to next game
 
         if GAME_NUMBER < totalGames then
-            player:TransferToGame(allGameIds[GAME_NUMBER + 1])
+            if player then
+                print("Game ended on last scene, Player should transfer to game #2", player.name)
+                player:TransferToGame(allGameIds[GAME_NUMBER + 1])
+            else
+                print("Game ended on last scene, Lobby should transfer to game #2")
+                Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
+            end
         else
-            player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
+            if player then
+                print("Game ended on last scene of last game, Player should transfer to game #1", player.name)
+                player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
+            else
+                print("Game ended on last scene of last game, Lobby should transfer to game #1")
+                Game.TransferAllPlayersToGame(allGameIds[1])
+            end
         end
     end
 end
@@ -241,9 +275,20 @@ function OnPlayerLeft(player)
 end
 
 
-function OnRoundEnd()
-    --Game.StopAcceptingPlayers()
-    --serverIsLocked = true
+function OnGameStateChanged(oldState, newState)
+    if newState == 1 and oldState ~= 1 then  -- round end
+        Game.StopAcceptingPlayers()
+        serverIsLocked = true
+    elseif newState == 0 and oldState ~= 0 then  -- lobby
+        local totalPlayers = #Game.GetPlayers()
+        if totalPlayers >= 6 then
+            TransferLobbyToNextScene()
+        else
+            for _,player in pairs(Game.GetPlayers()) do
+                FindGameForPlayer(player)
+            end
+        end
+    end
 end
 
 function BuildAllSceneNamesTables()
@@ -266,11 +311,12 @@ end
 -- Initialize
 Storage.ConnectToConcurrentCreatorDataChanged(LUAMPA_CREATOR_KEY, OnConcurrentDataChanged)
 Events.ConnectForPlayer("FindAGame", FindGameForPlayer)
+Events.Connect("GameStateChanged", OnGameStateChanged)
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
-Game.roundEndEvent:Connect(OnRoundEnd)
+--Game.roundEndEvent:Connect(OnRoundEnd)
 
 SCENE_NAME = Game.GetCurrentSceneName()
 
