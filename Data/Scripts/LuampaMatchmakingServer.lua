@@ -53,7 +53,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         TransferPlayerToNextScene(player)
     else
 
-        print("Party size was < 6, player should join a server with other players or first scene", player.name)
+        print("Party size was < 6, player should join a server with other players or next scene", player.name)
 
         -- find which game has a scene with the smallest number of open spots
         local lowest = {}
@@ -77,18 +77,28 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             end
         end
         
-        local bestGame = 1
+        local bestGame = nil
         local lowest1 = lowest[1]
         local lowest2 = lowest[2]
         -- will need to add local lowest3 = lowest[3] when flag comes out
 
-        if lowest2 then
-            if not lowest1 or lowest2 < lowest1 then
-                bestGame = 2
+        if lowest1 and lowest1 > 0 and lowest2 and lowest2 > 0 then  -- if open spots in game 1 and game 2, find best
+            if lowest1 > lowest2 then
+                bestGame = lowest1
+            elseif lowest2 > lowest1 then
+                bestGame = lowest2
             end
+        elseif lowest1 and not lowest2 then
+            bestGame = lowest1
+        elseif lowest2 and not lowest1 then
+            bestGame = lowest2
         end
-
-        player:TransferToGame(allGameIds[bestGame])  -- game will process them when they join and send them to best scene
+             
+        if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
+            player:TransferToGame(allGameIds[bestGame])
+        else
+            TransferPlayerToNextScene(player)
+        end
     end
 end
 
