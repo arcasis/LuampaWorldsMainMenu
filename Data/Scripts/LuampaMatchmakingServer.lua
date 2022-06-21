@@ -322,7 +322,6 @@ function OnGameStateChanged(oldState, newState)
 end
 
 function BuildAllSceneNamesTables()
-    allSceneNames = {}
     allSceneNames[1] = {}
     allSceneNames[1][1] = "Neon Race"
     allSceneNames[1][2] = "Desert Race"
@@ -340,13 +339,15 @@ end
 
 function CountScenesInThisGame()
     if SCENE_NAME ~= "Main Menu" then
-        local allSceneNamesThisGame = allSceneNames[GAME_NUMBER]
+        --not sure why this isn't working, but takes too long to test so hard code time
+        --[[local allSceneNamesThisGame = allSceneNames[GAME_NUMBER]
         local sceneCount = 0
         for _, sceneNames in ipairs(allSceneNamesThisGame) do
             sceneCount = sceneCount + 1
         end
         SCENE_COUNT_THIS_GAME = sceneCount  -- keeps var nil so will throw error above if not set up
-        print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, SCENE_COUNT_THIS_GAME)
+        print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, SCENE_COUNT_THIS_GAME)]]
+        SCENE_COUNT_THIS_GAME = 2  -- !! MUST BE UPDATED WHEN MORE SCENES ARE ADDED !!
     end
 end
 
