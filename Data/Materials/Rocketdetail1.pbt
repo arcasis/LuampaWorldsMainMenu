@@ -2,7 +2,7 @@ Assets {
   Id: 15772123533263639697
   Name: "Rocketdetail1"
   PlatformAssetType: 13
-  SerializationVersion: 115
+  SerializationVersion: 116
   CustomMaterialAsset {
     BaseMaterialId: 6284948704312616471
     ParameterOverrides {

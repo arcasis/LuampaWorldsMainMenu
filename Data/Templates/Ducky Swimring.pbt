@@ -742,6 +742,6 @@ Assets {
   Marketplace {
     Description: "A child favorite pool or beach buddy!"
   }
-  SerializationVersion: 115
+  SerializationVersion: 116
   DirectlyPublished: true
 }

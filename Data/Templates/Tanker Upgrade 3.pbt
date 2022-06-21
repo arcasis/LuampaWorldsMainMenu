@@ -367,6 +367,7 @@ Assets {
           MinPitch: -89
           MaxPitch: 89
           UseAsAudioListener: true
+          IsCameraCollisionEnabled: true
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -2617,6 +2618,7 @@ Assets {
           MinPitch: -89
           MaxPitch: 89
           UseAsAudioListener: true
+          IsCameraCollisionEnabled: true
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -54800,7 +54802,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 115
+  SerializationVersion: 116
   VirtualFolderPath: "z Old Geos"
   VirtualFolderPath: "T"
 }

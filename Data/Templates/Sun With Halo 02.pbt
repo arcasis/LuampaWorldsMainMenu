@@ -302,5 +302,5 @@ Assets {
       AssetId: "Sun_With_Halo_02"
     }
   }
-  SerializationVersion: 115
+  SerializationVersion: 116
 }

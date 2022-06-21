@@ -62269,6 +62269,7 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     UseAsAudioListener: true
+    IsCameraCollisionEnabled: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -70750,6 +70751,7 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
     UseAsAudioListener: true
+    IsCameraCollisionEnabled: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

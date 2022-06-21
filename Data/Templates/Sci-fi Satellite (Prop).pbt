@@ -1239,5 +1239,5 @@ Assets {
       AssetId: "Sci-fi_Satellite__Prop_"
     }
   }
-  SerializationVersion: 115
+  SerializationVersion: 116
 }

@@ -10718,6 +10718,7 @@ Assets {
           MaxPitch: 89
           DoesPositionOffsetSpring: true
           UseAsAudioListener: true
+          IsCameraCollisionEnabled: true
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -11179,7 +11180,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 115
+  SerializationVersion: 116
   VirtualFolderPath: "Karts Geo"
   VirtualFolderPath: "4 Vendetta Vespa"
 }
