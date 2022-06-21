@@ -263,19 +263,22 @@ function OnPlayerJoined(player)
                 end
             end
 
-            -- if party size is smaller than 6, find the scene with the smallest empty spots
-            local bestScene = nil
+            -- check if any scenes in this game have servers with players
+            if servers[GAME_NUMBER] then
+                -- if party size is smaller than 6, find the scene with the smallest empty spots
+                local bestScene = nil
 
-            if partySize < 6 then
-                local lowestOpenSpots = nil
-                for sceneNumber, scenePlayers in ipairs(servers[GAME_NUMBER]) do
-                    if scenePlayers then
-                        local openSpots = scenePlayers % 8
-                        -- check if scene has enough spots
-                        if openSpots >= partySize then
-                            -- find the scene with the smallest number of open spots
-                            if openSpots < bestScene then
-                                bestScene = sceneNumber
+                if partySize < 6 then
+                    local lowestOpenSpots = nil
+                    for sceneNumber, scenePlayers in ipairs(servers[GAME_NUMBER]) do
+                        if scenePlayers then
+                            local openSpots = scenePlayers % 8
+                            -- check if scene has enough spots
+                            if openSpots >= partySize then
+                                -- find the scene with the smallest number of open spots
+                                if openSpots < bestScene then
+                                    bestScene = sceneNumber
+                                end
                             end
                         end
                     end
