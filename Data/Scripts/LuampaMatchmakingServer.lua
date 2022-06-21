@@ -103,7 +103,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             player:TransferToGame(allGameIds[bestGame])
         else
             if SCENE_NAME == "Main Menu" then  -- player hit play button and matchmaking did not find opening spots for join in progress, send player to first game
-                player.TransferToGame(allGameIds[1])
+                player:TransferToGame(allGameIds[1])
             else     -- game was over and matchmaking did not find opening spots for join in progress, send player to next scene
                 TransferPlayerToNextScene(player)
             end
