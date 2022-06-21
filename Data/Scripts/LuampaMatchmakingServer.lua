@@ -170,11 +170,13 @@ function Tick(deltaTime)
 
         -- make a table that holds all servers
         if not data.servers then
-            -- put total players in THIS game as a property
-            servers[GAME_NUMBER].playersInServer = newPlayersInScene
-            -- add a table entry for THIS scene with total players in this scene
-            servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
-            data.servers = servers
+            if servers[GAME_NUMBER] and newPlayersInScene then  -- if it's set up yet
+                -- put total players in THIS game as a property
+                servers[GAME_NUMBER].playersInServer = newPlayersInScene
+                -- add a table entry for THIS scene with total players in this scene
+                servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
+                data.servers = servers
+            end
         else
             servers = data.servers
             -- server table already exists
@@ -287,6 +289,8 @@ function OnPlayerJoined(player)
                 
             if bestScene and bestScene ~= SCENE_NAME then     -- only transfer them if we found a scene with smaller open spots
                 player:TransferToGame(allSceneNames[bestScene])  -- game will process them when they join and send them to best scene
+            else
+                print("There was not a scene to join in progress, player will stay in this one", player.name, SCENE_NAME)
             end
         end
     end
