@@ -222,14 +222,15 @@ end
 function GetCurrentSceneAndGameNumbers()
     print("GetCurrentSceneAndGameNumbers runs...")
     local GameId = Game.GetCurrentGameId()
-    if GameId == "2681e0/luampa-racing-worlds" then
+    print("***GameId is:", GameId)
+    if GameId == "2681e0eeda354ea180eb3670a7e2d652" then
         GAME_NUMBER = 1
         if SCENE_NAME == "Neon Race" then
             SCENE_NUMBER = 1
         elseif SCENE_NAME == "Desert Race" then
             SCENE_NUMBER = 2
         end
-    elseif GameId == "747744/luampadesertbattlemap" then
+    elseif GameId == "7477448326dc41f7aaf3c392f212c15b" then
         GAME_NUMBER = 2
         if SCENE_NAME == "Desert Battle" then
             SCENE_NUMBER = 1
