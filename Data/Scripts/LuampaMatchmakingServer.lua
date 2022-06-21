@@ -306,7 +306,7 @@ end
 
 
 function OnGameStateChanged(oldState, newState)
-    if newState == 1 and oldState ~= 1 then  -- round end
+    if newState == 2 and oldState ~= 2 then  -- round end
         Game.StopAcceptingPlayers()
         serverIsLocked = true
     elseif newState == 0 and oldState ~= 0 then  -- lobby
@@ -322,6 +322,7 @@ function OnGameStateChanged(oldState, newState)
 end
 
 function BuildAllSceneNamesTables()
+    allSceneNames = {}
     allSceneNames[1] = {}
     allSceneNames[1][1] = "Neon Race"
     allSceneNames[1][2] = "Desert Race"
