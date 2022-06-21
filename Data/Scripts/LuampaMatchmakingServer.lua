@@ -48,9 +48,14 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 
     if partySize >= 6 then
 
-        print("Party size was >= 6, party should transfer to next scene. partyLeader.id is:", partyLeader)
+        if SCENE_NAME == "Main Menu" then  -- player hit play button and party size is large enough for it's own game, send to first game
+            print("Party size was >= 6, party should transfer to first game. partyLeader.id is:", partyLeader)
+            player.TransferToGame(allGameIds[1])
+        else     -- game was over and party size is large enough for it's own game, send to next scene
 
-        TransferPlayerToNextScene(player)
+            print("Party size was >= 6, party should transfer to next scene. partyLeader.id is:", partyLeader)
+            TransferPlayerToNextScene(player)
+        end
     else
 
         print("Party size was < 6, player should join a server with other players or next scene", player.name)
@@ -97,7 +102,11 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
             player:TransferToGame(allGameIds[bestGame])
         else
-            TransferPlayerToNextScene(player)
+            if SCENE_NAME == "Main Menu" then  -- player hit play button and matchmaking did not find opening spots for join in progress, send player to first game
+                player.TransferToGame(allGameIds[1])
+            else     -- game was over and matchmaking did not find opening spots for join in progress, send player to next scene
+                TransferPlayerToNextScene(player)
+            end
         end
     end
 end
