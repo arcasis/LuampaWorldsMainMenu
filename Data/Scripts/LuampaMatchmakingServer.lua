@@ -24,7 +24,7 @@ local allGameTransfers = {}
 
 function FindGameForPlayer(player)  -- runs in Main Menu and round end for all players if lobby < 6
 
-    print("FindGameForPlayer runs in MatchmakingServer for ", player.name)
+    print("FindGameForPlayer runs in MatchmakingServer for ", player.name, "in", SCENE_NAME)
 
     local partyLeader = nil
     local partySize = 1
@@ -115,14 +115,12 @@ end
 
 function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader, doesn't pass player if entire lobby should transfer
 
-    print("TransferPlayerToNextScene runs, is there a player?", player.name)
+    print("TransferPlayerToNextScene runs, is there a player?", player.name, "in", SCENE_NAME)
     print("If there was no player, entire lobby should transfer together")
     
     -- determine if player will go to next scene or transfer to next game
     local totalGames = #allGameIds
     local nextSceneNumber = SCENE_NUMBER + 1
-
-    print("This game number/scene is:", GAME_NUMBER, SCENE_NUMBER)
 
     if nextSceneNumber < SCENE_COUNT_THIS_GAME then  -- player will transfer to next scene in this game
 
@@ -221,7 +219,8 @@ function OnConcurrentDataChanged(_, data)
 end
 
 
-function GetCurrentSceneAndGameNumers()
+function GetCurrentSceneAndGameNumbers()
+    print("GetCurrentSceneAndGameNumbers runs...")
     local GameId = Game.GetCurrentGameId()
     if GameId == "2681e0/luampa-racing-worlds" then
         GAME_NUMBER = 1
@@ -238,6 +237,7 @@ function GetCurrentSceneAndGameNumers()
             SCENE_NUMBER = 2
         end
     end
+    print("...SCENE_NUMBER is:", SCENE_NUMBER)
 end
 
 
@@ -322,22 +322,27 @@ function OnGameStateChanged(oldState, newState)
 end
 
 function BuildAllSceneNamesTables()
+    print("BuildAllSceneNamesTables runs...")
     allSceneNames[1] = {}
     allSceneNames[1][1] = "Neon Race"
     allSceneNames[1][2] = "Desert Race"
     allSceneNames[2] = {}
     allSceneNames[2][1] = "Desert Battle"
     allSceneNames[2][2] = "Neon Battle"
+    print("...scene names are:", allSceneNames[1][1], allSceneNames[1][2], allSceneNames[2][1], allSceneNames[2][2] )
 end
 
 function BuildAllGameIdTables()
+    print("BuildAllGameIdTables runs...")
     allGameIds = {}
     allGameIds[1] = "2681e0/luampa-racing-worlds"
     allGameIds[2] = "747744/luampadesertbattlemap"
     --allGameIds[3] = CTF GOES HERE
+    print("...game id's are:", allGameIds[1], allGameIds[2])
 end
 
 function CountScenesInThisGame()
+    print("CountScenesInThisGame runs...")
     if SCENE_NAME ~= "Main Menu" then
         --not sure why this isn't working, but takes too long to test so hard code time
         --[[local allSceneNamesThisGame = allSceneNames[GAME_NUMBER]
@@ -349,6 +354,7 @@ function CountScenesInThisGame()
         print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, SCENE_COUNT_THIS_GAME)]]
         SCENE_COUNT_THIS_GAME = 2  -- !! MUST BE UPDATED WHEN MORE SCENES ARE ADDED !!
     end
+    print("...scene count in this game is:", SCENE_COUNT_THIS_GAME)
 end
 
 -- Initialize
@@ -365,8 +371,10 @@ SCENE_NAME = Game.GetCurrentSceneName()
 
 BuildAllSceneNamesTables()
 BuildAllGameIdTables()
-GetCurrentSceneAndGameNumers()  -- can redo this now and use above tables to fetch this
+GetCurrentSceneAndGameNumbers()  -- can redo this now and use above tables to fetch this
 CountScenesInThisGame()
+
+print("Server setup finished, game/server numbers and scene name are:", GAME_NUMBER, SCENE_NUMBER, SCENE_NAME)
 
 -- When this server instance comes online, fetch the latest data right away
 local data, result, message = Storage.GetConcurrentCreatorData(LUAMPA_CREATOR_KEY)
