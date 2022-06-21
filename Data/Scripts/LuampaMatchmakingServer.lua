@@ -4,6 +4,7 @@ their party will fit in.]]
 local LUAMPA_CREATOR_KEY = script:GetCustomProperty("LuampaCreatorKey")
 
 local GAME_NUMBER = nil
+local SCENE_COUNT_THIS_GAME = nil
 local SCENE_NUMBER = nil
 local SCENE_NAME = nil
 
@@ -119,13 +120,11 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
     
     -- determine if player will go to next scene or transfer to next game
     local totalGames = #allGameIds
-    local scenesInThisGame = allSceneNames[GAME_NUMBER]
-    local sceneCount = #scenesInThisGame
     local nextSceneNumber = SCENE_NUMBER + 1
 
     print("This game number/scene is:", GAME_NUMBER, SCENE_NUMBER)
 
-    if nextSceneNumber < sceneCount then  -- player will transfer to next scene in this game
+    if nextSceneNumber < SCENE_COUNT_THIS_GAME then  -- player will transfer to next scene in this game
 
         if player then
             print("Player should transfer to next scene in this game", player.name)
@@ -338,6 +337,17 @@ function BuildAllGameIdTables()
     --allGameIds[3] = CTF GOES HERE
 end
 
+function CountScenesInThisGame()
+    if SCENE_NAME ~= "Main Menu" then
+        local allSceneNamesThisGame = allSceneNames[GAME_NUMBER]
+        local sceneCount = 0
+        for _, sceneNames in ipairs(allSceneNamesThisGame) do
+            sceneCount = sceneCount + 1
+        end
+        SCENE_COUNT_THIS_GAME = sceneCount  -- keeps var nil so will throw error above if not set up
+        print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, SCENE_COUNT_THIS_GAME)
+    end
+end
 
 -- Initialize
 Storage.ConnectToConcurrentCreatorDataChanged(LUAMPA_CREATOR_KEY, OnConcurrentDataChanged)
@@ -354,6 +364,7 @@ SCENE_NAME = Game.GetCurrentSceneName()
 BuildAllSceneNamesTables()
 BuildAllGameIdTables()
 GetCurrentSceneAndGameNumers()  -- can redo this now and use above tables to fetch this
+CountScenesInThisGame()
 
 -- When this server instance comes online, fetch the latest data right away
 local data, result, message = Storage.GetConcurrentCreatorData(LUAMPA_CREATOR_KEY)
