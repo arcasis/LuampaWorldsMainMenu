@@ -67,7 +67,11 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         for gameNumber, games in ipairs(servers) do
             for sceneNumber, scenePlayers in ipairs(games) do
                 if scenePlayers then
-                    openSpots = scenePlayers % 8
+                    if scenePlayers > 8 then
+                        openSpots = scenePlayers % 8
+                    else
+                        openSpots = 8 - scenePlayers
+                    end
                     -- check if scene has enough spots
                     if openSpots >= partySize then
                         -- find the scene with the smallest number of open spots
@@ -274,7 +278,12 @@ function OnPlayerJoined(player)
                     local lowestOpenSpots = nil
                     for sceneNumber, scenePlayers in ipairs(servers[GAME_NUMBER]) do
                         if scenePlayers then
-                            local openSpots = scenePlayers % 8
+                            local openSpots = 0
+                            if scenePlayers > 8 then
+                                openSpots = scenePlayers % 8
+                            else
+                                openSpots = 8 - scenePlayers
+                            end
                             -- check if scene has enough spots
                             if openSpots >= partySize then
                                 -- find the scene with the smallest number of open spots
