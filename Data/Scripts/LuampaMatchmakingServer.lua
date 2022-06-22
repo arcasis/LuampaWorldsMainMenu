@@ -68,7 +68,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             for sceneNumber, scenePlayers in ipairs(games) do
                 if scenePlayers then
                     if scenePlayers > 8 then
-                        openSpots = scenePlayers % 8
+                        openSpots = 8 - (scenePlayers % 8)
                     else
                         openSpots = 8 - scenePlayers
                     end
@@ -280,7 +280,7 @@ function OnPlayerJoined(player)
                         if scenePlayers then
                             local openSpots = 0
                             if scenePlayers > 8 then
-                                openSpots = scenePlayers % 8
+                                openSpots = 8 - (scenePlayers % 8)
                             else
                                 openSpots = 8 - scenePlayers
                             end
