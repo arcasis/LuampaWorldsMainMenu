@@ -208,6 +208,8 @@ function Tick(deltaTime)
             print("data.servers already existed, it should be a table:", data.servers)
 
             if not servers[GAME_NUMBER] then  -- if data.servers doesn't have this game table yet
+
+                servers[GAME_NUMBER] = {}
                 
                 print("This GAME_NUMBER did not have a table in data.servers yet, will be created:", GAME_NUMBER)
                 
