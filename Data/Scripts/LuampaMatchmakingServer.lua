@@ -4,7 +4,7 @@ their party will fit in.]]
 local LUAMPA_CREATOR_KEY = script:GetCustomProperty("LuampaCreatorKey")
 
 local GAME_NUMBER = nil
-local SCENE_COUNT_THIS_GAME = nil
+local TOTAL_SCENES_THIS_GAME = nil
 local SCENE_NUMBER = nil
 local SCENE_NAME = nil
 
@@ -50,11 +50,11 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
     if partySize >= 6 then
 
         if SCENE_NAME == "Main Menu" then  -- player hit play button and party size is large enough for it's own game, send to first game
-            print("Party size was >= 6, party should transfer to first game. partyLeader.id is:", partyLeader)
+            print("Player leaving Main Menu. Party size was >= 6, party should transfer to Neon Race. partyLeader.id is:", partyLeader)
             player.TransferToGame(allGameIds[1])
         else     -- game was over and party size is large enough for it's own game, send to next scene
 
-            print("Party size was >= 6, party should transfer to next scene. partyLeader.id is:", partyLeader)
+            print("Player transferring to next scene. Party size was >= 6. partyLeader.id is:", partyLeader)
             TransferPlayerToNextScene(player)
         end
     else
@@ -66,20 +66,32 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         local openSpots = nil
         for gameNumber, games in ipairs(servers) do
             for sceneNumber, scenePlayers in ipairs(games) do
-                if scenePlayers then
+
+                print("game", gameNumber, "scene", sceneNumber, "has total players:", scenePlayers)
+
+                if scenePlayers > 0 then
                     if scenePlayers > 8 then
                         openSpots = 8 - (scenePlayers % 8)
                     else
                         openSpots = 8 - scenePlayers
                     end
+
+                    print("openSpots is:", openSpots)
+
                     -- check if scene has enough spots
                     if openSpots >= partySize then
+
+                        print("openSpots was greater than party size for gameNumber/sceneNumber", gameNumber, sceneNumber)
                         -- find the scene with the smallest number of open spots
                         if not lowest[gameNumber] then
                             lowest[gameNumber] = openSpots
+
+                            print("lowest[gameNumber] didn't exist, was set for gameNumber/openSpots:", gameNumber, openSpots)
                         else
                             if openSpots < lowest[gameNumber] then
                                 lowest[gameNumber] = openSpots
+
+                                print("lowest[gameNumber] was replaced with a lower openSpots, gameNumber/openSpots:", gameNumber, openSpots)
                             end
                         end
                     end
@@ -88,28 +100,35 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         end
         
         local bestGame = nil
-        local lowest1 = lowest[1]
-        local lowest2 = lowest[2]
+        local lowestOpenSpots1 = lowest[1]
+        local lowestOpenSpots2 = lowest[2]
         -- will need to add local lowest3 = lowest[3] when flag comes out
 
-        if lowest1 and lowest1 > 0 and lowest2 and lowest2 > 0 then  -- if open spots in game 1 and game 2, find best
-            if lowest1 > lowest2 then
-                bestGame = lowest1
-            elseif lowest2 > lowest1 then
-                bestGame = lowest2
+        print("lowestOpenSpots1 and lowestOpenSpots2 are:", lowestOpenSpots1, lowestOpenSpots2)
+
+        if lowestOpenSpots1 and lowestOpenSpots1 > 0 and lowestOpenSpots2 and lowestOpenSpots2 > 0 then  -- if open spots in game 1 and game 2, find best
+            if lowestOpenSpots1 > lowestOpenSpots2 then
+                bestGame = 1
+            elseif lowestOpenSpots2 > lowestOpenSpots1 then
+                bestGame = 2
             end
-        elseif lowest1 and not lowest2 then
-            bestGame = lowest1
-        elseif lowest2 and not lowest1 then
-            bestGame = lowest2
+        elseif lowestOpenSpots1 and not lowestOpenSpots2 then
+            bestGame = 1
+        elseif lowestOpenSpots2 and not lowestOpenSpots1 then
+            bestGame = 2
         end
+
+        print("bestGame to join in progress is:", bestGame)
              
         if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
             player:TransferToGame(allGameIds[bestGame])
         else
+            -- there was not a game to join in progress
             if SCENE_NAME == "Main Menu" then  -- player hit play button and matchmaking did not find opening spots for join in progress, send player to first game
+                print("Player was in Main Menu, send them to Neon Race", player.name)
                 player:TransferToGame(allGameIds[1])
             else     -- game was over and matchmaking did not find opening spots for join in progress, send player to next scene
+                print("Round was over, send player to next scene:", player.name)
                 TransferPlayerToNextScene(player)
             end
         end
@@ -119,20 +138,22 @@ end
 
 function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader, doesn't pass player if entire lobby should transfer
 
-    print("TransferPlayerToNextScene runs, is there a player?", player.name, "in", SCENE_NAME)
+    print("TransferPlayerToNextScene runs, is there a player?", player.name, "in scene name/number", SCENE_NAME, SCENE_NUMBER)
     print("If there was no player, entire lobby should transfer together")
     
     -- determine if player will go to next scene or transfer to next game
     local totalGames = #allGameIds
     local nextSceneNumber = SCENE_NUMBER + 1
 
-    if nextSceneNumber <= SCENE_COUNT_THIS_GAME then  -- player will transfer to next scene in this game
+    print("totalGames/TOTAL_SCENES_THIS_GAME is: (should be two each)", totalGames, TOTAL_SCENES_THIS_GAME)
 
-        if player then
-            print("Player should transfer to next scene in this game", player.name)
+    if nextSceneNumber <= TOTAL_SCENES_THIS_GAME then  -- player will transfer to next scene in this game
+
+        if player then  -- player doesn't pass when entire lobby is being sent to next scene
+            print("Player should transfer to next scene in this game, player.name/allSceneNames[GAME_NUMBER][nextSceneNumber]", player.name, allSceneNames[GAME_NUMBER][nextSceneNumber])
             player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
         else
-            print("Lobby should transfer to next scene in this game")
+            print("Lobby should transfer to next scene in this game, allSceneNames[GAME_NUMBER][nextSceneNumber]:", allSceneNames[GAME_NUMBER][nextSceneNumber])
             Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
         end
         
@@ -140,18 +161,18 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
 
         if GAME_NUMBER < totalGames then
             if player then
-                print("Game ended on last scene, Player should transfer to game #2", player.name)
+                print("Game ended on last scene of this game, player should transfer to next game. player.name/this game number", player.name, GAME_NUMBER)
                 player:TransferToGame(allGameIds[GAME_NUMBER + 1])
             else
-                print("Game ended on last scene, Lobby should transfer to game #2")
+                print("Game ended on last scene of this game, Lobby should transfer to next game. this game number is:", GAME_NUMBER)
                 Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
             end
         else
             if player then
-                print("Game ended on last scene of last game, Player should transfer to game #1", player.name)
+                print("Game ended on last scene of last game, Player should transfer to game #1. player.name, this game number:", player.name, GAME_NUMBER)
                 player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
             else
-                print("Game ended on last scene of last game, Lobby should transfer to game #1")
+                print("Game ended on last scene of last game, Lobby should transfer to game #1. this game number is:", GAME_NUMBER)
                 Game.TransferAllPlayersToGame(allGameIds[1])
             end
         end
@@ -169,35 +190,43 @@ function Tick(deltaTime)
     -- Apply the difference in total players
     local data, result, message = Storage.SetConcurrentCreatorData(LUAMPA_CREATOR_KEY, function(data)
 
-        -- make a table that holds all servers
-        if not data.servers then
-            if servers[GAME_NUMBER] and newPlayersInScene then  -- if it's set up yet
-                -- put total players in THIS game as a property
-                servers[GAME_NUMBER].playersInServer = newPlayersInScene
-                -- add a table entry for THIS scene with total players in this scene
-                servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
-                data.servers = servers
-            end
-        else
+        print("newPlayersInScene was found, creator storage will be updated. game number, scene number, newPlayers:", GAME_NUMBER, SCENE_NUMBER, newPlayersInScene)
+        
+        if not data.servers then  -- data.servers needs set up for the first time, update this table and copy into it if it exists
+            
+            print("data.servers was not set up yet, tables are created")
+            
+            servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start with first batch of new players
+            servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- add a table entry for THIS scene with total players in this scene
+            data.servers = servers
+        else     -- data.servers table already exists
             servers = data.servers
-            -- server table already exists
-            -- but THIS game table doesn't exist yet
-            if not servers[GAME_NUMBER] then
-                -- add total players in THIS game as property
-                servers[GAME_NUMBER].playersInServer = newPlayersInScene
-                -- add total players in THIS scene as a table
-                servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
 
-            -- THIS game table already exists, let's add more players to it
-            else
+            print("data.servers already existed, it should be a table:", data.servers)
+
+            if not servers[GAME_NUMBER] then  -- if data.servers doesn't have this game table yet
+                
+                print("This GAME_NUMBER did not have a table in data.servers yet, will be created:", GAME_NUMBER)
+                
+                servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start this game with first batch of total players as a property
+                servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- start this scene table with first batch of total players
+            else     -- data.servers has this game table already, so update it
+                
+                print("This GAME NUMBER already has a table in data.servers, will update with newPlayers")
+                
                 servers[GAME_NUMBER].playersInServer = servers[GAME_NUMBER].playersInServer + newPlayersInScene
-                -- check if there is also a table for THIS scene
-                if not servers[GAME_NUMBER][SCENE_NUMBER] then
+                
+                if not servers[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
+                    
+                    print("This SCENE_NUMBER did not have a table in data.servers yet, will be created:", SCENE_NUMBER)
+                    
                     servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
                 else
+
+                    print("This SCENE_NUMBER already has a table in data.servers, will update with newPlayers", SCENE_NUMBER)
+
                     servers[GAME_NUMBER][SCENE_NUMBER] = servers[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
                 end
-
             end
             data.servers = servers
         end
@@ -248,6 +277,8 @@ end
 
 function OnPlayerJoined(player)
 
+    print("Player joined scene:", SCENE_NAME)
+
     if SCENE_NAME ~= "Main Menu" then
         -- update newPlayersInScene for creative storage matchmaking system
         newPlayersInScene = newPlayersInScene + 1
@@ -255,6 +286,8 @@ function OnPlayerJoined(player)
         -- determine if players need sent to a more populated scene
         local totalPlayers = #Game.GetPlayers()
         if totalPlayers < 6 then
+
+            print("Player's party was < 6, searching for optimal scene for join in progress")
             
             local partyLeader = nil
             local partySize = 1
@@ -270,14 +303,19 @@ function OnPlayerJoined(player)
             end
 
             -- check if any scenes in this game have servers with players
-            if servers[GAME_NUMBER] then
-                -- if party size is smaller than 6, find the scene with the smallest empty spots
+            if servers[GAME_NUMBER].playersInServer > 0 then
+                
+                print("Matchmaking server says there are players in this game")
                 local bestScene = nil
 
+                -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
                     local lowestOpenSpots = nil
                     for sceneNumber, scenePlayers in ipairs(servers[GAME_NUMBER]) do
-                        if scenePlayers then
+
+                        print("Loop runs to check scenes for players, sceneNumber/scenePlayers:", sceneNumber, scenePlayers)
+                        
+                        if scenePlayers > 0 then
                             local openSpots = 0
                             if scenePlayers > 8 then
                                 openSpots = 8 - (scenePlayers % 8)
@@ -291,12 +329,15 @@ function OnPlayerJoined(player)
                                     bestScene = sceneNumber
                                 end
                             end
+
+                            print("openSpots for this scene is:", openSpots)
                         end
                     end
                 end
             end
                 
-            if bestScene and bestScene ~= SCENE_NAME then     -- only transfer them if we found a scene with smaller open spots
+            if bestScene and bestScene ~= SCENE_NUMBER then     -- only transfer them if we found a scene with smaller open spots
+                print("Matchmaking server found a scene with players to send player. player.name/bestScene:", player.name, bestScene)
                 player:TransferToGame(allSceneNames[bestScene])  -- game will process them when they join and send them to best scene
             else
                 print("There was not a scene to join in progress, player will stay in this one", player.name, SCENE_NAME)
@@ -360,11 +401,11 @@ function CountScenesInThisGame()
         for _, sceneNames in ipairs(allSceneNamesThisGame) do
             sceneCount = sceneCount + 1
         end
-        SCENE_COUNT_THIS_GAME = sceneCount  -- keeps var nil so will throw error above if not set up
-        print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, SCENE_COUNT_THIS_GAME)]]
-        SCENE_COUNT_THIS_GAME = 2  -- !! MUST BE UPDATED WHEN MORE SCENES ARE ADDED !!
+        TOTAL_SCENES_THIS_GAME = sceneCount  -- keeps var nil so will throw error above if not set up
+        print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, TOTAL_SCENES_THIS_GAME)]]
+        TOTAL_SCENES_THIS_GAME = 2  -- !! MUST BE UPDATED WHEN MORE SCENES ARE ADDED !!
     end
-    print("...scene count in this game is:", SCENE_COUNT_THIS_GAME)
+    print("...scene count in this game is:", TOTAL_SCENES_THIS_GAME)
 end
 
 -- Initialize
