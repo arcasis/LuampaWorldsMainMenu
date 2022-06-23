@@ -196,6 +196,9 @@ function Tick(deltaTime)
             
             print("data.servers was not set up yet, tables are created")
             
+            if not servers[GAME_NUMBER] then
+                servers[GAME_NUMBER] = {}
+            end
             servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start with first batch of new players
             servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- add a table entry for THIS scene with total players in this scene
             data.servers = servers
