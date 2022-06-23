@@ -303,7 +303,7 @@ function OnPlayerJoined(player)
             end
 
             -- check if any scenes in this game have servers with players
-            if servers[GAME_NUMBER].playersInServer > 0 then
+            if servers[GAME_NUMBER] and servers[GAME_NUMBER].playersInServer and servers[GAME_NUMBER].playersInServer > 0 then
                 
                 print("Matchmaking server says there are players in this game")
                 local bestScene = nil
