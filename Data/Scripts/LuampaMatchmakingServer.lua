@@ -339,7 +339,7 @@ function OnPlayerJoined(player)
                             -- check if scene has enough spots
                             if openSpots >= partySize then
                                 -- find the scene with the smallest number of open spots
-                                if openSpots < bestScene then
+                                if not bestScene or openSpots < bestScene then
                                     bestScene = sceneNumber
                                 end
                             end
