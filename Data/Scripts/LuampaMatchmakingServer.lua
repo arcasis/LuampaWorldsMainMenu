@@ -179,65 +179,74 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
     end
 end
 
+----- BEGIN TEST PRINTS -----
+local oldData = nil
+
+----- END TEST PRINTS -----
+
 
 function Tick(deltaTime)
+
     Task.Wait(SEND_PERIOD)
 
     if newPlayersInScene == 0 then return end  -- for empty servers and Main Menu
 
-    if Storage.HasPendingSetConcurrentCreatorData(LUAMPA_CREATOR_KEY) then return end
+    if Storage.HasPendingSetConcurrentCreatorData(LUAMPA_CREATOR_KEY) then return end  -- if another server is updating data, wait to update
 
-    -- Apply the difference in total players
+    -- Add new players to matchmaking storage
     local data, result, message = Storage.SetConcurrentCreatorData(LUAMPA_CREATOR_KEY, function(data)
 
-        print("newPlayersInScene was found, creator storage will be updated. game number, scene number, newPlayers:", GAME_NUMBER, SCENE_NUMBER, newPlayersInScene)
+    print("newPlayersInScene was found, creator storage will be updated. game number, scene number, newPlayers:", GAME_NUMBER, SCENE_NUMBER, newPlayersInScene)
+    
+    if not data.servers then  -- data.servers needs set up for the first time, update this table and copy into it if it exists
         
-        if not data.servers then  -- data.servers needs set up for the first time, update this table and copy into it if it exists
+        print("data.servers was not set up yet, tables are created")
+        
+        servers[GAME_NUMBER] = {}
+        
+        servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start with first batch of new players
+        servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- add a table entry for THIS scene with total players in this scene
+        
+        data.servers = servers
+
+    else     -- data.servers table already exists
+
+        print("data.servers already existed, it should be a table:", data.servers)
+
+        if not servers[GAME_NUMBER] then  -- if data.servers doesn't have this game table yet, create it
+
+            servers = data.servers  -- first, update this script's servers table with current data table
+
+            servers[GAME_NUMBER] = {}  -- then add this game's new table to it
             
-            print("data.servers was not set up yet, tables are created")
+            print("This GAME_NUMBER did not have a table in data.servers yet, so it was created:", GAME_NUMBER)
             
-            if not servers[GAME_NUMBER] then
-                servers[GAME_NUMBER] = {}
+            servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start this game's table with first batch of total players as a property
+            servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- start this scene's table with first batch of total players
+        
+        else     -- data.servers has this game table already, so update it
+            
+            print("This GAME NUMBER already has a table in data.servers, will update with newPlayers")
+            
+            servers[GAME_NUMBER].playersInServer = servers[GAME_NUMBER].playersInServer + newPlayersInScene
+            
+            if not servers[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
+                
+                print("This SCENE_NUMBER did not have a table in data.servers yet, will be created:", SCENE_NUMBER)
+                
+                servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
+            else
+
+                print("This SCENE_NUMBER already has a table in data.servers, will update with newPlayers", SCENE_NUMBER)
+
+                servers[GAME_NUMBER][SCENE_NUMBER] = servers[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
             end
-            servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start with first batch of new players
-            servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- add a table entry for THIS scene with total players in this scene
-            data.servers = servers
-        else     -- data.servers table already exists
-            servers = data.servers
-
-            print("data.servers already existed, it should be a table:", data.servers)
-
-            if not servers[GAME_NUMBER] then  -- if data.servers doesn't have this game table yet
-
-                servers[GAME_NUMBER] = {}
-                
-                print("This GAME_NUMBER did not have a table in data.servers yet, will be created:", GAME_NUMBER)
-                
-                servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start this game with first batch of total players as a property
-                servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- start this scene table with first batch of total players
-            else     -- data.servers has this game table already, so update it
-                
-                print("This GAME NUMBER already has a table in data.servers, will update with newPlayers")
-                
-                servers[GAME_NUMBER].playersInServer = servers[GAME_NUMBER].playersInServer + newPlayersInScene
-                
-                if not servers[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
-                    
-                    print("This SCENE_NUMBER did not have a table in data.servers yet, will be created:", SCENE_NUMBER)
-                    
-                    servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
-                else
-
-                    print("This SCENE_NUMBER already has a table in data.servers, will update with newPlayers", SCENE_NUMBER)
-
-                    servers[GAME_NUMBER][SCENE_NUMBER] = servers[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
-                end
-            end
-            data.servers = servers
         end
+        data.servers = servers
+    end
 
-        return data
-    end)
+    return data
+end)
 
     newPlayersInScene = 0
 
@@ -249,10 +258,10 @@ end
 
 
 function OnConcurrentDataChanged(_, data)
-    if data.totalPlayers and data.totalPlayers ~= totalPlayers then
-        totalPlayers = data.totalPlayers
+    if data.servers and data.servers ~= servers then
+        servers = data.servers
         -- Tell everyone about the new total players across all games
-        Chat.BroadcastMessage("Total players: " .. totalPlayers)
+        Chat.BroadcastMessage("Total players in Race/Battle is: " .. servers[1].playersInServer .. "/" .. servers[2].playersInServer)
     end
 end
 
