@@ -50,7 +50,7 @@ end
 
 function OnYesButtonClicked()
     ARE_YOU_SURE_PANEL.visibility = Visibility.FORCE_OFF
-    print("Player clicked to go play, matchmaking will be set up soon!")
+    print("Player clicked to go play")
     Events.BroadcastToServer("FindAGame")
 end
 

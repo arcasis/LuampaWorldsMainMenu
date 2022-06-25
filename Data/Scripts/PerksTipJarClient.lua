@@ -40,38 +40,23 @@ function Tick(deltaTime)
     end
 end
 
-
--- left click not set up in bindings manager yet
---[[function OnActionPressed(player, action, value)
-    if action == "ability_primary" and hoveringSign then
-        Events.Broadcast("OpenTipJar")
-    end
-end]]
-
-function OnBindingPressed(player, binding)
-    if binding == "ability_primary" and hoveringSign then
+function OnActionPressed(player, action, value)
+    if action == "Use" and hoveringSign then
         OpenTipJar()
     end
 end
 
-
 function OnPurchasedCookie()
     print("Cookie perk was clicked")
-    Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 500)
 end
 function OnPurchasedCoffee()
     print("Coffee perk was clicked")
-    Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 1000)
 end
 function OnPurchasedSammich()
     print("Sammich perk was clicked")
-    Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 1000)
-    Events.BroadcastToServer("GetXPBoosts", 7)
 end
 function OnPurchasedDinner()
     print("Dinner perk was clicked")
-    Events.BroadcastToServer("GetLuampaCoins", LOCAL_PLAYER, 2000)
-    Events.BroadcastToServer("GetXPBoosts", LOCAL_PLAYER, 14)
 end
 
 
@@ -82,5 +67,4 @@ COFFEE_PERK_BUTTON.clickedEvent:Connect(OnPurchasedCoffee)
 SAMMICH_PERK_BUTTON.clickedEvent:Connect(OnPurchasedSammich)
 DINNER_PERK_BUTTON.clickedEvent:Connect(OnPurchasedDinner)
 
---Input.actionPressedEvent:Connect(OnActionPressed)
-LOCAL_PLAYER.bindingPressedEvent:Connect(OnBindingPressed)
+Input.actionPressedEvent:Connect(OnActionPressed)

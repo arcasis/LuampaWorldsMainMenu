@@ -21038,6 +21038,15 @@ Objects {
   ParentId: 2016190126149047528
   TemplateInstance {
     ParameterOverrideMap {
+      key: 2204191188318767345
+      value {
+        Overrides {
+          Name: "Label"
+          String: "Are you sure you want to leave\r\nLuampa Race Worlds Menu?"
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 8328033684816493949
       value {
         Overrides {

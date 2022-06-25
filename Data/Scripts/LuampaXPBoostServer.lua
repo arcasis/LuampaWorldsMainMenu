@@ -42,6 +42,8 @@ function OnStorageReady(player)
 
                 player.serverUserData.XPBoosts = XPBoosts
                 player:SetPrivateNetworkedData("XPBoosts", XPBoosts)
+
+                print("Player was using an XP boost but it has expired.", player.name, player.id)
             end
         end
     end
@@ -51,7 +53,7 @@ end
 function GivePlayerXPBoosts(player, amount)
     local XPBoosts = player.serverUserData.XPBoosts
 
-    print("GivePlayerXPBoosts runs, current/new boosts are:", XPBoosts, amount)
+    print("GivePlayerXPBoosts runs for player, current/new boosts are:", player.name, player.id, XPBoosts, amount)
 
     XPBoosts.total = XPBoosts.total + amount
 
@@ -63,15 +65,23 @@ end
 function OnUseXPBoost(player)
 
     local XPBoosts = player.serverUserData.XPBoosts
-    XPBoosts.active = true
-    XPBoosts.total = XPBoosts.total - 1
 
-    local date = os.date("*t")
-    date.day = date.day + 1
-    XPBoosts.expireDate = date
+    -- prevent haxxors by checking if player has any boosts
+    if XPBoosts > 0 then
+        XPBoosts.active = true
+        XPBoosts.total = XPBoosts.total - 1
 
-    player.serverUserData.XPBoosts = XPBoosts
-    player:SetPrivateNetworkedData("XPBoosts", XPBoosts)
+        local date = os.date("*t")
+        date.day = date.day + 1
+        XPBoosts.expireDate = date
+
+        player.serverUserData.XPBoosts = XPBoosts
+        player:SetPrivateNetworkedData("XPBoosts", XPBoosts)
+
+        print("Player activated an XP Boost", player.name, player.id)
+    else
+        print("Player may be attempting to haxxors XPBoosts. Broadcast was sent from client but player has no boosts.", player.name, player.id)
+    end
 end
 
 
