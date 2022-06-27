@@ -318,15 +318,17 @@ function OnPlayerJoined(player)
                 end
             end
 
+            local bestScene = nil
+            local lowestOpenSpots = nil
+
             -- check if any scenes in this game have servers with players
             if servers[GAME_NUMBER] and servers[GAME_NUMBER].playersInServer and servers[GAME_NUMBER].playersInServer > 0 then
                 
                 print("Matchmaking server says there are players in this game")
-                local bestScene = SCENE_NUMBER
 
                 -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
-                    local lowestOpenSpots = nil
+                    
                     for sceneNumber, scenePlayers in ipairs(servers[GAME_NUMBER]) do
 
                         print("Loop runs to check scenes for players, sceneNumber/scenePlayers:", sceneNumber, scenePlayers)
@@ -344,16 +346,15 @@ function OnPlayerJoined(player)
                             -- check if scene has enough spots
                             if openSpots >= partySize then
                                 -- find the scene with the smallest number of open spots
-                                if openSpots < bestScene then
-                                    print("A scene had a lower number of openSpots and is set to bestScene (sceneNumber, openSpots):", sceneNumber, openSpots)
+                                if not lowestOpenSpots or openSpots < lowestOpenSpots then
+                                    lowestOpenSpots = openSpots
                                     bestScene = sceneNumber
-                                elseif openSpots == bestScene and sceneNumber > SCENE_NUMBER then
-                                    print("A scene had equal number of openSpots but is a more established party, so scene is set to bestScene (sceneNumber, openSpots):", sceneNumber, openSpots)
+                                    print("lowestOpenSpots and bestScene are set (sceneNumber, openSpots):", bestScene, lowestOpenSpots)
+                                elseif openSpots == lowestOpenSpots and sceneNumber > SCENE_NUMBER then
                                     bestScene = sceneNumber
+                                    print("A scene had equal number of openSpots to lowestOpenSpots but is a more established party, so scene is set to bestScene (bestScene, openSpots):", bestScene, openSpots)
                                 end
                             end
-
-                            print("Loop scene number/open spots:", sceneNumber, openSpots)
                         end
                     end
                 end
