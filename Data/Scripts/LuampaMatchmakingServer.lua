@@ -221,7 +221,7 @@ function Tick(deltaTime)
 
             servers[GAME_NUMBER] = {}  -- then add this game's new table to it
             
-            print("This GAME_NUMBER did not have a table in data.servers yet, so it was created:", GAME_NUMBER)
+            print("This GAME_NUMBER did not have a table in data.servers yet, so it was created:")
             
             servers[GAME_NUMBER].playersInServer = newPlayersInScene  -- start this game's table with first batch of total players as a property
             servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- start this scene's table with first batch of total players
@@ -234,12 +234,12 @@ function Tick(deltaTime)
             
             if not servers[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
                 
-                print("This SCENE_NUMBER did not have a table in data.servers yet, will be created:", SCENE_NUMBER)
+                print("This SCENE_NUMBER did not have a table in data.servers yet, will be created")
                 
                 servers[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
             else
 
-                print("This SCENE_NUMBER already has a table in data.servers, will update with newPlayers", SCENE_NUMBER)
+                print("This SCENE_NUMBER already has a table in data.servers, will update with newPlayers")
 
                 servers[GAME_NUMBER][SCENE_NUMBER] = servers[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
             end
@@ -322,7 +322,7 @@ function OnPlayerJoined(player)
             if servers[GAME_NUMBER] and servers[GAME_NUMBER].playersInServer and servers[GAME_NUMBER].playersInServer > 0 then
                 
                 print("Matchmaking server says there are players in this game")
-                local bestScene = sceneNumber
+                local bestScene = SCENE_NUMBER
 
                 -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
