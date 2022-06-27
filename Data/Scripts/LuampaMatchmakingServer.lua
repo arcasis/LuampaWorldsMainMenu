@@ -111,6 +111,8 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
                 bestGame = 1
             elseif lowestOpenSpots2 > lowestOpenSpots1 then
                 bestGame = 2
+            elseif lowestOpenSpots1 == lowestOpenSpots2 then
+                bestGame = 2  -- send to most established lobby
             end
         elseif lowestOpenSpots1 and not lowestOpenSpots2 then
             bestGame = 1
@@ -320,7 +322,7 @@ function OnPlayerJoined(player)
             if servers[GAME_NUMBER] and servers[GAME_NUMBER].playersInServer and servers[GAME_NUMBER].playersInServer > 0 then
                 
                 print("Matchmaking server says there are players in this game")
-                local bestScene = nil
+                local bestScene = sceneNumber
 
                 -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
@@ -336,15 +338,22 @@ function OnPlayerJoined(player)
                             else
                                 openSpots = 8 - scenePlayers
                             end
+
+                            print("openSpots for scene is (sceneNumber, openSpots)", sceneNumber, openSpots)
+
                             -- check if scene has enough spots
                             if openSpots >= partySize then
                                 -- find the scene with the smallest number of open spots
-                                if not bestScene or openSpots < bestScene then
+                                if openSpots < bestScene then
+                                    print("A scene had a lower number of openSpots and is set to bestScene (sceneNumber, openSpots):", sceneNumber, openSpots)
+                                    bestScene = sceneNumber
+                                elseif openSpots == bestScene and sceneNumber > SCENE_NUMBER then
+                                    print("A scene had equal number of openSpots but is a more established party, so scene is set to bestScene (sceneNumber, openSpots):", sceneNumber, openSpots)
                                     bestScene = sceneNumber
                                 end
                             end
 
-                            print("openSpots for this scene is:", openSpots)
+                            print("Loop scene number/open spots:", sceneNumber, openSpots)
                         end
                     end
                 end
