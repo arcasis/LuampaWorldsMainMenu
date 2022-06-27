@@ -1160,15 +1160,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6677237403455816226
-  Name: "Portal VFX"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_portal"
-  }
-}
-Assets {
   Id: 6456510126293528931
   Name: "Humanoid 2 Crisis Helmet"
   PlatformAssetType: 26
@@ -1517,15 +1508,6 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_frames_9slice_005"
-  }
-}
-Assets {
-  Id: 3079398627141439657
-  Name: "Metal Frame 03"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_frames_003_uv"
   }
 }
 Assets {
