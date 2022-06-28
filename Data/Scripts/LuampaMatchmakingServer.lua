@@ -21,6 +21,8 @@ local allGameIds = {}
 local allGameTransfers = {}
 
 
+local reset = false
+
 
 function FindGameForPlayer(player)  -- runs in Main Menu and round end for all players if lobby < 6
 
@@ -231,6 +233,12 @@ function Tick(deltaTime)
             print("This GAME NUMBER already has a table in data.servers, will update with newPlayers")
             
             servers[GAME_NUMBER].playersInServer = servers[GAME_NUMBER].playersInServer + newPlayersInScene
+
+            -- !! TEMP RESET CREATOR DATA DELETE MEH !!
+            if servers[GAME_NUMBER].playersInServer >= 3 then
+                servers[GAME_NUMBER].playersInServer = 2
+            end
+            -- !! END TEMP RESET CREATOR DATA DELETE MEH !!
             
             if not servers[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
                 
@@ -362,7 +370,7 @@ function OnPlayerJoined(player)
                 
             if bestScene and bestScene ~= SCENE_NUMBER then     -- only transfer them if we found a scene with smaller open spots
                 print("Matchmaking server found a scene with players to send player. player.name/bestScene:", player.name, bestScene)
-                player:TransferToGame(allSceneNames[bestScene])  -- game will process them when they join and send them to best scene
+                player:TransferToScene(allSceneNames[GAME_NUMBER][bestScene])  -- game will process them when they join and send them to best scene
             else
                 print("There was not a scene to join in progress, player will stay in this one", player.name, SCENE_NAME)
             end
