@@ -183,11 +183,6 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
     end
 end
 
------ BEGIN TEST PRINTS -----
-local oldData = nil
-
------ END TEST PRINTS -----
-
 
 function Tick(deltaTime)
 
@@ -233,12 +228,6 @@ function Tick(deltaTime)
             print("This GAME NUMBER already has a table in data.servers, will update with newPlayers")
             
             servers[GAME_NUMBER].playersInServer = servers[GAME_NUMBER].playersInServer + newPlayersInScene
-
-            -- !! TEMP RESET CREATOR DATA DELETE MEH !!
-            if servers[GAME_NUMBER].playersInServer >= 3 then
-                servers[GAME_NUMBER].playersInServer = 2
-            end
-            -- !! END TEMP RESET CREATOR DATA DELETE MEH !!
             
             if not servers[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
                 
@@ -251,6 +240,15 @@ function Tick(deltaTime)
 
                 servers[GAME_NUMBER][SCENE_NUMBER] = servers[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
             end
+
+            -- !! TEMP RESET CREATOR DATA DELETE MEH !!
+            if servers[GAME_NUMBER].playersInServer >= 3 then
+                servers[GAME_NUMBER].playersInServer = 2
+            end
+            if servers[GAME_NUMBER][SCENE_NUMBER] >= 3 then
+                servers[GAME_NUMBER][SCENE_NUMBER] = 2
+            end
+            -- !! END TEMP RESET CREATOR DATA DELETE MEH !!
         end
         data.servers = servers
     end
@@ -300,6 +298,8 @@ end
 
 
 function OnPlayerJoined(player)
+
+    Task.Wait(5)
 
     print("Player joined scene:", SCENE_NAME)
 
@@ -427,14 +427,6 @@ end
 function CountScenesInThisGame()
     print("CountScenesInThisGame runs...")
     if SCENE_NAME ~= "Main Menu" then
-        --not sure why this isn't working, but takes too long to test so hard code time
-        --[[local allSceneNamesThisGame = allSceneNames[GAME_NUMBER]
-        local sceneCount = 0
-        for _, sceneNames in ipairs(allSceneNamesThisGame) do
-            sceneCount = sceneCount + 1
-        end
-        TOTAL_SCENES_THIS_GAME = sceneCount  -- keeps var nil so will throw error above if not set up
-        print("CountScenesInThisGame ran, name/count is:", SCENE_NAME, TOTAL_SCENES_THIS_GAME)]]
         TOTAL_SCENES_THIS_GAME = 2  -- !! MUST BE UPDATED WHEN MORE SCENES ARE ADDED !!
     end
     print("...scene count in this game is:", TOTAL_SCENES_THIS_GAME)
