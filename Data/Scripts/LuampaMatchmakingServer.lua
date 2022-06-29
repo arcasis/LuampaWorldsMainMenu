@@ -110,9 +110,9 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 
         if lowestOpenSpots1 and lowestOpenSpots1 > 0 and lowestOpenSpots2 and lowestOpenSpots2 > 0 then  -- if open spots in game 1 and game 2, find best
             if lowestOpenSpots1 > lowestOpenSpots2 then
-                bestGame = 1
-            elseif lowestOpenSpots2 > lowestOpenSpots1 then
                 bestGame = 2
+            elseif lowestOpenSpots2 > lowestOpenSpots1 then
+                bestGame = 1
             elseif lowestOpenSpots1 == lowestOpenSpots2 then
                 bestGame = 2  -- send to most established lobby
             end
