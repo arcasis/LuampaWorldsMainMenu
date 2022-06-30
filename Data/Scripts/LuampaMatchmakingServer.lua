@@ -53,11 +53,19 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 
         if SCENE_NAME == "Main Menu" then  -- player hit play button and party size is large enough for it's own game, send to first game
             print("Player leaving Main Menu. Party size was >= 6, party should transfer to Neon Race. partyLeader.id is:", partyLeader)
-            player.TransferToGame(allGameIds[1])
+            if Environment.IsHostedGame() then
+                player.TransferToGame(allGameIds[1])
+            else
+                print("TransferToGame is set to only transfer if IsHostedGame")
+            end
         else     -- game was over and party size is large enough for it's own game, send to next scene
 
             print("Player transferring to next scene. Party size was >= 6. partyLeader.id is:", partyLeader)
-            TransferPlayerToNextScene(player)
+            if Environment.IsHostedGame() then
+                TransferPlayerToNextScene(player)
+            else
+                print("TransferPlayerToNextScene is set to only transfer if IsHostedGame")
+            end
         end
     else
 
@@ -125,15 +133,27 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         print("bestGame to join in progress is:", bestGame)
              
         if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
-            player:TransferToGame(allGameIds[bestGame])
+            if Environment.IsHostedGame() then
+                player:TransferToGame(allGameIds[bestGame])
+            else
+                print("TransferToGame is set to only transfer if IsHostedGame")
+            end
         else
             -- there was not a game to join in progress
             if SCENE_NAME == "Main Menu" then  -- player hit play button and matchmaking did not find opening spots for join in progress, send player to first game
                 print("Player was in Main Menu, send them to Neon Race", player.name)
-                player:TransferToGame(allGameIds[1])
+                if Environment.IsHostedGame() then
+                    player:TransferToGame(allGameIds[1])
+                else
+                    print("TransferToGame is set to only transfer if IsHostedGame")
+                end
             else     -- game was over and matchmaking did not find opening spots for join in progress, send player to next scene
                 print("Round was over, send player to next scene:", player.name)
-                TransferPlayerToNextScene(player)
+                if Environment.IsHostedGame() then
+                    TransferPlayerToNextScene(player)
+                else
+                    print("TransferPlayerToNextScene is set to only transfer if IsHostedGame")
+                end
             end
         end
     end
@@ -155,10 +175,18 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
 
         if player then  -- player doesn't pass when entire lobby is being sent to next scene
             print("Player should transfer to next scene in this game, player.name/allSceneNames[GAME_NUMBER][nextSceneNumber]", player.name, allSceneNames[GAME_NUMBER][nextSceneNumber])
-            player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+            if Environment.IsHostedGame() then
+                player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+            else
+                print("TransferToScene is set to only transfer if IsHostedGame")
+            end
         else
             print("Lobby should transfer to next scene in this game, allSceneNames[GAME_NUMBER][nextSceneNumber]:", allSceneNames[GAME_NUMBER][nextSceneNumber])
-            Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+            if Environment.IsHostedGame() then
+                Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+            else
+                print("TransferAllPlayersToScene is set to only transfer if IsHostedGame")
+            end
         end
         
     else  -- player finished a game on last scene, send them to next game
@@ -166,18 +194,34 @@ function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlay
         if GAME_NUMBER < totalGames then
             if player then
                 print("Game ended on last scene of this game, player should transfer to next game. player.name/this game number", player.name, GAME_NUMBER)
-                player:TransferToGame(allGameIds[GAME_NUMBER + 1])
+                if Environment.IsHostedGame() then
+                    player:TransferToGame(allGameIds[GAME_NUMBER + 1])
+                else
+                    print("TransferToGame is set to only transfer if IsHostedGame")
+                end
             else
                 print("Game ended on last scene of this game, Lobby should transfer to next game. this game number is:", GAME_NUMBER)
-                Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
+                if Environment.IsHostedGame() then
+                    Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
+                else
+                    print("TransferAllPlayersToGame is set to only transfer if IsHostedGame")
+                end
             end
         else
             if player then
                 print("Game ended on last scene of last game, Player should transfer to game #1. player.name, this game number:", player.name, GAME_NUMBER)
-                player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
+                if Environment.IsHostedGame() then
+                    player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
+                else
+                    print("TransferToGame is set to only transfer if IsHostedGame")
+                end
             else
                 print("Game ended on last scene of last game, Lobby should transfer to game #1. this game number is:", GAME_NUMBER)
-                Game.TransferAllPlayersToGame(allGameIds[1])
+                if Environment.IsHostedGame() then
+                    Game.TransferAllPlayersToGame(allGameIds[1])
+                else
+                    print("TransferAllPlayersToGame is set to only transfer if IsHostedGame")
+                end
             end
         end
     end
@@ -269,7 +313,9 @@ function OnConcurrentDataChanged(_, data)
     if data.servers and data.servers ~= servers then
         servers = data.servers
         -- Tell everyone about the new total players across all games
-        Chat.BroadcastMessage("Total players in Race/Battle is: " .. servers[1].playersInServer .. "/" .. servers[2].playersInServer)
+        if Environment.IsHostedGame() then
+            Chat.BroadcastMessage("Total players in Race/Battle is: " .. servers[1].playersInServer .. "/" .. servers[2].playersInServer)
+        end
     end
 end
 
@@ -370,7 +416,11 @@ function OnPlayerJoined(player)
                 
             if bestScene and bestScene ~= SCENE_NUMBER then     -- only transfer them if we found a scene with smaller open spots
                 print("Matchmaking server found a scene with players to send player. player.name/bestScene:", player.name, bestScene)
-                player:TransferToScene(allSceneNames[GAME_NUMBER][bestScene])  -- game will process them when they join and send them to best scene
+                if Environment.IsHostedGame() then
+                    player:TransferToScene(allSceneNames[GAME_NUMBER][bestScene])  -- game will process them when they join and send them to best scene
+                else
+                    print("TransferToScene is set to only transfer if IsHostedGame")
+                end
             else
                 print("There was not a scene to join in progress, player will stay in this one", player.name, SCENE_NAME)
             end
