@@ -286,12 +286,12 @@ function Tick(deltaTime)
             end
 
             -- !! TEMP RESET CREATOR DATA DELETE MEH !!
-            if servers[GAME_NUMBER].playersInServer >= 3 then
+            --[[if servers[GAME_NUMBER].playersInServer >= 3 then
                 servers[GAME_NUMBER].playersInServer = 2
             end
             if servers[GAME_NUMBER][SCENE_NUMBER] >= 3 then
                 servers[GAME_NUMBER][SCENE_NUMBER] = 2
-            end
+            end]]
             -- !! END TEMP RESET CREATOR DATA DELETE MEH !!
         end
         data.servers = servers
