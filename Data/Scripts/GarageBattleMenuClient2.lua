@@ -8,6 +8,7 @@ local BATTLE_UPGRADES_PANEL = script:GetCustomProperty("GarageBattleUpgradesPane
 
 local BATTLE_MENU_OPEN_SFX = script:GetCustomProperty("BattleMenuOpenSFX"):WaitForObject()
 local UPGRADES_MENU_OPEN_SFX = script:GetCustomProperty("UpgradesMenuOpenSFX"):WaitForObject()
+local PURCHASE_SFX = script:GetCustomProperty("PurchaseSFX"):WaitForObject()
 
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
@@ -339,18 +340,20 @@ function OnSetAsDefaultButtonClicked()
 end
 
 function OnPurchaseVehicleButtonClicked()
-    Events.Broadcast("PurchaseTruck", index)
+    Events.BroadcastToServer("PurchaseTruck", index)
 end
 
 function OnVehiclePurchased()     -- !! WIP !! add stuff here that displays confirmation of purchase
-    print("GarageTrucksMenuClient received broadcast vehicle was purchased")
+    Events.Broadcast("SubBannerMessage", "Truck Purchased", 4, Color.CYAN)
+    PURCHASE_SFX:Play()
+    Task.Wait(.1)
     ProcessIndex()
 end
 
 function OnVehicleNotPurchased()     -- !! WIP !! add stuff here that displays failure to purchase
-    print("GarageTruckMenuClient received broadcast vehicle not purchased")
+    Events.Broadcast("SubBannerMessage", "H4X DETECTED!", 4, Color.RED)
+    print("!! H4X ALERT!! Player tried to purchase a truck they haven't unlocked (name/index)", LOCAL_PLAYER.name, index)
 end
-
 
 function Tick(deltaTime)
 
@@ -424,6 +427,7 @@ end
 total = index
 index = 1
 
+-- used to display prices
 local prices = PRICES_DATA_FOLDER:GetCustomProperties()
 for key, value in pairs(prices) do
     table.insert(PRICES_TABLE, value)

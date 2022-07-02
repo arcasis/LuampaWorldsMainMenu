@@ -1,6 +1,8 @@
 --[[DESCRIPTION: Receives a broadcast when player attempts to purchase a vehicle or upgrade,
 handles processing purchase.]]
 
+--[[DEPRECATED IN MAIN MENU, USED IN OLD SYSTEM]]
+
 local TRUCK_PRICES_DATA_FOLDER = script:GetCustomProperty("TruckPricesData"):WaitForObject()
 local TRUCK_UPGRADE_PRICES_DATA = script:GetCustomProperty("TruckUpgradePricesData"):WaitForObject()
 

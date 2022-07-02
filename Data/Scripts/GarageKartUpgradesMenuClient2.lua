@@ -14,6 +14,8 @@ local EXIT_UPGRADES_BUTTON = script:GetCustomProperty("ExitUpgradesButton"):Wait
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
+local PURCHASE_SFX = script:GetCustomProperty("PurchaseSFX"):WaitForObject()
+
 local BUTTON_ON_COLOR = Color.New(Color.WHITE)
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
@@ -285,16 +287,21 @@ end
 
 function OnPurchaseUpgradeButtonClicked()
     --print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
-    Events.Broadcast("PurchaseKartUpgrade", index, upgradeIndex)
+    Events.BroadcastToServer("PurchaseKartUpgrade", index, upgradeIndex)
 end
 
 function OnKartUpgradePurchased()
+    print("Client received broadcast that kart was purchased")
+    Events.Broadcast("SubBannerMessage", "Upgrade Purchased", 4, Color.CYAN)
+    PURCHASE_SFX:Play()
+    Task.Wait(.1)
     ProcessUpgradeIndex()  -- refresh kart geo
 end
 
 function OnKartUpgradeNotPurchased()
-    print("GarageKartsMenuClient received broadcast vehicle not purchased, fail feedback not set up yet")
-    -- add stuff here that displays for player they can't afford vehicle
+    print("Client received broadcast that kart upgrade was purchased")
+    Events.Broadcast("SubBannerMessage", "H4X DETECTED!", 4, Color.RED)
+    print("!! H4X ALERT!! Player tried to purchase a kart upgrade they haven't unlocked (name/index/upgradeIndex)", LOCAL_PLAYER.name, index, upgradeIndex)
 end
 
 ------ TEMP NOTE: TICK UPDATED -----

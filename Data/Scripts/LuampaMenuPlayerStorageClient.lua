@@ -19,6 +19,7 @@ function UpdateFromNetworkedData(key)
     
     if key == "karts" then
         LOCAL_PLAYER.clientUserData.karts = data
+        print("karts was updated in PlayerStorageClient")
     end
 
     if key == "selectedKart" then
@@ -27,6 +28,7 @@ function UpdateFromNetworkedData(key)
 
     if key == "trucks" then
         LOCAL_PLAYER.clientUserData.trucks = data
+        print("trucks was updated in PlayerStorageClient")
     end
 
     if key == "selectedTruck" then

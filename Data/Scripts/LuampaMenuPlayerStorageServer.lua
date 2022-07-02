@@ -74,7 +74,7 @@ function OnPlayerJoined(player)
 
             thanksBroadcast[player] = time() + 20
         end
-        playerDataTable.isTester[1][1] = 1  -- [1][1] is Race alpha testing
+        playerDataTable.isTester[1][1] = 1  -- [1][1] is Race alpha playtesting
         player.serverUserData.isTester = playerDataTable.isTester
     end
 
@@ -88,7 +88,7 @@ function OnPlayerJoined(player)
 
             thanksBroadcast[player] = time() + 20
         end
-        playerDataTable.isTester[2][1] = 1  -- [2][2] is Battle alpha testing
+        playerDataTable.isTester[2][1] = 1  -- [2][2] is Battle alpha playtesting
         player.serverUserData.isTester = playerDataTable.isTester
     end
     ----------------- END CATCH ALPHA TESTERS ---------------------
@@ -112,7 +112,7 @@ function OnPlayerJoined(player)
                 playerDataTable.isTester = isTester
             end
         end
-        playerDataTable.isTester[1][1] = 1     -- [1][1] is Race alpha testing
+        playerDataTable.isTester[1][1] = 1     -- [1][1] is Race alpha playtesting
         player.serverUserData.isTester = playerDataTable.isTester
     end
 
@@ -132,7 +132,7 @@ function OnPlayerJoined(player)
                 playerDataTable.isTester = isTester
             end
         end
-        playerDataTable.isTester[2][1] = 1  -- [2][1] is Battle alpha testing
+        playerDataTable.isTester[2][1] = 1  -- [2][1] is Battle alpha playtesting
         player.serverUserData.isTester = playerDataTable.isTester
     end
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------

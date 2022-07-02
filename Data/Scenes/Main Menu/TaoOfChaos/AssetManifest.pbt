@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17160143679902095611
+  Name: "Cha-ching Cash Register Money Bell Buy Or Sell Notification 02 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_cha_ching_cash_register_money_bell_payout_buy_or_sell_notification_02_Cue_ref"
+  }
+}
+Assets {
   Id: 17110364119456872672
   Name: "Frame Outline Thin 004"
   PlatformAssetType: 9

@@ -1,6 +1,8 @@
 --[[DESCRIPTION: Receives a broadcast when player attempts to purchase a vehicle or upgrade,
 handles processing purchase.]]
 
+--[[DEPRECATED IN MAIN MENU, STILL USED IN OLD SCENE.]]
+
 local KART_PRICES_DATA_FOLDER = script:GetCustomProperty("KartPricesData"):WaitForObject()
 local KART_UPGRADE_PRICES_DATA = script:GetCustomProperty("KartUpgradePricesData"):WaitForObject()
 

@@ -116,7 +116,6 @@ Objects {
     }
   }
   ParentId: 11084414636793143187
-  ChildIds: 18120832145817313819
   ChildIds: 11104742030297938276
   ChildIds: 10505102574848237220
   ChildIds: 6613933708093249466
@@ -163,6 +162,7 @@ Objects {
   ParentId: 14242996041845712709
   ChildIds: 9232345134599714151
   ChildIds: 4264668423567706380
+  ChildIds: 12406173931399852106
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -177,6 +177,47 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 12406173931399852106
+  Name: "Cha-ching Cash Register Money Bell Buy Or Sell Notification 02 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6015728792495957233
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 17160143679902095611
+    }
+    Pitch: -1999.16626
+    Volume: 3
+    Falloff: -1
+    Radius: -1
+    EnableOcclusion: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -6081,6 +6122,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:PurchaseSFX"
+      ObjectReference {
+        SelfId: 12406173931399852106
+      }
+    }
+    Overrides {
       Name: "cs:GarageBattlePanel:isrep"
       Bool: false
     }
@@ -8667,6 +8714,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:PurchaseSFX"
+      ObjectReference {
+        SelfId: 12406173931399852106
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -8903,72 +8956,6 @@ Objects {
   }
 }
 Objects {
-  Id: 18120832145817313819
-  Name: "LuampaPurchaseTrucksClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 14242996041845712709
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:TruckPricesData"
-      ObjectReference {
-        SelfId: 6900111359064049426
-      }
-    }
-    Overrides {
-      Name: "cs:TruckUpgradePricesData"
-      ObjectReference {
-        SelfId: 4587510823809761776
-      }
-    }
-    Overrides {
-      Name: "cs:TruckPricesData:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:TruckPricesData:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:TruckUpgradePricesData:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:TruckUpgradePricesData:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 13708426776907945195
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 2910209769126176749
   Name: "ServerContext"
   Transform {
@@ -9023,6 +9010,34 @@ Objects {
   }
   ParentId: 2910209769126176749
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:TruckPricesData"
+      ObjectReference {
+        SelfId: 6900111359064049426
+      }
+    }
+    Overrides {
+      Name: "cs:TruckUpgradePricesData"
+      ObjectReference {
+        SelfId: 4587510823809761776
+      }
+    }
+    Overrides {
+      Name: "cs:TruckPricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:TruckPricesData:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:TruckUpgradePricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:TruckUpgradePricesData:ml"
+      Bool: false
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -9369,7 +9384,6 @@ Objects {
     }
   }
   ParentId: 4345241191253639307
-  ChildIds: 5865480526048325125
   ChildIds: 3508418160663392510
   ChildIds: 6134199712724578751
   ChildIds: 2935919495293603488
@@ -9415,6 +9429,7 @@ Objects {
   ParentId: 10894713328343682309
   ChildIds: 3101770726936739654
   ChildIds: 3886638203935870196
+  ChildIds: 6762594563628213632
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -9429,6 +9444,47 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6762594563628213632
+  Name: "Cha-ching Cash Register Money Bell Buy Or Sell Notification 02 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11446438267394999886
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 17160143679902095611
+    }
+    Pitch: -1999.16626
+    Volume: 3
+    Falloff: -1
+    Radius: -1
+    EnableOcclusion: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -15511,6 +15567,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:PurchaseSFX"
+      ObjectReference {
+        SelfId: 6762594563628213632
+      }
+    }
+    Overrides {
       Name: "cs:GarageKartsPanel:isrep"
       Bool: false
     }
@@ -18022,6 +18084,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:PurchaseSFX"
+      ObjectReference {
+        SelfId: 6762594563628213632
+      }
+    }
+    Overrides {
       Name: "cs:GarageMainMenuPanel:isrep"
       Bool: false
     }
@@ -18236,72 +18304,6 @@ Objects {
   }
 }
 Objects {
-  Id: 5865480526048325125
-  Name: "LuampaPurchaseKartsClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10894713328343682309
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:KartPricesData"
-      ObjectReference {
-        SelfId: 3825881162607431306
-      }
-    }
-    Overrides {
-      Name: "cs:KartUpgradePricesData"
-      ObjectReference {
-        SelfId: 13481171590303052675
-      }
-    }
-    Overrides {
-      Name: "cs:KartPricesData:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:KartPricesData:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:KartUpgradePricesData:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:KartUpgradePricesData:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7042105729151479505
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 8826659184625726104
   Name: "ServerContext"
   Transform {
@@ -18393,6 +18395,34 @@ Objects {
   }
   ParentId: 8826659184625726104
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:KartPricesData"
+      ObjectReference {
+        SelfId: 3825881162607431306
+      }
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData"
+      ObjectReference {
+        SelfId: 13481171590303052675
+      }
+    }
+    Overrides {
+      Name: "cs:KartPricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:KartPricesData:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:KartUpgradePricesData:ml"
+      Bool: false
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -31870,7 +31900,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14407121827428704047
+  Id: 15948528221838945455
   Name: "Message Banner"
   Transform {
     Scale {
@@ -31880,40 +31910,365 @@ Objects {
     }
   }
   ParentId: 1696798925401821095
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 2215929790428371099
-      value {
-        Overrides {
-          Name: "Size"
-          Int: 30
+  ChildIds: 15843117756297305071
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DefaultDuration"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:FadeOutDuration"
+      Float: 0.5
+    }
+    Overrides {
+      Name: "cs:LocalMessageSpawnOffset"
+      Int: 300
+    }
+    Overrides {
+      Name: "cs:DefaultDuration:tooltip"
+      String: "Default duration of a message if none is specified"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 15948528221838945455
+    SubobjectId: 11168525500713847895
+    InstanceId: 14407121827428704047
+    TemplateId: 14907129132626088283
+    WasRoot: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15843117756297305071
+  Name: "MessageBannerClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15948528221838945455
+  ChildIds: 456476687499235782
+  ChildIds: 17534151930816466760
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+    MinDetailLevel {
+      Value: "mc:edetaillevel:low"
+    }
+    MaxDetailLevel {
+      Value: "mc:edetaillevel:ultra"
+    }
+  }
+  InstanceHistory {
+    SelfId: 15843117756297305071
+    SubobjectId: 11273653940987149079
+    InstanceId: 14407121827428704047
+    TemplateId: 14907129132626088283
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 17534151930816466760
+  Name: "BannerCanvas"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15843117756297305071
+  ChildIds: 18250361529696132432
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
+      UseSafeZoneAdjustment: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
         }
-        Overrides {
-          Name: "Label"
-          String: ""
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
         }
       }
     }
-    ParameterOverrideMap {
-      key: 11168525500713847895
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Message Banner"
+  }
+  InstanceHistory {
+    SelfId: 17534151930816466760
+    SubobjectId: 13042368893488459696
+    InstanceId: 14407121827428704047
+    TemplateId: 14907129132626088283
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18250361529696132432
+  Name: "Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17534151930816466760
+  ChildIds: 6443119759029450851
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 600
+    Height: 100
+    UIY: -250
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
-    TemplateAsset {
-      Id: 14907129132626088283
+  }
+  InstanceHistory {
+    SelfId: 18250361529696132432
+    SubobjectId: 13469228761640500648
+    InstanceId: 14407121827428704047
+    TemplateId: 14907129132626088283
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6443119759029450851
+  Name: "BannerText"
+  Transform {
+    Location {
     }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18250361529696132432
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 600
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 30
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  InstanceHistory {
+    SelfId: 6443119759029450851
+    SubobjectId: 2215929790428371099
+    InstanceId: 14407121827428704047
+    TemplateId: 14907129132626088283
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 456476687499235782
+  Name: "MessageBannerClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15843117756297305071
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 15948528221838945455
+      }
+    }
+    Overrides {
+      Name: "cs:Canvas"
+      ObjectReference {
+        SelfId: 17534151930816466760
+      }
+    }
+    Overrides {
+      Name: "cs:Panel"
+      ObjectReference {
+        SelfId: 18250361529696132432
+      }
+    }
+    Overrides {
+      Name: "cs:TextBox"
+      ObjectReference {
+        SelfId: 6443119759029450851
+      }
+    }
+    Overrides {
+      Name: "cs:Helper"
+      AssetReference {
+        Id: 3237383946689991651
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 6695237015703086192
+    }
+  }
+  InstanceHistory {
+    SelfId: 456476687499235782
+    SubobjectId: 4755700116685582654
+    InstanceId: 14407121827428704047
+    TemplateId: 14907129132626088283
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {

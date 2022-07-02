@@ -14,6 +14,8 @@ local EXIT_UPGRADES_BUTTON = script:GetCustomProperty("ExitUpgradesButton"):Wait
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 local PURCHASE_BUTTON = script:GetCustomProperty("PurchaseButton"):WaitForObject()
 
+local PURCHASE_SFX = script:GetCustomProperty("PurchaseSFX"):WaitForObject()
+
 local BUTTON_ON_COLOR = Color.New(Color.WHITE)
 local BUTTON_OFF_COLOR = Color.New(0.2, 0.2, 0.2)
 
@@ -284,17 +286,21 @@ function OnSetAsDefaultButtonClicked()
 end
 
 function OnPurchaseUpgradeButtonClicked()
-    --print("PurchaseUpgrade clicked, upgradeIndex is: ", upgradeIndex)
-    Events.Broadcast("PurchaseTruckUpgrade", index, upgradeIndex)
+    Events.BroadcastToServer("PurchaseTruckUpgrade", index, upgradeIndex)
 end
 
 function OnTruckUpgradePurchased()
+    print("Client received broadcast that truck was purchased")
+    Events.Broadcast("SubBannerMessage", "Upgrade Purchased", 4, Color.CYAN)
+    PURCHASE_SFX:Play()
+    Task.Wait(.1)
     ProcessUpgradeIndex()  -- refresh truck geo
 end
 
 function OnTruckUpgradeNotPurchased()
-    --print("GarageBattleMenuClient received broadcast vehicle not purchased")
-    -- add stuff here that displays for player they can't afford vehicle
+    print("Client received broadcast that truck upgrade was purchased")
+    Events.Broadcast("SubBannerMessage", "H4X DETECTED!", 4, Color.RED)
+    print("!! H4X ALERT!! Player tried to purchase a truck upgrade they haven't unlocked (name/index/upgradeIndex)", LOCAL_PLAYER.name, index, upgradeIndex)
 end
 
 ------ TEMP NOTE: TICK UPDATED -----
@@ -355,6 +361,7 @@ for _,folder in ipairs(vehicleFolders) do
     end
 end
 
+-- used to display prices
 local prices = PRICES_DATA_FOLDER:GetCustomProperties()
 for key, value in pairs(prices) do
     table.insert(PRICES_TABLE, value)
