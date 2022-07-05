@@ -36,6 +36,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 16628711691734824240
@@ -76,6 +77,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 17072026146963116723
@@ -124,6 +126,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 11914781741020919315
@@ -166,6 +169,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 13895634263300026652
@@ -238,6 +242,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 1677811174920137866
@@ -310,6 +315,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 15919512802125236351
@@ -382,6 +388,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 2397141876723479158
@@ -454,6 +461,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 2642959349807269852
@@ -525,6 +533,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 1915124796063796094
@@ -597,6 +606,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12237218010460937140
@@ -669,6 +679,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 3055352511019913609
@@ -741,6 +752,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     Assets {
@@ -832,6 +844,6 @@ Assets {
   Marketplace {
     Description: "AuroraFX brings RGB Lighting to Core Objects, this includes Lights, Materials and UI Controls. No programming knowledge is required, simply drag either AuroraGeneric or AuroraMaterial into the hierachy and add a reference to an object that contains the Core Objects you want to have RGB onto the ComponentGroup property. If you are a programmer however, feel free to reference the module included which holds the basic functionality for color shifting to use in your own way. A ReadMe is included that gives further details on how to use AuroraFX along with some tips.\r\n\r\nFeel free to contact me @iExpulsion#2926 on Discord for any questions, suggestions or feedback. :)"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   DirectlyPublished: true
 }

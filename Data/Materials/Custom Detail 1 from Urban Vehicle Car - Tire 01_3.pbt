@@ -2,7 +2,7 @@ Assets {
   Id: 15142055906506093300
   Name: "Custom Detail 1 from Urban Vehicle Car - Tire 01_3"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 7493470848267658341
     ParameterOverrides {

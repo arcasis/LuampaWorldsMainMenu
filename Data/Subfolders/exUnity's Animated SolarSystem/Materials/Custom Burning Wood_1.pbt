@@ -2,7 +2,7 @@ Assets {
   Id: 18409154117074797250
   Name: "SunDisc"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 15114965043284020838
     ParameterOverrides {

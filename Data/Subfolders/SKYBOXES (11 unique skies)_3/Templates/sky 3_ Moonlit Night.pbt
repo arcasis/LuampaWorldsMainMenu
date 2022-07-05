@@ -38,6 +38,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 8317343941128027445
@@ -231,6 +232,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 11548083044844411320
@@ -318,6 +320,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 1008219431945699687
@@ -418,6 +421,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 8851763995703140413
@@ -471,6 +475,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12199780780898975674
@@ -601,6 +606,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 3679925399222403161
@@ -672,6 +678,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 4303877194449492603
@@ -743,6 +750,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     Assets {
@@ -807,6 +815,6 @@ Assets {
   Marketplace {
     Description: "This CC is jam packed with 11 completely unique skyboxes for any game!\r\n\r\nA ReadME file has been included with these templates that includes a brief description of each sky in this kit.\r\nSimply drag and drop whichever sky you would like into your hierarchy after removing the default sky!"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   DirectlyPublished: true
 }

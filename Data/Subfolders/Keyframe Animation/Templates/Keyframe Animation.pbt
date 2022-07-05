@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -46,5 +47,5 @@ Assets {
     Version: "1.10.0"
     Description: "KeyFrame Animation Tool to Animate objects using keyframes.  Animation Objects must be put into a Root group otherwise Get Child is off ."
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
 }

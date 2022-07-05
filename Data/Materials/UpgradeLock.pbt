@@ -2,7 +2,7 @@ Assets {
   Id: 3435961998858191531
   Name: "UpgradeLock"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 9804609765582245154
     ParameterOverrides {

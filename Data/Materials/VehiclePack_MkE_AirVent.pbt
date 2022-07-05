@@ -2,7 +2,7 @@ Assets {
   Id: 4361805199185692431
   Name: "VehiclePack_MkE_AirVent"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 11504577712100931387
     ParameterOverrides {

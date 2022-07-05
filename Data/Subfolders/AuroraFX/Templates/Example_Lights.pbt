@@ -35,6 +35,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 9168011116723148051
@@ -76,6 +77,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 4427311497442843280
@@ -128,6 +130,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 3450312108039074374
@@ -166,6 +169,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 8902879155127830906
@@ -232,6 +236,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 8716908311736746265
@@ -298,6 +303,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 17016180864996977424
@@ -364,6 +370,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 2891593509854095353
@@ -430,6 +437,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -440,6 +448,6 @@ Assets {
   Marketplace {
     Description: "AuroraFX brings RGB Lighting to Core Objects, this includes Lights, Materials and UI Controls. No programming knowledge is required, simply drag either AuroraGeneric or AuroraMaterial into the hierachy and add a reference to an object that contains the Core Objects you want to have RGB onto the ComponentGroup property. If you are a programmer however, feel free to reference the module included which holds the basic functionality for color shifting to use in your own way. A ReadMe is included that gives further details on how to use AuroraFX along with some tips.\r\n\r\nFeel free to contact me @iExpulsion#2926 on Discord for any questions, suggestions or feedback. :)"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   DirectlyPublished: true
 }

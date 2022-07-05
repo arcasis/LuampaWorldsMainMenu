@@ -34,6 +34,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 2174173908629966191
@@ -142,6 +143,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     Assets {
@@ -161,6 +163,6 @@ Assets {
   Marketplace {
     Description: "i think its easy to understand, its a lava planet, thats all it is"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   DirectlyPublished: true
 }

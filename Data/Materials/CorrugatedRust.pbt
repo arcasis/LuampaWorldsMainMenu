@@ -2,7 +2,7 @@ Assets {
   Id: 8060511813986281564
   Name: "CorrugatedRust"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 13174761023700886097
     ParameterOverrides {

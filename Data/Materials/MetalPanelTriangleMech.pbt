@@ -2,7 +2,7 @@ Assets {
   Id: 6362657287285881123
   Name: "MetalPanelTriangleMech"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 1784942476706426177
     ParameterOverrides {

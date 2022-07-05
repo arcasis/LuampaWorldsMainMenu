@@ -68,6 +68,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 18439535057025624735
@@ -127,6 +128,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 13782692895120672820
@@ -158,6 +160,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 7132836218459842365
@@ -195,6 +198,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -205,6 +209,6 @@ Assets {
   Marketplace {
     Description: "Quickly add different audio zones within your game!\r\nSelect from pre-made lists of sounds, or add your own!\r\n\r\n-EASY TO USE\r\n-Reverb support\r\n-BGM support\r\n-Customizable"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   DirectlyPublished: true
 }

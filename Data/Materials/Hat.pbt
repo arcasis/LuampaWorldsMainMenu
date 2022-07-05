@@ -2,7 +2,7 @@ Assets {
   Id: 8719516485879090117
   Name: "Hat"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 10879927612783763979
     ParameterOverrides {

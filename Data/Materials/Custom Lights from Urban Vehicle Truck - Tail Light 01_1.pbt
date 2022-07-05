@@ -2,7 +2,7 @@ Assets {
   Id: 7557469772924051918
   Name: "Custom Lights from Urban Vehicle Truck - Tail Light 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 17173354356035556532
     ParameterOverrides {

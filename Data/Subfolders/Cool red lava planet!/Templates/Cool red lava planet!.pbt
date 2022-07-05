@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -46,5 +47,5 @@ Assets {
     Version: "1.0.0"
     Description: "i think its easy to understand, its a lava planet, thats all it is"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
 }

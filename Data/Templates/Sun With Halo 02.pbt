@@ -88,6 +88,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 13285310378266025143
@@ -141,6 +142,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 4395402359964161381
@@ -268,6 +270,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     Assets {
@@ -302,5 +305,5 @@ Assets {
       AssetId: "Sun_With_Halo_02"
     }
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
 }

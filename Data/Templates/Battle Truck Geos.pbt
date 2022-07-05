@@ -39,6 +39,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 17399486756346792731
@@ -84,6 +85,7 @@ Assets {
             Id: 17357431816152631365
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 14368951709651025310
@@ -129,6 +131,7 @@ Assets {
             Id: 12455029175074380769
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 3863128399217324896
@@ -174,6 +177,7 @@ Assets {
             Id: 16859333454399842870
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 11279010713174345409
@@ -218,6 +222,7 @@ Assets {
             Id: 1175687125219904843
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 17645286677731195663
@@ -263,6 +268,7 @@ Assets {
             Id: 556999227538033458
           }
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -270,6 +276,6 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   VirtualFolderPath: "Trucks Geo"
 }

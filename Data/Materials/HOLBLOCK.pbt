@@ -2,7 +2,7 @@ Assets {
   Id: 13545708288262914804
   Name: "HOLBLOCK"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 9804609765582245154
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 15966900536193908416
   Name: "Alien Skin lighting"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 3549207087408425796
     ParameterOverrides {

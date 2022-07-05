@@ -2,7 +2,7 @@ Assets {
   Id: 17643710247342035408
   Name: "EyeAlien"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4424627668192703601
     ParameterOverrides {

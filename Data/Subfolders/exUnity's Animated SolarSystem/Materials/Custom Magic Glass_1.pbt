@@ -2,7 +2,7 @@ Assets {
   Id: 10892234022758810792
   Name: "PlanetGas"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 124754958083352480
     ParameterOverrides {

@@ -12,10 +12,6 @@ ScreenshotPaths: "C:/Users/davga/OneDrive/Documentos/My Games/Core/Saved/Maps/Lu
 OwnerId: "ae5c962bb2af48a0840e8159a02a5ad1"
 SerializationVersion: 4
 SceneNameToSceneIdMap {
-  key: "Main"
-  value: "d0c346e0482efa6deed1f8ba52a53846"
-}
-SceneNameToSceneIdMap {
   key: "Main Menu"
   value: "b3368c884a27ff448a66e9b6dd4ba367"
 }

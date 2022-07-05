@@ -2,7 +2,7 @@ Assets {
   Id: 16612108031009549181
   Name: "Luampa Energy drink"
   PlatformAssetType: 13
-  SerializationVersion: 116
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 10123792060279784976
     ParameterOverrides {

@@ -33,6 +33,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -43,6 +44,6 @@ Assets {
   Marketplace {
     Description: "A powerful, flexible and fairly efficient tool used for model animation. Instructions inside the Animations script.\r\nWARNING: Backup your animations before updating!\r\nExample animation: https://imgur.com/a/MDiOhok"
   }
-  SerializationVersion: 116
+  SerializationVersion: 118
   DirectlyPublished: true
 }
