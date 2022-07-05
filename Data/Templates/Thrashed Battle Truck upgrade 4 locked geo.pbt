@@ -16362,4 +16362,6 @@ Assets {
     }
   }
   SerializationVersion: 116
+  VirtualFolderPath: "Trucks Geo"
+  VirtualFolderPath: "1 Thrashed Battle Truck"
 }

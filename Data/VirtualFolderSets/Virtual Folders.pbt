@@ -62,19 +62,5 @@ Assets {
       VirtualFolderPath: "5 musKa Mushkav"
       PlatformAssetType: 5
     }
-    Folders {
-      VirtualFolderPath: "z Old Geos"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "z Old Geos"
-      VirtualFolderPath: "K"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "z Old Geos"
-      VirtualFolderPath: "T"
-      PlatformAssetType: 5
-    }
   }
 }

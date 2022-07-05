@@ -807,25 +807,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 16464074713874394408
+        Id: 841534158063459245
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 16464074713874394408
+        Id: 841534158063459245
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 16464074713874394408
+        Id: 841534158063459245
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 16464074713874394408
+        Id: 841534158063459245
       }
     }
     Overrides {
@@ -1306,25 +1306,25 @@ Objects {
     Overrides {
       Name: "cs:1"
       AssetReference {
-        Id: 15707896951489421267
+        Id: 2881019517352575437
       }
     }
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 15707896951489421267
+        Id: 12170870755120111313
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 15707896951489421267
+        Id: 364688607878185558
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 15707896951489421267
+        Id: 8937610755253352830
       }
     }
     Overrides {
@@ -8906,34 +8906,84 @@ Objects {
   ParentId: 14242996041845712709
   UnregisteredParameters {
     Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 8883611779929351183
-      }
+      Name: "cs:Instructions1"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10207102980281913416
-      }
+      Name: "cs:Instructions2"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 6133784542686929612
-      }
+      Name: "cs:Instructions3"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 11642181338662207462
-      }
+      Name: "cs:Instructions4"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:5"
-      AssetReference {
-        Id: 8768697395945414097
-      }
+      Name: "cs:Instructions5"
+      String: "ReadTooltip"
+    }
+    Overrides {
+      Name: "cs:Instructions1:tooltip"
+      String: "Drag geo template into this folder"
+    }
+    Overrides {
+      Name: "cs:Instructions1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions2:tooltip"
+      String: "Put all vehicle geo into one folder"
+    }
+    Overrides {
+      Name: "cs:Instructions2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions3:tooltip"
+      String: "Move folder until geo is aligned with floor"
+    }
+    Overrides {
+      Name: "cs:Instructions3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions4:tooltip"
+      String: "Change folder\'s Z to -30"
+    }
+    Overrides {
+      Name: "cs:Instructions4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions4:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions5:tooltip"
+      String: "Ctrl+W on Vehicle Name in location folder, drag copy into template, rename."
+    }
+    Overrides {
+      Name: "cs:Instructions5:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions5:ml"
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -34739,34 +34789,84 @@ Objects {
   ParentId: 788520047915300620
   UnregisteredParameters {
     Overrides {
-      Name: "cs:1"
-      AssetReference {
-        Id: 8883611779929351183
-      }
+      Name: "cs:Instructions1"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:2"
-      AssetReference {
-        Id: 10207102980281913416
-      }
+      Name: "cs:Instructions2"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:3"
-      AssetReference {
-        Id: 6133784542686929612
-      }
+      Name: "cs:Instructions3"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:4"
-      AssetReference {
-        Id: 11642181338662207462
-      }
+      Name: "cs:Instructions4"
+      String: "ReadTooltip"
     }
     Overrides {
-      Name: "cs:5"
-      AssetReference {
-        Id: 8768697395945414097
-      }
+      Name: "cs:Instructions5"
+      String: "ReadTooltip"
+    }
+    Overrides {
+      Name: "cs:Instructions1:tooltip"
+      String: "Drag geo template into this folder"
+    }
+    Overrides {
+      Name: "cs:Instructions1:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions1:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions2:tooltip"
+      String: "Put all vehicle geo into one folder"
+    }
+    Overrides {
+      Name: "cs:Instructions2:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions2:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions3:tooltip"
+      String: "Move folder until geo is aligned with floor"
+    }
+    Overrides {
+      Name: "cs:Instructions3:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions3:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions4:tooltip"
+      String: "Change folder\'s Z to -30"
+    }
+    Overrides {
+      Name: "cs:Instructions4:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions4:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions5:tooltip"
+      String: "Ctrl+W on Vehicle Name in location folder, drag copy into template, rename."
+    }
+    Overrides {
+      Name: "cs:Instructions5:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Instructions5:ml"
+      Bool: false
     }
   }
   Collidable_v2 {
