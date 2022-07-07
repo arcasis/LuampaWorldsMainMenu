@@ -46,20 +46,39 @@ function OnPlayerJoined(player)
         end
         playerDataTable.isTester = isTester
     end
-    if playerDataTable.helmets and playerDataTable.helmets[1] == 1 then
+    -- I had set up helmets with sub tables like vehicles, switching back to simple table
+    -- First, update any data that has the sub tables
+    if playerDataTable.helmets and playerDataTable.helmets[1] ~= 1 or playerDataTable.helmets[1] ~= 0 then
         playerDataTable.helmets = nil
-        local newTable1 = {}
-        newTable1[1] = {}
-        newTable1[1][1] = 1
-        playerDataTable.helmets = newTable1
-        local newTable2 = {}
-        newTable2[1] = {}
-        newTable2[1][1] = 1
-        playerDataTable.selectedHelmet = newTable2
-        playerDataTable.helmetOn = true
+        playerDataTable.helmets = {}
+        playerDataTable.helmets[1] = 1
+
+        playerDataTable.helmets.selectedHelmet = 1
+        if playerDataTable.helmetOn then
+            playerDataTable.helmets.helmetOn = true
+            playerDataTable.helmetOn = nil
+        end
+    end
+    -- if player had old data, just update selectedHelmet and helmetOn
+    if playerDataTable.selectedHelmet then
+        playerDataTable.helmets.selectedHelmet = 1
+        playerDataTable.selectedHelmet = nil
+        if playerDataTable.helmetOn then  -- only set if player already has it on
+            playerDataTable.helmets.helmetOn = true
+            playerDataTable.helmetOn = nil
+        end
     end
     -------------- END CLEAN UP OLD TESTER TABLE --------------------
 
+
+    -- Check if player has a helmet, keep nil if not
+    if playerDataTable.helmets then
+        --print("player has a helmet")
+        player.serverUserData.helmets = playerDataTable.helmets
+    else
+        --print("player doesn't have a helmet")
+    end
+    
 
     --------------------- CATCH ALPHA TESTERS ---------------------
     local isTester = playerDataTable.isTester

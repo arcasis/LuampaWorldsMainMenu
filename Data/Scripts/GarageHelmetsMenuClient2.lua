@@ -10,6 +10,9 @@ local HELMET_ASSETS_DATA_FOLDER = script:GetCustomProperty("HelmetAssetsDataFold
 local OWNED_BUTTON = script:GetCustomProperty("OwnedButton"):WaitForObject()
 local SET_AS_DEFAULT_BUTTON = script:GetCustomProperty("SetAsDefaultButton"):WaitForObject()
 
+local HELMETS_IMAGE_CAMERA = script:GetCustomProperty("HelmetsImageCamera"):WaitForObject()
+local HELMET_IMAGE = script:GetCustomProperty("HelmetImage"):WaitForObject()
+
 --local HELMETS_MENU_OPEN_SFX = script:GetCustomProperty("HelmetsMenuOpenSFX"):WaitForObject()
 --local PURCHASE_SFX = script:GetCustomProperty("PurchaseSFX"):WaitForObject()
 
@@ -24,6 +27,8 @@ local currentlyVisibleHelmet = nil
 local currentlyVisibleButton = nil
 
 local helmetMenuOpen = false
+
+local camCapture = nil
 
 local LOCAL_PLAYER = Game.GetLocalPlayer()
 
@@ -56,6 +61,10 @@ function ProcessIndex()
     if currentlyVisibleButton then  -- doesn't exist first time
         currentlyVisibleButton.visibility = Visibility.FORCE_OFF
     end
+    if camCapture then
+        camCapture:Release()
+        camCapture = nil
+    end
 
     local helmets = LOCAL_PLAYER.clientUserData.helmets
     local helmet = helmets[index]     -- number if owned, nil if not
@@ -75,6 +84,11 @@ function DisplayBuyHelmet()
     currentlyVisibleButton.visibility = Visibility.INHERIT
 
     currentlyVisibleHelmet = World.SpawnAsset(HELMET_ASSETS_TABLE[index], {parent = HELMET_ASSETS_DATA_FOLDER})  -- parent folder must be at location
+    
+    Task.Wait()
+
+    camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.VERY_LARGE)
+    HELMET_IMAGE:SetCameraCapture(camCapture)
 end
 
 
@@ -95,6 +109,11 @@ function DisplayOwnedHelmet()
         SET_AS_DEFAULT_BUTTON.text = "Select as Default"
     end
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
+
+    Task.Wait()
+
+    camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.LARGE)
+    HELMET_IMAGE:SetCameraCapture(camCapture)
 end
 
 

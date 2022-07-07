@@ -197,6 +197,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8944607976256557303
+  Name: "Arch"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_arch_001"
+  }
+}
+Assets {
   Id: 8619371972198943276
   Name: "Center Arrow 008"
   PlatformAssetType: 9
