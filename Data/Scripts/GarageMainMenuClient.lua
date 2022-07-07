@@ -4,10 +4,13 @@ local GARAGE_PANEL = script:GetCustomProperty("GaragePanel"):WaitForObject()
 
 local KARTS_BUTTON = script:GetCustomProperty("KartsButton"):WaitForObject()
 local BATTLE_BUTTON = script:GetCustomProperty("BattleCarsButton"):WaitForObject()
+local COSMETICS_BUTTON = script:GetCustomProperty("CosmeticsButton"):WaitForObject()
+
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 
 local KARTS_MENU_PANEL = script:GetCustomProperty("GarageKartsMenuPanel"):WaitForObject()
 local BATTLE_MENU_PANEL = script:GetCustomProperty("GarageBattleMenuPanel"):WaitForObject()
+local GARAGE_HELMETS_CONTAINER = script:GetCustomProperty("GarageHelmetsContainer"):WaitForObject()
 
 local WALL_SPOTLIGHTS_FOLDER = script:GetCustomProperty("WallSpotlights"):WaitForObject()
 local VEHICLE_DISPLAY_ON = script:GetCustomProperty("VehicleDisplayLightCylinder"):WaitForObject()
@@ -26,6 +29,13 @@ end
 function OnBattleButtonClicked()
     GARAGE_PANEL.visibility = Visibility.FORCE_OFF
     BATTLE_MENU_PANEL.visibility = Visibility.INHERIT
+
+    TurnOnGarageLights()
+end
+
+function OnCosmeticsButtonClicked()
+    GARAGE_PANEL.visibility = Visibility.FORCE_OFF
+    GARAGE_HELMETS_CONTAINER.visibility = Visibility.INHERIT
 
     TurnOnGarageLights()
 end
@@ -53,4 +63,5 @@ TurnOffGarageLights()
 
 KARTS_BUTTON.clickedEvent:Connect(OnKartsButtonClicked)
 BATTLE_BUTTON.clickedEvent:Connect(OnBattleButtonClicked)
+COSMETICS_BUTTON.clickedEvent:Connect(OnCosmeticsButtonClicked)
 BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

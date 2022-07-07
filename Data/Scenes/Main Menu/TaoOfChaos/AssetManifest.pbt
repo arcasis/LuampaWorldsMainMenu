@@ -287,6 +287,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5276906095889744561
+  Name: "BG Flat 004"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_22"
+  }
+}
+Assets {
   Id: 5217401308167307307
   Name: "Sign Font 1 Neon Outline: L"
   PlatformAssetType: 1
