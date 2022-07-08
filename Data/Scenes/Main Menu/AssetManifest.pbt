@@ -12,6 +12,19 @@ Assets {
   }
 }
 Assets {
+  Id: 17657403043602794069
+  Name: "``S4DF4RM04`\302\264 Helmet"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "bdb75b5a684d4f86ac1f18c098e29c7b"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 17518621761645563227
   Name: "Cookie"
   PlatformAssetType: 24
@@ -25,12 +38,51 @@ Assets {
   }
 }
 Assets {
+  Id: 16436375759093017532
+  Name: "``MrD4B00M\302\264\302\264 Helmet"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "f1ada5fb95334b3ebecdb85fb94ccda0"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
   Id: 16384090375502699054
   Name: "Supporter"
   PlatformAssetType: 24
   NetReferenceAsset {
     NetReference {
       Key: "97abe4480db4475fa4f6145917016f14"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 15642408230983332375
+  Name: "``On control\302\264\302\264 Helmet"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "64183ee9c6364632bfca1902fc267a19"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 13568547848834383789
+  Name: "``A lick end\302\264\302\264 Helmet"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "b81d548224c94cbda6d48e648181058f"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
       }
@@ -70,6 +122,32 @@ Assets {
   NetReferenceAsset {
     NetReference {
       Key: "16edbbf9cb2841a994ac94752cee7d4c"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 9888253023912153553
+  Name: "``Speed Duck\302\264\302\264 Helmet"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "16d2fa62d97f4736bade586f7af89929"
+      Type {
+        Value: "mc:enetreferencetype:creatorperk"
+      }
+    }
+  }
+}
+Assets {
+  Id: 7606320529884554035
+  Name: "``Serve Please\302\264\302\264 Helmet"
+  PlatformAssetType: 24
+  NetReferenceAsset {
+    NetReference {
+      Key: "a16b42d9cf264f1caac8aec8b0ef8bfa"
       Type {
         Value: "mc:enetreferencetype:creatorperk"
       }
