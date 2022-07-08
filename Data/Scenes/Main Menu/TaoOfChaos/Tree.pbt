@@ -348,43 +348,37 @@ Objects {
     Overrides {
       Name: "cs:2"
       AssetReference {
-        Id: 841534158063459245
+        Id: 4490482821066317194
       }
     }
     Overrides {
       Name: "cs:3"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11590471497446051218
       }
     }
     Overrides {
       Name: "cs:4"
       AssetReference {
-        Id: 841534158063459245
+        Id: 1724674511387664352
       }
     }
     Overrides {
       Name: "cs:5"
       AssetReference {
-        Id: 841534158063459245
+        Id: 13364788644121278569
       }
     }
     Overrides {
       Name: "cs:6"
       AssetReference {
-        Id: 841534158063459245
+        Id: 11460195112953157306
       }
     }
     Overrides {
       Name: "cs:7"
       AssetReference {
-        Id: 841534158063459245
-      }
-    }
-    Overrides {
-      Name: "cs:8"
-      AssetReference {
-        Id: 841534158063459245
+        Id: 12441913976174177569
       }
     }
   }
@@ -1641,6 +1635,12 @@ Objects {
   }
   ParentId: 9410451756744952473
   ChildIds: 10892559973262337945
+  ChildIds: 17768388865094846790
+  ChildIds: 8832515401919199968
+  ChildIds: 12693395349952846933
+  ChildIds: 11319349331512171765
+  ChildIds: 13825752963448152229
+  ChildIds: 10369563410645759325
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1674,6 +1674,450 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 10369563410645759325
+  Name: "UI Perk Button MrD4B00M Helmet 6"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1268144749521335883
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Index"
+      Int: 7
+    }
+    Overrides {
+      Name: "cs:Index:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Index:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    PurchaseButton {
+      IsButtonEnabled: true
+      PerkReference {
+        Key: "f1ada5fb95334b3ebecdb85fb94ccda0"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 13825752963448152229
+  Name: "UI Perk Button OnControl Helmet 5"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1268144749521335883
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Index"
+      Int: 6
+    }
+    Overrides {
+      Name: "cs:Index:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Index:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    PurchaseButton {
+      IsButtonEnabled: true
+      PerkReference {
+        Key: "64183ee9c6364632bfca1902fc267a19"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 11319349331512171765
+  Name: "UI Perk Buttom S4DF4RM04 Helmet 4"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1268144749521335883
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Index"
+      Int: 5
+    }
+    Overrides {
+      Name: "cs:Index:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Index:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    PurchaseButton {
+      IsButtonEnabled: true
+      PerkReference {
+        Key: "bdb75b5a684d4f86ac1f18c098e29c7b"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 12693395349952846933
+  Name: "UI Perk Button ALickEnd Helmet 3"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1268144749521335883
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Index"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:Index:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Index:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    PurchaseButton {
+      IsButtonEnabled: true
+      PerkReference {
+        Key: "b81d548224c94cbda6d48e648181058f"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 8832515401919199968
+  Name: "UI Perk Button ServePlease Helmet 2"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1268144749521335883
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Index"
+      Int: 3
+    }
+    Overrides {
+      Name: "cs:Index:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Index:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    PurchaseButton {
+      IsButtonEnabled: true
+      PerkReference {
+        Key: "a16b42d9cf264f1caac8aec8b0ef8bfa"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 17768388865094846790
+  Name: "UI Perk Button SpeedDuck Helmet 1"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1268144749521335883
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Index"
+      Int: 2
+    }
+    Overrides {
+      Name: "cs:Index:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Index:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 50
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    PurchaseButton {
+      IsButtonEnabled: true
+      PerkReference {
+        Key: "16d2fa62d97f4736bade586f7af89929"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }

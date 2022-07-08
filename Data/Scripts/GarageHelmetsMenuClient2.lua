@@ -55,6 +55,8 @@ end
 
 function ProcessIndex()
 
+    print("ProcessIndex runs, index is:", index)
+
     if Object.IsValid(currentlyVisibleHelmet) then
         currentlyVisibleHelmet:Destroy()
     end
@@ -66,6 +68,14 @@ function ProcessIndex()
         camCapture = nil
     end
 
+    -- display helmet
+    currentlyVisibleHelmet = World.SpawnAsset(HELMET_ASSETS_TABLE[index], {parent = HELMET_ASSETS_DATA_FOLDER})  -- parent folder must be at location
+    --Task.Wait()
+    --camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.VERY_LARGE)  -- VERY_LARGE
+    camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.LARGE)  -- LARGE
+    HELMET_IMAGE:SetCameraCapture(camCapture)
+
+    -- display buttons according to status
     local helmets = LOCAL_PLAYER.clientUserData.helmets
     local helmet = helmets[index]     -- number if owned, nil if not
     if helmet then
@@ -78,42 +88,31 @@ end
 
 function DisplayBuyHelmet()
 
+    print("DisplayBuyHelmet runs")
+
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
 
     currentlyVisibleButton = perksButtonsTable[index]
     currentlyVisibleButton.visibility = Visibility.INHERIT
-
-    currentlyVisibleHelmet = World.SpawnAsset(HELMET_ASSETS_TABLE[index], {parent = HELMET_ASSETS_DATA_FOLDER})  -- parent folder must be at location
-    
-    Task.Wait()
-
-    camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.VERY_LARGE)
-    HELMET_IMAGE:SetCameraCapture(camCapture)
 end
 
 
 function DisplayOwnedHelmet()
 
-    -- process buttons
-    currentlyVisibleButton = OWNED_BUTTON
-    currentlyVisibleButton.visibility = Visibility.INHERIT
-
-    currentlyVisibleHelmet = World.SpawnAsset(HELMET_ASSETS_TABLE[index], {parent = HELMET_ASSETS_DATA_FOLDER})  -- parent folder must be at location
-
-    local selectedHelmetIndex = LOCAL_PLAYER.clientUserData.helmets.selectedHelmet
-
+    print("DisplayOwnedHelmet runs")
     -- if selectedHelmet matches current index, then this vehicle is set as their default truck
-    if selectedHelmetIndex == index then
+    if LOCAL_PLAYER.clientUserData.helmets.selectedHelmet == index then
         SET_AS_DEFAULT_BUTTON.text = "SELECTED"
     else
         SET_AS_DEFAULT_BUTTON.text = "Select as Default"
     end
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
 
-    Task.Wait()
+    print(".helmets.selectedHelmet is:", LOCAL_PLAYER.clientUserData.helmets.selectedHelmet)
 
-    camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.LARGE)
-    HELMET_IMAGE:SetCameraCapture(camCapture)
+    -- process buttons
+    currentlyVisibleButton = OWNED_BUTTON
+    currentlyVisibleButton.visibility = Visibility.INHERIT
 end
 
 
