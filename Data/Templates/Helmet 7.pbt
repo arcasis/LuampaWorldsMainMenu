@@ -7,7 +7,7 @@ Assets {
       RootId: 12518174266805801679
       Objects {
         Id: 12518174266805801679
-        Name: "Helmet 6"
+        Name: "Helmet 7"
         Transform {
           Scale {
             X: 0.516034544
@@ -15,7 +15,93 @@ Assets {
             Z: 0.516034544
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6585441192959826313
+        ChildIds: 10855400627352322003
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 10855400627352322003
+        Name: "ClientContext"
+        Transform {
+          Location {
+            X: -35.1246758
+            Y: -3.90732765
+            Z: -88.5264893
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12518174266805801679
+        ChildIds: 6298341528336403024
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 6298341528336403024
+        Name: "Geo"
+        Transform {
+          Location {
+            X: 2.19345088e-06
+            Y: -1.14440923e-06
+            Z: 7.62939453e-06
+          }
+          Rotation {
+            Yaw: 90
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 10855400627352322003
         ChildIds: 6083212672837959316
         ChildIds: 6384203486877524076
         ChildIds: 16794080350216937201
@@ -61,18 +147,20 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 4.53245687
-            Z: -26.3776817
+            X: 1.01562476
+            Y: -19.4932709
+            Z: 37.2569847
           }
           Rotation {
+            Yaw: 81.7501373
           }
           Scale {
-            X: 1.19318461
-            Y: 1.19318461
-            Z: 1.19318461
+            X: 0.480777
+            Y: 0.480777
+            Z: 0.480777
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -131,21 +219,22 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 4.53151941
-            Z: 61.5405235
+            X: 1.01556933
+            Y: -19.4936409
+            Z: 72.6823959
           }
           Rotation {
-            Pitch: -7.57034302
-            Yaw: 3.31882405
-            Roll: -19.9801331
+            Pitch: -7.57034206
+            Yaw: 85.0689697
+            Roll: -19.9801044
           }
           Scale {
-            X: 2.38577938
-            Y: 2.38576651
-            Z: 0.046299696
+            X: 0.961316347
+            Y: 0.961311162
+            Z: 0.0186558142
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -199,21 +288,22 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 4.53151941
-            Z: 61.5405235
+            X: 1.01556933
+            Y: -19.4936409
+            Z: 72.6823959
           }
           Rotation {
-            Pitch: -7.57034302
-            Yaw: 3.31882453
-            Roll: -19.9801025
+            Pitch: -7.57034206
+            Yaw: 85.0689621
+            Roll: -19.9800739
           }
           Scale {
-            X: 1.92520523
-            Y: 1.92519641
-            Z: 0.0391368
+            X: 0.775734484
+            Y: 0.775730908
+            Z: 0.0157696251
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -267,21 +357,22 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 4.53151941
-            Z: 61.5405235
+            X: 1.01556933
+            Y: -19.4936409
+            Z: 72.6823959
           }
           Rotation {
-            Pitch: -7.57034302
-            Yaw: 3.3188262
-            Roll: -19.9801025
+            Pitch: -7.57032871
+            Yaw: 85.0689697
+            Roll: -19.9800758
           }
           Scale {
-            X: 1.65548182
-            Y: 1.65547144
-            Z: 1.02627552
+            X: 0.667053163
+            Y: 0.667049
+            Z: 0.413523316
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -335,19 +426,22 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 4.53210163
-            Z: -43.0597038
+            X: 1.01560438
+            Y: -19.4934158
+            Z: 30.5352
           }
           Rotation {
-            Pitch: 25.294136
+            Pitch: 25.2941227
+            Yaw: 81.7501373
+            Roll: 9.44307828e-07
           }
           Scale {
-            X: 1.17209291
-            Y: 1.17209291
-            Z: 0.180321991
+            X: 0.472278386
+            Y: 0.472278386
+            Z: 0.0726582184
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -406,22 +500,22 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -40.8125229
-            Y: 36.3915482
-            Z: 35.364418
+            X: -16.1178169
+            Y: -35.4712563
+            Z: 62.1351
           }
           Rotation {
-            Pitch: 83.5447083
-            Yaw: -97.8133545
-            Roll: -62.3522339
+            Pitch: 83.5444107
+            Yaw: -16.0629292
+            Roll: -62.3519745
           }
           Scale {
-            X: 0.467303187
-            Y: 0.467300504
-            Z: 0.450109
+            X: 0.188293263
+            Y: 0.18829219
+            Z: 0.181365117
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -471,22 +565,22 @@ Assets {
         Name: "Sci-fi Panel 1x3m Angled Right"
         Transform {
           Location {
-            X: -56.3867188
-            Y: -34.8945312
-            Z: -10.9547119
+            X: 11.4082117
+            Y: -45.8032913
+            Z: 43.4714508
           }
           Rotation {
-            Pitch: -73.2957153
-            Yaw: -49.1689148
-            Roll: 48.8895836
+            Pitch: -73.2957077
+            Yaw: 32.5812225
+            Roll: 48.8896217
           }
           Scale {
-            X: -0.158545271
-            Y: 0.247557878
-            Z: 0.158546835
+            X: -0.0638835952
+            Y: 0.0997499749
+            Z: 0.063884221
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -542,22 +636,22 @@ Assets {
         Name: "Sci-fi Panel 1x3m Angled Right"
         Transform {
           Location {
-            X: -56.09375
-            Y: 41.2060547
-            Z: -12.5904541
+            X: -18.9212
+            Y: -41.2865448
+            Z: 42.8123474
           }
           Rotation {
-            Pitch: -77.2313538
-            Yaw: 43.903904
-            Roll: -43.8460083
+            Pitch: -77.2313
+            Yaw: 125.653984
+            Roll: -43.8459396
           }
           Scale {
-            X: -0.158545271
-            Y: -0.247557878
-            Z: 0.158546835
+            X: -0.0638835952
+            Y: -0.0997499749
+            Z: 0.063884221
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -613,22 +707,22 @@ Assets {
         Name: "Sci-fi Panel 1x3m Angled Right"
         Transform {
           Location {
-            X: -45.2109375
-            Y: -0.809570312
-            Z: -88.5264893
+            X: -1.53757012
+            Y: -39.3760681
+            Z: 12.2149963
           }
           Rotation {
             Pitch: 0.989953876
-            Yaw: 88.8459549
-            Roll: -78.5940552
+            Yaw: 170.5961
+            Roll: -78.594
           }
           Scale {
-            X: -0.158545271
-            Y: 0.247557878
-            Z: 0.158546835
+            X: -0.0638835952
+            Y: 0.0997499749
+            Z: 0.063884221
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -684,22 +778,22 @@ Assets {
         Name: "Sci-fi Panel 1x3m Angled Right"
         Transform {
           Location {
-            X: -45.2109375
-            Y: 7.68652344
-            Z: -88.5264893
+            X: -4.92552614
+            Y: -38.8848495
+            Z: 12.2149963
           }
           Rotation {
-            Pitch: 0.989988
-            Yaw: -88.8459473
-            Roll: 78.5941391
+            Pitch: 0.990015388
+            Yaw: -7.0957942
+            Roll: 78.5940552
           }
           Scale {
-            X: -0.158545271
-            Y: -0.247557878
-            Z: 0.158546835
+            X: -0.0638835952
+            Y: -0.0997499749
+            Z: 0.063884221
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -755,22 +849,22 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -47.9073715
-            Y: -26.2490368
-            Z: 34.1453171
+            X: 8.45092583
+            Y: -41.9221458
+            Z: 61.6438751
           }
           Rotation {
-            Pitch: 83.5446854
-            Yaw: -97.8127136
-            Roll: -62.3516541
+            Pitch: 83.5442276
+            Yaw: -16.0622711
+            Roll: -62.3513184
           }
           Scale {
-            X: 0.309859484
-            Y: 0.309857726
-            Z: 0.298458368
+            X: 0.124853536
+            Y: 0.124852821
+            Z: 0.120259613
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -820,22 +914,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 19.9071369
-            Y: -35.3403
-            Z: 151.258865
+            X: 15.9970636
+            Y: -15.4056463
+            Z: 108.833153
           }
           Rotation {
-            Pitch: -9.25918579
-            Yaw: 3.10754681
-            Roll: -20.7488098
+            Pitch: -9.25918198
+            Yaw: 84.8576813
+            Roll: -20.7487583
           }
           Scale {
-            X: 1.47198021
-            Y: 1.47197568
-            Z: 0.243637741
+            X: 0.59311378
+            Y: 0.593111932
+            Z: 0.0981704071
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -889,19 +983,22 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 5.75757074
-            Z: -42.4809418
+            X: 1.08645427
+            Y: -19.0047379
+            Z: 30.7684021
           }
           Rotation {
-            Pitch: 25.294136
+            Pitch: 25.2941227
+            Yaw: 81.7501373
+            Roll: 9.44307828e-07
           }
           Scale {
-            X: 1.22969043
-            Y: 1.22967553
-            Z: 0.0353065282
+            X: 0.495486528
+            Y: 0.495480508
+            Z: 0.0142262708
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -960,19 +1057,20 @@ Assets {
         Name: "TnT"
         Transform {
           Location {
-            X: -70.8031845
-            Y: -40.4124107
-            Z: -51.4786377
+            X: 12.7750349
+            Y: -51.871109
+            Z: 27.1429062
           }
           Rotation {
+            Yaw: 81.7501373
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.402935982
+            Y: 0.402935982
+            Z: 0.402935982
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         ChildIds: 18025771321917443560
         ChildIds: 14658368106509261463
         ChildIds: 12685775514665918424
@@ -1411,22 +1509,22 @@ Assets {
         Name: "TnT"
         Transform {
           Location {
-            X: -74.173172
-            Y: -11.4615402
-            Z: -43.1414146
+            X: 1.0355581
+            Y: -51.5410843
+            Z: 30.5022736
           }
           Rotation {
-            Pitch: -12.0595093
-            Yaw: -18.624054
-            Roll: 4.10250568
+            Pitch: -12.0594835
+            Yaw: 63.1261024
+            Roll: 4.10250711
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.402935982
+            Y: 0.402935982
+            Z: 0.402935982
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         ChildIds: 11211837093296673751
         ChildIds: 13878292255094736994
         ChildIds: 13596689135141696626
@@ -1865,22 +1963,22 @@ Assets {
         Name: "TnT"
         Transform {
           Location {
-            X: -74.0032349
-            Y: 13.8810205
-            Z: -44.1303864
+            X: -9.0603714
+            Y: -50.008091
+            Z: 30.1037807
           }
           Rotation {
-            Pitch: 49.5554161
-            Yaw: -3.66275024
-            Roll: 118.950951
+            Pitch: 49.5553436
+            Yaw: 78.0873871
+            Roll: 118.950882
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.402935982
+            Y: 0.402935982
+            Z: 0.402935982
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         ChildIds: 13421277899959494904
         ChildIds: 1488295539979164500
         ChildIds: 6563481833405096943
@@ -2319,22 +2417,22 @@ Assets {
         Name: "TnT"
         Transform {
           Location {
-            X: -76.3788605
-            Y: 47.973259
-            Z: -30.3048458
+            X: -22.792551
+            Y: -48.9842873
+            Z: 35.6745911
           }
           Rotation {
-            Pitch: 25.4241829
-            Yaw: -29.0070801
-            Roll: 116.100166
+            Pitch: 25.4241543
+            Yaw: 52.7430954
+            Roll: 116.100044
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.402935982
+            Y: 0.402935982
+            Z: 0.402935982
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         ChildIds: 12620700430333445334
         ChildIds: 14524735133821362721
         ChildIds: 6108541510297649426
@@ -2773,22 +2871,22 @@ Assets {
         Name: "TnT"
         Transform {
           Location {
-            X: -51.4504356
-            Y: -83.9399567
-            Z: 138.29718
+            X: 31.2512569
+            Y: -46.6705284
+            Z: 103.610413
           }
           Rotation {
-            Pitch: -43.6783447
-            Yaw: 64.3989792
-            Roll: 75.0201263
+            Pitch: -43.6783333
+            Yaw: 146.149185
+            Roll: 75.0200348
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.402935982
+            Y: 0.402935982
+            Z: 0.402935982
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         ChildIds: 1870232716689956600
         ChildIds: 14881254317344226911
         ChildIds: 16168676068540561124
@@ -3303,22 +3401,22 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -56.5278778
-            Y: -22.3004684
-            Z: 32.6640587
+            X: 6.37796116
+            Y: -45.1314201
+            Z: 61.0470314
           }
           Rotation {
-            Pitch: 83.5445633
-            Yaw: -97.8121338
-            Roll: -62.3511353
+            Pitch: 83.5443726
+            Yaw: -16.0618343
+            Roll: -62.350975
           }
           Scale {
-            X: 0.154975429
-            Y: 0.15497455
-            Z: 0.149273202
+            X: 0.0624451786
+            Y: 0.0624448247
+            Z: 0.0601475425
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3374,22 +3472,22 @@ Assets {
         Name: "Sphere"
         Transform {
           Location {
-            X: -55.8583069
-            Y: 30.1228542
-            Z: 32.77911
+            X: -14.4879751
+            Y: -41.8334503
+            Z: 61.0933838
           }
           Rotation {
-            Pitch: 83.5446854
-            Yaw: -97.8127136
-            Roll: -62.3516541
+            Pitch: 83.5442276
+            Yaw: -16.0622711
+            Roll: -62.3513184
           }
           Scale {
-            X: 0.242630512
-            Y: 0.242629126
-            Z: 0.233703047
+            X: 0.0977645591
+            Y: 0.097764
+            Z: 0.0941673666
           }
         }
-        ParentId: 12518174266805801679
+        ParentId: 6298341528336403024
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

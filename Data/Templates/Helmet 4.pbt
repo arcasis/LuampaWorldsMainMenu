@@ -7,7 +7,7 @@ Assets {
       RootId: 12250328924300173314
       Objects {
         Id: 12250328924300173314
-        Name: "Helmet 3"
+        Name: "Helmet 4"
         Transform {
           Scale {
             X: 0.555553079
@@ -15,7 +15,92 @@ Assets {
             Z: 0.555553079
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6585441192959826313
+        ChildIds: 12901002786100396085
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 12901002786100396085
+        Name: "ClientContext"
+        Transform {
+          Location {
+            X: 32.9029312
+            Y: 1.70295012
+            Z: -9.80712891
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12250328924300173314
+        ChildIds: 9060668868039961118
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 9060668868039961118
+        Name: "Geo"
+        Transform {
+          Location {
+            X: -2.05406786e-06
+            Y: -6.9691589e-07
+          }
+          Rotation {
+            Yaw: 90
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 12901002786100396085
         ChildIds: 10663815567064241483
         ChildIds: 16578840980983223912
         ChildIds: 11010157697539300948
@@ -54,19 +139,20 @@ Assets {
         Name: "Ovoid 01"
         Transform {
           Location {
-            X: 36.3808594
-            Y: -1.67480469
-            Z: 23.9641113
+            X: -1.20177913
+            Y: 17.0503674
+            Z: 25.6553669
           }
           Rotation {
+            Yaw: 89.9999924
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 0.887212038
+            X: 0.689671516
+            Y: 0.689671516
+            Z: 0.611884832
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -136,18 +222,20 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -12.074707
-            Y: 3.75488281
+            X: -4.94647026
+            Y: -16.3680363
+            Z: 9.12799931
           }
           Rotation {
+            Yaw: 89.9999924
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.689671516
+            Y: 0.689671516
+            Z: 0.689671516
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 9590531890620743704
         ChildIds: 10193057765472330377
         Collidable_v2 {
@@ -327,19 +415,20 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -4.07682323
-            Y: -1.94368494
-            Z: 48.9001465
+            X: -1.0163343
+            Y: -10.8521166
+            Z: 42.8530312
           }
           Rotation {
+            Yaw: 89.9999924
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.689671516
+            Y: 0.689671516
+            Z: 0.689671516
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 16701027553744648341
         ChildIds: 7496341028661814216
         ChildIds: 12211917594301961561
@@ -576,20 +665,22 @@ Assets {
         Name: "Ovoid - Hollow 01"
         Transform {
           Location {
-            X: 41.3574219
-            Y: -1.56152344
-            Z: -9.80712891
+            X: -1.2799077
+            Y: 20.4825573
+            Z: 2.3643024
           }
           Rotation {
-            Pitch: -177.009308
+            Pitch: -2.99068689
+            Yaw: -89.9999619
+            Roll: -179.999954
           }
           Scale {
-            X: 0.685403228
-            Y: 0.759171367
-            Z: 0.476610124
+            X: 0.472703069
+            Y: 0.523578882
+            Z: 0.328704387
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -651,22 +742,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 49.6757812
-            Y: -35.4921875
-            Z: 48.0041504
+            X: 22.1210804
+            Y: 26.2194881
+            Z: 42.2351036
           }
           Rotation {
-            Pitch: -10.786377
-            Yaw: 142.490479
-            Roll: 130.427048
+            Pitch: -10.7863636
+            Yaw: -127.50946
+            Roll: 130.427017
           }
           Scale {
-            X: 0.685126185
-            Y: 0.685126185
-            Z: 0.685126185
+            X: 0.472512096
+            Y: 0.472512096
+            Z: 0.472512096
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 9971384855424034278
         ChildIds: 8579068801108613828
         Collidable_v2 {
@@ -852,22 +943,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 36.0947266
-            Y: 37.9082031
-            Z: 12.060791
+            X: -28.5010281
+            Y: 16.8530273
+            Z: 17.4459858
           }
           Rotation {
-            Pitch: 12.3005619
-            Yaw: -156.037659
-            Roll: -93.8658447
+            Pitch: 12.3005352
+            Yaw: -66.0377502
+            Roll: -93.8658066
           }
           Scale {
-            X: 0.685126185
-            Y: 0.685126185
-            Z: 0.685126185
+            X: 0.472512096
+            Y: 0.472512096
+            Z: 0.472512096
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 17457874599971750180
         ChildIds: 8507046416055023870
         Collidable_v2 {
@@ -1053,22 +1144,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.7255859
-            Y: -38.9257812
-            Z: 43.9394531
+            X: 24.4891453
+            Y: 2.11535978
+            Z: 39.4317894
           }
           Rotation {
-            Pitch: -0.589019775
-            Yaw: 51.0690193
-            Roll: -12.3763428
+            Pitch: -0.589021802
+            Yaw: 141.069122
+            Roll: -12.3764315
           }
           Scale {
-            X: 0.38446641
-            Y: 0.38446641
-            Z: 0.38446641
+            X: 0.265155584
+            Y: 0.265155584
+            Z: 0.265155584
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 8439933487560671490
         ChildIds: 10382911688814492999
         ChildIds: 5451602214021522736
@@ -1305,22 +1396,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.7255859
-            Y: -44.6191406
-            Z: 8.57885742
+            X: 28.4156933
+            Y: 2.11535645
+            Z: 15.0445967
           }
           Rotation {
-            Pitch: -2.97995
-            Yaw: 85.3537445
-            Roll: 129.458282
+            Pitch: -2.97994304
+            Yaw: 175.353729
+            Roll: 129.458115
           }
           Scale {
-            X: 0.740627289
-            Y: 0.740627289
-            Z: 0.740627289
+            X: 0.510789573
+            Y: 0.510789573
+            Z: 0.510789573
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 11087888487298467031
         ChildIds: 14345157176329231890
         ChildIds: 10907181876666869222
@@ -1557,22 +1648,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.7255859
-            Y: 36.6474609
-            Z: -5.21704102
+            X: -27.6315498
+            Y: 2.11534786
+            Z: 5.52995443
           }
           Rotation {
             Pitch: 9.83358669
-            Yaw: -85.2905884
-            Roll: -128.409698
+            Yaw: 4.70943117
+            Roll: -128.409576
           }
           Scale {
-            X: 0.594253302
-            Y: -0.594253302
-            Z: 0.594253302
+            X: 0.40983963
+            Y: -0.40983963
+            Z: 0.40983963
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 14307410971574106938
         ChildIds: 16923216922291815050
         ChildIds: 5154831660810127791
@@ -1809,22 +1900,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 14.7255859
-            Y: 37.8916
-            Z: 31.7089844
+            X: -28.4895973
+            Y: 2.11534786
+            Z: 30.9967899
           }
           Rotation {
-            Pitch: -13.2684631
-            Yaw: -85.7006226
-            Roll: -86.1133423
+            Pitch: -13.2684679
+            Yaw: 4.29934788
+            Roll: -86.113327
           }
           Scale {
-            X: 0.386204779
-            Y: -0.386204779
-            Z: 0.386204779
+            X: 0.266354442
+            Y: -0.266354442
+            Z: 0.266354442
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 6388675539306283537
         ChildIds: 18250034105020979008
         ChildIds: 5652231320859348684
@@ -2062,22 +2153,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 65.3232422
-            Y: 34.2275391
-            Z: 31.434082
+            X: -25.9626045
+            Y: 37.0111084
+            Z: 30.8072014
           }
           Rotation {
-            Pitch: -2.41430664
-            Yaw: -145.822159
-            Roll: -57.2461243
+            Pitch: -2.41429424
+            Yaw: -55.8221092
+            Roll: -57.2459869
           }
           Scale {
-            X: 0.819528818
-            Y: -0.819528818
-            Z: 0.819528818
+            X: 0.565205693
+            Y: -0.565205693
+            Z: 0.565205693
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 198240869848027590
         ChildIds: 10224011161543685799
         ChildIds: 1034879737705608252
@@ -2314,22 +2405,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 79.2802734
-            Y: -4.37402344
-            Z: 43.0900879
+            X: 0.659790874
+            Y: 46.6368713
+            Z: 38.8460159
           }
           Rotation {
-            Pitch: -28.5101624
-            Yaw: 170.386826
-            Roll: -143.130707
+            Pitch: -28.5101089
+            Yaw: -99.6131897
+            Roll: -143.130768
           }
           Scale {
-            X: 0.47533983
-            Y: -0.47533983
-            Z: 0.47533983
+            X: 0.327828348
+            Y: -0.327828348
+            Z: 0.327828348
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 9530142073297718953
         ChildIds: 911534661978508775
         ChildIds: 12681615845481662168
@@ -2566,22 +2657,22 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 76.875
-            Y: 0.299804688
-            Z: -4.26123047
+            X: -2.56360912
+            Y: 44.9779968
+            Z: 6.18915
           }
           Rotation {
-            Pitch: 8.64031887
-            Yaw: 178.545929
-            Roll: -9.63565063
+            Pitch: 8.64031219
+            Yaw: -91.4540863
+            Roll: -9.63571072
           }
           Scale {
-            X: 0.685126185
-            Y: 0.685126185
-            Z: 0.685126185
+            X: 0.472512096
+            Y: 0.472512096
+            Z: 0.472512096
           }
         }
-        ParentId: 12250328924300173314
+        ParentId: 9060668868039961118
         ChildIds: 9974759029271783579
         ChildIds: 4533199955222756263
         Collidable_v2 {

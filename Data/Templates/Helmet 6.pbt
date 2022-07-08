@@ -7,7 +7,7 @@ Assets {
       RootId: 9966481435544406473
       Objects {
         Id: 9966481435544406473
-        Name: "Helmet 5"
+        Name: "Helmet 6"
         Transform {
           Scale {
             X: 0.516034544
@@ -15,7 +15,92 @@ Assets {
             Z: 0.516034544
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6585441192959826313
+        ChildIds: 17452280252675401331
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 17452280252675401331
+        Name: "ClientContext"
+        Transform {
+          Location {
+            X: -2.05236411
+            Y: -1.15034139
+            Z: -64.8814697
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9966481435544406473
+        ChildIds: 5469632819495909453
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 5469632819495909453
+        Name: "Geo"
+        Transform {
+          Location {
+            X: 8.17435193e-07
+            Z: -7.62939453e-06
+          }
+          Rotation {
+            Yaw: 90
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 17452280252675401331
         ChildIds: 17587278493738275172
         ChildIds: 5184370491768666598
         ChildIds: 2653011145243788431
@@ -69,16 +154,20 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
+            X: -0.563691437
+            Y: -4.37611437
+            Z: 49.0340462
           }
           Rotation {
+            Yaw: 89.9999847
           }
           Scale {
-            X: 1.30547154
-            Y: 1.30547154
-            Z: 1.30547154
+            X: 0.639714
+            Y: 0.639714
+            Z: 0.639714
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -139,20 +228,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 2.15867877
-            Y: 0.274403274
-            Z: 0.142903879
+            X: -0.698156059
+            Y: -3.31830812
+            Z: 49.1040688
           }
           Rotation {
-            Pitch: -51.6061401
+            Pitch: -51.6060677
+            Yaw: 89.9999619
+            Roll: 5.49877586e-06
           }
           Scale {
-            X: 1.30547619
-            Y: 1.30547154
-            Z: 4.07513571
+            X: 0.639716208
+            Y: 0.639714
+            Z: 1.99691927
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -213,19 +304,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: 4.36756659
-            Z: -6.99069166
+            X: -0.563691914
+            Y: -2.23589969
+            Z: 45.608429
           }
           Rotation {
-            Pitch: 177.795975
+            Pitch: 2.20402
+            Yaw: -89.9999466
+            Roll: -179.999954
           }
           Scale {
-            X: 1.37703812
-            Y: 1.31029046
-            Z: 1.21221554
+            X: 0.674783349
+            Y: 0.64207536
+            Z: 0.594016135
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -286,19 +380,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -60.2379951
-            Z: 16.551899
+            X: -0.563687265
+            Y: -33.8942261
+            Z: 57.1448936
           }
           Rotation {
-            Pitch: 60.8708076
+            Pitch: 60.8707123
+            Yaw: 89.9999466
+            Roll: -3.50783102e-06
           }
           Scale {
-            X: 0.174461573
-            Y: 0.174461573
-            Z: 0.174461573
+            X: 0.0854905695
+            Y: 0.0854905695
+            Z: 0.0854905695
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 16133508029079994266
         ChildIds: 15642326729338357183
         UnregisteredParameters {
@@ -481,19 +578,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -54.1739883
-            Z: -16.2246494
+            X: -0.563687265
+            Y: -30.9227142
+            Z: 41.0835571
           }
           Rotation {
-            Pitch: 89.726593
+            Pitch: 89.7209244
+            Yaw: 89.9978714
+            Roll: 0.000354141084
           }
           Scale {
-            X: 0.430345029
-            Y: 0.430345029
-            Z: 0.430345029
+            X: 0.210879907
+            Y: 0.210879907
+            Z: 0.210879907
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 13426942490428765176
         ChildIds: 15332913862660576892
         UnregisteredParameters {
@@ -676,22 +776,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -58.0958328
-            Y: 20.7817898
-            Z: 7.85102034
+            X: -10.747282
+            Y: -32.8445091
+            Z: 52.8812447
           }
           Rotation {
-            Pitch: 64.3397903
-            Yaw: 1.87380981
-            Roll: 25.767971
+            Pitch: 64.3396683
+            Yaw: 91.8737259
+            Roll: 25.7678471
           }
           Scale {
-            X: 0.174461573
-            Y: 0.174461573
-            Z: 0.174461573
+            X: 0.0854905695
+            Y: 0.0854905695
+            Z: 0.0854905695
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 5211123433421291333
         ChildIds: 8602490532255322595
         UnregisteredParameters {
@@ -874,22 +974,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -58.0957031
-            Y: -21.2900391
-            Z: 7.85095215
+            X: 9.86896515
+            Y: -32.8444595
+            Z: 52.8811951
           }
           Rotation {
-            Pitch: 64.3397522
-            Yaw: -1.87380981
-            Roll: -25.7678833
+            Pitch: 64.3397217
+            Yaw: 88.1262
+            Roll: -25.7677956
           }
           Scale {
-            X: 0.174461573
-            Y: -0.174461573
-            Z: 0.174461573
+            X: 0.0854905695
+            Y: -0.0854905695
+            Z: 0.0854905695
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 10642936092755496347
         ChildIds: 6746420209166201097
         UnregisteredParameters {
@@ -1072,22 +1172,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -52.3183594
-            Y: -31.9697266
-            Z: -15.1260986
+            X: 15.1022778
+            Y: -30.0134163
+            Z: 41.6218605
           }
           Rotation {
-            Pitch: 72.5790787
-            Yaw: -26.9873352
-            Roll: -65.5448914
+            Pitch: 72.579
+            Yaw: 63.0128098
+            Roll: -65.5448608
           }
           Scale {
-            X: 0.174461573
-            Y: -0.174461573
-            Z: 0.174461573
+            X: 0.0854905695
+            Y: -0.0854905695
+            Z: 0.0854905695
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 11119196523257899658
         ChildIds: 11463165453253644983
         UnregisteredParameters {
@@ -1270,22 +1370,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -52.1107445
-            Y: 32.0701714
-            Z: -15.0905333
+            X: -16.2788696
+            Y: -29.9116688
+            Z: 41.6393
           }
           Rotation {
-            Pitch: 72.271225
-            Yaw: 32.3150482
+            Pitch: 72.2710571
+            Yaw: 122.315048
             Roll: 67.3353653
           }
           Scale {
-            X: 0.174461573
-            Y: 0.174461573
-            Z: 0.174461573
+            X: 0.0854905695
+            Y: 0.0854905695
+            Z: 0.0854905695
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 4119655308989417664
         ChildIds: 6992780477847620291
         UnregisteredParameters {
@@ -1468,19 +1568,22 @@ Assets {
         Name: "Ovoid - Hollow 01"
         Transform {
           Location {
-            X: 1.34400964
-            Z: -7.82177448
+            X: -0.563692153
+            Y: -3.71751642
+            Z: 45.2011757
           }
           Rotation {
-            Pitch: -163.462616
+            Pitch: -16.5373478
+            Yaw: -89.9999466
+            Roll: -179.999985
           }
           Scale {
-            X: 1.11772442
-            Y: 1.11772442
-            Z: 1.11772442
+            X: 0.547713161
+            Y: 0.547713161
+            Z: 0.547713161
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 12125496759813612856
         ChildIds: 14423918763466891492
         ChildIds: 6783362817830719191
@@ -2512,22 +2615,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -56.8691406
-            Y: -15.5029297
-            Z: 25.3504639
+            X: 7.03313637
+            Y: -32.243412
+            Z: 61.4563942
           }
           Rotation {
-            Pitch: 50.2440834
-            Yaw: -1.26867676
-            Roll: -25.0535889
+            Pitch: 50.2440453
+            Yaw: 88.7313
+            Roll: -25.0535278
           }
           Scale {
-            X: 0.0962643847
-            Y: -0.0962643847
-            Z: 0.0962643847
+            X: 0.0471719764
+            Y: -0.0471719764
+            Z: 0.0471719764
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 4522671096186097189
         ChildIds: 12310085265643369246
         UnregisteredParameters {
@@ -2710,22 +2813,22 @@ Assets {
         Name: "Sphere - Half"
         Transform {
           Location {
-            X: -56.8630371
-            Y: 14.7572184
-            Z: 25.350626
+            X: -7.79509115
+            Y: -32.2404099
+            Z: 61.4564934
           }
           Rotation {
-            Pitch: 50.2440605
-            Yaw: 1.26867318
-            Roll: 25.0535316
+            Pitch: 50.243988
+            Yaw: 91.268631
+            Roll: 25.0534134
           }
           Scale {
-            X: 0.0962643847
-            Y: 0.0962643847
-            Z: 0.0962643847
+            X: 0.0471719764
+            Y: 0.0471719764
+            Z: 0.0471719764
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 18345674972124362294
         ChildIds: 16675094566490750131
         UnregisteredParameters {
@@ -2908,20 +3011,22 @@ Assets {
         Name: "Helix -  0.75 Pointed Tapered"
         Transform {
           Location {
-            Y: -19.4674931
+            X: 8.97586346
+            Y: -4.37611341
+            Z: 49.0340462
           }
           Rotation {
-            Pitch: 34.3959274
-            Yaw: 107.921852
-            Roll: 0.514321625
+            Pitch: 34.395874
+            Yaw: -162.078125
+            Roll: 0.514321387
           }
           Scale {
-            X: 0.824064255
-            Y: 0.824064255
-            Z: 0.824064255
+            X: 0.403812259
+            Y: 0.403812259
+            Z: 0.403812259
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2982,22 +3087,22 @@ Assets {
         Name: "Helix -  0.75 Pointed Tapered"
         Transform {
           Location {
-            X: -10.3398438
-            Y: 17.4335938
-            Z: -0.191040039
+            X: -9.1065855
+            Y: -9.4428978
+            Z: 48.9404144
           }
           Rotation {
-            Pitch: 22.9736137
-            Yaw: -31.0518799
-            Roll: 75.7225723
+            Pitch: 22.9735851
+            Yaw: 58.9480667
+            Roll: 75.7224655
           }
           Scale {
-            X: 0.813812613
-            Y: -0.809265
-            Z: 0.813806236
+            X: 0.398788691
+            Y: -0.396560252
+            Z: 0.398785561
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3058,22 +3163,22 @@ Assets {
         Name: "Horn Curved Double - Horizontal"
         Transform {
           Location {
-            X: 2.98242188
-            Y: -34.6289062
-            Z: 43.3201904
+            X: 16.4053383
+            Y: -2.91465116
+            Z: 70.2620087
           }
           Rotation {
-            Pitch: -41.8263245
-            Yaw: -38.6368408
-            Roll: 83.4438553
+            Pitch: -41.8262787
+            Yaw: 51.3632278
+            Roll: 83.4438477
           }
           Scale {
-            X: 0.556774378
-            Y: -0.556774378
-            Z: 0.556774378
+            X: 0.272833496
+            Y: -0.272833496
+            Z: 0.272833496
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3134,21 +3239,22 @@ Assets {
         Name: "Helix -  1.0 Pointed Tapered"
         Transform {
           Location {
-            X: -4.21862793
-            Y: -9.70252132
-            Z: 24.551281
+            X: 4.19078445
+            Y: -6.44334698
+            Z: 61.0647888
           }
           Rotation {
-            Pitch: -20.7616882
-            Yaw: -71.0198364
+            Pitch: -20.7616634
+            Yaw: 18.9801807
+            Roll: 6.84799e-07
           }
           Scale {
-            X: 0.833083928
-            Y: 0.833083928
-            Z: 0.833083928
+            X: 0.408232123
+            Y: 0.408232123
+            Z: 0.408232123
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3209,20 +3315,21 @@ Assets {
         Name: "Helix -  1.0 Pointed Tapered"
         Transform {
           Location {
-            X: 54.2975922
-            Y: 29.5068665
-            Z: 88.0525742
+            X: -15.0227909
+            Y: 22.2310486
+            Z: 92.1820374
           }
           Rotation {
-            Pitch: -51.710907
+            Pitch: -51.7108421
+            Yaw: 89.9999619
           }
           Scale {
-            X: 0.677208841
-            Y: 0.677208841
-            Z: 0.677208841
+            X: 0.331849396
+            Y: 0.331849396
+            Z: 0.331849396
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3283,21 +3390,22 @@ Assets {
         Name: "Horn Curved Double - Horizontal"
         Transform {
           Location {
-            X: 71.2049637
-            Y: 25.7816067
-            Z: 48.9165916
+            X: -13.1973219
+            Y: 30.5160904
+            Z: 73.0044098
           }
           Rotation {
-            Pitch: -64.6282349
-            Roll: -60.5223083
+            Pitch: -64.6281586
+            Yaw: 89.999939
+            Roll: -60.5222206
           }
           Scale {
-            X: 0.614660919
-            Y: 0.614660919
-            Z: 0.614660919
+            X: 0.301199317
+            Y: 0.301199317
+            Z: 0.301199317
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3358,21 +3466,22 @@ Assets {
         Name: "Horn Curved Double - Horizontal"
         Transform {
           Location {
-            X: 71.2050781
-            Y: -33.0654297
-            Z: 48.9178467
+            X: 15.6391888
+            Y: 30.5161533
+            Z: 73.0050049
           }
           Rotation {
-            Pitch: -75.9028931
-            Roll: 60.5222092
+            Pitch: -75.9028473
+            Yaw: 90.0000534
+            Roll: 60.5221443
           }
           Scale {
-            X: 0.614660919
-            Y: -0.614660919
-            Z: 0.614660919
+            X: 0.301199317
+            Y: -0.301199317
+            Z: 0.301199317
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3433,22 +3542,22 @@ Assets {
         Name: "Helix -  1.0 Pointed Tapered"
         Transform {
           Location {
-            X: 70.6855469
-            Y: -48.5859375
-            Z: 71.0765381
+            X: 23.244627
+            Y: 30.2615738
+            Z: 83.863327
           }
           Rotation {
-            Pitch: -51.3637695
-            Yaw: 7.53157759
-            Roll: -8.45587158
+            Pitch: -51.363739
+            Yaw: 97.5316315
+            Roll: -8.45590496
           }
           Scale {
-            X: 0.677208841
-            Y: -0.677208841
-            Z: 0.677208841
+            X: 0.331849396
+            Y: -0.331849396
+            Z: 0.331849396
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3509,21 +3618,22 @@ Assets {
         Name: "Horn Curved Double - Vertical"
         Transform {
           Location {
-            X: -14.4103556
-            Y: 51.4657516
-            Z: -8.12718201
+            X: -25.7831802
+            Y: -11.4375505
+            Z: 45.0515213
           }
           Rotation {
-            Pitch: -60.5770874
-            Roll: 18.9827728
+            Pitch: -60.577
+            Yaw: 89.9999542
+            Roll: 18.9827576
           }
           Scale {
-            X: 0.605945826
-            Y: 0.605945826
-            Z: 0.605945826
+            X: 0.296928734
+            Y: 0.296928734
+            Z: 0.296928734
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3584,22 +3694,22 @@ Assets {
         Name: "Horn Curved Double - Horizontal"
         Transform {
           Location {
-            X: 4.16743565
-            Y: 38.7552032
-            Z: 36.3256493
+            X: -19.5547028
+            Y: -2.33397269
+            Z: 66.8345337
           }
           Rotation {
-            Pitch: -57.0976257
-            Yaw: 38.1232071
-            Roll: -82.8312378
+            Pitch: -57.0975647
+            Yaw: 128.123093
+            Roll: -82.8311539
           }
           Scale {
-            X: 0.556774378
-            Y: 0.556774378
-            Z: 0.556774378
+            X: 0.272833496
+            Y: 0.272833496
+            Z: 0.272833496
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3660,20 +3770,21 @@ Assets {
         Name: "Horn - Corkscrew 100cm 02"
         Transform {
           Location {
-            X: 131.798279
-            Y: -3.29851651
-            Z: 64.2684174
+            X: 1.05264926
+            Y: 60.2083206
+            Z: 80.5271835
           }
           Rotation {
-            Pitch: -55.9442444
+            Pitch: -55.9441948
+            Yaw: 89.9999619
           }
           Scale {
-            X: 1.32414174
-            Y: 1.32414174
-            Z: 1.32414174
+            X: 0.648862839
+            Y: 0.648862839
+            Z: 0.648862839
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3734,22 +3845,22 @@ Assets {
         Name: "Horn Curved Double - Vertical"
         Transform {
           Location {
-            X: -14.4101562
-            Y: -51.0459
-            Z: -8.1270752
+            X: 24.4500751
+            Y: -11.4374466
+            Z: 45.0515594
           }
           Rotation {
-            Pitch: -43.4389648
-            Yaw: 21.9308357
-            Roll: -45.0761719
+            Pitch: -43.4389267
+            Yaw: 111.930748
+            Roll: -45.0761566
           }
           Scale {
-            X: 0.605945826
-            Y: -0.605945826
-            Z: 0.605945826
+            X: 0.296928734
+            Y: -0.296928734
+            Z: 0.296928734
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -3810,19 +3921,20 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 1.07911396
-            Y: 0.137201637
-            Z: 0.000126895262
+            X: -0.630924
+            Y: -3.84732246
+            Z: 49.0341072
           }
           Rotation {
+            Yaw: 89.9999847
           }
           Scale {
-            X: 1.03224421
-            Y: 1.03224421
-            Z: 1.03224421
+            X: 0.505825698
+            Y: 0.505825698
+            Z: 0.505825698
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 7817718516487446555
         ChildIds: 8553718798919858600
         Collidable_v2 {
@@ -3998,20 +4110,21 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: 1.07911396
-            Y: 0.137201637
-            Z: 0.000126895262
+            X: -0.630924
+            Y: -3.84732246
+            Z: 49.0341072
           }
           Rotation {
             Pitch: 6.83018879e-06
+            Yaw: 89.9999847
           }
           Scale {
-            X: 1.03224421
-            Y: 1.03224421
-            Z: 1.03224421
+            X: 0.505825698
+            Y: 0.505825698
+            Z: 0.505825698
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         ChildIds: 11776439913000340389
         ChildIds: 18035071749133185783
         Collidable_v2 {
@@ -4187,22 +4300,22 @@ Assets {
         Name: "Ovoid - Hollow 01"
         Transform {
           Location {
-            X: 9.15346241
-            Y: -28.2824612
-            Z: -64.8813858
+            X: 13.295414
+            Y: 0.109310374
+            Z: 17.2405281
           }
           Rotation {
-            Pitch: -2.27859497
-            Yaw: -11.4497681
-            Roll: 43.2984314
+            Pitch: -2.27859187
+            Yaw: 78.5501328
+            Roll: 43.2984238
           }
           Scale {
-            X: 0.303408831
-            Y: 0.303408831
-            Z: 0.303408831
+            X: 0.148677975
+            Y: 0.148677975
+            Z: 0.148677975
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4260,22 +4373,22 @@ Assets {
         Name: "Ovoid - Hollow 01"
         Transform {
           Location {
-            X: 9.15429688
-            Y: 33.5292969
-            Z: -64.8814697
+            X: -16.993885
+            Y: 0.109717131
+            Z: 17.2404785
           }
           Rotation {
-            Pitch: -2.27859497
-            Yaw: 11.4498148
-            Roll: -43.2984619
+            Pitch: -2.2785852
+            Yaw: 101.44989
+            Roll: -43.2985039
           }
           Scale {
-            X: 0.303408831
-            Y: -0.303408831
-            Z: 0.303408831
+            X: 0.148677975
+            Y: -0.148677975
+            Z: 0.148677975
           }
         }
-        ParentId: 9966481435544406473
+        ParentId: 5469632819495909453
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

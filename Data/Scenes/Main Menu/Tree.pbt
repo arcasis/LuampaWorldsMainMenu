@@ -17,7 +17,6 @@ Objects {
   ChildIds: 1696798925401821095
   ChildIds: 4634768130195432523
   ChildIds: 6585441192959826313
-  ChildIds: 4270615488375247189
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,33 +34,6 @@ Objects {
     Value: "mc:eproxyrelevance:critical"
   }
   IsReplicationEnabledByDefault: true
-}
-Objects {
-  Id: 4270615488375247189
-  Name: "Bobble Helmet 1a"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 16902694085246583461
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Bobble Helmet 1a"
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7658389966389339920
-    }
-  }
 }
 Objects {
   Id: 6585441192959826313

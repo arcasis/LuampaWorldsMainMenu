@@ -7,7 +7,7 @@ Assets {
       RootId: 4411171083336639712
       Objects {
         Id: 4411171083336639712
-        Name: "Helmet 4"
+        Name: "Helmet 5"
         Transform {
           Scale {
             X: 0.374288
@@ -15,7 +15,92 @@ Assets {
             Z: 0.374288
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 6585441192959826313
+        ChildIds: 477012035655573632
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 477012035655573632
+        Name: "ClientContext"
+        Transform {
+          Location {
+            X: -49.7614021
+            Y: -3.01003695
+            Z: -37.0018959
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4411171083336639712
+        ChildIds: 743471655095209297
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 743471655095209297
+        Name: "Geo"
+        Transform {
+          Location {
+            X: -7.10920858e-06
+            Y: -5.20186e-07
+          }
+          Rotation {
+            Yaw: 90
+          }
+          Scale {
+            X: 2
+            Y: 2
+            Z: 2
+          }
+        }
+        ParentId: 477012035655573632
         ChildIds: 16704799941208462519
         ChildIds: 2002670307034194852
         ChildIds: 2830863115300654645
@@ -63,20 +148,22 @@ Assets {
         Name: "Sci-fi Chair Base 02"
         Transform {
           Location {
-            X: -14.9130859
-            Z: 15.8742676
+            X: -1.65102053
+            Y: -19.7156601
+            Z: 29.3603325
           }
           Rotation {
-            Pitch: 180
-            Yaw: 98.9078369
+            Pitch: -1.36603776e-05
+            Yaw: 7.46695614
+            Roll: 179.999954
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.774101913
+            Y: 0.774101913
+            Z: 0.774101913
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -118,21 +205,21 @@ Assets {
         Name: "Sci-fi Satellite Piston"
         Transform {
           Location {
-            X: -70.5283203
-            Y: 30.534668
-            Z: 42.9196777
+            X: -26.3630962
+            Y: -62.1594887
+            Z: 50.2962418
           }
           Rotation {
-            Yaw: 180
-            Roll: 13.9182577
+            Yaw: -91.4409
+            Roll: 13.9183216
           }
           Scale {
-            X: 0.147695154
-            Y: 0.147695154
-            Z: 0.147695154
+            X: 0.114331104
+            Y: 0.114331104
+            Z: 0.114331104
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -174,19 +261,20 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -42.3300781
-            Y: -21.125
-            Z: 27.3540039
+            X: 14.1629953
+            Y: -41.343708
+            Z: 38.2468262
           }
           Rotation {
+            Yaw: 88.5590134
           }
           Scale {
-            X: 1.54709697
-            Y: 1.54709697
-            Z: 1.54709697
+            X: 1.19761086
+            Y: 1.19761086
+            Z: 1.19761086
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         ChildIds: 257308170199212530
         ChildIds: 15735132168966334529
         ChildIds: 9117594384799294622
@@ -518,20 +606,22 @@ Assets {
         Name: "Sci-fi Satellite Piston"
         Transform {
           Location {
-            X: -70.9794922
-            Y: -26.3129883
-            Z: 49.6359863
+            X: 17.62006
+            Y: -63.6152344
+            Z: 55.4953537
           }
           Rotation {
-            Roll: 40.1882553
+            Pitch: -6.83018879e-06
+            Yaw: 88.559021
+            Roll: 40.1882
           }
           Scale {
-            X: 0.147695154
-            Y: 0.147695154
-            Z: 0.147695154
+            X: 0.114331104
+            Y: 0.114331104
+            Z: 0.114331104
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -573,20 +663,20 @@ Assets {
         Name: "Sci-fi Chair Support 01"
         Transform {
           Location {
-            X: -68.3378906
-            Y: 0.694335938
-            Z: -13.244873
+            X: -3.22831798
+            Y: -61.0452919
+            Z: 6.81915092
           }
           Rotation {
-            Yaw: 90
+            Yaw: 178.55899
           }
           Scale {
-            X: 1.00000012
-            Y: 0.803789079
-            Z: 1
+            X: 0.774102032
+            Y: 0.622214794
+            Z: 0.774101913
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -644,20 +734,20 @@ Assets {
         Name: "Sci-fi Satellite Base Barrel"
         Transform {
           Location {
-            X: -15.3729391
-            Y: -0.386149853
-            Z: 11.4527349
+            X: -1.36114943
+            Y: -20.0790329
+            Z: 25.9376144
           }
           Rotation {
-            Yaw: 44.2112846
+            Yaw: 132.770248
           }
           Scale {
-            X: 0.245165572
-            Y: 0.24341096
-            Z: 0.249982789
+            X: 0.189783126
+            Y: 0.188424885
+            Z: 0.193512172
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -715,19 +805,20 @@ Assets {
         Name: "Group"
         Transform {
           Location {
-            X: -42.3300781
-            Y: 22.6010742
-            Z: 27.3540039
+            X: -19.6747284
+            Y: -40.4925385
+            Z: 38.2468185
           }
           Rotation {
+            Yaw: 88.5590439
           }
           Scale {
-            X: 1.54709697
-            Y: -1.54709697
-            Z: 1.54709697
+            X: 1.19761086
+            Y: -1.19761086
+            Z: 1.19761086
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         ChildIds: 703746440862103668
         ChildIds: 7979925287825187553
         ChildIds: 8578164110880414354
@@ -1059,21 +1150,22 @@ Assets {
         Name: "Sci-fi Satellite Dish"
         Transform {
           Location {
-            X: 0.824482143
-            Y: -8.06218338
-            Z: 102.192734
+            X: 4.8942976
+            Y: -7.69397259
+            Z: 96.1796188
           }
           Rotation {
-            Pitch: -10.6073
+            Pitch: -10.6072836
+            Yaw: 88.5590134
             Roll: 174.756027
           }
           Scale {
-            X: 0.155269787
-            Y: 0.133321568
-            Z: 0.227559984
+            X: 0.120194644
+            Y: 0.103204489
+            Z: 0.176154628
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1131,22 +1223,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -86.8602371
-            Y: -3.9032445
-            Z: -11.7019062
+            X: -0.0310087875
+            Y: -75.4684219
+            Z: 8.01356506
           }
           Rotation {
-            Pitch: -6.27001953
-            Yaw: -90.1321716
-            Roll: -80.4657
+            Pitch: -6.27001095
+            Yaw: -1.57310069
+            Roll: -80.4655838
           }
           Scale {
-            X: 0.0553728342
-            Y: 0.0553728491
-            Z: 0.0247356314
+            X: 0.0428642146
+            Y: 0.0428642295
+            Z: 0.0191479
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1190,22 +1282,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -86.7219543
-            Y: 5.15301323
-            Z: -11.1729069
+            X: -7.03656387
+            Y: -75.1851196
+            Z: 8.42306423
           }
           Rotation {
-            Pitch: 9.02808857
-            Yaw: -92.1404419
-            Roll: -80.5629578
+            Pitch: 9.02806854
+            Yaw: -3.58137155
+            Roll: -80.5628281
           }
           Scale {
-            X: 0.064515017
-            Y: 0.0526537225
-            Z: 0.0288118459
+            X: 0.0499412
+            Y: 0.0407593474
+            Z: 0.0223033037
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -1249,22 +1341,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -86.3105469
-            Y: 15.3359375
-            Z: -10.3994141
+            X: -14.908679
+            Y: -74.6685257
+            Z: 9.02182484
           }
           Rotation {
-            Pitch: 4.75823069
-            Yaw: -89.850647
-            Roll: -76.7787476
+            Pitch: 4.75821686
+            Yaw: -1.29160476
+            Roll: -76.7786484
           }
           Scale {
-            X: 0.0515711792
-            Y: 0.0515711792
-            Z: 0.0230373722
+            X: 0.0399213471
+            Y: 0.0399213471
+            Z: 0.0178332776
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1306,22 +1398,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -86.3105469
-            Y: -12.9750977
-            Z: -10.8444824
+            X: 7.00000572
+            Y: -75.2196426
+            Z: 8.67729759
           }
           Rotation {
-            Pitch: -11.5849609
-            Yaw: -89.8479614
-            Roll: -76.8206787
+            Pitch: -11.5849562
+            Yaw: -1.28891492
+            Roll: -76.8205643
           }
           Scale {
-            X: 0.0515711792
-            Y: 0.0515711792
-            Z: 0.0230373722
+            X: 0.0399213471
+            Y: 0.0399213471
+            Z: 0.0178332776
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1363,22 +1455,22 @@ Assets {
         Name: "Sci-fi Satellite Swivel"
         Transform {
           Location {
-            X: -88.1543579
-            Y: 1.03321183
-            Z: -37.0018959
+            X: -3.87630224
+            Y: -76.3737946
+            Z: -11.571208
           }
           Rotation {
             Pitch: 7.05407572
-            Yaw: 88.1335526
-            Roll: -69.604187
+            Yaw: 176.692551
+            Roll: -69.6042
           }
           Scale {
-            X: 0.188437626
-            Y: 0.161350027
-            Z: 0.138566434
+            X: 0.145869926
+            Y: 0.124901369
+            Z: 0.107264549
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -1436,22 +1528,22 @@ Assets {
         Name: "Sci-fi Cryo Chamber Back"
         Transform {
           Location {
-            X: -1.25759614
-            Y: -35.181385
-            Z: 18.2644978
+            X: 25.8401432
+            Y: -9.83311176
+            Z: 31.2106209
           }
           Rotation {
             Pitch: 0.324802786
-            Yaw: 89.2819595
-            Roll: 127.199509
+            Yaw: 177.840973
+            Roll: 127.199409
           }
           Scale {
-            X: 0.194428399
-            Y: 0.162422225
-            Z: 0.162439048
+            X: 0.150507405
+            Y: 0.125731364
+            Z: 0.125744388
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1509,22 +1601,22 @@ Assets {
         Name: "Sci-fi Cryo Chamber Back"
         Transform {
           Location {
-            X: 1.75
-            Y: 34.6328125
-            Z: 25.0009766
+            X: -28.1274986
+            Y: -6.14665413
+            Z: 36.4253235
           }
           Rotation {
-            Pitch: 4.00649309
-            Yaw: -89.2804565
-            Roll: -127.15387
+            Pitch: 4.00648642
+            Yaw: -0.721417964
+            Roll: -127.153854
           }
           Scale {
-            X: 0.194428399
-            Y: -0.162422225
-            Z: 0.162439048
+            X: 0.150507405
+            Y: -0.125731364
+            Z: 0.125744388
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1582,22 +1674,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -85.0416794
-            Y: -6.69239473
-            Z: -32.243515
+            X: 2.16279292
+            Y: -74.1154251
+            Z: -7.88773632
           }
           Rotation {
-            Pitch: -26.0348206
-            Yaw: -86.8563232
-            Roll: -103.234985
+            Pitch: -26.0347881
+            Yaw: 1.70270944
+            Roll: -103.235008
           }
           Scale {
-            X: 0.0693875253
-            Y: 0.0693875253
-            Z: 0.0309961122
+            X: 0.0537130162
+            Y: 0.0537130162
+            Z: 0.0239941515
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1639,22 +1731,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -86.0409698
-            Y: 3.03179812
-            Z: -26.3455963
+            X: -5.38179064
+            Y: -74.6994324
+            Z: -3.32214689
           }
           Rotation {
-            Pitch: 15.5888338
-            Yaw: 91.0186386
-            Roll: 114.38884
+            Pitch: 15.5887995
+            Yaw: 179.577637
+            Roll: 114.388695
           }
           Scale {
-            X: 0.0721857
-            Y: 0.0721857
-            Z: 0.0322460718
+            X: 0.0558790937
+            Y: 0.0558790937
+            Z: 0.0249617472
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1696,22 +1788,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -88.0473862
-            Y: -20.703373
-            Z: -27.8954144
+            X: 12.9467783
+            Y: -76.7141342
+            Z: -4.52186346
           }
           Rotation {
-            Pitch: -0.0800170898
-            Yaw: 84.8000488
-            Roll: 115.63253
+            Pitch: -0.0800224915
+            Yaw: 173.359039
+            Roll: 115.632393
           }
           Scale {
-            X: 0.0723788813
-            Y: 0.0723788813
-            Z: 0.032332357
+            X: 0.0560286343
+            Y: 0.0560286343
+            Z: 0.0250285398
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1753,22 +1845,22 @@ Assets {
         Name: "Sci-fi Satellite Base Support"
         Transform {
           Location {
-            X: -88.0734787
-            Y: 22.9080791
-            Z: -25.8433399
+            X: -20.8027477
+            Y: -75.885376
+            Z: -2.93334723
           }
           Rotation {
-            Pitch: -21.8005981
-            Yaw: 90.8495865
-            Roll: 119.979012
+            Pitch: -21.8005753
+            Yaw: 179.4086
+            Roll: 119.978973
           }
           Scale {
-            X: 0.0613954663
-            Y: 0.0613954663
-            Z: 0.0274259541
+            X: 0.0475263484
+            Y: 0.0475263484
+            Z: 0.0212304853
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1810,22 +1902,22 @@ Assets {
         Name: "Sci-fi Antenna Mast 01"
         Transform {
           Location {
-            X: -0.216557011
-            Y: -6.71326733
-            Z: 95.5897
+            X: 3.83017063
+            Y: -8.47333
+            Z: 91.0682068
           }
           Rotation {
-            Pitch: -5.52172852
-            Yaw: 2.24518156
-            Roll: -34.8449707
+            Pitch: -5.52172947
+            Yaw: 90.804184
+            Roll: -34.844986
           }
           Scale {
-            X: 0.225357041
-            Y: 0.225357041
-            Z: 0.225357041
+            X: 0.17444931
+            Y: 0.17444931
+            Z: 0.17444931
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1867,22 +1959,22 @@ Assets {
         Name: "Sci-fi Chair Base 02"
         Transform {
           Location {
-            X: -0.420068443
-            Y: -8.33614063
-            Z: 92.9029617
+            X: 5.08207798
+            Y: -8.66241741
+            Z: 88.9884
           }
           Rotation {
-            Pitch: -9.94113159
-            Yaw: 2.34414053
-            Roll: -13.3391113
+            Pitch: -9.94113445
+            Yaw: 90.9031525
+            Roll: -13.3391867
           }
           Scale {
-            X: 0.307949245
-            Y: 0.307949245
-            Z: 0.307949245
+            X: 0.238384098
+            Y: 0.238384098
+            Z: 0.238384098
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:color"
@@ -1934,22 +2026,22 @@ Assets {
         Name: "Sci-fi Satellite Dish"
         Transform {
           Location {
-            X: 10.9217796
-            Y: -51.7545166
-            Z: 160.111954
+            X: 38.902462
+            Y: -0.730643
+            Z: 141.015
           }
           Rotation {
-            Pitch: 55.7542763
-            Yaw: -49.9061584
-            Roll: -86.7487488
+            Pitch: 55.7542038
+            Yaw: 38.6528358
+            Roll: -86.7486496
           }
           Scale {
-            X: 0.0569162406
-            Y: 0.0569162406
-            Z: 0.0569162406
+            X: 0.0440589711
+            Y: 0.0440589711
+            Z: 0.0440589711
           }
         }
-        ParentId: 4411171083336639712
+        ParentId: 743471655095209297
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
