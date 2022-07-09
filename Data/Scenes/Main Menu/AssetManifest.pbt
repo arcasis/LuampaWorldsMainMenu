@@ -64,19 +64,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15726207505766958716
-  Name: "Speed Duck Helmet"
-  PlatformAssetType: 24
-  NetReferenceAsset {
-    NetReference {
-      Key: "d099e2ee0f694d6380c060b644648212"
-      Type {
-        Value: "mc:enetreferencetype:creatorperk"
-      }
-    }
-  }
-}
-Assets {
   Id: 15642408230983332375
   Name: "``On control\302\264\302\264 Helmet"
   PlatformAssetType: 24

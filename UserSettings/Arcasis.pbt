@@ -11323,6 +11323,25 @@ DebugPerks {
     }
   }
   Perks {
+    PerkId: "d099e2ee0f694d6380c060b644648212"
+    PerkCounts {
+      key: 0
+      value: 1
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
     PerkId: "64183ee9c6364632bfca1902fc267a19"
     PerkCounts {
       key: 0
@@ -11421,7 +11440,7 @@ DebugPerks {
     PerkId: "16d2fa62d97f4736bade586f7af89929"
     PerkCounts {
       key: 0
-      value: 1
+      value: 0
     }
     PerkCounts {
       key: 1
