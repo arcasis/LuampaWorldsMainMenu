@@ -10,7 +10,7 @@ function PerkChanged(player, perk)
 
     local helmets = player.serverUserData.helmets
 
-    if perk == '"Speed Duck" Helmet' then
+    if perk == "Speed Duck Helmet" then
         helmets[2] = 1
         print("Helmet 2 purchased")
     elseif perk == '"Serve Please" Helmet' then
