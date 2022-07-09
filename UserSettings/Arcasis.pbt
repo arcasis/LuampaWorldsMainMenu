@@ -11247,10 +11247,238 @@ ObjectSettings {
 }
 DebugPerks {
   Perks {
+    PerkId: "bdb75b5a684d4f86ac1f18c098e29c7b"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
     PerkId: "7c81eda56458487aace52eefd9b583ae"
     PerkCounts {
       key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "f1ada5fb95334b3ebecdb85fb94ccda0"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "97abe4480db4475fa4f6145917016f14"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "64183ee9c6364632bfca1902fc267a19"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "b81d548224c94cbda6d48e648181058f"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "c24072c38f4945bfb1d14ceb216d40ea"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "6bfa59e986ea447ab720d020356d95cd"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "16edbbf9cb2841a994ac94752cee7d4c"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "16d2fa62d97f4736bade586f7af89929"
+    PerkCounts {
+      key: 0
       value: 1
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "a16b42d9cf264f1caac8aec8b0ef8bfa"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "31a8f76d12f441629c5f95c0db9b4ab3"
+    PerkCounts {
+      key: 0
+      value: 0
+    }
+    PerkCounts {
+      key: 1
+      value: 0
+    }
+    PerkCounts {
+      key: 2
+      value: 0
+    }
+    PerkCounts {
+      key: 3
+      value: 0
+    }
+  }
+  Perks {
+    PerkId: "aeb71cc8fd5f4b58bca6b84c701c25d3"
+    PerkCounts {
+      key: 0
+      value: 0
     }
     PerkCounts {
       key: 1

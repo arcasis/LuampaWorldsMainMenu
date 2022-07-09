@@ -73085,36 +73085,6 @@ Objects {
     }
   }
   ParentId: 16065307972936683234
-  ChildIds: 6472000292457637546
-  ChildIds: 17753683031813971436
-  ChildIds: 16896927575367820392
-  ChildIds: 2212507062883725528
-  ChildIds: 15969670420267021738
-  ChildIds: 17114478483050922786
-  ChildIds: 1879136602007917855
-  ChildIds: 3382422828196030704
-  ChildIds: 1460895568225243027
-  ChildIds: 9411798248277603226
-  ChildIds: 8101066546713633544
-  ChildIds: 1097940764193948564
-  ChildIds: 18001228430117882619
-  ChildIds: 259364145076736668
-  ChildIds: 11111092368384989479
-  ChildIds: 1302359734021805272
-  ChildIds: 4180276189715016257
-  ChildIds: 6369778030654620644
-  ChildIds: 6074871999573514588
-  ChildIds: 75223998299261091
-  ChildIds: 3737671496493186867
-  ChildIds: 5081132383178810161
-  ChildIds: 14920307236942046070
-  ChildIds: 2570949021294081164
-  ChildIds: 2251584374452765081
-  ChildIds: 580294351048973649
-  ChildIds: 12720750626028273940
-  ChildIds: 2224436807366343026
-  ChildIds: 2648775316518718022
-  ChildIds: 5566489821507198353
   ChildIds: 6480700493207134981
   ChildIds: 7291533654656129621
   Collidable_v2 {
@@ -97114,72 +97084,76 @@ Objects {
   IsReplicationEnabledByDefault: true
 }
 Objects {
-  Id: 5566489821507198353
-  Name: "Tire Worn"
+  Id: 5729826917264949750
+  Name: "ClientContext"
   Transform {
     Location {
-      X: 252.979
-      Y: -1175.4624
-      Z: 85.4286041
     }
     Rotation {
-      Roll: 72.9874802
     }
     Scale {
-      X: 1.15874112
-      Y: -1.15874112
-      Z: 1.15874112
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
-  ParentId: 6886469498598604258
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 10834081793086782683
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
-      Bool: false
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:utile"
-      Float: 1.06136596
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 0.492449522
-    }
-  }
+  ParentId: 16065307972936683234
+  ChildIds: 17129873224972098340
+  ChildIds: 9223354440096485133
+  ChildIds: 17986386124106456614
+  ChildIds: 9906699973644061237
+  ChildIds: 17749405240085622520
+  ChildIds: 5282137661668090551
+  ChildIds: 15630991729437494536
+  ChildIds: 5566489821507198353
+  ChildIds: 6472000292457637546
+  ChildIds: 17753683031813971436
+  ChildIds: 16896927575367820392
+  ChildIds: 2212507062883725528
+  ChildIds: 15969670420267021738
+  ChildIds: 17114478483050922786
+  ChildIds: 1879136602007917855
+  ChildIds: 3382422828196030704
+  ChildIds: 1460895568225243027
+  ChildIds: 9411798248277603226
+  ChildIds: 8101066546713633544
+  ChildIds: 1097940764193948564
+  ChildIds: 18001228430117882619
+  ChildIds: 259364145076736668
+  ChildIds: 11111092368384989479
+  ChildIds: 1302359734021805272
+  ChildIds: 4180276189715016257
+  ChildIds: 6369778030654620644
+  ChildIds: 6074871999573514588
+  ChildIds: 75223998299261091
+  ChildIds: 3737671496493186867
+  ChildIds: 5081132383178810161
+  ChildIds: 14920307236942046070
+  ChildIds: 2570949021294081164
+  ChildIds: 2251584374452765081
+  ChildIds: 580294351048973649
+  ChildIds: 12720750626028273940
+  ChildIds: 2224436807366343026
+  ChildIds: 2648775316518718022
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
-  CoreMesh {
-    MeshAsset {
-      Id: 14096773816451731951
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableAngularMotionBlur: true
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
+  NetworkContext {
+    MinDetailLevel {
+      Value: "mc:edetaillevel:low"
+    }
+    MaxDetailLevel {
+      Value: "mc:edetaillevel:ultra"
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -97191,21 +97165,21 @@ Objects {
   Name: "Urban Vehicle Car - Rim 01"
   Transform {
     Location {
-      X: 252.979
-      Y: -1169.72485
-      Z: 87.1840515
+      X: 734.560059
+      Y: 316.447266
+      Z: 168.284988
     }
     Rotation {
-      Yaw: 179.999985
-      Roll: 17.0122185
+      Yaw: -179.999969
+      Roll: -17.012228
     }
     Scale {
       X: 1.1
-      Y: -1.30000007
+      Y: 1.30000007
       Z: 1.1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -97278,22 +97252,22 @@ Objects {
   Name: "Group"
   Transform {
     Location {
-      X: -176.776855
-      Y: -1288.88477
-      Z: 172.510849
+      X: 304.804199
+      Y: 435.607178
+      Z: 253.611786
     }
     Rotation {
-      Pitch: -35.5994568
-      Yaw: 162.254364
-      Roll: 27.0154057
+      Pitch: -35.5994492
+      Yaw: -162.254364
+      Roll: -27.0153942
     }
     Scale {
       X: 1
-      Y: -1
+      Y: 1
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   ChildIds: 12986535741138475460
   ChildIds: 18106136850077729580
   ChildIds: 15144912842488346770
@@ -97551,22 +97525,22 @@ Objects {
   Name: "Turret Root"
   Transform {
     Location {
-      X: -950.371094
-      Y: -352.26474
-      Z: 31.9299011
+      X: -468.790039
+      Y: -501.012848
+      Z: 113.030838
     }
     Rotation {
       Pitch: 29.7022514
-      Yaw: -97.9174347
-      Roll: -16.8124371
+      Yaw: 97.91745
+      Roll: 16.8124504
     }
     Scale {
       X: 1
-      Y: -1
+      Y: 1
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   ChildIds: 3797628279697755177
   ChildIds: 16490257099010882621
   ChildIds: 2201931802876172481
@@ -100314,22 +100288,22 @@ Objects {
   Name: "Urban Vehicle Car - Front Seat Bottom 01"
   Transform {
     Location {
-      X: 165.347168
-      Y: 48.4329224
-      Z: 45.9330292
+      X: 646.928223
+      Y: -901.71051
+      Z: 127.033966
     }
     Rotation {
-      Pitch: 6.61164331
-      Yaw: -89.3540497
-      Roll: 95.59
+      Pitch: 6.61165
+      Yaw: 89.3540497
+      Roll: -95.590004
     }
     Scale {
       X: 1
-      Y: -0.945039034
+      Y: 0.945039034
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -100377,22 +100351,22 @@ Objects {
   Name: "Urban Vehicle Car - Front Seat Top 01"
   Transform {
     Location {
-      X: 179.944336
-      Y: 77.8607788
-      Z: 41.0543671
+      X: 661.525391
+      Y: -931.138367
+      Z: 122.155304
     }
     Rotation {
-      Pitch: 6.61164331
-      Yaw: -89.3540497
-      Roll: 95.59
+      Pitch: 6.61165
+      Yaw: 89.3540497
+      Roll: -95.590004
     }
     Scale {
       X: 1
-      Y: -0.945039034
+      Y: 0.945039034
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -100440,22 +100414,22 @@ Objects {
   Name: "Urban Vehicle Car - Front Seat Top 01"
   Transform {
     Location {
-      X: 211.078613
-      Y: 55.0428467
-      Z: 41.0543671
+      X: 692.659668
+      Y: -908.320435
+      Z: 122.155304
     }
     Rotation {
       Pitch: 6.61165
-      Yaw: -89.3540497
-      Roll: 95.59
+      Yaw: 89.3540497
+      Roll: -95.59
     }
     Scale {
       X: 1
-      Y: -0.945039034
+      Y: 0.945039034
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -100503,22 +100477,22 @@ Objects {
   Name: "Urban Vehicle Car - Front Seat Top 01"
   Transform {
     Location {
-      X: 239.55957
-      Y: 34.0633545
-      Z: 41.0543671
+      X: 721.140625
+      Y: -887.340942
+      Z: 122.155304
     }
     Rotation {
       Pitch: 6.61165
-      Yaw: -89.3540497
-      Roll: 95.59
+      Yaw: 89.3540497
+      Roll: -95.59
     }
     Scale {
       X: 1
-      Y: -0.945039034
+      Y: 0.945039034
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -100566,22 +100540,22 @@ Objects {
   Name: "Urban Vehicle Car - Front Seat Bottom 01"
   Transform {
     Location {
-      X: 196.481445
-      Y: 25.6149902
-      Z: 45.9330292
+      X: 678.0625
+      Y: -878.892578
+      Z: 127.033966
     }
     Rotation {
       Pitch: 6.61165
-      Yaw: -89.3540497
-      Roll: 95.59
+      Yaw: 89.3540497
+      Roll: -95.59
     }
     Scale {
       X: 1
-      Y: -0.945039034
+      Y: 0.945039034
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -100629,22 +100603,22 @@ Objects {
   Name: "Urban Vehicle Car - Front Seat Bottom 01"
   Transform {
     Location {
-      X: 224.962402
-      Y: 4.63549805
-      Z: 45.9330292
+      X: 706.543457
+      Y: -857.913086
+      Z: 127.033966
     }
     Rotation {
       Pitch: 6.61165
-      Yaw: -89.3540497
-      Roll: 95.59
+      Yaw: 89.3540497
+      Roll: -95.59
     }
     Scale {
       X: 1
-      Y: -0.945039034
+      Y: 0.945039034
       Z: 1
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -100692,22 +100666,22 @@ Objects {
   Name: "Military Mobile Radar 01 - Antenna 01"
   Transform {
     Location {
-      X: -373.382812
-      Y: 31.1763306
-      Z: 14.4259338
+      X: 108.198242
+      Y: -884.453918
+      Z: 95.5268707
     }
     Rotation {
       Pitch: -1.10097861
-      Yaw: 28.1290627
-      Roll: 16.5096226
+      Yaw: -28.1290512
+      Roll: -16.5096378
     }
     Scale {
       X: 0.402138203
-      Y: 0.402138203
+      Y: -0.402138203
       Z: 0.402138203
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Sharded_Detail1:id"
@@ -100772,22 +100746,22 @@ Objects {
   Name: "Military Mobile Radar 01 - Antenna 01"
   Transform {
     Location {
-      X: -98.1630859
-      Y: 27.5337524
-      Z: 154.482803
+      X: 383.417969
+      Y: -880.81134
+      Z: 235.58374
     }
     Rotation {
       Pitch: 0.203170791
-      Yaw: -51.0607109
-      Roll: 62.2484131
+      Yaw: 51.0607376
+      Roll: -62.2484283
     }
     Scale {
       X: 0.186303735
-      Y: 0.186303735
+      Y: -0.186303735
       Z: 0.186303735
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Sharded_Detail1:id"
@@ -100852,22 +100826,22 @@ Objects {
   Name: "Military Mobile Radar 01 - Antenna 01"
   Transform {
     Location {
-      X: -66.2363281
-      Y: -49.4028931
-      Z: 154.483795
+      X: 415.344727
+      Y: -803.874695
+      Z: 235.584732
     }
     Rotation {
       Pitch: 0.203225434
-      Yaw: -4.11549187
-      Roll: 62.248436
+      Yaw: 4.11549234
+      Roll: -62.248436
     }
     Scale {
       X: 0.186303735
-      Y: 0.186303735
+      Y: -0.186303735
       Z: 0.186303735
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   UnregisteredParameters {
     Overrides {
       Name: "ma:Sharded_Detail1:id"
@@ -100932,22 +100906,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -18.0048828
-      Y: 10.1000366
-      Z: 21.3657837
+      X: 463.576172
+      Y: -863.377625
+      Z: 102.466721
     }
     Rotation {
-      Pitch: -1.47128296
-      Yaw: -43.1531067
-      Roll: 82.5849762
+      Pitch: -1.47129774
+      Yaw: 43.1531
+      Roll: -82.5849228
     }
     Scale {
       X: 1.00384188
-      Y: 0.172878474
+      Y: -0.172878474
       Z: 0.281749338
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -100989,22 +100963,22 @@ Objects {
   Name: "Corrugated Sheet Bent"
   Transform {
     Location {
-      X: -20.2734375
-      Y: 105.662018
-      Z: 30.9616852
+      X: 461.307617
+      Y: -958.939575
+      Z: 112.062622
     }
     Rotation {
       Pitch: 3.57328844
-      Yaw: 168.16127
-      Roll: 88.1059647
+      Yaw: -168.16124
+      Roll: -88.105957
     }
     Scale {
       X: 0.505810857
-      Y: -0.359492183
+      Y: 0.359492183
       Z: 0.458776951
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101042,22 +101016,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -50.1469727
-      Y: 55.6026917
-      Z: 28.4776611
+      X: 431.434082
+      Y: -908.880249
+      Z: 109.578598
     }
     Rotation {
-      Pitch: -1.47128296
-      Yaw: -111.597473
-      Roll: 82.5848465
+      Pitch: -1.47129774
+      Yaw: 111.59745
+      Roll: -82.5848541
     }
     Scale {
       X: 1.00384188
-      Y: 0.172878474
+      Y: -0.172878474
       Z: 0.281749338
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101099,22 +101073,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -105.57373
-      Y: 30.3348083
-      Z: 37.3231812
+      X: 376.007324
+      Y: -883.612427
+      Z: 118.424118
     }
     Rotation {
-      Pitch: -0.128692627
-      Yaw: -121.337189
-      Roll: 90.4404526
+      Pitch: -0.128701255
+      Yaw: 121.337212
+      Roll: -90.4404526
     }
     Scale {
       X: 0.563874245
-      Y: 0.172879905
+      Y: -0.172879905
       Z: 0.268156946
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101156,22 +101130,22 @@ Objects {
   Name: "Corrugated Sheet Bent"
   Transform {
     Location {
-      X: -53.5888672
-      Y: 56.2754517
-      Z: 23.8498077
+      X: 427.992188
+      Y: -909.55304
+      Z: 104.950745
     }
     Rotation {
       Pitch: 3.57325435
-      Yaw: -123.394257
-      Roll: 88.1061935
+      Yaw: 123.394272
+      Roll: -88.1062
     }
     Scale {
       X: 0.505810857
-      Y: -0.359492183
+      Y: 0.359492183
       Z: 0.458776951
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101209,22 +101183,22 @@ Objects {
   Name: "Corrugated Sheet Bent"
   Transform {
     Location {
-      X: -20.2734375
-      Y: 105.662018
-      Z: 36.5813599
+      X: 461.307617
+      Y: -958.939575
+      Z: 117.682297
     }
     Rotation {
       Pitch: 3.57323384
-      Yaw: -153.755325
-      Roll: 88.1060715
+      Yaw: 153.755341
+      Roll: -88.1060715
     }
     Scale {
       X: 0.505810857
-      Y: -0.359492183
+      Y: 0.359492183
       Z: 0.458776951
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101262,22 +101236,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -12.9086914
-      Y: 47.8332825
-      Z: 34.0973358
+      X: 468.672363
+      Y: -901.11084
+      Z: 115.198273
     }
     Rotation {
-      Pitch: -1.47128296
-      Yaw: -73.5141
-      Roll: 82.5846634
+      Pitch: -1.47129774
+      Yaw: 73.5140762
+      Roll: -82.5846558
     }
     Scale {
       X: 1.00384188
-      Y: 0.172878474
+      Y: -0.172878474
       Z: 0.281749338
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101319,22 +101293,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -40.9516602
-      Y: -6.24279785
-      Z: 42.9428558
+      X: 440.629395
+      Y: -847.03479
+      Z: 124.043793
     }
     Rotation {
-      Pitch: -0.128692627
-      Yaw: -83.2537231
-      Roll: 90.4404449
+      Pitch: -0.128694415
+      Yaw: 83.2537
+      Roll: -90.4404449
     }
     Scale {
       X: 0.563874245
-      Y: 0.172879905
+      Y: -0.172879905
       Z: 0.268156946
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101376,22 +101350,22 @@ Objects {
   Name: "Corrugated Sheet Bent"
   Transform {
     Location {
-      X: -49.0883789
-      Y: 88.0526428
-      Z: 15.2155762
+      X: 432.492676
+      Y: -941.3302
+      Z: 96.3165131
     }
     Rotation {
       Pitch: 3.57326102
-      Yaw: -119.75174
-      Roll: 88.1060715
+      Yaw: 119.751747
+      Roll: -88.1060715
     }
     Scale {
       X: 0.505810857
-      Y: -0.359492183
+      Y: 0.359492183
       Z: 0.458776951
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101429,22 +101403,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -10.6430664
-      Y: 44.2310486
-      Z: 12.7315521
+      X: 470.938
+      Y: -897.508667
+      Z: 93.832489
     }
     Rotation {
-      Pitch: -1.47128296
-      Yaw: -39.5103455
-      Roll: 82.5848846
+      Pitch: -1.47128415
+      Yaw: 39.5103264
+      Roll: -82.5848618
     }
     Scale {
       X: 1.00384188
-      Y: 0.172878474
+      Y: -0.172878474
       Z: 0.281749338
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101486,22 +101460,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -3.64941406
-      Y: -16.2813721
-      Z: 21.5770721
+      X: 477.931641
+      Y: -836.996216
+      Z: 102.678009
     }
     Rotation {
-      Pitch: -0.128692627
-      Yaw: -49.2501831
-      Roll: 90.4404526
+      Pitch: -0.128694415
+      Yaw: 49.2501831
+      Roll: -90.4404602
     }
     Scale {
       X: 0.563874245
-      Y: 0.172879905
+      Y: -0.172879905
       Z: 0.268156946
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101543,22 +101517,22 @@ Objects {
   Name: "Corrugated Sheet Bent"
   Transform {
     Location {
-      X: -49.0883789
-      Y: 88.0526428
-      Z: 9.59590149
+      X: 432.492676
+      Y: -941.3302
+      Z: 90.6968384
     }
     Rotation {
-      Pitch: 3.57330203
-      Yaw: -157.835037
-      Roll: 88.1060715
+      Pitch: 3.57329512
+      Yaw: 157.835037
+      Roll: -88.1060638
     }
     Scale {
       X: 0.505810857
-      Y: -0.359492183
+      Y: 0.359492183
       Z: 0.458776951
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101596,22 +101570,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -45.8574219
-      Y: 29.8469238
-      Z: 7.11187744
+      X: 435.723633
+      Y: -883.124512
+      Z: 88.2128143
     }
     Rotation {
-      Pitch: -1.47128296
-      Yaw: -77.593811
-      Roll: 82.585
+      Pitch: -1.47129095
+      Yaw: 77.5937805
+      Roll: -82.5849838
     }
     Scale {
       X: 1.00384188
-      Y: 0.172878474
+      Y: -0.172878474
       Z: 0.281749338
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101653,22 +101627,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: -77.6762695
-      Y: -22.0974731
-      Z: 15.9573975
+      X: 403.904785
+      Y: -831.180115
+      Z: 97.0583344
     }
     Rotation {
-      Pitch: -0.128662109
-      Yaw: -87.3335266
-      Roll: 90.4405
+      Pitch: -0.128694415
+      Yaw: 87.3334961
+      Roll: -90.4404678
     }
     Scale {
       X: 0.563874245
-      Y: 0.172879905
+      Y: -0.172879905
       Z: 0.268156946
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101710,22 +101684,22 @@ Objects {
   Name: "Corrugated Sheet Bent"
   Transform {
     Location {
-      X: -49.0883789
-      Y: 28.4793701
-      Z: 2.48402023
+      X: 432.492676
+      Y: -881.756958
+      Z: 83.5849533
     }
     Rotation {
       Pitch: 3.57330203
-      Yaw: -89.390564
-      Roll: 88.1062
+      Yaw: 89.390564
+      Roll: -88.1062
     }
     Scale {
       X: 0.505810857
-      Y: -0.359492183
+      Y: 0.359492183
       Z: 0.458776951
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101763,22 +101737,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: 6.234375
-      Y: 10.1000366
-      Z: -3.81469727e-06
+      X: 487.81543
+      Y: -863.377625
+      Z: 81.1009293
     }
     Rotation {
       Pitch: -1.47127736
-      Yaw: -9.14945793
-      Roll: 82.5852356
+      Yaw: 9.14946842
+      Roll: -82.585228
     }
     Scale {
       X: 1.00384188
-      Y: 0.172878474
+      Y: -0.172878474
       Z: 0.281749338
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101820,22 +101794,22 @@ Objects {
   Name: "Corrugated Sheet Tall"
   Transform {
     Location {
-      X: 42.8544922
-      Y: -38.5794678
-      Z: 8.8455162
+      X: 524.435547
+      Y: -814.69812
+      Z: 89.9464493
     }
     Rotation {
       Pitch: -0.128667101
-      Yaw: -18.889204
-      Roll: 90.4405365
+      Yaw: 18.8892078
+      Roll: -90.4405365
     }
     Scale {
       X: 0.563874245
-      Y: 0.172879905
+      Y: -0.172879905
       Z: 0.268156946
     }
   }
-  ParentId: 6886469498598604258
+  ParentId: 5729826917264949750
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -101873,46 +101847,72 @@ Objects {
   IsReplicationEnabledByDefault: true
 }
 Objects {
-  Id: 5729826917264949750
-  Name: "ClientContext"
+  Id: 5566489821507198353
+  Name: "Tire Worn"
   Transform {
     Location {
+      X: 734.560059
+      Y: 322.184814
+      Z: 166.529541
     }
     Rotation {
+      Roll: -72.9874496
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.15874112
+      Y: 1.15874112
+      Z: 1.15874112
     }
   }
-  ParentId: 16065307972936683234
-  ChildIds: 17129873224972098340
-  ChildIds: 9223354440096485133
-  ChildIds: 17986386124106456614
-  ChildIds: 9906699973644061237
-  ChildIds: 17749405240085622520
-  ChildIds: 5282137661668090551
-  ChildIds: 15630991729437494536
+  ParentId: 5729826917264949750
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10834081793086782683
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1.06136596
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.492449522
+    }
+  }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  CoreMesh {
+    MeshAsset {
+      Id: 14096773816451731951
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableAngularMotionBlur: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
   }
-  NetworkContext {
-    MinDetailLevel {
-      Value: "mc:edetaillevel:low"
-    }
-    MaxDetailLevel {
-      Value: "mc:edetaillevel:ultra"
-    }
+  Relevance {
+    Value: "mc:eproxyrelevance:critical"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
