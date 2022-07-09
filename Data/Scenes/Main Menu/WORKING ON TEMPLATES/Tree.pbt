@@ -3570,60 +3570,40 @@ Objects {
   ParentId: 4756283693287450189
   UnregisteredParameters {
     Overrides {
-      Name: "cs:CookiePerkButton"
-      ObjectReference {
-        SelfId: 13217927774601142133
+      Name: "cs:CookiePerk"
+      NetReference {
+        Key: "7c81eda56458487aace52eefd9b583ae"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
       }
     }
     Overrides {
-      Name: "cs:CoffeePerkButton"
-      ObjectReference {
-        SelfId: 253064838743971622
+      Name: "cs:CoffeePerk"
+      NetReference {
+        Key: "aeb71cc8fd5f4b58bca6b84c701c25d3"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
       }
     }
     Overrides {
-      Name: "cs:SammichPerkButton"
-      ObjectReference {
-        SelfId: 15259645868788798284
+      Name: "cs:SammichPerk"
+      NetReference {
+        Key: "16edbbf9cb2841a994ac94752cee7d4c"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
       }
     }
     Overrides {
-      Name: "cs:DinnerPerkButton"
-      ObjectReference {
-        SelfId: 3423072734414529700
+      Name: "cs:DinnerPerk"
+      NetReference {
+        Key: "6bfa59e986ea447ab720d020356d95cd"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
       }
-    }
-    Overrides {
-      Name: "cs:CookiePerkButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:CookiePerkButton:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:CoffeePerkButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:CoffeePerkButton:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SammichPerkButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SammichPerkButton:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:DinnerPerkButton:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:DinnerPerkButton:ml"
-      Bool: false
     }
   }
   Collidable_v2 {

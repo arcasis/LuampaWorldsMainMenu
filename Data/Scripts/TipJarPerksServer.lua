@@ -1,37 +1,42 @@
 --[[ This will handle perks stuff we don't want client side because hax]]
 
--- NOTE: XP is handled in LuampaXPBoostServer
+local COOKIE_PERK = script:GetCustomProperty("CookiePerk")
+local COFFEE_PERK = script:GetCustomProperty("CoffeePerk")
+local SAMMICH_PERK = script:GetCustomProperty("SammichPerk")
+local DINNER_PERK = script:GetCustomProperty("DinnerPerk")
 
 local perksListener = {}
 
+
+-- NOTE: XP is handled in LuampaXPBoostServer
 
 function PerkChanged(player, perk)
 
     print("A player is purchasing perks. Starting coins/xp boosts", player.name, player.id, player:GetResource("LuampaCoins"), player.serverUserData.XPBoosts.total)
 
-    if perk == "Cookie" then
+    if perk == COOKIE_PERK then
         local coins = player:GetResource("LuampaCoins")
         coins = coins + 500
         player:SetResource("LuampaCoins", coins)
 
         print("Player bought Cookie.", player.name, player.id)
-    end
-    if perk == "Coffee" then
+
+    elseif perk == COFFEE_PERK then
         local coins = player:GetResource("LuampaCoins")
         coins = coins + 1000
         player:SetResource("LuampaCoins", coins)
 
         print("Player bought Coffee.", player.name, player.id)
-    end
-    if perk == "Sammich" then
+
+    elseif perk == SAMMICH_PERK then
         local coins = player:GetResource("LuampaCoins")
         coins = coins + 1000
         player:SetResource("LuampaCoins", coins)
         Events.Broadcast("GetXPBoosts", player, 7)
 
         print("Player bought Sammich.", player.name, player.id)
-    end
-    if perk == "Dinner" then
+
+    elseif perk == DINNER_PERK then
         local coins = player:GetResource("LuampaCoins")
         coins = coins + 1000
         player:SetResource("LuampaCoins", coins)

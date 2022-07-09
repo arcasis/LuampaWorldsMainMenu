@@ -4043,18 +4043,58 @@ Objects {
   ParentId: 7184390396993769652
   UnregisteredParameters {
     Overrides {
-      Name: "cs:HelmetPricesData"
-      ObjectReference {
-        SelfId: 841534158063459245
+      Name: "cs:SpeedDuckHelmetPerk"
+      NetReference {
+        Key: "16d2fa62d97f4736bade586f7af89929"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
       }
     }
     Overrides {
-      Name: "cs:HelmetPricesData:isrep"
-      Bool: false
+      Name: "cs:ServePleaseHelmetPerk"
+      NetReference {
+        Key: "a16b42d9cf264f1caac8aec8b0ef8bfa"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
     }
     Overrides {
-      Name: "cs:HelmetPricesData:ml"
-      Bool: false
+      Name: "cs:ALickEndHelmetPerk"
+      NetReference {
+        Key: "b81d548224c94cbda6d48e648181058f"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:S4DF4RM04HelmetPerk"
+      NetReference {
+        Key: "bdb75b5a684d4f86ac1f18c098e29c7b"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:OnControlHelmetPerk"
+      NetReference {
+        Key: "64183ee9c6364632bfca1902fc267a19"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:MrD4B00mHelmetPerk"
+      NetReference {
+        Key: "f1ada5fb95334b3ebecdb85fb94ccda0"
+        Type {
+          Value: "mc:enetreferencetype:creatorperk"
+        }
+      }
     }
   }
   Collidable_v2 {
