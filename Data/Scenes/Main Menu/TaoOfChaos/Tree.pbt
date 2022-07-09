@@ -3746,6 +3746,12 @@ Objects {
   ParentId: 12493243886790421155
   UnregisteredParameters {
     Overrides {
+      Name: "cs:GarageMainMenuPanel"
+      ObjectReference {
+        SelfId: 14557584287892330648
+      }
+    }
+    Overrides {
       Name: "cs:HelmetsContainer"
       ObjectReference {
         SelfId: 12493243886790421155
@@ -3835,6 +3841,14 @@ Objects {
     }
     Overrides {
       Name: "cs:SetAsDefaultButton:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageMainMenuPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GarageMainMenuPanel:ml"
       Bool: false
     }
   }
