@@ -1,4 +1,5 @@
 -- Core Object References
+local GARAGE_MAIN_MENU_PANEL = script:GetCustomProperty("GarageMainMenuPanel"):WaitForObject()
 local HELMETS_CONTAINER = script:GetCustomProperty("HelmetsContainer"):WaitForObject()
 local BACK_BUTTON = script:GetCustomProperty("BackButton"):WaitForObject()
 local ARROW_LEFT = script:GetCustomProperty("ArrowLeft"):WaitForObject()
