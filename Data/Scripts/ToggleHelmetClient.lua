@@ -13,12 +13,24 @@ TOGGLE_HELMET_BUTTON.clickedEvent:Connect(function()
         TOGGLE_HELMET_BUTTON.text = "X"
         Events.BroadcastToServer("AttachHelmet")
     end
-end)
+end) 
 
+-- make sure panel is visible if player didn't have a helmet and purchases one
+function OnSubBannerMessage(message, duration, color)
+    if message == "Helmet Purchased" then
+        TOGGLE_HELMET_PANEL.visibility = Visibility.INHERIT
+    end
+end
+
+
+-- Initialize
 Task.Wait(1)     -- allow clientUserData to get helmet status
+
 -- if player has any helmets, show helmet toggle button
-local helmet = LOCAL_PLAYER.clientUserData.helmets
-if helmet then
+local helmets = LOCAL_PLAYER.clientUserData.helmets
+if helmets then
     TOGGLE_HELMET_PANEL.visibility = Visibility.INHERIT
     --print("toggle helmet should display")
 end
+
+Events.Connect("SubBannerMessage", OnSubBannerMessage)

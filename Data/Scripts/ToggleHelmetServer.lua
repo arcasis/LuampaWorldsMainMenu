@@ -2,28 +2,16 @@
 
 function AttachHelmet(player)
     local helmets = player.serverUserData.helmets
-    local selectedHelmetTable = player.serverUserData.selectedHelmet
-    local selectedIndex
-    for index,helmet in pairs(selectedHelmetTable) do
-        if helmet then 
-            selectedIndex = index
-        end
-    end
-    helmets[selectedIndex] = 1
+    helmets.helmetOn = true
     player.serverUserData.helmets = helmets
+    player:SetPrivateNetworkedData("helmets", helmets)
 end
 
 function RemoveHelmet(player)
     local helmets = player.serverUserData.helmets
-    local selectedHelmetTable = player.serverUserData.selectedHelmet
-    local selectedIndex
-    for index,helmet in pairs(selectedHelmetTable) do
-        if helmet then 
-            selectedIndex = index
-        end
-    end
-    helmets[selectedIndex] = 0
+    helmets.helmetOn = true
     player.serverUserData.helmets = helmets
+    player:SetPrivateNetworkedData("helmets", helmets)
 end
 
 

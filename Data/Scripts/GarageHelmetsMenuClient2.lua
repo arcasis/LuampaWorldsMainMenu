@@ -70,7 +70,7 @@ function ProcessIndex()
 
     -- display helmet
     currentlyVisibleHelmet = World.SpawnAsset(HELMET_ASSETS_TABLE[index], {parent = HELMET_ASSETS_DATA_FOLDER})  -- parent folder must be at location
-    --Task.Wait()
+    Task.Wait(.1)  -- helmets often don't have material on them yet without a wait
     --camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.VERY_LARGE)  -- VERY_LARGE
     camCapture = HELMETS_IMAGE_CAMERA:Capture(CameraCaptureResolution.LARGE)  -- LARGE
     HELMET_IMAGE:SetCameraCapture(camCapture)
@@ -100,6 +100,7 @@ end
 function DisplayOwnedHelmet()
 
     print("DisplayOwnedHelmet runs")
+
     -- if selectedHelmet matches current index, then this vehicle is set as their default truck
     if LOCAL_PLAYER.clientUserData.helmets.selectedHelmet == index then
         SET_AS_DEFAULT_BUTTON.text = "SELECTED"
@@ -133,6 +134,7 @@ end
 
 
 function OnHelmetPurchased()     -- !! WIP !! add stuff here that displays confirmation of purchase
+    -- NOTE: Uses perks to notify server for data update, so no hax
     Events.Broadcast("SubBannerMessage", "Helmet Purchased", 4, Color.CYAN)
     PURCHASE_SFX:Play()
     Task.Wait(.3)
@@ -144,6 +146,8 @@ function Tick(deltaTime)
 
     -- if this panel is hidden, hide current vehicle, else display it
     if HELMETS_CONTAINER.visibility == Visibility.INHERIT and not helmetMenuOpen then
+
+        print("Helmet menu tick says menu was opened")
 
         helmetMenuOpen = true
         ProcessIndex()

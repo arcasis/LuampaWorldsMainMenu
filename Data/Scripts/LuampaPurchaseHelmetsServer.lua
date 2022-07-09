@@ -1,4 +1,4 @@
---[[DESCRIPTION: Recieves broadcast when players purchase a vehicle, puts new vehicle into
+--[[DESCRIPTION: Recieves broadcast when players purchase a helmet, puts new helmet into
 player's serverUserData.]]
 
 local perksListener = {}
@@ -10,25 +10,22 @@ function PerkChanged(player, perk)
 
     local helmets = player.serverUserData.helmets
 
-    if perk == "Helmet2" then
+    if perk == "Speed Duck Helmet" then
         helmets[2] = 1
-    elseif perk == "Helmet3" then
+    elseif perk == "Serve Please Helmet" then
         helmets[3] = 1
-    elseif perk == "Helmet4" then
+    elseif perk == "A lick end Helmet" then
         helmets[4] = 1
-    elseif perk == "Helmet5" then
+    elseif perk == "S4DF4RM04 Helmet" then
         helmets[5] = 1
-    elseif perk == "Helmet6" then
+    elseif perk == "On control Helmet" then
         helmets[6] = 1
-    elseif perk == "Helmet7" then
+    elseif perk == "MrD4B00M Helmet" then
         helmets[7] = 1
-    elseif perk == "Helmet8" then
-        helmets[8] = 1
-    elseif perk == "Helmet9" then
-        helmets[9] = 1
-    elseif perk == "Helmet10" then
-        helmets[10] = 1
     end
+
+    player.serverUserData.helmets = helmets
+    player:SetPrivateNetworkedData("helmets", helmets)
 end
 
 function OnPlayerJoined(player)
@@ -41,5 +38,7 @@ function OnPlayerLeft(player)
     end
 end
 
+
+-- Initialize
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
