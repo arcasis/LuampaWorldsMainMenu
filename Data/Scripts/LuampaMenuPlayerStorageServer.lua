@@ -60,6 +60,7 @@ function OnPlayerJoined(player)
     end
 
     if hazOldData then
+        print("Player's helmet data was reset", player.name)
         playerDataTable.helmets = nil
         playerDataTable.helmets = {}
         playerDataTable.helmets[1] = 1
