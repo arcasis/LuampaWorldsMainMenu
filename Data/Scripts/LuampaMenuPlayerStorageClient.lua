@@ -83,18 +83,16 @@ function UpdateFromNetworkedData(key)
     if key == "statsOilDropped" then
         LOCAL_PLAYER.clientUserData.statsOilDropped = data
     end
-    if key == "statsOilTrapped" then
-        LOCAL_PLAYER.clientUserData.statsOilTrapped = data
-    end
     if key == "statsSlowDropped" then
         LOCAL_PLAYER.clientUserData.statsSlowDropped = data
     end
-    if key == "statsSlowTrapped" then
-        LOCAL_PLAYER.clientUserData.statsSlowTrapped = data
-    end
-
+    
 
     ----- Battle -----
+    if key == "statsHillBattles" then
+        LOCAL_PLAYER.clientUserData.statsHills = data
+    end
+
     if key == "statsHills" then
         LOCAL_PLAYER.clientUserData.statsHills = data
     end

@@ -91,6 +91,12 @@ function DisplayStats()
     end
     TOTAL_BATTLE_XP.text = tostring(totalBattleXp)
 
+    local statsHillBattles = LOCAL_PLAYER.clientUserData.statsHillBattles
+    if not statsHillBattles then
+        statsHillBattles = 0
+    end
+    TOTAL_GAMES.text = tostring(statsHillBattles)
+
     local statsHills = LOCAL_PLAYER.clientUserData.statsHills
     if not statsHills then
         statsHills = 0
@@ -102,12 +108,6 @@ function DisplayStats()
         statsKills = 0
     end
     TOTAL_KILLS.text = tostring(statsKills)
-
-    local statsHillBattles = LOCAL_PLAYER.clientUserData.statsHillBattles
-    if not statsHillBattles then
-        statsHillBattles = 0
-    end
-    TOTAL_GAMES.text = tostring(statsHillBattles)
 
     local statsTurretKills = LOCAL_PLAYER.clientUserData.statsTurretKills
     if not statsTurretKills then
@@ -145,7 +145,9 @@ end
 
 -- Initialize
 PLAYER_NAME_TEXT.text = LOCAL_PLAYER.name
+BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)
+
+Task.Wait(1)
 
 DisplayStats()
 
-BACK_BUTTON.clickedEvent:Connect(OnBackButtonClicked)

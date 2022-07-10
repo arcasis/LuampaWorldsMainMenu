@@ -194,7 +194,6 @@ function OnPlayerJoined(player)
     end
     player.serverUserData.karts = playerDataTable.karts
 
-
     -- Get saved kart, or set default
     if not playerDataTable.selectedKart then
         local karts = {}
@@ -202,6 +201,34 @@ function OnPlayerJoined(player)
         playerDataTable.selectedKart = karts
     end
     player.serverUserData.selectedKart = playerDataTable.selectedKart
+
+    -- Get stats for stats page
+    if playerDataTable.bestRaceNeon then
+        player.serverUserData.bestRaceNeon = playerDataTable.bestRaceNeon
+    end
+    if playerDataTable.bestLapNeon then
+        player.serverUserData.bestLapNeon = playerDataTable.bestLapNeon
+    end
+    if playerDataTable.statsLaps then
+        player.serverUserData.statsLaps = playerDataTable.statsLaps
+    end
+
+    if playerDataTable.statsSpeedUsed then
+        player.serverUserData.statsSpeedUsed = playerDataTable.statsSpeedUsed
+    end
+    if playerDataTable.statsGravityUsed then
+        player.serverUserData.statsGravityUsed = playerDataTable.statsGravityUsed
+    end
+    if playerDataTable.statsGripUsed then
+        player.serverUserData.statsGripUsed = playerDataTable.statsGripUsed
+    end
+
+    if playerDataTable.statsOilTrapped then
+        player.serverUserData.statsOilTrapped = playerDataTable.statsOilTrapped
+    end
+    if playerDataTable.statsSlowTrapped then
+        player.serverUserData.statsSlowTrapped = playerDataTable.statsSlowTrapped
+    end
     ---------------------- END RACE ----------------------
 
 
@@ -228,6 +255,62 @@ function OnPlayerJoined(player)
     end
     player.serverUserData.selectedTruck = playerDataTable.selectedTruck
 
+    -- Get stats for stats page
+    if playerDataTable.statsHillBattles then
+        player.serverUserData.statsHillBattles = playerDataTable.statsHillBattles
+    end
+    
+    if playerDataTable.statsHills then
+        player.serverUserData.statsHills = playerDataTable.statsHills
+    end
+    if playerDataTable.statsKills then
+        player.serverUserData.statsKills = playerDataTable.statsKills
+    end
+    if playerDataTable.statsDeaths then
+        player.serverUserData.statsDeaths = playerDataTable.statsDeaths
+    end
+    if playerDataTable.statsTotalDamage then
+        player.serverUserData.statsTotalDamage = playerDataTable.statsTotalDamage
+    end
+
+    if playerDataTable.statsArDamage then
+        player.serverUserData.statsArDamage = playerDataTable.statsArDamage
+    end
+    if playerDataTable.statsArKills then
+        player.serverUserData.statsArKills = playerDataTable.statsArKills
+    end
+    if playerDataTable.statsGlDamage then
+        player.serverUserData.statsGlDamage = playerDataTable.statsGlDamage
+    end
+    if playerDataTable.statsGlKills then
+        player.serverUserData.statsGlKills = playerDataTable.statsGlKills
+    end
+
+    if playerDataTable.statsTurretDamage then
+        player.serverUserData.statsTurretDamage = playerDataTable.statsTurretDamage
+    end
+    if playerDataTable.statsTurretKills then
+        player.serverUserData.statsTurretKills = playerDataTable.statsTurretKills
+    end
+
+    if playerDataTable.statsMolotovTrapped then
+        player.serverUserData.statsMolotovTrapped = playerDataTable.statsMolotovTrapped
+    end
+    if playerDataTable.statsMolotovDamage then
+        player.serverUserData.statsMolotovDamage = playerDataTable.statsMolotovDamage
+    end
+    if playerDataTable.statsMolotovKills then
+        player.serverUserData.statsMolotovKills = playerDataTable.statsMolotovKills
+    end
+    if playerDataTable.statsSpikesTrapped then
+        player.serverUserData.statsSpikesTrapped = playerDataTable.statsSpikesTrapped
+    end
+    if playerDataTable.statsSpikesDamage then
+        player.serverUserData.statsSpikesDamage = playerDataTable.statsSpikesDamage
+    end
+    if playerDataTable.statsSpikesKills then
+        player.serverUserData.statsSpikesKills = playerDataTable.statsSpikesKills
+    end
 
     --print("player's selectedTruck data is: ", player.serverUserData.selectedTruck)
     --local selectedTruckUserData = player.serverUserData.selectedTruck
@@ -291,7 +374,6 @@ function OnPlayerLeft(player)
     if helmets then
         playerDataTable.helmets = helmets
     end
-
 
     ------------ !! DELETE WHEN DONE TESTING !! ------------
     -- set tester's trucks table to default, to remove any they've purchased but prevent Battle from setting their selected to default (nil trucks table will set selected to default)
