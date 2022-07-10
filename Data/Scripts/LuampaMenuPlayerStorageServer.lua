@@ -48,7 +48,18 @@ function OnPlayerJoined(player)
     end
     -- I had set up helmets with sub tables like vehicles, switching back to simple table
     -- First, update any data that has the sub tables
-    if playerDataTable.helmets and playerDataTable.helmets[1] ~= 1 or playerDataTable.helmets[1] ~= 0 then
+    local hazOldData = true
+    if not playerDataTable.helmets then
+        hazOldData = false
+    else
+        for _, entry in pairs(playerDataTable.helmets) do
+            if entry == 1 then
+                hazOldData = false
+            end
+        end
+    end
+
+    if hazOldData then
         playerDataTable.helmets = nil
         playerDataTable.helmets = {}
         playerDataTable.helmets[1] = 1
@@ -59,7 +70,7 @@ function OnPlayerJoined(player)
             playerDataTable.helmetOn = nil
         end
     end
-    -- if player had old data, just update selectedHelmet and helmetOn
+    -- if player had super old data before tables then helmet[1] is already 1, just update selectedHelmet and helmetOn
     if playerDataTable.selectedHelmet then
         playerDataTable.helmets.selectedHelmet = 1
         playerDataTable.selectedHelmet = nil
