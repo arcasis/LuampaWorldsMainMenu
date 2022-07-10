@@ -134,15 +134,6 @@ function OnSetAsDefaultButtonClicked()
 end
 
 
-function OnHelmetPurchased()     -- !! WIP !! add stuff here that displays confirmation of purchase
-    -- NOTE: Uses perks to notify server for data update, so no hax
-    Events.Broadcast("SubBannerMessage", "Helmet Purchased", 4, Color.CYAN)
-    PURCHASE_SFX:Play()
-    Task.Wait(.3)
-    ProcessIndex()
-end
-
-
 function Tick(deltaTime)
 
     -- if this panel is hidden, hide current vehicle, else display it
@@ -162,20 +153,43 @@ function Tick(deltaTime)
     end
 end
 
+
+function OnHelmetPurchased(button)  -- perks buttons only clickable if player has perks, it's ok to assume purchase is going to go through
+    currentlyVisibleButton.visibility = Visibility.FORCE_OFF
+    SET_AS_DEFAULT_BUTTON.text = "Select as Default"
+    SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
+    currentlyVisibleButton = OWNED_BUTTON
+    currentlyVisibleButton.visibility = Visibility.INHERIT
+
+    -- temp "fake" helmets data to display helmet, because it takes a bit for purchase to update helmets
+    local helmets = LOCAL_PLAYER.clientUserData.helmets
+    if not helmets then
+        helmets = {}
+    end
+    helmets[index] = 1
+    LOCAL_PLAYER.clientUserData.helmets = helmets
+
+    Events.Broadcast("SubBannerMessage", "Helmet Purchased", 4, Color.CYAN)
+    --PURCHASE_SFX:Play()
+    print("Reminder: Purchase sfx needs added to OnHelmetPurchased once git is synced")
+    --Task.Wait(.3)  -- no guarantee this is long enough, maybe skip refreshing helmet
+    --ProcessIndex()
+end
+
+
 -- Initialize
 -- put helmet purchase buttons in order
 for _, button in pairs(PERKS_BUTTONS_PANEL:GetChildren()) do  -- !! WIP !! can you get children from panels? if not, put in folder
     local propertyName = button:GetCustomProperty("Index")
     perksButtonsTable[propertyName] = button
+    button.clickedEvent:Connect(OnHelmetPurchased)
 end
 
--- put helmet assets in order
+-- put helmet template assets in order
 for name, asset in pairs(HELMET_ASSETS_DATA_FOLDER:GetCustomProperties()) do
     local defaultIndex = tonumber(name)
     HELMET_ASSETS_TABLE[defaultIndex] = asset
 end
-
-
 
 ARROW_LEFT.clickedEvent:Connect(OnVehicleArrowLeftButtonClicked)
 ARROW_RIGHT.clickedEvent:Connect(OnVehicleArrowRightButtonClicked)
