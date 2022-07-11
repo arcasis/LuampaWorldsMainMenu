@@ -10,7 +10,7 @@ function UpdateFromNetworkedData(key)
     local data = LOCAL_PLAYER:GetPrivateNetworkedData(key)
 
     if key == "XPBoosts" then
-        LOCAL_PLAYER.clientUserData.helmets = data
+        LOCAL_PLAYER.clientUserData.XPBoosts = data
     end
 
     if key == "helmets" then
@@ -90,7 +90,7 @@ function UpdateFromNetworkedData(key)
 
     ----- Battle -----
     if key == "statsHillBattles" then
-        LOCAL_PLAYER.clientUserData.statsHills = data
+        LOCAL_PLAYER.clientUserData.statsHillBattles = data
     end
 
     if key == "statsHills" then
