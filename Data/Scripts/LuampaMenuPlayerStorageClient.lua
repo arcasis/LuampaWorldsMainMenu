@@ -54,6 +54,19 @@ function UpdateFromNetworkedData(key)
     ---------- PLAYER STATS ----------
 
     ----- Race -----
+    if key == "bestRaceNeon" then
+        LOCAL_PLAYER.clientUserData.bestRaceNeon = data
+    end
+    if key == "bestLapNeon" then
+        LOCAL_PLAYER.clientUserData.bestLapNeon = data
+    end
+    if key == "bestRaceDesert" then
+        LOCAL_PLAYER.clientUserData.bestRaceDesert = data
+    end
+    if key == "bestLapDesert" then
+        LOCAL_PLAYER.clientUserData.bestLapDesert = data
+    end
+
     if key == "statsLaps" then
         LOCAL_PLAYER.clientUserData.statsLaps = data
     end
@@ -83,10 +96,15 @@ function UpdateFromNetworkedData(key)
     if key == "statsOilDropped" then
         LOCAL_PLAYER.clientUserData.statsOilDropped = data
     end
+    if key == "statsOilTrapped" then
+        LOCAL_PLAYER.clientUserData.statsOilTrapped = data
+    end
     if key == "statsSlowDropped" then
         LOCAL_PLAYER.clientUserData.statsSlowDropped = data
     end
-    
+    if key == "statsSlowTrapped" then
+        LOCAL_PLAYER.clientUserData.statsSlowTrapped = data
+    end
 
     ----- Battle -----
     if key == "statsHillBattles" then
