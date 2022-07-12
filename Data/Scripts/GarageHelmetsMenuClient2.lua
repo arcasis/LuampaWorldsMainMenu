@@ -15,7 +15,7 @@ local HELMETS_IMAGE_CAMERA = script:GetCustomProperty("HelmetsImageCamera"):Wait
 local HELMET_IMAGE = script:GetCustomProperty("HelmetImage"):WaitForObject()
 
 --local HELMETS_MENU_OPEN_SFX = script:GetCustomProperty("HelmetsMenuOpenSFX"):WaitForObject()
---local PURCHASE_SFX = script:GetCustomProperty("PurchaseSFX"):WaitForObject()
+local PURCHASE_FX_FOLDER = script:GetCustomProperty("PurchaseFXFolder"):WaitForObject()
 
 -- Script helpers
 local HELMET_ASSETS_TABLE = {}
@@ -56,7 +56,7 @@ end
 
 function ProcessIndex()
 
-    print("ProcessIndex runs, index is:", index)
+    --print("ProcessIndex runs, index is:", index)
 
     if Object.IsValid(currentlyVisibleHelmet) then
         currentlyVisibleHelmet:Destroy()
@@ -89,7 +89,7 @@ end
 
 function DisplayBuyHelmet()
 
-    print("DisplayBuyHelmet runs")
+    --print("DisplayBuyHelmet runs")
 
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.FORCE_OFF
 
@@ -100,7 +100,7 @@ end
 
 function DisplayOwnedHelmet()
 
-    print("DisplayOwnedHelmet runs")
+    --print("DisplayOwnedHelmet runs")
 
     -- if selectedHelmet matches current index, then this vehicle is set as their default truck
     if LOCAL_PLAYER.clientUserData.helmets.selectedHelmet == index then
@@ -110,7 +110,7 @@ function DisplayOwnedHelmet()
     end
     SET_AS_DEFAULT_BUTTON.visibility = Visibility.INHERIT
 
-    print(".helmets.selectedHelmet is:", LOCAL_PLAYER.clientUserData.helmets.selectedHelmet)
+    --print(".helmets.selectedHelmet is:", LOCAL_PLAYER.clientUserData.helmets.selectedHelmet)
 
     -- process buttons
     currentlyVisibleButton = OWNED_BUTTON
@@ -139,7 +139,7 @@ function Tick(deltaTime)
     -- if this panel is hidden, hide current vehicle, else display it
     if HELMETS_CONTAINER.visibility == Visibility.INHERIT and not helmetMenuOpen then
 
-        print("Helmet menu tick says menu was opened")
+        --print("Helmet menu tick says menu was opened")
 
         helmetMenuOpen = true
         ProcessIndex()
@@ -169,9 +169,11 @@ function OnHelmetPurchased(button)  -- perks buttons only clickable if player ha
     helmets[index] = 1
     LOCAL_PLAYER.clientUserData.helmets = helmets
 
-    Events.Broadcast("SubBannerMessage", "Helmet Purchased", 4, Color.CYAN)
-    --PURCHASE_SFX:Play()
-    print("Reminder: Purchase sfx needs added to OnHelmetPurchased once git is synced")
+    for _, fx in pairs(PURCHASE_FX_FOLDER:GetChildren()) do
+        fx:Play()
+    end
+
+    Events.Broadcast("SubBannerMessage", "Helmet Purchased", 4, Color.YELLOW)  -- nil CYAN
     --Task.Wait(.3)  -- no guarantee this is long enough, maybe skip refreshing helmet
     --ProcessIndex()
 end

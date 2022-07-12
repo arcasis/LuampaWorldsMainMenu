@@ -11841,7 +11841,6 @@ Assets {
           }
         }
         ParentId: 8551855963787459977
-        ChildIds: 13074103401517736454
         ChildIds: 13453820530502159925
         ChildIds: 1911076292797086983
         Collidable_v2 {
@@ -11858,69 +11857,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-        IsReplicationEnabledByDefault: true
-      }
-      Objects {
-        Id: 13074103401517736454
-        Name: "VehicleLightObjectControllerClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1512848836890450393
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:LightOnObject"
-            ObjectReference {
-              SubObjectId: 13453820530502159925
-            }
-          }
-          Overrides {
-            Name: "cs:LightOffObject"
-            ObjectReference {
-              SubObjectId: 1911076292797086983
-            }
-          }
-          Overrides {
-            Name: "cs:LightOnWhenBraking"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:LightOnWhenHandbraking"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:ToggleBinding"
-            String: ""
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 2656993882723913108
-          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -12420,7 +12356,6 @@ Assets {
           }
         }
         ParentId: 8551855963787459977
-        ChildIds: 14196341714724200408
         ChildIds: 7421839043484484278
         ChildIds: 6653908446005014957
         Collidable_v2 {
@@ -12437,81 +12372,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-        IsReplicationEnabledByDefault: true
-      }
-      Objects {
-        Id: 14196341714724200408
-        Name: "VehicleLightObjectControllerClient"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12733843621158205490
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:LightOnObject"
-            ObjectReference {
-              SubObjectId: 7421839043484484278
-            }
-          }
-          Overrides {
-            Name: "cs:LightOffObject"
-            ObjectReference {
-              SubObjectId: 6653908446005014957
-            }
-          }
-          Overrides {
-            Name: "cs:LightOnWhenBraking"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:LightOnWhenHandbraking"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:ToggleBinding"
-            String: "ability_secondary"
-          }
-          Overrides {
-            Name: "cs:SoundOnAsset"
-            AssetReference {
-              Id: 8654080080248022917
-            }
-          }
-          Overrides {
-            Name: "cs:SoundOffAsset"
-            AssetReference {
-              Id: 8654080080248022917
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 2656993882723913108
-          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
