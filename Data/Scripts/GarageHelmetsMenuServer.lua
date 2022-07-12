@@ -3,8 +3,12 @@
 
 -- client sets itself, then broadcasts so server can update
 function OnDefaultHelmetSelected(player, index)
-    
-    player.serverUserData.selectedHelmet = index
+    local helmets = player.serverUserData.helmets
+    if helmets[index] then  -- if player actually has the helmet and isn't hax
+        player.serverUserData.selectedHelmet = index
+    else
+        print("** PLAYER IS H4X!! TRIED TO SET HELMET THEY DON'T OWN TO SELECTED **", player.name, player.id)
+    end
 end
 
 -- client sets itself, then broadcasts so server can update
@@ -13,22 +17,37 @@ function OnToggleHelmet(player, helmetOn)
     print("OnToggleHelmet runs, helmetOn on is:", helmetOn)
 
     local helmets = player.serverUserData.helmets
-    local selectedTable = player.serverUserData.selectedHelmet
-    local selectedIndex
-    for index,helmet in ipairs(selectedTable) do 
-        if helmet then
-            selectedIndex = index
-        end
-    end
+    local index = player.serverUserData.helmets.selectedHelmet
+    local helmetOn = player.serverUserData.helmets.helmetOn
 
     if helmetOn then
-        helmets[selectedIndex] = 1
-        player.serverUserData.helmets = helmets
+        player.serverUserData.helmets.helmetOn = false
     else
-        helmets[selectedIndex] = 0
-        player.serverUserData.helmets = helmets
+        player.serverUserData.helmets.helmetOn = true
+    end
+end
+
+
+-- Give Arq and Chaos all helmets
+function OnPlayerJoined(player)
+    if player.id == "2c0f556623f7448e96dc7226dfa02611" or player.id == "ae5c962bb2af48a0840e8159a02a5ad1" then
+
+        Task.Wait(1)  -- allow data to download
+
+        local helmets = player.serverUserData.helmets
+        if not helmets[2] then
+            helmets[1] = 1
+            helmets[2] = 1
+            helmets[3] = 1
+            helmets[4] = 1
+            helmets[5] = 1
+            helmets[6] = 1
+            helmets[7] = 1
+        end
     end
 end
 
 Events.ConnectForPlayer("SelectDefaultHelmet", OnDefaultHelmetSelected)
 Events.ConnectForPlayer("ToggleHelmet", OnToggleHelmet)
+
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
