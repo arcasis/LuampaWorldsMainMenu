@@ -11326,7 +11326,7 @@ DebugPerks {
     PerkId: "64183ee9c6364632bfca1902fc267a19"
     PerkCounts {
       key: 0
-      value: 0
+      value: 1
     }
     PerkCounts {
       key: 1
@@ -11421,7 +11421,7 @@ DebugPerks {
     PerkId: "16d2fa62d97f4736bade586f7af89929"
     PerkCounts {
       key: 0
-      value: 0
+      value: 1
     }
     PerkCounts {
       key: 1
