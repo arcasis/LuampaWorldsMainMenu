@@ -6,7 +6,7 @@ local LOCAL_PLAYER = Game.GetLocalPlayer()
 
 -- Allow players with helmet to toggle it on and off
 TOGGLE_HELMET_BUTTON.clickedEvent:Connect(function()
-    if TOGGLE_HELMET_BUTTON.text == "X" then
+    if LOCAL_PLAYER.clientUserData.helmets.helmetOn then
         TOGGLE_HELMET_BUTTON.text = ""
         Events.BroadcastToServer("RemoveHelmet")
     else

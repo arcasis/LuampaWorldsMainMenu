@@ -9,7 +9,7 @@ end
 
 function RemoveHelmet(player)
     local helmets = player.serverUserData.helmets
-    helmets.helmetOn = true
+    helmets.helmetOn = false
     player.serverUserData.helmets = helmets
     player:SetPrivateNetworkedData("helmets", helmets)
 end

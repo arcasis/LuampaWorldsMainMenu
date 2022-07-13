@@ -5,7 +5,7 @@
 function OnDefaultHelmetSelected(player, index)
     local helmets = player.serverUserData.helmets
     if helmets[index] then  -- if player actually has the helmet and isn't hax
-        player.serverUserData.selectedHelmet = index
+        player.serverUserData.helmets.selectedHelmet = index
     else
         print("** PLAYER IS H4X!! TRIED TO SET HELMET THEY DON'T OWN TO SELECTED **", player.name, player.id)
     end
@@ -17,7 +17,6 @@ function OnToggleHelmet(player, helmetOn)
     print("OnToggleHelmet runs, helmetOn on is:", helmetOn)
 
     local helmets = player.serverUserData.helmets
-    local index = player.serverUserData.helmets.selectedHelmet
     local helmetOn = player.serverUserData.helmets.helmetOn
 
     if helmetOn then
@@ -34,16 +33,19 @@ function OnPlayerJoined(player)
 
         Task.Wait(1)  -- allow data to download
 
-        local helmets = player.serverUserData.helmets
-        if not helmets[2] then
-            helmets[1] = 1
-            helmets[2] = 1
-            helmets[3] = 1
-            helmets[4] = 1
-            helmets[5] = 1
-            helmets[6] = 1
-            helmets[7] = 1
-        end
+        local helmets = {}
+        helmets.selectedHelmet = 1
+        helmets.helmetOn = true
+        
+        helmets[1] = 1
+        helmets[2] = 1
+        helmets[3] = 1
+        helmets[4] = 1
+        helmets[5] = 1
+        helmets[6] = 1
+        helmets[7] = 1
+        
+        player.serverUserData.helmets = helmets
     end
 end
 

@@ -46,42 +46,22 @@ function OnPlayerJoined(player)
         end
         playerDataTable.isTester = isTester
     end
-    -- I had set up helmets with sub tables like vehicles, switching back to simple table
-    -- First, update any data that has the sub tables
-    local hazOldData = true
-    if not playerDataTable.helmets then
-        hazOldData = false
-    else
-        for _, entry in pairs(playerDataTable.helmets) do
-            if entry == 1 then
-                hazOldData = false
-            end
-        end
-    end
-
-    if hazOldData then
-        print("Player's helmet data was reset", player.name)
-        playerDataTable.helmets = nil
-        playerDataTable.helmets = {}
-        playerDataTable.helmets[1] = 1
-
-        playerDataTable.helmets.selectedHelmet = 1
-        if playerDataTable.helmetOn then
-            playerDataTable.helmets.helmetOn = true
-            playerDataTable.helmetOn = nil
-        end
-    end
-    -- if player had super old data before tables then helmet[1] is already 1, just update selectedHelmet and helmetOn
-    if playerDataTable.selectedHelmet then
-        playerDataTable.helmets.selectedHelmet = 1
-        playerDataTable.selectedHelmet = nil
-        if playerDataTable.helmetOn then  -- only set if player already has it on
-            playerDataTable.helmets.helmetOn = true
-            playerDataTable.helmetOn = nil
-        end
-    end
     -------------- END CLEAN UP OLD TESTER TABLE --------------------
 
+    --------------- CLEAN UP OLD HELMET TABLES ---------------------
+    -- I had set up helmets with sub tables like vehicles, switching back to simple table
+    if playerDataTable.helmets then  -- the only way to have a helmets table that is old data is to have test helmet, Helmet #1
+        local helmets = playerDataTable.helmets
+        if type(helmets[1]) == "table" then
+            helmets = {}
+            helmets[1] = 1
+            helmets.selectedHelmet = 1
+            helmets.helmetOn = true
+            playerDataTable.helmets = helmets
+            print("Player's helmet data was reset", player.name)  -- the only way to have a helmets table that is old data is to have test helmet, Helmet #1
+        end
+    end
+    -------------- END CLEAN UP OLD HELMET TABLES --------------------
 
     -- Check if player has a helmet, keep nil if not
     if playerDataTable.helmets then
@@ -145,6 +125,12 @@ function OnPlayerJoined(player)
         end
         playerDataTable.isTester[1][1] = 1     -- [1][1] is Race alpha playtesting
         player.serverUserData.isTester = playerDataTable.isTester
+
+        local helmets = {}
+        helmets[1] = 1
+        helmets.selectedHelmet = 1
+        helmets.helmetOn = true
+        player.serverUserData.helmets = helmets
     end
 
     -- Check if player helped playtest MAJOR UPDATE Battle but hasn't gotten helmet yet
@@ -165,6 +151,12 @@ function OnPlayerJoined(player)
         end
         playerDataTable.isTester[2][1] = 1  -- [2][1] is Battle alpha playtesting
         player.serverUserData.isTester = playerDataTable.isTester
+
+        local helmets = {}
+        helmets[1] = 1
+        helmets.selectedHelmet = 1
+        helmets.helmetOn = true
+        player.serverUserData.helmets = helmets
     end
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
 
