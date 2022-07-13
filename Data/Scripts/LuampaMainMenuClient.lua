@@ -17,6 +17,8 @@ local NO_BUTTON = script:GetCustomProperty("NoButton"):WaitForObject()
 -- override camera
 local GARAGE_MENU_CAMERA = script:GetCustomProperty("GarageMenuCamera"):WaitForObject()
 
+local LOCAL_PLAYER = Game.GetLocalPlayer()
+
 
 --[[function OnCoreWorldButtonClicked()
     Game.GetLocalPlayer():TransferToGame("e39f3e/core-world")
@@ -65,6 +67,7 @@ end
 
 UI.SetCursorVisible(true)
 UI.SetCanCursorInteractWithUI(true)
+LOCAL_PLAYER.movementControlMode = MovementControlMode.NONE
 
 -- Initialize
 MAIN_MENU_PANEL.visibility = Visibility.INHERIT
