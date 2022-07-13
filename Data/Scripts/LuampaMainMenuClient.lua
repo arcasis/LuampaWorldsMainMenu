@@ -67,7 +67,6 @@ end
 
 UI.SetCursorVisible(true)
 UI.SetCanCursorInteractWithUI(true)
-LOCAL_PLAYER.movementControlMode = MovementControlMode.NONE
 
 -- Initialize
 MAIN_MENU_PANEL.visibility = Visibility.INHERIT

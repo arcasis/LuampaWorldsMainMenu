@@ -543,7 +543,7 @@ Objects {
       BrakingDecelerationFlying: 600
       MaxFlightSpeed: 600
       MovementControlMode {
-        Value: "mc:emovementcontrolmode:lookrelative"
+        Value: "mc:emovementcontrolmode:none"
       }
       LookControlMode {
         Value: "mc:elookcontrolmode:relative"
