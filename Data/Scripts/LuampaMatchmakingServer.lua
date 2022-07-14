@@ -28,6 +28,11 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 
     print("FindGameForPlayer runs in MatchmakingServer for ", player.name, "in", SCENE_NAME)
 
+    -- TEST SCRIPTS CAN REMOVE AFTER OLD NEON IS REMOVED FROM SYSTEM --
+    -- MAKES SURE PLAYERS WHO HIT PLAY FROM MAIN MENU ARE SENT TO NEW NEON (Published Neon processes them, sends them on)
+    player.serverUserData.isTesting = true  -- dumped into data in Main Menu when player leaves
+    ----- END TEST SCRIPTS CAN REMOVE -----
+
     local partyLeader = nil
     local partySize = 1
 

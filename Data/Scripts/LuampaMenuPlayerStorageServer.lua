@@ -364,6 +364,13 @@ end
 function OnPlayerLeft(player)
 
     local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
+
+    -- TEST SCRIPTS CAN REMOVE AFTER OLD NEON IS REMOVED FROM SYSTEM --
+    -- MAKES SURE PLAYERS WHO HIT PLAY FROM MAIN MENU ARE SENT TO NEW NEON (Published Neon processes them, sends them on)
+    if player.serverUserData.isTesting then
+        playerDataTable.isTesting = true  -- set in MatchmakingServer, also needs removed when this is removed
+    end
+    ----- END TEST SCRIPTS CAN REMOVE -----
     
     playerDataTable.karts = player.serverUserData.karts
     playerDataTable.selectedKart = player.serverUserData.selectedKart
