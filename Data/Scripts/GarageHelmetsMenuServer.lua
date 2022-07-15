@@ -29,7 +29,7 @@ end
 
 -- Give Arq and Chaos all helmets
 function OnPlayerJoined(player)
-    if player.id == "2c0f556623f7448e96dc7226dfa02611" or player.id == "ae5c962bb2af48a0840e8159a02a5ad1" then
+    --[[if player.id == "2c0f556623f7448e96dc7226dfa02611" or player.id == "ae5c962bb2af48a0840e8159a02a5ad1" then
 
         Task.Wait(1)  -- allow data to download
 
@@ -46,7 +46,7 @@ function OnPlayerJoined(player)
         helmets[7] = 1
         
         player.serverUserData.helmets = helmets
-    end
+    end]]
 end
 
 Events.ConnectForPlayer("SelectDefaultHelmet", OnDefaultHelmetSelected)
