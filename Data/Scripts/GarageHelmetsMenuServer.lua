@@ -4,7 +4,7 @@
 -- client sets itself, then broadcasts so server can update
 function OnDefaultHelmetSelected(player, index)
     local helmets = player.serverUserData.helmets
-    if helmets[index] then  -- if player actually has the helmet and isn't hax
+    if helmets and helmets[index] then  -- if player actually has the helmet and isn't hax
         player.serverUserData.helmets.selectedHelmet = index
     else
         print("** PLAYER IS H4X!! TRIED TO SET HELMET THEY DON'T OWN TO SELECTED **", player.name, player.id)

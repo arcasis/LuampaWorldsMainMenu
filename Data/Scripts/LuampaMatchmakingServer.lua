@@ -28,11 +28,6 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 
     print("FindGameForPlayer runs in MatchmakingServer for ", player.name, "in", SCENE_NAME)
 
-    -- TEST SCRIPTS CAN REMOVE AFTER OLD NEON IS REMOVED FROM SYSTEM --
-    -- MAKES SURE PLAYERS WHO HIT PLAY FROM MAIN MENU ARE SENT TO NEW NEON (Published Neon processes them, sends them on)
-    player.serverUserData.isTesting = true  -- dumped into data in Main Menu when player leaves
-    ----- END TEST SCRIPTS CAN REMOVE -----
-
     local partyLeader = nil
     local partySize = 1
 
@@ -59,6 +54,8 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         if SCENE_NAME == "Main Menu" then  -- player hit play button and party size is large enough for it's own game, send to first game
             print("Player leaving Main Menu. Party size was >= 6, party should transfer to Neon Race. partyLeader.id is:", partyLeader)
             if Environment.IsHostedGame() then
+                Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                Task.Wait(5)  -- total wait has to be 15s before transferring
                 player.TransferToGame(allGameIds[1])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -139,6 +136,8 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
              
         if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
             if Environment.IsHostedGame() then
+                Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                Task.Wait(5)  -- total wait has to be 15s before transferring
                 player:TransferToGame(allGameIds[bestGame])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -148,6 +147,8 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             if SCENE_NAME == "Main Menu" then  -- player hit play button and matchmaking did not find opening spots for join in progress, send player to first game
                 print("Player was in Main Menu, send them to Neon Race", player.name)
                 if Environment.IsHostedGame() then
+                    Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                    Task.Wait(5)  -- total wait has to be 15s before transferring
                     player:TransferToGame(allGameIds[1])
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -350,9 +351,9 @@ end
 
 function OnPlayerJoined(player)
 
-    Task.Wait(5)
-
     print("Player joined scene:", SCENE_NAME)
+
+    Task.Wait(10)  -- can't transfer successfully sooner than 15s D:
 
     if SCENE_NAME ~= "Main Menu" then
         -- update newPlayersInScene for creative storage matchmaking system
@@ -422,6 +423,8 @@ function OnPlayerJoined(player)
             if bestScene and bestScene ~= SCENE_NUMBER then     -- only transfer them if we found a scene with smaller open spots
                 print("Matchmaking server found a scene with players to send player. player.name/bestScene:", player.name, bestScene)
                 if Environment.IsHostedGame() then
+                    Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                    Task.Wait(5)  -- total wait has to be 15s before transferring
                     player:TransferToScene(allSceneNames[GAME_NUMBER][bestScene])  -- game will process them when they join and send them to best scene
                 else
                     print("TransferToScene is set to only transfer if IsHostedGame")
@@ -430,6 +433,9 @@ function OnPlayerJoined(player)
                 print("There was not a scene to join in progress, player will stay in this one", player.name, SCENE_NAME)
             end
         end
+    else
+        -- temporary testing else
+        player.serverUserData.isTesting = true
     end
 end
 

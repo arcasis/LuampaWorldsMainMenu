@@ -64,12 +64,27 @@ function HideMainMenuPanel()
     MAIN_MENU_PANEL.visibility = Visibility.FORCE_OFF
 end
 
+-- players can't transfer from scene until 15s are up
+function On15sUp()
+    PLAY_BUTTON.text = "Play"
+    PLAY_BUTTON:SetFont("584F0E6163837C18:Play")
+    PLAY_BUTTON:SetFontColor(Color.New(Color.WHITE))
+    PLAY_BUTTON.isInteractable = true
+end
+
+function InitializePlayButton()
+    PLAY_BUTTON.text = "Connecting..."
+    PLAY_BUTTON:SetFont("253C5D1D4087C5BE:Cabin Italic")
+    PLAY_BUTTON:SetFontColor(Color.New(Color.GRAY))
+    PLAY_BUTTON.isInteractable = false
+end
+
 
 UI.SetCursorVisible(true)
 UI.SetCanCursorInteractWithUI(true)
 
 -- Initialize
-MAIN_MENU_PANEL.visibility = Visibility.INHERIT
+Events.Connect("15sAreUp", On15sUp)
 
 GARAGE_BUTTON.clickedEvent:Connect(OnGarageButtonClicked)
 PLAY_BUTTON.clickedEvent:Connect(OnPlayButtonClicked)
@@ -78,3 +93,6 @@ STATS_BUTTON.clickedEvent:Connect(OnStatsButtonClicked)
 YES_BUTTON.clickedEvent:Connect(OnYesButtonClicked)
 NO_BUTTON.clickedEvent:Connect(OnNoButtonClicked)
 
+InitializePlayButton()
+
+MAIN_MENU_PANEL.visibility = Visibility.INHERIT
