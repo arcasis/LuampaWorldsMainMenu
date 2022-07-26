@@ -54,7 +54,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         if SCENE_NAME == "Main Menu" then  -- player hit play button and party size is large enough for it's own game, send to first game
             print("Player leaving Main Menu. Party size was >= 6, party should transfer to Neon Race. partyLeader.id is:", partyLeader)
             if Environment.IsHostedGame() then
-                Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                 Task.Wait(5)  -- total wait has to be 15s before transferring
                 player.TransferToGame(allGameIds[1])
             else
@@ -136,7 +136,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
              
         if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
             if Environment.IsHostedGame() then
-                Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                 Task.Wait(5)  -- total wait has to be 15s before transferring
                 player:TransferToGame(allGameIds[bestGame])
             else
@@ -147,7 +147,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             if SCENE_NAME == "Main Menu" then  -- player hit play button and matchmaking did not find opening spots for join in progress, send player to first game
                 print("Player was in Main Menu, send them to Neon Race", player.name)
                 if Environment.IsHostedGame() then
-                    Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                    Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                     Task.Wait(5)  -- total wait has to be 15s before transferring
                     player:TransferToGame(allGameIds[1])
                 else
@@ -423,7 +423,7 @@ function OnPlayerJoined(player)
             if bestScene and bestScene ~= SCENE_NUMBER then     -- only transfer them if we found a scene with smaller open spots
                 print("Matchmaking server found a scene with players to send player. player.name/bestScene:", player.name, bestScene)
                 if Environment.IsHostedGame() then
-                    Events.BroadcastToPlayer("MessageBanner", "Sending you to a game with players...", 5)
+                    Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                     Task.Wait(5)  -- total wait has to be 15s before transferring
                     player:TransferToScene(allSceneNames[GAME_NUMBER][bestScene])  -- game will process them when they join and send them to best scene
                 else
