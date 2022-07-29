@@ -12,7 +12,7 @@ local SEND_PERIOD = 5
 
 -- Script Helpers
 local totalPlayers = 0
-local servers = {}
+local serversTotals = {}
 local newPlayersInScene = 0
 local serverIsLocked = false
 
@@ -76,7 +76,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         -- find which game has a scene with the smallest number of open spots
         local lowest = {}
         local openSpots = nil
-        for gameNumber, games in ipairs(servers) do
+        for gameNumber, games in ipairs(serversTotals) do
             for sceneNumber, scenePlayers in ipairs(games) do
 
                 print("game", gameNumber, "scene", sceneNumber, "has total players:", scenePlayers)
@@ -248,52 +248,52 @@ function Tick(deltaTime)
         print("newPlayersInScene was found, creator storage will be updated. game number, scene number, newPlayers:", GAME_NUMBER, SCENE_NUMBER, newPlayersInScene)
 
         -- nil out old table (replace each time with old table whenever we need to start with fresh table)
-        data.servers = nil
+        data.serverTotals = nil  -- old was singular server, newest is servers
 
-        local serverTotals = data.serverTotals
+        local serversTotals = data.serversTotals
         
-        if not serverTotals then  -- data.serverTotals needs set up for the first time, update this table and copy into it if it exists
+        if not serversTotals then  -- data.serversTotals needs set up for the first time, update this table and copy into it if it exists
             
-            --print("data.serverTotals was not set up yet, create tables")
+            --print("data.serversTotals was not set up yet, create tables")
 
-            serverTotals = {}
-            serverTotals[GAME_NUMBER] = {}
+            serversTotals = {}
+            serversTotals[GAME_NUMBER] = {}
             
-            serverTotals[GAME_NUMBER].playersInServer = newPlayersInScene  -- start with first batch of new players
-            serverTotals[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- add a table entry for THIS scene with total players in this scene
+            serversTotals[GAME_NUMBER].playersInServer = newPlayersInScene  -- start with first batch of new players
+            serversTotals[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- add a table entry for THIS scene with total players in this scene
             
-            data.serverTotals = serverTotals
+            data.serversTotals = serversTotals
 
-        else     -- data.serverTotals table already exists
+        else     -- data.serversTotals table already exists
 
-            if not serverTotals[GAME_NUMBER] then  -- if data.serverTotals doesn't have this game's table yet, create it
+            if not serversTotals[GAME_NUMBER] then  -- if data.serversTotals doesn't have this game's table yet, create it
 
-                serverTotals[GAME_NUMBER] = {}
+                serversTotals[GAME_NUMBER] = {}
                 
-                --print("This GAME_NUMBER did not have a table in data.serverTotals yet, so it was created:")
+                --print("This GAME_NUMBER did not have a table in data.serversTotals yet, so it was created:")
                 
-                serverTotals[GAME_NUMBER].playersInServer = newPlayersInScene  -- start this game's table with first batch of total players as a property
-                serverTotals[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- start this scene's table with first batch of total players
+                serversTotals[GAME_NUMBER].playersInServer = newPlayersInScene  -- start this game's table with first batch of total players as a property
+                serversTotals[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene  -- start this scene's table with first batch of total players
             
-            else     -- data.serverTotals has this game table already, so update it
+            else     -- data.serversTotals has this game table already, so update it
                 
-                --print("This GAME NUMBER already has a table in data.serverTotals, will update with newPlayers")
+                --print("This GAME NUMBER already has a table in data.serversTotals, will update with newPlayers")
                 
-                serverTotals[GAME_NUMBER].playersInServer = serverTotals[GAME_NUMBER].playersInServer + newPlayersInScene
+                serversTotals[GAME_NUMBER].playersInServer = serversTotals[GAME_NUMBER].playersInServer + newPlayersInScene
                 
-                if not serverTotals[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
+                if not serversTotals[GAME_NUMBER][SCENE_NUMBER] then  -- check if there is also a table for THIS scene
                     
-                    --print("This SCENE_NUMBER did not have a table in data.serverTotals yet, will be created")
+                    --print("This SCENE_NUMBER did not have a table in data.serversTotals yet, will be created")
                     
-                    serverTotals[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
+                    serversTotals[GAME_NUMBER][SCENE_NUMBER] = newPlayersInScene
                 else
 
-                    --print("This SCENE_NUMBER already has a table in data.serverTotals, will update with newPlayers")
+                    --print("This SCENE_NUMBER already has a table in data.serversTotals, will update with newPlayers")
 
-                    serverTotals[GAME_NUMBER][SCENE_NUMBER] = serverTotals[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
+                    serversTotals[GAME_NUMBER][SCENE_NUMBER] = serversTotals[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
                 end
             end
-            data.serverTotals = serverTotals
+            data.serversTotals = serversTotals
         end
         newPlayersInScene = 0
         return data
@@ -307,11 +307,11 @@ end
 
 
 function OnConcurrentDataChanged(_, data)
-    if data.serverTotals and data.serverTotals ~= servers then
-        servers = data.serverTotals
+    if data.serversTotals and data.serversTotals ~= serversTotals then
+        serversTotals = data.serversTotals
         -- Tell everyone about the new total players across all games
         if Environment.IsHostedGame() then
-            Chat.BroadcastMessage("Total players in Race/Battle is: " .. serverTotals[1].playersInServer .. "/" .. serverTotals[2].playersInServer)
+            Chat.BroadcastMessage("Total players in Race/Battle is: " .. serversTotals[1].playersInServer .. "/" .. serversTotals[2].playersInServer)
         end
     end
 end
@@ -373,14 +373,14 @@ function OnPlayerJoined(player)
             local lowestOpenSpots = nil
 
             -- check if any scenes in this game have servers with players
-            if serverTotals and serverTotals[GAME_NUMBER] and serverTotals[GAME_NUMBER].playersInServer and serverTotals[GAME_NUMBER].playersInServer > 0 then
+            if serversTotals and serversTotals[GAME_NUMBER] and serversTotals[GAME_NUMBER].playersInServer and serversTotals[GAME_NUMBER].playersInServer > 0 then
                 
                 print("Matchmaking server says there are players in this game")
 
                 -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
                     
-                    for sceneNumber, scenePlayers in ipairs(serverTotals[GAME_NUMBER]) do
+                    for sceneNumber, scenePlayers in ipairs(serversTotals[GAME_NUMBER]) do
 
                         print("Loop runs to check scenes for players, sceneNumber/scenePlayers:", sceneNumber, scenePlayers)
                         
