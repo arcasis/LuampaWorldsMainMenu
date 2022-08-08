@@ -56,6 +56,12 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             if Environment.IsHostedGame() then
                 Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                 Task.Wait(5)  -- total wait has to be 15s before transferring
+                ----- NEW TRANSFER STUFF -----
+                local transfer = {}
+                transfer.game = 1
+                transfer.locked = true
+                player.serverUserData.transfer = transfer
+                ----- END TRANSFER STUFF -----
                 player.TransferToGame(allGameIds[1])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -138,6 +144,12 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             if Environment.IsHostedGame() then
                 Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                 Task.Wait(5)  -- total wait has to be 15s before transferring
+                ----- NEW TRANSFER STUFF -----
+                local transfer = {}
+                transfer.game = bestGame
+                transfer.locked = false
+                player.serverUserData.transfer = transfer
+                ----- END TRANSFER STUFF -----
                 player:TransferToGame(allGameIds[bestGame])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -149,6 +161,12 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
                 if Environment.IsHostedGame() then
                     Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
                     Task.Wait(5)  -- total wait has to be 15s before transferring
+                    ----- NEW TRANSFER STUFF -----
+                    local transfer = {}
+                    transfer.game = bestGame
+                    transfer.locked = false
+                    player.serverUserData.transfer = transfer
+                    ----- END TRANSFER STUFF -----
                     player:TransferToGame(allGameIds[1])
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -182,6 +200,13 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
         if player then  -- player doesn't pass when entire lobby is being sent to next scene
             print("Player should transfer to next scene in this game, player.name/allSceneNames[GAME_NUMBER][nextSceneNumber]", player.name, allSceneNames[GAME_NUMBER][nextSceneNumber])
             if Environment.IsHostedGame() then
+                ----- NEW TRANSFER STUFF -----
+                local transfer = {}
+                transfer.game = GAME_NUMBER
+                transfer.scene = nextSceneNumber
+                transfer.locked = false
+                player.serverUserData.transfer = transfer
+                ----- END TRANSFER STUFF -----
                 player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
             else
                 print("TransferToScene is set to only transfer if IsHostedGame")
@@ -189,6 +214,15 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
         else
             print("Lobby should transfer to next scene in this game, allSceneNames[GAME_NUMBER][nextSceneNumber]:", allSceneNames[GAME_NUMBER][nextSceneNumber])
             if Environment.IsHostedGame() then
+                ----- NEW TRANSFER STUFF -----
+                for _,p in pairs(Game.GetPlayers()) do
+                    local transfer = {}
+                    transfer.game = GAME_NUMBER
+                    transfer.scene = nextSceneNumber
+                    transfer.locked = true
+                    player.serverUserData.transfer = transfer
+                end
+                ----- END TRANSFER STUFF -----
                 Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
             else
                 print("TransferAllPlayersToScene is set to only transfer if IsHostedGame")
@@ -201,6 +235,12 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
             if player then
                 print("Game ended on last scene of this game, player should transfer to next game. player.name/this game number", player.name, GAME_NUMBER)
                 if Environment.IsHostedGame() then
+                    ----- NEW TRANSFER STUFF -----
+                    local transfer = {}
+                    transfer.game = GAME_NUMBER + 1
+                    transfer.locked = false
+                    player.serverUserData.transfer = transfer
+                    ----- END TRANSFER STUFF -----
                     player:TransferToGame(allGameIds[GAME_NUMBER + 1])
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -208,6 +248,14 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
             else
                 print("Game ended on last scene of this game, Lobby should transfer to next game. this game number is:", GAME_NUMBER)
                 if Environment.IsHostedGame() then
+                    ----- NEW TRANSFER STUFF -----
+                    for _,p in pairs(Game.GetPlayers()) do
+                        local transfer = {}
+                        transfer.game = GAME_NUMBER + 1
+                        transfer.locked = true
+                        player.serverUserData.transfer = transfer
+                    end
+                    ----- END TRANSFER STUFF -----
                     Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
                 else
                     print("TransferAllPlayersToGame is set to only transfer if IsHostedGame")
@@ -217,6 +265,12 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
             if player then
                 print("Game ended on last scene of last game, Player should transfer to game #1. player.name, this game number:", player.name, GAME_NUMBER)
                 if Environment.IsHostedGame() then
+                    ----- NEW TRANSFER STUFF -----
+                    local transfer = {}
+                    transfer.game = 1
+                    transfer.locked = false
+                    player.serverUserData.transfer = transfer
+                    ----- END TRANSFER STUFF -----
                     player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -224,6 +278,14 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
             else
                 print("Game ended on last scene of last game, Lobby should transfer to game #1. this game number is:", GAME_NUMBER)
                 if Environment.IsHostedGame() then
+                    ----- NEW TRANSFER STUFF -----
+                    for _,p in pairs(Game.GetPlayers()) do
+                        local transfer = {}
+                        transfer.game = GAME_NUMBER + 1
+                        transfer.locked = true
+                        player.serverUserData.transfer = transfer 
+                    end
+                    ----- END TRANSFER STUFF -----
                     Game.TransferAllPlayersToGame(allGameIds[1])
                 else
                     print("TransferAllPlayersToGame is set to only transfer if IsHostedGame")
@@ -327,7 +389,11 @@ function OnPlayerJoined(player)
 
     Task.Wait(10)  -- can't transfer successfully sooner than 15s D:
 
-    if SCENE_NAME ~= "Main Menu" then
+    ----- NEW TRANSFER STUFF -----
+    local transfer = player.serverUserData.transfer
+    ----- USES THIS BELOW -----
+
+    if SCENE_NAME ~= "Main Menu" and not transfer.locked then  -- NEW TRANSFER STUFF END
         -- update newPlayersInScene for creative storage matchmaking system
         newPlayersInScene = newPlayersInScene + 1
 
@@ -405,9 +471,6 @@ function OnPlayerJoined(player)
                 print("There was not a scene to join in progress, player will stay in this one", player.name, SCENE_NAME)
             end
         end
-    else
-        -- temporary testing else
-        player.serverUserData.isTesting = true
     end
 end
 
@@ -431,7 +494,8 @@ function OnGameStateChanged(oldState, newState)
             TransferToNextScene()  -- when no player is passed, that function will transfer all players
         else
             for _,player in pairs(Game.GetPlayers()) do
-                FindGameForPlayer(player)
+                    FindGameForPlayer(player)
+                end
             end
         end
     end
