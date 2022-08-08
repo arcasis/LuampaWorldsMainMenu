@@ -64,9 +64,9 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 
             print("Player transferring to next scene. Party size was >= 6. partyLeader.id is:", partyLeader)
             if Environment.IsHostedGame() then
-                TransferPlayerToNextScene(player)
+                TransferToNextScene(player)
             else
-                print("TransferPlayerToNextScene is set to only transfer if IsHostedGame")
+                print("TransferToNextScene is set to only transfer if IsHostedGame")
             end
         end
     else
@@ -156,9 +156,9 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             else     -- game was over and matchmaking did not find opening spots for join in progress, send player to next scene
                 print("Round was over, send player to next scene:", player.name)
                 if Environment.IsHostedGame() then
-                    TransferPlayerToNextScene(player)
+                    TransferToNextScene(player)
                 else
-                    print("TransferPlayerToNextScene is set to only transfer if IsHostedGame")
+                    print("TransferToNextScene is set to only transfer if IsHostedGame")
                 end
             end
         end
@@ -166,9 +166,9 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
 end
 
 
-function TransferPlayerToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader, doesn't pass player if entire lobby should transfer
+function TransferToNextScene(player)  -- doesn't run for players in isPlayAsParty unless leader, doesn't pass player if entire lobby should transfer
 
-    print("TransferPlayerToNextScene runs, is there a player?", player.name, "in scene name/number", SCENE_NAME, SCENE_NUMBER)
+    print("TransferToNextScene runs, is there a player?", player.name, "in scene name/number", SCENE_NAME, SCENE_NUMBER)
     print("If there was no player, entire lobby should transfer together")
     
     -- determine if player will go to next scene or transfer to next game
@@ -428,7 +428,7 @@ function OnGameStateChanged(oldState, newState)
     elseif newState == 0 and oldState ~= 0 then  -- lobby
         local totalPlayers = #Game.GetPlayers()
         if totalPlayers >= 6 then
-            TransferLobbyToNextScene()
+            TransferToNextScene()  -- when no player is passed, that function will transfer all players
         else
             for _,player in pairs(Game.GetPlayers()) do
                 FindGameForPlayer(player)
