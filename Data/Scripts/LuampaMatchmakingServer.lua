@@ -391,9 +391,13 @@ function OnPlayerJoined(player)
 
     ----- NEW TRANSFER STUFF -----
     local transfer = player.serverUserData.transfer
+    local transferLocked 
+    if transfer then
+        transferLocked = transfer.locked
+    end
     ----- USES THIS BELOW -----
 
-    if SCENE_NAME ~= "Main Menu" and not transfer.locked then  -- NEW TRANSFER STUFF END
+    if SCENE_NAME ~= "Main Menu" and not transferLocked then  -- NEW TRANSFER STUFF END
         -- update newPlayersInScene for creative storage matchmaking system
         newPlayersInScene = newPlayersInScene + 1
 
@@ -494,8 +498,7 @@ function OnGameStateChanged(oldState, newState)
             TransferToNextScene()  -- when no player is passed, that function will transfer all players
         else
             for _,player in pairs(Game.GetPlayers()) do
-                    FindGameForPlayer(player)
-                end
+                FindGameForPlayer(player)
             end
         end
     end
