@@ -12,7 +12,7 @@ local SEND_PERIOD = 5
 
 -- Script Helpers
 local totalPlayers = 0
-local allPlayers = {}
+local serverTotals = {}
 local newPlayersInScene = 0
 local serverIsLocked = false
 
@@ -82,7 +82,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         -- find which game has a scene with the smallest number of open spots
         local lowest = {}
         local openSpots = nil
-        for gameNumber, games in ipairs(allPlayers) do
+        for gameNumber, games in ipairs(serverTotals) do
             for sceneNumber, scenePlayers in ipairs(games) do
 
                 print("game", gameNumber, "scene", sceneNumber, "has total players:", scenePlayers)
@@ -223,9 +223,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                     player.serverUserData.transfer = transfer
                 end
                 ----- END TRANSFER STUFF -----
-                Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+                Game.TransferserverTotalsToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
             else
-                print("TransferAllPlayersToScene is set to only transfer if IsHostedGame")
+                print("TransferserverTotalsToScene is set to only transfer if IsHostedGame")
             end
         end
         
@@ -256,9 +256,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                         player.serverUserData.transfer = transfer
                     end
                     ----- END TRANSFER STUFF -----
-                    Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
+                    Game.TransferserverTotalsToGame(allGameIds[GAME_NUMBER + 1])
                 else
-                    print("TransferAllPlayersToGame is set to only transfer if IsHostedGame")
+                    print("TransferserverTotalsToGame is set to only transfer if IsHostedGame")
                 end
             end
         else
@@ -286,9 +286,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                         player.serverUserData.transfer = transfer 
                     end
                     ----- END TRANSFER STUFF -----
-                    Game.TransferAllPlayersToGame(allGameIds[1])
+                    Game.TransferserverTotalsToGame(allGameIds[1])
                 else
-                    print("TransferAllPlayersToGame is set to only transfer if IsHostedGame")
+                    print("TransferserverTotalsToGame is set to only transfer if IsHostedGame")
                 end
             end
         end
@@ -310,33 +310,33 @@ function Tick(deltaTime)
         print("newPlayersInScene was found, creator storage will be updated. game number, scene number, newPlayers:", GAME_NUMBER, SCENE_NUMBER, newPlayersInScene)
 
         -- nil out old table (replace each time with old table whenever we need to start with fresh table)
-        data.serverTotals = nil 
+        data.allPlayers = nil 
 
-        local allPlayers = data.allPlayers
+        local serverTotals = data.serverTotals
         
-        if not allPlayers then  -- set up fresh table
+        if not serverTotals then  -- set up fresh table
             
-            print("data.allPlayers was not set up yet, create tables")
+            print("data.serverTotals was not set up yet, create tables")
 
-            allPlayers = {}
-            allPlayers[1] = {}
-            allPlayers[2] = {}
+            serverTotals = {}
+            serverTotals[1] = {}
+            serverTotals[2] = {}
             
-            allPlayers[1].playersInServer = 0
-            allPlayers[2].playersInServer = 0
+            serverTotals[1].playersInServer = 0
+            serverTotals[2].playersInServer = 0
             
-            allPlayers[1][1] = 0
-            allPlayers[1][2] = 0
-            allPlayers[2][1] = 0
-            allPlayers[2][2] = 0
+            serverTotals[1][1] = 0
+            serverTotals[1][2] = 0
+            serverTotals[2][1] = 0
+            serverTotals[2][2] = 0
         end     
                         
-        allPlayers[GAME_NUMBER].playersInServer = allPlayers[GAME_NUMBER].playersInServer + newPlayersInScene
-        allPlayers[GAME_NUMBER][SCENE_NUMBER] = allPlayers[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
+        serverTotals[GAME_NUMBER].playersInServer = serverTotals[GAME_NUMBER].playersInServer + newPlayersInScene
+        serverTotals[GAME_NUMBER][SCENE_NUMBER] = serverTotals[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
 
-        data.allPlayers = allPlayers
+        data.serverTotals = serverTotals
 
-        print("Total players are (game1 total, game 1 sc1, game1 sc2, game 2 total, game 2 sc1, game2 sc2", allPlayers[1].playersInServer, allPlayers[1][1], allPlayers[1][2], allPlayers[2].playersInServer, allPlayers[2][1], allPlayers[2][2])
+        print("Total players are (game1 total, game 1 sc1, game1 sc2, game 2 total, game 2 sc1, game2 sc2", serverTotals[1].playersInServer, serverTotals[1][1], serverTotals[1][2], serverTotals[2].playersInServer, serverTotals[2][1], serverTotals[2][2])
         
         newPlayersInScene = 0
         return data
@@ -350,11 +350,11 @@ end
 
 
 function OnConcurrentDataChanged(_, data)
-    if data.allPlayers and data.allPlayers ~= allPlayers then
-        allPlayers = data.allPlayers
+    if data.serverTotals and data.serverTotals ~= serverTotals then
+        serverTotals = data.serverTotals
         -- Tell everyone about the new total players across all games
         if Environment.IsHostedGame() then
-            Chat.BroadcastMessage("Total players in Race/Battle is: " .. allPlayers[1].playersInServer .. "/" .. allPlayers[2].playersInServer)
+            Chat.BroadcastMessage("Total players in Race/Battle is: " .. serverTotals[1].playersInServer .. "/" .. serverTotals[2].playersInServer)
         end
     end
 end
@@ -424,14 +424,14 @@ function OnPlayerJoined(player)
             local lowestOpenSpots = nil
 
             -- check if any scenes in this game have servers with players
-            if allPlayers and allPlayers[GAME_NUMBER] and allPlayers[GAME_NUMBER].playersInServer and allPlayers[GAME_NUMBER].playersInServer > 0 then
+            if serverTotals and serverTotals[GAME_NUMBER] and serverTotals[GAME_NUMBER].playersInServer and serverTotals[GAME_NUMBER].playersInServer > 0 then
                 
                 print("Matchmaking server says there are players in this game")
 
                 -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
                     
-                    for sceneNumber, scenePlayers in ipairs(allPlayers[GAME_NUMBER]) do
+                    for sceneNumber, scenePlayers in ipairs(serverTotals[GAME_NUMBER]) do
 
                         print("Loop runs to check scenes for players, sceneNumber/scenePlayers:", sceneNumber, scenePlayers)
                         
