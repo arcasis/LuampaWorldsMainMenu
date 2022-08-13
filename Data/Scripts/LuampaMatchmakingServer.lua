@@ -1,8 +1,12 @@
 --[[DESCRIPTION: Handles sending players to the most populated game in Luampa Worlds that
 their party will fit in.]]
 
+-- References
 local LUAMPA_CREATOR_KEY = script:GetCustomProperty("LuampaCreatorKey")
 
+local SERVER_ID_OBJECT = script:GetCustomProperty("ServerIDObject")
+
+-- Script Helpers
 local GAME_NUMBER = nil
 local TOTAL_SCENES_THIS_GAME = nil
 local SCENE_NUMBER = nil
@@ -10,9 +14,7 @@ local SCENE_NAME = nil
 
 local SEND_PERIOD = 5
 
--- Script Helpers
-local totalPlayers = 0
-local serverTotals = {}
+local serverTables = {}
 local newPlayersInScene = 0
 local serverIsLocked = false
 
@@ -20,6 +22,8 @@ local allSceneNames = {}
 local allGameIds = {}
 local allGameTransfers = {}
 
+local SERVER_ID
+local serverIdComplete = false  -- used to update SERVER_ID to merge first player's id with SERVER_ID_OBJECT.id's numbers
 
 local reset = false
 
@@ -82,8 +86,11 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         -- find which game has a scene with the smallest number of open spots
         local lowest = {}
         local openSpots = nil
-        for gameNumber, games in ipairs(serverTotals) do
-            for sceneNumber, scenePlayers in ipairs(games) do
+        for gameNumber, games in ipairs(serverTables) do
+
+            for sceneNumber, _ in ipairs(games) do
+
+                local scenePlayers = serverTables[gameNumber][sceneNumber].playersInScene
 
                 print("game", gameNumber, "scene", sceneNumber, "has total players:", scenePlayers)
 
@@ -223,9 +230,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                     player.serverUserData.transfer = transfer
                 end
                 ----- END TRANSFER STUFF -----
-                Game.TransferserverTotalsToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
+                Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
             else
-                print("TransferserverTotalsToScene is set to only transfer if IsHostedGame")
+                print("TransferAllPlayersToScene is set to only transfer if IsHostedGame")
             end
         end
         
@@ -256,9 +263,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                         player.serverUserData.transfer = transfer
                     end
                     ----- END TRANSFER STUFF -----
-                    Game.TransferserverTotalsToGame(allGameIds[GAME_NUMBER + 1])
+                    Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
                 else
-                    print("TransferserverTotalsToGame is set to only transfer if IsHostedGame")
+                    print("TransferserverTablesToGame is set to only transfer if IsHostedGame")
                 end
             end
         else
@@ -286,9 +293,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                         player.serverUserData.transfer = transfer 
                     end
                     ----- END TRANSFER STUFF -----
-                    Game.TransferserverTotalsToGame(allGameIds[1])
+                    Game.TransferAllPlayersToGame(allGameIds[1])
                 else
-                    print("TransferserverTotalsToGame is set to only transfer if IsHostedGame")
+                    print("TransferserverTablesToGame is set to only transfer if IsHostedGame")
                 end
             end
         end
@@ -300,6 +307,8 @@ function Tick(deltaTime)
 
     Task.Wait(SEND_PERIOD)
 
+    if not serverIdComplete then return end  -- we combine first player's id with server object id to create unique server id
+
     if newPlayersInScene == 0 then return end  -- for empty servers and Main Menu
 
     if Storage.HasPendingSetConcurrentCreatorData(LUAMPA_CREATOR_KEY) then return end  -- if another server is updating data, wait to update
@@ -310,33 +319,128 @@ function Tick(deltaTime)
         print("newPlayersInScene was found, creator storage will be updated. game number, scene number, newPlayers:", GAME_NUMBER, SCENE_NUMBER, newPlayersInScene)
 
         -- nil out old table (replace each time with old table whenever we need to start with fresh table)
-        data.allPlayers = nil 
+        data.serverTotals = nil 
+        data.allServerTables = nil
 
-        local serverTotals = data.serverTotals
+        serverTables = data.serverTables
         
-        if not serverTotals then  -- set up fresh table
+        if not serverTables then  
             
-            print("data.serverTotals was not set up yet, create tables")
-
-            serverTotals = {}
-            serverTotals[1] = {}
-            serverTotals[2] = {}
+            print("data.serverTables was not set up yet, create tables")
+            -- set up fresh matchmaking tables
+            serverTables = {}
+            serverTables[1] = {}  -- Game 1: Race
+            serverTables[1]["playersInGame"] = 0
+            serverTables[1][1] = {}  -- Scene: Neon Race
+            serverTables[1][1]["playersInScene"] = 0
+            serverTables[1][2] = {}  -- Scene: Desert Race
+            serverTables[1][2]["playersInScene"] = 0
             
-            serverTotals[1].playersInServer = 0
-            serverTotals[2].playersInServer = 0
-            
-            serverTotals[1][1] = 0
-            serverTotals[1][2] = 0
-            serverTotals[2][1] = 0
-            serverTotals[2][2] = 0
-        end     
-                        
-        serverTotals[GAME_NUMBER].playersInServer = serverTotals[GAME_NUMBER].playersInServer + newPlayersInScene
-        serverTotals[GAME_NUMBER][SCENE_NUMBER] = serverTotals[GAME_NUMBER][SCENE_NUMBER] + newPlayersInScene
+            serverTables[2] = {}  -- Game 2: Battle
+            serverTables[2]["playersInGame"] = 0
+            serverTables[2][1] = {}  -- Scene: Desert Battle
+            serverTables[2][1]["playersInScene"] = 0
+            serverTables[2][2] = {}  -- Scene: Neon Battle
+            serverTables[2][2]["playersInScene"] = 0            
+        end
 
-        data.serverTotals = serverTotals
+        -- add THIS server to Scene tables when server comes online
+        if not serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID] then
 
-        print("Total players are (game1 total, game 1 sc1, game1 sc2, game 2 total, game 2 sc1, game2 sc2", serverTotals[1].playersInServer, serverTotals[1][1], serverTotals[1][2], serverTotals[2].playersInServer, serverTotals[2][1], serverTotals[2][2])
+            serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID] = {}
+            -- print("THIS server sets up it's table, SERVER_ID/serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID]", SERVER_ID, serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID])  -- this prints fine
+        end
+
+        -- update THIS server's Scene table if it's not locked, otherwise nil it out of table
+        if not serverIsLocked then
+            -- update THIS server's Game table
+            serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID].lastTime = os.time()
+            serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID].totalPlayers = #Game.GetPlayers()
+
+            print("A server is updating it's tables (os.time, lastTime, totalPlayers, [totalPlayers])", os.time(), serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID]["lastTime"], serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID].totalPlayers, serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID]["totalPlayers"])
+        else
+            print("A server was locked, it is removed from matchmaking tables")
+            serverTables[GAME_NUMBER][SCENE_NUMBER][SERVER_ID] = nil
+        end
+
+        -- run loops to filter dead servers and update serverTables with new player counts
+        -- run loop to get total players in Race
+        local raceTable = serverTables[1]
+        local raceTotalPlayerCount = 0
+        local raceNeonPlayerCount = 0
+        local raceDesertPlayerCount = 0
+
+        for k,d in pairs(raceTable) do
+            if (type(d) == "table") then  -- data is a scene
+                --print("Running raceTable loop if data is a table, k/d is:", k, d)
+                -- loop servers in scene
+                for scene, i in pairs(d) do
+                    --print("serverId, i", serverId, i)
+                    if (type(i) == "table") then  -- data is a server
+                        --print("i.lastTime, i.totalPlayers", i.lastTime, i.totalPlayers)  -- verified working 100% up to here DON'T CHANGE!!!
+                        local expireTime = i.lastTime + 900
+                        local currentTime = os.time()
+                        if expireTime < currentTime then  -- 15m
+                            print("A server went offline, a matchmaking server will remove it from tables (expireTime, currentTime)", expireTime, currentTime)
+                            serverTables[1][k][serverId] = nil  -- nil serverTables[1][1][serverId] = nil
+                            --serverTables[1][2][serverId] = nil
+                        else
+                            raceTotalPlayerCount = raceTotalPlayerCount + i.totalPlayers
+                            if k == 1 then
+                                raceNeonPlayerCount = raceNeonPlayerCount + i.totalPlayers
+                            elseif k == 2 then
+                                raceDesertPlayerCount = raceDesertPlayerCount + i.totalPlayers
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        print("Race count loops are complete (raceTotalPlayerCount, raceNeonPlayerCount, raceDesertPlayerCount)", raceTotalPlayerCount, raceNeonPlayerCount, raceDesertPlayerCount)
+        serverTables[1].playersInGame = raceTotalPlayerCount
+        serverTables[1][1].playersInScene = raceNeonPlayerCount
+        serverTables[1][2].playersInScene = raceDesertPlayerCount
+
+        -- run loop to get total players in Battle
+        local battleTable = serverTables[2]
+        local battleTotalPlayerCount = 0
+        local battleDesertPlayerCount = 0
+        local battleNeonPlayerCount = 0
+
+        for k,d in pairs(battleTable) do
+            if (type(d) == "table") then  -- data is a scene
+                --print("Running battleTable loop if data is a table, k/d is:", k, d)
+                -- loop servers in scene
+                for serverId, i in pairs(d) do
+                    --print("serverId, i", serverId, i)
+                    if (type(i) == "table") then  -- data is a server
+                        --print("i.lastTime, i.totalPlayers", i.lastTime, i.totalPlayers)  -- verified working 100% up to here DON'T CHANGE!!!
+                        local expireTime = i.lastTime + 900
+                        local currentTime = os.time()
+                        if expireTime < currentTime then  -- 15m
+                            print("A server went offline, a matchmaking server will remove it from tables (expireTime, currentTime)", expireTime, currentTime)
+                            serverTables[2][k][serverId] = nil  -- nil serverTables[2][1][serverId] = nil
+                            --serverTables[2][2][serverId] = nil
+                        else
+                            battleTotalPlayerCount = battleTotalPlayerCount + i.totalPlayers
+                            if k == 1 then
+                                battleNeonPlayerCount = battleNeonPlayerCount + i.totalPlayers
+                            elseif k == 2 then
+                                battleDesertPlayerCount = battleDesertPlayerCount + i.totalPlayers
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        print("Battle count loops are complete (battleTotalPlayerCount, battleDesertPlayerCount, battleNeonPlayerCount)", battleTotalPlayerCount, battleDesertPlayerCount, battleNeonPlayerCount)
+        serverTables[2].playersInGame = battleTotalPlayerCount
+        serverTables[2][1].playersInScene = battleDesertPlayerCount
+        serverTables[2][2].playersInScene = battleNeonPlayerCount
+
+        data.serverTables = serverTables
+
+        print("Total players are (game1 total, game 1 sc1, game1 sc2, game 2 total, game 2 sc1, game2 sc2", serverTables[1].playersInGame, serverTables[1][1].playersInScene, serverTables[1][2].playersInScene, serverTables[2].playersInGame, serverTables[2][1].playersInScene, serverTables[2][2].playersInScene)
         
         newPlayersInScene = 0
         return data
@@ -350,11 +454,11 @@ end
 
 
 function OnConcurrentDataChanged(_, data)
-    if data.serverTotals and data.serverTotals ~= serverTotals then
-        serverTotals = data.serverTotals
+    if data.serverTables and data.serverTables ~= serverTables then
+        serverTables = data.serverTables
         -- Tell everyone about the new total players across all games
         if Environment.IsHostedGame() then
-            Chat.BroadcastMessage("Total players in Race/Battle is: " .. serverTotals[1].playersInServer .. "/" .. serverTotals[2].playersInServer)
+            Chat.BroadcastMessage("Total players in Race/Battle is: " .. serverTables[1].playersInGame .. "/" .. serverTables[2].playersInGame)
         end
     end
 end
@@ -383,9 +487,25 @@ function GetCurrentSceneAndGameNumbers()
 end
 
 
+function CompleteServerID(player)
+    print("CompleteServerID starts, starting SERVER_ID is:", SERVER_ID)
+
+    local playerId = player.id
+    SERVER_ID = SERVER_ID..playerId
+
+    serverIdComplete = true
+
+    print("CompleteServerID finished, new SERVER_ID is:", SERVER_ID)
+end
+
+
 function OnPlayerJoined(player)
 
     print("Player joined scene:", SCENE_NAME)
+
+    if not serverIdComplete then
+        CompleteServerID(player)
+    end
 
     Task.Wait(10)  -- can't transfer successfully sooner than 15s D:
 
@@ -402,8 +522,8 @@ function OnPlayerJoined(player)
         newPlayersInScene = newPlayersInScene + 1
 
         -- determine if players need sent to a more populated scene
-        local totalPlayers = #Game.GetPlayers()
-        if totalPlayers < 6 then
+        local playerCount = #Game.GetPlayers()
+        if playerCount < 6 then
 
             print("Player's party was < 6, searching for optimal scene for join in progress")
             
@@ -424,14 +544,16 @@ function OnPlayerJoined(player)
             local lowestOpenSpots = nil
 
             -- check if any scenes in this game have servers with players
-            if serverTotals and serverTotals[GAME_NUMBER] and serverTotals[GAME_NUMBER].playersInServer and serverTotals[GAME_NUMBER].playersInServer > 0 then
+            if serverTables and serverTables[GAME_NUMBER] and serverTables[GAME_NUMBER].playersInGame and serverTables[GAME_NUMBER].playersInGame > 0 then
                 
                 print("Matchmaking server says there are players in this game")
 
                 -- if party size is smaller than 6, find the scene with the smallest empty spots
                 if partySize < 6 then
                     
-                    for sceneNumber, scenePlayers in ipairs(serverTotals[GAME_NUMBER]) do
+                    for sceneNumber, _ in ipairs(serverTables[GAME_NUMBER]) do
+
+                        local scenePlayers = serverTables[GAME_NUMBER][sceneNumber].playersInScene
 
                         print("Loop runs to check scenes for players, sceneNumber/scenePlayers:", sceneNumber, scenePlayers)
                         
@@ -492,9 +614,11 @@ function OnGameStateChanged(oldState, newState)
     if newState == 2 and oldState ~= 2 then  -- round end
         Game.StopAcceptingPlayers()
         serverIsLocked = true
+        -- !! NEW - trigger to update matchmaking storage with locked status
+        newPlayersInScene = 1  -- currently, system does not add this to anything and clears it to 0 when done, just an on off switch
     elseif newState == 0 and oldState ~= 0 then  -- lobby
-        local totalPlayers = #Game.GetPlayers()
-        if totalPlayers >= 6 then
+        local playerCount = #Game.GetPlayers()
+        if playerCount >= 6 then
             TransferToNextScene()  -- when no player is passed, that function will transfer all players
         else
             for _,player in pairs(Game.GetPlayers()) do
@@ -533,6 +657,14 @@ function CountScenesInThisGame()
 end
 
 -- Initialize
+if SERVER_ID_OBJECT then  -- Main Menu will not have the object
+    local serverIdObject = World.SpawnAsset(SERVER_ID_OBJECT)
+    local objectId = serverIdObject.id
+    SERVER_ID, name = CoreString.Split(objectId, {delimiters = {":"}})
+    --SERVER_ID = serverIdObject.id
+end
+print("A server started, SERVER_ID is:", SERVER_ID)
+
 Storage.ConnectToConcurrentCreatorDataChanged(LUAMPA_CREATOR_KEY, OnConcurrentDataChanged)
 Events.ConnectForPlayer("FindAGame", FindGameForPlayer)
 Events.Connect("GameStateChanged", OnGameStateChanged)
