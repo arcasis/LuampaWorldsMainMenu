@@ -66,6 +66,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
                 transfer.locked = true
                 player.serverUserData.transfer = transfer
                 ----- END TRANSFER STUFF -----
+                player.serverUserData.isTesting = true  -- temp to skip published neon until major update
                 player.TransferToGame(allGameIds[1])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -174,6 +175,7 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
                     transfer.locked = false
                     player.serverUserData.transfer = transfer
                     ----- END TRANSFER STUFF -----
+                    player.serverUserData.isTesting = true  -- temp to skip published neon until major update
                     player:TransferToGame(allGameIds[1])
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
