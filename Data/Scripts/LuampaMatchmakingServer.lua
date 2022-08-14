@@ -59,14 +59,17 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
             print("Player leaving Main Menu. Party size was >= 6, party should transfer to Neon Race. partyLeader.id is:", partyLeader)
             if Environment.IsHostedGame() then
                 Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
-                Task.Wait(5)  -- total wait has to be 15s before transferring
+
+                -- Note: setting data right before transfer can result is playerLeft not catching data in time to upload?
+                player.serverUserData.isTesting = true  -- temp to skip published neon until major update
                 ----- NEW TRANSFER STUFF -----
                 local transfer = {}
                 transfer.game = 1
                 transfer.locked = true
                 player.serverUserData.transfer = transfer
                 ----- END TRANSFER STUFF -----
-                player.serverUserData.isTesting = true  -- temp to skip published neon until major update
+
+                Task.Wait(5)  -- total wait has to be 15s before transferring
                 player.TransferToGame(allGameIds[1])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -151,13 +154,17 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
         if bestGame and allGameIds[bestGame] ~= allGameIds[GAME_NUMBER] then
             if Environment.IsHostedGame() then
                 Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
-                Task.Wait(5)  -- total wait has to be 15s before transferring
+
+                -- Note: setting data same tick as transfer can result in losing data?
                 ----- NEW TRANSFER STUFF -----
                 local transfer = {}
                 transfer.game = bestGame
                 transfer.locked = false
                 player.serverUserData.transfer = transfer
                 ----- END TRANSFER STUFF -----
+
+                Task.Wait(5)  -- total wait has to be 15s before transferring
+                
                 player:TransferToGame(allGameIds[bestGame])
             else
                 print("TransferToGame is set to only transfer if IsHostedGame")
@@ -168,7 +175,8 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
                 print("Player was in Main Menu, send them to Neon Race", player.name)
                 if Environment.IsHostedGame() then
                     Events.BroadcastToPlayer(player, "MessageBanner", "Sending you to a game with players...", 5)
-                    Task.Wait(5)  -- total wait has to be 15s before transferring
+
+                    -- Note: Setting data same tick as transfer can result in losing data?
                     ----- NEW TRANSFER STUFF -----
                     local transfer = {}
                     transfer.game = bestGame
@@ -176,6 +184,9 @@ function FindGameForPlayer(player)  -- runs in Main Menu and round end for all p
                     player.serverUserData.transfer = transfer
                     ----- END TRANSFER STUFF -----
                     player.serverUserData.isTesting = true  -- temp to skip published neon until major update
+
+                    Task.Wait(5)  -- total wait has to be 15s before transferring
+                    
                     player:TransferToGame(allGameIds[1])
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -209,6 +220,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
         if player then  -- player doesn't pass when entire lobby is being sent to next scene
             print("Player should transfer to next scene in this game, player.name/allSceneNames[GAME_NUMBER][nextSceneNumber]", player.name, allSceneNames[GAME_NUMBER][nextSceneNumber])
             if Environment.IsHostedGame() then
+
                 ----- NEW TRANSFER STUFF -----
                 local transfer = {}
                 transfer.game = GAME_NUMBER
@@ -216,6 +228,9 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                 transfer.locked = false
                 player.serverUserData.transfer = transfer
                 ----- END TRANSFER STUFF -----
+
+                Task.Wait()  -- setting data same tick as transfer can result in loss of data?
+
                 player:TransferToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
             else
                 print("TransferToScene is set to only transfer if IsHostedGame")
@@ -223,6 +238,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
         else
             print("Lobby should transfer to next scene in this game, allSceneNames[GAME_NUMBER][nextSceneNumber]:", allSceneNames[GAME_NUMBER][nextSceneNumber])
             if Environment.IsHostedGame() then
+
                 ----- NEW TRANSFER STUFF -----
                 for _,p in pairs(Game.GetPlayers()) do
                     local transfer = {}
@@ -232,6 +248,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                     player.serverUserData.transfer = transfer
                 end
                 ----- END TRANSFER STUFF -----
+                Task.Wait()  -- setting data same tick as transfer can result in loss of data?
                 Game.TransferAllPlayersToScene(allSceneNames[GAME_NUMBER][nextSceneNumber])
             else
                 print("TransferAllPlayersToScene is set to only transfer if IsHostedGame")
@@ -250,6 +267,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                     transfer.locked = false
                     player.serverUserData.transfer = transfer
                     ----- END TRANSFER STUFF -----
+                    Task.Wait()  -- setting data same tick as transfer can result in loss of data?
                     player:TransferToGame(allGameIds[GAME_NUMBER + 1])
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -265,6 +283,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                         player.serverUserData.transfer = transfer
                     end
                     ----- END TRANSFER STUFF -----
+                    Task.Wait()  -- setting data same tick as transfer can result in loss of data?
                     Game.TransferAllPlayersToGame(allGameIds[GAME_NUMBER + 1])
                 else
                     print("TransferserverTablesToGame is set to only transfer if IsHostedGame")
@@ -280,6 +299,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                     transfer.locked = false
                     player.serverUserData.transfer = transfer
                     ----- END TRANSFER STUFF -----
+                    Task.Wait()  -- setting data same tick as transfer can result in loss of data?
                     player:TransferToGame(allGameIds[1])  -- player was in last game, rotate back to start
                 else
                     print("TransferToGame is set to only transfer if IsHostedGame")
@@ -295,6 +315,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                         player.serverUserData.transfer = transfer 
                     end
                     ----- END TRANSFER STUFF -----
+                    Task.Wait()  -- setting data same tick as transfer can result in loss of data?
                     Game.TransferAllPlayersToGame(allGameIds[1])
                 else
                     print("TransferserverTablesToGame is set to only transfer if IsHostedGame")
@@ -505,7 +526,9 @@ function OnPlayerJoined(player)
 
     print("Player joined scene:", SCENE_NAME)
 
-    if not serverIdComplete then
+    if SCENE_NAME == "Main Menu" then return end
+
+    if not serverIdComplete then  -- make sure to "if" not main menu here if remove above return end
         CompleteServerID(player)
     end
 
