@@ -397,7 +397,7 @@ function Tick(deltaTime)
             if (type(d) == "table") then  -- data is a scene
                 --print("Running raceTable loop if data is a table, k/d is:", k, d)
                 -- loop servers in scene
-                for scene, i in pairs(d) do
+                for serverId, i in pairs(d) do
                     --print("serverId, i", serverId, i)
                     if (type(i) == "table") then  -- data is a server
                         --print("i.lastTime, i.totalPlayers", i.lastTime, i.totalPlayers)  -- verified working 100% up to here DON'T CHANGE!!!
@@ -405,8 +405,7 @@ function Tick(deltaTime)
                         local currentTime = os.time()
                         if expireTime < currentTime then  -- 15m
                             print("A server went offline, a matchmaking server will remove it from tables (expireTime, currentTime)", expireTime, currentTime)
-                            serverTables[1][k][serverId] = nil  -- nil serverTables[1][1][serverId] = nil
-                            --serverTables[1][2][serverId] = nil
+                            serverTables[1][k][serverId] = nil                            
                         else
                             raceTotalPlayerCount = raceTotalPlayerCount + i.totalPlayers
                             if k == 1 then
@@ -442,8 +441,7 @@ function Tick(deltaTime)
                         local currentTime = os.time()
                         if expireTime < currentTime then  -- 15m
                             print("A server went offline, a matchmaking server will remove it from tables (expireTime, currentTime)", expireTime, currentTime)
-                            serverTables[2][k][serverId] = nil  -- nil serverTables[2][1][serverId] = nil
-                            --serverTables[2][2][serverId] = nil
+                            serverTables[2][k][serverId] = nil
                         else
                             battleTotalPlayerCount = battleTotalPlayerCount + i.totalPlayers
                             if k == 1 then
