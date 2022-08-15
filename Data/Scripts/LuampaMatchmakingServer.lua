@@ -445,9 +445,9 @@ function Tick(deltaTime)
                         else
                             battleTotalPlayerCount = battleTotalPlayerCount + i.totalPlayers
                             if k == 1 then
-                                battleNeonPlayerCount = battleNeonPlayerCount + i.totalPlayers
-                            elseif k == 2 then
                                 battleDesertPlayerCount = battleDesertPlayerCount + i.totalPlayers
+                            elseif k == 2 then
+                                battleNeonPlayerCount = battleNeonPlayerCount + i.totalPlayers
                             end
                         end
                     end
