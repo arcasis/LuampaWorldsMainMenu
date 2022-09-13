@@ -240,7 +240,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
             if Environment.IsHostedGame() then
 
                 ----- NEW TRANSFER STUFF -----
-                for _,p in pairs(Game.GetPlayers()) do
+                for _,player in pairs(Game.GetPlayers()) do
                     local transfer = {}
                     transfer.game = GAME_NUMBER
                     transfer.scene = nextSceneNumber
@@ -276,7 +276,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                 print("Game ended on last scene of this game, Lobby should transfer to next game. this game number is:", GAME_NUMBER)
                 if Environment.IsHostedGame() then
                     ----- NEW TRANSFER STUFF -----
-                    for _,p in pairs(Game.GetPlayers()) do
+                    for _,player in pairs(Game.GetPlayers()) do
                         local transfer = {}
                         transfer.game = GAME_NUMBER + 1
                         transfer.locked = true
@@ -308,7 +308,7 @@ function TransferToNextScene(player)  -- doesn't run for players in isPlayAsPart
                 print("Game ended on last scene of last game, Lobby should transfer to game #1. this game number is:", GAME_NUMBER)
                 if Environment.IsHostedGame() then
                     ----- NEW TRANSFER STUFF -----
-                    for _,p in pairs(Game.GetPlayers()) do
+                    for _,player in pairs(Game.GetPlayers()) do
                         local transfer = {}
                         transfer.game = GAME_NUMBER + 1
                         transfer.locked = true
