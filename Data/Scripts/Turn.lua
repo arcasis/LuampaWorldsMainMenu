@@ -32,8 +32,11 @@ if propDelay > 0 then
 
 -- take all settings
 
-local spinRotation = Rotation.New(propX ,propY ,propZ)
+--nil local spinRotation = Rotation.New(propX ,propY ,propZ)
 
+-- Chaos was here fixin' this shiznits
+
+local spinRotation = Vector3.New(propX ,propY ,propZ)
 
 -- apply rotation with your settings
-object:RotateContinuous(spinRotation)
+object:RotateContinuous(spinRotation, true)

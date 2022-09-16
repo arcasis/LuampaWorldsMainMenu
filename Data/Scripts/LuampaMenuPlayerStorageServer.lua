@@ -9,6 +9,12 @@ function OnPlayerJoined(player)
     -- Get player storage
     local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
 
+    if playerDataTable.doubleXpEventActive then
+        player.serverUserData.doubleXpEventActive = playerDataTable.doubleXpEventActive
+    end
+    if playerDataTable.tourneyActive then
+        player.serverUserData.tourneyActive = playerDataTable.tourneyActive
+    end
 
     -------------------- DELETE AFTER TESTING ----------------------
     -- Uncomment to clear data, comment to test saved data
@@ -47,6 +53,7 @@ function OnPlayerJoined(player)
         playerDataTable.isTester = isTester
     end
     -------------- END CLEAN UP OLD TESTER TABLE --------------------
+
 
     --------------- CLEAN UP OLD HELMET TABLES ---------------------
     -- I had set up helmets with sub tables like vehicles, switching back to simple table
@@ -365,13 +372,28 @@ function OnPlayerLeft(player)
 
     local playerDataTable = Storage.GetSharedPlayerData(STORAGE_KEY, player)
 
+    if player.serverUserData.doubleXpEventActive then
+        playerDataTable.doubleXpEventActive = player.serverUserData.doubleXpEventActive
+    end
+    if player.serverUserData.doubleXpEventExpireDate then
+        playerDataTable.doubleXpEventExpireDate = player.serverUserData.doubleXpEventExpireDate
+    end
+    if player.serverUserData.tourneyActive then
+        playerDataTable.tourneyActive = player.serverUserData.tourneyActive
+    end
+
     -- TEST SCRIPTS, CAN REMOVE AFTER OLD NEON IS REMOVED FROM SYSTEM --
     -- MAKES SURE PLAYERS WHO HIT PLAY FROM MAIN MENU ARE SENT TO NEW NEON (Published Neon processes them, sends them on)
     if player.serverUserData.isTesting then
         playerDataTable.isTesting = true  -- set in MatchmakingServer, also needs removed when this is removed
     end
     ----- END TEST SCRIPTS CAN REMOVE -----
+
+    -- update Event infos
+    playerDataTable.doubleXpEventActive = player.serverUserData.doubleXpEventActive
+    playerDataTable.doubleXpEventExpireDate = player.serverUserData.doubleXpEventExpireDate
     
+    -- update vehicles
     playerDataTable.karts = player.serverUserData.karts
     playerDataTable.selectedKart = player.serverUserData.selectedKart
 
