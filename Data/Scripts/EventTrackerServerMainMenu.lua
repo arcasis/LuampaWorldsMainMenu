@@ -1,10 +1,8 @@
 --[[DESCRIPTION: Checks if an Event is active, sets player's userdata with Event information
 so Luampa games can process player during Events.]]
 
-local GAME_ID = "141bf9/luampaworldsmainmenu"
+local GAME_ID = "141bf91f798a4f3e955969d2e9d1a900" -- nil "141bf9/luampaworldsmainmenu"
 
-
-print("Game ID is:", Game.GetCurrentGameId())
 
 function OnPlayerStorageReady(player)
 
@@ -21,6 +19,8 @@ function OnPlayerStorageReady(player)
     local gameEvents = collection:GetResults()
     for i, eventData in ipairs(gameEvents) do
         if eventData.state == CoreGameEventState.ACTIVE then
+
+            print("There is an active Event.")
 
             eventStartTime = gameEvents:GetStartDateTime()
             eventEndTime = gameEvents:GetEndDateTime()
