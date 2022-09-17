@@ -8,7 +8,7 @@ print("Game ID is:", Game.GetCurrentGameId())
 
 function OnPlayerStorageReady(player)
 
-    local DOUBLE_XP_EVENT_REF_1     -- put name of Event here to process when and if that event is active
+    local DOUBLE_XP_EVENT_REF_1 = "testing"     -- put name of Event here to process when and if that event is active
     local DOUBLE_XP_EVENT__REF_2     -- make a variable for each Event that gives double xp during event
 
     -- Script Helpers
@@ -25,7 +25,7 @@ function OnPlayerStorageReady(player)
             eventStartTime = gameEvents:GetStartDateTime()
             eventEndTime = gameEvents:GetEndDateTime()
             
-            if eventData.referenceName == DOUBLE_XP_EVENT_REF_1 or DOUBLE_XP_EVENT_REF_2 then
+            if eventData.referenceName == DOUBLE_XP_EVENT_REF_1 or eventData.referenceName == DOUBLE_XP_EVENT_REF_2 then
                 doubleXpEventActive = true
             end
 
