@@ -42,14 +42,48 @@ function DisplayStats()
     local bestRaceNeon = LOCAL_PLAYER.clientUserData.bestRaceNeon
     if not bestRaceNeon then
         bestRaceNeon = 0
+
+        FASTEST_RACE_NEON.text = "--:--:--"
+    else
+        bestRaceNeon = bestRaceNeon * 1000
+
+        bestRaceNeon = math.floor(bestRaceNeon)
+
+        local milliseconds = bestRaceNeon % 1000
+        bestRaceNeon = bestRaceNeon-milliseconds
+        bestRaceNeon = math.floor(bestRaceNeon / 1000)
+
+        local seconds = bestRaceNeon % 60
+        bestRaceNeon = bestRaceNeon - seconds
+        bestRaceNeon = math.floor(bestRaceNeon/60)
+
+        local minutes = math.min(bestRaceNeon, 99)
+
+        FASTEST_RACE_NEON.text = string.format("%02d:%02d:%03d", minutes, seconds, milliseconds)
     end
-    FASTEST_RACE_NEON.text = tostring(bestRaceNeon)
 
     local bestLapNeon = LOCAL_PLAYER.clientUserData.bestLapNeon
     if not bestLapNeon then
         bestLapNeon = 0
+
+        FASTEST_LAP_NEON.text = "--:--:--"
+    else
+        bestLapNeon = bestLapNeon * 1000
+
+        bestLapNeon = math.floor(bestLapNeon)
+
+        local milliseconds = bestLapNeon % 1000
+        bestLapNeon = bestLapNeon-milliseconds
+        bestLapNeon = math.floor(bestLapNeon / 1000)
+
+        local seconds = bestLapNeon % 60
+        bestLapNeon = bestLapNeon - seconds
+        bestLapNeon = math.floor(bestLapNeon/60)
+
+        local minutes = math.min(bestLapNeon, 99)
+
+        FASTEST_LAP_NEON.text = string.format("%02d:%02d:%03d", minutes, seconds, milliseconds)
     end
-    FASTEST_LAP_NEON.text = tostring(bestLapNeon)
 
     local totalRaces = LOCAL_PLAYER.clientUserData.statsRaces
     if not totalRaces then

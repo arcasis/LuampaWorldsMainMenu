@@ -22,8 +22,8 @@ function OnPlayerStorageReady(player)
 
             print("There is an active Event.")
 
-            eventStartTime = gameEvents:GetStartDateTime()
-            eventEndTime = gameEvents:GetEndDateTime()
+            eventStartTime = eventData:GetStartDateTime()
+            eventEndTime = eventData:GetEndDateTime()
             
             if eventData.referenceName == DOUBLE_XP_EVENT_REF_1 or eventData.referenceName == DOUBLE_XP_EVENT_REF_2 then
                 doubleXpEventActive = true
