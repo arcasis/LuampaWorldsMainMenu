@@ -116,7 +116,7 @@ function OnPlayerJoined(player)
     --------- !! COMMENT THESE OUT AFTER WE GO LIVE !! ----------
 
     -- Check if player helped playtest MAJOR UPDATE Race but hasn't gotten helmet yet
-    if playerDataTable.totalRaceXp and not playerDataTable.helmets then
+    --[[if playerDataTable.totalRaceXp and not playerDataTable.helmets then
         --print("Player had totalRaceXp")
         if not isTester then
             isTester = {}
@@ -164,7 +164,7 @@ function OnPlayerJoined(player)
         helmets.selectedHelmet = 1
         helmets.helmetOn = true
         player.serverUserData.helmets = helmets
-    end
+    end]]
     --------------- END CATCH MAJOR UPDATE TESTERS ----------------
 
 
@@ -363,7 +363,6 @@ function OnPlayerJoined(player)
     end
 
     Events.BroadcastToPlayer(player, "StorageReady")
-    -- ***** !! UNCOMMENT OUT BEFORE GOING LIVE !! Comment out when test scripts that give XP are in hierarchy ***** --
     Events.Broadcast("UpdateXP", player)
 end
 

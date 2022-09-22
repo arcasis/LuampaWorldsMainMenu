@@ -1,5 +1,9 @@
 
--- Decide which test system to implement by commenting out all except the one that will be used
+--[[INSTRUCTIONS FOR TESTING: 
+  1. This script does not live in hierarchy, pull it in to use, REMOVE WHEN NOT USING
+  2. Decide which test system to implement by commenting out all except the one that will be used]]
+
+  --[[NOTE: Can add if hosted check to only run this for bots.]]
 
 function OnPlayerJoined(player)
 
@@ -18,9 +22,7 @@ function OneTimeTestSystem(player)
     player:SetPrivateNetworkedData("totalBattleXp", player.serverUserData.totalBattleXp)
     player:SetResource("LuampaCoins", 117000)
 
-    ----- !! DELETE BROADCAST BEFORE PUBLISH !! -------
-    Events.Broadcast("UpdateXP", player)  -- temporary, to force unlockservers to refresh tables for testing
-    print("Test XP has been given. You can go into garages now.")
+    -- this used to broadcast UpdateXP for testing, but it was removed for safety on publish
 end
 
 function ProgressiveTestSystem(player)
@@ -145,8 +147,6 @@ function ProgressiveTestSystem(player)
         player.serverUserData.totalRaceXp = 2000
     end
 
-    ----- !! DELETE BROADCAST HERE AND IN UNLOCK SERVER BEFORE PUBLISH !! -------
-    Events.Broadcast("UpdateXP", player)  -- temporary, to force unlockservers to refresh tables
     --------------- RESET TO NIL -------------------
     -- uncomment this section to reset totalBattleXp and totalRaceXp to nil
 
