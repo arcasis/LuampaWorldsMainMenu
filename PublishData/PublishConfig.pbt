@@ -12,9 +12,11 @@ ScreenshotPaths: "C:\\Users\\davga\\OneDrive\\Escritorio\\SCREENSHOTS FEATURED\\
 ScreenshotPaths: "C:\\Users\\davga\\OneDrive\\Escritorio\\SCREENSHOTS FEATURED\\BATTLE DEF CAGO EN DIOS.png"
 ScreenshotPaths: "C:\\Users\\davga\\OneDrive\\Escritorio\\SCREENSHOTS FEATURED\\FEAtured def garage.jpg"
 ScreenshotPaths: "C:\\Users\\davga\\OneDrive\\Escritorio\\SCREENSHOTS FEATURED\\Main_Menu_-_Cosmetics def.jpg"
-ReleaseNotes: "* New mode added, Battle Hill, where teams spawn in a truck with a turret and battle to capture hills for points\r\n* Battle and Race have new trucks and karts that unlock by playing\r\n* New Ranks and Rank icons, that display in the scoreboard\r\n* New Statistics and XP systems\r\n* A Main Menu where players can see their truck and kart garages, purchase helmets, and view their statistics\r\n* Matchmaking system that condenses players for maximum fun \r\n"
+ReleaseNotes: "New mode added, Battle Hill, where teams spawn in a truck with a turret and battle to capture hills for points\r\nBattle and Race have new trucks and karts that unlock by playing\r\nNew Ranks and Rank icons, that display in the scoreboard\r\nNew Statistics and XP systems\r\nA Main Menu where players can see their truck and kart garages, purchase helmets, and view their statistics\r\nMatchmaking system that condenses players for maximum fun"
 OwnerId: "ae5c962bb2af48a0840e8159a02a5ad1"
 SerializationVersion: 4
+PublishedState: Public
+ContainsRewardPointEvents: true
 SceneNameToSceneIdMap {
   key: "Main Menu"
   value: "b3368c884a27ff448a66e9b6dd4ba367"
