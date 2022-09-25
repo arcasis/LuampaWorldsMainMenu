@@ -73,7 +73,7 @@ function On15sUp()
 end
 
 function InitializePlayButton()
-    PLAY_BUTTON.text = "Connecting..."
+    PLAY_BUTTON.text = "Connecting Portals..."
     PLAY_BUTTON:SetFont("253C5D1D4087C5BE:Cabin Italic")
     PLAY_BUTTON:SetFontColor(Color.New(Color.GRAY))
     PLAY_BUTTON.isInteractable = false
